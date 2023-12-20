@@ -10,11 +10,11 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaPromotion:
@@ -172,7 +172,7 @@ class CvPediaPromotion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_LEADS_TO", ()),
+            text("TXT_KEY_PEDIA_LEADS_TO"),
             "",
             False,
             True,
@@ -218,7 +218,7 @@ class CvPediaPromotion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -249,7 +249,7 @@ class CvPediaPromotion:
                 screen.attachTextGFC(
                     panelName,
                     "",
-                    localText.getText("TXT_KEY_OR", ()),
+                    text("TXT_KEY_OR"),
                     FontTypes.GAME_FONT,
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -285,7 +285,7 @@ class CvPediaPromotion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,
@@ -318,7 +318,7 @@ class CvPediaPromotion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_PROMOTION_UNITS", ()),
+            text("TXT_KEY_PEDIA_PROMOTION_UNITS"),
             "",
             True,
             True,

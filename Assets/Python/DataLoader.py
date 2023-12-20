@@ -2,47 +2,44 @@
 # Implemented by AbsintheRed, based on SoI
 
 from CvPythonExtensions import *
-import RFCEMaps as maps
-import Consts as con
+from CityMapData import CITIES_MAP
+from ProvinceMapData import PROVINCES_MAP
+from CoreData import civilizations
+from LocationsData import LAKE_LOCATIONS
 
 gc = CyGlobalContext()
 
+
 def setup():
-	"""Loads the data from RFCEMaps.py into appropriate objects within CvGameCoreDLL."""
+    """Loads the data from RFCEMaps.py into appropriate objects within CvGameCoreDLL."""
 
-	# Region (province) maps
-	map = CyMap()
-	for y in range(len(maps.tProvinceMap)):
-		for x in range(len(maps.tProvinceMap[y])):
-			plot = map.plot(x, y) # no need for [iMaxY - iY - 1] inversion, the province map is upside down visually
-			if plot:
-				plot.setProvinceID(maps.tProvinceMap[y][x])
-				#print ('ProvinceID', x, y, plot.getProvinceID)
+    # Region (province) maps
+    map = CyMap()
+    for y in range(len(PROVINCES_MAP)):
+        for x in range(len(PROVINCES_MAP[y])):
+            plot = map.plot(x, y)
+            if plot:
+                plot.setProvinceID(PROVINCES_MAP[y][x])
 
-	# City name maps
-	for iLoopPlayer in range(con.iNumPlayers - 1): # currently neither the papal nor the default maps are added
-		if len(maps.tCityMap) > iLoopPlayer:
-			for y in range(len(maps.tCityMap[iLoopPlayer])):
-				for x in range(len(maps.tCityMap[iLoopPlayer][y])):
-					plot = map.plot(x, len(maps.tCityMap[iLoopPlayer]) - 1 - y) # because Civ4 maps are reversed on Y-axis
-					if plot:
-						sName = maps.tCityMap[iLoopPlayer][y][x]
-						# Set the value in CvPlot instance
-						plot.setCityNameMap(iLoopPlayer, sName)
+    # City name maps
+    # currently neither the papal nor the default maps are added
+    for civ in civilizations().main():
+        for y, row in enumerate(CITIES_MAP[civ.key]):
+            for x, cell in enumerate(row):
+                plot = map.plot(x, len(CITIES_MAP[civ.key]) - 1 - y)
+                if plot:
+                    plot.setCityNameMap(civ.id, cell)
 
-	# Lake name IDs
-	# first set all plots to -1
-	for y in range(len(maps.tProvinceMap)):
-		for x in range(len(maps.tProvinceMap[y])):
-			plot = map.plot(x, y)
-			if plot:
-				plot.setLakeNameID(-1)
-	# then we add the ID to the actual lake tiles
-	for i in range(len(con.lLakeNameIDs)):
-		x = con.lLakeNameIDs[i][0]
-		y = con.lLakeNameIDs[i][1]
-		iLakeNameID = con.lLakeNameIDs[i][2]
-		plot = map.plot(x, y)
-		if plot:
-			plot.setLakeNameID(iLakeNameID)
-
+    # Lake name IDs
+    # first set all plots to -1
+    for y in range(len(PROVINCES_MAP)):
+        for x in range(len(PROVINCES_MAP[y])):
+            plot = map.plot(x, y)
+            if plot:
+                plot.setLakeNameID(-1)
+    # then we add the ID to the actual lake tiles
+    for name, locations in LAKE_LOCATIONS.items():
+        for location in locations:
+            plot = map.plot(*location)
+            if plot:
+                plot.setLakeNameID(name.value)

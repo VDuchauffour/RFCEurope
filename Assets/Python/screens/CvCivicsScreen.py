@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 import CvScreensInterface
@@ -8,6 +9,7 @@ sta = Stability.Stability()
 
 # Globals
 gc = CyGlobalContext()
+localText = CyTranslator()
 
 
 class CvCivicsScreen:
@@ -91,7 +93,7 @@ class CvCivicsScreen:
         self.setActivePlayer(gc.getGame().getActivePlayer())
 
         del self.Categories[:]
-        for iCategory in xrange(gc.getNumCivicOptionInfos()):
+        for iCategory in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
             self.Categories.append(iCategory)
 
         screen.setRenderInterfaceOnly(True)
@@ -191,15 +193,11 @@ class CvCivicsScreen:
             -1,
         )
 
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	screen.addFlagWidgetGFC("LeftFlag", self.X_FLAG, self.Y_FLAG, self.W_FLAG, self.H_FLAG, self.iActivePlayer, WidgetTypes.WIDGET_GENERAL, -1, -1)
-        # 	screen.addFlagWidgetGFC("RightFlag", self.W_SCREEN - self.X_FLAG - self.W_FLAG, self.Y_FLAG, self.W_FLAG, self.H_FLAG, self.iActivePlayer, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
         if CyGame().isDebugMode():
             screen.addDropDownBoxGFC(
                 "DebugMenu", 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
             )
-            for iPlayer in xrange(gc.getMAX_PLAYERS()):
+            for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 if gc.getPlayer(iPlayer).isAlive():
                     screen.addPullDownString(
                         "DebugMenu", gc.getPlayer(iPlayer).getName(), iPlayer, iPlayer, False
@@ -214,7 +212,7 @@ class CvCivicsScreen:
         player = gc.getPlayer(self.iActivePlayer)
         screen = self.getScreen()
 
-        for i in xrange(len(self.Categories)):
+        for i in xrange(len(self.Categories)):  # type: ignore
             iCategory = self.Categories[i]
             iX, iY = self.getPosition(iCategory)
             iSpacing = 8
@@ -258,9 +256,7 @@ class CvCivicsScreen:
         iSpacing = 8
 
         sName = "CivicIcon" + str(iCategory)
-        # print gc.getCivicInfo(iCivic).getText()
         sButton = gc.getCivicInfo(iCivic).getButton()
-        # print("Button works")
         screen.setImageButton(
             sName,
             sButton,
@@ -364,7 +360,7 @@ class CvCivicsScreen:
         iX, iY = self.getPosition(iCategory)
 
         iLine = iY + self.MARGIN
-        for iCivic in xrange(gc.getNumCivicInfos()):
+        for iCivic in xrange(gc.getNumCivicInfos()):  # type: ignore
             if gc.getCivicInfo(iCivic).getCivicOptionType() == iCategory:
                 sName = "CivicButton" + str(iCivic)
                 sButton = gc.getCivicInfo(iCivic).getButton()
@@ -390,14 +386,14 @@ class CvCivicsScreen:
                 )
                 if self.SelectedCivics[iCategory] == iCivic:
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_YELLOW")
                     )
                 elif player.canDoCivics(iCivic):
                     screen.show("CivicButton" + str(iCivic))
                 else:
                     screen.hide("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                     )
 
@@ -422,8 +418,8 @@ class CvCivicsScreen:
         player = gc.getPlayer(self.iActivePlayer)
 
         # Maintenance
-        szText = CyTranslator().getText(
-            "TXT_KEY_CIVIC_SCREEN_UPKEEP", (player.getCivicUpkeep(self.DisplayedCivics, True),)
+        szText = text(
+            "TXT_KEY_CIVIC_SCREEN_UPKEEP", player.getCivicUpkeep(self.DisplayedCivics, True)
         )
         screen.setLabel(
             "UpkeepText",
@@ -454,8 +450,7 @@ class CvCivicsScreen:
         if player.canRevolution(0):
             iTurns = player.getCivicAnarchyLength(self.DisplayedCivics)
             if iTurns > 0:
-                # sAnarchy = CyTranslator().getText('TXT_KEY_CIVIC_SCREEN_ANARCHY_TIMER', (iTurns, ))
-                sAnarchy = CyTranslator().getText("TXT_KEY_ANARCHY_TURNS", (iTurns,))
+                sAnarchy = text("TXT_KEY_ANARCHY_TURNS", iTurns)
 
             if bSelection:
                 screen.show("RevolutionButton")
@@ -464,7 +459,6 @@ class CvCivicsScreen:
             screen.hide("RevolutionButton")
             iTurns = player.getRevolutionTimer()
             if iTurns > 0:
-                # sAnarchy = CyTranslator().getText('TXT_KEY_CIVIC_SCREEN_REVOLUTION_TIMER', (iTurns, ))
                 sAnarchy = CyGameTextMgr().setRevolutionHelp(self.iActivePlayer)
 
         screen.setLabel(
@@ -500,15 +494,9 @@ class CvCivicsScreen:
     def getPosition(self, iCategory):
         "Returns top left coordinates of the specified category panel"
         i = self.Categories.index(iCategory)
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	i += 1
 
         iX = self.X_CIVIC_CATEGORY + ((i % self.nColumns) * (self.W_CIVIC_CATEGORY + self.MARGIN))
         iY = self.Y_CIVIC_CATEGORY + ((i / self.nColumns) * (self.H_CIVIC_CATEGORY + self.MARGIN))
-
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	if i == 1:
-        # 		iX -= (self.W_CIVIC_CATEGORY + self.MARGIN) / 2
 
         return iX, iY
 
@@ -520,7 +508,7 @@ class CvCivicsScreen:
         self.PlayerCivics = []
         self.SelectedCivics = []
         self.DisplayedCivics = []
-        for iCategory in xrange(gc.getNumCivicOptionInfos()):
+        for iCategory in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
             self.PlayerCivics.append(pPlayer.getCivics(iCategory))
             self.SelectedCivics.append(pPlayer.getCivics(iCategory))
             self.DisplayedCivics.append(pPlayer.getCivics(iCategory))
@@ -547,45 +535,45 @@ class CvCivicsScreen:
             if bHoverOn:
                 if bGood:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_GREEN")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_PLAYER_MIDDLE_GREEN")
                         )
                 elif bBad:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_RED")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_PLAYER_DARK_RED")
                         )
                 else:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_WHITE")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                         )
             else:
                 if self.SelectedCivics[iCategory] == iCivic:
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_YELLOW")
                     )
                 elif player.canDoCivics(iCivic):
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_WHITE")
                     )
                 else:
                     screen.hide("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                     )
             screen.setText(
@@ -653,7 +641,7 @@ class CvCivicsScreen:
             return 1
 
         elif inputClass.getFunctionName() == "CancelButton":
-            for i in xrange(gc.getNumCivicOptionInfos()):
+            for i in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
                 self.SelectedCivics[i] = self.PlayerCivics[i]
                 self.DisplayedCivics[i] = self.PlayerCivics[i]
 

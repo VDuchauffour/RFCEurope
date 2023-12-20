@@ -3,11 +3,15 @@
 ##
 ## Implementation of miscellaneous game functions
 
+from CoreData import civilization
+from CoreFunctions import get_religion_by_id, text
+from CoreStructures import turn
+from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
-import PyHelpers  # Absinthe
-import XMLConsts as xml  # Absinthe
-import Consts as con  # Absinthe
+from MiscData import RELIGION_PERSECUTION_ORDER
+import PyHelpers
+from PyUtils import rand  # Absinthe
 import RFCUtils
 import Stability  # Absinthe
 
@@ -245,49 +249,49 @@ class CvGameUtils:
             and not AIpPlayer.isHuman()
             and AIpPlayer.isAlive()
         ):
-            if pUnit.getUnitType() == xml.iProsecutor:
+            if pUnit.getUnitType() == Unit.PROSECUTOR.value:
                 return self.doInquisitorCore_AI(pUnit)
         return False
 
     # Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
     def isHasPurgeTarget(self, iCiv, bReportCity):
         iStateReligion = gc.getPlayer(iCiv).getStateReligion()
-        iTolerance = con.tReligiousTolerance[iCiv]
+        iTolerance = civilization(iCiv).religion.tolerance
         apCityList = PyPlayer(iCiv).getCityList()
         # Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
-        for iReligion in con.tPersecutionOrder[iStateReligion]:
+        for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
             bCanPurge = False
             # If the civ's tolerance > 70 it won't purge any religions
             # If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
             # If > 30 (but < 50) it will also purge Judaism
             # If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
-            if iTolerance < 70:
-                if iReligion == xml.iIslam:
-                    bCanPurge = True
-                elif (
-                    iReligion == xml.iCatholicism
-                    or iReligion == xml.iOrthodoxy
-                    or iReligion == xml.iProtestantism
-                ):
-                    if iStateReligion == xml.iIslam:
-                        bCanPurge = True
-            if not bCanPurge and iTolerance < 50:
-                if iReligion == xml.iJudaism:
-                    bCanPurge = True
+            if iTolerance < 70 and (
+                iReligion == Religion.ISLAM
+                or (
+                    iStateReligion == Religion.ISLAM
+                    and iReligion
+                    in [Religion.CATHOLICISM, Religion.ORTHODOXY, Religion.PROTESTANTISM]
+                )
+            ):
+                bCanPurge = True
+
+            if not bCanPurge and iTolerance < 50 and iReligion == Religion.JUDAISM:
+                bCanPurge = True
+
             if not bCanPurge and iTolerance < 30:
                 bCanPurge = True
 
             if bCanPurge:
                 for pCity in apCityList:
                     if pCity.GetCy().isHasReligion(
-                        iReligion
-                    ) and not pCity.GetCy().isHolyCityByType(iReligion):
+                        iReligion.value
+                    ) and not pCity.GetCy().isHolyCityByType(iReligion.value):
                         # do not purge religions with an associated wonder in the city
                         bWonder = False
-                        for iBuilding in xrange(gc.getNumBuildingInfos()):
+                        for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore  # type: ignore
                             if pCity.GetCy().getNumRealBuilding(iBuilding):
                                 BuildingInfo = gc.getBuildingInfo(iBuilding)
-                                if BuildingInfo.getPrereqReligion() == iReligion:
+                                if BuildingInfo.getPrereqReligion() == iReligion.value:
                                     if isWorldWonderClass(
                                         BuildingInfo.getBuildingClassType()
                                     ) or isNationalWonderClass(
@@ -298,15 +302,10 @@ class CvGameUtils:
                         if not bWonder:
                             # for the python code below, we need to pass the city too
                             if bReportCity:
-                                print(
-                                    "isHasPurgeTarget we return pCity, bReportCity:", bReportCity
-                                )
                                 return pCity
                             # for the AI function in the .dll we only need to know whether such city exist
                             else:
-                                print("isHasPurgeTarget we return True, bReportCity:", bReportCity)
                                 return True
-        print("isHasPurgeTarget we return False, bReportCity:", bReportCity)
         return False
 
     def doInquisitorCore_AI(self, pUnit):
@@ -315,10 +314,8 @@ class CvGameUtils:
         pCity = self.isHasPurgeTarget(iOwner, True)
         if pCity:
             city = pCity.GetCy()
-            print("isHasPurgeTarget pCity, city:", pCity, city)
             # if we can generate a valid path to the city
             if pUnit.generatePath(city.plot(), 0, False, None):
-                print("isHasPurgeTarget city path valid")
                 self.doInquisitorMove(pUnit, city)
                 return True
         return False
@@ -338,9 +335,6 @@ class CvGameUtils:
             )
         else:
             utils.prosecute(pCity.getX(), pCity.getY(), pUnit.getID())
-            print("AI prosecution in city", pCity.getX(), pCity.getY())
-
-    # Absinthe: end Inquisitor AI
 
     def AI_doWar(self, argsList):
         eTeam = argsList[0]
@@ -542,17 +536,11 @@ class CvGameUtils:
         pPlot = argsList[0]
         pUnit = argsList[1]
 
-        iPillageGold = 0
-        iPillageGold = CyGame().getSorenRandNum(
-            gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 1"
-        )
-        iPillageGold += CyGame().getSorenRandNum(
-            gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 2"
-        )
+        pillage_gold = gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold()
 
-        iPillageGold += (pUnit.getPillageChange() * iPillageGold) / 100
-
-        return iPillageGold
+        value = rand(pillage_gold) + rand(pillage_gold)
+        value += (pUnit.getPillageChange() * value) / 100
+        return value
 
     def doCityCaptureGold(self, argsList):
         "controls the gold result of capturing a city"
@@ -563,16 +551,12 @@ class CvGameUtils:
 
         iCaptureGold += gc.getDefineINT("BASE_CAPTURE_GOLD")
         iCaptureGold += pOldCity.getPopulation() * gc.getDefineINT("CAPTURE_GOLD_PER_POPULATION")
-        iCaptureGold += CyGame().getSorenRandNum(
-            gc.getDefineINT("CAPTURE_GOLD_RAND1"), "Capture Gold 1"
-        )
-        iCaptureGold += CyGame().getSorenRandNum(
-            gc.getDefineINT("CAPTURE_GOLD_RAND2"), "Capture Gold 2"
-        )
+        iCaptureGold += rand(gc.getDefineINT("CAPTURE_GOLD_RAND1"))
+        iCaptureGold += rand(gc.getDefineINT("CAPTURE_GOLD_RAND2"))
 
         if gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS") > 0:
             iCaptureGold *= cyIntRange(
-                (CyGame().getGameTurn() - pOldCity.getGameTurnAcquired()),
+                (turn() - pOldCity.getGameTurnAcquired()),
                 0,
                 gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS"),
             )
@@ -625,13 +609,13 @@ class CvGameUtils:
         iDiscount = 0
 
         # Absinthe: Borgund Stave Church start
-        if pPlayer.countNumBuildings(xml.iBorgundStaveChurch) > 0:
-            if xml.iPaganShrine <= iBuilding <= xml.iReliquary:
+        if pPlayer.countNumBuildings(Wonder.BORGUND_STAVE_CHURCH.value) > 0:
+            if Building.PAGAN_SHRINE.value <= iBuilding <= Building.RELIQUARY.value:
                 iDiscount += 40
         # Absinthe: Borgund Stave Church end
 
         # Absinthe: Blue Mosque start
-        if pPlayer.countNumBuildings(xml.iBlueMosque) > 0:
+        if pPlayer.countNumBuildings(Wonder.BLUE_MOSQUE.value) > 0:
             if pPlayer.getCapitalCity().getNumActiveBuilding(iBuilding) and not pCity.isCapital():
                 iDiscount += 20
         # Absinthe: Blue Mosque end
@@ -651,27 +635,24 @@ class CvGameUtils:
         # 3Miro and sedna17, saint and prosecutor Info
         eWidgetType, iData1, iData2, bOption = argsList
         if iData1 == 666:
-            return CyTranslator().getText("TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER", ())
+            return text("TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER")
         elif iData1 == 1618:
-            return CyTranslator().getText("TXT_KEY_FAITH_SAINT", ())
+            return text("TXT_KEY_FAITH_SAINT")
         elif iData1 == 1919:
-            return CyTranslator().getText("TXT_KEY_MERCENARY_HELP", ())
+            return text("TXT_KEY_MERCENARY_HELP")
         elif iData1 == 1920:
-            return CyTranslator().getText("TXT_KEY_BARBONLY_HELP", ())
+            return text("TXT_KEY_BARBONLY_HELP")
         return u""
 
     # Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert
     def doAnarchyInstability(self, argsList):
         iPlayer = argsList[0]
-
-        print("1st anarchy turn for:", iPlayer)
         pPlayer = gc.getPlayer(iPlayer)
         sta.recalcCivicCombos(iPlayer)
         sta.recalcEpansion(iPlayer)
         iNumCities = pPlayer.getNumCities()
-
         # anarchy instability should appear right on revolution / converting, not one turn later
-        if iPlayer != con.iPrussia:  # Prussian UP
+        if iPlayer != Civ.PRUSSIA.value:  # Prussian UP
             if pPlayer.isHuman():
                 # anarchy swing instability
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 8)
@@ -680,7 +661,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    con.iCathegoryCivics, min(0, max(-2, (-iNumCities + 4) / 7))
+                    StabilityCategory.CIVICS.value, min(0, max(-2, (-iNumCities + 4) / 7))
                 )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
             else:
@@ -691,7 +672,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    con.iCathegoryCivics, min(0, max(-1, (-iNumCities + 6) / 7))
+                    StabilityCategory.CIVICS.value, min(0, max(-1, (-iNumCities + 6) / 7))
                 )  # reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
         lResult = 1

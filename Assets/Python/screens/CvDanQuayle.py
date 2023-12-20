@@ -1,10 +1,10 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import colortext, text
 import CvScreenEnums
 import CvUtil
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -135,7 +135,7 @@ class CvDanQuayle:
         screen.setText(
             self.EXIT_ID,
             "Background",
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>",
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + u"</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXIT,
             self.Y_EXIT,
@@ -150,9 +150,7 @@ class CvDanQuayle:
         screen.setLabel(
             self.WIDGET_HEADER,
             "Background",
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_GAME_END_SCREEN_TITLE", ()).upper()
-            + u"</font>",
+            u"<font=4b>" + text("TXT_KEY_GAME_END_SCREEN_TITLE").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SCREEN,
             self.Y_TITLE,
@@ -189,7 +187,6 @@ class CvDanQuayle:
                 + gc.getDefineINT("SCORE_TECH_FACTOR")
             )
         ) / 100
-        # print(" 3Miro: ",iScore,iMaxScore)
         if iMaxScore > 0:
             iNormalScore = iScore / float(iMaxScore)
         else:
@@ -250,13 +247,7 @@ class CvDanQuayle:
         )
         screen.addMultilineText(
             self.TEXT_ID,
-            localText.getText(
-                "TXT_KEY_DQ_TEXT_STRING",
-                (
-                    replayInfo.getLeaderName(),
-                    szLeaderText,
-                ),
-            ),
+            text("TXT_KEY_DQ_TEXT_STRING", replayInfo.getLeaderName(), szLeaderText),
             self.X_TEXT + 5,
             self.Y_TEXT + 5,
             self.W_TEXT - 10,
@@ -285,7 +276,7 @@ class CvDanQuayle:
             u"<font=4>"
             + localText.getObjectText("TXT_KEY_VICTORY_SCORE", 0)
             + u" : "
-            + unicode(iScore)
+            + unicode(iScore)  # type: ignore
             + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.W_SCORE / 2 - 10,
@@ -310,11 +301,9 @@ class CvDanQuayle:
         for i in range(len(self.leaders)):
             szText = self.leaders[i]
             if szLeaderText == szText:
-                szText = localText.getColorText(
-                    szText, (), gc.getInfoTypeForString("COLOR_YELLOW")
-                )
+                szText = colortext(szText, "COLOR_YELLOW")
             else:
-                szText = localText.getText(szText, ())
+                szText = text(szText)
 
             screen.appendListBoxString(
                 self.LIST_ID, szText, WidgetTypes.WIDGET_GENERAL, 0, 0, CvUtil.FONT_LEFT_JUSTIFY

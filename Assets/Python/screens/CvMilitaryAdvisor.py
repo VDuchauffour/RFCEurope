@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import PyHelpers
 import re
@@ -106,14 +107,8 @@ class CvMilitaryAdvisor:
         screen.setRenderInterfaceOnly(True)
         screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
-        )
-        self.TITLE = (
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_MILITARY_ADVISOR_TITLE", ()).upper()
-            + "</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>"
+        self.TITLE = u"<font=4b>" + text("TXT_KEY_MILITARY_ADVISOR_TITLE").upper() + "</font>"
 
         self.nWidgetCount = 0
 
@@ -277,7 +272,7 @@ class CvMilitaryAdvisor:
             screen.setLabel(
                 self.GREAT_GENERAL_LABEL_ID,
                 "",
-                localText.getText("TXT_KEY_MISC_COMBAT_EXPERIENCE", ()),
+                text("TXT_KEY_MISC_COMBAT_EXPERIENCE"),
                 CvUtil.FONT_CENTER_JUSTIFY,
                 self.X_GREAT_GENERAL_BAR + self.W_GREAT_GENERAL_BAR / 2,
                 self.Y_GREAT_GENERAL_BAR + 6,
@@ -404,7 +399,7 @@ class CvMilitaryAdvisor:
                 screen.setLabel(
                     self.UNIT_BUTTON_LABEL_ID,
                     "",
-                    localText.getText("TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_OFF", ()),
+                    text("TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_OFF"),
                     CvUtil.FONT_LEFT_JUSTIFY,
                     self.X_TEXT + self.MAP_MARGIN + 22,
                     self.Y_TEXT + self.MAP_MARGIN / 2 + 2,
@@ -431,7 +426,7 @@ class CvMilitaryAdvisor:
                 screen.setLabel(
                     self.UNIT_BUTTON_LABEL_ID,
                     "",
-                    localText.getText("TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_ON", ()),
+                    text("TXT_KEY_MILITARY_ADVISOR_UNIT_TOGGLE_ON"),
                     CvUtil.FONT_LEFT_JUSTIFY,
                     self.X_TEXT + self.MAP_MARGIN + 22,
                     self.Y_TEXT + self.MAP_MARGIN / 2 + 2,
@@ -484,7 +479,7 @@ class CvMilitaryAdvisor:
             # sort by unit combat type
             self.unitsList.sort()
 
-        szText = localText.getText("TXT_KEY_PEDIA_ALL_UNITS", ()).upper()
+        szText = text("TXT_KEY_PEDIA_ALL_UNITS").upper()
         if -1 in self.selectedGroupList:
             szText = localText.changeTextColor(
                 u"<u>" + szText + u"</u>", gc.getInfoTypeForString("COLOR_YELLOW")
@@ -561,7 +556,7 @@ class CvMilitaryAdvisor:
                 szDescription = (
                     gc.getUnitInfo(self.unitsList[iUnit][1]).getDescription()
                     + u" ("
-                    + unicode(len(self.unitsList[iUnit][2]))
+                    + unicode(len(self.unitsList[iUnit][2]))  # type: ignore
                     + u")"
                 )
                 if self.isSelectedUnitType(self.unitsList[iUnit][1], False):
@@ -707,7 +702,7 @@ class CvMilitaryAdvisor:
                 gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam())
                 or gc.getGame().isDebugMode()
             ):
-                # if (player.isAlive() and player.getID() != con.iIndependent and player.getID() != con.iIndependent2 and (gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam()) or gc.getGame().isDebugMode())):
+                # if (player.isAlive() and player.getID() != Civ.INDEPENDENT.value and player.getID() != Civ.INDEPENDENT_2.value and (gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam()) or gc.getGame().isDebugMode())):
                 listLeaders.append(iLoopPlayer)
 
         iNumLeaders = len(listLeaders)

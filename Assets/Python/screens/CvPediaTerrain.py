@@ -11,11 +11,11 @@ from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
 import string
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaTerrain:
@@ -184,7 +184,7 @@ class CvPediaTerrain:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,
@@ -214,7 +214,7 @@ class CvPediaTerrain:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_DESCRIPTION", ()),
+            text("TXT_KEY_PEDIA_DESCRIPTION"),
             "",
             True,
             True,

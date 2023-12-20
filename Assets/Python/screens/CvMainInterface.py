@@ -1,11 +1,13 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreData import civilizations, civilization
+from CoreFunctions import colortext, text
+from CoreStructures import human, player, turn, year
+from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
 
-import Consts as con  # Rhye
-import XMLConsts as xml
 import RFCUtils  # Rhye
 
 # < Mercenaries Start >
@@ -21,11 +23,9 @@ gameUtils = CvGameInterface.gameUtils()
 
 # < Mercenaries End >
 
-# globals
 utils = RFCUtils.RFCUtils()  # Rhye
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 g_NumEmphasizeInfos = 0
 g_NumCityTabTypes = 0
@@ -1347,7 +1347,7 @@ class CvMainInterface:
         screen.setLabel(
             "TradeRouteListLabel",
             "Background",
-            localText.getText("TXT_KEY_HEADING_TRADEROUTE_LIST", ()),
+            text("TXT_KEY_HEADING_TRADEROUTE_LIST"),
             CvUtil.FONT_CENTER_JUSTIFY,
             129,
             165,
@@ -1377,7 +1377,7 @@ class CvMainInterface:
         screen.setLabel(
             "BuildingListLabel",
             "Background",
-            localText.getText("TXT_KEY_CONCEPT_BUILDINGS", ()),
+            text("TXT_KEY_CONCEPT_BUILDINGS"),
             CvUtil.FONT_CENTER_JUSTIFY,
             129,
             295,
@@ -1493,9 +1493,8 @@ class CvMainInterface:
         ):
             if gc.getGame().isPaused():
                 # Pause overrides other messages
-                acOutput = localText.getText(
-                    "SYSTEM_GAME_PAUSED",
-                    (gc.getPlayer(gc.getGame().getPausePlayer()).getNameKey(),),
+                acOutput = text(
+                    "SYSTEM_GAME_PAUSED", gc.getPlayer(gc.getGame().getPausePlayer()).getNameKey()
                 )
                 # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                 screen.setEndTurnState("EndTurnText", acOutput)
@@ -1504,34 +1503,32 @@ class CvMainInterface:
                 # Waiting on a bad connection to resolve
                 if messageControl.GetConnState(messageControl.GetFirstBadConnection()) == 1:
                     if gc.getGame().isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-                        acOutput = localText.getText(
+                        acOutput = text(
                             "SYSTEM_WAITING_FOR_PLAYER",
-                            (gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(), 0),
+                            gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
+                            0,
                         )
                     else:
-                        acOutput = localText.getText(
+                        acOutput = text(
                             "SYSTEM_WAITING_FOR_PLAYER",
-                            (
-                                gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
-                                (messageControl.GetFirstBadConnection() + 1),
-                            ),
+                            gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
+                            (messageControl.GetFirstBadConnection() + 1),
                         )
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
                     bShow = True
                 elif messageControl.GetConnState(messageControl.GetFirstBadConnection()) == 2:
                     if gc.getGame().isMPOption(MultiplayerOptionTypes.MPOPTION_ANONYMOUS):
-                        acOutput = localText.getText(
+                        acOutput = text(
                             "SYSTEM_PLAYER_JOINING",
-                            (gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(), 0),
+                            gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
+                            0,
                         )
                     else:
-                        acOutput = localText.getText(
+                        acOutput = text(
                             "SYSTEM_PLAYER_JOINING",
-                            (
-                                gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
-                                (messageControl.GetFirstBadConnection() + 1),
-                            ),
+                            gc.getPlayer(messageControl.GetFirstBadConnection()).getNameKey(),
+                            (messageControl.GetFirstBadConnection() + 1),
                         )
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
@@ -1539,22 +1536,22 @@ class CvMainInterface:
             else:
                 # Flash select messages if no popups are present
                 if CyInterface().shouldDisplayReturn():
-                    acOutput = localText.getText("SYSTEM_RETURN", ())
+                    acOutput = text("SYSTEM_RETURN")
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
                     bShow = True
                 elif CyInterface().shouldDisplayWaitingOthers():
-                    acOutput = localText.getText("SYSTEM_WAITING", ())
+                    acOutput = text("SYSTEM_WAITING")
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
                     bShow = True
                 elif CyInterface().shouldDisplayEndTurn():
-                    acOutput = localText.getText("SYSTEM_END_TURN", ())
+                    acOutput = text("SYSTEM_END_TURN")
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
                     bShow = True
                 elif CyInterface().shouldDisplayWaitingYou():
-                    acOutput = localText.getText("SYSTEM_WAITING_FOR_YOU", ())
+                    acOutput = text("SYSTEM_WAITING_FOR_YOU")
                     # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
                     screen.setEndTurnState("EndTurnText", acOutput)
                     bShow = True
@@ -2360,7 +2357,7 @@ class CvMainInterface:
                 iBtnH = 30
 
                 # Liberate button
-                # szText = "<font=1>" + localText.getText("TXT_KEY_LIBERATE_CITY", ()) + "</font>"
+                # szText = "<font=1>" + text("TXT_KEY_LIBERATE_CITY") + "</font>"
                 # screen.setButtonGFC( "Liberate", szText, "", iBtnX, iBtnY, iBtnW, iBtnH, WidgetTypes.WIDGET_LIBERATE_CITY, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
                 # screen.setStyle( "Liberate", "Button_CityT1_Style" )
                 # screen.hide( "Liberate" )
@@ -2373,7 +2370,7 @@ class CvMainInterface:
                 iBtnH = 30
 
                 # Conscript button
-                szText = "<font=1>" + localText.getText("TXT_KEY_DRAFT", ()) + "</font>"
+                szText = "<font=1>" + text("TXT_KEY_DRAFT") + "</font>"
                 screen.setButtonGFC(
                     "Conscript",
                     szText,
@@ -2826,9 +2823,6 @@ class CvMainInterface:
                         )
                         screen.show("BottomButtonContainer")
 
-                        # print(" 3Miro Actions: ",i)
-                        # print(" 3Miro Actions: ",i," ",gc.getActionInfo(i).getHotKey())
-
                         if not CyInterface().canHandleAction(i, False):
                             screen.disableMultiListButton(
                                 "BottomButtonContainer", 0, iCount, gc.getActionInfo(i).getButton()
@@ -2916,7 +2910,7 @@ class CvMainInterface:
                                             iCount = iCount + 1
                                             break
                             # Unit owner is the Pope		??? Added because of 3Miro's previous version of the code, but is this really needed here? The Pope is unplayable... does the AI need the actual button?
-                            elif pUnit.getOwner() == con.iPope:
+                            elif pUnit.getOwner() == Civ.POPE.value:
                                 pPlayer = gc.getPlayer(pCity.getOwner())
                                 # Make sure city has a religion which isn't this player's state religion
                                 for iReligionLoop in range(gc.getNumReligionInfos()):
@@ -3267,12 +3261,10 @@ class CvMainInterface:
                         if not CyInterface().isCityScreenUp():
                             szOutText = (
                                 u"<font=2>"
-                                + localText.getText(
+                                + text(
                                     "TXT_KEY_MISC_POS_GOLD_PER_TURN",
-                                    (
-                                        gc.getPlayer(ePlayer).getCommerceRate(
-                                            CommerceTypes(eCommerce)
-                                        ),
+                                    gc.getPlayer(ePlayer).getCommerceRate(
+                                        CommerceTypes(eCommerce)
                                     ),
                                 )
                                 + u"</font>"
@@ -3341,25 +3333,24 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= con.tBirth[ePlayer]
+                    and turn() >= civilization(ePlayer).date.birth
                 ):
-                    # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
                     szStabilityButton = u"<font=2>%c</font>" % (
                         CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10
                     )
                     if iStability < -15:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_COLLAPSING")
                     elif iStability >= -15 and iStability < -5:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_UNSTABLE")
                     elif iStability >= -5 and iStability < 0:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_SHAKY")
                     elif iStability >= 0 and iStability < 8:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_STABLE")
                     elif iStability >= 8 and iStability < 15:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_SOLID")
                     elif iStability >= 15:
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+                        szTempBuffer = text("TXT_KEY_STABILITY_VERYSOLID")
                     if iStability > 0:
                         szStabilityNum = "+%d" % (iStability)
                     else:
@@ -3409,11 +3400,7 @@ class CvMainInterface:
                         CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
                     )
                     # szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
-                    szFaithText = (
-                        ": "
-                        + localText.getText("TXT_KEY_FAITH_POINTS", ())
-                        + (" (%i) " % iFaithPoints)
-                    )
+                    szFaithText = ": " + text("TXT_KEY_FAITH_POINTS") + (" (%i) " % iFaithPoints)
                     # screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
                     # screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
                     screen.setLabel(
@@ -3456,9 +3443,7 @@ class CvMainInterface:
                         CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
                     )
                     szPersecutionText = (
-                        ": "
-                        + localText.getText("TXT_KEY_FAITH_PERSECUTION", ())
-                        + (" (%i) " % iPersecutionPoints)
+                        ": " + text("TXT_KEY_FAITH_PERSECUTION") + (" (%i) " % iPersecutionPoints)
                     )
                     screen.setLabel(
                         "PersecutionButton",
@@ -3544,9 +3529,9 @@ class CvMainInterface:
                     )
                     eCombatXPText = (
                         ": "
-                        + unicode(gc.getPlayer(ePlayer).getCombatExperience())
+                        + unicode(gc.getPlayer(ePlayer).getCombatExperience())  # type: ignore
                         + "/"
-                        + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(True))
+                        + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(True))  # type: ignore
                     )
                     screen.setLabel(
                         "CombatXPButton",
@@ -3583,14 +3568,16 @@ class CvMainInterface:
                     screen.hide("CombatXPText")
 
                 # 3Miro: Janissary Points
-                if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
+                if not CyInterface().isCityScreenUp() and ePlayer == Civ.OTTOMAN.value:
                     eJanissaryXPButton = u"<font=2>%c</font>" % (
                         CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR)
                     )
                     eJanissaryXPText = (
                         ": Janissary ("
-                        + unicode(
-                            gc.getPlayer(ePlayer).getPicklefreeParameter(con.iJanissaryPoints)
+                        + unicode(  # type: ignore
+                            gc.getPlayer(ePlayer).getPicklefreeParameter(
+                                SpecialParameter.JANISSARY_POINTS.value
+                            )
                         )
                         + "/300)"
                     )
@@ -3629,19 +3616,15 @@ class CvMainInterface:
                     screen.hide("JanissaryXPText")
 
                 # Show UHV info on the screen
-                if ePlayer == con.iBurgundy:
+                if ePlayer == Civ.BURGUNDY.value:
                     iBurgundyCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1336AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1336) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
                         szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_CULTURE", ())
-                            + (" (%i) " % iBurgundyCulture)
+                            ": " + text("TXT_KEY_UHV_CULTURE") + (" (%i) " % iBurgundyCulture)
                         )
                         screen.setLabel(
                             "UHVButton",
@@ -3676,19 +3659,15 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iLithuania:
+                elif ePlayer == Civ.LITHUANIA.value:
                     iLithuaniaCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1386AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1386) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
                         szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_CULTURE", ())
-                            + (" (%i) " % iLithuaniaCulture)
+                            ": " + text("TXT_KEY_UHV_CULTURE") + (" (%i) " % iLithuaniaCulture)
                         )
                         screen.setLabel(
                             "UHVButton",
@@ -3723,18 +3702,14 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iArabia:
-                    iIslamInfluence = gc.getGame().calculateReligionPercent(xml.iIslam)
+                elif ePlayer == Civ.ARABIA.value:
+                    iIslamInfluence = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
                     # HHG: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(2) == -1 and not CyInterface().isCityScreenUp():
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_ISLAM", ())
-                            + (" (%i) " % iIslamInfluence)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_ISLAM") + (" (%i) " % iIslamInfluence)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -3768,20 +3743,14 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iNorway:
+                elif ePlayer == Civ.NORWAY.value:
                     iNorwayRazed = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1066AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1066) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_VIKING", ())
-                            + (" (%i) " % iNorwayRazed)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_VIKING") + (" (%i) " % iNorwayRazed)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -3815,20 +3784,14 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iKiev:
+                elif ePlayer == Civ.KIEV.value:
                     iKievFood = pPlayer.getUHVCounter(2)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1300AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1300) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_FOOD", ())
-                            + (" (%i) " % iKievFood)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_FOOD") + (" (%i) " % iKievFood)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -3863,25 +3826,25 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif (
-                    ePlayer == con.iFrankia
-                    or ePlayer == con.iSpain
-                    or ePlayer == con.iPortugal
-                    or ePlayer == con.iEngland
-                    or ePlayer == con.iDutch
-                    or ePlayer == con.iDenmark
+                    ePlayer == Civ.FRANCE.value
+                    or ePlayer == Civ.CASTILE.value
+                    or ePlayer == Civ.PORTUGAL.value
+                    or ePlayer == Civ.ENGLAND.value
+                    or ePlayer == Civ.DUTCH.value
+                    or ePlayer == Civ.DENMARK.value
                 ):
-                    if gc.getTeam(pPlayer.getTeam()).isHasTech(xml.iAstronomy):
+                    if gc.getTeam(pPlayer.getTeam()).isHasTech(Technology.ASTRONOMY.value):
                         if (
-                            ePlayer == con.iFrankia
-                            or ePlayer == con.iPortugal
-                            or ePlayer == con.iDenmark
+                            ePlayer == Civ.FRANCE.value
+                            or ePlayer == Civ.PORTUGAL.value
+                            or ePlayer == Civ.DENMARK.value
                         ):
                             iColonies = pPlayer.getUHVCounter(2)
                             iUHVState = pPlayer.getUHV(2)
                         elif (
-                            ePlayer == con.iEngland
-                            or ePlayer == con.iSpain
-                            or ePlayer == con.iDutch
+                            ePlayer == Civ.ENGLAND.value
+                            or ePlayer == Civ.CASTILE.value
+                            or ePlayer == Civ.DUTCH.value
                         ):
                             iColonies = pPlayer.getUHVCounter(1)
                             iUHVState = pPlayer.getUHV(1)
@@ -3892,11 +3855,7 @@ class CvMainInterface:
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_COLONIES", ())
-                            + (" (%i) " % iColonies)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_COLONIES") + (" (%i) " % iColonies)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -3930,20 +3889,14 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iNovgorod:
-                    iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
+                elif ePlayer == Civ.NOVGOROD.value:
+                    iNovgorodFurs = pPlayer.countCultBorderBonuses(Bonus.FUR.value)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1397AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1397) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_FURS", ())
-                            + (" (%i) " % iNovgorodFurs)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_FURS") + (" (%i) " % iNovgorodFurs)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -3977,7 +3930,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iScotland:
+                elif ePlayer == Civ.SCOTLAND.value:
                     iScotlandFrench = pPlayer.getUHVCounter(1)
                     # Absinthe: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp():
@@ -3985,9 +3938,7 @@ class CvMainInterface:
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
                         szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_FRENCH", ())
-                            + (" (%i) " % iScotlandFrench)
+                            ": " + text("TXT_KEY_UHV_FRENCH") + (" (%i) " % iScotlandFrench)
                         )
                         screen.setLabel(
                             "UHVButton",
@@ -4022,19 +3973,15 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iAragon:
-                    iAragonCargoShips = utils.getCargoShips(con.iAragon)
+                elif ePlayer == Civ.ARAGON.value:
+                    iAragonCargoShips = utils.getCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1444AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (year(1444) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
                         szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_TRADE_SHIPS", ())
-                            + (" (%i) " % iAragonCargoShips)
+                            ": " + text("TXT_KEY_UHV_TRADE_SHIPS") + (" (%i) " % iAragonCargoShips)
                         )
                         screen.setLabel(
                             "UHVButton",
@@ -4069,18 +4016,14 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iSweden:
+                elif ePlayer == Civ.SWEDEN.value:
                     iSwedenRazed = pPlayer.getUHVCounter(1)
                     # Absinthe: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp():
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
-                        szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_RAZED", ())
-                            + (" (%i) " % iSwedenRazed)
-                        )
+                        szUHVText = ": " + text("TXT_KEY_UHV_RAZED") + (" (%i) " % iSwedenRazed)
                         screen.setLabel(
                             "UHVButton",
                             "Background",
@@ -4114,7 +4057,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == con.iPrussia:
+                elif ePlayer == Civ.PRUSSIA.value:
                     pCapital = pPlayer.getCapitalCity()
                     iGPStart = CvUtil.findInfoTypeNum(
                         gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST"
@@ -4133,9 +4076,7 @@ class CvMainInterface:
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
                         szUHVText = (
-                            ": "
-                            + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE", ())
-                            + (" (%i) " % iPrussiaGP)
+                            ": " + text("TXT_KEY_UHV_GREAT_PEOPLE") + (" (%i) " % iPrussiaGP)
                         )
                         screen.setLabel(
                             "UHVButton",
@@ -4178,9 +4119,7 @@ class CvMainInterface:
 
                 if gc.getPlayer(ePlayer).isAnarchy():
 
-                    szText = localText.getText(
-                        "INTERFACE_ANARCHY", (gc.getPlayer(ePlayer).getAnarchyTurns(),)
-                    )
+                    szText = text("INTERFACE_ANARCHY", gc.getPlayer(ePlayer).getAnarchyTurns())
                     screen.setText(
                         "ResearchText",
                         "Background",
@@ -4260,13 +4199,14 @@ class CvMainInterface:
             g_szTimeText = (
                 getClockText()
                 + u" - "
-                + localText.getText("TXT_KEY_TIME_TURN", (CyGame().getElapsedGameTurns(),))
+                + text("TXT_KEY_TIME_TURN", CyGame().getElapsedGameTurns())
                 + u" - "
-                + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))
+                + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))  # type: ignore
             )
         else:
-            # g_szTimeText = localText.getText("TXT_KEY_TIME_TURN", (CyGame().getGameTurn(), )) + u" - " + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer)) #Rhye
-            g_szTimeText = unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))  # Rhye
+            g_szTimeText = unicode(  # type: ignore
+                CyGameTextMgr().getInterfaceTimeStr(ePlayer)
+            )  # Rhye
 
     # Will update the selection Data Strings
     def updateCityScreen(self):
@@ -4518,13 +4458,13 @@ class CvMainInterface:
 
                 if (iFoodDifference != 0) or not (pHeadSelectedCity.isFoodProduction()):
                     if iFoodDifference > 0:
-                        szBuffer = localText.getText(
-                            "INTERFACE_CITY_GROWING", (pHeadSelectedCity.getFoodTurnsLeft(),)
+                        szBuffer = text(
+                            "INTERFACE_CITY_GROWING", pHeadSelectedCity.getFoodTurnsLeft()
                         )
                     elif iFoodDifference < 0:
-                        szBuffer = localText.getText("INTERFACE_CITY_STARVING", ())
+                        szBuffer = text("INTERFACE_CITY_STARVING")
                     else:
-                        szBuffer = localText.getText("INTERFACE_CITY_STAGNANT", ())
+                        szBuffer = text("INTERFACE_CITY_STAGNANT")
 
                     screen.setLabel(
                         "PopulationText",
@@ -4590,22 +4530,21 @@ class CvMainInterface:
                     pHeadSelectedCity.goodHealth() >= 0
                 ):
                     if pHeadSelectedCity.healthRate(False, 0) < 0:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_HEALTH_BAD",
-                            (
-                                pHeadSelectedCity.goodHealth(),
-                                pHeadSelectedCity.badHealth(False),
-                                pHeadSelectedCity.healthRate(False, 0),
-                            ),
+                            pHeadSelectedCity.goodHealth(),
+                            pHeadSelectedCity.badHealth(False),
+                            pHeadSelectedCity.healthRate(False, 0),
                         )
                     elif pHeadSelectedCity.badHealth(False) > 0:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_HEALTH_GOOD",
-                            (pHeadSelectedCity.goodHealth(), pHeadSelectedCity.badHealth(False)),
+                            pHeadSelectedCity.goodHealth(),
+                            pHeadSelectedCity.badHealth(False),
                         )
                     else:
-                        szBuffer = localText.getText(
-                            "INTERFACE_CITY_HEALTH_GOOD_NO_BAD", (pHeadSelectedCity.goodHealth(),)
+                        szBuffer = text(
+                            "INTERFACE_CITY_HEALTH_GOOD_NO_BAD", pHeadSelectedCity.goodHealth()
                         )
 
                     screen.setLabel(
@@ -4677,12 +4616,10 @@ class CvMainInterface:
                     if pHeadSelectedCity.isProductionProcess():
                         szBuffer = pHeadSelectedCity.getProductionName()
                     else:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_PRODUCTION",
-                            (
-                                pHeadSelectedCity.getProductionNameKey(),
-                                pHeadSelectedCity.getProductionTurnsLeft(),
-                            ),
+                            pHeadSelectedCity.getProductionNameKey(),
+                            pHeadSelectedCity.getProductionTurnsLeft(),
                         )
 
                     screen.setLabel(
@@ -4743,22 +4680,21 @@ class CvMainInterface:
                             CyGame().getSymbolID(FontSymbols.ANGRY_POP_CHAR),
                         )
                     elif pHeadSelectedCity.angryPopulation(0) > 0:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_UNHAPPY",
-                            (
-                                pHeadSelectedCity.happyLevel(),
-                                pHeadSelectedCity.unhappyLevel(0),
-                                pHeadSelectedCity.angryPopulation(0),
-                            ),
+                            pHeadSelectedCity.happyLevel(),
+                            pHeadSelectedCity.unhappyLevel(0),
+                            pHeadSelectedCity.angryPopulation(0),
                         )
                     elif pHeadSelectedCity.unhappyLevel(0) > 0:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_HAPPY",
-                            (pHeadSelectedCity.happyLevel(), pHeadSelectedCity.unhappyLevel(0)),
+                            pHeadSelectedCity.happyLevel(),
+                            pHeadSelectedCity.unhappyLevel(0),
                         )
                     else:
-                        szBuffer = localText.getText(
-                            "INTERFACE_CITY_HAPPY_NO_UNHAPPY", (pHeadSelectedCity.happyLevel(),)
+                        szBuffer = text(
+                            "INTERFACE_CITY_HAPPY_NO_UNHAPPY", pHeadSelectedCity.happyLevel()
                         )
 
                     screen.setLabel(
@@ -5279,7 +5215,7 @@ class CvMainInterface:
 
                 iMaintenance = pHeadSelectedCity.getMaintenanceTimes100()
 
-                szBuffer = localText.getText("INTERFACE_CITY_MAINTENANCE", ())
+                szBuffer = text("INTERFACE_CITY_MAINTENANCE")
 
                 screen.setLabel(
                     "MaintenanceText",
@@ -5521,9 +5457,10 @@ class CvMainInterface:
                 iDefenseModifier = pHeadSelectedCity.getDefenseModifier(False)
 
                 if iDefenseModifier != 0:
-                    szBuffer = localText.getText(
+                    szBuffer = text(
                         "TXT_KEY_MAIN_CITY_DEFENSE",
-                        (CyGame().getSymbolID(FontSymbols.DEFENSE_CHAR), iDefenseModifier),
+                        CyGame().getSymbolID(FontSymbols.DEFENSE_CHAR),
+                        iDefenseModifier,
                     )
 
                     if pHeadSelectedCity.getDefenseDamage() > 0:
@@ -5561,27 +5498,23 @@ class CvMainInterface:
                         CommerceTypes.COMMERCE_CULTURE
                     )
                     if iRate % 100 == 0:
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_COMMERCE_RATE",
-                            (
-                                gc.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(),
-                                gc.getCultureLevelInfo(
-                                    pHeadSelectedCity.getCultureLevel()
-                                ).getTextKey(),
-                                iRate / 100,
-                            ),
+                            gc.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(),
+                            gc.getCultureLevelInfo(
+                                pHeadSelectedCity.getCultureLevel()
+                            ).getTextKey(),
+                            iRate / 100,
                         )
                     else:
                         szRate = u"+%d.%02d" % (iRate / 100, iRate % 100)
-                        szBuffer = localText.getText(
+                        szBuffer = text(
                             "INTERFACE_CITY_COMMERCE_RATE_FLOAT",
-                            (
-                                gc.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(),
-                                gc.getCultureLevelInfo(
-                                    pHeadSelectedCity.getCultureLevel()
-                                ).getTextKey(),
-                                szRate,
-                            ),
+                            gc.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(),
+                            gc.getCultureLevelInfo(
+                                pHeadSelectedCity.getCultureLevel()
+                            ).getTextKey(),
+                            szRate,
                         )
                     screen.setLabel(
                         "CultureText",
@@ -5603,12 +5536,10 @@ class CvMainInterface:
                     pHeadSelectedCity.getGreatPeopleRate() > 0
                 ):
                     # Rhye - great people info here
-                    szBuffer = localText.getText(
+                    szBuffer = text(
                         "INTERFACE_CITY_GREATPEOPLE_RATE",
-                        (
-                            CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR),
-                            pHeadSelectedCity.getGreatPeopleRate(),
-                        ),
+                        CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR),
+                        pHeadSelectedCity.getGreatPeopleRate(),
                     )
 
                     screen.setLabel(
@@ -5923,9 +5854,7 @@ class CvMainInterface:
                 screen.setText(
                     "SelectedUnitLabel",
                     "Background",
-                    localText.getText(
-                        "TXT_KEY_UNIT_STACK", (CyInterface().getLengthSelectionList(),)
-                    ),
+                    text("TXT_KEY_UNIT_STACK", CyInterface().getLengthSelectionList()),
                     CvUtil.FONT_LEFT_JUSTIFY,
                     18,
                     yResolution - 137,
@@ -5979,13 +5908,12 @@ class CvMainInterface:
             else:
 
                 if pHeadSelectedUnit.getHotKeyNumber() == -1:
-                    szBuffer = localText.getText(
-                        "INTERFACE_PANE_UNIT_NAME", (pHeadSelectedUnit.getName(),)
-                    )
+                    szBuffer = text("INTERFACE_PANE_UNIT_NAME", pHeadSelectedUnit.getName())
                 else:
-                    szBuffer = localText.getText(
+                    szBuffer = text(
                         "INTERFACE_PANE_UNIT_NAME_HOT_KEY",
-                        (pHeadSelectedUnit.getHotKeyNumber(), pHeadSelectedUnit.getName()),
+                        pHeadSelectedUnit.getHotKeyNumber(),
+                        pHeadSelectedUnit.getName(),
                     )
                 if len(szBuffer) > 60:
                     szBuffer = "<font=2>" + szBuffer + "</font>"
@@ -6014,7 +5942,7 @@ class CvMainInterface:
 
                     if pHeadSelectedUnit.getDomainType() == DomainTypes.DOMAIN_AIR:
                         if pHeadSelectedUnit.airBaseCombatStr() > 0:
-                            szLeftBuffer = localText.getText("INTERFACE_PANE_AIR_STRENGTH", ())
+                            szLeftBuffer = text("INTERFACE_PANE_AIR_STRENGTH")
                             if pHeadSelectedUnit.isFighting():
                                 szRightBuffer = u"?/%d%c" % (
                                     pHeadSelectedUnit.airBaseCombatStr(),
@@ -6041,7 +5969,7 @@ class CvMainInterface:
                                 )
                     else:
                         if pHeadSelectedUnit.canFight():
-                            szLeftBuffer = localText.getText("INTERFACE_PANE_STRENGTH", ())
+                            szLeftBuffer = text("INTERFACE_PANE_STRENGTH")
                             if pHeadSelectedUnit.isFighting():
                                 szRightBuffer = u"?/%d%c" % (
                                     pHeadSelectedUnit.baseCombatStr(),
@@ -6106,7 +6034,7 @@ class CvMainInterface:
                     iCurrMoves = (
                         pHeadSelectedUnit.movesLeft() / gc.getMOVE_DENOMINATOR()
                     ) + iDenom
-                    szLeftBuffer = localText.getText("INTERFACE_PANE_MOVEMENT", ())
+                    szLeftBuffer = text("INTERFACE_PANE_MOVEMENT")
                     if pHeadSelectedUnit.baseMoves() == iCurrMoves:
                         szRightBuffer = u"%d%c" % (
                             pHeadSelectedUnit.baseMoves(),
@@ -6149,7 +6077,7 @@ class CvMainInterface:
 
                     if pHeadSelectedUnit.getLevel() > 0:
 
-                        szLeftBuffer = localText.getText("INTERFACE_PANE_LEVEL", ())
+                        szLeftBuffer = text("INTERFACE_PANE_LEVEL")
                         szRightBuffer = u"%d" % (pHeadSelectedUnit.getLevel())
 
                         szBuffer = szLeftBuffer + "  " + szRightBuffer
@@ -6183,7 +6111,7 @@ class CvMainInterface:
                     if (
                         pHeadSelectedUnit.getExperience() > 0
                     ) and not pHeadSelectedUnit.isFighting():
-                        szLeftBuffer = localText.getText("INTERFACE_PANE_EXPERIENCE", ())
+                        szLeftBuffer = text("INTERFACE_PANE_EXPERIENCE")
                         szRightBuffer = u"(%d/%d)" % (
                             pHeadSelectedUnit.getExperience(),
                             pHeadSelectedUnit.experienceNeeded(),
@@ -6241,12 +6169,10 @@ class CvMainInterface:
                                 szLeftBuffer = gc.getBuildInfo(
                                     pSelectedGroup.getMissionData1(i)
                                 ).getDescription()
-                                szRightBuffer = localText.getText(
+                                szRightBuffer = text(
                                     "INTERFACE_CITY_TURNS",
-                                    (
-                                        pSelectedGroup.plot().getBuildTurnsLeft(
-                                            pSelectedGroup.getMissionData1(i), 0, 0
-                                        ),
+                                    pSelectedGroup.plot().getBuildTurnsLeft(
+                                        pSelectedGroup.getMissionData1(i), 0, 0
                                     ),
                                 )
                             else:
@@ -6420,10 +6346,8 @@ class CvMainInterface:
                                                 szBuffer = (
                                                     szBuffer
                                                     + "("
-                                                    + localText.getColorText(
-                                                        "TXT_KEY_CONCEPT_WAR",
-                                                        (),
-                                                        gc.getInfoTypeForString("COLOR_RED"),
+                                                    + colortext(
+                                                        "TXT_KEY_CONCEPT_WAR", "COLOR_RED"
                                                     ).upper()
                                                     + ") "
                                                 )
@@ -6528,7 +6452,7 @@ class CvMainInterface:
                                                     szBuffer = szBuffer + szTempBuffer
                                             # Rhye - start plague
                                             if utils.getPlagueCountdown(ePlayer) > 0:
-                                                szTempBuffer = unichr(
+                                                szTempBuffer = unichr(  # type: ignore
                                                     CyGame().getSymbolID(FontSymbols.POWER_CHAR)
                                                     + 6
                                                 )
@@ -6552,7 +6476,7 @@ class CvMainInterface:
                                         # Rhye - start
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
-                                            and gc.getGame().getGameTurn() >= con.tBirth[eTeam]
+                                            and turn() >= civilization(eTeam).date.birth
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:
@@ -6565,7 +6489,7 @@ class CvMainInterface:
                                         # szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
                                         # szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
                                         if gc.getPlayer(ePlayer).isAlive():
-                                            if ePlayer < con.iNumMajorPlayers:
+                                            if ePlayer < civilizations().majors().len():
                                                 szTempBuffer = u"<color=%s>%d/3</color>" % (
                                                     utils.getGoalsColor(ePlayer),
                                                     utils.countAchievedGoals(ePlayer),
@@ -6576,70 +6500,69 @@ class CvMainInterface:
                                         # Rhye - start stability
                                         if gc.getPlayer(ePlayer).isAlive():
                                             if (
-                                                ePlayer < con.iNumMajorPlayers
+                                                ePlayer < civilizations().majors().len()
                                             ):  # in case byzantium is major
-                                                # iStability = utils.getStability(ePlayer)
-                                                iStability = gc.getPlayer(ePlayer).getStability()
+                                                iStability = player(ePlayer).getStability()
                                                 if iStability < -15:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_COLLAPSING")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 3
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_COLLAPSING", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_COLLAPSING") + ")"
                                                 elif iStability >= -15 and iStability < -8:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_UNSTABLE")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 3
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_UNSTABLE", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_UNSTABLE") + ")"
                                                 elif iStability >= -8 and iStability < 0:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_SHAKY")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 4
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SHAKY", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_SHAKY") + ")"
                                                 elif iStability >= 0 and iStability < 8:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_STABLE")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 4
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_STABLE", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_STABLE") + ")"
                                                 elif iStability >= 8 and iStability < 15:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_SOLID")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 5
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SOLID", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_SOLID") + ")"
                                                 elif iStability >= 15:
-                                                    # szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
-                                                    szTempBuffer = unichr(
+                                                    # szTempBuffer = text("TXT_KEY_STABILITY_VERYSOLID")
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
                                                         + 5
                                                     )
                                                     # if (gc.getPlayer(ePlayer).isHuman()):
-                                                    # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_VERYSOLID", ()) + ")"
+                                                    # 	szTempBuffer = szTempBuffer + " (" + text("TXT_KEY_STABILITY_VERYSOLID") + ")"
                                                 szBuffer = szBuffer + " - " + szTempBuffer
                                         # Rhye - end stability
 
@@ -7181,12 +7104,11 @@ class CvMainInterface:
             # iUnitID = g_pSelectedUnit.getID()
 
             # utils.prosecute( iPlotX, iPlotY, iUnitID )
-            ##print( " Prosecute " )
             ## Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
             ##CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
 
             # Absinthe: persecution popup
-            if gc.getGame().getActivePlayer() == utils.getHumanID():
+            if gc.getGame().getActivePlayer() == human():
                 pCity = (
                     gc.getMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY()).getPlotCity()
                 )
@@ -7225,7 +7147,6 @@ class CvMainInterface:
             # iUnitID = g_pSelectedUnit.getID()
 
             utils.saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
-            # print( " Becomes a Saint " )
 
         return 0
 

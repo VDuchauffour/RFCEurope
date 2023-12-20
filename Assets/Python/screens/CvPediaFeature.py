@@ -8,6 +8,7 @@
 
 
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 import string
@@ -15,7 +16,6 @@ import string
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaFeature:
@@ -196,7 +196,7 @@ class CvPediaFeature:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,
@@ -226,7 +226,7 @@ class CvPediaFeature:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_DESCRIPTION", ()),
+            text("TXT_KEY_PEDIA_DESCRIPTION"),
             "",
             True,
             True,

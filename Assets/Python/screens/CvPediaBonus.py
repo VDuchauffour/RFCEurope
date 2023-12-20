@@ -7,6 +7,7 @@
 ##
 
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 import string
@@ -14,7 +15,6 @@ import string
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaBonus:
@@ -249,7 +249,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ()),
+            text("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT"),
             "",
             True,
             True,
@@ -309,7 +309,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_EFFECTS", ()),
+            text("TXT_KEY_PEDIA_EFFECTS"),
             "",
             True,
             False,
@@ -339,7 +339,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -364,11 +364,7 @@ class CvPediaBonus:
                 1,
                 False,
             )
-            screen.attachLabel(
-                panelName,
-                "",
-                u"(" + localText.getText("TXT_KEY_PEDIA_BONUS_APPEARANCE", ()) + u")",
-            )
+            screen.attachLabel(panelName, "", u"(" + text("TXT_KEY_PEDIA_BONUS_APPEARANCE") + u")")
         iTech = gc.getBonusInfo(self.iBonus).getTechCityTrade()
         if iTech > -1:
             screen.attachImageButton(
@@ -381,9 +377,7 @@ class CvPediaBonus:
                 1,
                 False,
             )
-            screen.attachLabel(
-                panelName, "", u"(" + localText.getText("TXT_KEY_PEDIA_BONUS_TRADE", ()) + u")"
-            )
+            screen.attachLabel(panelName, "", u"(" + text("TXT_KEY_PEDIA_BONUS_TRADE") + u")")
 
     def placeHistory(self):
 
@@ -392,7 +386,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_CIVILOPEDIA_HISTORY", ()),
+            text("TXT_KEY_CIVILOPEDIA_HISTORY"),
             "",
             True,
             True,
@@ -428,7 +422,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()),
+            text("TXT_KEY_PEDIA_CATEGORY_BUILDING"),
             "",
             False,
             True,
@@ -461,7 +455,7 @@ class CvPediaBonus:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_ALLOWS", ()),
+            text("TXT_KEY_PEDIA_ALLOWS"),
             "",
             False,
             True,

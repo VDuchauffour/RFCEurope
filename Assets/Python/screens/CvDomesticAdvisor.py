@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 
@@ -21,7 +22,6 @@ import CvScreenEnums
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvDomesticAdvisor:
@@ -80,7 +80,7 @@ class CvDomesticAdvisor:
         screen.setText(
             "DomesticExit",
             "Background",
-            localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(),
+            text("TXT_KEY_PEDIA_SCREEN_EXIT").upper(),
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.nScreenWidth - 25,
             self.nScreenHeight - 45,
@@ -134,7 +134,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             1,
-            "<font=2>" + localText.getText("TXT_KEY_DOMESTIC_ADVISOR_NAME", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_DOMESTIC_ADVISOR_NAME") + "</font>",
             (221 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -142,7 +142,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             2,
-            "<font=2>" + localText.getText("TXT_KEY_POPULATION", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_POPULATION") + "</font>",
             (40 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -254,7 +254,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             15,
-            "<font=2>" + localText.getText("TXT_KEY_DOMESTIC_ADVISOR_PRODUCING", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_DOMESTIC_ADVISOR_PRODUCING") + "</font>",
             (132 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -364,7 +364,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             2,
             i,
-            unicode(pLoopCity.getPopulation()),
+            unicode(pLoopCity.getPopulation()),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -374,19 +374,11 @@ class CvDomesticAdvisor:
 
         # Happiness...
         iNetHappy = pLoopCity.happyLevel() - pLoopCity.unhappyLevel(0)
-        szText = unicode(iNetHappy)
+        szText = unicode(iNetHappy)  # type: ignore
         if iNetHappy > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetHappy < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             3,
@@ -401,19 +393,11 @@ class CvDomesticAdvisor:
 
         # Health...
         iNetHealth = pLoopCity.goodHealth() - pLoopCity.badHealth(0)
-        szText = unicode(iNetHealth)
+        szText = unicode(iNetHealth)  # type: ignore
         if iNetHealth > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetHealth < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             4,
@@ -428,19 +412,11 @@ class CvDomesticAdvisor:
 
         # Food status...
         iNetFood = pLoopCity.foodDifference(True)
-        szText = unicode(iNetFood)
+        szText = unicode(iNetFood)  # type: ignore
         if iNetFood > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetFood < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             5,
@@ -458,7 +434,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             6,
             i,
-            unicode(pLoopCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)),
+            unicode(pLoopCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -471,7 +447,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             7,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_GOLD)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_GOLD)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -484,7 +460,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             8,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -497,7 +473,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             9,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -506,7 +482,7 @@ class CvDomesticAdvisor:
         )
 
         # Culture status...
-        szCulture = unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE))
+        szCulture = unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE))  # type: ignore
         iCultureTimes100 = pLoopCity.getCultureTimes100(CyGame().getActivePlayer())
         iCultureRateTimes100 = pLoopCity.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
         if iCultureRateTimes100 > 0:
@@ -514,7 +490,7 @@ class CvDomesticAdvisor:
             if iCultureLeftTimes100 > 0:
                 szCulture += (
                     u" ("
-                    + unicode(
+                    + unicode(  # type: ignore
                         (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
                     )
                     + u")"
@@ -537,7 +513,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             11,
             i,
-            unicode(pLoopCity.getTradeYield(YieldTypes.YIELD_COMMERCE)),
+            unicode(pLoopCity.getTradeYield(YieldTypes.YIELD_COMMERCE)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -550,7 +526,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             12,
             i,
-            unicode(pLoopCity.getMaintenance()),
+            unicode(pLoopCity.getMaintenance()),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -560,7 +536,7 @@ class CvDomesticAdvisor:
 
         # Great Person
         iGreatPersonRate = pLoopCity.getGreatPeopleRate()
-        szGreatPerson = unicode(iGreatPersonRate)
+        szGreatPerson = unicode(iGreatPersonRate)  # type: ignore
         if iGreatPersonRate > 0:
             iGPPLeft = (
                 gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(False)
@@ -570,7 +546,7 @@ class CvDomesticAdvisor:
                 iTurnsLeft = iGPPLeft / pLoopCity.getGreatPeopleRate()
                 if iTurnsLeft * pLoopCity.getGreatPeopleRate() < iGPPLeft:
                     iTurnsLeft += 1
-                szGreatPerson += u" (" + unicode(iTurnsLeft) + u")"
+                szGreatPerson += u" (" + unicode(iTurnsLeft) + u")"  # type: ignore
 
         screen.setTableInt(
             "CityListBackground",
@@ -589,7 +565,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             14,
             i,
-            unicode(pLoopCity.plot().getNumDefenders(pLoopCity.getOwner())),
+            unicode(pLoopCity.plot().getNumDefenders(pLoopCity.getOwner())),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,

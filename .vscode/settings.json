@@ -5,9 +5,29 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": false
+      "source.organizeImports": "never"
     }
   },
   "ruff.organizeImports": false,
-  "black-formatter.importStrategy": "fromEnvironment"
+  "black-formatter.importStrategy": "fromEnvironment",
+  "python.analysis.extraPaths": [
+    "~/.pyenv/versions",
+    "./Assets/Python",
+    "./Assets/Python/data",
+    "./Assets/Python/data/maps",
+    "./Assets/Python/utils",
+    "./Assets/Python/models",
+    "./Assets/Python/components",
+    "./Assets/Python/EntryPoints",
+    "./Assets/Python/pyWB",
+    "./Assets/Python/screens",
+    "../../Assets/Python",
+    "../../Assets/Python/EntryPoints",
+    "../../Assets/Python/pyWB",
+    "../../Assets/Python/Screens",
+    "../../Assets/Python/pyUnit",
+    "../../Assets/Python/pyHelper",
+    "../../Assets/Python/PitBoss",
+    "../../../Assets/Python/pyHelper"
+  ]
 }

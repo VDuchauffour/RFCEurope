@@ -2,7 +2,7 @@
 
 This repository contains a fork of the mod `RFCEurope` for Civilization IV: Beyond the Sword, based on the popular Rhye's and Fall of Civilization mod.
 
-This fork enhances the original mod with minor changes and the following changes:
+This fork enhances the original mod with some changes:
 
 - add [Advanced Combat Odds](https://forums.civfanatics.com/threads/pieceofminds-advanced-combat-odds.310415/) mod (v2.01)
 - add [Blue Marble](https://www.civfanatics.net/bluemarble/content/index.php) mod (v4.50)
@@ -34,3 +34,9 @@ To interact with all existing Python modules, use the following command to popul
 ```shell
 export PYTHONPATH=$(./export-paths.sh)
 ```
+
+The Python version used by the in-game interpreter is `2.4.1`.
+
+## Acknowledgements
+
+- [Dawn of Civilization:](https://github.com/dguenms/Dawn-of-Civilization) Some data structures and project logics are taken from this excellent mod!

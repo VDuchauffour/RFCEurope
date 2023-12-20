@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 import PyHelpers
 import CvUtil
 import CvScreenEnums
@@ -10,7 +11,6 @@ PyPlayer = PyHelpers.PyPlayer
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvCorporationScreen:
@@ -91,9 +91,7 @@ class CvCorporationScreen:
     def interfaceScreen(self):
 
         self.SCREEN_ART = ArtFileMgr.getInterfaceArtInfo("TECH_BG").getPath()
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>"
 
         self.iActivePlayer = gc.getGame().getActivePlayer()
 
@@ -272,13 +270,13 @@ class CvCorporationScreen:
 
         # Absinthe: no need for these with the new company system
         # Founded...
-        # screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+        # screen.setLabelAt("", szArea, text("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED"), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
         # Date Founded:
         # xLoop = self.X_CORPORATION_START
         # for i in range(gc.getNumCorporationInfos()):
         # if (gc.getGame().getCorporationGameTurnFounded(i) < 0):
-        # szFounded = localText.getText("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED", ())
+        # szFounded = text("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED")
         # else:
         # szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getCorporationGameTurnFounded(i), False)
         # screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -286,7 +284,7 @@ class CvCorporationScreen:
         # xLoop += self.DX_CORPORATION
 
         # Headquarters
-        # screen.setLabelAt("", szArea, localText.getText("TXT_KEY_CORPORATION_SCREEN_HEADQUARTERS", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+        # screen.setLabelAt("", szArea, text("TXT_KEY_CORPORATION_SCREEN_HEADQUARTERS"), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
         # xLoop = self.X_CORPORATION_START
         # for i in range(gc.getNumCorporationInfos()):
@@ -295,7 +293,7 @@ class CvCorporationScreen:
         # szFounded = u"-"
         # screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
         # elif not pHeadquarters.isRevealed(gc.getPlayer(self.iActivePlayer).getTeam(), False):
-        # szFounded = localText.getText("TXT_KEY_UNKNOWN", ())
+        # szFounded = text("TXT_KEY_UNKNOWN")
         # screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
         # else:
         # szFounded = pHeadquarters.getName()
@@ -457,9 +455,7 @@ class CvCorporationScreen:
             screen.setLabel(
                 self.HEADER_NAME,
                 "Background",
-                u"<font=4b>"
-                + localText.getText("TXT_KEY_CORPORATION_SCREEN_TITLE", ()).upper()
-                + u"</font>",
+                u"<font=4b>" + text("TXT_KEY_CORPORATION_SCREEN_TITLE").upper() + u"</font>",
                 CvUtil.FONT_CENTER_JUSTIFY,
                 self.X_SCREEN,
                 self.Y_TITLE,

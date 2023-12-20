@@ -1,32 +1,31 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreData import civilizations
 import CvUtil
 import CvScreensInterface
 import CvEventInterface
 import CvScreenEnums
 import Popup as PyPopup
+from CoreFunctions import text
 
 # Caliom RFCE imports
-import RFCEMapUtil
-import Consts
+import MapUtils
 
 # Caliom globals
-CITY_NAME_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
-RESTORE_LANDMARKS_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
-MapManager = RFCEMapUtil.MapManager
-MapVisualizer = RFCEMapUtil.MapVisualizer
+CITY_NAME_POPUP_EVENT_ID = MapUtils.getNewEventID()
+RESTORE_LANDMARKS_POPUP_EVENT_ID = MapUtils.getNewEventID()
+MapManager = MapUtils.MapManager
+MapVisualizer = MapUtils.MapVisualizer
 
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvWorldBuilderScreen:
     "World Builder Screen"
 
     def __init__(self):
-        print("init-ing world builder screen")
         self.m_advancedStartTabCtrl = None
         self.m_normalPlayerTabCtrl = 0
         self.m_normalMapTabCtrl = 0
@@ -152,14 +151,14 @@ class CvWorldBuilderScreen:
         self.m_normalMapTabCtrl = getWBToolNormalMapTabCtrl()
 
         self.m_normalMapTabCtrl.setNumColumns((gc.getNumBonusInfos() / 10) + 1)
-        self.m_normalMapTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_IMPROVEMENTS", ()))
+        self.m_normalMapTabCtrl.addTabSection(text("TXT_KEY_WB_IMPROVEMENTS"))
         self.m_iImprovementTabID = 0
         self.m_iNormalMapCurrentIndexes.append(0)
 
         self.m_iNormalMapCurrentList.append(0)
         self.m_iImprovementListID = 0
 
-        self.m_normalMapTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_BONUSES", ()))
+        self.m_normalMapTabCtrl.addTabSection(text("TXT_KEY_WB_BONUSES"))
         self.m_iBonusTabID = 1
         self.m_iNormalMapCurrentIndexes.append(0)
 
@@ -167,7 +166,7 @@ class CvWorldBuilderScreen:
         self.m_iBonusListID = 0
 
         self.m_normalMapTabCtrl.setNumColumns((gc.getNumTerrainInfos() / 10) + 1)
-        self.m_normalMapTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_TERRAINS", ()))
+        self.m_normalMapTabCtrl.addTabSection(text("TXT_KEY_WB_TERRAINS"))
         self.m_iTerrainTabID = 2
         self.m_iNormalMapCurrentIndexes.append(0)
 
@@ -180,7 +179,7 @@ class CvWorldBuilderScreen:
         # Territory
 
         self.m_normalMapTabCtrl.setNumColumns(8)
-        self.m_normalMapTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_TERRITORY", ()))
+        self.m_normalMapTabCtrl.addTabSection(text("TXT_KEY_WB_TERRITORY"))
         self.m_iTerritoryTabID = 3
         self.m_iNormalMapCurrentIndexes.append(0)
 
@@ -509,17 +508,17 @@ class CvWorldBuilderScreen:
         iPopupWidth = 200
         iPopupHeight = 50 * PlotTypes.NUM_PLOT_TYPES
         popup.setSize(iPopupWidth, iPopupHeight)
-        popup.setHeaderString(localText.getText("TXT_KEY_WB_CHANGE_ALL_PLOTS", ()))
+        popup.setHeaderString(text("TXT_KEY_WB_CHANGE_ALL_PLOTS"))
         for i in range(PlotTypes.NUM_PLOT_TYPES):
             if i == 0:
-                popup.addButton(localText.getText("TXT_KEY_WB_ADD_MOUNTAIN", ()))
+                popup.addButton(text("TXT_KEY_WB_ADD_MOUNTAIN"))
             elif i == 1:
-                popup.addButton(localText.getText("TXT_KEY_WB_ADD_HILL", ()))
+                popup.addButton(text("TXT_KEY_WB_ADD_HILL"))
             elif i == 2:
-                popup.addButton(localText.getText("TXT_KEY_WB_ADD_GRASS", ()))
+                popup.addButton(text("TXT_KEY_WB_ADD_GRASS"))
             elif i == 3:
-                popup.addButton(localText.getText("TXT_KEY_WB_ADD_OCEAN", ()))
-        popup.addButton(localText.getText("TXT_KEY_SCREEN_CANCEL", ()))
+                popup.addButton(text("TXT_KEY_WB_ADD_OCEAN"))
+        popup.addButton(text("TXT_KEY_SCREEN_CANCEL"))
         popup.launch(False)
         return 1
 
@@ -1160,16 +1159,15 @@ class CvWorldBuilderScreen:
                     iY = self.m_pCurrentPlot.getY()
                     pPlayer.initCity(iX, iY)
                     # Absinthe: correct CNM name for new cities in the WB
-                    print("WB City placed for:", self.m_iCurrentPlayer)
                     if (
-                        self.m_iCurrentPlayer < Consts.iNumMajorPlayers
+                        self.m_iCurrentPlayer < civilizations().majors().len()
                     ):  # indy and barb civs don't have a city name map
                         cityName = MapManager.getCityName(
                             self.m_iCurrentPlayer, self.m_pCurrentPlot
                         )
                         if cityName is not None:
                             city = gc.getMap().plot(iX, iY).getPlotCity()
-                            city.setName(unicode(cityName, "latin-1"), False)
+                            city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
         elif (self.m_bNormalMap) and (
             self.m_normalMapTabCtrl.getActiveTab() == self.m_iImprovementTabID
         ):
@@ -1805,7 +1803,7 @@ class CvWorldBuilderScreen:
 
         self.m_tabCtrlEdit.setNumColumns((gc.getNumPromotionInfos() / 10) + 1)
         self.m_tabCtrlEdit.setColumnLength(20)
-        self.m_tabCtrlEdit.addTabSection(localText.getText("TXT_KEY_WB_CHOOSE_UNIT", ()))
+        self.m_tabCtrlEdit.addTabSection(text("TXT_KEY_WB_CHOOSE_UNIT"))
         strTest = ()
         for i in range(self.m_pActivePlot.getNumUnits()):
             if len(self.m_pActivePlot.getUnit(i).getNameNoDesc()):
@@ -1830,7 +1828,7 @@ class CvWorldBuilderScreen:
         self.m_tabCtrlEdit.addSectionEditCtrl(
             strName, "CvScreensInterface", "WorldBuilderHandleUnitEditNameCB", "UnitEditName", 0
         )
-        self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_EXPERIENCE", ()), 0)
+        self.m_tabCtrlEdit.addSectionLabel(text("TXT_KEY_WB_EXPERIENCE"), 0)
         strExperience = str("UnitEditExperienceCB")
         self.m_tabCtrlEdit.addSectionSpinner(
             strExperience,
@@ -1845,7 +1843,7 @@ class CvWorldBuilderScreen:
             0,
             0,
         )
-        self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_LEVEL", ()), 0)
+        self.m_tabCtrlEdit.addSectionLabel(text("TXT_KEY_WB_LEVEL"), 0)
         strLevel = str("UnitEditLevelCB")
         self.m_tabCtrlEdit.addSectionSpinner(
             strLevel,
@@ -1875,7 +1873,7 @@ class CvWorldBuilderScreen:
         )
 
         self.m_tabCtrlEdit.addSectionButton(
-            localText.getText("TXT_KEY_WB_ADD_SCRIPT", ()),
+            text("TXT_KEY_WB_ADD_SCRIPT"),
             "CvScreensInterface",
             "WorldBuilderHandleUnitEditAddScriptCB",
             "UnitEditAddScript",
@@ -1885,7 +1883,6 @@ class CvWorldBuilderScreen:
         initWBToolEditCtrlTab(True)
 
         if not self.m_tabCtrlEdit.isNone():
-            print("Enabling map control 4")
             self.m_normalPlayerTabCtrl.enable(False)
             self.m_normalMapTabCtrl.enable(False)
             self.m_bCtrlEditUp = True
@@ -1905,12 +1902,12 @@ class CvWorldBuilderScreen:
 
         self.m_tabCtrlEdit.setNumColumns((gc.getNumBuildingInfos() / 10) + 2)
         self.m_tabCtrlEdit.setColumnLength(20)
-        self.m_tabCtrlEdit.addTabSection(localText.getText("TXT_KEY_WB_CITY_DATA", ()))
+        self.m_tabCtrlEdit.addTabSection(text("TXT_KEY_WB_CITY_DATA"))
         strName = self.m_pActivePlot.getPlotCity().getName()
         self.m_tabCtrlEdit.addSectionEditCtrl(
             strName, "CvScreensInterface", "WorldBuilderHandleCityEditNameCB", "CityEditName", 0
         )
-        self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_POPULATION", ()), 0)
+        self.m_tabCtrlEdit.addSectionLabel(text("TXT_KEY_WB_POPULATION"), 0)
         strPopulation = str("CityEditPopulationCB")
         self.m_tabCtrlEdit.addSectionSpinner(
             strPopulation,
@@ -1925,7 +1922,7 @@ class CvWorldBuilderScreen:
             0,
             0,
         )
-        self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_CULTURE", ()), 0)
+        self.m_tabCtrlEdit.addSectionLabel(text("TXT_KEY_WB_CULTURE"), 0)
         strCulture = str("CityEditCultureCB")
         self.m_tabCtrlEdit.addSectionSpinner(
             strCulture,
@@ -1942,7 +1939,7 @@ class CvWorldBuilderScreen:
             0,
             0,
         )
-        self.m_tabCtrlEdit.addSectionLabel(localText.getText("TXT_KEY_WB_GOLD", ()), 0)
+        self.m_tabCtrlEdit.addSectionLabel(text("TXT_KEY_WB_GOLD"), 0)
         strGold = str("CityEditGoldCB")
         self.m_tabCtrlEdit.addSectionSpinner(
             strGold,
@@ -1958,7 +1955,7 @@ class CvWorldBuilderScreen:
             0,
         )
         self.m_tabCtrlEdit.addSectionButton(
-            localText.getText("TXT_KEY_WB_ADD_SCRIPT", ()),
+            text("TXT_KEY_WB_ADD_SCRIPT"),
             "CvScreensInterface",
             "WorldBuilderHandleCityEditAddScriptCB",
             "CityEditAddScript",
@@ -1968,7 +1965,6 @@ class CvWorldBuilderScreen:
         initWBToolEditCtrlTab(False)
 
         if not self.m_tabCtrlEdit.isNone():
-            print("Enabling map control 5")
             self.m_normalPlayerTabCtrl.enable(False)
             self.m_normalMapTabCtrl.enable(False)
             self.m_bCtrlEditUp = True
@@ -1991,7 +1987,6 @@ class CvWorldBuilderScreen:
         CvScreensInterface.hideWorldBuilderDiplomacyScreen()
 
         if self.m_tabCtrlEdit != 0:
-            print("Enabling map control 6")
             self.m_tabCtrlEdit.enable(False)
 
         CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
@@ -1999,7 +1994,6 @@ class CvWorldBuilderScreen:
 
         self.refreshSideMenu()
         self.setCurrentModeCheckbox(self.m_iUnitEditCheckboxID)
-        print("Enabling map control 7")
         self.m_normalPlayerTabCtrl.enable(False)
         self.m_normalMapTabCtrl.enable(False)
         if self.m_tabCtrlEdit != 0:
@@ -2019,7 +2013,6 @@ class CvWorldBuilderScreen:
         CvScreensInterface.hideWorldBuilderDiplomacyScreen()
 
         if self.m_tabCtrlEdit != 0:
-            print("Enabling map control 8")
             self.m_tabCtrlEdit.enable(False)
 
         CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
@@ -2027,7 +2020,6 @@ class CvWorldBuilderScreen:
 
         self.refreshSideMenu()
         self.setCurrentModeCheckbox(self.m_iCityEditCheckboxID)
-        print("Enabling map control 9")
         self.m_normalPlayerTabCtrl.enable(False)
         self.m_normalMapTabCtrl.enable(False)
         if self.m_tabCtrlEdit != 0:
@@ -2052,10 +2044,8 @@ class CvWorldBuilderScreen:
         self.refreshSideMenu()
         self.setCurrentModeCheckbox(self.m_iNormalPlayerCheckboxID)
         if self.m_normalMapTabCtrl:
-            print("Disabling Map Tab")
             self.m_normalMapTabCtrl.enable(False)
         if not self.m_normalPlayerTabCtrl.isEnabled() and not CyInterface().isInAdvancedStart():
-            print("Enabling Player Tab")
             self.m_normalPlayerTabCtrl.enable(True)
             if self.m_tabCtrlEdit:
                 self.m_tabCtrlEdit.enable(False)
@@ -2080,10 +2070,8 @@ class CvWorldBuilderScreen:
         self.refreshSideMenu()
         self.setCurrentModeCheckbox(self.m_iNormalMapCheckboxID)
         if self.m_normalPlayerTabCtrl:
-            print("Disabling Player Tab")
             self.m_normalPlayerTabCtrl.enable(False)
         if not self.m_normalMapTabCtrl.isEnabled() and not CyInterface().isInAdvancedStart():
-            print("Enabling Map Tab")
             self.m_normalMapTabCtrl.enable(True)
             if self.m_tabCtrlEdit:
                 self.m_tabCtrlEdit.enable(False)
@@ -2208,20 +2196,20 @@ class CvWorldBuilderScreen:
                 )
         if self.m_pFlyoutPlot.isCity():
             self.m_flyoutMenu.addTextItem(
-                localText.getText("TXT_KEY_WB_EDIT_CITY", ()),
+                text("TXT_KEY_WB_EDIT_CITY"),
                 "CvScreensInterface",
                 "WorldBuilderHandleFlyoutMenuCB",
                 self.m_iFlyoutEditCity,
             )
 
         self.m_flyoutMenu.addTextItem(
-            localText.getText("TXT_KEY_WB_ADD_SCRIPT_TO_PLOT", ()),
+            text("TXT_KEY_WB_ADD_SCRIPT_TO_PLOT"),
             "CvScreensInterface",
             "WorldBuilderHandleFlyoutMenuCB",
             self.m_iFlyoutAddScript,
         )
         self.m_flyoutMenu.addTextItem(
-            localText.getText("TXT_KEY_WB_CHANGE_START_YEAR", ()),
+            text("TXT_KEY_WB_CHANGE_START_YEAR"),
             "CvScreensInterface",
             "WorldBuilderHandleFlyoutMenuCB",
             self.m_iFlyoutChangeStartYear,
@@ -2656,7 +2644,6 @@ class CvWorldBuilderScreen:
         return
 
     def showMultipleReveal(self):
-        print("showMultipleReveal")
         self.refreshReveal()
         return
 
@@ -2667,8 +2654,6 @@ class CvWorldBuilderScreen:
         # Rectangle: 1x1 Brush 1x1
         # Rectangle: 3x3 Brush 2x2
         # Rectangle: 5x5 Brush 3x3
-
-        print("setMultipleReveal")
         # bInsideForLoop = False
         permCurrentPlot = self.m_pCurrentPlot
 
@@ -2789,9 +2774,9 @@ class CvWorldBuilderScreen:
             iY = 15
             szText = (
                 u"<font=4>"
-                + localText.getText(
+                + text(
                     "TXT_KEY_WB_AS_POINTS",
-                    (gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(),),
+                    gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(),
                 )
                 + "</font>"
             )
@@ -2810,7 +2795,7 @@ class CvWorldBuilderScreen:
             )
 
             iY += 30
-            szText = localText.getText("TXT_KEY_ADVANCED_START_BEGIN_GAME", ())
+            szText = text("TXT_KEY_ADVANCED_START_BEGIN_GAME")
             screen.setButtonGFC(
                 "WorldBuilderExitButton",
                 szText,
@@ -2826,9 +2811,7 @@ class CvWorldBuilderScreen:
             )
 
             szText = (
-                u"<font=4>"
-                + localText.getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost,))
-                + u"</font>"
+                u"<font=4>" + text("TXT_KEY_WB_AS_COST_THIS_LOCATION", self.m_iCost) + u"</font>"
             )
             iY = 85
             screen.setLabel(
@@ -3069,9 +3052,9 @@ class CvWorldBuilderScreen:
             iY = 15
             szText = (
                 u"<font=4>"
-                + localText.getText(
+                + text(
                     "TXT_KEY_WB_AS_POINTS",
-                    (gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(),),
+                    gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(),
                 )
                 + "</font>"
             )
@@ -3090,9 +3073,7 @@ class CvWorldBuilderScreen:
             )
 
             szText = (
-                u"<font=4>"
-                + localText.getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost,))
-                + u"</font>"
+                u"<font=4>" + text("TXT_KEY_WB_AS_COST_THIS_LOCATION", self.m_iCost) + u"</font>"
             )
             iY = 85
             screen.setLabel(
@@ -3202,16 +3183,12 @@ class CvWorldBuilderScreen:
                     FontTypes.GAME_FONT,
                 )
                 for i in range(gc.getNumEraInfos()):
-                    szPullDownString = localText.getText(
-                        "TXT_KEY_WB_ADD_ERA_TECH", (gc.getEraInfo(i).getTextKey(),)
+                    szPullDownString = text(
+                        "TXT_KEY_WB_ADD_ERA_TECH", gc.getEraInfo(i).getTextKey()
                     )
                     screen.addPullDownString(szDropdownName, szPullDownString, i, i, True)
                 screen.addPullDownString(
-                    szDropdownName,
-                    localText.getText("TXT_KEY_WB_ADD_ERA_TECH_DESC", ()),
-                    i,
-                    i,
-                    True,
+                    szDropdownName, text("TXT_KEY_WB_ADD_ERA_TECH_DESC"), i, i, True
                 )
             elif self.m_bNormalMap and (not self.m_bUnitEdit) and (not self.m_bCityEdit):
                 iButtonWidth = 32
@@ -3246,23 +3223,17 @@ class CvWorldBuilderScreen:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_1_BY_1", ()), 1, 1, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_1_BY_1"), 1, 1, bActive)
                 if self.m_iBrushWidth == 2:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_3_BY_3", ()), 2, 2, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_3_BY_3"), 2, 2, bActive)
                 if self.m_iBrushWidth == 3:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_5_BY_5", ()), 3, 3, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_5_BY_5"), 3, 3, bActive)
 
             elif self.m_bReveal:
                 iPanelWidth = 35 * 6
@@ -3311,23 +3282,17 @@ class CvWorldBuilderScreen:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_1_BY_1", ()), 1, 1, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_1_BY_1"), 1, 1, bActive)
                 if self.m_iBrushWidth == 2:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_3_BY_3", ()), 2, 2, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_3_BY_3"), 2, 2, bActive)
                 if self.m_iBrushWidth == 3:
                     bActive = True
                 else:
                     bActive = False
-                screen.addPullDownString(
-                    szDropdownName, localText.getText("TXT_KEY_WB_5_BY_5", ()), 3, 3, bActive
-                )
+                screen.addPullDownString(szDropdownName, text("TXT_KEY_WB_5_BY_5"), 3, 3, bActive)
 
                 szDropdownName = str("WorldBuilderTeamChoice")
                 screen.addDropDownBoxGFC(
@@ -3417,17 +3382,17 @@ class CvWorldBuilderScreen:
         self.m_normalPlayerTabCtrl = getWBToolNormalPlayerTabCtrl()
 
         self.m_normalPlayerTabCtrl.setNumColumns((gc.getNumUnitInfos() / 10) + 2)
-        self.m_normalPlayerTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_UNITS", ()))
+        self.m_normalPlayerTabCtrl.addTabSection(text("TXT_KEY_WB_UNITS"))
         self.m_iUnitTabID = 0
         self.m_iNormalPlayerCurrentIndexes.append(0)
 
         self.m_normalPlayerTabCtrl.setNumColumns((gc.getNumBuildingInfos() / 10) + 1)
-        self.m_normalPlayerTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_BUILDINGS", ()))
+        self.m_normalPlayerTabCtrl.addTabSection(text("TXT_KEY_WB_BUILDINGS"))
         self.m_iBuildingTabID = 1
         self.m_iNormalPlayerCurrentIndexes.append(0)
 
         self.m_normalPlayerTabCtrl.setNumColumns((gc.getNumTechInfos() / 10) + 1)
-        self.m_normalPlayerTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_TECHNOLOGIES", ()))
+        self.m_normalPlayerTabCtrl.addTabSection(text("TXT_KEY_WB_TECHNOLOGIES"))
         self.m_iTechnologyTabID = 2
         self.m_iNormalPlayerCurrentIndexes.append(0)
 
@@ -3457,9 +3422,7 @@ class CvWorldBuilderScreen:
             self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
 
             self.m_advancedStartTabCtrl.setNumColumns((gc.getNumBuildingInfos() / 10) + 2)
-            self.m_advancedStartTabCtrl.addTabSection(
-                localText.getText("TXT_KEY_WB_AS_CITIES", ())
-            )
+            self.m_advancedStartTabCtrl.addTabSection(text("TXT_KEY_WB_AS_CITIES"))
             self.m_iASCityTabID = 0
             self.m_iAdvancedStartCurrentIndexes.append(0)
 
@@ -3469,7 +3432,7 @@ class CvWorldBuilderScreen:
             self.m_iAdvancedStartCurrentList.append(self.m_iASCityListID)
 
             self.m_advancedStartTabCtrl.setNumColumns((gc.getNumUnitInfos() / 10) + 2)
-            self.m_advancedStartTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_AS_UNITS", ()))
+            self.m_advancedStartTabCtrl.addTabSection(text("TXT_KEY_WB_AS_UNITS"))
             self.m_iASUnitTabID = 1
             self.m_iAdvancedStartCurrentIndexes.append(0)
 
@@ -3477,9 +3440,7 @@ class CvWorldBuilderScreen:
             self.m_iASUnitListID = 0
 
             self.m_advancedStartTabCtrl.setNumColumns((gc.getNumImprovementInfos() / 10) + 2)
-            self.m_advancedStartTabCtrl.addTabSection(
-                localText.getText("TXT_KEY_WB_AS_IMPROVEMENTS", ())
-            )
+            self.m_advancedStartTabCtrl.addTabSection(text("TXT_KEY_WB_AS_IMPROVEMENTS"))
             self.m_iASImprovementsTabID = 2
             self.m_iAdvancedStartCurrentIndexes.append(0)
 
@@ -3488,9 +3449,7 @@ class CvWorldBuilderScreen:
             self.m_iAdvancedStartCurrentList.append(self.m_iASRoutesListID)
 
             self.m_advancedStartTabCtrl.setNumColumns(1)
-            self.m_advancedStartTabCtrl.addTabSection(
-                localText.getText("TXT_KEY_WB_AS_VISIBILITY", ())
-            )
+            self.m_advancedStartTabCtrl.addTabSection(text("TXT_KEY_WB_AS_VISIBILITY"))
             self.m_iASVisibilityTabID = 3
             self.m_iAdvancedStartCurrentIndexes.append(0)
 
@@ -3498,7 +3457,7 @@ class CvWorldBuilderScreen:
             self.m_iASVisibilityListID = 0
 
             self.m_advancedStartTabCtrl.setNumColumns(1)
-            self.m_advancedStartTabCtrl.addTabSection(localText.getText("TXT_KEY_WB_AS_TECH", ()))
+            self.m_advancedStartTabCtrl.addTabSection(text("TXT_KEY_WB_AS_TECH"))
             self.m_iASTechTabID = 4
             self.m_iAdvancedStartCurrentIndexes.append(0)
 
@@ -3670,14 +3629,6 @@ class CvWorldBuilderScreen:
 
     def setCurrentModeCheckbox(self, iButton):
         screen = CyGInterfaceScreen("WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN)
-        # print("iButton: %s" %(str(iButton)))
-
-        # print("m_iUnitEditCheckboxID: %s" %(str(self.m_iUnitEditCheckboxID)))
-        # print("m_iCityEditCheckboxID: %s" %(str(self.m_iCityEditCheckboxID)))
-        # print("m_iNormalPlayerCheckboxID: %s" %(str(self.m_iNormalPlayerCheckboxID)))
-        # print("m_iNormalMapCheckboxID: %s" %(str(self.m_iNormalMapCheckboxID)))
-        # print("m_iRevealTileCheckboxID: %s" %(str(self.m_iRevealTileCheckboxID)))
-        # print("m_iDiplomacyCheckboxID: %s" %(str(self.m_iDiplomacyCheckboxID)))
 
         if iButton == self.m_iUnitEditCheckboxID:
             screen.setState("WorldBuilderUnitEditModeButton", True)
@@ -4046,9 +3997,9 @@ class RevealMode(Mode):
                 FontTypes.GAME_FONT,
             )
             screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue))
-            for i in range(RFCEMapUtil.iNumProvinces):
+            for i in range(MapUtils.iNumProvinces):
                 try:
-                    ProvinceName = unicode(MapManager.getProvinceName(i), "latin-1")
+                    ProvinceName = unicode(MapManager.getProvinceName(i), "latin-1")  # type: ignore
                 except TypeError:
                     ProvinceName = MapManager.getProvinceName(i)
                 screen.addPullDownString(
@@ -4068,7 +4019,7 @@ class RevealMode(Mode):
                 -1,
                 FontTypes.GAME_FONT,
             )
-            for i in range(Consts.iNumMajorPlayers):
+            for i in civilizations().majors().ids():
                 screen.addPullDownString(
                     szDropdownName, gc.getPlayer(i).getName(), i, i, i == self.iPlayer
                 )
@@ -4126,25 +4077,13 @@ class RevealMode(Mode):
                     FontTypes.GAME_FONT,
                 )
             screen.addPullDownString(
-                szDropdownName,
-                localText.getText("TXT_KEY_WB_1_BY_1", ()),
-                1,
-                1,
-                self.iBrushSize == 1,
+                szDropdownName, text("TXT_KEY_WB_1_BY_1"), 1, 1, self.iBrushSize == 1
             )
             screen.addPullDownString(
-                szDropdownName,
-                localText.getText("TXT_KEY_WB_3_BY_3", ()),
-                2,
-                2,
-                self.iBrushSize == 2,
+                szDropdownName, text("TXT_KEY_WB_3_BY_3"), 2, 2, self.iBrushSize == 2
             )
             screen.addPullDownString(
-                szDropdownName,
-                localText.getText("TXT_KEY_WB_5_BY_5", ()),
-                3,
-                3,
-                self.iBrushSize == 3,
+                szDropdownName, text("TXT_KEY_WB_5_BY_5"), 3, 3, self.iBrushSize == 3
             )
 
         # brushvalue dropdown
@@ -4161,9 +4100,9 @@ class RevealMode(Mode):
                 FontTypes.GAME_FONT,
             )
             if self.isWarMap():
-                shades = RFCEMapUtil.warMapShades
+                shades = MapUtils.warMapShades
             else:
-                shades = RFCEMapUtil.settlerMapShades
+                shades = MapUtils.settlerMapShades
             for shade in shades:
                 screen.addPullDownString(
                     szDropdownName, shade[3], shade[0], shade[0], shade[0] == self.iBrushValue
@@ -4330,13 +4269,13 @@ class RevealMode(Mode):
     def handleMapTypeDropdown(self, index, value):
         self.iMapType = value
         if self.isWarMap():
-            self.iBrushValue = RFCEMapUtil.warMapDefault
+            self.iBrushValue = MapUtils.warMapDefault
             self.sBrushColor = MapVisualizer.getWarMapColor(self.iBrushValue)
         elif self.isSettlerMap():
-            self.iBrushValue = RFCEMapUtil.settlerMapDefault
+            self.iBrushValue = MapUtils.settlerMapDefault
             self.sBrushColor = MapVisualizer.getSettlerMapColor(self.iBrushValue)
         elif self.isProvinceMap():
-            self.iBrushValue = RFCEMapUtil.provinceMapDefault
+            self.iBrushValue = MapUtils.provinceMapDefault
             self.sBrushColor = MapVisualizer.getProvinceColor(self.iBrushValue)
         elif self.isVisibleMap():
             self.sBrushColor = "COLOR_GREEN"
@@ -4519,7 +4458,7 @@ class LandmarkMode(Mode):
                 FontTypes.GAME_FONT,
             )
 
-            for i in range(Consts.iNumMajorPlayers):
+            for i in civilizations().majors().ids():
                 if gc.getPlayer(i).isEverAlive():
                     screen.addPullDownString(
                         szDropdownName,
@@ -4531,9 +4470,9 @@ class LandmarkMode(Mode):
             screen.addPullDownString(
                 szDropdownName,
                 "Generic map",
-                (Consts.iNumMajorPlayers),
-                (Consts.iNumMajorPlayers),
-                self.iPlayer == (Consts.iNumMajorPlayers),
+                (civilizations().majors().len()),
+                (civilizations().majors().len()),
+                self.iPlayer == civilizations().majors().len(),
             )
             iBarb = gc.getBARBARIAN_PLAYER()
             screen.addPullDownString(
@@ -4608,30 +4547,30 @@ class LandmarkMode(Mode):
         if cityName is None:
             cityName = ""
         else:
-            cityName = unicode(cityName, "latin-1")
+            cityName = unicode(cityName, "latin-1")  # type: ignore
 
         MapVisualizer.hideCityName(pPlot)  # landmark-update-problem-fix
 
         cityNames = []
         # all major civs' city names, in civ order
-        for i in range(Consts.iNumMajorPlayers):
+        for i in civilizations().majors().ids():
             if i != iPlayer:
                 name = MapManager.getCityName(i, pPlot)
                 civ = gc.getPlayer(i).getCivilizationShortDescription(0)
                 if name is not None:
-                    cityNames.append((unicode(name, "latin-1"), civ))
+                    cityNames.append((unicode(name, "latin-1"), civ))  # type: ignore
         # uncomment for city names in alphabetic order
         # cityNames.sort()
         # generic city name, always on last place
-        if (Consts.iNumMajorPlayers) != iPlayer:
-            name = MapManager.getCityName((Consts.iNumMajorPlayers), pPlot)
+        if civilizations().majors().len() != iPlayer:
+            name = MapManager.getCityName(civilizations().majors().len(), pPlot)
             if name is not None:
-                cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))
+                cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))  # type: ignore
 
         cityHeader = cityName
         if cityHeader == "":
             cityHeader = "New City"
-        if iPlayer == Consts.iNumMajorPlayers:
+        if iPlayer == civilizations().majors().len():
             sHeaderText = "%s - %s" % (cityHeader, "Generic Name")
         else:
             sHeaderText = "%s - %s" % (
