@@ -532,7 +532,7 @@ class RFCUtils:
                                     "INTERFACE_MERCENARY_ICON"
                                 ).getPath(),
                                 color=MessageData.LIME,
-                                location=city,
+                                location=flippedCity,
                             )
                             break
 
