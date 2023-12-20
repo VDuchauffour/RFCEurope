@@ -1,4 +1,4 @@
-from BaseStructures import EnumDataMapper
+from BaseStructures import EnumDataMapper, ReligionDataMapper, ScenarioDataMapper, CivDataMapper
 from CoreTypes import (
     Building,
     Civ,
@@ -13,7 +13,6 @@ from CoreTypes import (
     Unit,
     Wonder,
 )
-from CoreStructures import CivDataMapper, ReligionDataMapper, ScenarioDataMapper
 
 TECH_STARTERS = [
     [

@@ -18,9 +18,10 @@ from CoreFunctions import (
 from PyUtils import any, none, rand
 import CoreTypes
 from BaseStructures import (
+    CivDataMapper,
+    CompanyDataMapper,
     EntitiesCollection,
     EnumCollectionFactory,
-    EnumDataMapper,
     Item,
     EnumCollection,
 )
@@ -74,24 +75,6 @@ except ImportError:
     game = None
 
 
-class ScenarioDataMapper(EnumDataMapper):
-    """Class to map data to Scenario enum."""
-
-    BASE_CLASS = CoreTypes.Scenario
-
-
-class ReligionDataMapper(EnumDataMapper):
-    """Class to map Religion to Company enum."""
-
-    BASE_CLASS = CoreTypes.Religion
-
-
-class CompanyDataMapper(EnumDataMapper):
-    """Class to map data to Company enum."""
-
-    BASE_CLASS = CoreTypes.Company
-
-
 class Company(Item):
     """A simple class to handle a company."""
 
@@ -111,12 +94,6 @@ class CompaniesFactory(EnumCollectionFactory):
     DATA_CLASS = CompanyDataMapper
     ITEM_CLASS = Company
     ITEM_COLLECTION_CLASS = Companies
-
-
-class CivDataMapper(EnumDataMapper):
-    """Class to map data to Civ enum."""
-
-    BASE_CLASS = CoreTypes.Civ
 
 
 class Civilization(Item):

@@ -1,4 +1,4 @@
-from CoreStructures import CivDataMapper
+from BaseStructures import CivDataMapper
 from CoreTypes import Civ
 
 WARS_MAP = CivDataMapper({

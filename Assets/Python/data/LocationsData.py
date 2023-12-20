@@ -15,8 +15,13 @@ from CoreTypes import (
     Lake,
     Area,
 )
-from BaseStructures import DataMapper, EnumDataMapper
-from CoreStructures import CompanyDataMapper, ScenarioDataMapper, CivDataMapper
+from BaseStructures import (
+    CompanyDataMapper,
+    DataMapper,
+    EnumDataMapper,
+    ScenarioDataMapper,
+    CivDataMapper,
+)
 
 CITIES = EnumDataMapper(
     {

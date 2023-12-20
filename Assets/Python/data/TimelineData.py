@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from CoreStructures import CivDataMapper, CompanyDataMapper
+from BaseStructures import CompanyDataMapper, CivDataMapper
 from CoreTypes import Civ, Company, Technology
 
 # TODO switch to years with convert from trun

@@ -1,6 +1,5 @@
-from BaseStructures import EnumDataMapper
+from BaseStructures import CompanyDataMapper, EnumDataMapper, CivDataMapper
 from CoreTypes import Building, Civ, Company, Religion, Unit, Wonder
-from CoreStructures import CivDataMapper, CompanyDataMapper
 
 PLAGUE_IMMUNITY = 20
 GREAT_PROPHET_FAITH_POINT_BONUS = 8

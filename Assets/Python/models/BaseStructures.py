@@ -2,6 +2,7 @@ from itertools import groupby
 import random
 from copy import copy, deepcopy
 from CoreFunctions import sort
+import CoreTypes
 
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
@@ -519,3 +520,27 @@ class EnumCollectionFactory(object):
                 attachments.update(self._collect_subkeys(member))
             items.append(self.ITEM_CLASS(member, **attachments))
         return self.ITEM_COLLECTION_CLASS(*items)
+
+
+class ScenarioDataMapper(EnumDataMapper):
+    """Class to map data to Scenario enum."""
+
+    BASE_CLASS = CoreTypes.Scenario
+
+
+class ReligionDataMapper(EnumDataMapper):
+    """Class to map Religion to Company enum."""
+
+    BASE_CLASS = CoreTypes.Religion
+
+
+class CompanyDataMapper(EnumDataMapper):
+    """Class to map data to Company enum."""
+
+    BASE_CLASS = CoreTypes.Company
+
+
+class CivDataMapper(EnumDataMapper):
+    """Class to map data to Civ enum."""
+
+    BASE_CLASS = CoreTypes.Civ

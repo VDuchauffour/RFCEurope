@@ -1,6 +1,6 @@
 # -*- coding: latin-1 -*-
 
-from CoreStructures import CivDataMapper
+from BaseStructures import CivDataMapper
 from CoreTypes import Civ
 
 CITIES_MAP = CivDataMapper({
