@@ -153,12 +153,7 @@ class WBSaveParser:
 
 
 class MapRenderer:
-    def __init__(
-        self,
-        map: CivIVMap,
-        output_format: str,
-        upscale_factor: int = 15,
-    ):
+    def __init__(self, map: CivIVMap, output_format: str, upscale_factor: int = 15):
         self.map = map
         self.colors = ColorsPicker(map).colors
         self.output_format = output_format
@@ -200,10 +195,7 @@ class MapRenderer:
     def upscale_map(self, img: Image.Image) -> Image.Image:
         img = ImageOps.flip(img)
         img = img.resize(
-            (
-                self.map.width * self.upscale_factor,
-                self.map.height * self.upscale_factor,
-            ),
+            (self.map.width * self.upscale_factor, self.map.height * self.upscale_factor),
             resample=Image.Resampling.NEAREST,
         )
         return img
@@ -266,11 +258,7 @@ class MapRenderer:
     def draw_provinces_map(self, output_path: str):
         for province in Province:
             img = self.base_img.copy()
-            img = self.draw(
-                img,
-                self._extract_provinces(province),
-                PROVINCES_COLORS["potential"],
-            )
+            img = self.draw(img, self._extract_provinces(province), PROVINCES_COLORS["potential"])
 
             img = self.apply_water(img)
             img = self.draw_plot_properties(img, "is_peak")
@@ -352,10 +340,7 @@ def main():
         help="File saving format, ie. bmp or png. Default to png",
     )
     parser.add_argument(
-        "--rivers",
-        action="store_true",
-        default=False,
-        help="Draw rivers map. Default to False.",
+        "--rivers", action="store_true", default=False, help="Draw rivers map. Default to False."
     )
     parser.add_argument(
         "--features",
@@ -370,10 +355,7 @@ def main():
         help="Draw terrains map. Default to False.",
     )
     parser.add_argument(
-        "--bonuses",
-        action="store_true",
-        default=False,
-        help="Draw bonuses map. Default to False.",
+        "--bonuses", action="store_true", default=False, help="Draw bonuses map. Default to False."
     )
     parser.add_argument(
         "--provinces",
@@ -388,10 +370,7 @@ def main():
         help="Draw provinces stability map. Default to True",
     )
     parser.add_argument(
-        "--all",
-        action="store_true",
-        default=False,
-        help="Draw all maps. Default to False.",
+        "--all", action="store_true", default=False, help="Draw all maps. Default to False."
     )
 
     args = parser.parse_args()
