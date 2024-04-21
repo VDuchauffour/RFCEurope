@@ -1614,6 +1614,3 @@ class RFCUtils:
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]
-
-    def getWorldPlotsList(self):
-        return [(x, y) for x in range(WORLD_WIDTH) for y in range(WORLD_HEIGHT)]

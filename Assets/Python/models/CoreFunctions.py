@@ -257,3 +257,8 @@ def message(player, text, **settings):
         True,
         True,
     )
+
+
+def get_data_from_upside_down_map(map, civ, plot):
+    x, y = location(plot)
+    return map[get_civ_by_id(civ)][WORLD_HEIGHT - 1 - y][x]

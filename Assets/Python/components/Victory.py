@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
 from CoreFunctions import message, show, text
-from CoreStructures import human, player, team, turn, year
+from CoreStructures import human, player, team, turn, year, plots
 from CoreTypes import (
     Building,
     City,
@@ -27,7 +27,6 @@ import PyHelpers
 from PyUtils import rand
 import RFCUtils
 import UniquePowers
-from ProvinceMapData import PROVINCES_MAP
 from StoredData import data
 import random
 
@@ -1002,13 +1001,7 @@ class Victory:
     def getTerritoryPercentEurope(self, iPlayer, bReturnTotal=False):
         iTotal = 0
         iCount = 0
-        for (x, y) in utils.getWorldPlotsList():
-            plot = gc.getMap().plot(x, y)
-            if plot.isWater():
-                continue
-            iProvinceID = PROVINCES_MAP[y][x]
-            if iProvinceID in REGIONS[Region.NOT_EUROPE]:
-                continue
+        for plot in plots().all().land().not_provinces(*REGIONS[Region.NOT_EUROPE]).entities():
             iTotal += 1
             if plot.getOwner() == iPlayer:
                 iCount += 1

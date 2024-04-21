@@ -1121,6 +1121,12 @@ class Locations(EntitiesCollection):
     def province(self, identifier):
         return self.provinces(identifier)
 
+    def not_provinces(self, *provinces):
+        return self.filter(lambda loc: loc.getProvinceID() not in provinces)
+
+    def not_province(self, identifier):
+        return self.not_provinces(identifier)
+
     def filter_surrounding(self, condition, radius=1):
         return self.filter(
             lambda loc: PlotFactory().surrounding(loc, radius=radius).all(lambda p: condition(p))

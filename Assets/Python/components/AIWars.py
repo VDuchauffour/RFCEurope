@@ -2,15 +2,14 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import get_civ_by_id
-from CoreStructures import turn, year
+from CoreFunctions import get_data_from_upside_down_map
+from CoreStructures import is_independent_civ, turn, year, plots
 from CoreTypes import Civ
 from PyUtils import rand
 import RFCUtils
 from Scenario import get_scenario_start_turn
 from StoredData import data
 from WarMapData import WARS_MAP
-from Consts import WORLD_HEIGHT
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()
@@ -216,19 +215,12 @@ class AIWars:
             if pLoopPlayer.isAlive() and pTeam.isHasMet(iLoopTeam):
                 lTargetCivs[iLoopPlayer] = 1
 
-        for (i, j) in utils.getWorldPlotsList():
-            iOwner = gc.getMap().plot(i, j).getOwner()
-            if 0 <= iOwner < civilizations().drop(Civ.BARBARIAN).len() and iOwner != iCiv:
-                if lTargetCivs[iOwner] > 0:
-                    iValue = WARS_MAP[get_civ_by_id(iCiv)][WORLD_HEIGHT - 1 - j][i]
-                    if iOwner in [
-                        Civ.INDEPENDENT.value,
-                        Civ.INDEPENDENT_2.value,
-                        Civ.INDEPENDENT_3.value,
-                        Civ.INDEPENDENT_4.value,
-                    ]:
-                        iValue /= 3
-                    lTargetCivs[iOwner] += iValue
+        for plot in plots().all().not_owner(iCiv).not_owner(Civ.BARBARIAN).entities():
+            if lTargetCivs[plot.getOwner()] > 0:
+                iValue = get_data_from_upside_down_map(WARS_MAP, iCiv, plot)
+                if is_independent_civ(plot):
+                    iValue /= 3
+                lTargetCivs[plot.getOwner()] += iValue
 
         # normalization
         iMaxTempValue = max(lTargetCivs)
