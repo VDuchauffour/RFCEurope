@@ -229,10 +229,7 @@ class TestEnumDataMapper(unittest.TestCase):
         self.assertEqual(self.data_multiple.output_type, OutputType.MULTIPLE)
 
     def test_fill_missing_members(self):
-        self.assertEqual(
-            self.data.fill_missing_members(None),
-            EnumDataMapper({_TestEnum.A: "0"}),
-        )
+        self.assertEqual(self.data.fill_missing_members(None), EnumDataMapper({_TestEnum.A: "0"}))
 
     def test_apply(self):
         def _wrong_callable():

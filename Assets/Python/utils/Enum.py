@@ -553,12 +553,7 @@ class EnumMeta(type):
                         target = possible.__dict__[method]
                     except (AttributeError, KeyError):
                         target = getattr(possible, method, None)
-                    if target not in [
-                        None,
-                        N__new__,
-                        O__new__,
-                        E__new__,
-                    ]:
+                    if target not in [None, N__new__, O__new__, E__new__]:
                         if method == "__member_new__":
                             classdict["__new__"] = target
                             return None, False, True
@@ -606,12 +601,7 @@ class EnumMeta(type):
                 for method in ("__member_new__", "__new__"):
                     for possible in (member_type, first_enum):
                         target = getattr(possible, method, None)
-                        if target not in (
-                            None,
-                            None.__new__,
-                            object.__new__,
-                            Enum.__new__,
-                        ):
+                        if target not in (None, None.__new__, object.__new__, Enum.__new__):
                             __new__ = target
                             break
                     if __new__ is not None:
@@ -691,11 +681,7 @@ if pyver >= 3.0:
             for m in cls.__dict__
             if m[0] != "_" and m not in self._member_map_
         ]
-        return [
-            "__class__",
-            "__doc__",
-            "__module__",
-        ] + added_behavior
+        return ["__class__", "__doc__", "__module__"] + added_behavior
 
     temp_enum_dict["__dir__"] = __dir__
     del __dir__
