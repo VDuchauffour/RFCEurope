@@ -26,7 +26,7 @@ target-version = "py37"
 
 [tool.pyright]
 executionEnvironments = [
-  { pythonVersion = "2.4", root = "Assets/Python", extraPaths = [
+  { root = "Assets/Python", extraPaths = [
     # Folders of the project
     "Assets/Python/",
     "Assets/Python/data",
