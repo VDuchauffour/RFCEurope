@@ -287,7 +287,7 @@ class Collection(list):
         else:
             return attr is not None
 
-    def dropna(self, attributes):
+    def dropna(self, attributes):  # TODO to move to enum collection ?
         """Return the object without those that have None as the value for the `attribute`.
         Only works with a primary key, using nested keys do not work."""
         attributes = self.__handle_string_args(attributes)
@@ -315,12 +315,12 @@ class Collection(list):
         """Return True if `condition` is False for all items."""
         return not self.any(condition)
 
-    def drop(self, *items):
-        """Return the object without `items` given its keys, i.e. the relevant enum member."""
+    def drop(self, *items):  # TODO this should be renamed to without
+        """Return the object without `items` given its item."""
         return self.filter(lambda x: x not in items)
 
     def take(self, *items):
-        """Return the object with only `items` given its keys, i.e. the relevant enum member."""
+        """Return the object with only `items` given its item."""
         return self.filter(lambda x: x in items)
 
     def unique(self):
@@ -421,6 +421,17 @@ class EntitiesCollection(Collection):
     def __getitem__(self, index):
         return self.entities()[index]
 
+    def __add__(self, other):
+        if other is None:
+            return self
+        if not isinstance(other, type(self)):
+            raise TypeError("Cannot combine left '%s' with right '%s'" % (type(self), type(other)))
+        items = [s for s in self] + [o for o in other]
+        return self.copy(*items)
+
+    def add(self, other):
+        return self.__add__(other)
+
     def _apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)
@@ -432,7 +443,7 @@ class EntitiesCollection(Collection):
 
     def transform(self, cls, map=lambda x: x, condition=lambda x: True):
         """Return new class given a map function and a condition function."""
-        return cls([map(k) for k in self if condition(self._factory(k))])
+        return cls(*[map(k) for k in self if condition(self._factory(k))])
 
     def groupby(self, func):
         """Return the grouped collection given a function."""
@@ -458,7 +469,7 @@ class EnumCollection(Collection):
                 raise NotTypeExpectedError(self.BASE_CLASS, type(item))
             self.append(item)
 
-    def drop(self, *items):
+    def drop(self, *items):  # TODO this should be renamed to without
         """Return the object without `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x.key not in items)
 

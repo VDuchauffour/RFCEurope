@@ -123,9 +123,10 @@ def location(entity):
     return parse_tile(entity)
 
 
-def closest_city(
-    entity, owner=PlayerTypes.NO_PLAYER, same_continent=False, coastal_only=False, skip_city=None
-):
+def closest_city(entity, owner=None, same_continent=False, coastal_only=False, skip_city=None):
+    if owner is None:
+        owner = PlayerTypes.NO_PLAYER
+
     if skip_city is None:
         if isinstance(entity, CyCity):
             skip_city = entity

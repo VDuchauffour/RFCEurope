@@ -1009,7 +1009,10 @@ def _generate_unit(player_id, unit_id, plot, unit_ai, unit_name=None):
     return unit
 
 
-def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
+def make_units(player, unit, plot, n_units=1, unit_ai=None, unit_name=None):
+    if unit_ai is None:
+        unit_ai = UnitAITypes.NO_UNITAI
+
     if n_units <= 0:
         return CreatedUnits([])
     if unit < 0:
@@ -1023,7 +1026,9 @@ def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, uni
     return CreatedUnits(units)
 
 
-def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
+def make_unit(player, unit, plot, unit_ai=None, unit_name=None):
+    if unit_ai is None:
+        unit_ai = UnitAITypes.NO_UNITAI
     return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
 
 
@@ -1034,9 +1039,9 @@ def _generate_crusade_unit(player_id, unit_id, plot, unit_ai, crusade_value):
     return unit
 
 
-def make_crusade_units(
-    player, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
-):
+def make_crusade_units(player, unit, plot, crusade_value, n_units=1, unit_ai=None):
+    if unit_ai is None:
+        unit_ai = UnitAITypes.NO_UNITAI
     if n_units <= 0:
         return CreatedUnits([])
     if unit < 0:
@@ -1050,13 +1055,30 @@ def make_crusade_units(
     return CreatedUnits(units)
 
 
-def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=UnitAITypes.NO_UNITAI):
+def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=None):
+    if unit_ai is None:
+        unit_ai = UnitAITypes.NO_UNITAI
     return make_crusade_units(player, unit, plot, crusade_value, 1, unit_ai).one()
 
 
 class Locations(EntitiesCollection):
     def __init__(self, *locations):
         super(Locations, self).__init__(*locations)
+
+    def add(self, *addition):
+        if not addition or not any(addition):
+            return self
+
+        if len(addition) == 1:
+            if isinstance(addition[0], Locations):
+                total = set(self) + set(addition[0])
+                return self.copy(total)
+
+            elif isinstance(addition[0], (list, set)):
+                addition = addition[0]
+
+        total = list(set(self)) + list(set(self._keyify(item) for item in addition))
+        return self.copy(*total)
 
     def without(self, *exceptions):
         if not exceptions or not any(exceptions):
@@ -1451,8 +1473,8 @@ class Cities(Locations):
     def building_effect(self, identifier):
         return self.filter(lambda city: city.isHasBuildingEffect(identifier))
 
-    def coastal(self):
-        return self.filter(lambda city: city.isCoastal(10))
+    def coastal(self, value=10):
+        return self.filter(lambda city: city.isCoastal(value))
 
     # def core(self, identifier):
     #     if isinstance(identifier, Civ):
@@ -1511,7 +1533,7 @@ class CityFactory:
         return self.provinces(identifier)
 
     def of(self, list):
-        return self.plots.of(*list).cities()
+        return self.plots.of(list).cities()
 
     def none(self):
         return self.of([])
