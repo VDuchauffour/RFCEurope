@@ -8,7 +8,7 @@ from CvPythonExtensions import (
 from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreFunctions import event_popup, get_religion_by_id, message, text
-from CoreStructures import human, player, year
+from CoreStructures import human, player, year, cities
 from CoreTypes import (
     Building,
     Civ,
@@ -552,7 +552,7 @@ class Religions:
         if iStateReligion != Religion.JUDAISM.value and iBuilding == Wonder.KAZIMIERZ.value:
             pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
             # Kazimierz tries to spread Judaism to a couple new cities
-            cityList = utils.getCityList(iPlayer)
+            cityList = cities().owner(iPlayer).entities()
             iJewCityNum = max(
                 (len(cityList) + 2) / 3 + 1, 3
             )  # number of tries are based on number of cities, but at least 3
@@ -569,7 +569,7 @@ class Religions:
         "selects a random city from the whole map"
         cityList = []
         for iPlayer in civilizations().ids():
-            cityList.extend(utils.getCityList(iPlayer))
+            cityList.extend(cities().owner(iPlayer)).entities()
         if cityList:
             city = choice(cityList)
             return (city.getX(), city.getY())
@@ -578,7 +578,7 @@ class Religions:
     def selectRandomCityCiv(self, iCiv):
         "selects a random city from a given civ"
         if gc.getPlayer(iCiv).isAlive():
-            cityList = utils.getCityList(iCiv)
+            cityList = cities().owner(iCiv).entities()
             if cityList:
                 city = choice(cityList)
                 return (city.getX(), city.getY())
@@ -589,7 +589,7 @@ class Religions:
         for iPlayer in civilizations().ids():
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
-            for city in utils.getCityList(iPlayer):
+            for city in cities().owner(iPlayer).entities():
                 if PROVINCES_MAP[city.getY()][city.getX()] in tProvinces:
                     # do not try to spread to cities which already have the desired religion
                     if not city.isHasReligion(iReligionToSpread):
@@ -619,7 +619,7 @@ class Religions:
 
     def buildInRandomCity(self, iPlayer, iBuilding, iReligion):
         cityList = []
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             if not city.hasBuilding(iBuilding) and city.isHasReligion(iReligion):
                 cityList.append(city)
         if cityList:
@@ -656,7 +656,7 @@ class Religions:
                 if iPlayer == human():
                     # check the available religions
                     religionList = []
-                    for city in utils.getCityList(iPlayer):
+                    for city in cities().owner(iPlayer).entities():
                         for iReligion in range(gc.getNumReligionInfos()):
                             if iReligion not in religionList:
                                 if city.isHasReligion(iReligion):
@@ -680,7 +680,7 @@ class Religions:
                     for iReligion in range(gc.getNumReligionInfos()):
                         iReligionPoint = 0
                         # check cities for religions and holy cities
-                        for city in utils.getCityList(iPlayer):
+                        for city in cities().owner(iPlayer).entities():
                             if city.isHasReligion(iReligion):
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
@@ -805,7 +805,7 @@ class Religions:
 
     def reformationyes(self, iCiv):
         iFaith = 0
-        for city in utils.getCityList(iCiv):
+        for city in cities().owner(iCiv).entities():
             if city.isHasReligion(Religion.CATHOLICISM.value):
                 iFaith += self.reformationReformCity(city, iCiv)
 
@@ -828,7 +828,7 @@ class Religions:
         cityList = PyPlayer(iCiv).getCityList()
         iLostFaith = 0
         pPlayer = gc.getPlayer(iCiv)
-        for city in utils.getCityList(iCiv):
+        for city in cities().owner(iCiv).entities():
             if city.isHasReligion(Religion.CATHOLICISM.value) and not city.isHasReligion(
                 Religion.PROTESTANTISM.value
             ):
@@ -848,7 +848,7 @@ class Religions:
         gc.getPlayer(iCiv).changeFaith(-min(gc.getPlayer(iCiv).getFaith(), iLostFaith))
 
     def reformationOther(self, iCiv):
-        for city in utils.getCityList(iCiv):
+        for city in cities().owner(iCiv).entities():
             if city.isHasReligion(Religion.CATHOLICISM.value):
                 self.reformationOtherCity(city, iCiv)
 
@@ -1081,7 +1081,7 @@ class Religions:
         iY = pCapital.getY()
         if not pCapital.isNone():
             if pPlayer.getNumCities() > 0:
-                pCapital = choice(utils.getCityList(iPlayer))
+                pCapital = cities().owner(iPlayer).random_entry()
                 iX = pCapital.getX()
                 iY = pCapital.getY()
             else:
@@ -1100,7 +1100,7 @@ class Religions:
             civ = civilization(neighbour)
             if civ.is_alive() and civ.is_protestant():
                 if not civ.player.getCapitalCity().isNone() and civ.player.getNumCities() > 0:
-                    capital = choice(utils.getCityList(neighbour))
+                    capital = cities().owner(neighbour).random_entry()
                 else:
                     return
 
@@ -1166,7 +1166,7 @@ class Religions:
 
         lCityList = [
             city
-            for city in utils.getCityList(iPlayer)
+            for city in cities().owner(iPlayer).entities()
             if not city.isHasReligion(Religion.JUDAISM.value)
         ]
 

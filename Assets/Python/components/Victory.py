@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
 from CoreFunctions import message, show, text
-from CoreStructures import human, player, team, turn, year, plots
+from CoreStructures import human, player, team, turn, year, plots, cities
 from CoreTypes import (
     Building,
     City,
@@ -1473,7 +1473,7 @@ class Victory:
                         Civ.INDEPENDENT_3.value,
                         Civ.INDEPENDENT_4.value,
                     ]:
-                        for pCity in utils.getCityList(iIndyCiv):
+                        for pCity in cities().owner(iIndyCiv).entities():
                             pIndyCiv = gc.getPlayer(iIndyCiv)
                             iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
                             if pCity.getReligionCount() == 0:
@@ -1647,7 +1647,7 @@ class Victory:
         elif iGameTurn == year(1625):
             if self.isPossibleUHV(Civ.GENOA.value, 2, True):
                 iBanks = 0
-                for city in utils.getCityList(Civ.GENOA.value):
+                for city in cities().owner(Civ.GENOA).entities():
                     if (
                         city.getNumRealBuilding(Building.BANK.value) > 0
                         or city.getNumRealBuilding(Building.GENOA_BANK.value) > 0
@@ -1674,7 +1674,7 @@ class Victory:
         elif iGameTurn == year(1465):
             if self.isPossibleUHV(Civ.MOROCCO.value, 1, True):
                 iGoodCities = 0
-                for city in utils.getCityList(Civ.MOROCCO.value):
+                for city in cities().owner(Civ.MOROCCO).entities():
                     if city.getCulture(Civ.MOROCCO.value) >= 5000:
                         iGoodCities += 1
                 if iGoodCities >= 3:

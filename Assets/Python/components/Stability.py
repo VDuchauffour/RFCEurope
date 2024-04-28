@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import message, text
-from CoreStructures import human
+from CoreStructures import human, cities
 import PyHelpers
 
 from Consts import MessageData
@@ -62,7 +62,7 @@ class Stability:
             pPlayer = gc.getPlayer(iPlayer)
             teamPlayer = gc.getTeam(pPlayer.getTeam())
             iCounter = 0
-            for pCity in utils.getCityList(iPlayer):
+            for pCity in cities().owner(iPlayer).entities():
                 iCounter += 1
                 iOldStab = pPlayer.getStability()
 
@@ -624,7 +624,7 @@ class Stability:
         iCivicReligionInstability = 0
         iCultureStability = 0
 
-        for pCity in utils.getCityList(iPlayer):
+        for pCity in cities().owner(iPlayer).entities():
             # Absinthe: if your civ is healthy, bonus stability
             # 			if one of your is cities is unhealthy, -1 stability
             iCivHealthStability += pCity.goodHealth()
@@ -934,7 +934,7 @@ class Stability:
         iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 
         iLargeCities = 0
-        for pCity in utils.getCityList(iPlayer):
+        for pCity in cities().owner(iPlayer).entities():
             # Absinthe: production penalty removed - was a mistake to add a city-based modifier to the financial stability which is based on average per population
             # if pCity.isProductionUnit():
             # 	iUnit = pCity.getProductionUnit()
@@ -988,7 +988,7 @@ class Stability:
         )
         iCivicBonus = 0
         iUPBonus = 0
-        for pCity in utils.getCityList(iPlayer):
+        for pCity in cities().owner(iPlayer).entities():
             iProvType = pPlayer.getProvinceType(pCity.getProvince())
             iProvNum = pCity.getProvince()
             CityName = pCity.getNameKey()

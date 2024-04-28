@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id, text, message
-from CoreStructures import human, player, turn, year
+from CoreStructures import human, player, turn, year, cities
 from LocationsData import CITIES
 from PyUtils import rand
 import RFCUtils
@@ -101,7 +101,7 @@ class Companies:
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
         cityValueList = []
         for iPlayer in civilizations().majors().ids():
-            for city in utils.getCityList(iPlayer):
+            for city in cities().owner(iPlayer).entities():
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
                     sCityName = city.getName()
@@ -169,7 +169,7 @@ class Companies:
     def onPlayerChangeStateReligion(self, argsList):
         iPlayer, iNewReligion, iOldReligion = argsList
 
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             for iCompany in COMPANIES.ids():
                 if city.isHasCorporation(iCompany):
                     if self.getCityValue(city, iCompany) < 0:
@@ -867,7 +867,7 @@ class Companies:
         cityValueList = []
         iCompaniesAdded = 0
         for iPlayer in civilizations().majors().ids():
-            for city in utils.getCityList(iPlayer):
+            for city in cities().owner(iPlayer).entities():
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
                     cityValueList.append((city, iValue * 10 + rand(10)))

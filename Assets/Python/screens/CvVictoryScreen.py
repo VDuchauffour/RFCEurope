@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
 from CoreFunctions import colortext, text
-from CoreStructures import turn, year
+from CoreStructures import turn, year, cities
 from CoreTypes import (
     Building,
     City,
@@ -2683,7 +2683,7 @@ class CvVictoryScreen:
             Civ.INDEPENDENT_3.value,
             Civ.INDEPENDENT_4.value,
         ]:
-            for pCity in utils.getCityList(iIndyCiv):
+            for pCity in cities().owner(iIndyCiv).entities():
                 pIndyCiv = gc.getPlayer(iIndyCiv)
                 iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
                 if pCity.getReligionCount() == 0:
@@ -2862,7 +2862,7 @@ class CvVictoryScreen:
         sText2 += self.getCompetition(iGenoaTrade, iOtherTrade, iBiggestTrader, sTextTmp, sUnit)
         # UHV3
         iBankCount = 0
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             if (
                 city.getNumRealBuilding(Building.BANK.value) > 0
                 or city.getNumRealBuilding(Building.GENOA_BANK.value) > 0

@@ -1,4 +1,4 @@
-from CoreStructures import player, year
+from CoreStructures import player, year, cities
 import RFCUtils
 from Scenario import get_scenario
 
@@ -54,7 +54,7 @@ class ProvinceManager:
 
     def updatePotential(self, iPlayer):
         civ = civilization(iPlayer)
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             province = city.getProvince()
             if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
                 civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)

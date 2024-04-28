@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import message, text
-from CoreStructures import human, make_unit
+from CoreStructures import human, make_unit, cities
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
 
@@ -49,7 +49,7 @@ class UniquePowers:
         iStateReligion = pPlayer.getStateReligion()
 
         iNewPoints = 0
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             for iReligion in range(len(Religion)):
                 if iReligion != iStateReligion and city.isHasReligion(iReligion):
                     iNewPoints += city.getPopulation()
@@ -63,10 +63,8 @@ class UniquePowers:
 
         iTotalPoints = iOldPoints + iNewPoints
         while iTotalPoints >= iNextJanissary:
-            pCity = utils.getRandomCity(
-                iPlayer
-            )  # The Janissary unit appears in a random city - should it be the capital instead?
-            if pCity != -1:
+            pCity = cities().owner(iPlayer).random_entry()
+            if pCity is not None:
                 make_unit(iPlayer, Unit.JANISSARY, pCity)
                 # interface message for the human player
                 if iPlayer == human():
@@ -171,7 +169,7 @@ class UniquePowers:
 
         # Collect all provinces
         cityProvinces = []
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             pProvince = city.getProvince()
             cityProvinces.append(pProvince)
         # Calculate unique provinces
@@ -238,7 +236,7 @@ class UniquePowers:
                 PolearmClass = utils.getUniqueUnit(iPlayer, iUnit)
                 break
 
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(iPlayer) * 10000) / iTotalCulture > 20:

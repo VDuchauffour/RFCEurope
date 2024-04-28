@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
 from CoreFunctions import event_popup, message, text
-from CoreStructures import human, make_unit, make_units, turn
+from CoreStructures import human, make_unit, make_units, turn, cities
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 import RFCUtils
@@ -3391,7 +3391,7 @@ class Barbs:
                 self.setRevolDates(lNextMinorRevolt)
 
     def doRevoltAI(self, iPlayer, iGameTurn, lNation, iRevoltIndex):
-        cityList = self.getProvincePlayerCityList(lNation[0], iPlayer)
+        cityList = cities().owner(iPlayer).province(lNation[0]).entities()
 
         iNumGarrison = 0
         for iI in range(len(cityList)):
@@ -3443,7 +3443,7 @@ class Barbs:
         lNation = lMinorNations[iNationIndex]
         iPlayer = human()
 
-        cityList = self.getProvincePlayerCityList(lNation[0], iPlayer)
+        cityList = cities().owner(iPlayer).province(lNation[0]).entities()
 
         iNumGarrison = 0
         iBribeGold = 0
@@ -3532,7 +3532,7 @@ class Barbs:
     def doRevoltHuman(self, iPlayer, iGameTurn, lNation, iRevoltIndex):
         self.setNationRevoltIndex(lMinorNations.index(lNation), iRevoltIndex)
 
-        cityList = self.getProvincePlayerCityList(lNation[0], iPlayer)
+        cityList = cities().owner(iPlayer).province(lNation[0]).entities()
 
         iNumGarrison = 0
         iBribeGold = 0
@@ -3632,6 +3632,3 @@ class Barbs:
 
         unit_name = text(szName)
         make_units(Civ.BARBARIAN, iUnit, tPlot, iCount, UnitAITypes.UNITAI_ATTACK, unit_name)
-
-    def getProvincePlayerCityList(self, iProvince, iPlayer):
-        return [city for city in utils.getCityList(iPlayer) if city.getProvince() == iProvince]

@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import message, show, text
-from CoreStructures import human, make_unit, make_units, player, turn, year
+from CoreStructures import human, make_unit, make_units, player, turn, year, cities
 import CvUtil
 import CvEventManager
 import PyHelpers
@@ -217,7 +217,7 @@ class CvRFCEventHandler:
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
         # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
         if get_scenario() == Scenario.i1200AD:
-            for city in utils.getCityList(Civ.HUNGARY.value):
+            for city in cities().owner(Civ.HUNGARY.value).entities():
                 self.cnm.renameCities(city, Civ.HUNGARY.value)
 
         # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
@@ -508,7 +508,7 @@ class CvRFCEventHandler:
         iReligion, iFounder = argsList
 
         if iReligion != Religion.JUDAISM.value:
-            for city in utils.getCityList(iFounder):
+            for city in cities().owner(iFounder).entities():
                 if city.isHolyCityByType(
                     iReligion
                 ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
@@ -620,7 +620,7 @@ class CvRFCEventHandler:
         elif iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
             for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
-                for city in utils.getCityList(iPlayer):
+                for city in cities().owner(iPlayer).entities():
                     if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE.value):
                         city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE.value, False)
                         GLcity = city

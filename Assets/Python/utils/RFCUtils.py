@@ -2,7 +2,17 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn, units
+from CoreStructures import (
+    human,
+    make_unit,
+    make_units,
+    player,
+    team,
+    teamtype,
+    turn,
+    units,
+    cities,
+)
 from CoreTypes import (
     City,
     Civ,
@@ -21,7 +31,7 @@ import CvScreenEnums
 from LocationsData import CITIES
 import PyHelpers
 import Popup
-from PyUtils import percentage, percentage_chance, rand, choice
+from PyUtils import percentage, percentage_chance, rand
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
@@ -100,12 +110,6 @@ class RFCUtils:
         return tCol[iCol]
 
     # Plague, UP
-    def getRandomCity(self, iPlayer):
-        cityList = self.getCityList(iPlayer)
-        if cityList:
-            return choice(cityList)
-        return -1
-
     def isMortalUnit(self, unit):
         # Absinthe: leader units, and great people won't be killed by the plague
         if unit.isHasPromotion(Promotion.LEADER.value):
@@ -173,7 +177,7 @@ class RFCUtils:
     # AIWars
     def minorWars(self, iMinorCiv, iGameTurn):
         teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-        for city in self.getCityList(iMinorCiv):
+        for city in cities().owner(iMinorCiv).entities():
             x = city.getX()
             y = city.getY()
             for iActiveCiv in civilizations().majors().ids():
@@ -201,7 +205,7 @@ class RFCUtils:
     # Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
     def minorCoreWars(self, iMinorCiv, iGameTurn):
         teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-        for city in self.getCityList(iMinorCiv):
+        for city in cities().owner(iMinorCiv).entities():
             x = city.getX()
             y = city.getY()
             for iActiveCiv in civilizations().majors().ids():
@@ -720,7 +724,7 @@ class RFCUtils:
     # RiseAndFall
     def relocateSeaGarrisons(self, tCityPlot, iOldOwner):
         tDestination = (-1, -1)
-        for city in self.getCityList(iOldOwner):
+        for city in cities().owner(iOldOwner).entities():
             if city.isCoastalOld():
                 tDestination = (city.getX(), city.getY())
                 break
@@ -766,7 +770,7 @@ class RFCUtils:
         self.clearPlague(iCiv)
         iNumLoyalCities = 0
         iCounter = rand(6)
-        for city in self.getCityList(iCiv):
+        for city in cities().owner(iCiv).entities():
             tCoords = (city.getX(), city.getY())
             iX, iY = tCoords
             pCurrent = gc.getMap().plot(iX, iY)
@@ -870,7 +874,7 @@ class RFCUtils:
                     pPlayer.setUHV(i, 0)
 
     def clearPlague(self, iCiv):
-        for city in self.getCityList(iCiv):
+        for city in cities().owner(iCiv).entities():
             if city.hasBuilding(PlagueType.PLAGUE.value):
                 city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
 
@@ -1180,9 +1184,8 @@ class RFCUtils:
             # Jews may spread to another random city
             if iReligion == Religion.JUDAISM:
                 if percentage_chance(80, strict=True):
-                    tCity = self.selectRandomCity()
-                    self.spreadJews(tCity, Religion.JUDAISM)
-                    pSpreadCity = gc.getMap().plot(*tCity).getPlotCity()
+                    pSpreadCity = cities().majors().random_entry()
+                    self.spreadJews(location(pSpreadCity), Religion.JUDAISM)
                     if pSpreadCity.getOwner() == iOwner:
                         message(
                             iOwner,
@@ -1263,15 +1266,6 @@ class RFCUtils:
             pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS)
         pUnit = pPlayer.getUnit(iUnitID)
         pUnit.kill(0, -1)
-
-    def selectRandomCity(self):
-        cityList = []
-        for iPlayer in civilizations().majors().alive().ids():
-            cityList.extend(self.getCityList(iPlayer))
-        if cityList:
-            city = choice(cityList)
-            return (city.getX(), city.getY())
-        return False
 
     def spreadJews(self, tPlot, iReligion):
         if tPlot:
@@ -1606,11 +1600,6 @@ class RFCUtils:
             for j in range(y - iRadius, y + iRadius + 1)
             if 0 <= i < WORLD_WIDTH and 0 <= j < WORLD_HEIGHT
         ]
-
-    def getCityList(self, iCiv):
-        if iCiv is None:
-            return []
-        return [pCity.GetCy() for pCity in PyPlayer(iCiv).getCityList()]
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]

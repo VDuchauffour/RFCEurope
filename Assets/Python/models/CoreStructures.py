@@ -1504,6 +1504,18 @@ class CityFactory:
         cities = iterate(owner.firstCity, owner.nextCity)
         return Cities(*cities)
 
+    def main(self):  # TODO apply this on location and in plot factory, may need the switch to _key
+        return self.all().filter(lambda loc: is_main_civ(loc))
+
+    def majors(self):
+        return self.all().filter(lambda loc: is_major_civ(loc))
+
+    def minors(self):
+        return self.all().filter(lambda loc: is_minor_civ(loc))
+
+    def barbarian(self):
+        return self.all().filter(lambda loc: is_barbarian_civ(loc))
+
     def all(self):
         cities = []
         for player_id in range(gc.getMAX_PLAYERS()):  # TODO

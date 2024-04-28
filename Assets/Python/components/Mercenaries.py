@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import message, text
-from CoreStructures import human, turn
+from CoreStructures import human, turn, cities
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
@@ -2836,7 +2836,7 @@ class MercenaryManager:
                 )
             else:
                 # Absinthe: normal message
-                for city in utils.getCityList(iHuman):
+                for city in cities().owner(iHuman).entities():
                     if city.getProvince() == iCurrentProvince:
                         if city.getCultureLevel() >= 2:
                             szProvName = "TXT_KEY_PROVINCE_NAME_%i" % iCurrentProvince
@@ -3237,7 +3237,7 @@ class GlobalMercenaryUtils:
 
     def getOwnedProvinces(self, iPlayer):
         lProvList = []  # all available cities that the Merc can appear in
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             iProvince = city.getProvince()
             if iProvince not in lProvList:
                 lProvList.append(iProvince)
@@ -3245,7 +3245,7 @@ class GlobalMercenaryUtils:
 
     def getCulturedProvinces(self, iPlayer):
         lProvList = []  # all available cities that the Merc can appear in
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             iProvince = city.getProvince()
             if iProvince not in lProvList and city.getCultureLevel() >= 2:
                 lProvList.append(iProvince)
@@ -3314,7 +3314,7 @@ class GlobalMercenaryUtils:
             return
 
         lCityList = []  # all available cities that the Merc can appear in
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             if city.getProvince() == lMerc[4]:
                 # Absinthe: note that naval mercs can appear in all coastal cities if we have enough culture in the province (at least one cultured enough city)
                 iMercType = lMercList[lMerc[0]][0]

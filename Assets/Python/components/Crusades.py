@@ -11,6 +11,7 @@ from CoreStructures import (
     teamtype,
     turn,
     year,
+    cities,
 )
 import PyHelpers
 from PyUtils import percentage, percentage_chance, rand, choice
@@ -1667,7 +1668,7 @@ class Crusades:
             ):
                 if self.isOrMasterChristian(iEnemy):
                     continue
-                for pCity in utils.getCityList(iEnemy):
+                for pCity in cities().owner(iEnemy).entities():
                     if PROVINCES_MAP[pCity.getY()][pCity.getX()] in tPlayerDCMap:
                         return True
         return False
@@ -1715,8 +1716,8 @@ class Crusades:
             iX = pCapital.getX()
             iY = pCapital.getY()
         else:
-            city = choice(utils.getCityList(iPlayer))
-            if city:
+            city = cities().owner(iPlayer).random_entry()
+            if city is not None:
                 iX = city.getX()
                 iY = city.getY()
             else:

@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn, year
+from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn, year, cities
 import PyHelpers  # LOQ
 from PyUtils import chance, percentage, percentage_chance, rand, choice
 import RFCUtils
@@ -460,7 +460,7 @@ class RiseAndFall:
         self.pm.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
         # Constantinople -> Istanbul
         if iPlayer == Civ.OTTOMAN.value:
-            cityList = utils.getCityList(iPlayer)
+            cityList = cities().owner(iPlayer).entities()
             if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]:
                 for loopCity in cityList:
                     if loopCity != city:
@@ -749,7 +749,7 @@ class RiseAndFall:
                         iSmall = iIndep1
                     iDivideCounter = 0
                     iCounter = 0
-                    for city in utils.getCityList(iBig):
+                    for city in cities().owner(iBig).entities():
                         iDivideCounter += 1
                         if iDivideCounter % 2 == 1:
                             tCity = (city.getX(), city.getY())
@@ -971,7 +971,7 @@ class RiseAndFall:
 
         cityListInCore = []
         cityListInNotCore = []
-        for city in utils.getCityList(iPlayer):
+        for city in cities().owner(iPlayer).entities():
             tCity = (city.getX(), city.getY())
             x, y = tCity
             pCurrent = gc.getMap().plot(city.getX(), city.getY())
@@ -1513,7 +1513,7 @@ class RiseAndFall:
         pDeadCiv.setAlive(True)
 
     def moveBackCapital(self, iCiv):
-        cityList = utils.getCityList(iCiv)
+        cityList = cities().owner(iCiv).entities()
         tiles = civilization(iCiv).location.get(
             lambda c: c.new_capital, [civilization(iCiv).location.capital]
         )
