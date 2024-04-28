@@ -421,6 +421,9 @@ class EntitiesCollection(Collection):
     def __getitem__(self, index):
         return self.entities()[index]
 
+    # def __iter__(self):  # TODO currently recursive loop, we should using the _keys attribute paradigm
+    #     return iter(self.entities())
+
     def __add__(self, other):
         if other is None:
             return self
