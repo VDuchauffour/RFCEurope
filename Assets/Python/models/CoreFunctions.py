@@ -1,5 +1,6 @@
 import CoreTypes
 from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
+from ProvinceMapData import PROVINCES_MAP
 
 try:
     from CvPythonExtensions import (
@@ -258,6 +259,11 @@ def message(player, text, **settings):
         True,
         True,
     )
+
+
+def get_data_from_province_map(plot):
+    x, y = location(plot)
+    return PROVINCES_MAP[y][x]
 
 
 def get_data_from_upside_down_map(map, civ, plot):
