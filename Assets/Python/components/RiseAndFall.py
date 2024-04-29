@@ -997,7 +997,6 @@ class RiseAndFall:
                     iDistance = utils.calculateDistance(x, y, capital.getX(), capital.getY())
                     if iDistance > 3:
                         # Absinthe: Byzantine UP: cities in normal and core provinces won't go to the list
-                        # bCollapseImmuneCity = utils.collapseImmuneCity(iPlayer, x, y)
                         bCollapseImmune = utils.collapseImmune(iPlayer)
                         iProvType = pPlayer.getProvinceType(city.getProvince())
                         # Absinthe: if forced revolt, all cities go into the list by default (apart from the Byzantine UP and the special ones above)

@@ -129,9 +129,6 @@ class RFCUtils:
             return False
         return True
 
-    def isDefenderUnit(self, unit):
-        return False
-
     # AIWars
     def checkUnitsInEnemyTerritory(self, iCiv1, iCiv2):
         unitList = PyPlayer(iCiv1).getUnitList()
@@ -578,16 +575,9 @@ class RFCUtils:
 
         # halve barbarian culture in a broader area
         if bBarbarian2x2Decay or bBarbarian2x2Conversion:
-            lMinors = [
-                Civ.BARBARIAN.value,
-                Civ.INDEPENDENT.value,
-                Civ.INDEPENDENT_2.value,
-                Civ.INDEPENDENT_3.value,
-                Civ.INDEPENDENT_4.value,
-            ]
-            if iNewOwner not in lMinors:
+            if iNewOwner not in MINOR_CIVS:
                 for plot in plots().surrounding(tCityPlot, radius=2).entities():
-                    for iMinor in lMinors:
+                    for iMinor in MINOR_CIVS:
                         iPlotMinorCulture = plot.getCulture(iMinor)
                         if iPlotMinorCulture > 0:
                             if plot.isNone() or location(plot) == tCityPlot:
@@ -837,9 +827,13 @@ class RFCUtils:
                     pPlayer.setUHV(i, 0)
 
     def clearPlague(self, iCiv):
-        for city in cities().owner(iCiv).entities():
-            if city.hasBuilding(PlagueType.PLAGUE.value):
-                city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+        for city in (
+            cities()
+            .owner(iCiv)
+            .filter(lambda c: c.hasBuilding(PlagueType.PLAGUE.value))
+            .entities()
+        ):
+            city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
 
     # AIWars
     def isAVassal(self, iCiv):
@@ -956,23 +950,6 @@ class RFCUtils:
                 return True
         return False
 
-    def ownedPlots(self, tCoords, argsList):
-        """Plot is valid if it is in the given civ's territory."""
-        pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-        if pCurrent.getOwner() == argsList:
-            return True
-        return False
-
-    def goodOwnedPlots(self, tCoords, argsList):
-        """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit and if it is in the given civ's territory."""
-        pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-        if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
-                if not pCurrent.isCity() and not pCurrent.isUnit():
-                    if pCurrent.getOwner() == argsList:
-                        return True
-        return False
-
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
@@ -980,18 +957,6 @@ class RFCUtils:
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     return True
-        return False
-
-    def collapseImmuneCity(self, iCiv, x, y):
-        # 3MiroUP: Emperor
-        if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*civilization(iCiv).location.capital)
-            if plot.isCity():
-                if plot.getOwner() == iCiv:
-                    tile_min = civilization(iCiv).location.area.core.tile_min
-                    tile_max = civilization(iCiv).location.area.core.tile_max
-                    if tile_min[0] <= x <= tile_max[0] and tile_min[1] <= y <= tile_max[1]:
-                        return True
         return False
 
     # Absinthe: chooseable persecution popup
