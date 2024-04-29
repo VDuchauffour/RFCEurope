@@ -8,6 +8,8 @@
 
 
 from CvPythonExtensions import *
+from CoreFunctions import get_data_from_upside_down_map, message, text
+from CoreStructures import human, player, team, cities
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -17,17 +19,18 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
-import Consts as con
-import XMLConsts as xml
-import RFCEMaps as rfcemaps
+from PyUtils import percentage_chance, rand, choice
 import RFCUtils
-import RFCEBalance
+import GameBalance
 import random
+from Consts import MessageData
+from CoreData import civilizations, civilization
+from CityMapData import CITIES_MAP
+from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
-balance = RFCEBalance.RFCEBalance()
+balance = GameBalance.GameBalance()
 gc = CyGlobalContext()
-localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
 
@@ -40,11 +43,8 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        # print("EVENTMANAGER INIT")
-        # print(" init_event manager, this time ")
-        # 3Miro: add balancing calls here
-
-        balance.setBalanceParameters()
+        balance.setProvinceTypes()
+        balance.postAreas()
 
         self.bCtrl = False
         self.bShift = False
@@ -237,7 +237,6 @@ class CvEventManager:
         bDummy = False
         self.bDbg, bDummy, self.bAlt, self.bCtrl, self.bShift, self.bAllowCheats = argsList[idx:]
         ret = 0
-        # print("Event with tag: ",tag)
         gc.getGame().logMsg("Something")
         if self.EventHandlerMap.has_key(tag):
             fxn = self.EventHandlerMap[tag]
@@ -356,9 +355,6 @@ class CvEventManager:
         "Called whenever CyMessageControl().sendModNetMessage() is called - this is all for you modders!"
 
         iData1, iData2, iData3, iData4, iData5 = argsList
-
-        print("Modder's net message!")
-
         CvUtil.pyPrint("onModNetMessage")
 
     def onInit(self, argsList):
@@ -403,6 +399,7 @@ class CvEventManager:
     def onGameStart(self, argsList):
         "Called at the start of the game"
 
+        balance.setBalanceParameters()
         # Absinthe: separate visualization function for spawn and respawn areas
         # 			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
         gc.setCoreToPlot(
@@ -411,38 +408,29 @@ class CvEventManager:
         gc.setNormalToPlot(
             gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")
         )  # hold down the alt key, and hover over the map
-        # print ("SpawnAreaDisplay", gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
-        # print ("RespawnAreaDisplay", gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
 
         # Rhye - Dawn of Man must appear in late starts too
-        # if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
-        if gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(
-            GameOptionTypes.GAMEOPTION_ADVANCED_START
-        ):
-            for iPlayer in range(gc.getMAX_PLAYERS()):
-                player = gc.getPlayer(iPlayer)
-                if player.isAlive() and player.isHuman():
-                    popupInfo = CyPopupInfo()
-                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-                    popupInfo.setText(u"showDawnOfMan")
-                    popupInfo.addPopup(iPlayer)
+        if (
+            gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA")
+            or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)
+        ) and player().isAlive():
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+            popupInfo.setText(u"showDawnOfMan")
+            popupInfo.addPopup(human())
         else:
             CyInterface().setSoundSelectionReady(True)
 
-        if gc.getGame().isPbem():
-            for iPlayer in range(gc.getMAX_PLAYERS()):
-                player = gc.getPlayer(iPlayer)
-                if player.isAlive() and player.isHuman():
-                    popupInfo = CyPopupInfo()
-                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-                    popupInfo.setOption1(True)
-                    popupInfo.addPopup(iPlayer)
+        if gc.getGame().isPbem() and player().isAlive():
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
+            popupInfo.setOption1(True)
+            popupInfo.addPopup(human())
 
         CvAdvisorUtils.resetNoLiberateCities()
 
     def onGameEnd(self, argsList):
         "Called at the End of the game"
-        # print("Game is ending")
         return
 
     def onBeginGameTurn(self, argsList):
@@ -505,12 +493,12 @@ class CvEventManager:
             )
         # Absinthe: Gediminas Tower wonder effect: extra city defence on unit win in the city
         pPlayer = gc.getPlayer(pWinner.getOwner())
-        if pPlayer.countNumBuildings(xml.iGediminasTower) > 0:
+        if pPlayer.countNumBuildings(Wonder.GEDIMINAS_TOWER.value) > 0:
             pPlot = pWinner.plot()
             if pPlot.isCity():
                 pCity = pPlot.getPlotCity()
-                # if pCity.isHasBuilding(xml.iGediminasTower):
-                if pCity.getNumActiveBuilding(xml.iGediminasTower):
+                # if pCity.isHasBuilding(Wonder.GEDIMINAS_TOWER.value):
+                if pCity.getNumActiveBuilding(Wonder.GEDIMINAS_TOWER.value):
                     pCity.changeDefenseDamage(-10)
         # Absinthe: Gediminas Tower end
 
@@ -534,49 +522,51 @@ class CvEventManager:
         if cdDefender.eOwner == cdDefender.eVisualOwner:
             szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
         else:
-            szDefenderName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+            szDefenderName = text("TXT_KEY_TRAIT_PLAYER_UNKNOWN")
         if cdAttacker.eOwner == cdAttacker.eVisualOwner:
             szAttackerName = gc.getPlayer(cdAttacker.eOwner).getNameKey()
         else:
-            szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+            szAttackerName = text("TXT_KEY_TRAIT_PLAYER_UNKNOWN")
 
         if iIsAttacker == 0:
-            combatMessage = localText.getText(
+            combatMessage = text(
                 "TXT_KEY_COMBAT_MESSAGE_HIT",
-                (
-                    szDefenderName,
-                    cdDefender.sUnitName,
-                    iDamage,
-                    cdDefender.iCurrHitPoints,
-                    cdDefender.iMaxHitPoints,
-                ),
+                szDefenderName,
+                cdDefender.sUnitName,
+                iDamage,
+                cdDefender.iCurrHitPoints,
+                cdDefender.iMaxHitPoints,
             )
             CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
             if cdDefender.iCurrHitPoints <= 0:
-                combatMessage = localText.getText(
+                combatMessage = text(
                     "TXT_KEY_COMBAT_MESSAGE_DEFEATED",
-                    (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName),
+                    szAttackerName,
+                    cdAttacker.sUnitName,
+                    szDefenderName,
+                    cdDefender.sUnitName,
                 )
                 CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
         elif iIsAttacker == 1:
-            combatMessage = localText.getText(
+            combatMessage = text(
                 "TXT_KEY_COMBAT_MESSAGE_HIT",
-                (
-                    szAttackerName,
-                    cdAttacker.sUnitName,
-                    iDamage,
-                    cdAttacker.iCurrHitPoints,
-                    cdAttacker.iMaxHitPoints,
-                ),
+                szAttackerName,
+                cdAttacker.sUnitName,
+                iDamage,
+                cdAttacker.iCurrHitPoints,
+                cdAttacker.iMaxHitPoints,
             )
             CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
             if cdAttacker.iCurrHitPoints <= 0:
-                combatMessage = localText.getText(
+                combatMessage = text(
                     "TXT_KEY_COMBAT_MESSAGE_DEFEATED",
-                    (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName),
+                    szDefenderName,
+                    cdDefender.sUnitName,
+                    szAttackerName,
+                    cdAttacker.sUnitName,
                 )
                 CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
@@ -585,14 +575,14 @@ class CvEventManager:
         "Improvement Built"
         iImprovement, iX, iY = argsList
         # Absinthe: Stephansdom start
-        if iImprovement == xml.iImprovementCottage:
+        if iImprovement == Improvement.COTTAGE.value:
             pPlot = CyMap().plot(iX, iY)
             iOwner = pPlot.getOwner()
             # if there is an owner
             if iOwner >= 0:
                 pOwner = gc.getPlayer(iOwner)
-                if pOwner.countNumBuildings(xml.iStephansdom) > 0:
-                    pPlot.setImprovementType(xml.iImprovementHamlet)
+                if pOwner.countNumBuildings(Wonder.STEPHANSDOM.value) > 0:
+                    pPlot.setImprovementType(Improvement.HAMLET.value)
         # Absinthe: Stephansdom end
         if not self.__LOG_IMPROVEMENT:
             return
@@ -615,7 +605,6 @@ class CvEventManager:
         # 			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
         global iImpBeforeCity
         iImpBeforeCity = 10000 * iImprovement + 100 * iX + 1 * iY
-        # print ("latest destroyed improvement: ", iImprovement, iX, iY, iImpBeforeCity)
 
     def onRouteBuilt(self, argsList):
         "Route Built"
@@ -642,41 +631,32 @@ class CvEventManager:
         if pPlot.getBonusType(-1) != -1:  # only proceed if there is a bonus resource on the plot
             if (
                 iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST")
-                or iFeatureType == xml.iDenseForest
-                or iFeatureType == xml.iPalmForest
+                or iFeatureType == Feature.DENSEFOREST.value
+                or iFeatureType == Feature.PALMFOREST.value
             ):
                 iBonusType = pPlot.getBonusType(-1)
-                if iBonusType in [xml.iTimber, xml.iDeer, xml.iFur]:
-                    print("Resource disappeared on forest removal", iBonusType)
+                if iBonusType in [Bonus.TIMBER.value, Bonus.DEER.value, Bonus.FUR.value]:
                     pPlot.setBonusType(-1)
                     # also remove corresponding improvements
                     iImprovementType = pPlot.getImprovementType()
                     if (
-                        iImprovementType == xml.iImprovementCamp
+                        iImprovementType == Improvement.CAMP.value
                     ):  # camp is only buildable on resources, while lumbermills are removed by default on forest removal
                         pPlot.setImprovementType(-1)
-                        print("Improvement also removed", iImprovementType)
                     # Absinthe: message for the human player if it was inside it's territory
                     iOwner = pPlot.getOwner()
-                    if iOwner == utils.getHumanID():
-                        CyInterface().addMessage(
+                    if iOwner == human():
+                        message(
                             iOwner,
-                            False,
-                            con.iDuration,
-                            (
-                                CyTranslator().getText(
-                                    "TXT_KEY_NO_FOREST_NO_RESOURCE",
-                                    (gc.getBonusInfo(iBonusType).getTextKey(),),
-                                )
+                            text(
+                                "TXT_KEY_NO_FOREST_NO_RESOURCE",
+                                gc.getBonusInfo(iBonusType).getTextKey(),
                             ),
-                            "AS2D_DISCOVERBONUS",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            gc.getBonusInfo(iBonusType).getButton(),
-                            ColorTypes(con.iLime),
-                            pPlot.getX(),
-                            pPlot.getY(),
-                            True,
-                            True,
+                            sound="AS2D_DISCOVERBONUS",
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBonusInfo(iBonusType).getButton(),
+                            color=MessageData.LIME,
+                            location=pPlot,
                         )
 
     def onPlotPicked(self, argsList):
@@ -700,11 +680,10 @@ class CvEventManager:
         pPlayer = gc.getPlayer(iPlayer)
 
         # Absinthe: Leaning Tower start
-        if iBuildingType == xml.iLeaningTower:
+        if iBuildingType == Wonder.LEANING_TOWER.value:
             iX = pCity.getX()
             iY = pCity.getY()
-            iGP = gc.getGame().getSorenRandNum(7, "Leaning Tower")
-            iUnit = xml.iGreatProphet + iGP
+            iUnit = Unit.GREAT_PROPHET.value + rand(7)
             pNewUnit = pPlayer.initUnit(
                 iUnit,
                 iX,
@@ -712,47 +691,39 @@ class CvEventManager:
                 UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()),
                 DirectionTypes.NO_DIRECTION,
             )
-            if utils.isActive(utils.getHumanID()):
+            if player().isExisting():
                 szText = (
-                    localText.getText("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT", ())
+                    text("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT")
                     + " "
                     + gc.getUnitInfo(iUnit).getDescription()
                 )
-                CyInterface().addMessage(
-                    utils.getHumanID(),
-                    False,
-                    con.iDuration,
+                message(
+                    human(),
                     szText,
-                    "",
-                    InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                    "",
-                    ColorTypes(con.iLightBlue),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                    color=MessageData.LIGHT_BLUE,
                 )
         # Absinthe: Leaning Tower end
 
         # Absinthe: Bibliotheca Corviniana start
-        if iBuildingType == xml.iBibliothecaCorviniana:
+        if iBuildingType == Wonder.BIBLIOTHECA_CORVINIANA.value:
             # techs known by the owner civ
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
             lBuilderKnownTechs = []
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if pTeam.isHasTech(iTech):
                     lBuilderKnownTechs.append(iTech)
 
             # techs known by the other civs
             lOthersKnownTechs = []
-            for iLoopPlayer in range(con.iNumPlayers):
+            for iLoopPlayer in civilizations().majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 iLoopTeam = pLoopPlayer.getTeam()
                 pLoopTeam = gc.getTeam(iLoopTeam)
                 # only for known civs
                 if iLoopPlayer != iPlayer and pTeam.isHasMet(iLoopTeam):
-                    for iTech in xrange(gc.getNumTechInfos()):
+                    for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                         if pLoopTeam.isHasTech(iTech):
                             lOthersKnownTechs.append(iTech)
 
@@ -775,157 +746,88 @@ class CvEventManager:
                     # add the first instance of the single tech, with message for the human player
                     iChosenTech = lPotentialTechs[0]
                     pTeam.setHasTech(iChosenTech, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
-                        sText = CyTranslator().getText(
+                    if iPlayer == human():
+                        sText = text(
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech).getDescription(),),
+                            gc.getTechInfo(iChosenTech).getDescription(),
                         )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            con.iDuration,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iLightBlue),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                        message(iPlayer, sText, force=True, color=MessageData.LIGHT_BLUE)
                 elif len(lUniquePotentialTechs) > 1:
                     # add two different random techs, with message for the human player
-                    iRandTechPos1 = gc.getGame().getSorenRandNum(
-                        len(lPotentialTechs), "tech position"
-                    )
-                    iRandTechPos2 = iRandTechPos1
-                    iChosenTech1 = lPotentialTechs[iRandTechPos1]
-                    iChosenTech2 = lPotentialTechs[iRandTechPos2]
-                    while iChosenTech1 == iChosenTech2:
-                        iRandTechPos2 = gc.getGame().getSorenRandNum(
-                            len(lPotentialTechs), "tech position"
-                        )
-                        iChosenTech2 = lPotentialTechs[iRandTechPos2]
-                    pTeam.setHasTech(iChosenTech1, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
-                        sText = CyTranslator().getText(
-                            "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech1).getDescription(),),
-                        )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            con.iDuration,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iLightBlue),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
-                    pTeam.setHasTech(iChosenTech2, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
-                        sText = CyTranslator().getText(
-                            "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech2).getDescription(),),
-                        )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            con.iDuration,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iLightBlue),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                    for tech in random.sample(lPotentialTechs, 2):
+                        pTeam.setHasTech(tech, True, iPlayer, False, True)
+                        if iPlayer == human():
+                            sText = text(
+                                "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
+                                gc.getTechInfo(tech).getDescription(),
+                            )
+                            message(iPlayer, sText, force=True, color=MessageData.LIGHT_BLUE)
         # Absinthe: Bibliotheca Corviniana end
 
         # Absinthe: Kalmar Castle start
-        if iBuildingType == xml.iKalmarCastle:
-            for iNeighbour in con.lNeighbours[iPlayer]:
+        if iBuildingType == Wonder.KALMAR_CASTLE.value:
+            for neighbour in civilization(iPlayer).location.neighbours:
+                iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
-                print("iNeighbour", iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
                     pPlayer.AI_changeAttitudeExtra(iNeighbour, 3)
                     pNeighbour.AI_changeAttitudeExtra(iPlayer, 3)
-                    # optional: improve relations to a given level
-                    # while pPlayer.AI_getAttitude(iNeighbour) < gc.getInfoTypeForString("ATTITUDE_CAUTIOUS"):
-                    # 	pPlayer.AI_changeAttitudeExtra(iNeighbour, 1)
-                    # while pNeighbour.AI_getAttitude(iPlayer) < gc.getInfoTypeForString("ATTITUDE_CAUTIOUS"):
-                    # 	pNeighbour.AI_changeAttitudeExtra(iPlayer, 1)
         # Absinthe: Kalmar Castle end
 
         # Absinthe: Grand Arsenal start
-        if iBuildingType == xml.iGrandArsenal:
+        if iBuildingType == Wonder.GRAND_ARSENAL.value:
             iX = pCity.getX()
             iY = pCity.getY()
             for i in range(3):
                 # should we have Galleass for all civs, or use the getUniqueUnit function in RFCUtils?
-                # iNewUnit = utils.getUniqueUnit(pCity.getOwner(), xml.iGunGalley)
                 pNewUnit = pPlayer.initUnit(
-                    xml.iVeniceGalleas,
+                    Unit.VENICE_GALLEAS.value,
                     iX,
                     iY,
-                    UnitAITypes(gc.getUnitInfo(xml.iVeniceGalleas).getDefaultUnitAIType()),
+                    UnitAITypes(gc.getUnitInfo(Unit.VENICE_GALLEAS.value).getDefaultUnitAIType()),
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pNewUnit.setExperience(6, -1)
                 for iPromo in [
-                    xml.iPromotionCombat1,
-                    xml.iPromotionLeadership,
-                    xml.iPromotionNavigation,
+                    Promotion.COMBAT.value,
+                    Promotion.LEADERSHIP.value,
+                    Promotion.NAVIGATION.value,
                 ]:
                     pNewUnit.setHasPromotion(iPromo, True)
         # Absinthe: Grand Arsenal end
 
         # Absinthe: Magellan's Voyage start
-        if iBuildingType == xml.iMagellansVoyage:
+        if iBuildingType == Wonder.MAGELLANS_VOYAGE.value:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
             pTeam.changeExtraMoves(gc.getInfoTypeForString("DOMAIN_SEA"), 2)
         # Absinthe: Magellan's Voyage end
 
         # Absinthe: St. Catherine's Monastery start
-        if iBuildingType == xml.iStCatherineMonastery:
+        if iBuildingType == Wonder.ST_CATHERINE_MONASTERY.value:
             iX = pCity.getX()
             iY = pCity.getY()
             for i in range(2):
                 pPlayer.initUnit(
-                    xml.iHolyRelic, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH
+                    Unit.HOLY_RELIC.value,
+                    iX,
+                    iY,
+                    UnitAITypes.NO_UNITAI,
+                    DirectionTypes.DIRECTION_SOUTH,
                 )
-            if utils.getHumanID() == iPlayer:
-                CyInterface().addMessage(
+            if human() == iPlayer:
+                message(
                     iPlayer,
-                    False,
-                    con.iDuration,
-                    CyTranslator().getText(
-                        "TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT", ()
-                    ),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(con.iLightBlue),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
+                    color=MessageData.LIGHT_BLUE,
                 )
         # Absinthe: St. Catherine's Monastery end
 
         # Absinthe: Al-Azhar University start
-        if iBuildingType == xml.iAlAzhar:
+        if iBuildingType == Wonder.ALAZHAR.value:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if not pTeam.isHasTech(iTech):
                     if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                         "ADVISOR_RELIGION"
@@ -941,13 +843,13 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if iBuildingType == xml.iSistineChapel:
-            for city in utils.getCityList(iPlayer):
+        if iBuildingType == Wonder.SISTINE_CHAPEL.value:
+            for city in cities().owner(iPlayer).entities():
                 if city.getNumWorldWonders() > 0:
                     city.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1)
         elif isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType()):
             # if the given civ already had the Sistine Chapel, and built another wonder in a new city
-            if pPlayer.countNumBuildings(xml.iSistineChapel) > 0:
+            if pPlayer.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
                 if pCity.getNumWorldWonders() == 1:
                     pCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
@@ -955,8 +857,8 @@ class CvEventManager:
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if iBuildingType == xml.iJasnaGora:
-            for city in utils.getCityList(iPlayer):
+        if iBuildingType == Wonder.JASNA_GORA.value:
+            for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -980,16 +882,16 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if iBuildingType == xml.iKizilKule:
-            for city in utils.getCityList(iPlayer):
+        if iBuildingType == Wonder.KIZIL_KULE.value:
+            for city in cities().owner(iPlayer).entities():
                 city.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
                 )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if iBuildingType == xml.iSamogitianAlkas:
-            for city in utils.getCityList(iPlayer):
+        if iBuildingType == Wonder.SAMOGITIAN_ALKAS.value:
+            for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                     CommerceTypes.COMMERCE_RESEARCH,
@@ -998,8 +900,8 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if iBuildingType == xml.iMagnaCarta:
-            for city in utils.getCityList(iPlayer):
+        if iBuildingType == Wonder.MAGNA_CARTA.value:
+            for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -1050,26 +952,17 @@ class CvEventManager:
             popupInfo.addPopup(iPlayer)
 
         # Absinthe: Torre del Oro start
-        if iProjectType >= xml.iNumNotColonies:
+        if iProjectType >= len(Project):
             pPlayer = gc.getPlayer(iPlayer)
-            if pPlayer.countNumBuildings(xml.iTorreDelOro) > 0:
+            if pPlayer.countNumBuildings(Wonder.TORRE_DEL_ORO.value) > 0:
                 # 70% chance for a 3 turn Golden Age
-                if CyGame().getSorenRandNum(10, "Golden Age") < 7:
+                if percentage_chance(70, strict=True):
                     pPlayer.changeGoldenAgeTurns(3)
-                    if utils.getHumanID() == iPlayer:
-                        CyInterface().addMessage(
+                    if human() == iPlayer:
+                        message(
                             iPlayer,
-                            False,
-                            con.iDuration,
-                            CyTranslator().getText("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE", ()),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iGreen),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
+                            color=MessageData.GREEN,
                         )
         # Absinthe: Torre del Oro end
 
@@ -1135,7 +1028,7 @@ class CvEventManager:
         if pTeam.isTrainVassalUU():
             l_vassalUU = []
             iDefaultUnit = utils.getBaseUnit(iUnitType)
-            for iLoopPlayer in range(con.iNumPlayers):
+            for iLoopPlayer in civilizations().majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive():
                     if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
@@ -1148,7 +1041,7 @@ class CvEventManager:
                     # double chance for the original UU
                     l_vassalUU.append(iPlayerUU)
                     l_vassalUU.append(iPlayerUU)
-                iUnit = utils.getRandomEntry(l_vassalUU)
+                iUnit = choice(l_vassalUU)
                 pNewUnit = pPlayer.initUnit(
                     iUnit,
                     unit.getX(),
@@ -1159,34 +1052,25 @@ class CvEventManager:
                 pNewUnit.convert(unit)
                 # message if it was changed to a vassal UU
                 if iUnit != iPlayerUU and iUnit != iDefaultUnit:
-                    iHuman = utils.getHumanID()
-                    if iHuman == iPlayer:
-                        szText = localText.getText(
+                    if human() == iPlayer:
+                        szText = text(
                             "TXT_KEY_BUILDING_TOPKAPI_PALACE_EFFECT",
-                            (
-                                gc.getUnitInfo(iUnit).getDescription(),
-                                gc.getUnitInfo(iPlayerUU).getDescription(),
-                            ),
+                            gc.getUnitInfo(iUnit).getDescription(),
+                            gc.getUnitInfo(iPlayerUU).getDescription(),
                         )
-                        CyInterface().addMessage(
-                            iHuman,
-                            False,
-                            con.iDuration,
+                        message(
+                            human(),
                             szText,
-                            "",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            gc.getUnitInfo(iUnit).getButton(),
-                            ColorTypes(con.iLightBlue),
-                            city.getX(),
-                            city.getY(),
-                            True,
-                            True,
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getUnitInfo(iUnit).getButton(),
+                            color=MessageData.LIGHT_BLUE,
+                            location=city,
                         )
         # Absinthe: Topkapi Palace end
 
         # Absinthe: Brandenburg Gate start
         if unit.getUnitCombatType() != -1:
-            if pPlayer.countNumBuildings(xml.iBrandenburgGate) > 0:
+            if pPlayer.countNumBuildings(Wonder.BRANDENBURG_GATE.value) > 0:
                 unit.changeExperience(
                     (
                         2
@@ -1202,7 +1086,7 @@ class CvEventManager:
         # Absinthe: Brandenburg Gate end
 
         # Absinthe: Selimiye Mosque start
-        if pPlayer.countNumBuildings(xml.iSelimiyeMosque) > 0:
+        if pPlayer.countNumBuildings(Wonder.SELIMIYE_MOSQUE.value) > 0:
             if pPlayer.isGoldenAge():
                 unit.changeExperience(unit.getExperience(), 999, False, False, False)
         # Absinthe: Selimiye Mosque end
@@ -1239,7 +1123,6 @@ class CvEventManager:
 
     def onUnitLost(self, argsList):
         "Unit Lost"
-        # print("3Miro: CvEvenetManager: onUnitLost")
         unit = argsList[0]
         player = PyPlayer(unit.getOwner())
         if not self.__LOG_UNITLOST:
@@ -1260,11 +1143,7 @@ class CvEventManager:
         if not self.__LOG_UNITPROMOTED:
             return
         CvUtil.pyPrint(
-            "Unit Promotion Event: %s - %s"
-            % (
-                player.getCivilizationName(),
-                pUnit.getName(),
-            )
+            "Unit Promotion Event: %s - %s" % (player.getCivilizationName(), pUnit.getName())
         )
 
     def onUnitSelected(self, argsList):
@@ -1332,7 +1211,7 @@ class CvEventManager:
         if not self.__LOG_GOODYRECEIVED:
             return
         CvUtil.pyPrint(
-            "%s received a goody" % (gc.getPlayer(iPlayer).getCivilizationDescription(0)),
+            "%s received a goody" % (gc.getPlayer(iPlayer).getCivilizationDescription(0))
         )
 
     def onGreatPersonBorn(self, argsList):
@@ -1344,10 +1223,10 @@ class CvEventManager:
             return
         if not self.__LOG_GREATPERSON:
             # Absinthe: Louvre start
-            if pPlayer.countNumBuildings(xml.iLouvre) > 0:
-                for loopCity in utils.getCityList(iPlayer):
+            if pPlayer.countNumBuildings(Wonder.LOUVRE.value) > 0:
+                for loopCity in cities().owner(iPlayer).entities():
                     # bigger boost for the GP city and the Louvre city
-                    if loopCity.getNumActiveBuilding(xml.iLouvre) or pCity == loopCity:
+                    if loopCity.getNumActiveBuilding(Wonder.LOUVRE.value) or pCity == loopCity:
                         loopCity.changeCulture(
                             iPlayer, min(300, loopCity.getCultureThreshold() / 5), True
                         )
@@ -1358,29 +1237,29 @@ class CvEventManager:
             # Absinthe: Louvre end
 
             # Absinthe: Peterhof Palace start
-            if pPlayer.countNumBuildings(xml.iPeterhofPalace) > 0:
-                if gc.getGame().getSorenRandNum(10, "Peterhof Palace") < 7:
-                    if pUnit.getUnitType() == xml.iGreatScientist:
+            if pPlayer.countNumBuildings(Wonder.PETERHOF_PALACE.value) > 0:
+                if percentage_chance(70, strict=True):
+                    if pUnit.getUnitType() == Unit.GREAT_SCIENTIST:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatProphet:
+                    elif pUnit.getUnitType() == Unit.GREAT_PROPHET:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_PRIEST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatArtist:
+                    elif pUnit.getUnitType() == Unit.GREAT_ARTIST:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatMerchant:
+                    elif pUnit.getUnitType() == Unit.GREAT_MERCHANT:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_MERCHANT"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatEngineer:
+                    elif pUnit.getUnitType() == Unit.GREAT_ENGINEER:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ENGINEER"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatSpy:
+                    elif pUnit.getUnitType() == Unit.GREAT_SPY:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SPY"), 1
                         )
@@ -1624,7 +1503,7 @@ class CvEventManager:
         # Absinthe: end
 
         # Absinthe: Jasna Gora start
-        if pPlayer.countNumBuildings(xml.iJasnaGora) > 0:
+        if pPlayer.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1648,14 +1527,14 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if pPlayer.countNumBuildings(xml.iKizilKule) > 0:
+        if pPlayer.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
             city.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
             )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if pPlayer.countNumBuildings(xml.iSamogitianAlkas) > 0:
+        if pPlayer.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
@@ -1664,7 +1543,7 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if pPlayer.countNumBuildings(xml.iMagnaCarta) > 0:
+        if pPlayer.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1699,11 +1578,11 @@ class CvEventManager:
         )
 
         # Absinthe: Al-Azhar University start
-        if city.getNumActiveBuilding(xml.iAlAzhar):
+        if city.getNumActiveBuilding(Wonder.ALAZHAR.value):
             pPlayer = gc.getPlayer(iPlayer)
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if not pTeam.isHasTech(iTech):
                     if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                         "ADVISOR_RELIGION"
@@ -1719,8 +1598,8 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if city.getNumActiveBuilding(xml.iSistineChapel):
-            for loopCity in utils.getCityList(iPlayer):
+        if city.getNumActiveBuilding(Wonder.SISTINE_CHAPEL.value):
+            for loopCity in cities().owner(iPlayer).entities():
                 if loopCity.getNumWorldWonders() > 0:
                     loopCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1
@@ -1728,8 +1607,8 @@ class CvEventManager:
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if city.getNumActiveBuilding(xml.iJasnaGora):
-            for loopCity in utils.getCityList(iPlayer):
+        if city.getNumActiveBuilding(Wonder.JASNA_GORA.value):
+            for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -1753,16 +1632,16 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if city.getNumActiveBuilding(xml.iKizilKule):
-            for loopCity in utils.getCityList(iPlayer):
+        if city.getNumActiveBuilding(Wonder.KIZIL_KULE.value):
+            for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
                 )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if city.getNumActiveBuilding(xml.iSamogitianAlkas):
-            for loopCity in utils.getCityList(iPlayer):
+        if city.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS.value):
+            for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                     CommerceTypes.COMMERCE_RESEARCH,
@@ -1771,8 +1650,8 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if city.getNumActiveBuilding(xml.iMagnaCarta):
-            for loopCity in utils.getCityList(iPlayer):
+        if city.getNumActiveBuilding(Wonder.MAGNA_CARTA.value):
+            for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -1787,81 +1666,51 @@ class CvEventManager:
             if city.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = utils.getHumanID()
-            HumanPlayer = gc.getPlayer(iHuman)
-            HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+            HumanTeam = team()
             if ConquerPlayer.isHuman() or (
-                utils.isActive(iHuman)
+                player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
-                iX = city.getX()
-                iY = city.getY()
                 # Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
-                lAllWonders = []
-                for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-                    lAllWonders.append(iWonder)
+                lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
-                    xml.iCatholicShrine,
-                    xml.iOrthodoxShrine,
-                    xml.iIslamicShrine,
-                    xml.iProtestantShrine,
+                    Building.CATHOLIC_SHRINE.value,
+                    Building.ORTHODOX_SHRINE.value,
+                    Building.ISLAMIC_SHRINE.value,
+                    Building.PROTESTANT_SHRINE.value,
                 ]:
                     lAllWonders.append(iWonder)
                 for iWonder in lAllWonders:
                     if city.getNumBuilding(iWonder) > 0:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_1", (sWonderName,)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_1", sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, sWonderName)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_2", ConquerName, sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_3", PreviousName, sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
         # Absinthe: wonder destroyed message end
 
@@ -1884,12 +1733,12 @@ class CvEventManager:
         pNewOwner = gc.getPlayer(iNewOwner)
 
         # Absinthe: Al-Azhar University start
-        if pCity.getNumActiveBuilding(xml.iAlAzhar):
+        if pCity.getNumActiveBuilding(Wonder.ALAZHAR.value):
             iPreviousTeam = pPreviousOwner.getTeam()
             pPreviousTeam = gc.getTeam(iPreviousTeam)
             iNewTeam = pNewOwner.getTeam()
             pNewTeam = gc.getTeam(iNewTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                     "ADVISOR_RELIGION"
                 ):
@@ -1913,29 +1762,29 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if pCity.getNumActiveBuilding(xml.iSistineChapel):
-            for loopCity in utils.getCityList(iPreviousOwner):
+        if pCity.getNumActiveBuilding(Wonder.SISTINE_CHAPEL.value):
+            for loopCity in cities().owner(iPreviousOwner).entities():
                 if loopCity.getNumWorldWonders() > 0:
                     loopCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1
                     )
-            for loopCity in utils.getCityList(iNewOwner):
+            for loopCity in cities().owner(iNewOwner).entities():
                 if loopCity.getNumWorldWonders() > 0 and not loopCity.getNumActiveBuilding(
-                    xml.iSistineChapel
+                    Wonder.SISTINE_CHAPEL.value
                 ):
                     loopCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
                     )
         elif pCity.getNumWorldWonders() > 0:
-            if pPreviousOwner.countNumBuildings(xml.iSistineChapel) > 0:
+            if pPreviousOwner.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
                 pCity.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1)
-            elif pNewOwner.countNumBuildings(xml.iSistineChapel) > 0:
+            elif pNewOwner.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
                 pCity.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1)
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if pCity.getNumActiveBuilding(xml.iJasnaGora):
-            for loopCity in utils.getCityList(iPreviousOwner):
+        if pCity.getNumActiveBuilding(Wonder.JASNA_GORA.value):
+            for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -1956,7 +1805,7 @@ class CvEventManager:
                     CommerceTypes.COMMERCE_CULTURE,
                     0,
                 )
-            for loopCity in utils.getCityList(iNewOwner):
+            for loopCity in cities().owner(iNewOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                     CommerceTypes.COMMERCE_CULTURE,
@@ -1977,7 +1826,7 @@ class CvEventManager:
                     CommerceTypes.COMMERCE_CULTURE,
                     1,
                 )
-        elif pPreviousOwner.countNumBuildings(xml.iJasnaGora) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1998,7 +1847,7 @@ class CvEventManager:
                 CommerceTypes.COMMERCE_CULTURE,
                 0,
             )
-        elif pNewOwner.countNumBuildings(xml.iJasnaGora) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -2022,46 +1871,46 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if pCity.getNumActiveBuilding(xml.iKizilKule):
-            for loopCity in utils.getCityList(iPreviousOwner):
+        if pCity.getNumActiveBuilding(Wonder.KIZIL_KULE.value):
+            for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
                 )
-            for loopCity in utils.getCityList(iNewOwner):
+            for loopCity in cities().owner(iNewOwner).entities():
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
                 )
-        elif pPreviousOwner.countNumBuildings(xml.iKizilKule) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
             pCity.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
             )
-        elif pNewOwner.countNumBuildings(xml.iKizilKule) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
             pCity.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
             )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if pCity.getNumActiveBuilding(xml.iSamogitianAlkas):
-            for loopCity in utils.getCityList(iPreviousOwner):
+        if pCity.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS.value):
+            for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                     CommerceTypes.COMMERCE_RESEARCH,
                     0,
                 )
-            for loopCity in utils.getCityList(iNewOwner):
+            for loopCity in cities().owner(iNewOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                     CommerceTypes.COMMERCE_RESEARCH,
                     2,
                 )
-        elif pPreviousOwner.countNumBuildings(xml.iSamogitianAlkas) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
                 0,
             )
-        elif pNewOwner.countNumBuildings(xml.iSamogitianAlkas) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
@@ -2070,26 +1919,26 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if pCity.getNumActiveBuilding(xml.iMagnaCarta):
-            for loopCity in utils.getCityList(iPreviousOwner):
+        if pCity.getNumActiveBuilding(Wonder.MAGNA_CARTA.value):
+            for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                     CommerceTypes.COMMERCE_CULTURE,
                     0,
                 )
-            for loopCity in utils.getCityList(iNewOwner):
+            for loopCity in cities().owner(iNewOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                     CommerceTypes.COMMERCE_CULTURE,
                     2,
                 )
-        elif pPreviousOwner.countNumBuildings(xml.iMagnaCarta) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
                 0,
             )
-        elif pNewOwner.countNumBuildings(xml.iMagnaCarta) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -2108,81 +1957,51 @@ class CvEventManager:
             if pCity.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = utils.getHumanID()
-            HumanPlayer = gc.getPlayer(iHuman)
-            HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+            HumanTeam = team()
             if ConquerPlayer.isHuman() or (
-                utils.isActive(iHuman)
+                player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
-                iX = pCity.getX()
-                iY = pCity.getY()
                 # Absinthe: collect all wonders, including shrines
-                lAllWonders = []
-                for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-                    lAllWonders.append(iWonder)
+                lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
-                    xml.iCatholicShrine,
-                    xml.iOrthodoxShrine,
-                    xml.iIslamicShrine,
-                    xml.iProtestantShrine,
+                    Building.CATHOLIC_SHRINE.value,
+                    Building.ORTHODOX_SHRINE.value,
+                    Building.ISLAMIC_SHRINE.value,
+                    Building.PROTESTANT_SHRINE.value,
                 ]:
                     lAllWonders.append(iWonder)
                 for iWonder in lAllWonders:
                     if pCity.getNumBuilding(iWonder) > 0:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iBlue),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_1", sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.BLUE,
+                                location=pCity,
                             )
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iCyan),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_2", ConquerName, sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.CYAN,
+                                location=pCity,
                             )
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
-                                iHuman,
-                                False,
-                                con.iDuration,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)
-                                ),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iCyan),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                            message(
+                                human(),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_3", PreviousName, sWonderName),
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.CYAN,
+                                location=pCity,
                             )
         # Absinthe: wonder captured message end
 
@@ -2274,27 +2093,18 @@ class CvEventManager:
         if bVassal:
             # Absinthe: Imperial Diet start
             MasterTeam = gc.getTeam(iMaster)
-            for iPlayer in range(con.iNumPlayers):
+            for iPlayer in civilizations().majors().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 if (
                     pPlayer.getTeam() == iMaster
-                    and pPlayer.countNumBuildings(xml.iImperialDiet) > 0
+                    and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET.value) > 0
                 ):
                     pPlayer.changeGoldenAgeTurns(3)
-                    if utils.getHumanID() == iPlayer:
-                        CyInterface().addMessage(
+                    if human() == iPlayer:
+                        message(
                             iPlayer,
-                            False,
-                            con.iDuration,
-                            CyTranslator().getText("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT", ()),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iLightBlue),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
+                            color=MessageData.LIGHT_BLUE,
                         )
             # Absinthe: Imperial Diet end
             CvUtil.pyPrint("Team %d becomes a Vassal State of Team %d" % (iVassal, iMaster))
@@ -2307,7 +2117,6 @@ class CvEventManager:
         "sample generic event, called on each game turn slice"
         genericArgs = argsList[0][0]  # tuple of tuple of my args
         turnSlice = genericArgs[0]
-        # print ("onGameUpdate test")
 
     def onMouseEvent(self, argsList):
         "mouse handler - returns 1 if the event was consumed"
@@ -2339,29 +2148,20 @@ class CvEventManager:
 
     #################### TRIGGERED EVENTS ##################
 
-    # Rhye - start
-    # Switch Civic
-    # 		elif (pEspionageMissionInfo.getPlayerAnarchyCounter() > 0):
-    # 			utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
-    # 			print ("anti-Whitefire")
-    # Rhye - end
-
     def __eventEditCityNameBegin(self, city, bRename):
         popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
         popup.setUserData((city.getID(), bRename))
-        popup.setHeaderString(localText.getText("TXT_KEY_NAME_CITY", ()))
-        popup.setBodyString(localText.getText("TXT_KEY_SETTLE_NEW_CITY_NAME", ()))
+        popup.setHeaderString(text("TXT_KEY_NAME_CITY"))
+        popup.setBodyString(text("TXT_KEY_SETTLE_NEW_CITY_NAME"))
         # Absinthe: if not a rename, it should offer the CNM name as the default name
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = rfcemaps.tCityMap[city.getOwner()][con.iMapMaxY - 1 - city.getY()][
-                city.getX()
-            ]
+            szName = get_data_from_upside_down_map(CITIES_MAP, city.getOwner(), city)
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:
-                szName = unicode(szName, "latin-1")
+                szName = unicode(szName, "latin-1")  # type: ignore
                 popup.createEditBox(szName)
         # Absinthe: end
         popup.setEditBoxMaxCharCount(15)
@@ -2419,7 +2219,7 @@ class CvEventManager:
         pUnit = argsList
         popup = PyPopup.PyPopup(CvUtil.EventEditUnitName, EventContextTypes.EVENTCONTEXT_ALL)
         popup.setUserData((pUnit.getID(),))
-        popup.setBodyString(localText.getText("TXT_KEY_RENAME_UNIT", ()))
+        popup.setBodyString(text("TXT_KEY_RENAME_UNIT"))
         popup.createEditBox(pUnit.getNameNoDesc())
         popup.launch()
 
@@ -2444,7 +2244,7 @@ class CvEventManager:
     def __eventWBLandmarkPopupBegin(self, argsList):
         CvScreensInterface.getWorldBuilderScreen().setLandmarkCB("")
         # popup = PyPopup.PyPopup(CvUtil.EventWBLandmarkPopup, EventContextTypes.EVENTCONTEXT_ALL)
-        # popup.createEditBox(localText.getText("TXT_KEY_WB_LANDMARK_START", ()))
+        # popup.createEditBox(text("TXT_KEY_WB_LANDMARK_START"))
         # popup.launch()
         return
 
@@ -2457,7 +2257,7 @@ class CvEventManager:
 
     def __eventWBScriptPopupBegin(self, argsList):
         popup = PyPopup.PyPopup(CvUtil.EventWBScriptPopup, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(localText.getText("TXT_KEY_WB_SCRIPT", ()))
+        popup.setHeaderString(text("TXT_KEY_WB_SCRIPT"))
         popup.createEditBox(CvScreensInterface.getWorldBuilderScreen().getCurrentScript())
         popup.launch()
         return

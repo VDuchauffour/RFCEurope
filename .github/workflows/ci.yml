@@ -1,0 +1,51 @@
+# Apply linting and testing
+name: CI Pipeline
+
+on:
+  push:
+    paths:
+      - "Assets/Python/**"
+  pull_request:
+    paths:
+      - "Assets/Python/**"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Run linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install black==21.12b0 click==8.0 ruff==0.0.287
+      - name: Run linting
+        run: |
+          make lint
+  # tests:
+  #   name: Run tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Install Python 2.4
+  #       uses: gabrielfalcao/pyenv-action@v11
+  #       with:
+  #         default: "2.4.1"
+  #         command: |
+  #           pyenv version
+  #     - name: Run tests
+  #       run: |
+  #         export PYTHONPATH=$(./export-paths.sh -l)
+  #         echo $PYTHONPATH | tr ':' '\n'
+  #         make test

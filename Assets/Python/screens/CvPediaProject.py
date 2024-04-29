@@ -10,11 +10,11 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaProject:
@@ -175,11 +175,9 @@ class CvPediaProject:
 
         if isWorldProject(self.iProject):
             iMaxInstances = gc.getProjectInfo(self.iProject).getMaxGlobalInstances()
-            szProjectType = localText.getText("TXT_KEY_PEDIA_WORLD_PROJECT", ())
+            szProjectType = text("TXT_KEY_PEDIA_WORLD_PROJECT")
             if iMaxInstances > 1:
-                szProjectType += " " + localText.getText(
-                    "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
-                )
+                szProjectType += " " + text("TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances)
             screen.appendListBoxString(
                 panelName,
                 u"<font=3>" + szProjectType.upper() + u"</font>",
@@ -192,11 +190,9 @@ class CvPediaProject:
 
         if isTeamProject(self.iProject):
             iMaxInstances = gc.getProjectInfo(self.iProject).getMaxTeamInstances()
-            szProjectType = localText.getText("TXT_KEY_PEDIA_TEAM_PROJECT", ())
+            szProjectType = text("TXT_KEY_PEDIA_TEAM_PROJECT")
             if iMaxInstances > 1:
-                szProjectType += " " + localText.getText(
-                    "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
-                )
+                szProjectType += " " + text("TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances)
             screen.appendListBoxString(
                 panelName,
                 u"<font=3>" + szProjectType.upper() + u"</font>",
@@ -209,20 +205,18 @@ class CvPediaProject:
 
         if projectInfo.getProductionCost() > 0:
             if self.top.iActivePlayer == -1:
-                szCost = localText.getText(
+                szCost = text(
                     "TXT_KEY_PEDIA_COST",
                     (
-                        (
-                            projectInfo.getProductionCost()
-                            * gc.getDefineINT("BUILDING_PRODUCTION_PERCENT")
-                        )
-                        / 100,
-                    ),
+                        projectInfo.getProductionCost()
+                        * gc.getDefineINT("BUILDING_PRODUCTION_PERCENT")
+                    )
+                    / 100,
                 )
             else:
-                szCost = localText.getText(
+                szCost = text(
                     "TXT_KEY_PEDIA_COST",
-                    (gc.getActivePlayer().getProjectProductionNeeded(self.iProject),),
+                    gc.getActivePlayer().getProjectProductionNeeded(self.iProject),
                 )
             screen.appendListBoxString(
                 panelName,
@@ -246,7 +240,7 @@ class CvPediaProject:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -281,7 +275,7 @@ class CvPediaProject:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_EFFECTS", ()),
+            text("TXT_KEY_PEDIA_EFFECTS"),
             "",
             True,
             False,

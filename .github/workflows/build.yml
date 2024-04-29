@@ -14,9 +14,17 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
+      - name: Install build dependencies
+        run: |
+          Invoke-WebRequest http://kael.civfanatics.net/files/VCToolkitSetup.exe -OutFile ${env:TEMP}\VCToolkitSetup.exe
+          & ${env:TEMP}\VCToolkitSetup.exe /s /v"/qb"
+          Start-Sleep -s 120
+          Invoke-WebRequest http://kael.civfanatics.net/files/msvcrt.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcrt.lib"
+          Invoke-WebRequest http://kael.civfanatics.net/files/msvcrtd.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcrtd.lib"
+          Invoke-WebRequest http://kael.civfanatics.net/files/msvcprt.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcprt.lib"
       - name: Build DLL
         run: msbuild CvGameCoreDLL\CvGameCoreDLL.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
       - name: Upload artifact

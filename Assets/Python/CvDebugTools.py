@@ -52,7 +52,6 @@ class CvDebugTools:
         )
 
     def notifyInput(self, argsList):
-        # print("Python Debug Mode Notify")
         return 0
 
     def initEffectViewer(self, argsList):
@@ -231,7 +230,7 @@ class CvDebugTools:
 
         try:
             goldChange = int(popupReturn.getEditBoxString(0))
-        except:
+        except:  # noqa: E722
             return 0
 
         if goldChange:

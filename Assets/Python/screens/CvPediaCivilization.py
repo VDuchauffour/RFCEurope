@@ -14,7 +14,6 @@ import CvScreenEnums
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaCivilization:
@@ -162,7 +161,7 @@ class CvPediaCivilization:
 
         # Rhye - comment
         ##		panelName = self.top.getNextWidgetName()
-        ##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_TECHS", ()), "", False, True,
+        ##		screen.addPanel( panelName, text("TXT_KEY_FREE_TECHS"), "", False, True,
         ##				 self.X_TECH, self.Y_TECH, self.W_TECH, self.H_TECH, PanelStyles.PANEL_STYLE_BLUE50 )
         ##		screen.attachLabel(panelName, "", "  ")
         ##		for iTech in range(gc.getNumTechInfos()):
@@ -195,7 +194,7 @@ class CvPediaCivilization:
         # Rhye - comment
 
     ##		panelName = self.top.getNextWidgetName()
-    ##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_UNITS", ()), "", False, True,
+    ##		screen.addPanel( panelName, text("TXT_KEY_FREE_UNITS"), "", False, True,
     ##				 self.X_UNIT, self.Y_UNIT, self.W_UNIT, self.H_UNIT, PanelStyles.PANEL_STYLE_BLUE50 )
     ##		screen.attachLabel(panelName, "", "  ")
     ##
@@ -211,7 +210,7 @@ class CvPediaCivilization:
         # Rhye - comment
 
     ##		panelName = self.top.getNextWidgetName()
-    ##		screen.addPanel( panelName, localText.getText("TXT_KEY_CONCEPT_LEADERS", ()), "", False, True,
+    ##		screen.addPanel( panelName, text("TXT_KEY_CONCEPT_LEADERS"), "", False, True,
     ##				 self.X_LEADER, self.Y_LEADER, self.W_LEADER, self.H_LEADER, PanelStyles.PANEL_STYLE_BLUE50 )
     ##		screen.attachLabel(panelName, "", "  ")
     ##

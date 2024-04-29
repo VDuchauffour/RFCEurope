@@ -10,11 +10,11 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaUnitChart:
@@ -47,7 +47,7 @@ class CvPediaUnitChart:
 
         # Header...
         if self.iGroup >= gc.getNumUnitCombatInfos():
-            szHeader = localText.getText("TXT_KEY_PEDIA_ALL_UNITS", ())
+            szHeader = text("TXT_KEY_PEDIA_ALL_UNITS")
         else:
             szHeader = gc.getUnitCombatInfo(self.iGroup).getDescription()
         szHeader = u"<font=4b>" + szHeader.upper() + u"</font>"
@@ -174,9 +174,9 @@ class CvPediaUnitChart:
                 or self.iGroup == gc.getNumUnitCombatInfos()
             ):
                 if gc.getUnitInfo(j).getProductionCost() < 0:
-                    szCost = localText.getText("TXT_KEY_NON_APPLICABLE", ())
+                    szCost = text("TXT_KEY_NON_APPLICABLE")
                 else:
-                    szCost = unicode(
+                    szCost = unicode(  # type: ignore
                         gc.getUnitInfo(j).getProductionCost()
                     )  # + u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
                 unitsList[i] = (
@@ -206,7 +206,7 @@ class CvPediaUnitChart:
                 szTable,
                 1,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][0]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][0]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,
@@ -217,7 +217,7 @@ class CvPediaUnitChart:
                 szTable,
                 2,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][1]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][1]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,
@@ -228,7 +228,7 @@ class CvPediaUnitChart:
                 szTable,
                 3,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][2]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][2]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,

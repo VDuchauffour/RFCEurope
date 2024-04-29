@@ -9,13 +9,15 @@
 #
 # No other modules should import this
 #
+from CoreFunctions import message, text
+from CoreStructures import turn
+from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
 
-import Consts as con  # Rhye
+from PyUtils import percentage_chance, rand, choice, random_entry
 
 gc = CyGlobalContext()
-localText = CyTranslator()
 
 
 ######## BLESSED SEA ###########
@@ -30,7 +32,7 @@ def getHelpBlessedSea1(argsList):
     # Rhye
     iOurMinLandmass /= 2
 
-    szHelp = localText.getText("TXT_KEY_EVENT_BLESSED_SEA_HELP", (iOurMinLandmass,))
+    szHelp = text("TXT_KEY_EVENT_BLESSED_SEA_HELP", iOurMinLandmass)
 
     return szHelp
 
@@ -215,13 +217,11 @@ def getHelpHolyMountain1(argsList):
                     iBuilding = i
                     break
 
-        szHelp = localText.getText(
+        szHelp = text(
             "TXT_KEY_EVENT_HOLY_MOUNTAIN_HELP",
-            (
-                gc.getBuildingInfo(iBuilding).getTextKey(),
-                gc.getBuildingInfo(iBuilding).getTextKey(),
-                iMinPoints,
-            ),
+            gc.getBuildingInfo(iBuilding).getTextKey(),
+            gc.getBuildingInfo(iBuilding).getTextKey(),
+            iMinPoints,
         )
 
     return szHelp
@@ -387,9 +387,8 @@ def getHelpWeddingFeud2(argsList):
     kTriggeredData = argsList[1]
     religion = gc.getReligionInfo(kTriggeredData.eReligion)
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_WEDDING_FEUD_2_HELP",
-        (gc.getDefineINT("TEMP_HAPPY"), 30, religion.getChar()),
+    szHelp = text(
+        "TXT_KEY_EVENT_WEDDING_FEUD_2_HELP", gc.getDefineINT("TEMP_HAPPY"), 30, religion.getChar()
     )
 
     return szHelp
@@ -426,20 +425,18 @@ def doWeddingFeud3(argsList):
             popupInfo = CyPopupInfo()
             popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
             popupInfo.setText(
-                localText.getText(
+                text(
                     "TXT_KEY_EVENT_WEDDING_FEUD_OTHER_3",
-                    (
-                        gc.getReligionInfo(kTriggeredData.eReligion).getAdjectiveKey(),
-                        player.getCivilizationShortDescriptionKey(),
-                    ),
+                    gc.getReligionInfo(kTriggeredData.eReligion).getAdjectiveKey(),
+                    player.getCivilizationShortDescriptionKey(),
                 )
             )
             popupInfo.setData1(kTriggeredData.eOtherPlayer)
             popupInfo.setData2(kTriggeredData.ePlayer)
             popupInfo.setPythonModule("CvRandomEventInterface")
             popupInfo.setOnClickedPythonCallback("weddingFeud3Callback")
-            popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_YES", ()), "")
-            popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_NO", ()), "")
+            popupInfo.addPythonButton(text("TXT_KEY_POPUP_YES"), "")
+            popupInfo.addPythonButton(text("TXT_KEY_POPUP_NO"), "")
             popupInfo.addPopup(kTriggeredData.eOtherPlayer)
         else:
             gc.getTeam(destPlayer.getTeam()).declareWar(
@@ -474,7 +471,7 @@ def getHelpWeddingFeud3(argsList):
     kTriggeredData = argsList[1]
     religion = gc.getReligionInfo(kTriggeredData.eReligion)
 
-    szHelp = localText.getText("TXT_KEY_EVENT_WEDDING_FEUD_3_HELP", (1, religion.getChar()))
+    szHelp = text("TXT_KEY_EVENT_WEDDING_FEUD_3_HELP", 1, religion.getChar())
 
     return szHelp
 
@@ -532,8 +529,8 @@ def getHelpSpicy2(argsList):
     iPlantation = CvUtil.findInfoTypeNum(
         gc.getImprovementInfo, gc.getNumImprovementInfos(), "IMPROVEMENT_PLANTATION"
     )
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (gc.getImprovementInfo(iPlantation).getTextKey(),)
+    szHelp = text(
+        "TXT_KEY_EVENT_IMPROVEMENT_GROWTH", gc.getImprovementInfo(iPlantation).getTextKey()
     )
 
     return szHelp
@@ -588,7 +585,7 @@ def getHelpBardTale3(argsList):
 
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
-    szHelp = localText.getText("TXT_KEY_EVENT_GOLD_LOST", (10 * player.getNumCities(),))
+    szHelp = text("TXT_KEY_EVENT_GOLD_LOST", 10 * player.getNumCities())
 
     return szHelp
 
@@ -602,7 +599,7 @@ def getHelpLooters3(argsList):
     otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
     city = otherPlayer.getCity(kTriggeredData.iOtherPlayerCityId)
 
-    szHelp = localText.getText("TXT_KEY_EVENT_LOOTERS_3_HELP", (1, 2, city.getNameKey()))
+    szHelp = text("TXT_KEY_EVENT_LOOTERS_3_HELP", 1, 2, city.getNameKey())
 
     return szHelp
 
@@ -634,7 +631,6 @@ def applyLooters3(argsList):
     otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
     city = otherPlayer.getCity(kTriggeredData.iOtherPlayerCityId)
 
-    iNumBuildings = gc.getGame().getSorenRandNum(2, "Looters event number of buildings destroyed")
     iNumBuildingsDestroyed = 0
 
     listBuildings = []
@@ -647,57 +643,41 @@ def applyLooters3(argsList):
         ):
             listBuildings.append(iBuilding)
 
-    for i in range(iNumBuildings + 1):
-        if len(listBuildings) > 0:
-            iBuilding = listBuildings[
-                gc.getGame().getSorenRandNum(
-                    len(listBuildings), "Looters event building destroyed"
-                )
-            ]
-            szBuffer = localText.getText(
+    for _ in range(rand(2) + 1):
+        if listBuildings:
+            iBuilding = choice(listBuildings)
+            szBuffer = text(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
-                (gc.getBuildingInfo(iBuilding).getTextKey(),),
+                gc.getBuildingInfo(iBuilding).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.eOtherPlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getBuildingInfo(iBuilding).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                city.getX(),
-                city.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getBuildingInfo(iBuilding).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=city,
             )
             city.setNumRealBuilding(iBuilding, 0)
             iNumBuildingsDestroyed += 1
             listBuildings.remove(iBuilding)
 
     if iNumBuildingsDestroyed > 0:
-        szBuffer = localText.getText(
+        szBuffer = text(
             "TXT_KEY_EVENT_NUM_BUILDINGS_DESTROYED",
-            (
-                iNumBuildingsDestroyed,
-                gc.getPlayer(kTriggeredData.eOtherPlayer).getCivilizationAdjectiveKey(),
-                city.getNameKey(),
-            ),
+            iNumBuildingsDestroyed,
+            gc.getPlayer(kTriggeredData.eOtherPlayer).getCivilizationAdjectiveKey(),
+            city.getNameKey(),
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_WHITE"),
-            -1,
-            -1,
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_WHITE"),
         )
 
 
@@ -840,55 +820,37 @@ def applyHurricane1(argsList):
         ):
             listExpensiveBuildings.append(iBuilding)
 
-    if len(listCheapBuildings) > 0:
-        iBuilding = listCheapBuildings[
-            gc.getGame().getSorenRandNum(
-                len(listCheapBuildings), "Hurricane event cheap building destroyed"
-            )
-        ]
-        szBuffer = localText.getText(
-            "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
-            (gc.getBuildingInfo(iBuilding).getTextKey(),),
+    if listCheapBuildings:
+        iBuilding = choice(listCheapBuildings)
+        szBuffer = text(
+            "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", gc.getBuildingInfo(iBuilding).getTextKey()
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            gc.getBuildingInfo(iBuilding).getButton(),
-            gc.getInfoTypeForString("COLOR_RED"),
-            city.getX(),
-            city.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            button=gc.getBuildingInfo(iBuilding).getButton(),
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=city,
         )
         city.setNumRealBuilding(iBuilding, 0)
 
-    if len(listExpensiveBuildings) > 0:
-        iBuilding = listExpensiveBuildings[
-            gc.getGame().getSorenRandNum(
-                len(listExpensiveBuildings), "Hurricane event expensive building destroyed"
-            )
-        ]
-        szBuffer = localText.getText(
-            "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
-            (gc.getBuildingInfo(iBuilding).getTextKey(),),
+    if listExpensiveBuildings:
+        iBuilding = choice(listExpensiveBuildings)
+        szBuffer = text(
+            "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", gc.getBuildingInfo(iBuilding).getTextKey()
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            gc.getBuildingInfo(iBuilding).getButton(),
-            gc.getInfoTypeForString("COLOR_RED"),
-            city.getX(),
-            city.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            button=gc.getBuildingInfo(iBuilding).getButton(),
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=city,
         )
         city.setNumRealBuilding(iBuilding, 0)
 
@@ -980,29 +942,21 @@ def applyTsunami2(argsList):
     # Rhye
     for i in range(2):
         # for i in range(5):
-        if len(listBuildings) > 0:
-            iBuilding = listBuildings[
-                gc.getGame().getSorenRandNum(
-                    len(listBuildings), "Tsunami event building destroyed"
-                )
-            ]
-            szBuffer = localText.getText(
+        if listBuildings:
+            iBuilding = choice(listBuildings)
+            szBuffer = text(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
-                (gc.getBuildingInfo(iBuilding).getTextKey(),),
+                gc.getBuildingInfo(iBuilding).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.ePlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getBuildingInfo(iBuilding).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                city.getX(),
-                city.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getBuildingInfo(iBuilding).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=city,
             )
             city.setNumRealBuilding(iBuilding, 0)
             listBuildings.remove(iBuilding)
@@ -1015,8 +969,8 @@ def getHelpTsunami2(argsList):
     city = player.getCity(kTriggeredData.iCityId)
 
     # Rhye
-    szHelp = localText.getText("TXT_KEY_EVENT_TSUNAMI_2_HELP", (2, city.getNameKey()))
-    # szHelp = localText.getText("TXT_KEY_EVENT_TSUNAMI_2_HELP", (5, city.getNameKey()))
+    szHelp = text("TXT_KEY_EVENT_TSUNAMI_2_HELP", 2, city.getNameKey())
+    # szHelp = text("TXT_KEY_EVENT_TSUNAMI_2_HELP", 5, city.getNameKey())
 
     return szHelp
 
@@ -1058,7 +1012,7 @@ def getHelpVolcano1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
+    szHelp = text("TXT_KEY_EVENT_VOLCANO_1_HELP")
 
     return szHelp
 
@@ -1119,28 +1073,22 @@ def applyVolcano1(argsList):
     )
 
     for i in range(3):
-        if len(listPlots) > 0:
-            plot = listPlots[
-                gc.getGame().getSorenRandNum(len(listPlots), "Volcano event improvement destroyed")
-            ]
+        if listPlots:
+            plot = choice(listPlots)
             iImprovement = plot.getImprovementType()
-            szBuffer = localText.getText(
+            szBuffer = text(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
-                (gc.getImprovementInfo(iImprovement).getTextKey(),),
+                gc.getImprovementInfo(iImprovement).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.ePlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getImprovementInfo(iImprovement).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                plot.getX(),
-                plot.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getImprovementInfo(iImprovement).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=plot,
             )
             if iImprovement in listRuins:
                 plot.setImprovementType(iRuins)
@@ -1148,11 +1096,7 @@ def applyVolcano1(argsList):
                 plot.setImprovementType(-1)
             listPlots.remove(plot)
 
-            if (
-                i == 1
-                and gc.getGame().getSorenRandNum(100, "Volcano event num improvements destroyed")
-                < 50
-            ):
+            if i == 1 and percentage_chance(50, strict=True):
                 break
 
 
@@ -1209,7 +1153,7 @@ def getHelpDustBowl2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_DUSTBOWL_2_HELP", ())
+    szHelp = text("TXT_KEY_EVENT_DUSTBOWL_2_HELP")
 
     return szHelp
 
@@ -1233,7 +1177,7 @@ def getHelpSaltpeter(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_SALTPETER_HELP", (getSaltpeterNumExtraPlots(),))
+    szHelp = text("TXT_KEY_EVENT_SALTPETER_HELP", getSaltpeterNumExtraPlots())
 
     return szHelp
 
@@ -1311,19 +1255,13 @@ def applySaltpeter(argsList):
         gc.getGame().setPlotExtraYield(
             loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
-            localText.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()),
-            "",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_WHITE"),
-            loopPlot[1].getX(),
-            loopPlot[1].getY(),
-            True,
-            True,
+            text("TXT_KEY_EVENT_SALTPETER_DISCOVERED"),
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_WHITE"),
+            location=loopPlot[1],
         )
 
 
@@ -1343,18 +1281,16 @@ def applyGreatDepression(argsList):
             loopPlayer.changeGold(-loopPlayer.getGold() / 4)
 
             if iPlayer != kTriggeredData.ePlayer:
-                szText = localText.getText(
+                szText = text(
                     "TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION",
-                    (
-                        player.getCivilizationAdjectiveKey(),
-                        u"",
-                        u"",
-                        u"",
-                        u"",
-                        corporation.getTextKey(),
-                    ),
+                    player.getCivilizationAdjectiveKey(),
+                    u"",
+                    u"",
+                    u"",
+                    u"",
+                    corporation.getTextKey(),
                 )
-                szText += u"\n\n" + localText.getText("TXT_KEY_EVENT_GREAT_DEPRESSION_HELP", (25,))
+                szText += u"\n\n" + text("TXT_KEY_EVENT_GREAT_DEPRESSION_HELP", 25)
                 popupInfo = CyPopupInfo()
                 popupInfo.setText(szText)
                 popupInfo.addPopup(iPlayer)
@@ -1364,7 +1300,7 @@ def getHelpGreatDepression(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_GREAT_DEPRESSION_HELP", (25,))
+    szHelp = text("TXT_KEY_EVENT_GREAT_DEPRESSION_HELP", 25)
 
     return szHelp
 
@@ -1435,9 +1371,10 @@ def getHelpChampion(argsList):
         gc.getPromotionInfo, gc.getNumPromotionInfos(), "PROMOTION_LEADERSHIP"
     )
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_CHAMPION_HELP",
-        (unit.getNameKey(), gc.getPromotionInfo(iLeadership).getTextKey()),
+        unit.getNameKey(),
+        gc.getPromotionInfo(iLeadership).getTextKey(),
     )
 
     return szHelp
@@ -1510,7 +1447,7 @@ def applyInfluenza2(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
     eventCity = player.getCity(kTriggeredData.iCityId)
 
-    iNumCities = 2 + gc.getGame().getSorenRandNum(3, "Influenza event number of cities")
+    iNumCities = 2 + rand(3)
 
     listCities = []
     (loopCity, iter) = player.firstCity(False)
@@ -1531,20 +1468,15 @@ def applyInfluenza2(argsList):
     for i in range(iNumCities):
         (iDist, loopCity) = listCities[i]
         loopCity.changePopulation(-2)
-        szBuffer = localText.getText("TXT_KEY_EVENT_INFLUENZA_HIT_CITY", (loopCity.getNameKey(),))
-        CyInterface().addMessage(
+        szBuffer = text("TXT_KEY_EVENT_INFLUENZA_HIT_CITY", loopCity.getNameKey())
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_PILLAGE",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_RED"),
-            loopCity.getX(),
-            loopCity.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_PILLAGE",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=loopCity,
         )
 
 
@@ -1552,7 +1484,7 @@ def getHelpInfluenza2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_INFLUENZA_HELP_2", (2,))
+    szHelp = text("TXT_KEY_EVENT_INFLUENZA_HELP_2", 2)
 
     return szHelp
 
@@ -1600,7 +1532,7 @@ def getHelpSoloFlight(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", (1,))
+    szHelp = text("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", 1)
 
     return szHelp
 
@@ -1670,9 +1602,7 @@ def getHelpAntelope2(argsList):
     iCamp = CvUtil.findInfoTypeNum(
         gc.getImprovementInfo, gc.getNumImprovementInfos(), "IMPROVEMENT_CAMP"
     )
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (gc.getImprovementInfo(iCamp).getTextKey(),)
-    )
+    szHelp = text("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", gc.getImprovementInfo(iCamp).getTextKey())
 
     return szHelp
 
@@ -1778,9 +1708,7 @@ def getHelpWiningMonks2(argsList):
     iImp = CvUtil.findInfoTypeNum(
         gc.getImprovementInfo, gc.getNumImprovementInfos(), "IMPROVEMENT_WINERY"
     )
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (gc.getImprovementInfo(iImp).getTextKey(),)
-    )
+    szHelp = text("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", gc.getImprovementInfo(iImp).getTextKey())
 
     return szHelp
 
@@ -1826,9 +1754,11 @@ def getHelpIndependentFilms(argsList):
 
     iBonus = CvUtil.findInfoTypeNum(gc.getBonusInfo, gc.getNumBonusInfos(), "BONUS_MOVIES")
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_INDEPENDENTFILMS_HELP_1",
-        (1, gc.getBonusInfo(iBonus).getChar(), city.getNameKey()),
+        1,
+        gc.getBonusInfo(iBonus).getChar(),
+        city.getNameKey(),
     )
 
     return szHelp
@@ -1891,7 +1821,7 @@ def getHelpAncientOlympics2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_ANCIENTOLYMPICS_HELP_2", (1,))
+    szHelp = text("TXT_KEY_EVENT_ANCIENTOLYMPICS_HELP_2", 1)
 
     return szHelp
 
@@ -1922,7 +1852,7 @@ def getHelpModernOlympics(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", (1,))
+    szHelp = text("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", 1)
 
     return szHelp
 
@@ -1960,14 +1890,12 @@ def getHelpInterstate(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_UNIT_MOVEMENT",
-        (
-            1,
-            gc.getRouteInfo(
-                CvUtil.findInfoTypeNum(gc.getRouteInfo, gc.getNumRouteInfos(), "ROUTE_ROAD")
-            ).getTextKey(),
-        ),
+        1,
+        gc.getRouteInfo(
+            CvUtil.findInfoTypeNum(gc.getRouteInfo, gc.getNumRouteInfos(), "ROUTE_ROAD")
+        ).getTextKey(),
     )
 
     return szHelp
@@ -1991,7 +1919,7 @@ def getHelpEarthDay2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_EARTHDAY_HELP_2", ())
+    szHelp = text("TXT_KEY_EVENT_EARTHDAY_HELP_2")
 
     return szHelp
 
@@ -2067,7 +1995,7 @@ def getHelpFreedomConcert2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_FREEDOMCONCERT_HELP_2", ())
+    szHelp = text("TXT_KEY_EVENT_FREEDOMCONCERT_HELP_2")
 
     return szHelp
 
@@ -2159,16 +2087,14 @@ def doHeroicGesture2(argsList):
         popupInfo = CyPopupInfo()
         popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
         popupInfo.setText(
-            localText.getText(
-                "TXT_KEY_EVENT_HEROIC_GESTURE_OTHER_3", (player.getCivilizationAdjectiveKey(),)
-            )
+            text("TXT_KEY_EVENT_HEROIC_GESTURE_OTHER_3", player.getCivilizationAdjectiveKey())
         )
         popupInfo.setData1(kTriggeredData.eOtherPlayer)
         popupInfo.setData2(kTriggeredData.ePlayer)
         popupInfo.setPythonModule("CvRandomEventInterface")
         popupInfo.setOnClickedPythonCallback("heroicGesture2Callback")
-        popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_YES", ()), "")
-        popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_NO", ()), "")
+        popupInfo.addPythonButton(text("TXT_KEY_POPUP_YES"), "")
+        popupInfo.addPythonButton(text("TXT_KEY_POPUP_NO"), "")
         popupInfo.addPopup(kTriggeredData.eOtherPlayer)
     else:
         destPlayer.forcePeace(kTriggeredData.ePlayer)
@@ -2204,7 +2130,7 @@ def getHelpHeroicGesture2(argsList):
     destPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
 
     # Get help text
-    szHelp = localText.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()))
+    szHelp = text("TXT_KEY_EVENT_ATTITUDE_GOOD", 1, destPlayer.getNameKey())
 
     return szHelp
 
@@ -2225,20 +2151,20 @@ def canTriggerGreatMediator(argsList):
         return False
 
     # Rhye - start
-    if (
-        player.getID() == con.iIndependent
-        or player.getID() == con.iIndependent2
-        or player.getID() == con.iIndependent3
-        or player.getID() == con.iIndependent4
-    ):
+    if player.getID() in [
+        Civ.INDEPENDENT.value,
+        Civ.INDEPENDENT_2.value,
+        Civ.INDEPENDENT_3.value,
+        Civ.INDEPENDENT_4.value,
+    ]:
         return False
 
-    if (
-        destPlayer.getID() == con.iIndependent
-        or destPlayer.getID() == con.iIndependent2
-        or destPlayer.getID() == con.iIndependent3
-        or destPlayer.getID() == con.iIndependent4
-    ):
+    if destPlayer.getID() in [
+        Civ.INDEPENDENT.value,
+        Civ.INDEPENDENT_2.value,
+        Civ.INDEPENDENT_3.value,
+        Civ.INDEPENDENT_4.value,
+    ]:
         return False
     # Rhye - end
 
@@ -2257,16 +2183,14 @@ def doGreatMediator2(argsList):
         popupInfo = CyPopupInfo()
         popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
         popupInfo.setText(
-            localText.getText(
-                "TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3", (player.getCivilizationAdjectiveKey(),)
-            )
+            text("TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3", player.getCivilizationAdjectiveKey())
         )
         popupInfo.setData1(kTriggeredData.eOtherPlayer)
         popupInfo.setData2(kTriggeredData.ePlayer)
         popupInfo.setPythonModule("CvRandomEventInterface")
         popupInfo.setOnClickedPythonCallback("greatMediator2Callback")
-        popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_YES", ()), "")
-        popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_NO", ()), "")
+        popupInfo.addPythonButton(text("TXT_KEY_POPUP_YES"), "")
+        popupInfo.addPythonButton(text("TXT_KEY_POPUP_NO"), "")
         popupInfo.addPopup(kTriggeredData.eOtherPlayer)
     else:
         gc.getTeam(player.getTeam()).makePeace(destPlayer.getTeam())
@@ -2302,7 +2226,7 @@ def getHelpGreatMediator2(argsList):
     destPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
 
     # Get help text
-    szHelp = localText.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()))
+    szHelp = text("TXT_KEY_EVENT_ATTITUDE_GOOD", 1, destPlayer.getNameKey())
 
     return szHelp
 
@@ -2328,7 +2252,7 @@ def getHelpAncientTexts2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", (1,))
+    szHelp = text("TXT_KEY_EVENT_SOLO_FLIGHT_HELP_1", 1)
 
     return szHelp
 
@@ -2375,9 +2299,7 @@ def getHelpImpactCrater2(argsList):
     iMine = CvUtil.findInfoTypeNum(
         gc.getImprovementInfo, gc.getNumImprovementInfos(), "IMPROVEMENT_MINE"
     )
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (gc.getImprovementInfo(iMine).getTextKey(),)
-    )
+    szHelp = text("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", gc.getImprovementInfo(iMine).getTextKey())
 
     return szHelp
 
@@ -2462,7 +2384,7 @@ def getHelpTheHuns1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_THE_HUNS_HELP_1", ())
+    szHelp = text("TXT_KEY_EVENT_THE_HUNS_HELP_1")
 
     return szHelp
 
@@ -2485,12 +2407,10 @@ def applyTheHuns1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Hun event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2608,7 +2528,7 @@ def getHelpTheVandals1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_THE_VANDALS_HELP_1", ())
+    szHelp = text("TXT_KEY_EVENT_THE_VANDALS_HELP_1")
 
     return szHelp
 
@@ -2631,12 +2551,10 @@ def applyTheVandals1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Vandal event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2754,7 +2672,7 @@ def getHelpThGoths1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_THE_GOTHS_HELP_1", ())
+    szHelp = text("TXT_KEY_EVENT_THE_GOTHS_HELP_1")
 
     return szHelp
 
@@ -2777,12 +2695,10 @@ def applyTheGoths1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Goth event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2900,7 +2816,7 @@ def getHelpThePhilistines1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_THE_PHILISTINES_HELP_1", ())
+    szHelp = text("TXT_KEY_EVENT_THE_PHILISTINES_HELP_1")
 
     return szHelp
 
@@ -2923,12 +2839,10 @@ def applyThePhilistines1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Philistine event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3046,7 +2960,7 @@ def getHelpTheVedicAryans1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_THE_VEDIC_ARYANS_HELP_1", ())
+    szHelp = text("TXT_KEY_EVENT_THE_VEDIC_ARYANS_HELP_1")
 
     return szHelp
 
@@ -3071,12 +2985,10 @@ def applyTheVedicAryans1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Vedic Aryan event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3198,7 +3110,7 @@ def getHelpHorseWhispering1(argsList):
     # Rhye
     iNumStables /= 2
     iNumStables += 1
-    szHelp = localText.getText("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", (iNumStables,))
+    szHelp = text("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", iNumStables)
 
     return szHelp
 
@@ -3232,7 +3144,7 @@ def getHelpHorseWhisperingDone1(argsList):
     # Rhye
     iNumUnits /= 2
     iNumUnits += 1
-    szHelp = localText.getText("TXT_KEY_EVENT_HORSE_WHISPERING_DONE_HELP_1", (iNumUnits,))
+    szHelp = text("TXT_KEY_EVENT_HORSE_WHISPERING_DONE_HELP_1", iNumUnits)
 
     return szHelp
 
@@ -3276,9 +3188,7 @@ def getHelpHarbormaster1(argsList):
     iHarborsRequired += 2
     iCaravelsRequired = iHarborsRequired / 2 + 1
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_HARBORMASTER_HELP", (iHarborsRequired, iCaravelsRequired)
-    )
+    szHelp = text("TXT_KEY_EVENT_HARBORMASTER_HELP", iHarborsRequired, iCaravelsRequired)
 
     return szHelp
 
@@ -3359,7 +3269,7 @@ def getHelpClassicLiterature1(argsList):
     iLibrariesRequired /= 2
     iLibrariesRequired += 2
 
-    szHelp = localText.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", (iLibrariesRequired,))
+    szHelp = text("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", iLibrariesRequired)
 
     return szHelp
 
@@ -3386,7 +3296,7 @@ def getHelpClassicLiteratureDone2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_DONE_HELP_2", ())
+    szHelp = text("TXT_KEY_EVENT_CLASSIC_LITERATURE_DONE_HELP_2")
 
     return szHelp
 
@@ -3417,10 +3327,8 @@ def applyClassicLiteratureDone2(argsList):
         if gc.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
             listTechs.append(iTech)
 
-    if len(listTechs) > 0:
-        iTech = listTechs[
-            gc.getGame().getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")
-        ]
+    if listTechs:
+        iTech = choice(listTechs)
         gc.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 
@@ -3430,9 +3338,7 @@ def getHelpClassicLiteratureDone3(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     iSpecialist = CvUtil.findInfoTypeNum(
-        gc.getSpecialistInfo,
-        gc.getNumSpecialistInfos(),
-        "SPECIALIST_SCIENTIST",
+        gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_SCIENTIST"
     )
     iGreatLibrary = CvUtil.findInfoTypeNum(
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_GREAT_LIBRARY"
@@ -3447,9 +3353,11 @@ def getHelpClassicLiteratureDone3(argsList):
 
         (loopCity, iter) = player.nextCity(iter, False)
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_FREE_SPECIALIST",
-        (1, gc.getSpecialistInfo(iSpecialist).getTextKey(), szCityName),
+        1,
+        gc.getSpecialistInfo(iSpecialist).getTextKey(),
+        szCityName,
     )
 
     return szHelp
@@ -3480,9 +3388,7 @@ def applyClassicLiteratureDone3(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     iSpecialist = CvUtil.findInfoTypeNum(
-        gc.getSpecialistInfo,
-        gc.getNumSpecialistInfos(),
-        "SPECIALIST_SCIENTIST",
+        gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_SCIENTIST"
     )
     iGreatLibrary = CvUtil.findInfoTypeNum(
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_GREAT_LIBRARY"
@@ -3522,9 +3428,10 @@ def getHelpMasterBlacksmith1(argsList):
     iRequired /= 2
     iRequired += 2
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1",
-        (iRequired, player.getCity(kTriggeredData.iCityId).getNameKey()),
+        iRequired,
+        player.getCity(kTriggeredData.iCityId).getNameKey(),
     )
 
     return szHelp
@@ -3611,23 +3518,20 @@ def applyMasterBlacksmithDone1(argsList):
     iBonus = CvUtil.findInfoTypeNum(gc.getBonusInfo, gc.getNumBonusInfos(), "BONUS_COPPER")
     plot.setBonusType(iBonus)
 
-    szBuffer = localText.getText(
+    szBuffer = text(
         "TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
-        (gc.getBonusInfo(iBonus).getTextKey(), city.getNameKey()),
+        gc.getBonusInfo(iBonus).getTextKey(),
+        city.getNameKey(),
     )
-    CyInterface().addMessage(
+    message(
         kTriggeredData.ePlayer,
-        False,
-        gc.getEVENT_MESSAGE_TIME(),
         szBuffer,
-        "AS2D_DISCOVERBONUS",
-        InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-        gc.getBonusInfo(iBonus).getButton(),
-        gc.getInfoTypeForString("COLOR_WHITE"),
-        plot.getX(),
-        plot.getY(),
-        True,
-        True,
+        duration=gc.getEVENT_MESSAGE_TIME(),
+        sound="AS2D_DISCOVERBONUS",
+        event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+        button=gc.getBonusInfo(iBonus).getButton(),
+        color=gc.getInfoTypeForString("COLOR_WHITE"),
+        location=plot,
     )
 
 
@@ -3667,7 +3571,7 @@ def getHelpBestDefense1(argsList):
     iRequired /= 2
     iRequired += 1
 
-    szHelp = localText.getText("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", (iRequired,))
+    szHelp = text("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", iRequired)
 
     return szHelp
 
@@ -3694,7 +3598,7 @@ def getHelpBestDefenseDone2(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_BEST_DEFENSE_DONE_HELP_2", (3,))
+    szHelp = text("TXT_KEY_EVENT_BEST_DEFENSE_DONE_HELP_2", 3)
 
     return szHelp
 
@@ -3758,9 +3662,8 @@ def getHelpSportsLeague1(argsList):
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_STATUE_OF_ZEUS"
     )
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_SPORTS_LEAGUE_HELP_1",
-        (iRequired, gc.getBuildingInfo(iBuilding).getTextKey()),
+    szHelp = text(
+        "TXT_KEY_EVENT_SPORTS_LEAGUE_HELP_1", iRequired, gc.getBuildingInfo(iBuilding).getTextKey()
     )
 
     return szHelp
@@ -3836,7 +3739,7 @@ def getHelpCrusade1(argsList):
 
     holyCity = gc.getGame().getHolyCity(kTriggeredData.eReligion)
 
-    szHelp = localText.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(),))
+    szHelp = text("TXT_KEY_EVENT_CRUSADE_HELP_1", holyCity.getNameKey())
 
     return szHelp
 
@@ -3894,9 +3797,7 @@ def getHelpCrusadeDone1(argsList):
     holyCity = gc.getGame().getHolyCity(kTriggeredData.eReligion)
     szUnit = gc.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
     iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey())
-    )
+    szHelp = text("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", iNumUnits, szUnit, holyCity.getNameKey())
 
     return szHelp
 
@@ -3938,9 +3839,10 @@ def getHelpCrusadeDone2(argsList):
 
     holyCity = gc.getGame().getHolyCity(kTriggeredData.eReligion)
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_CRUSADE_DONE_HELP_2",
-        (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), holyCity.getNameKey()),
+        gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(),
+        holyCity.getNameKey(),
     )
 
     return szHelp
@@ -3985,9 +3887,10 @@ def getHelpCrusadeDone3(argsList):
     iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers()
     holyCity = gc.getGame().getHolyCity(kTriggeredData.eReligion)
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_CRUSADE_DONE_HELP_3",
-        (gc.getReligionInfo(kTriggeredData.eReligion).getTextKey(), iNumCities),
+        gc.getReligionInfo(kTriggeredData.eReligion).getTextKey(),
+        iNumCities,
     )
 
     return szHelp
@@ -4060,9 +3963,10 @@ def getHelpSecretKnowledge2(argsList):
     kTriggeredData = argsList[1]
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_YIELD_CHANGE_BUILDING",
-        (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), u"+4[ICON_CULTURE]"),
+        gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(),
+        u"+4[ICON_CULTURE]",
     )
 
     return szHelp
@@ -4139,7 +4043,7 @@ def getHelpPartisans1(argsList):
         iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
         szUnit = gc.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
-        szHelp = localText.getText("TXT_KEY_EVENT_PARTISANS_HELP_1", (iNumUnits, szUnit))
+        szHelp = text("TXT_KEY_EVENT_PARTISANS_HELP_1", iNumUnits, szUnit)
 
     return szHelp
 
@@ -4193,13 +4097,13 @@ def applyPartisans1(argsList):
                     ):
                         listPlots.append(loopPlot)
 
-        if len(listPlots) > 0:
+        if listPlots:
             for i in range(iNumUnits):
-                iPlot = gc.getGame().getSorenRandNum(len(listPlots), "Partisan event placement")
+                iPlot = choice(listPlots)
                 player.initUnit(
                     capital.getConscriptUnit(),
-                    listPlots[iPlot].getX(),
-                    listPlots[iPlot].getY(),
+                    iPlot.getX(),
+                    iPlot.getY(),
                     UnitAITypes.UNITAI_ATTACK,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
@@ -4216,9 +4120,7 @@ def getHelpPartisans2(argsList):
         iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
         szUnit = gc.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
-        szHelp = localText.getText(
-            "TXT_KEY_EVENT_PARTISANS_HELP_2", (iNumUnits, szUnit, capital.getNameKey())
-        )
+        szHelp = text("TXT_KEY_EVENT_PARTISANS_HELP_2", iNumUnits, szUnit, capital.getNameKey())
 
     return szHelp
 
@@ -4297,16 +4199,17 @@ def canTriggerGreed(argsList):
     if not bFound:
         return False
 
-    plot = listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Greed event plot selection")]
+    plot = random_entry(listPlots)
 
-    if -1 == getGreedUnit(player, plot):
+    if getGreedUnit(player, plot) == -1:
         return False
 
-    kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-    kActualTriggeredDataObject.iPlotX = plot.getX()
-    kActualTriggeredDataObject.iPlotY = plot.getY()
+    if plot is not None:
+        kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
+        kActualTriggeredDataObject.iPlotX = plot.getX()
+        kActualTriggeredDataObject.iPlotY = plot.getY()
 
-    return True
+        return True
 
 
 def getHelpGreed1(argsList):
@@ -4322,13 +4225,11 @@ def getHelpGreed1(argsList):
 
     iTurns = gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getGrowthPercent()
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_GREED_HELP_1",
-        (
-            otherPlayer.getCivilizationShortDescriptionKey(),
-            gc.getBonusInfo(iBonus).getTextKey(),
-            iTurns,
-        ),
+        otherPlayer.getCivilizationShortDescriptionKey(),
+        gc.getBonusInfo(iBonus).getTextKey(),
+        iTurns,
     )
 
     return szHelp
@@ -4345,7 +4246,7 @@ def expireGreed1(argsList):
         return False
 
     if (
-        gc.getGame().getGameTurn()
+        turn()
         >= kTriggeredData.iTurn
         + gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getGrowthPercent()
     ):
@@ -4416,8 +4317,8 @@ def getHelpGreedDone1(argsList):
     iUnitType = getGreedUnit(player, plot)
 
     if iUnitType != -1:
-        szHelp = localText.getText(
-            "TXT_KEY_EVENT_GREED_DONE_HELP_1", (iNumUnits, gc.getUnitInfo(iUnitType).getTextKey())
+        szHelp = text(
+            "TXT_KEY_EVENT_GREED_DONE_HELP_1", iNumUnits, gc.getUnitInfo(iUnitType).getTextKey()
         )
 
     return szHelp
@@ -4461,7 +4362,7 @@ def getHelpWarChariots1(argsList):
     kTriggeredData = argsList[1]
 
     iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() + 1
-    szHelp = localText.getText("TXT_KEY_EVENT_WAR_CHARIOTS_HELP_1", (iNumUnits,))
+    szHelp = text("TXT_KEY_EVENT_WAR_CHARIOTS_HELP_1", iNumUnits)
 
     return szHelp
 
@@ -4493,7 +4394,7 @@ def getHelpEliteSwords1(argsList):
     kTriggeredData = argsList[1]
 
     iNumUnits = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() + 1
-    szHelp = localText.getText("TXT_KEY_EVENT_ELITE_SWORDS_HELP_1", (iNumUnits,))
+    szHelp = text("TXT_KEY_EVENT_ELITE_SWORDS_HELP_1", iNumUnits)
 
     return szHelp
 
@@ -4557,8 +4458,8 @@ def getHelpWarships1(argsList):
     iBuilding = CvUtil.findInfoTypeNum(
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_GREAT_LIGHTHOUSE"
     )
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_WARSHIPS_HELP_1", (iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey())
+    szHelp = text(
+        "TXT_KEY_EVENT_WARSHIPS_HELP_1", iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey()
     )
 
     return szHelp
@@ -4605,8 +4506,8 @@ def getHelpGunsButter1(argsList):
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_TAJ_MAHAL"
     )
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_GUNS_BUTTER_HELP_1", (iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey())
+    szHelp = text(
+        "TXT_KEY_EVENT_GUNS_BUTTER_HELP_1", iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey()
     )
 
     return szHelp
@@ -4676,9 +4577,8 @@ def getHelpNobleKnights1(argsList):
         gc.getBuildingInfo, gc.getNumBuildingInfos(), "BUILDING_ORACLE"
     )
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1",
-        (iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey()),
+    szHelp = text(
+        "TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1", iNumUnits, gc.getBuildingInfo(iBuilding).getTextKey()
     )
 
     return szHelp
@@ -4771,19 +4671,17 @@ def getHelpOverwhelm1(argsList):
         gc.getProjectInfo, gc.getNumProjectInfos(), "PROJECT_MANHATTAN_PROJECT"
     )
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_OVERWHELM_HELP_1",
-        (
-            iNumDestroyers,
-            gc.getUnitInfo(iDestroyer).getTextKey(),
-            iNumBattleships,
-            gc.getUnitInfo(iBattleship).getTextKey(),
-            iNumCarriers,
-            gc.getUnitInfo(iCarrier).getTextKey(),
-            iNumFighters,
-            gc.getSpecialUnitInfo(iFighter).getTextKey(),
-            gc.getProjectInfo(iProject).getTextKey(),
-        ),
+        iNumDestroyers,
+        gc.getUnitInfo(iDestroyer).getTextKey(),
+        iNumBattleships,
+        gc.getUnitInfo(iBattleship).getTextKey(),
+        iNumCarriers,
+        gc.getUnitInfo(iCarrier).getTextKey(),
+        iNumFighters,
+        gc.getSpecialUnitInfo(iFighter).getTextKey(),
+        gc.getProjectInfo(iProject).getTextKey(),
     )
 
     return szHelp
@@ -4835,7 +4733,7 @@ def getHelpOverwhelmDone3(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText("TXT_KEY_EVENT_OVERWHELM_DONE_HELP_3", ())
+    szHelp = text("TXT_KEY_EVENT_OVERWHELM_DONE_HELP_3")
 
     return szHelp
 
@@ -4912,9 +4810,10 @@ def getHelpCorporateExpansion1(argsList):
 
     iNumCities = gc.getWorldInfo(gc.getMap().getWorldSize()).getDefaultPlayers() + 1
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_CORPORATE_EXPANSION_HELP_1",
-        (gc.getCorporationInfo(kTriggeredData.eCorporation).getTextKey(), iNumCities),
+        gc.getCorporationInfo(kTriggeredData.eCorporation).getTextKey(),
+        iNumCities,
     )
 
     return szHelp
@@ -4949,9 +4848,10 @@ def getHelpCorporateExpansionDone1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_YIELD_CHANGE_BUILDING",
-        (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), u"+10[ICON_GOLD]"),
+        gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(),
+        u"+10[ICON_GOLD]",
     )
 
     return szHelp
@@ -5065,9 +4965,7 @@ def getHelpHostileTakeover1(argsList):
             + u"[COLOR_REVERT]"
         )
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_HOSTILE_TAKEOVER_HELP_1", (len(listResources), szList)
-    )
+    szHelp = text("TXT_KEY_EVENT_HOSTILE_TAKEOVER_HELP_1", len(listResources), szList)
 
     return szHelp
 
@@ -5099,9 +4997,10 @@ def getHelpHostileTakeoverDone1(argsList):
     iEvent = argsList[0]
     kTriggeredData = argsList[1]
 
-    szHelp = localText.getText(
+    szHelp = text(
         "TXT_KEY_EVENT_YIELD_CHANGE_BUILDING",
-        (gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), u"+20[ICON_GOLD]"),
+        gc.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(),
+        u"+20[ICON_GOLD]",
     )
 
     return szHelp
@@ -5140,8 +5039,8 @@ def getHelpGreatBeast3(argsList):
     kTriggeredData = argsList[1]
     religion = gc.getReligionInfo(kTriggeredData.eReligion)
 
-    szHelp = localText.getText(
-        "TXT_KEY_EVENT_GREAT_BEAST_3_HELP", (gc.getDefineINT("TEMP_HAPPY"), 40, religion.getChar())
+    szHelp = text(
+        "TXT_KEY_EVENT_GREAT_BEAST_3_HELP", gc.getDefineINT("TEMP_HAPPY"), 40, religion.getChar()
     )
 
     return szHelp
@@ -5248,7 +5147,7 @@ def getHelpSpyDiscovered3(argsList):
     kTriggeredData = argsList[1]
     player = gc.getPlayer(kTriggeredData.ePlayer)
     iNumUnits = player.getNumCities() / 4
-    szHelp = localText.getText("TXT_KEY_EVENT_SPY_DISCOVERED_3_HELP", (iNumUnits,))
+    szHelp = text("TXT_KEY_EVENT_SPY_DISCOVERED_3_HELP", iNumUnits)
 
     return szHelp
 
@@ -5294,7 +5193,7 @@ def doNuclearProtest1(argsList):
 
 
 def getHelpNuclearProtest1(argsList):
-    szHelp = localText.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
+    szHelp = text("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP")
     return szHelp
 
 

@@ -8,14 +8,14 @@
 
 
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
-import XMLConsts as xml
+from CoreTypes import Improvement
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaImprovement:
@@ -187,7 +187,7 @@ class CvPediaImprovement:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ()),
+            text("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT"),
             "",
             True,
             True,
@@ -226,9 +226,11 @@ class CvPediaImprovement:
         for k in range(YieldTypes.NUM_YIELD_TYPES):
             iYieldChange = gc.getImprovementInfo(self.iImprovement).getIrrigatedYieldChange(k)
             if iYieldChange != 0:
-                szYield = localText.getText(
+                szYield = text(
                     "TXT_KEY_PEDIA_IRRIGATED_YIELD",
-                    (gc.getYieldInfo(k).getTextKey(), iYieldChange, gc.getYieldInfo(k).getChar()),
+                    gc.getYieldInfo(k).getTextKey(),
+                    iYieldChange,
+                    gc.getYieldInfo(k).getChar(),
                 )
                 screen.appendListBoxString(
                     listName, szYield, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY
@@ -237,9 +239,11 @@ class CvPediaImprovement:
         for k in range(YieldTypes.NUM_YIELD_TYPES):
             iYieldChange = gc.getImprovementInfo(self.iImprovement).getHillsYieldChange(k)
             if iYieldChange != 0:
-                szYield = localText.getText(
+                szYield = text(
                     "TXT_KEY_PEDIA_HILLS_YIELD",
-                    (gc.getYieldInfo(k).getTextKey(), iYieldChange, gc.getYieldInfo(k).getChar()),
+                    gc.getYieldInfo(k).getTextKey(),
+                    iYieldChange,
+                    gc.getYieldInfo(k).getChar(),
                 )
                 screen.appendListBoxString(
                     listName, szYield, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY
@@ -249,9 +253,11 @@ class CvPediaImprovement:
             szYield = u""
             iYieldChange = gc.getImprovementInfo(self.iImprovement).getRiverSideYieldChange(k)
             if iYieldChange != 0:
-                szYield = localText.getText(
+                szYield = text(
                     "TXT_KEY_PEDIA_RIVER_YIELD",
-                    (gc.getYieldInfo(k).getTextKey(), iYieldChange, gc.getYieldInfo(k).getChar()),
+                    gc.getYieldInfo(k).getTextKey(),
+                    iYieldChange,
+                    gc.getYieldInfo(k).getChar(),
                 )
                 screen.appendListBoxString(
                     listName, szYield, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY
@@ -264,14 +270,12 @@ class CvPediaImprovement:
                     iTech, k
                 )
                 if iYieldChange != 0:
-                    szYield = localText.getText(
+                    szYield = text(
                         "TXT_KEY_PEDIA_TECH_YIELD",
-                        (
-                            gc.getYieldInfo(k).getTextKey(),
-                            iYieldChange,
-                            gc.getYieldInfo(k).getChar(),
-                            gc.getTechInfo(iTech).getDescription(),
-                        ),
+                        gc.getYieldInfo(k).getTextKey(),
+                        iYieldChange,
+                        gc.getYieldInfo(k).getChar(),
+                        gc.getTechInfo(iTech).getDescription(),
                     )
                     screen.appendListBoxString(
                         listName,
@@ -289,14 +293,12 @@ class CvPediaImprovement:
                     self.iImprovement, k
                 )
                 if iYieldChange != 0:
-                    szYield = localText.getText(
+                    szYield = text(
                         "TXT_KEY_PEDIA_TECH_YIELD",
-                        (
-                            gc.getYieldInfo(k).getTextKey(),
-                            iYieldChange,
-                            gc.getYieldInfo(k).getChar(),
-                            gc.getCivicInfo(iCivic).getDescription(),
-                        ),
+                        gc.getYieldInfo(k).getTextKey(),
+                        iYieldChange,
+                        gc.getYieldInfo(k).getChar(),
+                        gc.getCivicInfo(iCivic).getDescription(),
                     )
                     screen.appendListBoxString(
                         listName,
@@ -313,7 +315,7 @@ class CvPediaImprovement:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_BONUS_YIELDS", ()),
+            text("TXT_KEY_PEDIA_BONUS_YIELDS"),
             "",
             True,
             True,
@@ -370,7 +372,7 @@ class CvPediaImprovement:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -404,7 +406,7 @@ class CvPediaImprovement:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_EFFECTS", ()),
+            text("TXT_KEY_PEDIA_EFFECTS"),
             "",
             True,
             False,
@@ -443,8 +445,8 @@ class CvPediaImprovement:
         for iImprovement in range(gc.getNumImprovementInfos()):
             # Absinthe: Unused improvements do not appear in the Civilopedia.
             if (
-                iImprovement != xml.iImprovementGoodyHut
-                and iImprovement != xml.iImprovementForestPreserve
+                iImprovement != Improvement.GOODY_HUT.value
+                and iImprovement != Improvement.FOREST_PRESERVE.value
             ):
                 improvementList.append(iImprovement)
                 iCount += 1

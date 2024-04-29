@@ -1,11 +1,13 @@
 [tool.black]
 line-length = 99
+skip_magic_trailing_comma = true
 target-version = ["py27"]
-extend-exclude = """
-Assets/Python/constants/RFCEMaps.py
+force-exclude = """
+Assets/Python/data/maps/
 """
 
 [tool.ruff]
+line-length = 99
 select = [
   # pycodestyle
   "E",
@@ -15,18 +17,23 @@ select = [
 ignore = [
   "E501",
   "F841", # unused variables are okay
+  "F402", # shadowing an import with loop variables is okay
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
-extend-exclude = ["Docs/Tools/*.py"]
+extend-exclude = ["Docs/Tools/*.py", "Assets/Python/data/maps/*.py"]
 target-version = "py37"
 
 [tool.pyright]
 executionEnvironments = [
-  { pythonVersion = "2.4", root = "Assets/Python", extraPaths = [
+  { root = "Assets/Python", extraPaths = [
     # Folders of the project
     "Assets/Python/",
+    "Assets/Python/data",
+    "Assets/Python/data/maps",
+    "Assets/Python/utils",
     "Assets/Python/models",
+    "Assets/Python/components",
     "Assets/Python/EntryPoints",
     "Assets/Python/pyWB",
     "Assets/Python/screens",
@@ -38,8 +45,18 @@ executionEnvironments = [
     "../../Assets/Python/pyUnit",
     "../../Assets/Python/pyHelper",
     "../../Assets/Python/PitBoss",
+    # Folders from Sid Meier's Civilization IV Beyond the Sword/Assets/Python
+    "../../../Assets/Python/pyHelper",
   ] },
 ]
 stubPath = "Assets/Python/.stubs"
 reportMissingModuleSource = false
+reportGeneralTypeIssues = false
+reportMissingImports = false
 typeCheckingMode = "off"
+exclude = [
+  "Assets/Python/EntryPoints/CvScreensInterface.py",
+  "Assets/Python/screens/CvWorldBuilderScreen.py",
+  "Assets/Python/pyWB/CvWBDesc.py",
+  "Assets/Python/PyHelpers.py",
+]

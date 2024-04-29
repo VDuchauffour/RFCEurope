@@ -1,14 +1,13 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import colortext, text
 import CvUtil
 import CvScreenEnums
 import math
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 # this class is shared by both the resource and technology foreign advisors
 FOREIGN_BONUS_SCREEN = 0
@@ -86,13 +85,9 @@ class CvForeignAdvisor:
             else:
                 iScreen = self.iScreen
 
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + u"</font>"
         self.SCREEN_TITLE = (
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_FOREIGN_ADVISOR_TITLE", ()).upper()
-            + u"</font>"
+            u"<font=4b>" + text("TXT_KEY_FOREIGN_ADVISOR_TITLE").upper() + u"</font>"
         )
 
         if self.iScreen != iScreen:
@@ -233,9 +228,7 @@ class CvForeignAdvisor:
             screen.setText(
                 szRelationsId,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_RELATIONS", ()).upper()
-                + u"</font>",
+                u"<font=4>" + text("TXT_KEY_FOREIGN_ADVISOR_RELATIONS").upper() + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -250,11 +243,7 @@ class CvForeignAdvisor:
                 szRelationsId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_RELATIONS",
-                    (),
-                    gc.getInfoTypeForString("COLOR_YELLOW"),
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_RELATIONS", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -272,9 +261,7 @@ class CvForeignAdvisor:
             screen.setText(
                 szBonusId,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_RESOURCES", ()).upper()
-                + u"</font>",
+                u"<font=4>" + text("TXT_KEY_FOREIGN_ADVISOR_RESOURCES").upper() + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -289,11 +276,7 @@ class CvForeignAdvisor:
                 szBonusId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_RESOURCES",
-                    (),
-                    gc.getInfoTypeForString("COLOR_YELLOW"),
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_RESOURCES", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -311,9 +294,7 @@ class CvForeignAdvisor:
             screen.setText(
                 szTechId,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_TECHS", ()).upper()
-                + u"</font>",
+                u"<font=4>" + text("TXT_KEY_FOREIGN_ADVISOR_TECHS").upper() + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -328,9 +309,7 @@ class CvForeignAdvisor:
                 szTechId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_TECHS", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_TECHS", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -348,9 +327,7 @@ class CvForeignAdvisor:
             screen.setText(
                 szActiveId,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_ACTIVE", ()).upper()
-                + u"</font>",
+                u"<font=4>" + text("TXT_KEY_FOREIGN_ADVISOR_ACTIVE").upper() + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -365,9 +342,7 @@ class CvForeignAdvisor:
                 szActiveId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_ACTIVE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_ACTIVE", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -533,13 +508,11 @@ class CvForeignAdvisor:
             or gc.getTeam(playerSelected.getTeam()).isGoldTrading()
         ):
             if self.iScreen == FOREIGN_BONUS_SCREEN:
-                szPlayerName += u" : " + localText.getText(
-                    "TXT_KEY_MISC_GOLD_PER_TURN", (playerActive.calculateGoldRate(),)
+                szPlayerName += u" : " + text(
+                    "TXT_KEY_MISC_GOLD_PER_TURN", playerActive.calculateGoldRate()
                 )
             elif self.iScreen == FOREIGN_TECH_SCREEN:
-                szPlayerName += u" : " + localText.getText(
-                    "TXT_KEY_MISC_GOLD", (playerActive.getGold(),)
-                )
+                szPlayerName += u" : " + text("TXT_KEY_MISC_GOLD", playerActive.getGold())
         screen.attachPanel(
             mainPanelName,
             activePlayerPanelName,
@@ -686,33 +659,25 @@ class CvForeignAdvisor:
                     or gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isGoldTrading()
                 ):
                     if self.iScreen == FOREIGN_BONUS_SCREEN:
-                        szPlayerName += u" : " + localText.getText(
+                        szPlayerName += u" : " + text(
                             "TXT_KEY_FOREIGN_ADVISOR_GOLD_PER_TURN_FOR_TRADE",
-                            (
-                                gc.getPlayer(iLoopPlayer).AI_maxGoldPerTurnTrade(
-                                    self.iActiveLeader
-                                ),
-                            ),
+                            gc.getPlayer(iLoopPlayer).AI_maxGoldPerTurnTrade(self.iActiveLeader),
                         )
                     elif self.iScreen == FOREIGN_TECH_SCREEN:
-                        szPlayerName += u" : " + localText.getText(
+                        szPlayerName += u" : " + text(
                             "TXT_KEY_FOREIGN_ADVISOR_GOLD_FOR_TRADE",
-                            (gc.getPlayer(iLoopPlayer).AI_maxGoldTrade(self.iActiveLeader),),
+                            gc.getPlayer(iLoopPlayer).AI_maxGoldTrade(self.iActiveLeader),
                         )
                 if (
                     not playerActive.canTradeNetworkWith(iLoopPlayer)
                     and self.iScreen == FOREIGN_BONUS_SCREEN
                 ):
-                    szPlayerName += u" : " + localText.getText(
-                        "TXT_KEY_FOREIGN_ADVISOR_NOT_CONNECTED", ()
-                    )
+                    szPlayerName += u" : " + text("TXT_KEY_FOREIGN_ADVISOR_NOT_CONNECTED")
                 elif (
                     not gc.getTeam(playerActive.getTeam()).isTechTrading()
                     and not gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isTechTrading()
                 ):
-                    szPlayerName += u" : " + localText.getText(
-                        "TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING", ()
-                    )
+                    szPlayerName += u" : " + text("TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING")
                 screen.attachPanel(
                     mainPanelName,
                     currentPlayerPanelName,
@@ -773,7 +738,7 @@ class CvForeignAdvisor:
                                 currentPlayerPanelName,
                                 "",
                                 u"<font=4>"
-                                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE", ())
+                                + text("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE")
                                 + u"</font>",
                             )
 
@@ -802,7 +767,7 @@ class CvForeignAdvisor:
                                 currentPlayerPanelName,
                                 "",
                                 u"<font=4>"
-                                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE", ())
+                                + text("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE")
                                 + u"</font>",
                             )
 
@@ -880,7 +845,7 @@ class CvForeignAdvisor:
                                 currentPlayerPanelName,
                                 "",
                                 u"<font=4>"
-                                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE", ())
+                                + text("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE")
                                 + u"</font>",
                             )
 
@@ -909,7 +874,7 @@ class CvForeignAdvisor:
                                 currentPlayerPanelName,
                                 "",
                                 u"<font=4>"
-                                + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE", ())
+                                + text("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE")
                                 + u"</font>",
                             )
 
@@ -938,9 +903,7 @@ class CvForeignAdvisor:
                                 currentPlayerPanelName,
                                 "",
                                 u"<font=4>"
-                                + localText.getText(
-                                    "TXT_KEY_FOREIGN_ADVISOR_NOT_ALLOWED_TRADE", ()
-                                )
+                                + text("TXT_KEY_FOREIGN_ADVISOR_NOT_ALLOWED_TRADE")
                                 + u"</font>",
                             )
 
@@ -1061,7 +1024,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_CONTACT", ()) + u"</font>",
+            u"<font=2>" + text("TXT_KEY_FOREIGN_ADVISOR_CONTACT") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1085,7 +1048,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>" + localText.getText("TXT_KEY_CONCEPT_WAR", ()) + u"</font>",
+            u"<font=2>" + text("TXT_KEY_CONCEPT_WAR") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1109,9 +1072,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>"
-            + localText.getText("TXT_KEY_TRADE_DEFENSIVE_PACT_STRING", ())
-            + u"</font>",
+            u"<font=2>" + text("TXT_KEY_TRADE_DEFENSIVE_PACT_STRING") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1135,7 +1096,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>" + localText.getText("TXT_KEY_TRADE_OPEN_BORDERS_STRING", ()) + u"</font>",
+            u"<font=2>" + text("TXT_KEY_TRADE_OPEN_BORDERS_STRING") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1159,7 +1120,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>" + localText.getText("TXT_KEY_PITBOSS_TEAM", ()) + u"</font>",
+            u"<font=2>" + text("TXT_KEY_PITBOSS_TEAM") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1183,7 +1144,7 @@ class CvForeignAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "",
-            u"<font=2>" + localText.getText("TXT_KEY_MISC_VASSAL_SHORT", ()) + u"</font>",
+            u"<font=2>" + text("TXT_KEY_MISC_VASSAL_SHORT") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             x,
             y - 10,
@@ -1348,9 +1309,9 @@ class CvForeignAdvisor:
                 # szText = " (" + gc.getAttitudeInfo(gc.getPlayer(iPlayer).AI_getAttitude(iBaseLeader)).getDescription()
                 # if (iBaseLeader != iPlayer):
                 # 	if (gc.getTeam(player.getTeam()).isVassal(playerBase.getTeam())):
-                # 		szText += ", " + localText.getText("TXT_KEY_MISC_VASSAL_SHORT", ())
+                # 		szText += ", " + text("TXT_KEY_MISC_VASSAL_SHORT")
                 # 	elif (gc.getTeam(playerBase.getTeam()).isVassal(player.getTeam())):
-                # 		szText += ", " + localText.getText("TXT_KEY_MISC_MASTER", ())
+                # 		szText += ", " + text("TXT_KEY_MISC_MASTER")
                 # szText += ")"
                 if len(leaderMap.keys()) >= 16:
                     szText = (
@@ -1364,18 +1325,10 @@ class CvForeignAdvisor:
                     if iBaseLeader != iPlayer:
                         if gc.getTeam(player.getTeam()).isVassal(playerBase.getTeam()):
                             szText += (
-                                u"<font=1>"
-                                + ", "
-                                + localText.getText("TXT_KEY_MISC_VASSAL_SHORT", ())
-                                + u"</font>"
+                                u"<font=1>" + ", " + text("TXT_KEY_MISC_VASSAL_SHORT") + u"</font>"
                             )
                         elif gc.getTeam(playerBase.getTeam()).isVassal(player.getTeam()):
-                            szText += (
-                                u"<font=1>"
-                                + ", "
-                                + localText.getText("TXT_KEY_MISC_MASTER", ())
-                                + u"</font>"
-                            )
+                            szText += u"<font=1>" + ", " + text("TXT_KEY_MISC_MASTER") + u"</font>"
                     szText += u"<font=1>" + ")" + u"</font>"
                 else:
                     szText = (
@@ -1386,9 +1339,9 @@ class CvForeignAdvisor:
                     )
                     if iBaseLeader != iPlayer:
                         if gc.getTeam(player.getTeam()).isVassal(playerBase.getTeam()):
-                            szText += ", " + localText.getText("TXT_KEY_MISC_VASSAL_SHORT", ())
+                            szText += ", " + text("TXT_KEY_MISC_VASSAL_SHORT")
                         elif gc.getTeam(playerBase.getTeam()).isVassal(player.getTeam()):
-                            szText += ", " + localText.getText("TXT_KEY_MISC_MASTER", ())
+                            szText += ", " + text("TXT_KEY_MISC_MASTER")
                     szText += ")"
                 # Rhye - end
             else:

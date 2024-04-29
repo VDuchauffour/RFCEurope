@@ -39,47 +39,67 @@ class CvInfoBase;
 #undef min
 
 //sign function taken from FirePlace - JW
-template <class T> __forceinline T getSign(T x) {
+template <class T> __forceinline T getSign(T x)
+{
   return ((x < 0) ? T(-1) : x > 0 ? T(1) : T(0));
 };
 
-inline int range(int iNum, int iLow, int iHigh) {
+inline int range(int iNum, int iLow, int iHigh)
+{
   FAssertMsg(iHigh >= iLow, "High should be higher than low");
 
-  if (iNum < iLow) {
+  if (iNum < iLow)
+  {
     return iLow;
-  } else if (iNum > iHigh) {
+  }
+  else if (iNum > iHigh)
+  {
     return iHigh;
-  } else {
+  }
+  else
+  {
     return iNum;
   }
 }
 
-inline float range(float fNum, float fLow, float fHigh) {
+inline float range(float fNum, float fLow, float fHigh)
+{
   FAssertMsg(fHigh >= fLow, "High should be higher than low");
 
-  if (fNum < fLow) {
+  if (fNum < fLow)
+  {
     return fLow;
-  } else if (fNum > fHigh) {
+  }
+  else if (fNum > fHigh)
+  {
     return fHigh;
-  } else {
+  }
+  else
+  {
     return fNum;
   }
 }
 
-inline int coordDistance(int iFrom, int iTo, int iRange, bool bWrap) {
-  if (bWrap && (abs(iFrom - iTo) > (iRange / 2))) {
+inline int coordDistance(int iFrom, int iTo, int iRange, bool bWrap)
+{
+  if (bWrap && (abs(iFrom - iTo) > (iRange / 2)))
+  {
     return (iRange - abs(iFrom - iTo));
   }
 
   return abs(iFrom - iTo);
 }
 
-inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap) {
-  if (bWrap) {
-    if (iDiff > (iRange / 2)) {
+inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap)
+{
+  if (bWrap)
+  {
+    if (iDiff > (iRange / 2))
+    {
       return (iDiff - iRange);
-    } else if (iDiff < -(iRange / 2)) {
+    }
+    else if (iDiff < -(iRange / 2))
+    {
       return (iDiff + iRange);
     }
   }
@@ -87,11 +107,13 @@ inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap) {
   return iDiff;
 }
 
-inline int xDistance(int iFromX, int iToX) {
+inline int xDistance(int iFromX, int iToX)
+{
   return coordDistance(iFromX, iToX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
 }
 
-inline int yDistance(int iFromY, int iToY) {
+inline int yDistance(int iFromY, int iToY)
+{
   return coordDistance(iFromY, iToY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
 }
 
@@ -153,9 +175,12 @@ inline int stepDistance(int iX1, int iY1, int iX2, int iY2) // Exposed to Python
 
 inline CvPlot *plotDirection(int iX, int iY, DirectionTypes eDirection) // Exposed to Python
 {
-  if (eDirection == NO_DIRECTION) {
+  if (eDirection == NO_DIRECTION)
+  {
     return GC.getMapINLINE().plotINLINE(iX, iY);
-  } else {
+  }
+  else
+  {
     return GC.getMapINLINE().plotINLINE((iX + GC.getPlotDirectionX()[eDirection]),
                                         (iY + GC.getPlotDirectionY()[eDirection]));
   }
@@ -174,9 +199,12 @@ inline CvPlot *plotXY(int iX, int iY, int iDX, int iDY) // Exposed to Python
 
 inline DirectionTypes directionXY(int iDX, int iDY) // Exposed to Python
 {
-  if ((abs(iDX) > DIRECTION_RADIUS) || (abs(iDY) > DIRECTION_RADIUS)) {
+  if ((abs(iDX) > DIRECTION_RADIUS) || (abs(iDY) > DIRECTION_RADIUS))
+  {
     return NO_DIRECTION;
-  } else {
+  }
+  else
+  {
     return GC.getXYDirection((iDX + DIRECTION_RADIUS), (iDY + DIRECTION_RADIUS));
   }
 }
@@ -354,6 +382,13 @@ void shuffleArray(int *piShuffle, int iNum, CvRandom &rand);
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
+
+// edead: start
+int getTurnForYear(int iTurnYear);
+int getGameTurnForYear(int iTurnYear, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
+int getGameTurnForMonth(int iTurnMonth, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
+int getTurns(int iTurns);
+// edead: end
 
 // Absinthe: scenario types and identification
 ScenarioTypes getScenario();

@@ -1,14 +1,17 @@
 # Rhye's and Fall of Civilization: Europe - Event handler
 
 from CvPythonExtensions import *
+from CoreData import civilizations, civilization
+from CoreFunctions import message, show, text
+from CoreStructures import human, make_unit, make_units, player, turn, year, cities
 import CvUtil
-import CvEventManager  # Mercenaries
+import CvEventManager
 import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
-import Popup
+from PyUtils import rand, percentage_chance
 
-from StoredData import sd  # edead
+from StoredData import data
 import RiseAndFall
 import Barbs
 import Religions
@@ -16,8 +19,6 @@ import Resources
 import CityNameManager
 import UniquePowers
 import AIWars
-import Consts as con
-import XMLConsts as xml
 import RFCUtils
 
 import Victory
@@ -26,54 +27,30 @@ import Plague
 import Crusades
 import Companies
 import DataLoader
-import ProvinceManager
+import Province
 import Mercenaries
-import RFCEMaps as rfcemaps
+
+from Scenario import get_scenario
+from Consts import MessageData
+from ProvinceMapData import PROVINCES_MAP
+from CoreTypes import (
+    Building,
+    Civ,
+    City,
+    Improvement,
+    Religion,
+    Scenario,
+    UniquePower,
+    StabilityCategory,
+    Technology,
+    Unit,
+    Wonder,
+)
+from LocationsData import CITIES
 
 gc = CyGlobalContext()
-localText = CyTranslator()  # Absinthe
 utils = RFCUtils.RFCUtils()
-# iBetrayalCheaters = 15
 
-# Civ constants
-iByzantium = con.iByzantium
-iFrankia = con.iFrankia
-iArabia = con.iArabia
-iBulgaria = con.iBulgaria
-iCordoba = con.iCordoba
-iVenecia = con.iVenecia
-iBurgundy = con.iBurgundy
-iGermany = con.iGermany
-iNovgorod = con.iNovgorod
-iNorway = con.iNorway
-iKiev = con.iKiev
-iHungary = con.iHungary
-iSpain = con.iSpain
-iDenmark = con.iDenmark
-iScotland = con.iScotland
-iPoland = con.iPoland
-iGenoa = con.iGenoa
-iMorocco = con.iMorocco
-iEngland = con.iEngland
-iPortugal = con.iPortugal
-iAragon = con.iAragon
-iSweden = con.iSweden
-iPrussia = con.iPrussia
-iLithuania = con.iLithuania
-iAustria = con.iAustria
-iTurkey = con.iTurkey
-iMoscow = con.iMoscow
-iDutch = con.iDutch
-iPope = con.iPope
-iNumPlayers = con.iNumPlayers
-iNumMajorPlayers = con.iNumMajorPlayers
-iNumActivePlayers = con.iNumActivePlayers
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-iIndependent3 = con.iIndependent3
-iIndependent4 = con.iIndependent4
-iBarbarian = con.iBarbarian
-iNumTotalPlayers = con.iNumTotalPlayers
 
 # Absinthe: Turn Randomization constants
 iLighthouseEarthQuake = 0
@@ -82,7 +59,6 @@ iByzantiumVikingAttack = 1
 # Absinthe: all of this Mercenary stuff is unused
 # Mercenaries - start
 
-PyPlayer = PyHelpers.PyPlayer
 PyGame = PyHelpers.PyGame()
 PyInfo = PyHelpers.PyInfo
 
@@ -136,7 +112,6 @@ g_bAIThinkPeriod = 6  # Rhye (5 in Warlords, 4 in vanilla)
 # Mercenaries - end
 
 
-###################################################
 class CvRFCEventHandler:
 
     mercenaryManager = None  # Mercenaries
@@ -189,6 +164,7 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
+        self.pm = Province.ProvinceManager()
         self.rnf = RiseAndFall.RiseAndFall()
         self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
@@ -200,7 +176,7 @@ class CvRFCEventHandler:
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
-        self.province = ProvinceManager.ProvinceManager()
+        self.province = Province.ProvinceManager()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
         self.company = Companies.Companies()  # Absinthe
 
@@ -217,27 +193,11 @@ class CvRFCEventHandler:
         global g_iWanderlustMercenariesMaximum
         global g_bDisplayMercenaryMessages
 
-        # Rhye - start comment
-
-    ##		# Load the Mercenaries Mod Config INI file containing all of the configuration information
-    ##		config = CvConfigParser.CvConfigParser("Mercenaries Mod Config.ini")
-    ##
-    ##		# If we actually were able to open the "Mercenaries Mod Config.ini" file then read in the values.
-    ##		# otherwise we'll keep the default values that were set at the top of this file.
-    ##		if(config != None):
-    ##			g_bGameTurnMercenaryCreation = config.getboolean("Mercenaries Mod", "Game Turn Mercenary Creation", True)
-    ##			g_bDisplayMercenaryManagerOnBeginPlayerTurn = config.getboolean("Mercenaries Mod", "Display Mercenary Manager On Begin Player Turn", False)
-    ##			g_iStartingEra = gc.getInfoTypeForString(config.get("Mercenaries Mod","Starting Era","ERA_ANCIENT"))
-    ##			g_bWanderlustMercenaries = config.getboolean("Mercenaries Mod", "Wanderlust Mercenaries", True)
-    ##			g_iWanderlustMercenariesMaximum = config.getint("Mercenaries Mod","Wanderlust Mercenaries Maximum", 5)
-    ##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", True)
-    # Rhye - end comment
-
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        # self.pm.setup()
         DataLoader.setup()
-        sd.setup()  # initialise global script data
+        data.setup()
+        self.pm.setup()
         self.rnf.setup()
         self.rel.setup()
         self.pla.setup()
@@ -250,27 +210,18 @@ class CvRFCEventHandler:
         self.vic.setup()
 
         # Absinthe: generate and store randomized turn modifiers
-        sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = gc.getGame().getSorenRandNum(
-            40, "Final Earthquake"
-        )
-        sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = gc.getGame().getSorenRandNum(
-            10, "Viking Attack"
-        )
+        data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
+        data.lEventRandomness[iByzantiumVikingAttack] = rand(10)
 
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
         # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
-        if utils.getScenario() == con.i1200ADScenario:
-            for city in utils.getCityList(con.iHungary):
-                self.cnm.renameCities(city, con.iHungary)
-        # Absinthe: for all civs:
-        # if utils.getScenario() == con.i1200ADScenario:
-        # 	for iPlayer in range(con.iNumPlayers - 1):
-        # 		for city in utils.getCityList(iPlayer):
-        # 			self.cnm.renameCities(city, iPlayer)
+        if get_scenario() == Scenario.i1200AD:
+            for city in cities().owner(Civ.HUNGARY.value).entities():
+                self.cnm.renameCities(city, Civ.HUNGARY.value)
 
         # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
-        for iPlayer in range(con.iNumMajorPlayers):
+        for iPlayer in civilizations().majors().ids():
             gc.getPlayer(iPlayer).processCivNames()
 
         return 0
@@ -286,22 +237,28 @@ class CvRFCEventHandler:
         tCity = (city.getX(), city.getY())
 
         # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
-        if playerType == iArabia and not gc.getGame().isReligionFounded(xml.iIslam):
+        if playerType == Civ.ARABIA.value and not gc.getGame().isReligionFounded(
+            Religion.ISLAM.value
+        ):
             # has to be done before the Arab UP is triggered
-            gc.getPlayer(iArabia).foundReligion(xml.iIslam, xml.iIslam, False)
-            gc.getGame().getHolyCity(xml.iIslam).setNumRealBuilding(xml.iIslamicShrine, 1)
+            gc.getPlayer(Civ.ARABIA.value).foundReligion(
+                Religion.ISLAM.value, Religion.ISLAM.value, False
+            )
+            gc.getGame().getHolyCity(Religion.ISLAM.value).setNumRealBuilding(
+                Building.ISLAMIC_SHRINE.value, 1
+            )
 
         # 3Miro: Arab UP
-        if gc.hasUP(playerType, con.iUP_Faith):
+        if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value):
             self.up.faithUP(playerType, city)
 
         # Absinthe: Ottoman UP
-        if gc.hasUP(playerType, con.iUP_Janissary):
+        if gc.hasUP(playerType, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value):
             self.up.janissaryNewCityUP(playerType, city, bConquest)
 
         # Absinthe: Scottish UP
         # 			against all players (including indies and barbs), but only on conquest
-        if owner == iScotland and bConquest:  # playerType < con.iNumTotalPlayersB
+        if owner == Civ.SCOTLAND.value and bConquest:  # playerType < civilizations().len()
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(owner) * 10000) / iTotalCulture > 20:
@@ -309,102 +266,94 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
-        if owner == iAragon:
+        if owner == Civ.ARAGON.value:
             self.up.confederationUP(owner)
-        if playerType == iAragon:
+        if playerType == Civ.ARAGON.value:
             self.up.confederationUP(playerType)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if playerType == iDutch and not gc.getGame().isReligionFounded(xml.iProtestantism):
-            gc.getPlayer(iDutch).foundReligion(xml.iProtestantism, xml.iProtestantism, False)
-            gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
-                xml.iProtestantShrine, 1
+        if playerType == Civ.DUTCH.value and not gc.getGame().isReligionFounded(
+            Religion.PROTESTANTISM.value
+        ):
+            gc.getPlayer(Civ.DUTCH.value).foundReligion(
+                Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
+            )
+            gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
+                Building.PROTESTANT_SHRINE.value, 1
             )
             self.rel.setReformationActive(True)
-            self.rel.reformationchoice(iDutch)
-            self.rel.reformationOther(iIndependent)
-            self.rel.reformationOther(iIndependent2)
-            self.rel.reformationOther(iIndependent3)
-            self.rel.reformationOther(iIndependent4)
-            self.rel.reformationOther(iBarbarian)
-            self.rel.setReformationHitMatrix(iDutch, 2)
-            for iCiv in range(iNumPlayers):
-                if (
-                    iCiv in Religions.lReformationNeighbours[iDutch]
-                    and self.rel.getReformationHitMatrix(iCiv) == 0
-                ):
-                    self.rel.setReformationHitMatrix(iCiv, 1)
+            self.rel.reformationchoice(Civ.DUTCH.value)
+            self.rel.reformationOther(Civ.INDEPENDENT.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_2.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_3.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_4.value)
+            self.rel.reformationOther(Civ.BARBARIAN.value)
+            self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
+
+            for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
+                if self.rel.getReformationHitMatrix(neighbour.value) == 0:
+                    self.rel.setReformationHitMatrix(neighbour.value, 1)
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
-        if playerType < iNumMajorPlayers:
+        if playerType < civilizations().majors().len():
             utils.spreadMajorCulture(playerType, city.getX(), city.getY())
 
         self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 
         # 3Miro: Jerusalem's Golden Age Incentive
-        if tCity == con.tJerusalem:
+        if tCity == CITIES[City.JERUSALEM]:
             pPlayer = gc.getPlayer(playerType)
-            if pPlayer.getStateReligion() == xml.iCatholicism:
+            if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                 # Absinthe: interface message for the player
                 if pPlayer.isHuman():
                     CityName = city.getNameKey()
-                    CyInterface().addMessage(
-                        utils.getHumanID(),
-                        True,
-                        con.iDuration,
-                        CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_SAFE", (CityName,)),
-                        "",
-                        0,
-                        "",
-                        ColorTypes(con.iGreen),
-                        -1,
-                        -1,
-                        True,
-                        True,
+                    message(
+                        human(),
+                        text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", CityName),
+                        force=True,
+                        color=MessageData.GREEN,
                     )
                 # Absinthe: spread Catholicism if not present already
-                if not city.isHasReligion(xml.iCatholicism):
-                    self.rel.spreadReligion(tCity, xml.iCatholicism)
+                if not city.isHasReligion(Religion.CATHOLICISM.value):
+                    self.rel.spreadReligion(tCity, Religion.CATHOLICISM.value)
                 self.crusade.success(playerType)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
             # 			maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
-            if gc.getGame().getSorenRandNum(100, "Relic found") < 15:
-                # for major players only
-                if playerType < iNumMajorPlayers:
-                    if pPlayer.getStateReligion() in range(xml.iNumReligions):
-                        pPlayer.initUnit(
-                            xml.iHolyRelic,
-                            con.tJerusalem[0],
-                            con.tJerusalem[1],
-                            UnitAITypes.NO_UNITAI,
-                            DirectionTypes.DIRECTION_SOUTH,
-                        )
+            if (
+                percentage_chance(15, strict=True)
+                and playerType in civilizations().majors().ids()
+                and pPlayer.getStateReligion() != -1
+            ):
+                pPlayer.initUnit(
+                    Unit.HOLY_RELIC.value,
+                    CITIES[City.JERUSALEM][0],
+                    CITIES[City.JERUSALEM][1],
+                    UnitAITypes.NO_UNITAI,
+                    DirectionTypes.DIRECTION_SOUTH,
+                )
 
         # Sedna17: code for Krak des Chevaliers
         if bConquest:
             iNewOwner = city.getOwner()
             pNewOwner = gc.getPlayer(iNewOwner)
-            if pNewOwner.countNumBuildings(xml.iKrakDesChevaliers) > 0:
-                city.setHasRealBuilding(utils.getUniqueBuilding(iNewOwner, xml.iWalls), True)
+            if pNewOwner.countNumBuildings(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
+                city.setHasRealBuilding(
+                    utils.getUniqueBuilding(iNewOwner, Building.WALLS.value), True
+                )
                 # Absinthe: if the Castle building were built with the Krak, then it should add stability
                 # 			the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
                 if not (
-                    city.isHasBuilding(xml.iSpanishCitadel)
-                    or city.isHasBuilding(xml.iMoscowKremlin)
-                    or city.isHasBuilding(xml.iHungarianStronghold)
-                    or city.isHasBuilding(xml.iCastle)
+                    city.isHasBuilding(Building.SPANISH_CITADEL.value)
+                    or city.isHasBuilding(Building.MOSCOW_KREMLIN.value)
+                    or city.isHasBuilding(Building.HUNGARIAN_STRONGHOLD.value)
+                    or city.isHasBuilding(Building.CASTLE.value)
                 ):
-                    city.setHasRealBuilding(utils.getUniqueBuilding(iNewOwner, xml.iCastle), True)
-                    pNewOwner.changeStabilityBase(con.iCathegoryExpansion, 1)
+                    city.setHasRealBuilding(
+                        utils.getUniqueBuilding(iNewOwner, Building.CASTLE.value), True
+                    )
+                    pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
         # Sedna17, end
-
-        # 3Miro: National wonders and city acquire by trade
-        # if (bTrade):
-        # 	for i in range (con.iScotlandYard +1 - con.iHeroicEpic):
-        # 		iNationalWonder = i + con.iHeroicEpic
-        # 		if (city.hasBuilding(iNationalWonder)):
-        # 			city.setHasRealBuilding((iNationalWonder), False)
 
         self.pla.onCityAcquired(owner, playerType, city)  # Plague
         self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
@@ -415,7 +364,7 @@ class CvRFCEventHandler:
             self.res.removeResource(80, 24)
 
         # Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
-        if utils.getScenario() == con.i1200ADScenario:
+        if get_scenario() == Scenario.i1200AD:
             if tCity == (76, 25) or tCity == (81, 24):
                 self.res.removeResource(77, 24)
 
@@ -443,7 +392,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated if your new city is razed
-        if iPlayer == iAragon:
+        if iPlayer == Civ.ARAGON.value:
             self.up.confederationUP(iPlayer)
 
     def onCityBuilt(self, argsList):
@@ -455,7 +404,7 @@ class CvRFCEventHandler:
         self.rnf.onCityBuilt(iOwner, city)
         tCity = (city.getX(), city.getY())
 
-        if iOwner < con.iNumActivePlayers:
+        if iOwner < civilizations().majors().len():
             self.cnm.assignName(city)
 
         # Absinthe: merc notifications, after the city is named
@@ -463,24 +412,24 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated on city foundation
-        if iOwner == iAragon:
+        if iOwner == Civ.ARAGON.value:
             self.up.confederationUP(iOwner)
 
         # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
         pCurrent = gc.getMap().plot(city.getX(), city.getY())
-        for i in range(con.iNumTotalPlayers - con.iNumActivePlayers):
-            iMinorCiv = i + con.iNumActivePlayers
-            pCurrent.setCulture(iMinorCiv, 0, True)
-        pCurrent.setCulture(con.iBarbarian, 0, True)
+        for civ in civilizations().minors().ids():
+            pCurrent.setCulture(civ, 0, True)
 
-        if iOwner < iNumMajorPlayers:
+        if iOwner < civilizations().majors().len():
             utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
 
-            if iOwner == iPortugal:
+            if iOwner == Civ.PORTUGAL.value:
                 self.vic.onCityBuilt(city, iOwner)  # needed in Victory.py
 
-                if gc.getTeam(gc.getPlayer(iPortugal).getTeam()).isHasTech(xml.iAstronomy):
-                    city.setHasRealBuilding(xml.iPortugalFeitoria, True)
+                if gc.getTeam(gc.getPlayer(Civ.PORTUGAL.value).getTeam()).isHasTech(
+                    Technology.ASTRONOMY.value
+                ):
+                    city.setHasRealBuilding(Building.PORTUGAL_FEITORIA.value, True)
 
         # Absinthe: Free buildings if city is built on a tile improvement
         # 			The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
@@ -494,25 +443,25 @@ class CvRFCEventHandler:
         iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
         iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
         iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
-        # print ("new city coordinates: ", city.getX(), city.getY())
-        # print ("destroyed improvement values: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
         # Absinthe: free walls if built on fort
         if (
-            iImpBeforeCityType == xml.iImprovementFort
+            iImpBeforeCityType == Improvement.FORT.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls), True)
+            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value), True)
         # Absinthe: free granary if built on hamlet
         if (
-            iImpBeforeCityType == xml.iImprovementHamlet
+            iImpBeforeCityType == Improvement.HAMLET.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
+            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True)
         # Absinthe: free granary and +1 population if built on village or town
-        if iImpBeforeCityType in [xml.iImprovementTown, xml.iImprovementVillage]:
+        if iImpBeforeCityType in [Improvement.TOWN.value, Improvement.VILLAGE.value]:
             if (iImpBeforeCityX, iImpBeforeCityY) == tCity:
                 city.changePopulation(1)
-                city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
+                city.setHasRealBuilding(
+                    utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True
+                )
 
         # Absinthe: Some initial food for all cities on foundation
         # 			So Leon and Roskilde for example don't lose a population in the first couple turns
@@ -521,31 +470,33 @@ class CvRFCEventHandler:
         city.setFood(city.growthThreshold() / 5)
 
         # 3MiroUP: spread religion on city foundation
-        if gc.hasUP(iOwner, con.iUP_Faith):
+        if gc.hasUP(iOwner, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value):
             self.up.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if iOwner == iDutch and not gc.getGame().isReligionFounded(xml.iProtestantism):
-            gc.getPlayer(iDutch).foundReligion(xml.iProtestantism, xml.iProtestantism, False)
-            gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
-                xml.iProtestantShrine, 1
+        if iOwner == Civ.DUTCH.value and not gc.getGame().isReligionFounded(
+            Religion.PROTESTANTISM.value
+        ):
+            gc.getPlayer(Civ.DUTCH.value).foundReligion(
+                Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
+            )
+            gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
+                Building.PROTESTANT_SHRINE.value, 1
             )
             self.rel.setReformationActive(True)
-            self.rel.reformationchoice(iDutch)
-            self.rel.reformationOther(iIndependent)
-            self.rel.reformationOther(iIndependent2)
-            self.rel.reformationOther(iIndependent3)
-            self.rel.reformationOther(iIndependent4)
-            self.rel.reformationOther(iBarbarian)
-            self.rel.setReformationHitMatrix(iDutch, 2)
-            for iCiv in range(iNumPlayers):
-                if (
-                    iCiv in Religions.lReformationNeighbours[iDutch]
-                    and self.rel.getReformationHitMatrix(iCiv) == 0
-                ):
-                    self.rel.setReformationHitMatrix(iCiv, 1)
+            self.rel.reformationchoice(Civ.DUTCH.value)
+            self.rel.reformationOther(Civ.INDEPENDENT.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_2.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_3.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_4.value)
+            self.rel.reformationOther(Civ.BARBARIAN.value)
+            self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
 
-        if iOwner < con.iNumPlayers:
+            for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
+                if self.rel.getReformationHitMatrix(neighbour.value) == 0:
+                    self.rel.setReformationHitMatrix(neighbour.value, 1)
+
+        if iOwner < civilizations().majors().len():
             self.sta.onCityBuilt(iOwner, city.getX(), city.getY())
 
     def onCombatResult(self, argsList):
@@ -556,23 +507,23 @@ class CvRFCEventHandler:
         "Religion Founded"
         iReligion, iFounder = argsList
 
-        if iReligion != xml.iJudaism:
-            for city in utils.getCityList(iFounder):
+        if iReligion != Religion.JUDAISM.value:
+            for city in cities().owner(iFounder).entities():
                 if city.isHolyCityByType(
                     iReligion
                 ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
-                    if iReligion == xml.iProtestantism:
-                        iTemple = xml.iProtestantTemple
-                        iShrine = xml.iProtestantShrine
-                    elif iReligion == xml.iIslam:
-                        iTemple = xml.iIslamicTemple
-                        iShrine = xml.iIslamicShrine
-                    elif iReligion == xml.iCatholicism:
-                        iTemple = xml.iCatholicTemple
-                        iShrine = xml.iCatholicShrine
-                    elif iReligion == xml.iOrthodoxy:
-                        iTemple = xml.iOrthodoxTemple
-                        iShrine = xml.iOrthodoxShrine
+                    if iReligion == Religion.PROTESTANTISM.value:
+                        iTemple = Building.PROTESTANT_TEMPLE.value
+                        iShrine = Building.PROTESTANT_SHRINE.value
+                    elif iReligion == Religion.ISLAM.value:
+                        iTemple = Building.ISLAMIC_TEMPLE.value
+                        iShrine = Building.ISLAMIC_SHRINE.value
+                    elif iReligion == Religion.CATHOLICISM.value:
+                        iTemple = Building.CATHOLIC_TEMPLE.value
+                        iShrine = Building.CATHOLIC_SHRINE.value
+                    elif iReligion == Religion.ORTHODOXY.value:
+                        iTemple = Building.ORTHODOX_TEMPLE.value
+                        iShrine = Building.ORTHODOX_SHRINE.value
                     if not city.isHasRealBuilding(iShrine):
                         city.setHasRealBuilding(iShrine, True)
                     if not city.isHasRealBuilding(iTemple):
@@ -581,11 +532,11 @@ class CvRFCEventHandler:
 
         self.vic.onReligionFounded(iReligion, iFounder)
 
-        if iFounder < con.iNumPlayers:
+        if iFounder < civilizations().majors().len():
             self.sta.onReligionFounded(iFounder)
 
         # 3Miro: end Crusades for the Holy Land after the Reformation
-        if iReligion == xml.iProtestantism:
+        if iReligion == Religion.PROTESTANTISM.value:
             self.crusade.endCrusades()
 
     def onBuildingBuilt(self, argsList):
@@ -593,7 +544,7 @@ class CvRFCEventHandler:
         iOwner = city.getOwner()
 
         self.vic.onBuildingBuilt(iOwner, iBuildingType)
-        if city.getOwner() < con.iNumPlayers:
+        if city.getOwner() < civilizations().majors().len():
             self.sta.onBuildingBuilt(iOwner, iBuildingType)
             self.company.onBuildingBuilt(iOwner, iBuildingType)
         # Absinthe: Faith, Kazimierz, Mont Saint-Michel
@@ -601,28 +552,28 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # UP tile yields should be recalculated right away if a new Palace was built
-        if iOwner == con.iAragon and iBuildingType == xml.iPalace:
+        if iOwner == Civ.ARAGON.value and iBuildingType == Building.PALACE.value:
             self.up.confederationUP(iOwner)
 
     def onProjectBuilt(self, argsList):
         city, iProjectType = argsList
         self.vic.onProjectBuilt(city.getOwner(), iProjectType)
-        if city.getOwner() < con.iNumPlayers:
+        if city.getOwner() < civilizations().majors().len():
             self.sta.onProjectBuilt(city.getOwner(), iProjectType)
 
     def onUnitPillage(self, argsList):
-        print("Improvement Destroyed")
         pUnit, iImprovement, iRoute, iOwner = argsList
         iPlotX = pUnit.getX()
         iPlotY = pUnit.getY()
         pPlot = CyMap().plot(iPlotX, iPlotY)
         if pPlot.countTotalCulture() == 0:
-            print("No culture, so barb/indy satisfied")
-            if iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown:
-                print("Improve Type Satisfied")
+            if (
+                iImprovement >= Improvement.COTTAGE.value
+                and iImprovement <= Improvement.TOWN.value
+            ):
                 self.barb.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
-        if iVictim > -1 and iVictim < con.iNumPlayers:
+        if iVictim > -1 and iVictim < civilizations().majors().len():
             self.sta.onImprovementDestroyed(iVictim)
 
         self.vic.onPillageImprovement(
@@ -632,139 +583,58 @@ class CvRFCEventHandler:
     def onBeginGameTurn(self, argsList):
         iGameTurn = argsList[0]
 
-        # Absinthe tests
-        # if iGameTurn == xml.i508AD:
-        # 	for city in utils.getCityList(con.iFrankia):
-        # 		plot = gc.getMap().plot(city.getX(),city.getY())
-        # 		print ('provincetest', plot.getProvinceID (), city.getName())
-
-        # 	unitList = PyPlayer(con.iFrankia).getUnitList()
-        # 	for unit in unitList:
-        # 		iCargoSpace = unit.cargoSpace()
-        # 		print ("iCargoSpace", iCargoSpace)
-
-        # 	for iCiv in range(con.iNumPlayers):
-        # 		pCiv = gc.getPlayer(iCiv)
-        # 		leaderName = pCiv.getLeader()
-        # 		leaderName2 = gc.getLeaderHeadInfo( pCiv.getLeaderType() )
-        # 		leaderName3 = leaderName2.getDescription()
-        # 		leaderName4 = leaderName2.getLeaderHead()
-        # 	#	leaderName5 = (pCiv.getLeaderType()).getLeaderID()
-        # 	#	leaderName6 = leaderName2.getLeaderType()
-        # 		leaderName7 = pCiv.getLeaderType()
-        # 		LeaderType = gc.getLeaderHeadInfo(pCiv.getLeaderType()).getType()
-        # 		print ("leaderName7", leaderName7)
-        # 		print ("LeaderType", LeaderType)
-
-        # for city in utils.getCityList(con.iHungary):
-        # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), CommerceTypes.COMMERCE_GOLD, 2)
-        # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CASTLE"), CommerceTypes.COMMERCE_GOLD, 12)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), YieldTypes.YIELD_COMMERCE, 4)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), YieldTypes.YIELD_FOOD, 2)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_CASTLE"), YieldTypes.YIELD_FOOD, 3)
-
-        # 	for x in range(76):
-        # 		plot = CyMap().plot(x, 46) # France, Paris included
-        # 		print ("cityname at y height", x, plot.getCityNameMap(1))
-        # 	for x in range(76):
-        # 		plot = CyMap().plot(x, 36) # Hungary, accents
-        # 		print ("cityname at y height", x, plot.getCityNameMap(11))
-
         # Absinthe: 868AD Viking attack on Constantinople
-        if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2:
-            if utils.getHumanID() == con.iByzantium:
-                popup = Popup.PyPopup()
-                popup.setBodyString(
-                    localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ())
-                )
-                popup.launch()
+        if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack] - 2:
+            if human() == Civ.BYZANTIUM:
+                show(text("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS"))
 
-        if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]:
-            if utils.getHumanID() == con.iByzantium:
-                self.barb.spawnMultiTypeUnits(
-                    iBarbarian,
-                    (80, 24),
-                    (80, 25),
-                    [xml.iVikingBerserker, xml.iDenmarkHuskarl],
-                    [4, 3],
-                    iGameTurn,
-                    1,
-                    0,
-                    utils.forcedInvasion,
-                    1,
-                    localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
-                )
-                CyInterface().addMessage(
-                    iByzantium,
-                    False,
-                    con.iDuration,
-                    CyTranslator().getText("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE", ()),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(con.iRed),
-                    -1,
-                    -1,
-                    True,
-                    True,
+        if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack]:
+            if human() == Civ.BYZANTIUM:
+                for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
+                    self.barb.spawnUnits(
+                        Civ.BARBARIAN,
+                        (80, 24),
+                        (80, 25),
+                        unit,
+                        number,
+                        iGameTurn,
+                        1,
+                        0,
+                        utils.forcedInvasion,
+                        UnitAITypes.UNITAI_ATTACK,
+                        text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
+                    )
+                message(
+                    Civ.BYZANTIUM,
+                    text("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE"),
+                    color=MessageData.RED,
                 )
 
         # Absinthe: Message for the human player about the Schism
-        elif iGameTurn == xml.i1053AD:
-            iHuman = utils.getHumanID()
-            if utils.isActive(iHuman):
-                sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
-                CyInterface().addMessage(
-                    iHuman,
-                    False,
-                    con.iDuration,
-                    sText,
-                    "",
-                    0,
-                    "",
-                    ColorTypes(con.iDarkPink),
-                    -1,
-                    -1,
-                    True,
-                    True,
-                )
+        elif iGameTurn == year(1053):
+            if player().isExisting():
+                sText = text("TXT_KEY_GREAT_SCHISM")
+                message(human(), sText, color=MessageData.DARK_PINK)
 
         # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
-        elif (
-            iGameTurn
-            == xml.i1323AD - 40 + sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
-        ):
-            for iPlayer in range(con.iNumTotalPlayers):
+        elif iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
+            for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
-                for city in utils.getCityList(iPlayer):
-                    if city.isHasBuilding(xml.iGreatLighthouse):
-                        city.setHasRealBuilding(xml.iGreatLighthouse, False)
+                for city in cities().owner(iPlayer).entities():
+                    if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE.value):
+                        city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE.value, False)
                         GLcity = city
                         bFound = 1
-                if bFound and utils.getHumanID() == iPlayer:
+                if bFound and human() == iPlayer:
                     pPlayer = gc.getPlayer(iPlayer)
                     iTeam = pPlayer.getTeam()
                     if GLcity.isRevealed(iTeam, False):
-                        CyInterface().addMessage(
+                        message(
                             iPlayer,
-                            False,
-                            con.iDuration,
-                            CyTranslator().getText(
-                                "TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED", ()
-                            ),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(con.iRed),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            text("TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED"),
+                            color=MessageData.RED,
                         )
 
-        # print(" 3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
-
-        print(" 3Miro onBegTurn: ", iGameTurn)
         self.barb.checkTurn(iGameTurn)
         self.rnf.checkTurn(iGameTurn)
         self.rel.checkTurn(iGameTurn)
@@ -778,72 +648,59 @@ class CvRFCEventHandler:
         self.province.checkTurn(iGameTurn)
         self.company.checkTurn(iGameTurn)
 
-        # print(" 3Miro onBegTurn out: ",iGameTurn)
-
         return 0
 
     def onBeginPlayerTurn(self, argsList):
         iGameTurn, iPlayer = argsList
-        iHuman = utils.getHumanID()
-
-        print("onBeginPlayerTurn PLAYER", iPlayer)
-
+        iHuman = human()
         if self.rnf.getDeleteMode(0) != -1:
             self.rnf.deleteMode(iPlayer)
-
         # Absinthe: refresh Dynamic Civ Names
-        if iPlayer < con.iNumMajorPlayers:
+        if iPlayer < civilizations().majors().len():
             gc.getPlayer(iPlayer).processCivNames()
 
-        ## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
-        ##			it's probably enough to refresh it on onGameStart for the scenario
-        # if utils.getHumanID() == iPlayer:
-        # 	if iGameTurn == utils.getScenarioStartTurn():
-        # 		for iDCNPlayer in range(con.iNumMajorPlayers):
-        # 			gc.getPlayer(iDCNPlayer).processCivNames()
-
         # Absinthe: Byzantine conqueror army
-        if iGameTurn == xml.i520AD:
-            if iPlayer == con.iByzantium:
-                pByzantium = gc.getPlayer(iByzantium)
+        if iGameTurn == year(520):
+            if iPlayer == Civ.BYZANTIUM.value:
+                pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 tStartingPlot = (59, 16)
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGreatGeneral,
+                    Unit.GREAT_GENERAL.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_GENERAL,
@@ -855,85 +712,67 @@ class CvRFCEventHandler:
                     if pUnit.getUnitType() == CvUtil.findInfoTypeNum(
                         gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
                     ):
-                        pUnit.setName(localText.getText("TXT_KEY_GREAT_PERSON_BELISARIUS", ()))
-                utils.makeUnit(xml.iSwordsman, con.iByzantium, tStartingPlot, 4)
-                utils.makeUnit(xml.iAxeman, con.iByzantium, tStartingPlot, 3)
-                utils.makeUnit(xml.iArcher, con.iByzantium, tStartingPlot, 2)
+                        pUnit.setName(text("TXT_KEY_GREAT_PERSON_BELISARIUS"))
+                make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
+                make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
+                make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
                 if iPlayer == iHuman:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_CONQUEROR_BELISARIUS", ())
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_CONQUEROR_BELISARIUS"))
 
         # Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
         if iPlayer == iHuman:
             # Seljuks
-            if iGameTurn == xml.i1064AD - 7:
-                if iPlayer == con.iByzantium:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
-                    )
-                    popup.launch()
-            elif iGameTurn == xml.i1094AD + 1:
-                if iPlayer == con.iByzantium:
-                    popup = Popup.PyPopup()
+            if iGameTurn == year(1064) - 7:
+                if iPlayer == Civ.BYZANTIUM.value:
+                    show(("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
+            elif iGameTurn == year(1094) + 1:
+                if iPlayer == Civ.BYZANTIUM.value:
                     sText = "Seljuk"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
             # Mongols
-            elif iGameTurn == xml.i1236AD - 7:
-                if iPlayer in [con.iKiev, con.iHungary, con.iPoland, con.iBulgaria]:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
-                    )
-                    popup.launch()
-            elif iGameTurn == xml.i1288AD + 1:
-                if iPlayer in [con.iKiev, con.iHungary, con.iPoland, con.iBulgaria]:
-                    popup = Popup.PyPopup()
+            elif iGameTurn == year(1236) - 7:
+                if iPlayer in [
+                    Civ.KIEV.value,
+                    Civ.HUNGARY.value,
+                    Civ.POLAND.value,
+                    Civ.BULGARIA.value,
+                ]:
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
+            elif iGameTurn == year(1288) + 1:
+                if iPlayer in [
+                    Civ.KIEV.value,
+                    Civ.HUNGARY.value,
+                    Civ.POLAND.value,
+                    Civ.BULGARIA.value,
+                ]:
                     sText = "Tatar"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
             # Timurids
-            elif iGameTurn == xml.i1380AD - 7:
-                if iPlayer in [con.iArabia, con.iTurkey, con.iByzantium]:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_TIMURID_INVASION_START", ())
-                    )
-                    popup.launch()
-            elif iGameTurn == xml.i1431AD + 1:
-                if iPlayer in [con.iArabia, con.iTurkey, con.iByzantium]:
-                    popup = Popup.PyPopup()
+            elif iGameTurn == year(1380) - 7:
+                if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
+                    show(text("TXT_KEY_EVENT_TIMURID_INVASION_START"))
+            elif iGameTurn == year(1431) + 1:
+                if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
                     sText = "Timurid"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
 
         # Absinthe: Denmark UP
-        if iPlayer == con.iDenmark:
+        if iPlayer == Civ.DENMARK.value:
             self.up.soundUP(iPlayer)
 
         # Absinthe: Aragonese UP
         # safety check: probably redundant, calls from onBuildingBuilt, onCityBuilt, onCityAcquired and onCityRazed should be enough
-        elif iPlayer == con.iAragon:
+        elif iPlayer == Civ.ARAGON.value:
             self.up.confederationUP(iPlayer)
 
         # Ottoman UP
-        if gc.hasUP(iPlayer, con.iUP_Janissary):
+        if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value):
             self.up.janissaryDraftUP(iPlayer)
 
         self.pla.checkPlayerTurn(iGameTurn, iPlayer)
         self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
-        if gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers:
+        if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
             if gc.getPlayer(iPlayer).getNumCities() > 0:
                 self.sta.updateBaseStability(iGameTurn, iPlayer)
 
@@ -946,26 +785,17 @@ class CvRFCEventHandler:
 
         self.crusade.checkPlayerTurn(iGameTurn, iPlayer)
 
-        ##print ("PLAYER FINE", iPlayer)
-        ##print( " out Begin Player Turn ",iGameTurn, iPlayer )
-
     def onEndPlayerTurn(self, argsList):
+        """Called at the end of a players turn"""
         # 3Miro does not get called
         iGameTurn, iPlayer = argsList
-        # print (" 3Miro END PLAYER", iPlayer, iGameTurn)
-
-        "Called at the end of a players turn"
 
     def onEndGameTurn(self, argsList):
-        # 3Miro when everyone end their turn
         iGameTurn = argsList[0]
-        print(" 3Miro END TURN ", iGameTurn)
         self.sta.checkImplosion(iGameTurn)
-        # 3MiroMercs
         self.mercs.doMercsTurn(iGameTurn)
 
     def onReligionSpread(self, argsList):
-
         iReligion, iOwner, pSpreadCity = argsList
         self.sta.onReligionSpread(iReligion, iOwner)
         self.rel.onReligionSpread(iReligion, iOwner)
@@ -989,62 +819,41 @@ class CvRFCEventHandler:
             argsList[11],
             argsList[12],
         ]
-        if iPlayer < con.iNumPlayers:
-            print("ChangeAllCivics civic change, player:", iPlayer)
-            print("ChangeAllCivics civic change, new civics:", lNewCivics)
-            print("ChangeAllCivics civic change, old civics:", lOldCivics)
+        if iPlayer < civilizations().majors().len():
             self.rel.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
 
     def onPlayerChangeSingleCivic(self, argsList):
         # note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)
         "Civics are changed for a player"
         iPlayer, iNewCivic, iOldCivic = argsList
-        if iPlayer < con.iNumPlayers:
-            print("ChangeSingleCivic civic change, Player, NewCivic, OldCivic:", argsList)
-
-    # Absinthe: end
 
     def onPlayerChangeStateReligion(self, argsList):
         "Player changes his state religion"
         iPlayer, iNewReligion, iOldReligion = argsList
 
-        if iPlayer < iNumPlayers:
+        if iPlayer < civilizations().majors().len():
             self.company.onPlayerChangeStateReligion(argsList)
 
     def onTechAcquired(self, argsList):
-
-        # print ("onTechAcquired", argsList)
         iPlayer = argsList[2]
-
-        iHuman = utils.getHumanID()
-
         self.vic.onTechAcquired(argsList[0], argsList[2])
-        # self.res.onTechAcquired(argsList[0], argsList[2])
 
         if (
             gc.getPlayer(iPlayer).isAlive()
-            and gc.getGame().getGameTurn() > con.tBirth[iPlayer]
-            and iPlayer < con.iNumPlayers
+            and turn() > civilization(iPlayer).date.birth
+            and iPlayer < civilizations().majors().len()
         ):
             self.rel.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
 
     def onPreSave(self, argsList):
         "called before a game is actually saved"
-        sd.save()  # edead: pickle & save script data
+        data.save()  # edead: pickle & save script data
 
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
-        sd.load()  # edead: load & unpickle script data
+        data.load()  # edead: load & unpickle script data
         DataLoader.setup()  # Absinthe: also needed on loading saved games
-        # pass
-
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-
-        # global objMercenaryUtils
-
-        # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
@@ -1053,39 +862,16 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-        # 	pUnit, iPromotion = argsList
-        # 	player = PyPlayer(pUnit.getOwner())
-        #
-        # 	if (objMercenaryUtils.isMercenary(pUnit)):
-        # 		CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
-
     # This method will remove a mercenary unit from the game if it is killed
     def onUnitKilled(self, argsList):
         "Unit Killed"
 
         self.mercs.onUnitKilled(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-
-        # unit, iAttacker = argsList
-
-        # mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
-
-        # if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-        # strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-        ## Inform the player that the mercenary has died.
-        # CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
-
-        # objMercenaryUtils.removePlayerMercenary(unit)
-
     # This method will remove a mercenary unit from the game if it is lost
     def onUnitLost(self, argsList):
         "Unit Lost"
 
-        # print(" 3Miro: onUnitLost ")
         self.mercs.onUnitLost(argsList)
 
     # This method handles the key input and will bring up the mercenary manager screen if the
@@ -1093,11 +879,8 @@ class CvRFCEventHandler:
     def onKbdEvent(self, argsList):
         "keypress handler - return 1 if the event was consumed"
 
-        iHuman = utils.getHumanID()
-        if gc.getGame().getGameTurn() >= con.tBirth[iHuman]:
-
+        if player().isAlive():
             eventType, key, mx, my, px, py = argsList
-
             theKey = int(key)
 
             if (
@@ -1120,7 +903,7 @@ class CvRFCEventHandler:
             and self.eventManager.bAlt
         ):
 
-            iGameTurn = gc.getGame().getGameTurn()
+            iGameTurn = turn()
             pass
 
         if (
@@ -1128,12 +911,7 @@ class CvRFCEventHandler:
             and theKey == int(InputTypes.KB_N)
             and self.eventManager.bAlt
         ):
-
-            print("ALT-N")
-
-            # self.printEmbassyDebug()
             self.printPlotsDebug()
-            # self.printStabilityDebug()
 
         if (
             eventType == self.EventKeyDown
@@ -1141,13 +919,9 @@ class CvRFCEventHandler:
             and self.eventManager.bAlt
             and self.eventManager.bShift
         ):
-            print(
-                "SHIFT-ALT-E"
-            )  # picks a dead civ so that autoplay can be started with game.AIplay xx
-            iDebugDeadCiv = iBurgundy  # always dead in 500AD
-            # 3Miro: not sure
-            # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(con.iCalendar, True, iDebugDeadCiv, False, False)
-            utils.makeUnit(xml.iAxeman, iDebugDeadCiv, (0, 0), 1)
+            # picks a dead civ so that autoplay can be started with game.AIplay xx
+            iDebugDeadCiv = Civ.BURGUNDY  # always dead in 500AD
+            make_unit(iDebugDeadCiv, Unit.AXEMAN, (0, 0))
             gc.getGame().setActivePlayer(iDebugDeadCiv, False)
             gc.getPlayer(iDebugDeadCiv).setPlayable(True)
         # Rhye - end debug
@@ -1165,7 +939,7 @@ class CvRFCEventHandler:
             plot = gc.getMap().plot(px, py)
             iActivePlayer = gc.getGame().getActivePlayer()
             iActiveTeam = gc.getPlayer(iActivePlayer).getTeam()
-            iProvinceID = rfcemaps.tProvinceMap[plot.getY()][plot.getX()]
+            iProvinceID = PROVINCES_MAP[plot.getY()][plot.getX()]
 
             # do not show provinces of unrevealed tiles
             if not plot.isRevealed(iActiveTeam, False) and not gc.getGame().isDebugMode():
@@ -1180,18 +954,15 @@ class CvRFCEventHandler:
 
             # clear the highlight
             engine.clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
-            # engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS)
 
             # cache the plot's coords
-            self.lastProvinceID = rfcemaps.tProvinceMap[plot.getY()][plot.getX()]
+            self.lastProvinceID = PROVINCES_MAP[plot.getY()][plot.getX()]
 
             # select an appropriate color
-            if (
-                rfcemaps.tProvinceMap[plot.getY()][plot.getX()] == -1
-            ):  # ocean and non-province tiles
+            if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 return
             else:
-                iLevel = utils.getProvinceStabilityLevel(iHuman, iProvinceID)
+                iLevel = utils.getProvinceStabilityLevel(human(), iProvinceID)
                 if iLevel == 4:
                     color = gc.getColorInfo(
                         gc.getInfoTypeForString("COLOR_HIGHLIGHT_CORE")
@@ -1216,7 +987,7 @@ class CvRFCEventHandler:
             # apply the highlight
             for i in range(map.numPlots()):
                 plot = map.plotByIndex(i)
-                if rfcemaps.tProvinceMap[plot.getY()][plot.getX()] == iProvinceID and (
+                if PROVINCES_MAP[plot.getY()][plot.getX()] == iProvinceID and (
                     gc.getGame().isDebugMode() or plot.isRevealed(iActiveTeam, False)
                 ):
                     engine.fillAreaBorderPlot(
@@ -1246,25 +1017,21 @@ class CvRFCEventHandler:
         pass
 
     def printStabilityDebug(self):
-        print("Stability")
-        for iCiv in range(con.iNumPlayers):
+        for iCiv in civilizations().majors().ids():
             if gc.getPlayer(iCiv).isAlive():
                 print(
                     "Base:",
                     utils.getBaseStabilityLastTurn(iCiv),
                     "Modifier:",
-                    utils.getStability(iCiv) - utils.getBaseStabilityLastTurn(iCiv),
+                    player(iCiv).getStability() - utils.getBaseStabilityLastTurn(iCiv),
                     "Total:",
-                    utils.getStability(iCiv),
+                    player(iCiv).getStability(),
                     "civic",
                     gc.getPlayer(iCiv).getCivics(5),
                     gc.getPlayer(iCiv).getCivilizationDescription(0),
                 )
-                for i in range(con.iNumStabilityParameters):
-                    print("Parameter", i, utils.getStabilityParameters(iCiv, i))
-            else:
-                print("dead", iCiv)
-        for i in range(con.iNumPlayers):
+
+        for i in civilizations().majors().ids():
             print(
                 gc.getPlayer(i).getCivilizationShortDescription(0),
                 "PLOT OWNERSHIP ABROAD:",

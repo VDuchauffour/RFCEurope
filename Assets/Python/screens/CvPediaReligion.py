@@ -11,11 +11,11 @@ from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
 import string
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaReligion:
@@ -152,7 +152,7 @@ class CvPediaReligion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -184,7 +184,7 @@ class CvPediaReligion:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_EFFECTS", ()),
+            text("TXT_KEY_PEDIA_EFFECTS"),
             "",
             True,
             False,

@@ -1,5 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+from CoreStructures import player
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser
@@ -52,7 +53,6 @@ import CvMercenaryManager
 
 
 # Rhye - start
-import Consts as con
 import RFCUtils
 
 utils = RFCUtils.RFCUtils()
@@ -60,8 +60,7 @@ g_bIsScreenActive = -1
 
 
 def getStability(argsList):
-    return utils.getStability(argsList[0])
-    # return gc.getPlayer( argsList[0] ).getStability()
+    return player(argsList[0]).getStability()
 
 
 def countAchievedGoals(argsList):
@@ -69,8 +68,6 @@ def countAchievedGoals(argsList):
 
 
 def resetStabilityParameters(argsList):
-    for i in range(con.iNumStabilityParameters):
-        utils.setStabilityParameters(i, 0)
     utils.setLastRecordedStabilityStuff(0, 0)
     utils.setLastRecordedStabilityStuff(1, 0)
     utils.setLastRecordedStabilityStuff(2, 0)
@@ -91,13 +88,11 @@ def toggleStabilityOverlay():
 
 def toggleSetNoScreens():
     global g_bIsScreenActive
-    print("SCREEN OFF")
     g_bIsScreenActive = -1
 
 
 def toggleSetScreenOn(argsList):
     global g_bIsScreenActive
-    print("%s SCREEN TURNED ON" % (argsList[0],))
     g_bIsScreenActive = argsList[0]
 
 
@@ -612,7 +607,6 @@ def WorldBuilderGetHighlightPlot(argsList):
 
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
     iList, iIndex, iTab = argsList
-    print("WB Advanced Start brush selected, iList=%d, iIndex=%d, type=%d" % (iList, iIndex, iTab))
     if iTab == worldBuilderScreen.m_iASTechTabID:
         showTechChooser()
     elif (
@@ -636,7 +630,6 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 
 def WorldBuilderOnNormalPlayerBrushSelected(argsList):
     iList, iIndex, iTab = argsList
-    print("WB brush selected, iList=%d, iIndex=%d, type=%d" % (iList, iIndex, iTab))
     if worldBuilderScreen.setCurrentNormalPlayerIndex(iIndex):
         return 1
     return 0
@@ -644,7 +637,6 @@ def WorldBuilderOnNormalPlayerBrushSelected(argsList):
 
 def WorldBuilderOnNormalMapBrushSelected(argsList):
     iList, iIndex, iTab = argsList
-    print("WB brush selected, iList=%d, iIndex=%d, type=%d" % (iList, iIndex, iTab))
     if worldBuilderScreen.setCurrentNormalMapIndex(iIndex):
         if worldBuilderScreen.setCurrentNormalMapList(iList):
             return 1
@@ -1007,7 +999,6 @@ def handleBack(screens):
         if HandleNavigationMap.has_key(iScreen):
             screen = HandleNavigationMap.get(iScreen)
             screen.back()
-    print("Mouse BACK")
     return 0
 
 
@@ -1016,7 +1007,6 @@ def handleForward(screens):
         if HandleNavigationMap.has_key(iScreen):
             screen = HandleNavigationMap.get(iScreen)
             screen.forward()
-    print("Mouse FWD")
     return 0
 
 

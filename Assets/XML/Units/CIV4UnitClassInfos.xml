@@ -548,8 +548,6 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SPY</DefaultUnit>
 		</UnitClassInfo>
-		<!-- Persecutor's unitclass: it's ordered number is referenced in the XMLConst.py -->
-		<!-- 54th class currently, so iProsecutorClass = 53 -->
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROSECUTOR</Type>
 			<Description>TXT_KEY_UNIT_PROSECUTOR</Description>

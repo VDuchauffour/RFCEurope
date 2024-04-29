@@ -1,29 +1,27 @@
+from __future__ import annotations
+from itertools import chain
+import numpy as np
 import argparse
 import re
 from dataclasses import dataclass
-from itertools import product
 from pathlib import Path
 from random import randint
 
 from PIL import Image, ImageOps
+from Consts import MINOR_CIVS
+from CoreData import civilizations
 
-from constants import (
-    broader_areas_br,
-    broader_areas_tl,
-    core_areas_br,
-    core_areas_tl,
-    extra_plots,
-    name_civ,
-    normal_areas_br,
-    normal_areas_substract,
-    normal_areas_tl,
-)
+from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA, CIV_PROVINCES
+from CoreTypes import Civ, Province, ProvinceType
+from ProvinceMapData import PROVINCES_MAP
 
+PROVINCES_MAP = np.asarray(PROVINCES_MAP)
 DEFAULT_COLORS = {
-    "peak": (84, 84, 84),
-    "hill": (163, 125, 34),
-    "ocean": (0, 0, 128),
-    "coast": (0, 0, 255),
+    "base": (175, 175, 175),  # (0, 128, 0),
+    "peak": (34, 34, 34),
+    "hill": (70, 70, 34),  # (163, 125, 34),
+    "ocean": (50, 100, 100),  # (0, 0, 128),
+    "coast": (50, 100, 100),  # (0, 0, 255),
     "river": (0, 140, 255),
     "grass": (0, 155, 55),
     "desert": (255, 255, 168),
@@ -36,6 +34,12 @@ DEFAULT_COLORS = {
     "oasis": (192, 255, 255),
     "flood_plains": (192, 255, 0),
     "fallout": (32, 64, 0),
+}
+PROVINCES_COLORS = {
+    "core": (41, 249, 255),  # (0, 100, 0),
+    "historical": (8, 179, 69),  # (0, 255, 0),
+    "potential": (253, 184, 51),  # (255, 255, 0),
+    "contested": (255, 82, 82),
 }
 
 
@@ -70,21 +74,15 @@ class CivIVMap:
 
     @property
     def all_features(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.feature for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.feature for plot in self.plots)))
 
     @property
     def all_terrains(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.terrain for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.terrain for plot in self.plots)))
 
     @property
     def all_bonuses(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.bonus for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.bonus for plot in self.plots)))
 
 
 @dataclass
@@ -96,7 +94,7 @@ class ElementColor:
 class ColorsPicker:
     def __init__(self, map: CivIVMap):
         self.items = map.all_features + map.all_terrains + map.all_bonuses
-        self.items += ["peak", "hill", "river"]
+        self.items += ["peak", "hill", "river", "base"]
         self.colors = self.init_colors()
 
     @staticmethod
@@ -156,22 +154,17 @@ class WBSaveParser:
 
 
 class MapRenderer:
-    def __init__(
-        self,
-        map: CivIVMap,
-        output_format: str,
-        upscale_factor: int = 15,
-    ):
+    def __init__(self, map: CivIVMap, output_format: str, upscale_factor: int = 15):
         self.map = map
         self.colors = ColorsPicker(map).colors
         self.output_format = output_format
         self.upscale_factor = upscale_factor
-        self.base_img = Image.new("RGB", (self.map.width, self.map.height), (0, 128, 0))
+        self.base_img = Image.new(
+            "RGB", (self.map.width, self.map.height), self.get_colors("base")
+        )
 
     @staticmethod
-    def draw(
-        img: Image.Image, plots: list[Plot], color: tuple[int, int, int]
-    ) -> Image.Image:
+    def draw(img: Image.Image, plots: list[Plot], color: tuple[int, int, int]) -> Image.Image:
         for plot in plots:
             img.putpixel((plot.x, plot.y), color)
         return img
@@ -188,9 +181,7 @@ class MapRenderer:
         self, img: Image.Image, condition: str, patterns: list[str]
     ) -> Image.Image:
         for pattern in patterns:
-            plots = [
-                plot for plot in self.map.plots if getattr(plot, condition) == pattern
-            ]
+            plots = [plot for plot in self.map.plots if getattr(plot, condition) == pattern]
             img = MapRenderer.draw(img, plots, self.get_colors(pattern))
         return img
 
@@ -205,10 +196,7 @@ class MapRenderer:
     def upscale_map(self, img: Image.Image) -> Image.Image:
         img = ImageOps.flip(img)
         img = img.resize(
-            (
-                self.map.width * self.upscale_factor,
-                self.map.height * self.upscale_factor,
-            ),
+            (self.map.width * self.upscale_factor, self.map.height * self.upscale_factor),
             resample=Image.Resampling.NEAREST,
         )
         return img
@@ -224,117 +212,94 @@ class MapRenderer:
         img = self.apply_water(img)
         img = self.elevate(img)
         img = self.upscale_map(img)
-        self.save_drawing(img, output_path, "base_map")
+        self.save_drawing(img, output_path, "base")
 
     def draw_rivers_map(self, output_path: str) -> None:
         img = self.base_img.copy()
         img = self.apply_water(img)
         img = self.draw_plot_properties(img, "has_river")
         img = self.upscale_map(img)
-        self.save_drawing(img, output_path, "rivers_map")
+        self.save_drawing(img, output_path, "rivers")
 
     def draw_features_map(self, output_path: str) -> None:
         img = self.base_img.copy()
         img = self.apply_water(img)
         img = self.draw_patterns_with_condition(img, "feature", self.map.all_features)
         img = self.upscale_map(img)
-        self.save_drawing(img, output_path, "features_map")
+        self.save_drawing(img, output_path, "features")
 
     def draw_terrains_map(self, output_path: str) -> None:
         img = self.base_img.copy()
         img = self.apply_water(img)
         img = self.draw_patterns_with_condition(img, "terrain", self.map.all_terrains)
         img = self.upscale_map(img)
-        self.save_drawing(img, output_path, "terrains_map")
+        self.save_drawing(img, output_path, "terrains")
 
     def draw_bonuses_map(self, output_path: str) -> None:
         img = self.base_img.copy()
         img = self.apply_water(img)
         img = self.draw_patterns_with_condition(img, "bonus", self.map.all_bonuses)
         img = self.upscale_map(img)
-        self.save_drawing(img, output_path, "bonuses_map")
+        self.save_drawing(img, output_path, "bonuses")
 
-    def draw_spawning_map(self, output_path: str):
-        assert (
-            len(name_civ)
-            == len(core_areas_tl)
-            == len(core_areas_br)
-            == len(extra_plots)
-            == len(normal_areas_tl)
-            == len(normal_areas_br)
-            == len(broader_areas_tl)
-            == len(broader_areas_br)
-        )
-        core_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(core_areas_tl, core_areas_br)
-        ]
-        core_areas = []
-        for i, country_area in enumerate(core_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            core_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
-            for plot in extra_plots[i]:
-                try:
-                    core_areas += Plot(plot[i][0], plot[i][1], "", "", "", "", "")
-                except:
-                    pass
-        normal_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(normal_areas_tl, normal_areas_br)
-        ]
-        normal_areas = []
-        for i, country_area in enumerate(normal_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            areas = [
-                area
-                for area in areas
-                for s in normal_areas_substract[i]
-                if area[0] != s[0] and area[1] != s[1]
-            ]
-            # l = [for s in normal_areas_substract[i]]
-            # if s[0] != x and s[1] != y
+    def _extract_provinces(self, province):
+        plots = []
+        indices = np.where(PROVINCES_MAP == province.value)
+        for y, x in zip(indices[0], indices[1]):
+            plots.append(Plot(x, y, "", "", "", "", ""))
+        return plots
 
-            normal_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
+    def extract_provinces(self, provinces):
+        plots = []
+        for province in provinces:
+            plots.append(self._extract_provinces(province))
+        plots = chain.from_iterable(plots)
+        return plots
 
-        broader_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(broader_areas_tl, broader_areas_br)
-        ]
-        broader_areas = []
-        for i, country_area in enumerate(broader_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            broader_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
-        for i, country in enumerate(name_civ):
+    def draw_provinces_map(self, output_path: str):
+        for province in Province:
             img = self.base_img.copy()
-            img = ImageOps.flip(img)
-            img = self.draw(img, broader_areas[i], (230, 0, 200))
-            img = self.draw(img, normal_areas[i], (200, 230, 0))
-            img = self.draw(img, core_areas[i], (0, 200, 230))
-            img = ImageOps.flip(img)
+            img = self.draw(img, self._extract_provinces(province), PROVINCES_COLORS["potential"])
+
             img = self.apply_water(img)
+            img = self.draw_plot_properties(img, "is_peak")
             img = self.upscale_map(img)
-            self.save_drawing(img, output_path + "/spawning_areas", f"{country}_map")
+            self.save_drawing(img, output_path + "/provinces", f"{province.name}")
+
+    def draw_provinces_stability_map(self, output_path: str):
+        for civ in civilizations():
+            if civ.id not in MINOR_CIVS + [Civ.POPE.value]:
+                img = self.base_img.copy()
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.CORE]),
+                    PROVINCES_COLORS["core"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.HISTORICAL]),
+                    PROVINCES_COLORS["historical"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.POTENTIAL]),
+                    PROVINCES_COLORS["potential"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.CONTESTED]),
+                    PROVINCES_COLORS["contested"],
+                )
+                img = self.apply_water(img)
+                img = self.draw_plot_properties(img, "is_peak")
+                img = self.upscale_map(img)
+                self.save_drawing(img, output_path + "/provinces_stability", f"{civ.key.name}")
+
+    def normalize_plot(self, plots):
+        _plots = []
+        for plot in plots:
+            _plots.append(Plot(plot.x, self.map.height - plot.y - 1, "", "", "", "", ""))
+        return _plots
 
     def run(
         self,
@@ -343,7 +308,8 @@ class MapRenderer:
         features: bool,
         terrains: bool,
         bonuses: bool,
-        spawning: bool,
+        provinces: bool,
+        provinces_stability: bool,
     ) -> None:
         self.draw_base_map(output_path)
         if rivers:
@@ -354,15 +320,15 @@ class MapRenderer:
             self.draw_terrains_map(output_path)
         if bonuses:
             self.draw_bonuses_map(output_path)
-        if spawning:
-            self.draw_spawning_map(output_path)
+        if provinces:
+            self.draw_provinces_map(output_path)
+        if provinces_stability:
+            self.draw_provinces_stability_map(output_path)
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-f", "--file", action="store", type=str, help="WBSave to convert."
-    )
+    parser.add_argument("-f", "--file", action="store", type=str, help="WBSave to convert.")
     parser.add_argument(
         "-d", "--destination", action="store", type=str, help="Destination folder."
     )
@@ -376,10 +342,7 @@ def main():
         help="File saving format, ie. bmp or png. Default to png",
     )
     parser.add_argument(
-        "--rivers",
-        action="store_true",
-        default=False,
-        help="Draw rivers map. Default to False.",
+        "--rivers", action="store_true", default=False, help="Draw rivers map. Default to False."
     )
     parser.add_argument(
         "--features",
@@ -394,22 +357,22 @@ def main():
         help="Draw terrains map. Default to False.",
     )
     parser.add_argument(
-        "--bonuses",
-        action="store_true",
-        default=False,
-        help="Draw bonuses map. Default to False.",
+        "--bonuses", action="store_true", default=False, help="Draw bonuses map. Default to False."
     )
     parser.add_argument(
-        "--spawning",
+        "--provinces",
+        action="store_true",
+        default=False,
+        help="Draw provinces map. Default to False",
+    )
+    parser.add_argument(
+        "--provinces-stability",
         action="store_true",
         default=True,
-        help="Draw spawning map. Default to True",
+        help="Draw provinces stability map. Default to True",
     )
     parser.add_argument(
-        "--all",
-        action="store_true",
-        default=False,
-        help="Draw all maps. Default to False.",
+        "--all", action="store_true", default=False, help="Draw all maps. Default to False."
     )
 
     args = parser.parse_args()
@@ -418,7 +381,8 @@ def main():
         args.features = True
         args.terrains = True
         args.bonuses = True
-        args.spawning = True
+        args.provinces = True
+        args.provinces_stability = True
 
     parser = WBSaveParser()
     map = parser.parse(args.file)
@@ -429,7 +393,8 @@ def main():
         args.features,
         args.terrains,
         args.bonuses,
-        args.spawning,
+        args.provinces,
+        args.provinces_stability,
     )
 
 

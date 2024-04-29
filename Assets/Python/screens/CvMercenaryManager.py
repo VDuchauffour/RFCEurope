@@ -6,13 +6,13 @@
 # 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
+from CoreFunctions import text
+from CoreTypes import SpecialParameter, Promotion
 import CvUtil
 import PyHelpers
 
 # import MercenaryUtils
 import Mercenaries
-import Consts as con
-import XMLConsts as xml
 
 # from sets import Set
 # import CvConfigParser #Rhye
@@ -128,7 +128,6 @@ class CvMercenaryManager:
         ## 3Miro: draw the available merc info
         # read in the available mercs
         lAvailableMercs = GMU.getMercGlobalPool()
-        print("lAvailableMercs", lAvailableMercs)
 
         # Get the ID for the current active player
         iPlayer = gc.getGame().getActivePlayer()
@@ -148,7 +147,7 @@ class CvMercenaryManager:
         for lMerc in lAvailableMercs:
             # get the name and note that names are no longer Unique
             iMerc = lMerc[0]
-            mercenaryName = CyTranslator().getText(lMercList[iMerc][1], ())
+            mercenaryName = text(lMercList[iMerc][1])
 
             # Absinthe: religion and culture will be checked on the hire button, so the mercs appear on the list even if you can't hire them
             if lMerc[4] not in lProvList:  # we have no matching provinces, skip
@@ -212,7 +211,7 @@ class CvMercenaryManager:
 
             # Absinthe: Add the province name
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
-            sProvName = localText.getText(sProvName, ())
+            sProvName = text(sProvName)
 
             screen.attachLabel(
                 szUniqueInternalName + "Text",
@@ -559,10 +558,7 @@ class CvMercenaryManager:
         else:
             screen.appendListBoxString(
                 MERCENARY_INFORMATION_DETAILS_LIST_ID,
-                pUnitInfo.getDescription()
-                + " ("
-                + CyTranslator().getText(lMercList[iMerc][1], ())
-                + ")",
+                pUnitInfo.getDescription() + " (" + text(lMercList[iMerc][1]) + ")",
                 WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT,
                 lMercList[lMerc[0]][0],
                 -1,
@@ -676,10 +672,10 @@ class CvMercenaryManager:
         # 3Miro: Add the provinces
         iPlayer = gc.getGame().getActivePlayer()
         pPlayer = gc.getPlayer(iPlayer)
-        szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES", ())
+        szProvinces = text("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES")
         if lMerc[4] > -1:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
-            sProvName = localText.getText(sProvName, ())
+            sProvName = text(sProvName)
             szProvinces = szProvinces + " " + u"<color=0,255,0>%s</color>" % (sProvName)
 
             # Absinthe: add the money, culture, coastal city and religion prereq texts
@@ -692,7 +688,7 @@ class CvMercenaryManager:
                     + "\n"
                     + u"<color=255,0,0>Can't hire them:</color>"
                     + " "
-                    + localText.getText("TXT_KEY_MERC_NOT_ENOUGH_MONEY", ())
+                    + text("TXT_KEY_MERC_NOT_ENOUGH_MONEY")
                 )
             # Absinthe: checks if the player has a city with enough culture in the province
             bCulturedEnough = False
@@ -708,7 +704,7 @@ class CvMercenaryManager:
                     + "\n"
                     + u"<color=255,0,0>Can't hire them:</color>"
                     + " "
-                    + localText.getText("TXT_KEY_MERC_LACK_CULTURE", ())
+                    + text("TXT_KEY_MERC_LACK_CULTURE")
                 )
             # Absinthe: checks if the player has a coastal city in the province
             bHasCoastalCity = True
@@ -727,7 +723,7 @@ class CvMercenaryManager:
                     + "\n"
                     + u"<color=255,0,0>Can't hire them:</color>"
                     + " "
-                    + localText.getText("TXT_KEY_MERC_NO_PORT", ())
+                    + text("TXT_KEY_MERC_NO_PORT")
                 )
             # Absinthe: checks for the correct religion
             iStateReligion = pPlayer.getStateReligion()
@@ -737,7 +733,7 @@ class CvMercenaryManager:
                     + "\n"
                     + u"<color=255,0,0>Can't hire them:</color>"
                     + " "
-                    + localText.getText("TXT_KEY_MERC_WRONG_RELIGION", ())
+                    + text("TXT_KEY_MERC_WRONG_RELIGION")
                 )
         else:
             szProvinces = ""
@@ -766,7 +762,7 @@ class CvMercenaryManager:
         strCost = u"%s %c: %1.2f" % (
             "Mercenary Maintenance",
             gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),
-            0.01 * pPlayer.getPicklefreeParameter(con.iMercCostPerTurn),
+            0.01 * pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value),
         )
 
         # Get the players current gold text
@@ -1076,7 +1072,9 @@ class CvMercenaryManager:
         totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
         totalInflatedCosts = pPlayer.calculateInflatedCosts()
         # totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-        totalMercenaryCost = (pPlayer.getPicklefreeParameter(con.iMercCostPerTurn) + 99) / 100
+        totalMercenaryCost = (
+            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+        ) / 100
         # totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
         # Colony Upkeep
         iColonyNumber = pPlayer.getNumColonies()
@@ -1178,7 +1176,6 @@ class CvMercenaryManager:
 
         for pUnit in unitList:
             if pUnit.getMercID() == iMerc:
-                # print(" 3Miro: firing: ",iMerc)
                 GMU.fireMerc(pUnit)
                 screen.deleteWidget(
                     "HiredMercID" + self.numToStr(iMerc)
@@ -1259,8 +1256,6 @@ class CvMercenaryManager:
                 dummy, iMerc = szUniqueInternalName.split("MercID")
                 # iMerc = int( iMerc )
                 iMerc = self.strToNum(iMerc)
-                print("Find mercenary: ", iMerc)
-
                 # Convert the unit ID string back into a number
                 # unitID = self.alphaToNumber(unitID)
 
@@ -1275,7 +1270,6 @@ class CvMercenaryManager:
                 unitList = PyPlayer(iPlayer).getUnitList()
                 for pUnit in unitList:
                     if pUnit.getMercID() == iMerc:
-                        print("Mercenary found: ", iMerc, pUnit.getX(), pUnit.getY())
                         pMercUnit = pUnit
                         break
 
@@ -1317,8 +1311,8 @@ class CvMercenaryManager:
                     if lGlobalMercPool[iI][0] == iMerc:
                         lMerc = lGlobalMercPool[iI]
 
-                if xml.iPromotionMerc not in lMerc[1]:
-                    lMerc[1].append(xml.iPromotionMerc)
+                if Promotion.MERC.value not in lMerc[1]:
+                    lMerc[1].append(Promotion.MERC.value)
 
                 self.calculateScreenWidgetData(screen)
 
@@ -1347,14 +1341,12 @@ class CvMercenaryManager:
 
                 lPromotionList = []
                 # almost all promotions are available through experience, so this is not only for the otherwise used iNumTotalMercPromotions (in Mercenaries.py)
-                for iPromotion in range(
-                    xml.iNumPromotions - 1
-                ):  # merc promotion is added separately
+                for iPromotion in range(len(Promotion) - 1):  # merc promotion is added separately
                     if pMerc.isHasPromotion(iPromotion):
                         lPromotionList.append(iPromotion)
 
-                if xml.iPromotionMerc not in lPromotionList:
-                    lPromotionList.append(xml.iPromotionMerc)
+                if Promotion.MERC.value not in lPromotionList:
+                    lPromotionList.append(Promotion.MERC.value)
 
                 lMerc = [iMerc, lPromotionList, 0, iUpkeepCost, -1]
 
@@ -1410,13 +1402,11 @@ class CvMercenaryManager:
         strScreenTitle = ""
 
         if self.currentScreen == MERCENARY_MANAGER:
-            strScreenTitle = localText.getText("TXT_KEY_MERCENARY_SCREEN_TITLE", ()).upper()
+            strScreenTitle = text("TXT_KEY_MERCENARY_SCREEN_TITLE").upper()
         elif self.currentScreen == MERCENARY_GROUPS_MANAGER:
-            strScreenTitle = localText.getText("TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE", ()).upper()
+            strScreenTitle = text("TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE").upper()
         elif self.currentScreen == MERCENARY_CONTRACT_MANAGER:
-            strScreenTitle = localText.getText(
-                "TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE", ()
-            ).upper()
+            strScreenTitle = text("TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE").upper()
 
         # Screen title panel information
         self.screenWidgetData[SCREEN_TITLE_PANEL_WIDTH] = self.screenWidgetData[SCREEN_WIDTH]
@@ -1425,7 +1415,7 @@ class CvMercenaryManager:
         self.screenWidgetData[SCREEN_TITLE_PANEL_Y] = 0
         self.screenWidgetData[SCREEN_TITLE_TEXT_PANEL] = (
             u"<font=4b>"
-            + localText.getText("TXT_KEY_MERCENARIES_SCREEN_TITLE", ()).upper()
+            + text("TXT_KEY_MERCENARIES_SCREEN_TITLE").upper()
             + ": "
             + strScreenTitle
             + "</font>"
@@ -1440,17 +1430,13 @@ class CvMercenaryManager:
         self.screenWidgetData[BOTTOM_PANEL_Y] = self.screenWidgetData[SCREEN_HEIGHT] - 55
 
         self.screenWidgetData[MERCENARIES_TEXT_PANEL] = (
-            u"<font=4>"
-            + localText.getText("TXT_KEY_MERCENARY_SCREEN_TITLE", ()).upper()
-            + "</font>"
+            u"<font=4>" + text("TXT_KEY_MERCENARY_SCREEN_TITLE").upper() + "</font>"
         )
         self.screenWidgetData[MERCENARIES_TEXT_PANEL_X] = 30
         self.screenWidgetData[MERCENARIES_TEXT_PANEL_Y] = self.screenWidgetData[SCREEN_HEIGHT] - 42
 
         self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL] = (
-            u"<font=4>"
-            + localText.getText("TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE", ()).upper()
-            + "</font>"
+            u"<font=4>" + text("TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE").upper() + "</font>"
         )
         self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL_X] = 220
         self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL_Y] = (
@@ -1458,9 +1444,7 @@ class CvMercenaryManager:
         )
 
         self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL] = (
-            u"<font=4>"
-            + localText.getText("TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE", ()).upper()
-            + "</font>"
+            u"<font=4>" + text("TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE").upper() + "</font>"
         )
         # Commented out since mercenary groups are not being implemented in the v0.5 release of the mod.
         # self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL_X] = 485
@@ -1470,7 +1454,7 @@ class CvMercenaryManager:
         )
 
         self.screenWidgetData[EXIT_TEXT_PANEL] = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>"
         )
         self.screenWidgetData[EXIT_TEXT_PANEL_X] = self.screenWidgetData[SCREEN_WIDTH] - 30
         self.screenWidgetData[EXIT_TEXT_PANEL_Y] = self.screenWidgetData[SCREEN_HEIGHT] - 42
@@ -1519,7 +1503,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_AVAILABLE_MERCENARIES", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_AVAILABLE_MERCENARIES") + "</font>"
         )
         self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL_X] = self.screenWidgetData[
             AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_X
@@ -1572,7 +1556,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[HIRED_MERCENARIES_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[HIRED_MERCENARIES_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_HIRED_MERCENARIES", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_HIRED_MERCENARIES") + "</font>"
         )
         self.screenWidgetData[HIRED_MERCENARIES_TEXT_PANEL_X] = self.screenWidgetData[
             HIRED_MERCENARIES_TEXT_BACKGROUND_PANEL_X
@@ -1621,7 +1605,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[MERCENARY_INFORMATION_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[MERCENARY_INFORMATION_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_MERCENARY_INFORMATION", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_MERCENARY_INFORMATION") + "</font>"
         )
         self.screenWidgetData[MERCENARY_INFORMATION_TEXT_PANEL_X] = self.screenWidgetData[
             MERCENARY_INFORMATION_TEXT_BACKGROUND_PANEL_X
@@ -1739,7 +1723,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_UNITS_CONTRACTED_OUT", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_UNITS_CONTRACTED_OUT") + "</font>"
         )
         self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_X] = self.screenWidgetData[
             UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_X
@@ -1792,7 +1776,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_AVAILABLE_UNITS", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_AVAILABLE_UNITS") + "</font>"
         )
         self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL_X] = self.screenWidgetData[
             AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_X
@@ -1841,7 +1825,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[UNIT_INFORMATION_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_UNIT_INFORMATION", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_UNIT_INFORMATION") + "</font>"
         )
         self.screenWidgetData[UNIT_INFORMATION_TEXT_PANEL_X] = self.screenWidgetData[
             UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_X
@@ -2017,7 +2001,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_AVAILABLE_MERCENARY_GROUPS", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_AVAILABLE_MERCENARY_GROUPS") + "</font>"
         )
         self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_X] = self.screenWidgetData[
             AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X
@@ -2072,7 +2056,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_HIRED_MERCENARY_GROUPS", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_HIRED_MERCENARY_GROUPS") + "</font>"
         )
         self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL_X] = self.screenWidgetData[
             HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X
@@ -2121,7 +2105,7 @@ class CvMercenaryManager:
         )
         self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
         self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_PANEL] = (
-            "<font=3b>" + localText.getText("TXT_KEY_MERCENARY_GROUP_INFORMATION", ()) + "</font>"
+            "<font=3b>" + text("TXT_KEY_MERCENARY_GROUP_INFORMATION") + "</font>"
         )
         self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_PANEL_X] = self.screenWidgetData[
             MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_X
