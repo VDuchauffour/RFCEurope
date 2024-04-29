@@ -3,6 +3,7 @@ from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreStructures import (
     human,
+    is_major_civ,
     is_minor_civ,
     make_unit,
     make_units,

@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
-from CoreFunctions import event_popup, message, text
+from CoreFunctions import event_popup, location, message, text
 from CoreStructures import human, make_unit, make_units, turn, cities, plots
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
