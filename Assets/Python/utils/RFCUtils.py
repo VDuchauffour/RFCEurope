@@ -423,7 +423,7 @@ class RFCUtils:
                         iNumUnitsInAPlot = tempPlot.getNumUnits()
                         for i in range(iNumUnitsInAPlot):
                             unit = tempPlot.getUnit(0)
-                            unit.setXYOld(location(plot))
+                            unit.setXYOld(*location(plot))
                         iCiv = iNewOwner
                         if not bRevealedZero:
                             gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1)

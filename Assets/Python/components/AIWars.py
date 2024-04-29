@@ -1,9 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - AI Wars
 
 from CvPythonExtensions import *
+from Consts import INDEPENDENT_CIVS
 from CoreData import civilizations, civilization
 from CoreFunctions import get_data_from_upside_down_map
-from CoreStructures import is_independent_civ, turn, year, plots
+from CoreStructures import is_major_civ, turn, year, plots
 from CoreTypes import Civ
 from PyUtils import rand
 import RFCUtils
@@ -125,12 +126,11 @@ class AIWars:
             self.setNextTurnAIWar(iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval))
 
     def pickCivs(self):
-        iCiv = -1
-        iTargetCiv = -1
         iCiv = self.chooseAttackingPlayer()
-        if 0 <= iCiv <= civilizations().majors().len():
-            iTargetCiv = self.checkGrid(iCiv)
-            return (iCiv, iTargetCiv)
+        if iCiv != -1:
+            if is_major_civ(iCiv):
+                iTargetCiv = self.checkGrid(iCiv)
+                return (iCiv, iTargetCiv)
         else:
             return (-1, -1)
 
@@ -191,7 +191,6 @@ class AIWars:
                 return iCiv
             else:
                 return -1
-        return -1
 
     def checkGrid(self, iCiv):
         pCiv = gc.getPlayer(iCiv)
@@ -218,7 +217,7 @@ class AIWars:
         for plot in plots().all().not_owner(iCiv).not_owner(Civ.BARBARIAN).entities():
             if lTargetCivs[plot.getOwner()] > 0:
                 iValue = get_data_from_upside_down_map(WARS_MAP, iCiv, plot)
-                if is_independent_civ(plot):
+                if plot.getOwner() in INDEPENDENT_CIVS:
                     iValue /= 3
                 lTargetCivs[plot.getOwner()] += iValue
 

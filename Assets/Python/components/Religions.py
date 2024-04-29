@@ -7,7 +7,7 @@ from CvPythonExtensions import (
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreFunctions import event_popup, get_religion_by_id, message, text
+from CoreFunctions import event_popup, get_religion_by_id, location, message, text
 from CoreStructures import human, player, year, cities
 from CoreTypes import (
     Building,
@@ -591,7 +591,7 @@ class Religions:
         return False
 
     def spreadReligion(self, tPlot, iReligion):
-        x, y = tPlot
+        x, y = location(tPlot)
         pPlot = gc.getMap().plot(x, y)
         if pPlot.isCity():
             pPlot.getPlotCity().setHasReligion(
