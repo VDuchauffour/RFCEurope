@@ -251,8 +251,8 @@ class Religions:
         # General 6% chance to spread Jews to a random city in every third turn
         if year(800) < iGameTurn < year(1700) and iGameTurn % 3 == 0:
             if percentage_chance(6, strict=True):
-                tCity = self.selectRandomCityAll()
-                if tCity:
+                tCity = cities().all().random_entry()
+                if tCity is not None:
                     self.spreadReligion(tCity, Religion.JUDAISM.value)
 
         # Additional 11% chance to spread Jews to a random Central European city in every third turn
@@ -564,25 +564,6 @@ class Religions:
             for city in cityList:
                 if city.isHasReligion(Religion.JUDAISM.value):
                     city.setHasRealBuilding(Building.JEWISH_QUARTER.value, True)
-
-    def selectRandomCityAll(self):
-        "selects a random city from the whole map"
-        cityList = []
-        for iPlayer in civilizations().ids():
-            cityList.extend(cities().owner(iPlayer)).entities()
-        if cityList:
-            city = choice(cityList)
-            return (city.getX(), city.getY())
-        return False
-
-    def selectRandomCityCiv(self, iCiv):
-        "selects a random city from a given civ"
-        if gc.getPlayer(iCiv).isAlive():
-            cityList = cities().owner(iCiv).entities()
-            if cityList:
-                city = choice(cityList)
-                return (city.getX(), city.getY())
-        return False
 
     def selectRandomCityRegion(self, tProvinces, iReligionToSpread, bNoSpreadWithReligion=False):
         cityList = []
