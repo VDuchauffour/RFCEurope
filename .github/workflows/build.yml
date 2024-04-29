@@ -18,6 +18,7 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Install build dependencies
+        shell: pwsh
         run: |
           Invoke-WebRequest http://kael.civfanatics.net/files/VCToolkitSetup.exe -OutFile ${env:TEMP}\VCToolkitSetup.exe
           & ${env:TEMP}\VCToolkitSetup.exe /s /v"/qb"
@@ -26,6 +27,7 @@ jobs:
           Invoke-WebRequest http://kael.civfanatics.net/files/msvcrtd.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcrtd.lib"
           Invoke-WebRequest http://kael.civfanatics.net/files/msvcprt.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcprt.lib"
       - name: Build DLL
+        shell: pwsh
         run: msbuild CvGameCoreDLL\CvGameCoreDLL.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
       - name: Upload artifact
         uses: actions/upload-artifact@v3
