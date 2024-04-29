@@ -280,6 +280,3 @@ class AIWars:
         if iMaxValue >= iMinValue:
             return iTargetCiv
         return -1
-
-    def forgetMemory(self, iTech, iPlayer):
-        pass
