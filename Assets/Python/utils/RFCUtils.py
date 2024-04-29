@@ -506,7 +506,9 @@ class RFCUtils:
             if not lOldOwners or iOldOwner in lOldOwners:
 
                 if bKillUnits:
-                    for unit in units().at(x, y).filter(lambda unit: not unit.isCargo()):
+                    for unit in (
+                        units().at(x, y).filter(lambda unit: not unit.isCargo()).entities()
+                    ):
                         unit.kill(False, iNewOwner)
 
                 pNewOwner.acquireCity(flipCity, bConquest, not bConquest)
@@ -817,7 +819,7 @@ class RFCUtils:
                 )
         if not bAssignOneCity:
             # flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
-            for unit in plots().all().units().owner(iCiv):
+            for unit in units().owner(iCiv).entities():
                 unit.kill(False, Civ.BARBARIAN.value)
             self.resetUHV(iCiv)
 

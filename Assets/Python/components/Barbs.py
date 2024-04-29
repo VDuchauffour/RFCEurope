@@ -3302,7 +3302,7 @@ class Barbs:
 
     def killNeighbours(self, tCoords):
         "Kills all units in the neigbbouring tiles of plot (as well as plot itself) so late starters have some space."
-        for unit in plots().surrounding(tCoords).units():
+        for unit in plots().surrounding(tCoords).units().entities():
             unit.kill(False, Civ.BARBARIAN.value)
 
     def onImprovementDestroyed(self, iX, iY):
