@@ -1700,8 +1700,12 @@ class RiseAndFall:
                 lPlotIndyFlip = []
                 # if inside the core rectangle and extra plots, and in 4 (barb) or 2 (indy) distance from the starting plot, append to barb or indy flip zone
 
-                lSurroundingPlots4 = plots().surrounding(tCapital, radius=4)
-                lSurroundingPlots2 = plots().surrounding(tCapital, radius=2)
+                lSurroundingPlots4 = [
+                    location(plot) for plot in plots().surrounding(tCapital, radius=4).entities()
+                ]
+                lSurroundingPlots2 = [
+                    location(plot) for plot in plots().surrounding(tCapital, radius=2).entities()
+                ]
                 for tPlot in (
                     plots()
                     .rectangle(tTopLeft, tBottomRight)
