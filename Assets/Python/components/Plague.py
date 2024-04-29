@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
 from CoreFunctions import location, message, owner, text
+from CoreFunctions import plot as _plot
 from CoreStructures import human, player, turn, year, cities, plots
 from CoreStructures import city as _city
 from CoreTypes import PlagueType, Improvement, Civ
@@ -172,11 +173,9 @@ class Plague:
             if self.getPlagueCountdown(iPlayer) == 0:
                 return True
         else:
-            pPlayer = gc.getPlayer(iPlayer)
             if self.getPlagueCountdown(iPlayer) == 0:
                 # Absinthe: health doesn't matter for the Black Death, everyone is vulnerable
-                bBadPlague = self.getBadPlague()
-                if bBadPlague:
+                if self.getBadPlague():
                     return True
                 else:
                     iHealth = self.calcHealth(iPlayer)
@@ -286,9 +285,9 @@ class Plague:
         # 			Plague of Justinian deals even less initial damage
         bFirstPlague = self.getFirstPlague()
         if bFirstPlague:
-            self.killUnitsByPlague(city, gc.getMap().plot(location(city)), 0, 80, 0)
+            self.killUnitsByPlague(city, _plot(city), 0, 80, 0)
         else:
-            self.killUnitsByPlague(city, gc.getMap().plot(location(city)), 0, 90, 0)
+            self.killUnitsByPlague(city, _plot(city), 0, 90, 0)
 
     def killUnitsByPlague(self, city, plot, iThreshold, iDamage, iPreserveDefenders):
         iCityOwner = city.getOwner()
@@ -457,7 +456,7 @@ class Plague:
                 for plot in (
                     plots()
                     .surrounding(city, radius=2)
-                    .filter(lambda p: not p.isOwned())
+                    .filter(lambda p: p.isOwned())
                     .without(city)
                     .entities()
                 ):
@@ -467,9 +466,10 @@ class Plague:
                         and not _city(plot).isHasRealBuilding(PlagueType.PLAGUE.value)
                     ):
                         self.infectCity(_city(plot))
-                    elif self.isVulnerable(plot.getOwner()):
-                        self.spreadPlague(plot.getOwner(), -1)
-                        self.infectCitiesNear(plot.getOwner(), *location(plot))
+                    else:
+                        if self.isVulnerable(plot.getOwner()):
+                            self.spreadPlague(plot.getOwner(), -1)
+                            self.infectCitiesNear(plot.getOwner(), *location(plot))
             # kill units around the city
             for plot in plots().surrounding(city, radius=3).entities():
                 iDistance = utils.calculateDistance(city.getX(), city.getY(), *location(plot))
