@@ -232,7 +232,7 @@ class Collection(list):
             return self.first()
         return self
 
-    def _apply(self, condition):
+    def apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)
         return [condition(item) for item in self]
@@ -243,7 +243,7 @@ class Collection(list):
         return (item for item, s in zip(self, selectors) if s)
 
     def _filter(self, condition):
-        return self._compress(self._apply(condition))
+        return self._compress(self.apply(condition))
 
     def filter(self, condition):
         """Filter item when `condition` is True."""
@@ -298,18 +298,18 @@ class Collection(list):
 
     def split(self, condition):
         """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
-        status = self._apply(condition)
+        status = self.apply(condition)
         valid_items = self._compress(status)
         rest_items = self._compress(status, negate=True)
         return (self.copy(*valid_items), self.copy(*rest_items))
 
     def all(self, condition):
         """Return True if `condition` is True for all items."""
-        return all(self._apply(condition))
+        return all(self.apply(condition))
 
     def any(self, condition):
         """Return True if `condition` is True for at least one items."""
-        return any(self._apply(condition))
+        return any(self.apply(condition))
 
     def none(self, condition):
         """Return True if `condition` is False for all items."""
@@ -435,7 +435,7 @@ class EntitiesCollection(Collection):
     def add(self, other):
         return self.__add__(other)
 
-    def _apply(self, condition):
+    def apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)
         return [condition(self._factory(item)) for item in self]
@@ -482,7 +482,7 @@ class EnumCollection(Collection):
 
     def ids(self):
         """Return a list of identifiers."""
-        return self._apply(lambda c: c.id)
+        return self.apply(lambda c: c.id)
 
 
 class EnumCollectionFactory(object):

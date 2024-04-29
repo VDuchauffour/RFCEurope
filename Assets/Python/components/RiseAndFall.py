@@ -1710,7 +1710,7 @@ class RiseAndFall:
                     plots()
                     .rectangle(tTopLeft, tBottomRight)
                     .add(civilization(iCiv).location.area.core.additional_tiles)
-                    ._apply(location)  # TODO  fix this with _keyify by default
+                    .apply(location)  # TODO  fix this with _keyify by default
                 ):
                     if tPlot in lSurroundingPlots2:
                         lPlotIndyFlip.append(tPlot)
