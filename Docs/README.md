@@ -23,9 +23,9 @@ This script need at least Python >= 3.9 and the dependency `Pillow`.
 
 Exemple of usage:
 
-```python
-pip install Pillow
-python Docs/Tools/map_renderer.py -f ./PrivateMaps/RFCEurope\ 1200AD.CivBeyondSwordWBSave -d Docs/Maps
+```shell
+pip install -r requirements-dev.txt
+python Docs/Tools/map_renderer.py -f ./PrivateMaps/RFCEurope\ 1200AD.CivBeyondSwordWBSave -d Docs/Maps --all
 ```
 
 Here the full help message of the script.

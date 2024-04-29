@@ -8,9 +8,10 @@ from pathlib import Path
 from random import randint
 
 from PIL import Image, ImageOps
+from Consts import MINOR_CIVS
 from CoreData import civilizations
 
-from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA
+from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA, CIV_PROVINCES
 from CoreTypes import Civ, Province, ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 
@@ -266,32 +267,33 @@ class MapRenderer:
             self.save_drawing(img, output_path + "/provinces", f"{province.name}")
 
     def draw_provinces_stability_map(self, output_path: str):
-        for civ in civilizations().main():
-            img = self.base_img.copy()
-            img = self.draw(
-                img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.CORE]),
-                PROVINCES_COLORS["core"],
-            )
-            img = self.draw(
-                img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.HISTORICAL]),
-                PROVINCES_COLORS["historical"],
-            )
-            img = self.draw(
-                img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.POTENTIAL]),
-                PROVINCES_COLORS["potential"],
-            )
-            img = self.draw(
-                img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.CONTESTED]),
-                PROVINCES_COLORS["contested"],
-            )
-            img = self.apply_water(img)
-            img = self.draw_plot_properties(img, "is_peak")
-            img = self.upscale_map(img)
-            self.save_drawing(img, output_path + "/provinces_stability", f"{civ.key.name}")
+        for civ in civilizations():
+            if civ.id not in MINOR_CIVS + [Civ.POPE.value]:
+                img = self.base_img.copy()
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.CORE]),
+                    PROVINCES_COLORS["core"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.HISTORICAL]),
+                    PROVINCES_COLORS["historical"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.POTENTIAL]),
+                    PROVINCES_COLORS["potential"],
+                )
+                img = self.draw(
+                    img,
+                    self.extract_provinces(CIV_PROVINCES[civ.key][ProvinceType.CONTESTED]),
+                    PROVINCES_COLORS["contested"],
+                )
+                img = self.apply_water(img)
+                img = self.draw_plot_properties(img, "is_peak")
+                img = self.upscale_map(img)
+                self.save_drawing(img, output_path + "/provinces_stability", f"{civ.key.name}")
 
     def normalize_plot(self, plots):
         _plots = []
