@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import (
     human,
+    is_minor_civ,
     make_unit,
     make_units,
     player,
@@ -12,6 +13,7 @@ from CoreStructures import (
     turn,
     units,
     cities,
+    plots,
 )
 from CoreTypes import (
     City,
@@ -32,13 +34,21 @@ from LocationsData import CITIES
 import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand
+from SettlerMapData import SETTLERS_MAP
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
-from CoreFunctions import city, get_religion_by_id, location, message, text
+from CoreFunctions import (
+    city,
+    get_data_from_upside_down_map,
+    get_religion_by_id,
+    location,
+    message,
+    text,
+)
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
-from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
+from Consts import WORLD_HEIGHT, MessageData
 
 # globals
 gc = CyGlobalContext()
@@ -352,26 +362,12 @@ class RFCUtils:
                     break
             make_unit(iCiv, RangedClass, tCityPlot)
 
-    def killUnitsInArea(self, tTopLeft, tBottomRight, iCiv):
-        for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
-            killPlot = gc.getMap().plot(x, y)
-            iNumUnitsInAPlot = killPlot.getNumUnits()
-            if iNumUnitsInAPlot > 0:
-                iSkippedUnit = 0
-                for i in range(iNumUnitsInAPlot):
-                    unit = killPlot.getUnit(iSkippedUnit)
-                    if unit.getOwner() == iCiv:
-                        unit.kill(False, Civ.BARBARIAN.value)
-                    else:
-                        iSkippedUnit += 1
-
     def killAllUnitsInArea(self, tTopLeft, tBottomRight):
-        for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
-            killPlot = gc.getMap().plot(x, y)
-            iNumUnitsInAPlot = killPlot.getNumUnits()
+        for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+            iNumUnitsInAPlot = plot.getNumUnits()
             if iNumUnitsInAPlot > 0:
                 for i in range(iNumUnitsInAPlot):
-                    unit = killPlot.getUnit(0)
+                    unit = plot.getUnit(0)
                     unit.kill(False, Civ.BARBARIAN.value)
 
     def killUnitsInPlots(self, lPlots, iCiv):
@@ -403,19 +399,18 @@ class RFCUtils:
             for i in range(iNumUnitsInAPlot):
                 unit = killPlot.getUnit(0)
                 unit.kill(False, Civ.BARBARIAN.value)
-        for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
-            killPlot = gc.getMap().plot(x, y)
-            iNumUnitsInAPlot = killPlot.getNumUnits()
+        for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+            iNumUnitsInAPlot = plot.getNumUnits()
             if iNumUnitsInAPlot > 0:
                 bRevealedZero = False
                 if gc.getMap().plot(28, 0).isRevealed(gc.getPlayer(iNewOwner).getTeam(), False):
                     bRevealedZero = True
-                if bSkipPlotCity and killPlot.isCity():
+                if bSkipPlotCity and plot.isCity():
                     pass
                 else:
                     j = 0
                     for i in range(iNumUnitsInAPlot):
-                        unit = killPlot.getUnit(j)
+                        unit = plot.getUnit(j)
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
@@ -590,88 +585,67 @@ class RFCUtils:
                 Civ.INDEPENDENT_4.value,
             ]
             if iNewOwner not in lMinors:
-                for (x, y) in self.surroundingPlots(tCityPlot, 2):
+                for plot in plots().surrounding(tCityPlot, radius=2).entities():
                     for iMinor in lMinors:
-                        iPlotMinorCulture = gc.getMap().plot(x, y).getCulture(iMinor)
+                        iPlotMinorCulture = plot.getCulture(iMinor)
                         if iPlotMinorCulture > 0:
-                            if (
-                                gc.getMap().plot(x, y).getPlotCity().isNone()
-                                or (x, y) == tCityPlot
-                            ):
+                            if plot.isNone() or location(plot) == tCityPlot:
                                 if bBarbarian2x2Decay:
-                                    gc.getMap().plot(x, y).setCulture(
-                                        iMinor, iPlotMinorCulture / 4, True
-                                    )
+                                    plot.setCulture(iMinor, iPlotMinorCulture / 4, True)
                                 if bBarbarian2x2Conversion:
-                                    gc.getMap().plot(x, y).setCulture(iMinor, 0, True)
+                                    plot.setCulture(iMinor, 0, True)
                                     # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-                                    gc.getMap().plot(x, y).changeCulture(
-                                        iNewOwner, iPlotMinorCulture, True
-                                    )
+                                    plot.changeCulture(iNewOwner, iPlotMinorCulture, True)
 
         # plot
-        for (x, y) in self.surroundingPlots(tCityPlot):
-            pCurrent = gc.getMap().plot(x, y)
-            iCurrentPlotCulture = pCurrent.getCulture(iOldOwner)
+        for plot in plots().surrounding(tCityPlot).entities():
+            iCurrentPlotCulture = plot.getCulture(iOldOwner)
 
-            if pCurrent.isCity():
+            if plot.isCity():
                 # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-                pCurrent.changeCulture(
-                    iNewOwner, iCurrentPlotCulture * iCulturePercent / 100, True
-                )
+                plot.changeCulture(iNewOwner, iCurrentPlotCulture * iCulturePercent / 100, True)
                 # Absinthe: only half of the amount is lost
-                pCurrent.setCulture(
+                plot.setCulture(
                     iOldOwner, iCurrentPlotCulture * (100 - iCulturePercent / 2) / 100, True
                 )
             else:
                 # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-                pCurrent.changeCulture(
+                plot.changeCulture(
                     iNewOwner, iCurrentPlotCulture * iCulturePercent / 3 / 100, True
                 )
                 # Absinthe: only half of the amount is lost
-                pCurrent.setCulture(
+                plot.setCulture(
                     iOldOwner, iCurrentPlotCulture * (100 - iCulturePercent / 6) / 100, True
                 )
 
-            # cut other players culture
-            ##				for iCiv in civilizations().majors().ids():
-            ##					if (iCiv != iNewOwner and iCiv != iOldOwner):
-            ##						iPlotCulture = gc.getMap().plot(x, y).getCulture(iCiv)
-            ##						if (iPlotCulture > 0):
-            ##							gc.getMap().plot(x, y).setCulture(iCiv, iPlotCulture/3, True)
-
-            if not pCurrent.isCity():
+            if not plot.isCity():
                 if bAlwaysOwnPlots:
-                    pCurrent.setOwner(iNewOwner)
+                    plot.setOwner(iNewOwner)
                 else:
-                    if pCurrent.getCulture(iNewOwner) * 4 > pCurrent.getCulture(iOldOwner):
-                        pCurrent.setOwner(iNewOwner)
+                    if plot.getCulture(iNewOwner) * 4 > plot.getCulture(iOldOwner):
+                        plot.setOwner(iNewOwner)
 
     # RFCEventHandler
     def spreadMajorCulture(self, iMajorCiv, iX, iY):
         # Absinthe: spread some of the major civ's culture to the nearby indy cities
-        for (x, y) in self.surroundingPlots((iX, iY), 4):
-            pCurrent = gc.getMap().plot(x, y)
-            if pCurrent.isCity():
-                city = pCurrent.getPlotCity()
-                if city.getPreviousOwner() >= civilizations().majors().len():
-                    iMinor = city.getPreviousOwner()
-                    iDen = 25
-                    if gc.getPlayer(iMajorCiv).getSettlersMaps(WORLD_HEIGHT - y - 1, x) >= 400:
-                        iDen = 10
-                    elif gc.getPlayer(iMajorCiv).getSettlersMaps(WORLD_HEIGHT - y - 1, x) >= 150:
-                        iDen = 15
+        for city in plots().surrounding((iX, iY), radius=4).cities().entities():
+            if is_minor_civ(city.getPreviousOwner()):
+                previous_owner = city.getPreviousOwner()
+                iDen = 25
+                if get_data_from_upside_down_map(SETTLERS_MAP, iMajorCiv, city) >= 400:
+                    iDen = 10
+                elif get_data_from_upside_down_map(SETTLERS_MAP, iMajorCiv, city) >= 150:
+                    iDen = 15
 
-                    # Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
-                    iMinorCityCulture = city.getCulture(iMinor)
-                    city.changeCulture(iMajorCiv, iMinorCityCulture / iDen, True)
+                # Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
+                iMinorCityCulture = city.getCulture(previous_owner)
+                city.changeCulture(iMajorCiv, iMinorCityCulture / iDen, True)
 
-                    iMinorPlotCulture = pCurrent.getCulture(iMinor)
-                    pCurrent.changeCulture(iMajorCiv, iMinorPlotCulture / iDen, True)
+                iMinorPlotCulture = city.getCulture(previous_owner)
+                city.changeCulture(iMajorCiv, iMinorPlotCulture / iDen, True)
 
     # UniquePowers, Crusades, RiseAndFall
     def convertPlotCulture(self, pCurrent, iCiv, iPercent, bOwner):
-
         if pCurrent.isCity():
             city = pCurrent.getPlotCity()
             iCivCulture = city.getCulture(iCiv)
@@ -682,12 +656,6 @@ class RFCUtils:
                     city.setCulture(civ, city.getCulture(civ) * (100 - iPercent) / 100, True)
             city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
-        ##		for iLoopCiv in civilizations().drop(Civ.BARBARIAN).ids():
-        ##			if (iLoopCiv != iCiv):
-        ##				iLoopCivCulture = pCurrent.getCulture(iLoopCiv)
-        ##				iCivCulture = pCurrent.getCulture(iCiv)
-        ##				pCurrent.setCulture(iLoopCiv, iLoopCivCulture*(100-iPercent)/100, True)
-        ##				pCurrent.setCulture(iCiv, iCivCulture + iLoopCivCulture*iPercent/100, True)
         iCivCulture = pCurrent.getCulture(iCiv)
         iLoopCivCulture = 0
         for civ in civilizations().drop(Civ.BARBARIAN).ids():
@@ -701,15 +669,11 @@ class RFCUtils:
     # RiseAndFall
     def pushOutGarrisons(self, tCityPlot, iOldOwner):
         tDestination = (-1, -1)
-        for (x, y) in self.surroundingPlots(tCityPlot, 2):
-            pDestination = gc.getMap().plot(x, y)
-            if (
-                pDestination.getOwner() == iOldOwner
-                and not pDestination.isWater()
-                and not pDestination.isImpassable()
-            ):
-                tDestination = (x, y)
-                break
+        for plot in (
+            plots().surrounding(tCityPlot, radius=2).passable().land().owner(iOldOwner).entities()
+        ):
+            tDestination = location(plot)
+            break
         if tDestination != (-1, -1):
             plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
             iNumUnitsInAPlot = plotCity.getNumUnits()
@@ -729,11 +693,9 @@ class RFCUtils:
                 tDestination = (city.getX(), city.getY())
                 break
         if tDestination == (-1, -1):
-            for (x, y) in self.surroundingPlots(tCityPlot, 12):
-                pDestination = gc.getMap().plot(x, y)
-                if pDestination.isWater():
-                    tDestination = (x, y)
-                    break
+            for plot in plots().surrounding(tCityPlot, radius=12).water().entities():
+                tDestination = location(plot)
+                break
         if tDestination != (-1, -1):
             plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
             iNumUnitsInAPlot = plotCity.getNumUnits()
@@ -855,8 +817,8 @@ class RFCUtils:
                 )
         if not bAssignOneCity:
             # flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
-            # self.flipUnitsInArea((0,0), (WORLD_WIDTH, WORLD_HEIGHT), iNewCiv1, iCiv, False, True)
-            self.killUnitsInArea((0, 0), (WORLD_WIDTH, WORLD_HEIGHT), iCiv)
+            for unit in plots().all().units().owner(iCiv):
+                unit.kill(False, Civ.BARBARIAN.value)
             self.resetUHV(iCiv)
 
             self.setLastTurnAlive(iCiv, turn())
@@ -894,10 +856,10 @@ class RFCUtils:
     def squareSearch(self, tTopLeft, tBottomRight, function, argsList):  # by LOQ
         """Searches all tiles in the square from tTopLeft to tBottomRight and calls function for every tile, passing argsList."""
         tPaintedList = []
-        for tPlot in self.getPlotList(tTopLeft, tBottomRight):
-            bPaintPlot = function(tPlot, argsList)
+        for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+            bPaintPlot = function(location(plot), argsList)
             if bPaintPlot:
-                tPaintedList.append(tPlot)
+                tPaintedList.append(location(plot))
         return tPaintedList
 
     def outerInvasion(self, tCoords, argsList):
@@ -925,8 +887,8 @@ class RFCUtils:
         if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
             if not pCurrent.isUnit():
                 if pCurrent.countTotalCulture() == 0:
-                    for (x, y) in self.surroundingPlots(tCoords):
-                        if gc.getMap().plot(x, y).isUnit():
+                    for plot in plots().surrounding(tCoords).entities():
+                        if plot.isUnit():
                             return False
                     return True
         return False
@@ -936,8 +898,8 @@ class RFCUtils:
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
             if not pCurrent.isUnit():
-                for (x, y) in self.surroundingPlots(tCoords):
-                    if gc.getMap().plot(x, y).isUnit():
+                for plot in plots().surrounding(tCoords).entities():
+                    if plot.isUnit():
                         return False
                 return True
         return False
@@ -949,8 +911,8 @@ class RFCUtils:
             if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.countTotalCulture() == 0:
-                        for (x, y) in self.surroundingPlots(tCoords):
-                            if gc.getMap().plot(x, y).isUnit():
+                        for plot in plots().surrounding(tCoords).entities():
+                            if plot.isUnit():
                                 return False
                         return True
         return False
@@ -962,8 +924,8 @@ class RFCUtils:
             if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.getOwner() in argsList:
-                        for (x, y) in self.surroundingPlots(tCoords):
-                            if gc.getMap().plot(x, y).isUnit():
+                        for plot in plots().surrounding(tCoords).entities():
+                            if plot.isUnit():
                                 return False
                         return True
         return False
@@ -1583,23 +1545,6 @@ class RFCUtils:
             if iCargoSpace > 0:
                 iCargoShips += 1
         return iCargoShips
-
-    def getPlotList(self, tTL, tBR, tExceptions=()):
-        return [
-            (x, y)
-            for x in range(tTL[0], tBR[0] + 1)
-            for y in range(tTL[1], tBR[1] + 1)
-            if 0 <= x < WORLD_WIDTH and 0 <= y < WORLD_HEIGHT and (x, y) not in tExceptions
-        ]
-
-    def surroundingPlots(self, tPlot, iRadius=1):
-        x, y = tPlot
-        return [
-            (i, j)
-            for i in range(x - iRadius, x + iRadius + 1)
-            for j in range(y - iRadius, y + iRadius + 1)
-            if 0 <= i < WORLD_WIDTH and 0 <= j < WORLD_HEIGHT
-        ]
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]

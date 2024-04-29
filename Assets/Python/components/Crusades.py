@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import event_popup, get_civ_by_id, message, text
+from CoreFunctions import event_popup, get_civ_by_id, location, message, text
 from CoreStructures import (
     human,
     make_crusade_unit,
@@ -12,6 +12,7 @@ from CoreStructures import (
     turn,
     year,
     cities,
+    plots,
 )
 import PyHelpers
 from PyUtils import percentage, percentage_chance, rand, choice
@@ -1223,13 +1224,15 @@ class Crusades:
 
         lFreeLandPlots = []
         lLandPlots = []
-        for (x, y) in utils.surroundingPlots((iTX, iTY)):
-            pPlot = gc.getMap().plot(x, y)
-            if (pPlot.isHills() or pPlot.isFlatlands()) and not pPlot.isCity():
-                lLandPlots.append((x, y))
-                if pPlot.getNumUnits() == 0:
-                    lFreeLandPlots.append((x, y))
-
+        for plot in (
+            plots()
+            .surrounding((iTX, iTY))
+            .filter(lambda p: (p.isHills() or p.isFlatlands()) and not p.isCity())
+            .entities()
+        ):
+            lLandPlots.append(location(plot))
+            if plot.getNumUnits() == 0:
+                lFreeLandPlots.append(location(plot))
         # Absinthe: we try to spawn the army west from the target city (preferably northwest), or at least on as low x coordinates as possible
         # 			works great both for Jerusalem (try not to spawn across the Jordan river) and for Constantinople (European side, where the actual city is located)
         # 			also better for most cities in the Levant and in Egypt, and doesn't really matter for the rest
@@ -1585,9 +1588,8 @@ class Crusades:
         if not self.hasSucceeded():
             pPlayer.changeGoldenAgeTurns(gc.getPlayer(iPlayer).getGoldenAgeLength())
             self.setSucceeded()
-            for (x, y) in utils.surroundingPlots(CITIES[City.JERUSALEM]):
-                pPlot = gc.getMap().plot(x, y)
-                utils.convertPlotCulture(pPlot, iPlayer, 100, False)
+            for plot in plots().surrounding(CITIES[City.JERUSALEM]).entities():
+                utils.convertPlotCulture(plot, iPlayer, 100, False)
 
     # Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
     def checkPlayerTurn(self, iGameTurn, iPlayer):

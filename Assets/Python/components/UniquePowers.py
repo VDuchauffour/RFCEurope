@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import message, text
-from CoreStructures import human, make_unit, cities
+from CoreStructures import human, make_unit, cities, plots
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
 
@@ -145,19 +145,12 @@ class UniquePowers:
 
         # Count foreign coastal cities
         iCities = 0
-        for tRect in lBalticRects:
-            for (iX, iY) in utils.getPlotList(tRect[0], tRect[1]):
-                pPlot = gc.getMap().plot(iX, iY)
-                if pPlot.isCity():
-                    pCity = pPlot.getPlotCity()
-                    if pCity.isCoastal(5):
-                        if not bVassal:
-                            if pCity.getOwner() != iPlayer:
-                                iCities += 1
-                        else:
-                            iOwner = pCity.getOwner()
-                            if iOwner != iPlayer and iOwner != utils.getMaster(iOwner) != iPlayer:
-                                iCities += 1
+        for start, end in lBalticRects:
+            for city in (
+                plots().rectangle(start, end).cities().coastal(5).not_owner(iPlayer).entities()
+            ):
+                if not bVassal or city.getOwner() != utils.getMaster(city.getOwner()) != iPlayer:
+                    iCities += 1
         return iCities
 
     # Absinthe: Aragonese UP

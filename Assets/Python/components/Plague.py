@@ -3,8 +3,9 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import message, text
-from CoreStructures import human, turn, year, cities
+from CoreFunctions import location, message, owner, text
+from CoreStructures import human, player, turn, year, cities, plots
+from CoreStructures import city as _city
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
@@ -244,11 +245,8 @@ class Plague:
         if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
             return
 
-        x = city.getX()
-        y = city.getY()
-
         city.setHasRealBuilding(PlagueType.PLAGUE.value, True)
-        if gc.getPlayer(city.getOwner()).isHuman():
+        if player(city).isHuman():
             message(
                 city.getOwner(),
                 text("TXT_KEY_PLAGUE_SPREAD_CITY") + " " + city.getName() + "!",
@@ -256,29 +254,29 @@ class Plague:
                 sound="AS2D_PLAGUE",
                 button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
                 color=MessageData.LIME,
-                location=(x, y),
+                location=location(city),
             )
-        for (i, j) in utils.surroundingPlots((x, y), 2):
-            pPlot = gc.getMap().plot(i, j)
-            iImprovement = pPlot.getImprovementType()
+
+        for plot in plots().surrounding(city, radius=2).entities():
+            iImprovement = plot.getImprovementType()
             # Absinthe: chance for reducing the improvement vs. only resetting the process towards the next level to 0
             if iImprovement == Improvement.TOWN.value:  # 100% chance to reduce towns
-                pPlot.setImprovementType(Improvement.VILLAGE.value)
+                plot.setImprovementType(Improvement.VILLAGE.value)
             elif iImprovement == Improvement.VILLAGE.value:
                 if percentage_chance(75, strict=True):
-                    pPlot.setImprovementType(Improvement.HAMLET.value)
+                    plot.setImprovementType(Improvement.HAMLET.value)
                 else:
-                    pPlot.setUpgradeProgress(0)
+                    plot.setUpgradeProgress(0)
             elif iImprovement == Improvement.HAMLET.value:
-                if percentage_chance(50, strict=50):
-                    pPlot.setImprovementType(Improvement.COTTAGE.value)
+                if percentage_chance(50, strict=True):
+                    plot.setImprovementType(Improvement.COTTAGE.value)
                 else:
-                    pPlot.setUpgradeProgress(0)
+                    plot.setUpgradeProgress(0)
             elif iImprovement == Improvement.COTTAGE.value:
                 if percentage_chance(25, strict=True):
-                    pPlot.setImprovementType(-1)
+                    plot.setImprovementType(-1)
                 else:
-                    pPlot.setUpgradeProgress(0)
+                    plot.setUpgradeProgress(0)
 
         # Absinthe: one population is killed by default
         if city.getPopulation() > 1:
@@ -288,9 +286,9 @@ class Plague:
         # 			Plague of Justinian deals even less initial damage
         bFirstPlague = self.getFirstPlague()
         if bFirstPlague:
-            self.killUnitsByPlague(city, gc.getMap().plot(x, y), 0, 80, 0)
+            self.killUnitsByPlague(city, gc.getMap().plot(location(city)), 0, 80, 0)
         else:
-            self.killUnitsByPlague(city, gc.getMap().plot(x, y), 0, 90, 0)
+            self.killUnitsByPlague(city, gc.getMap().plot(location(city)), 0, 90, 0)
 
     def killUnitsByPlague(self, city, plot, iThreshold, iDamage, iPreserveDefenders):
         iCityOwner = city.getOwner()
@@ -456,29 +454,25 @@ class Plague:
 
             # spread plague in 2 distance around the city
             if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
-                for (x, y) in utils.surroundingPlots((city.getX(), city.getY()), 2):
-                    plot = gc.getMap().plot(x, y)
-
-                    if not plot.isOwned():
-                        continue
-                    if (city.getX(), city.getY()) == (x, y):
-                        continue
-
-                    if plot.getOwner() == iPlayer:
-                        if plot.isCity():
-                            cityNear = plot.getPlotCity()
-                            if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
-                                self.infectCity(cityNear)
-                    else:
-                        if self.isVulnerable(plot.getOwner()):
-                            self.spreadPlague(plot.getOwner(), -1)
-                            self.infectCitiesNear(plot.getOwner(), x, y)
-
+                for plot in (
+                    plots()
+                    .surrounding(city, radius=2)
+                    .filter(lambda p: not p.isOwned())
+                    .without(city)
+                    .entities()
+                ):
+                    if (
+                        owner(plot, iPlayer)
+                        and plot.isCity()
+                        and not _city(plot).isHasRealBuilding(PlagueType.PLAGUE.value)
+                    ):
+                        self.infectCity(_city(plot))
+                    elif self.isVulnerable(plot.getOwner()):
+                        self.spreadPlague(plot.getOwner(), -1)
+                        self.infectCitiesNear(plot.getOwner(), *location(plot))
             # kill units around the city
-            for (x, y) in utils.surroundingPlots((city.getX(), city.getY()), 3):
-                plot = gc.getMap().plot(x, y)
-                iDistance = utils.calculateDistance(city.getX(), city.getY(), x, y)
-
+            for plot in plots().surrounding(city, radius=3).entities():
+                iDistance = utils.calculateDistance(city.getX(), city.getY(), *location(plot))
                 if iDistance == 0:  # City
                     self.killUnitsByPlague(city, plot, 20, 40, 2)
                 elif not plot.isCity():

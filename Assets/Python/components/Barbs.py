@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
 from CoreFunctions import event_popup, message, text
-from CoreStructures import human, make_unit, make_units, turn, cities
+from CoreStructures import human, make_unit, make_units, turn, cities, plots
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 import RFCUtils
@@ -3220,10 +3220,8 @@ class Barbs:
                 return False
 
         # checks the surroundings for cities
-        for (x, y) in utils.surroundingPlots(tCoords):
-            currentPlot = gc.getMap().plot(x, y)
-            if currentPlot.isCity():
-                return False
+        if plots().surrounding(tCoords).cities().entities():
+            return False
         return True
 
     def spawnUnits(
@@ -3304,13 +3302,8 @@ class Barbs:
 
     def killNeighbours(self, tCoords):
         "Kills all units in the neigbbouring tiles of plot (as well as plot itself) so late starters have some space."
-        for (x, y) in utils.surroundingPlots(tCoords):
-            killPlot = CyMap().getPlot(x, y)
-            for i in range(killPlot.getNumUnits()):
-                unit = killPlot.getUnit(
-                    0
-                )  # killPlot.getUnit(0) instead of killPlot.getUnit(i) because killing units changes the indices
-                unit.kill(False, Civ.BARBARIAN.value)
+        for unit in plots().surrounding(tCoords).units():
+            unit.kill(False, Civ.BARBARIAN.value)
 
     def onImprovementDestroyed(self, iX, iY):
         # getHandicapType: Viceroy=0, Monarch=1, Emperor=2)
@@ -3607,16 +3600,17 @@ class Barbs:
     def makeRebels(self, pCity, iUnit, iCount, szName):
         lAvailableFreeTiles = []
         lAvailableTiles = []
-        iTX = pCity.getX()
-        iTY = pCity.getY()
-        for (x, y) in utils.surroundingPlots((iTX, iTY)):
-            pPlot = gc.getMap().plot(x, y)
-            if pPlot.isHills() or pPlot.isFlatlands():
-                if not pPlot.isCity():
-                    if pPlot.getNumUnits() == 0:
-                        lAvailableFreeTiles.append((x, y))
-                    else:
-                        lAvailableTiles.append((x, y))
+        for plot in (
+            plots()
+            .surrounding(pCity)
+            .filter(lambda p: p.isHills() or p.isFlatlands())
+            .filter(lambda p: not p.isCity())
+            .entities()
+        ):
+            if plot.getNumUnits() == 0:
+                lAvailableFreeTiles.append(location(plot))
+            else:
+                lAvailableTiles.append(location(plot))
 
         if lAvailableFreeTiles:
             tPlot = choice(lAvailableFreeTiles)
