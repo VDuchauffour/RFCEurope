@@ -4,7 +4,6 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import (
     human,
-    is_minor_civ,
     make_unit,
     make_units,
     player,
@@ -48,7 +47,7 @@ from CoreFunctions import (
 )
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
-from Consts import WORLD_HEIGHT, MessageData
+from Consts import MINOR_CIVS, WORLD_HEIGHT, MessageData
 
 # globals
 gc = CyGlobalContext()
@@ -631,8 +630,8 @@ class RFCUtils:
     def spreadMajorCulture(self, iMajorCiv, iX, iY):
         # Absinthe: spread some of the major civ's culture to the nearby indy cities
         for city in plots().surrounding((iX, iY), radius=4).cities().entities():
-            if is_minor_civ(city.getPreviousOwner()):
-                previous_owner = city.getPreviousOwner()
+            previous_owner = city.getPreviousOwner()
+            if previous_owner in MINOR_CIVS:
                 iDen = 25
                 if get_data_from_upside_down_map(SETTLERS_MAP, iMajorCiv, city) >= 400:
                     iDen = 10
