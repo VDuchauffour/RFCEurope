@@ -33,7 +33,7 @@ utils = RFCUtils.RFCUtils()
 cnm = CityNameManager.CityNameManager()
 
 
-# Can call DC to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
+# Can call defensive crusade to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
 tDefensiveCrusadeMap = [
     [],  # Byzantium
     [
@@ -299,16 +299,16 @@ class Crusades:
     def setCrusadeToReturn(self, iNewValue):
         data.iCrusadeToReturn = iNewValue
 
-    def isDCEnabled(self):
+    def isDefensiveCrusadeEnabled(self):
         return data.bDCEnabled
 
-    def setDCEnabled(self, bNewValue):
+    def setDefensiveCrusadeEnabled(self, bNewValue):
         data.bDCEnabled = bNewValue
 
-    def getDCLast(self):
+    def getDefensiveCrusadeLast(self):
         return data.iDCLast
 
-    def setDCLast(self, iLast):
+    def setDefensiveCrusadeLast(self, iLast):
         data.iDCLast = iLast
 
     def initVotePopup(self):
@@ -480,15 +480,15 @@ class Crusades:
 
         # Start of Defensive Crusades: indulgences for the Reconquista given by the Catholic Church in 1000AD
         if iGameTurn == year(1000):
-            self.setDCEnabled(True)
+            self.setDefensiveCrusadeEnabled(True)
 
-        # End of Defensive Crusades: no more DCs after Protestantism is founded
-        if self.isDCEnabled():
+        # End of Defensive Crusades: no more defensive crusades after Protestantism is founded
+        if self.isDefensiveCrusadeEnabled():
             if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
-                self.setDCEnabled(False)
+                self.setDefensiveCrusadeEnabled(False)
 
-        if self.isDCEnabled():
-            self.doDC(iGameTurn)
+        if self.isDefensiveCrusadeEnabled():
+            self.doDefensiveCrusade(iGameTurn)
 
         self.checkToStart(iGameTurn)
 
@@ -1615,15 +1615,19 @@ class Crusades:
                         if not pCity.isHasReligion(Religion.CATHOLICISM.value):
                             pCity.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
 
-    def doDC(self, iGameTurn):
-        if iGameTurn < self.getDCLast() + 15:  # wait 15 turns between DCs (Defensive Crusades)
+    def doDefensiveCrusade(self, iGameTurn):
+        if (
+            iGameTurn < self.getDefensiveCrusadeLast() + 15
+        ):  # wait 15 turns between defensive crusades
             return
         if iGameTurn % 5 != rand(5):
             return
         if percentage_chance(33, strict=True):
             return
         lPotentials = [
-            iPlayer for iPlayer in civilizations().main().ids() if self.canDC(iPlayer, iGameTurn)
+            iPlayer
+            for iPlayer in civilizations().main().ids()
+            if self.canDefensiveCrusade(iPlayer, iGameTurn)
         ]
         if lPotentials:
             pPope = gc.getPlayer(Civ.POPE.value)
@@ -1641,15 +1645,15 @@ class Crusades:
 
             iChosenPlayer = choice(lPotentials, weights)
             if iChosenPlayer == human():
-                self.callDCHuman()
+                self.callDefensiveCrusadeHuman()
             else:
-                self.callDCAI(iChosenPlayer)
-            self.setDCLast(iGameTurn)
+                self.callDefensiveCrusadeAI(iChosenPlayer)
+            self.setDefensiveCrusadeLast(iGameTurn)
 
-    def canDC(self, iPlayer, iGameTurn):
+    def canDefensiveCrusade(self, iPlayer, iGameTurn):
         pPlayer = gc.getPlayer(iPlayer)
         teamPlayer = gc.getTeam(pPlayer.getTeam())
-        # only born, flipped and living Catholics can DC
+        # only born, flipped and living Catholics can defensive crusade
         if (
             (iGameTurn < civilization(iPlayer).date.birth + 5)
             or not pPlayer.isAlive()
@@ -1661,7 +1665,7 @@ class Crusades:
             return False
 
         tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
-        # Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
+        # Can defensive crusade if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the defensive crusade map
         for iEnemy in civilizations().main().ids():
             pEnemy = gc.getPlayer(iEnemy)
             if (
@@ -1675,7 +1679,7 @@ class Crusades:
                         return True
         return False
 
-    def callDCHuman(self):
+    def callDefensiveCrusadeHuman(self):
         event_popup(
             7625,
             text("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP"),
@@ -1686,7 +1690,7 @@ class Crusades:
             ],
         )
 
-    def callDCAI(self, iPlayer):
+    def callDefensiveCrusadeAI(self, iPlayer):
         if player().isExisting():
             if (
                 team().canContact(teamtype(iPlayer))
@@ -1696,23 +1700,23 @@ class Crusades:
                     text("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE") + " " + player(iPlayer).getName()
                 )
                 message(human(), sText, force=True, color=MessageData.LIGHT_RED)
-        self.makeDCUnits(iPlayer)
+        self.makeDefensiveCrusadeUnits(iPlayer)
         player(iPlayer).changeFaith(-min(2, player(iPlayer).getFaith()))
 
     def eventApply7625(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
         if iDecision == 0:
-            self.makeDCUnits(human())
+            self.makeDefensiveCrusadeUnits(human())
             player().changeFaith(-min(2, player().getFaith()))
         # else:
         # #pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
         # pass
 
-    def makeDCUnits(self, iPlayer):
+    def makeDefensiveCrusadeUnits(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iFaith = pPlayer.getFaith()
-        iBestInfantry = self.getDCBestInfantry(iPlayer)
-        iBestCavalry = self.getDCBestCavalry(iPlayer)
+        iBestInfantry = self.getDefensiveCrusadeBestInfantry(iPlayer)
+        iBestCavalry = self.getDefensiveCrusadeBestCavalry(iPlayer)
         pCapital = pPlayer.getCapitalCity()
         if pCapital:
             iX = pCapital.getX()
@@ -1830,7 +1834,7 @@ class Crusades:
                     iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
                 )
 
-    def getDCBestInfantry(self, iPlayer):
+    def getDefensiveCrusadeBestInfantry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         lUnits = [
             Unit.GRENADIER.value,
@@ -1843,7 +1847,7 @@ class Crusades:
                 return utils.getUniqueUnit(iPlayer, iUnit)
         return utils.getUniqueUnit(iPlayer, Unit.AXEMAN.value)
 
-    def getDCBestCavalry(self, iPlayer):
+    def getDefensiveCrusadeBestCavalry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         lUnits = [
             Unit.CUIRASSIER.value,
