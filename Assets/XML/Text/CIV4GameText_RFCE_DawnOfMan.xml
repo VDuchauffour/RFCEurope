@@ -290,9 +290,27 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<TEXT> <!-- France -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_1_1200</Tag>
+		<English>The year is 1200 AD, and the Kingdom of France is in the midst of a complex web of alliances and rivalries with its neighboring nations. To the west lies the Kingdom of England, ruled by King John Lackland, who seeks to expand his dominion over the French territories.[NEWLINE]To the south, the Duchy of Aquitaine, controlled by Eleanor of Aquitaine, is a key ally of France. However, her sons, Richard the Lionheart and King John of England, have been at odds with each other for years, threatening the stability of the region.[NEWLINE][NEWLINE]You have been chosen to drive back the English invaders and secure key territories for the French crown. The winds of war are blowing strongly, and your decisions will shape the course of history in this tumultuous era. Will you seek to drive back the English invaders, forge alliances with other nations, or pursue a more cautious strategy? The fate of France rests in your hands.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
 	<TEXT> <!-- Arabia -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2_1200</Tag>
 		<English>The great Saladin has gone to Paradise, after rolling back a century of Christian gains in the Blessed Land. The holy city of al-Quds is now back in Arabian hands, and the infidel "Crusader States" that butchered Muslims by the thousands have been all but eradicated.[NEWLINE][NEWLINE]You have been chosen as the new ruler of the Ayyubid Sultanate, and it is your duty to finish off the last of the Frankish invaders. There may be more Crusades to come, though we have reason to believe that we will be spared, at least for now. With the Christians nearly finished off and stability restored to Egypt and the Levant for the first time in centuries, it is time for a great flourishing of culture and science in the Arab World once more. We should not become too complacent, however; while we may be dominant in the Middle East for now, we should recall the example of the Abbasids and be wary of the Turks to the north...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Bulgaria -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_3_1200</Tag>
+		<English>The year is 1200 AD, and the Second Bulgarian Empire is at the height of its power under the rule of Tsar Kaloyan. The Bulgarians have recently defeated the Byzantines in several key battles, and their influence extends from the Black Sea to the Adriatic coast. To the north lies the Kingdom of Hungary, ruled by King Béla III, who seeks to expand his dominion over the Balkans and secure trade routes with the Western world. The Hungarian army is known for its heavy cavalry and skilled archers.[NEWLINE][NEWLINE]Your mission is to secure key trade routes and expand the Bulgarian Empire at the expense of your rivals.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
