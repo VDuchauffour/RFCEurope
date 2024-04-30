@@ -21,7 +21,7 @@ jobs:
         shell: pwsh
         run: |
           Invoke-WebRequest http://kael.civfanatics.net/files/VCToolkitSetup.exe -OutFile VCToolkitSetup.exe
-          & VCToolkitSetup.exe /s /v"/qb"
+          & .\VCToolkitSetup.exe /s /v"/qb"
           Start-Sleep -s 120
           Invoke-WebRequest http://kael.civfanatics.net/files/msvcrt.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcrt.lib"
           Invoke-WebRequest http://kael.civfanatics.net/files/msvcrtd.lib -OutFile "C:\Program Files (x86)\Microsoft Visual C++ Toolkit 2003\lib\msvcrtd.lib"
