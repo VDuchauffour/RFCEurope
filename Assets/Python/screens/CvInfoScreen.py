@@ -1472,8 +1472,8 @@ class CvInfoScreen:
         min = 0
         for p in self.aiPlayersMet:
             if not gc.getPlayer(p).isMinorCiv():  # Rhye
-                for turn in range(firstTurn, lastTurn + 1):  # noqa: F402
-                    score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
+                for _turn in range(firstTurn, lastTurn + 1):  # noqa: F402
+                    score = self.getHistory(self.iGraphTabID, p, _turn - startTurn)
                     if max < score:
                         max = score
                     if min > score:
@@ -1483,13 +1483,13 @@ class CvInfoScreen:
         xFactor = 1.0 * self.W_GRAPH / (1.0 * (lastTurn - firstTurn))
 
         if lastTurn - firstTurn > 10:
-            turn = (firstTurn + lastTurn) / 2
-            self.drawXLabel(screen, turn, self.X_GRAPH + int(xFactor * (turn - firstTurn)))
+            _turn = (firstTurn + lastTurn) / 2
+            self.drawXLabel(screen, _turn, self.X_GRAPH + int(xFactor * (_turn - firstTurn)))
             if lastTurn - firstTurn > 20:
-                turn = firstTurn + (lastTurn - firstTurn) / 4
-                self.drawXLabel(screen, turn, self.X_GRAPH + int(xFactor * (turn - firstTurn)))
-                turn = firstTurn + 3 * (lastTurn - firstTurn) / 4
-                self.drawXLabel(screen, turn, self.X_GRAPH + int(xFactor * (turn - firstTurn)))
+                _turn = firstTurn + (lastTurn - firstTurn) / 4
+                self.drawXLabel(screen, _turn, self.X_GRAPH + int(xFactor * (_turn - firstTurn)))
+                _turn = firstTurn + 3 * (lastTurn - firstTurn) / 4
+                self.drawXLabel(screen, _turn, self.X_GRAPH + int(xFactor * (_turn - firstTurn)))
 
         # Draw the lines
         for p in self.aiPlayersMet:
@@ -1499,11 +1499,11 @@ class CvInfoScreen:
                 ).getColorTypePrimary()
                 oldX = -1
                 oldY = self.H_GRAPH
-                turn = lastTurn
-                while turn >= firstTurn:
-                    score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
+                _turn = lastTurn
+                while _turn >= firstTurn:
+                    score = self.getHistory(self.iGraphTabID, p, _turn - startTurn)
                     y = self.H_GRAPH - int(yFactor * (score - min))
-                    x = int(xFactor * (turn - firstTurn))
+                    x = int(xFactor * (_turn - firstTurn))
 
                     if x < oldX:
                         if (
@@ -1516,7 +1516,7 @@ class CvInfoScreen:
                         oldX = x
                         oldY = y
 
-                    turn -= 1
+                    _turn -= 1
 
         return
 
