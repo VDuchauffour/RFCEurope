@@ -561,13 +561,14 @@ class Plague:
                 else:
                     iMaxNumInfections = 1
                 iInfections = 0
-                for city in (
+                _cities = (
                     cities()
                     .owner(iPlayer)
                     .filter(lambda c: not c.hasBuilding(PlagueType.PLAGUE.value))
-                    .shuffle()
                     .entities()
-                ):
+                )
+                random.shuffle(_cities)
+                for city in _cities:
                     if percentage_chance(20, strict=True):
                         self.infectCity(city)
                         iInfections += 1
