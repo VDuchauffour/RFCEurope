@@ -14,6 +14,15 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE enhancements:
 
+v1.6.2: This release contains lots of codebase refactoring, but it also coming with the following changes.
+
+- Map centering happens now with lateen sails tech
+- The date is displayed with the map making tech
+- The color of Portugal is now dark green (like DoC)
+- Voting messages are more precise
+- A script for map generation has been added, maps can be found here: https://github.com/VDuchauffour/RFCEurope/tree/main/Docs/Maps
+- Minor fixes
+
 v1.6.1: This first release enhanced the mod with the following changes.
 
 - Update the project with all compiling dependencies and the Nightinggale Makefile
@@ -821,7 +830,7 @@ Changes for RFCE 1.5:
 		- Unit art and icon for Kontor, Knight of the Dragon and Calatrava Knight from Realism Invictus
 		- Added new unit art for Janissary (3 different versions) and Inquisitor
 		- New icon for all 4 Missionaries, new unit art for Orthodox and Islamic Missionary
-		- New icon for Végvár (Hungarian UB), new icon for Manorialism civic and tech
+		- New icon for VÃ©gvÃ¡r (Hungarian UB), new icon for Manorialism civic and tech
 		- Fixed minor glitch with the leaderhead art of Bela III (Hungary)
 		- Changes in the Hanseatic League building art, it is now displayed more in line with the other companies in the Civilopedia
 		- Added separate building art for the 2 new Chivalric Orders (Dragon and Calatrava)
@@ -1112,7 +1121,7 @@ Changes for RFCE 1.4:
 		- Changed happiness stability to +k with an average k happiness in your cities
 		- Minor changes in the city stability calculations for the AI, should be able to handle it somewhat better now
 		- Added some base stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
-		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
+		- Reduced overall damage from the Hungarian VÃ©gvÃ¡r: units won't get a fixed amount of damage, it depends on their current HP instead (so VÃ©gvÃ¡r won't kill units, only weaken them)
 		- Hanseatic League HQ needs to be connected to a water area of at least 10 tiles
 		- Added religion and/or state religion prerequisites to some additional wonders (mostly Islam and Catholic)
 		- +1 additional instability for each foreign religion (after the 1st foreign one) in your cities
@@ -1140,7 +1149,7 @@ Changes for RFCE 1.4:
 		- Navarre, 700AD: Pamplona (70%, "Pamplona"), Pamplona alternative position (30%, "Pamplona")
 		- Picts in Scotland, 552AD: Scone (50%, "Scaig"), Inverness (50%, "Inbhir Nis"), barbarian city, population size 1
 		- Wales, 900AD: Cardiff (50%, "Caerdydd"), Caernarfon (50%, "Aberffraw"), barbarian, population size 2, moved stone 1NW
-		- Transylvania, 880 AD: Gyulafehérvár (80%, "Belograd"), Kolozsvár (20%, "Napoca")
+		- Transylvania, 880 AD: GyulafehÃ©rvÃ¡r (80%, "Belograd"), KolozsvÃ¡r (20%, "Napoca")
 		- Ireland, 700AD: Downpatrick (100%, "Rath Celtair"), barbarian, population size 1
 		- Ireland, 700AD: Rathcroghan/Sligo (100%, "Cruiachain"), barbarian, population size 1
 		- Ireland, 700AD: Cashel/Cork (100%, "Caisel"), barbarian, population size 1
@@ -1285,8 +1294,8 @@ Changes for RFCE 1.3:
 		Start Date: 936
 		Leaders: Harald Bluetooth (935-986), Margaret I (1353-1412), Christian IV (1577-1648)
 		UP: The Power of Sound Dues: You get 2 gold per turn for every foreign coastal city in the Baltic
-		UHV1: North Sea Empire: Control Denmark, Skaneland, Götaland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
-		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
+		UHV1: North Sea Empire: Control Denmark, Skaneland, GÃ¶taland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
+		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, GÃ¶taland, Svealand, Norrland, Gotland, Ã–sterland, Estonia and Iceland in 1523
 		UHV3: Ostindisk Kompagni: Build 3 Colonies and complete both Trading Companies
 		UU: Huskarl (replacing Swordsman)
 		UB: Research Institute (replacing Observatory)
@@ -1415,7 +1424,7 @@ Changes for RFCE 1.3:
 		- Support for leader switching with 4 leaders per civ
 		- Message for the player when a known civ switches leaders, with the currently used DCN of the given civ
 		- Leaders moved: Norse leaders to Denmark and Norway, Yaqub al-Mansur (Cordoba -> Morocco), Frederick I (Germany -> Prussia)
-		- New leaders for existing civs: Béla III (Hungary), Mieszko (Poland), Philip August II (France), Harun al-Rashid (Arabia)
+		- New leaders for existing civs: BÃ©la III (Hungary), Mieszko (Poland), Philip August II (France), Harun al-Rashid (Arabia)
 		- New leaders for existing civs: Gustav Adolph (Sweden), Margaret I (Denmark), Mstislav (Kiev), Bohdan Khmelnytsky (Kiev)
 		- New leaders for existing civs: Basil II (Byzantium), Michael VIII Palaiologos (Byzantium), Mohammed I ibn Nasr (Cordoba)
 		- New leaders for existing civs: Magnus Ladulas (Sweden), Harald Bluetooth (Denmark), Otto I (Germany), Johan de Witt (Dutch)
@@ -1768,10 +1777,10 @@ Changes for RFCE 1.2:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 		- Portuguese translations by Spirictum
 		- Rome renamed to Papal States
-		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
+		- Spelling mistake fix: Austria is called Ostmark instead of Ã–stmark when vassal of Germany
 		- RFCE specific help texts for the handicap levels
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
-		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon, Gotaland to Götaland, Osterland to Österland
+		- Province Oppland renamed to JÃ¤mtland, Charsiakon corrected to Charsianon, Gotaland to GÃ¶taland, Osterland to Ã–sterland
 		- Improvements in the crusade texts
 		- German text fixes by Simplicissimus
 		- New city name map for England and Muscovy by iOnlySignIn
@@ -1908,7 +1917,7 @@ Changes for RFCE 1.1:
 		- Language changes:
 			- As of revision 993, the Russian version is a separate download. An add-on to the mod
 			- The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a Russian one)
-			- This will enable us to use such characters: âáäéëíöüúó... (actually we could use them before, but only in the Civilopedia)
+			- This will enable us to use such characters: Ã¢Ã¡Ã¤Ã©Ã«Ã­Ã¶Ã¼ÃºÃ³... (actually we could use them before, but only in the Civilopedia)
 			- Now we can have civ-specific names everywhere, including everything that appear on the map
 			- Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
 			- Added special characters to some of the Hungarian and German city names as a test
@@ -2024,7 +2033,7 @@ Changes for RFCE 1.1:
 		- One more starting worker for Cordoba. Cordoban Berber Cavalry upgradeable to Heavy/Armored Lancer
 		- Indy Augsburg and Ragusa starts with an additional archer - so it won't be razed so often by barbs before the German and Venetian/Hungarian spawn
 		- "Prebuilt" walls for Augsburg, Porto, Prague, Novgorod, Riga
-		- Belograd (Alba Iulia/Gyulafehérvár) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
+		- Belograd (Alba Iulia/GyulafehÃ©rvÃ¡r) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
 		- A couple additional starting units for Poland, Lithuania and Germany
 		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 		- Minor leader personality, memory, and attitude modifications
@@ -2288,7 +2297,7 @@ Changes for Beta 13:
 		- Also moved a couple indy cities to realistic location: Riga 2E, Minsk 3E 2N, Smolensk 2N 1W, Valencia 1S
 		- Rearranged resources to better cover these new city spots
 		- Revised most of the NE provinces. Still not perfect, but much better
-		- Renamed Finland to Österland, and White Rus to Minsk
+		- Renamed Finland to Ã–sterland, and White Rus to Minsk
 		- Balancing near the SE part of the map (both resources and a few plot types), and smaller changes in the North African area
 		- Added a couple more Wetlands/Marshes, mostly in the Russian area
 		- Added a few gems to North Africa and NE Russia (as all of them were replaced by amber). They represent the gems in the Atlas mountains and Siberia, and they are hard to get
@@ -2330,7 +2339,7 @@ Changes for Beta 13:
 		- Added Dromon sounds (Ethnic Byzantine War Galley)
 		- New diplo music for Simeon and Ivan Asen II
 		- New in-game song Bogorodice Devo (Serbian Orthodox Chant)
-		- New art for Catherine (by Melcher Kürzer)
+		- New art for Catherine (by Melcher KÃ¼rzer)
 		- All leaders' diplomusic is set to loop
 		- German and Austrian units have Holy Roman order/select sounds (vanilla German sounds were too modern)
 		- Italian order/select sounds for Venice and Genoa (instead of Roman)
@@ -2947,7 +2956,7 @@ Changes for Beta 4:
 	Fixed bug that didn't allow you to play in other languages
 	Leader names are translated
 	Infirmary has +10% heal rate
-	Hungarian Végvár art is slightly changed
+	Hungarian VÃ©gvÃ¡r art is slightly changed
 	Included shortcut (if you installed the mod properly, the link works, otherwise it doesn't)
 	Added basic information to leaders
 	New text for some buildings
@@ -3133,7 +3142,7 @@ Changes for Alpha 11:
 		Changed Polish start and Winged Hussar is now a Cuirassier.
 		Barracks et al. no longer give unhappy. BCM-buildings at 10%, so AI actually builds them.
 		Dublin is now barbarian.
-		Moved apples from Besançon (Burgundy always settle it).
+		Moved apples from BesanÃ§on (Burgundy always settle it).
 		Made Arabic research slower and house of Wisdom obsolete more quickly.
 
 	Bugfix:
@@ -3340,7 +3349,7 @@ Changes for Alpha 7:
 	Map modifications from St. Lucifer:
 		Fixed rivers in Hungary to flow the right way
 		Reduced the size of the marshes in Poland/Lithuania
-		Added Bia³owie¿a forest (mostly dense forest), with timber and deer. Considered adding furs as well, but had added them to Dniester headwaters
+		Added BiaÂ³owieÂ¿a forest (mostly dense forest), with timber and deer. Considered adding furs as well, but had added them to Dniester headwaters
 		Added a bunch of resources to Poland, Hungary, and Austria
 		Removed hill from underneath Gdansk. Added a few near Warsawa
 	New text entries for the Civilopedia (compiled by merijn_v1)
