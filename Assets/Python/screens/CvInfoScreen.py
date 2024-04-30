@@ -3130,7 +3130,7 @@ class CvInfoScreen:
                 tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
                 # Absinthe: top5 city foundation text
-                if tActivePlayer.isHasTech(Technology.CALENDAR.value):
+                if tActivePlayer.isHasTech(Technology.MAPMAKING.value):
                     if iTurnYear <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
                             szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_500AD")
@@ -3443,7 +3443,7 @@ class CvInfoScreen:
                     pActivePlayer = gc.getPlayer(iActivePlayer)
                     tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
-                    if tActivePlayer.isHasTech(Technology.CALENDAR.value):
+                    if tActivePlayer.isHasTech(Technology.MAPMAKING.value):
                         szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                     elif iTurnYear >= 1500:
                         szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
@@ -3615,7 +3615,7 @@ class CvInfoScreen:
                     if iTurnYear <= get_scenario_start_years():
                         szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_START")
                     else:
-                        if tActivePlayer.isHasTech(Technology.CALENDAR.value):
+                        if tActivePlayer.isHasTech(Technology.MAPMAKING.value):
                             szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                         elif iTurnYear >= 1500:
                             szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
@@ -4647,15 +4647,13 @@ class CvInfoScreen:
         screen.addLineGFC(canvas, self.getNextLineName(), x0, y0, x1, y1, color)
 
     def getTurnDate(self, turn):
-
         year = CyGame().getTurnYear(turn)
-
         iPlayer = CyGame().getActivePlayer()
         pPlayer = gc.getPlayer(iPlayer)
         tPlayer = gc.getTeam(pPlayer.getTeam())
 
-        # Absinthe: based on the knowledge of Calendar and the corresponding era
-        if tPlayer.isHasTech(Technology.CALENDAR.value):
+        # Absinthe: based on the knowledge of map making and the corresponding era
+        if tPlayer.isHasTech(Technology.MAPMAKING.value):
             return text("TXT_KEY_TIME_AD", year)
         elif year >= 1500:
             return text("TXT_KEY_ERA_RENAISSANCE")
