@@ -9,8 +9,7 @@ import CvUtil
 from CvPythonExtensions import *
 import RFCUtils
 
-from CoreTypes import Scenario
-from Scenario import get_scenario, get_scenario_start_turn
+from Scenario import get_scenario_start_turn
 
 ArtFileMgr = CyArtFileMgr()
 gc = CyGlobalContext()
@@ -150,17 +149,7 @@ class CvDawnOfMan:
         ##Rhye - begin
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
-        # Absinthe: civ-specific Dawn of Man screen - idea from SoI
-        dom_values = civilization(CyGame().getActiveTeam()).misc.dawn_of_man
-        year = dom_values[0] + text(dom_values[1])
-        if civilization(CyGame().getActiveTeam()).date.birth < get_scenario_start_turn():
-            if get_scenario() == Scenario.i1200AD:
-                textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
-        else:
-            textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" % (CyGame().getActiveTeam())
-        bodyString = text(
-            textKey, year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey()
-        )
+        bodyString = utils.getDawnOfManText(CyGame().getActiveTeam())
 
         # Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2
         screen.addStackedBarGFC(
