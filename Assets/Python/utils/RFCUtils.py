@@ -68,50 +68,50 @@ bStabilityOverlay = False
 
 
 # RiseAndFall, Stability
-def getLastTurnAlive(self, iCiv):
+def getLastTurnAlive(iCiv):
     return data.lLastTurnAlive[iCiv]
 
 
-def setLastTurnAlive(self, iCiv, iNewValue):
+def setLastTurnAlive(iCiv, iNewValue):
     data.lLastTurnAlive[iCiv] = iNewValue
 
 
-def getLastRespawnTurn(self, iCiv):
+def getLastRespawnTurn(iCiv):
     return data.lLastRespawnTurn[iCiv]
 
 
-def setLastRespawnTurn(self, iCiv, iNewValue):
+def setLastRespawnTurn(iCiv, iNewValue):
     data.lLastRespawnTurn[iCiv] = iNewValue
 
 
 # Stability
-def getTempFlippingCity(self):
+def getTempFlippingCity():
     return data.iTempFlippingCity
 
 
-def setTempFlippingCity(self, tNewValue):
+def setTempFlippingCity(tNewValue):
     data.iTempFlippingCity = tNewValue
 
 
-def getProsecutionCount(self, iCiv):
+def getProsecutionCount(iCiv):
     return gc.getProsecutionCount(iCiv)
 
 
-def setProsecutionCount(self, iCiv, iNewValue):
+def setProsecutionCount(iCiv, iNewValue):
     gc.setProsecutionCount(iCiv, iNewValue)
 
 
 # Plague
-def getPlagueCountdown(self, iCiv):
+def getPlagueCountdown(iCiv):
     return data.lPlagueCountdown[iCiv]
 
 
-def setPlagueCountdown(self, iCiv, iNewValue):
+def setPlagueCountdown(iCiv, iNewValue):
     data.lPlagueCountdown[iCiv] = iNewValue
 
 
 # Victory
-def countAchievedGoals(self, iPlayer):
+def countAchievedGoals(iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
     iResult = 0
     for j in range(3):
@@ -122,7 +122,7 @@ def countAchievedGoals(self, iPlayer):
     return iResult
 
 
-def getGoalsColor(self, iPlayer):
+def getGoalsColor(iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
     iCol = 0
     for j in range(3):
@@ -132,7 +132,7 @@ def getGoalsColor(self, iPlayer):
 
 
 # Plague, UP
-def isMortalUnit(self, unit):
+def isMortalUnit(unit):
     # Absinthe: leader units, and great people won't be killed by the plague
     if unit.isHasPromotion(Promotion.LEADER.value):
         if not gc.getPlayer(unit.getOwner()).isHuman():
@@ -144,7 +144,7 @@ def isMortalUnit(self, unit):
 
 
 # AIWars
-def checkUnitsInEnemyTerritory(self, iCiv1, iCiv2):
+def checkUnitsInEnemyTerritory(iCiv1, iCiv2):
     unitList = PyPlayer(iCiv1).getUnitList()
     if unitList:
         for unit in unitList:
@@ -156,15 +156,15 @@ def checkUnitsInEnemyTerritory(self, iCiv1, iCiv2):
 
 
 # AIWars
-def restorePeaceAI(self, iMinorCiv, bOpenBorders):
+def restorePeaceAI(iMinorCiv, bOpenBorders):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
     for iActiveCiv in civilizations().majors().ids():
         if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman():
             if teamMinor.isAtWar(iActiveCiv):
-                bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(
+                bActiveUnitsInIndependentTerritory = checkUnitsInEnemyTerritory(
                     iActiveCiv, iMinorCiv
                 )
-                bIndependentUnitsInActiveTerritory = self.checkUnitsInEnemyTerritory(
+                bIndependentUnitsInActiveTerritory = checkUnitsInEnemyTerritory(
                     iMinorCiv, iActiveCiv
                 )
                 if (
@@ -177,16 +177,16 @@ def restorePeaceAI(self, iMinorCiv, bOpenBorders):
 
 
 # AIWars
-def restorePeaceHuman(self, iMinorCiv):
+def restorePeaceHuman(iMinorCiv):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
     for iActiveCiv in civilizations().majors().ids():
         if gc.getPlayer(iActiveCiv).isHuman():
             if gc.getPlayer(iActiveCiv).isAlive():
                 if teamMinor.isAtWar(iActiveCiv):
-                    bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(
+                    bActiveUnitsInIndependentTerritory = checkUnitsInEnemyTerritory(
                         iActiveCiv, iMinorCiv
                     )
-                    bIndependentUnitsInActiveTerritory = self.checkUnitsInEnemyTerritory(
+                    bIndependentUnitsInActiveTerritory = checkUnitsInEnemyTerritory(
                         iMinorCiv, iActiveCiv
                     )
                     if (
@@ -198,7 +198,7 @@ def restorePeaceHuman(self, iMinorCiv):
 
 
 # AIWars
-def minorWars(self, iMinorCiv, iGameTurn):
+def minorWars(iMinorCiv, iGameTurn):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
     for city in cities().owner(iMinorCiv).entities():
         x = city.getX()
@@ -227,7 +227,7 @@ def minorWars(self, iMinorCiv, iGameTurn):
 
 # AIWars
 # Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
-def minorCoreWars(self, iMinorCiv, iGameTurn):
+def minorCoreWars(iMinorCiv, iGameTurn):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
     for city in cities().owner(iMinorCiv).entities():
         x = city.getX()
@@ -247,14 +247,14 @@ def minorCoreWars(self, iMinorCiv, iGameTurn):
 
 
 # RiseAndFall, Stability
-def calculateDistance(self, x1, y1, x2, y2):
+def calculateDistance(x1, y1, x2, y2):
     dx = abs(x2 - x1)
     dy = abs(y2 - y1)
     return max(dx, dy)
 
 
 # RiseAndFall
-def updateMinorTechs(self, iMinorCiv, iMajorCiv):
+def updateMinorTechs(iMinorCiv, iMajorCiv):
     for t in range(len(Technology)):
         if gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t):
             gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(
@@ -264,7 +264,7 @@ def updateMinorTechs(self, iMinorCiv, iMajorCiv):
 
 # RiseAndFall
 # Absinthe: separate city flip rules for secession and minor nation mechanics
-def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
+def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
     plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
     city = plotCity.getPlotCity()
     iNumUnitsInAPlot = plotCity.getNumUnits()
@@ -282,8 +282,8 @@ def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
         Unit.CROSSBOWMAN.value,
     ]
     for iUnit in lUnits:
-        if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):
-            iFreeDefender = self.getUniqueUnit(iNewOwner, iUnit)
+        if pPlayer.canTrain(getUniqueUnit(iNewOwner, iUnit), False, False):
+            iFreeDefender = getUniqueUnit(iNewOwner, iUnit)
             break
     make_unit(iNewOwner, iFreeDefender, (28, 0))
 
@@ -326,7 +326,7 @@ def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
 
 # RiseAndFall
 # Absinthe: this is for city flips connected to spawn, collapse and respawn mechanics
-def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
+def flipUnitsInCityBefore(tCityPlot, iNewOwner, iOldOwner):
     plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
     city = plotCity.getPlotCity()
     iNumUnitsInAPlot = plotCity.getNumUnits()
@@ -346,7 +346,7 @@ def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
 
 
 # RiseAndFall
-def flipUnitsInCityAfter(self, tCityPlot, iCiv):
+def flipUnitsInCityAfter(tCityPlot, iCiv):
     # moves new units back in their place
     tempPlot = gc.getMap().plot(28, 0)
     if tempPlot.getNumUnits() != 0:
@@ -366,7 +366,7 @@ def flipUnitsInCityAfter(self, tCityPlot, iCiv):
     cityPlot = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
     if cityPlot.getNumUnits() == 0:
         # The latest available ranged/gun class
-        RangedClass = self.getUniqueUnit(iCiv, Unit.ARCHER.value)
+        RangedClass = getUniqueUnit(iCiv, Unit.ARCHER.value)
         lRangedList = [
             Unit.LINE_INFANTRY.value,
             Unit.MUSKETMAN.value,
@@ -376,13 +376,13 @@ def flipUnitsInCityAfter(self, tCityPlot, iCiv):
             Unit.ARCHER.value,
         ]
         for iUnit in lRangedList:
-            if gc.getPlayer(iCiv).canTrain(self.getUniqueUnit(iCiv, iUnit), False, False):
-                RangedClass = self.getUniqueUnit(iCiv, iUnit)
+            if gc.getPlayer(iCiv).canTrain(getUniqueUnit(iCiv, iUnit), False, False):
+                RangedClass = getUniqueUnit(iCiv, iUnit)
                 break
         make_unit(iCiv, RangedClass, tCityPlot)
 
 
-def killAllUnitsInArea(self, tTopLeft, tBottomRight):
+def killAllUnitsInArea(tTopLeft, tBottomRight):
     for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
         iNumUnitsInAPlot = plot.getNumUnits()
         if iNumUnitsInAPlot > 0:
@@ -391,7 +391,7 @@ def killAllUnitsInArea(self, tTopLeft, tBottomRight):
                 unit.kill(False, Civ.BARBARIAN.value)
 
 
-def killUnitsInPlots(self, lPlots, iCiv):
+def killUnitsInPlots(lPlots, iCiv):
     for (x, y) in lPlots:
         killPlot = gc.getMap().plot(x, y)
         iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -407,9 +407,7 @@ def killUnitsInPlots(self, lPlots, iCiv):
 
 # RiseAndFall
 # Absinthe: create units at (28, 0), in the unreachable desert area, near the autoplay plot
-def flipUnitsInArea(
-    self, tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers
-):
+def flipUnitsInArea(tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
     """Deletes, recreates units in 28, 0 and moves them to the previous tile.
     If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
     Settlers aren't created.
@@ -462,7 +460,7 @@ def flipUnitsInArea(
 
 # RiseAndFall
 # Absinthe: similar to the function above, but flips on a list of plots
-def flipUnitsInPlots(self, lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
+def flipUnitsInPlots(lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
     """Deletes, recreates units in 28, 0 and moves them to the previous tile.
     If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
     Settlers aren't created.
@@ -515,7 +513,7 @@ def flipUnitsInPlots(self, lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSet
 
 
 # RiseAndFall
-def flipCity(self, tCityPlot, bConquest, bKillUnits, iNewOwner, lOldOwners):
+def flipCity(tCityPlot, bConquest, bKillUnits, iNewOwner, lOldOwners):
     """Changes owner of city specified by tCityPlot.
     bConquest specifies if it's conquered or traded.
     If bKillUnits != 0 all the units in the city will be killed.
@@ -565,7 +563,6 @@ def flipCity(self, tCityPlot, bConquest, bKillUnits, iNewOwner, lOldOwners):
 
 # RiseAndFall
 def cultureManager(
-    self,
     tCityPlot,
     iCulturePercent,
     iNewOwner,
@@ -642,7 +639,7 @@ def cultureManager(
 
 
 # RFCEventHandler
-def spreadMajorCulture(self, iMajorCiv, iX, iY):
+def spreadMajorCulture(iMajorCiv, iX, iY):
     # Absinthe: spread some of the major civ's culture to the nearby indy cities
     for city in plots().surrounding((iX, iY), radius=4).cities().entities():
         previous_owner = city.getPreviousOwner()
@@ -662,7 +659,7 @@ def spreadMajorCulture(self, iMajorCiv, iX, iY):
 
 
 # UniquePowers, Crusades, RiseAndFall
-def convertPlotCulture(self, pCurrent, iCiv, iPercent, bOwner):
+def convertPlotCulture(pCurrent, iCiv, iPercent, bOwner):
     if pCurrent.isCity():
         city = pCurrent.getPlotCity()
         iCivCulture = city.getCulture(iCiv)
@@ -685,7 +682,7 @@ def convertPlotCulture(self, pCurrent, iCiv, iPercent, bOwner):
 
 
 # RiseAndFall
-def pushOutGarrisons(self, tCityPlot, iOldOwner):
+def pushOutGarrisons(tCityPlot, iOldOwner):
     tDestination = (-1, -1)
     for plot in (
         plots().surrounding(tCityPlot, radius=2).passable().land().owner(iOldOwner).entities()
@@ -705,7 +702,7 @@ def pushOutGarrisons(self, tCityPlot, iOldOwner):
 
 
 # RiseAndFall
-def relocateSeaGarrisons(self, tCityPlot, iOldOwner):
+def relocateSeaGarrisons(tCityPlot, iOldOwner):
     tDestination = (-1, -1)
     for city in cities().owner(iOldOwner).entities():
         if city.isCoastalOld():
@@ -728,7 +725,7 @@ def relocateSeaGarrisons(self, tCityPlot, iOldOwner):
 
 
 # RiseAndFall
-def createGarrisons(self, tCityPlot, iNewOwner, iNumUnits):
+def createGarrisons(tCityPlot, iNewOwner, iNumUnits):
     pPlayer = gc.getPlayer(iNewOwner)
 
     # Sedna17: makes garrison units based on new tech tree/units
@@ -742,15 +739,15 @@ def createGarrisons(self, tCityPlot, iNewOwner, iNumUnits):
         Unit.CROSSBOWMAN.value,
     ]
     for iUnit in lUnits:
-        if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):
-            iUnitType = self.getUniqueUnit(iNewOwner, iUnit)
+        if pPlayer.canTrain(getUniqueUnit(iNewOwner, iUnit), False, False):
+            iUnitType = getUniqueUnit(iNewOwner, iUnit)
             break
 
     make_units(iNewOwner, iUnitType, tCityPlot, iNumUnits)
 
 
-def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
-    self.clearPlague(iCiv)
+def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
+    clearPlague(iCiv)
     iNumLoyalCities = 0
     iCounter = rand(6)
     for city in cities().owner(iCiv).entities():
@@ -788,15 +785,15 @@ def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
                         )
                         >= 5
                     ):  # change in vanilla
-                        self.flipUnitsInCityBefore(tCoords, iLoopCiv, iCiv)
-                        self.setTempFlippingCity(tCoords)
-                        self.flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
+                        flipUnitsInCityBefore(tCoords, iLoopCiv, iCiv)
+                        setTempFlippingCity(tCoords)
+                        flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
                         # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
                         # Sedna17: Possibly buggy, used to flip units in 2 radius, which could take us outside the map.
-                        self.flipUnitsInArea(
+                        flipUnitsInArea(
                             (iX - 1, iY - 1), (iX + 1, iY + 1), iLoopCiv, iCiv, False, True
                         )
-                        self.flipUnitsInCityAfter(self.getTempFlippingCity(), iLoopCiv)
+                        flipUnitsInCityAfter(getTempFlippingCity(), iLoopCiv)
                         bNeighbour = True
                         break
         if bNeighbour:
@@ -808,14 +805,14 @@ def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
                 - min(civilizations().independents().ids())
                 + 1
             )
-            self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
-            self.setTempFlippingCity(tCoords)
-            self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
-            self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
+            flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
+            setTempFlippingCity(tCoords)
+            cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
+            flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
             # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
-            self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+            flipUnitsInCityAfter(getTempFlippingCity(), iNewCiv)
             iCounter += 1
-            self.flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
+            flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
         # fragmentation with barbs
         else:
             iNewCiv = min(civilizations().independents().ids()) + rand(
@@ -825,20 +822,20 @@ def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
             )
             if iNewCiv == max(civilizations().independents().ids()) + 1:
                 iNewCiv = Civ.BARBARIAN.value
-            self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
-            self.setTempFlippingCity(tCoords)
-            self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
-            self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-            self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+            flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
+            setTempFlippingCity(tCoords)
+            cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
+            flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
+            flipUnitsInCityAfter(getTempFlippingCity(), iNewCiv)
             iCounter += 1
-            self.flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
+            flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
     if not bAssignOneCity:
         # flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
         for unit in units().owner(iCiv).entities():
             unit.kill(False, Civ.BARBARIAN.value)
-        self.resetUHV(iCiv)
+        resetUHV(iCiv)
 
-        self.setLastTurnAlive(iCiv, turn())
+        setLastTurnAlive(iCiv, turn())
         # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
         gc.getPlayer(iCiv).setAlive(False)
         # Absinthe: respawn status
@@ -846,7 +843,7 @@ def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
             gc.getPlayer(iCiv).setRespawnedAlive(False)
 
 
-def resetUHV(self, iPlayer):
+def resetUHV(iPlayer):
     if iPlayer < civilizations().majors().len():
         pPlayer = gc.getPlayer(iPlayer)
         for i in range(3):
@@ -854,7 +851,7 @@ def resetUHV(self, iPlayer):
                 pPlayer.setUHV(i, 0)
 
 
-def clearPlague(self, iCiv):
+def clearPlague(iCiv):
     for city in (
         cities().owner(iCiv).filter(lambda c: c.hasBuilding(PlagueType.PLAGUE.value)).entities()
     ):
@@ -862,12 +859,12 @@ def clearPlague(self, iCiv):
 
 
 # AIWars
-def isAVassal(self, iCiv):
+def isAVassal(iCiv):
     return gc.getTeam(gc.getPlayer(iCiv).getTeam()).isAVassal()
 
 
 # UP, UHV, idea from DoC
-def getMaster(self, iCiv):
+def getMaster(iCiv):
     team = gc.getTeam(gc.getPlayer(iCiv).getTeam())
     if team.isAVassal():
         for iMaster in civilizations().drop(Civ.BARBARIAN).ids():
@@ -876,7 +873,7 @@ def getMaster(self, iCiv):
     return -1
 
 
-def squareSearch(self, tTopLeft, tBottomRight, function, argsList):  # by LOQ
+def squareSearch(tTopLeft, tBottomRight, function, argsList):  # by LOQ
     """Searches all tiles in the square from tTopLeft to tBottomRight and calls function for every tile, passing argsList."""
     tPaintedList = []
     for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
@@ -886,7 +883,7 @@ def squareSearch(self, tTopLeft, tBottomRight, function, argsList):  # by LOQ
     return tPaintedList
 
 
-def outerInvasion(self, tCoords, argsList):
+def outerInvasion(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
@@ -897,7 +894,7 @@ def outerInvasion(self, tCoords, argsList):
     return False
 
 
-def forcedInvasion(self, tCoords, argsList):
+def forcedInvasion(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
@@ -907,7 +904,7 @@ def forcedInvasion(self, tCoords, argsList):
     return False
 
 
-def outerSeaSpawn(self, tCoords, argsList):
+def outerSeaSpawn(tCoords, argsList):
     """Plot is valid if it's water (coast), it isn't occupied by any unit and if it isn't a civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
@@ -920,7 +917,7 @@ def outerSeaSpawn(self, tCoords, argsList):
     return False
 
 
-def innerSeaSpawn(self, tCoords, argsList):
+def innerSeaSpawn(tCoords, argsList):
     """Plot is valid if it's water (coast) and it isn't occupied by any unit. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
@@ -932,7 +929,7 @@ def innerSeaSpawn(self, tCoords, argsList):
     return False
 
 
-def outerSpawn(self, tCoords, argsList):
+def outerSpawn(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
@@ -946,7 +943,7 @@ def outerSpawn(self, tCoords, argsList):
     return False
 
 
-def innerSpawn(self, tCoords, argsList):
+def innerSpawn(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it's in a given civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
@@ -960,7 +957,7 @@ def innerSpawn(self, tCoords, argsList):
     return False
 
 
-def goodPlots(self, tCoords, argsList):
+def goodPlots(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't desert, tundra, marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
@@ -975,7 +972,7 @@ def goodPlots(self, tCoords, argsList):
     return False
 
 
-def ownedCityPlots(self, tCoords, argsList):
+def ownedCityPlots(tCoords, argsList):
     """Plot is valid if it contains a city belonging to the given civ."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.getOwner() == argsList:
@@ -984,7 +981,7 @@ def ownedCityPlots(self, tCoords, argsList):
     return False
 
 
-def collapseImmune(self, iCiv):
+def collapseImmune(iCiv):
     # 3MiroUP: Emperor
     if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
         plot = gc.getMap().plot(*civilization(iCiv).location.capital)
@@ -995,13 +992,13 @@ def collapseImmune(self, iCiv):
 
 
 # Absinthe: chooseable persecution popup
-def showPersecutionPopup(self):
+def showPersecutionPopup():
     """Asks the human player to select a religion to persecute."""
 
     popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
     popup.setHeaderString("Religious Persecution")
     popup.setBodyString("Choose a religious minority to deal with...")
-    religionList = self.getPersecutionReligions()
+    religionList = getPersecutionReligions()
     for iReligion in religionList:
         strIcon = gc.getReligionInfo(iReligion).getType()
         strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
@@ -1010,26 +1007,26 @@ def showPersecutionPopup(self):
     popup.launch(False)
 
 
-def getPersecutionData(self):
+def getPersecutionData():
     return (data.lPersecutionData[0], data.lPersecutionData[1], data.lPersecutionData[2])
 
 
-def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
+def setPersecutionData(iPlotX, iPlotY, iUnitID):
     data.lPersecutionData = [iPlotX, iPlotY, iUnitID]
 
 
-def getPersecutionReligions(self):
+def getPersecutionReligions():
     return data.lPersecutionReligions
 
 
-def setPersecutionReligions(self, val):
+def setPersecutionReligions(val):
     data.lPersecutionReligions = val
 
 
 # Absinthe: end
 
 # Absinthe: persecution
-def prosecute(self, iPlotX, iPlotY, iUnitID, iReligion=-1):
+def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
     """Removes one religion from the city and handles the consequences."""
 
     if gc.getMap().plot(iPlotX, iPlotY).isCity():
@@ -1153,7 +1150,7 @@ def prosecute(self, iPlotX, iPlotY, iUnitID, iReligion=-1):
         if iReligion == Religion.JUDAISM:
             if percentage_chance(80, strict=True):
                 pSpreadCity = cities().majors().random_entry()
-                self.spreadJews(location(pSpreadCity), Religion.JUDAISM)
+                spreadJews(location(pSpreadCity), Religion.JUDAISM)
                 if pSpreadCity.getOwner() == iOwner:
                     message(
                         iOwner,
@@ -1225,7 +1222,7 @@ def prosecute(self, iPlotX, iPlotY, iUnitID, iReligion=-1):
 # Absinthe: end
 
 
-def saint(self, iOwner, iUnitID):
+def saint(iOwner, iUnitID):
     # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
     pPlayer = gc.getPlayer(iOwner)
     # Absinthe: Wonders: Boyana Church wonder effect
@@ -1237,7 +1234,7 @@ def saint(self, iOwner, iUnitID):
     pUnit.kill(0, -1)
 
 
-def spreadJews(self, tPlot, iReligion):
+def spreadJews(tPlot, iReligion):
     if tPlot:
         plot = gc.getMap().plot(tPlot[0], tPlot[1])
         if not plot.getPlotCity().isNone():
@@ -1250,14 +1247,14 @@ def spreadJews(self, tPlot, iReligion):
     return False
 
 
-def isIndep(self, iCiv):
+def isIndep(iCiv):
     if iCiv in civilizations().independents().ids():
         return True
     return False
 
 
 # Absinthe: stability overlay
-def toggleStabilityOverlay(self):
+def toggleStabilityOverlay():
 
     engine = CyEngine()
     map = CyMap()
@@ -1266,8 +1263,8 @@ def toggleStabilityOverlay(self):
     engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 
     global iScreenIsUp
-    if self.bStabilityOverlay:  # if it's already on
-        self.bStabilityOverlay = False
+    if bStabilityOverlay:  # if it's already on
+        bStabilityOverlay = False
         iScreenIsUp = 0
         CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setState(
             "StabilityOverlay", False
@@ -1280,7 +1277,7 @@ def toggleStabilityOverlay(self):
         screen.hide("ScoreBackground")
         return
 
-    self.bStabilityOverlay = True
+    bStabilityOverlay = True
     iScreenIsUp = 1
     CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setState(
         "StabilityOverlay", True
@@ -1351,7 +1348,7 @@ def toggleStabilityOverlay(self):
             if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 szColor = "COLOR_GREY"
             else:
-                szColor = colors[self.getProvinceStabilityLevel(human(), plot.getProvince())]
+                szColor = colors[getProvinceStabilityLevel(human(), plot.getProvince())]
             engine.addColoredPlotAlt(
                 plot.getX(),
                 plot.getY(),
@@ -1362,7 +1359,7 @@ def toggleStabilityOverlay(self):
             )
 
 
-def refreshStabilityOverlay(self):
+def refreshStabilityOverlay():
 
     engine = CyEngine()
     map = CyMap()
@@ -1394,9 +1391,7 @@ def refreshStabilityOverlay(self):
                 if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:
-                    szColor = colors[
-                        self.getProvinceStabilityLevel(iSelectedCivID, plot.getProvince())
-                    ]
+                    szColor = colors[getProvinceStabilityLevel(iSelectedCivID, plot.getProvince())]
                 engine.addColoredPlotAlt(
                     plot.getX(),
                     plot.getY(),
@@ -1407,7 +1402,7 @@ def refreshStabilityOverlay(self):
                 )
 
 
-def StabilityOverlayCiv(self, iChoice):
+def StabilityOverlayCiv(iChoice):
 
     engine = CyEngine()
     map = CyMap()
@@ -1479,7 +1474,7 @@ def StabilityOverlayCiv(self, iChoice):
             if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 szColor = "COLOR_GREY"
             else:
-                szColor = colors[self.getProvinceStabilityLevel(iChoice, plot.getProvince())]
+                szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
             engine.addColoredPlotAlt(
                 plot.getX(),
                 plot.getY(),
@@ -1490,7 +1485,7 @@ def StabilityOverlayCiv(self, iChoice):
             )
 
 
-def getProvinceStabilityLevel(self, iCiv, iProvince):
+def getProvinceStabilityLevel(iCiv, iProvince):
     """Returns the stability level of the province for the given civ."""
 
     pPlayer = gc.getPlayer(iCiv)
@@ -1510,31 +1505,31 @@ def getProvinceStabilityLevel(self, iCiv, iProvince):
 # Absinthe: end
 
 
-def getUniqueUnit(self, iPlayer, iUnit):
+def getUniqueUnit(iPlayer, iUnit):
     pPlayer = gc.getPlayer(iPlayer)
     return gc.getCivilizationInfo(pPlayer.getCivilizationType()).getCivilizationUnits(
         gc.getUnitInfo(iUnit).getUnitClassType()
     )
 
 
-def getBaseUnit(self, iUnit):
+def getBaseUnit(iUnit):
     return gc.getUnitClassInfo(gc.getUnitInfo(iUnit).getUnitClassType()).getDefaultUnitIndex()
 
 
-def getUniqueBuilding(self, iPlayer, iBuilding):
+def getUniqueBuilding(iPlayer, iBuilding):
     pPlayer = gc.getPlayer(iPlayer)
     return gc.getCivilizationInfo(pPlayer.getCivilizationType()).getCivilizationBuildings(
         gc.getBuildingInfo(iBuilding).getBuildingClassType()
     )
 
 
-def getBaseBuilding(self, iBuilding):
+def getBaseBuilding(iBuilding):
     return gc.getBuildingClassInfo(
         gc.getBuildingInfo(iBuilding).getBuildingClassType()
     ).getDefaultBuildingIndex()
 
 
-def getMostAdvancedCiv(self):
+def getMostAdvancedCiv():
     iBestCiv = -1
     iMostTechs = 0
     for iPlayer in civilizations().main().ids():
@@ -1555,7 +1550,7 @@ def getMostAdvancedCiv(self):
     return iBestCiv
 
 
-def getCargoShips(self, iPlayer):
+def getCargoShips(iPlayer):
     iCargoShips = 0
     unitList = PyPlayer(iPlayer).getUnitList()
     for unit in unitList:
@@ -1565,11 +1560,11 @@ def getCargoShips(self, iPlayer):
     return iCargoShips
 
 
-def isWonder(self, iBuilding):
+def isWonder(iBuilding):
     return iBuilding in [w.value for w in Wonder]
 
 
-def getDawnOfManText(self, iPlayer):
+def getDawnOfManText(iPlayer):
     scenario = get_scenario()
     base_key = "TXT_KEY_DOM_%s" % str(name(iPlayer).replace(" ", "_").upper())
 
