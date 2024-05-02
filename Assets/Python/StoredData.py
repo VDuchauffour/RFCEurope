@@ -148,6 +148,8 @@ class GameData:
         # Merijn: AI UHV
         self.bIgnoreAIUHV = True
 
+        self.lBaseStabilityLastTurn = [0] * civilizations().majors().len()
+
         self.save()
 
 

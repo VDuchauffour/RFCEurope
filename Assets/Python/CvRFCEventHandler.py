@@ -19,7 +19,13 @@ import Resources
 import CityNameManager
 import UniquePowers
 import AIWars
-import RFCUtils
+from RFCUtils import (
+    forcedInvasion,
+    getBaseStabilityLastTurn,
+    getProvinceStabilityLevel,
+    spreadMajorCulture,
+    getUniqueBuilding,
+)
 
 import Victory
 import Stability
@@ -49,8 +55,6 @@ from CoreTypes import (
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
-
 
 # Absinthe: Turn Randomization constants
 iLighthouseEarthQuake = 0
@@ -296,7 +300,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
         if playerType < civilizations().majors().len():
-            utils.spreadMajorCulture(playerType, city.getX(), city.getY())
+            spreadMajorCulture(playerType, city.getX(), city.getY())
 
         self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 
@@ -338,9 +342,7 @@ class CvRFCEventHandler:
             iNewOwner = city.getOwner()
             pNewOwner = gc.getPlayer(iNewOwner)
             if pNewOwner.countNumBuildings(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
-                city.setHasRealBuilding(
-                    utils.getUniqueBuilding(iNewOwner, Building.WALLS.value), True
-                )
+                city.setHasRealBuilding(getUniqueBuilding(iNewOwner, Building.WALLS.value), True)
                 # Absinthe: if the Castle building were built with the Krak, then it should add stability
                 # 			the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
                 if not (
@@ -350,7 +352,7 @@ class CvRFCEventHandler:
                     or city.isHasBuilding(Building.CASTLE.value)
                 ):
                     city.setHasRealBuilding(
-                        utils.getUniqueBuilding(iNewOwner, Building.CASTLE.value), True
+                        getUniqueBuilding(iNewOwner, Building.CASTLE.value), True
                     )
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
         # Sedna17, end
@@ -421,7 +423,7 @@ class CvRFCEventHandler:
             pCurrent.setCulture(civ, 0, True)
 
         if iOwner < civilizations().majors().len():
-            utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
+            spreadMajorCulture(iOwner, city.getX(), city.getY())
 
             if iOwner == Civ.PORTUGAL.value:
                 self.vic.onCityBuilt(city, iOwner)  # needed in Victory.py
@@ -448,20 +450,18 @@ class CvRFCEventHandler:
             iImpBeforeCityType == Improvement.FORT.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value), True)
+            city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value), True)
         # Absinthe: free granary if built on hamlet
         if (
             iImpBeforeCityType == Improvement.HAMLET.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True)
+            city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.GRANARY.value), True)
         # Absinthe: free granary and +1 population if built on village or town
         if iImpBeforeCityType in [Improvement.TOWN.value, Improvement.VILLAGE.value]:
             if (iImpBeforeCityX, iImpBeforeCityY) == tCity:
                 city.changePopulation(1)
-                city.setHasRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True
-                )
+                city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.GRANARY.value), True)
 
         # Absinthe: Some initial food for all cities on foundation
         # 			So Leon and Roskilde for example don't lose a population in the first couple turns
@@ -600,7 +600,7 @@ class CvRFCEventHandler:
                         iGameTurn,
                         1,
                         0,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
                     )
@@ -781,7 +781,7 @@ class CvRFCEventHandler:
                 self.rnf.checkPlayerTurn(iGameTurn, iPlayer)
 
             # not really needed, we set it on collapse anyway
-            # utils.setLastTurnAlive( iPlayer, iGameTurn )
+            # setLastTurnAlive( iPlayer, iGameTurn )
 
         self.crusade.checkPlayerTurn(iGameTurn, iPlayer)
 
@@ -962,7 +962,7 @@ class CvRFCEventHandler:
             if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 return
             else:
-                iLevel = utils.getProvinceStabilityLevel(human(), iProvinceID)
+                iLevel = getProvinceStabilityLevel(human(), iProvinceID)
                 if iLevel == 4:
                     color = gc.getColorInfo(
                         gc.getInfoTypeForString("COLOR_HIGHLIGHT_CORE")
@@ -1021,9 +1021,9 @@ class CvRFCEventHandler:
             if gc.getPlayer(iCiv).isAlive():
                 print(
                     "Base:",
-                    utils.getBaseStabilityLastTurn(iCiv),
+                    getBaseStabilityLastTurn(iCiv),
                     "Modifier:",
-                    player(iCiv).getStability() - utils.getBaseStabilityLastTurn(iCiv),
+                    player(iCiv).getStability() - getBaseStabilityLastTurn(iCiv),
                     "Total:",
                     player(iCiv).getStability(),
                     "civic",

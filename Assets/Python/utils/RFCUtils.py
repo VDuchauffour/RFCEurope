@@ -858,11 +858,13 @@ def clearPlague(iCiv):
         city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
 
 
+# TODO refacto with structure
 # AIWars
 def isAVassal(iCiv):
     return gc.getTeam(gc.getPlayer(iCiv).getTeam()).isAVassal()
 
 
+# TODO refacto with structure
 # UP, UHV, idea from DoC
 def getMaster(iCiv):
     team = gc.getTeam(gc.getPlayer(iCiv).getTeam())
@@ -1247,12 +1249,6 @@ def spreadJews(tPlot, iReligion):
     return False
 
 
-def isIndep(iCiv):
-    if iCiv in civilizations().independents().ids():
-        return True
-    return False
-
-
 # Absinthe: stability overlay
 def toggleStabilityOverlay():
 
@@ -1263,6 +1259,7 @@ def toggleStabilityOverlay():
     engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 
     global iScreenIsUp
+    global bStabilityOverlay
     if bStabilityOverlay:  # if it's already on
         bStabilityOverlay = False
         iScreenIsUp = 0
@@ -1573,3 +1570,7 @@ def getDawnOfManText(iPlayer):
         full_key += "_1200AD"
 
     return text_if_exists(full_key, otherwise=base_key)
+
+
+def getBaseStabilityLastTurn(civ):
+    return data.lBaseStabilityLastTurn[civ]

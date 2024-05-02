@@ -24,14 +24,12 @@ from CoreTypes import (
 )
 from PyUtils import percentage_chance, rand
 
-# import cPickle as pickle
-import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
+from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
 import RiseAndFall
 import Province
 from Scenario import get_scenario
 
-utils = RFCUtils.RFCUtils()
 rnf = RiseAndFall.RiseAndFall()
 pm = Province.ProvinceManager()
 
@@ -81,19 +79,19 @@ class Stability:
 
                 # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
                 if pCity.hasBuilding(
-                    utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value)
+                    getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value)
                 ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
                 if pCity.hasBuilding(
-                    utils.getUniqueBuilding(iPlayer, Building.CASTLE.value)
+                    getUniqueBuilding(iPlayer, Building.CASTLE.value)
                 ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
                 if pCity.hasBuilding(
-                    utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value)
+                    getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value)
                 ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
                 if pCity.hasBuilding(
-                    utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value)
+                    getUniqueBuilding(iPlayer, Building.COURTHOUSE.value)
                 ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
 
@@ -406,16 +404,16 @@ class Stability:
 
     def onBuildingBuilt(self, iPlayer, iBuilding):
         pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value):
+        if iBuilding == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value):
             pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
             self.recalcEconomy(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.CASTLE.value):
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.CASTLE.value):
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
             self.recalcEpansion(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value):
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value):
             pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
             self.recalcCivicCombos(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value):
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.COURTHOUSE.value):
             pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
             self.recalcCity(iPlayer)
         elif iBuilding == Wonder.ESCORIAL.value:
@@ -463,7 +461,7 @@ class Stability:
             for iPlayer in civilizations().main().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
-                iRespawnTurn = utils.getLastRespawnTurn(iPlayer)
+                iRespawnTurn = getLastRespawnTurn(iPlayer)
                 if (
                     pPlayer.isAlive()
                     and iGameTurn >= civilization(iPlayer).date.birth + 15
@@ -474,7 +472,7 @@ class Stability:
                     if iStability < -14 and iPlayer == human():
                         if percentage_chance(-2 * iStability, strict=True):
                             # 30 chance with -15, 50% with -25, 70% with -35, 100% with -50 or less
-                            if not utils.collapseImmune(iPlayer):
+                            if not collapseImmune(iPlayer):
                                 self.collapseCivilWar(iPlayer, iStability)
                         else:  # when won't collapse, secession should always happen
                             rnf.revoltCity(iPlayer, False)
@@ -496,7 +494,7 @@ class Stability:
                             elif (
                                 iRand3 < 1
                                 and iGameTurn >= civilization(iPlayer).date.birth + 20
-                                and not utils.collapseImmune(iPlayer)
+                                and not collapseImmune(iPlayer)
                             ):  # 10 chance for collapse start
                                 if iRand2 < (
                                     -1.5 - (iStability / 2)
@@ -511,7 +509,7 @@ class Stability:
                             elif (
                                 iRand3 < 4
                                 and iGameTurn >= civilization(iPlayer).date.birth + 20
-                                and not utils.collapseImmune(iPlayer)
+                                and not collapseImmune(iPlayer)
                             ):  # 40 chance for collapse start
                                 if iRand2 < (
                                     -1.5 - (iStability / 2)
@@ -520,7 +518,7 @@ class Stability:
                         elif (
                             iRand1 < 7
                             and iGameTurn >= civilization(iPlayer).date.birth + 20
-                            and not utils.collapseImmune(iPlayer)
+                            and not collapseImmune(iPlayer)
                         ):  # 70 chance for collapse start
                             if iRand2 < (
                                 -1.5 - (iStability / 2)
@@ -539,7 +537,7 @@ class Stability:
                     + text("TXT_KEY_STABILITY_CIVILWAR_STABILITY"),
                     color=MessageData.RED,
                 )
-            utils.killAndFragmentCiv(iPlayer, False, False)
+            killAndFragmentCiv(iPlayer, False, False)
         elif pPlayer.getNumCities() > 1:
             message(
                 iPlayer,
@@ -547,7 +545,7 @@ class Stability:
                 force=True,
                 color=MessageData.RED,
             )
-            utils.killAndFragmentCiv(iPlayer, False, True)
+            killAndFragmentCiv(iPlayer, False, True)
             self.zeroStability(iPlayer)
 
     def printStability(self, iGameTurn, iPlayer):
@@ -942,7 +940,7 @@ class Stability:
             # 		iProductionPenalty -= 1
             # elif pCity.isProductionBuilding():
             # 	iBuilding = pCity.getProductionBuilding()
-            # 	if utils.isWonder(iBuilding):
+            # 	if isWonder(iBuilding):
             # 		iProductionPenalty -= 2
             # else:
             # 	iProductionPenalty -= 2

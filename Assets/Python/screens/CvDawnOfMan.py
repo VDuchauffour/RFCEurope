@@ -7,13 +7,12 @@ from CoreFunctions import text
 from CoreStructures import turn
 import CvUtil
 from CvPythonExtensions import *
-import RFCUtils
 
+from RFCUtils import getDawnOfManText
 from Scenario import get_scenario_start_turn
 
 ArtFileMgr = CyArtFileMgr()
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 
 
 class CvDawnOfMan:
@@ -149,7 +148,7 @@ class CvDawnOfMan:
         ##Rhye - begin
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
-        bodyString = utils.getDawnOfManText(CyGame().getActiveTeam())
+        bodyString = getDawnOfManText(CyGame().getActiveTeam())
 
         # Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2
         screen.addStackedBarGFC(

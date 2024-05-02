@@ -6,7 +6,16 @@ from CoreFunctions import event_popup, location, message, text
 from CoreStructures import human, make_unit, make_units, turn, cities, plots
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
-import RFCUtils
+from RFCUtils import (
+    cultureManager,
+    flipCity,
+    flipUnitsInCityAfter,
+    flipUnitsInCitySecession,
+    forcedInvasion,
+    outerInvasion,
+    outerSeaSpawn,
+    squareSearch,
+)
 from TimelineData import DateTurn
 from StoredData import data
 
@@ -14,7 +23,6 @@ from CoreData import civilizations
 from Consts import MessageData
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 
 
 # Independent and barbarians city spawns
@@ -801,7 +809,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 3,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
             )
         elif iGameTurn >= DateTurn.i1401AD:
             self.spawnPirate(
@@ -815,7 +823,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 3,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
                 text("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES"),
             )
             # extra Corsairs around Tunisia
@@ -830,7 +838,7 @@ class Barbs:
                 iGameTurn,
                 5,
                 0,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
                 text("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES"),
             )
         if DateTurn.i1200AD <= iGameTurn < DateTurn.i1500AD:
@@ -845,7 +853,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 5,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
             )
         elif iGameTurn >= DateTurn.i1500AD:
             self.spawnPirate(
@@ -859,7 +867,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 5,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
             )
 
         # Germanic Barbarians throughout Western Europe (France, Germany)
@@ -873,7 +881,7 @@ class Barbs:
                 iGameTurn,
                 11,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
             )
@@ -887,7 +895,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
                 )
@@ -900,7 +908,7 @@ class Barbs:
                     iGameTurn,
                     18,
                     7,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
                 )
@@ -914,7 +922,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 2,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
             )
@@ -927,7 +935,7 @@ class Barbs:
                 iGameTurn,
                 11,
                 4,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
             )
@@ -941,7 +949,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
                 )
@@ -954,7 +962,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     4,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
                 )
@@ -967,7 +975,7 @@ class Barbs:
                     iGameTurn,
                     14,
                     9,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES"),
                 )
@@ -983,7 +991,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS"),
             )
@@ -996,7 +1004,7 @@ class Barbs:
                 iGameTurn,
                 12,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS"),
             )
@@ -1012,7 +1020,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS"),
             )
@@ -1025,7 +1033,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS"),
             )
@@ -1038,7 +1046,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 5,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS"),
             )
@@ -1052,7 +1060,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS"),
                 )
@@ -1065,7 +1073,7 @@ class Barbs:
                     iGameTurn,
                     6,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS"),
                 )
@@ -1082,7 +1090,7 @@ class Barbs:
                 iGameTurn,
                 8,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
             )
@@ -1097,7 +1105,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
                 )
@@ -1110,7 +1118,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
                 )
@@ -1123,7 +1131,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
                 )
@@ -1137,7 +1145,7 @@ class Barbs:
                     iGameTurn,
                     14,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
                 )
@@ -1150,7 +1158,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BERBERS"),
                 )
@@ -1166,7 +1174,7 @@ class Barbs:
                 iGameTurn,
                 5,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_AVARS"),
             )
@@ -1180,7 +1188,7 @@ class Barbs:
                     iGameTurn,
                     6,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_AVARS"),
                 )
@@ -1197,7 +1205,7 @@ class Barbs:
                 iGameTurn,
                 8,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS"),
             )
@@ -1211,7 +1219,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS"),
                 )
@@ -1224,7 +1232,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS"),
                 )
@@ -1238,7 +1246,7 @@ class Barbs:
                 iGameTurn,
                 6,
                 2,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SASSANIDS"),
             )
@@ -1251,7 +1259,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SASSANIDS"),
             )
@@ -1265,7 +1273,7 @@ class Barbs:
                     iGameTurn,
                     6,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SASSANIDS"),
                 )
@@ -1278,7 +1286,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SASSANIDS"),
                 )
@@ -1293,7 +1301,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.BYZANTIUM.value == iHuman:
@@ -1306,7 +1314,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
 
@@ -1322,7 +1330,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SERBS"),
                 )
@@ -1335,7 +1343,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     7,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SERBS"),
                 )
@@ -1348,7 +1356,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     4,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SERBS"),
                 )
@@ -1362,7 +1370,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SERBS"),
                 )
@@ -1378,7 +1386,7 @@ class Barbs:
                 iGameTurn,
                 8,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_KHAZARS"),
             )
@@ -1393,7 +1401,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KHAZARS"),
                 )
@@ -1406,7 +1414,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KHAZARS"),
                 )
@@ -1420,7 +1428,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KHAZARS"),
                 )
@@ -1437,7 +1445,7 @@ class Barbs:
                 iGameTurn,
                 8,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_PECHENEGS"),
             )
@@ -1451,7 +1459,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_PECHENEGS"),
                 )
@@ -1465,7 +1473,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_PECHENEGS"),
             )
@@ -1479,7 +1487,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_PECHENEGS"),
                 )
@@ -1494,7 +1502,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_PECHENEGS"),
                 )
@@ -1512,7 +1520,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_CUMANS"),
                 )
@@ -1525,7 +1533,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS"),
                 )
@@ -1539,7 +1547,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_CUMANS"),
                 )
@@ -1552,7 +1560,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS"),
                 )
@@ -1566,7 +1574,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_CUMANS"),
             )
@@ -1580,7 +1588,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_CUMANS"),
                 )
@@ -1593,7 +1601,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     4,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS"),
                 )
@@ -1608,7 +1616,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_CUMANS"),
                 )
@@ -1621,7 +1629,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS"),
                 )
@@ -1640,7 +1648,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     0,
-                    utils.outerSeaSpawn,
+                    outerSeaSpawn,
                     text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
                 )
             else:
@@ -1653,7 +1661,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     0,
-                    utils.outerSeaSpawn,
+                    outerSeaSpawn,
                     text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
                 )
 
@@ -1668,7 +1676,7 @@ class Barbs:
                 iGameTurn,
                 6,
                 1,
-                utils.outerSeaSpawn,
+                outerSeaSpawn,
                 text("TXT_KEY_BARBARIAN_NAMES_SWEDES"),
             )
 
@@ -1683,7 +1691,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 0,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_CHUDES"),
             )
@@ -1696,7 +1704,7 @@ class Barbs:
                 iGameTurn,
                 11,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_CHUDES"),
             )
@@ -1714,7 +1722,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BALTICS"),
                 )
@@ -1727,7 +1735,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BALTICS"),
                 )
@@ -1740,7 +1748,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BALTICS"),
                 )
@@ -1754,7 +1762,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 3,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN"),
             )
@@ -1767,7 +1775,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN"),
             )
@@ -1783,7 +1791,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 3,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_IRISH"),
             )
@@ -1800,7 +1808,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS"),
                 )
@@ -1813,7 +1821,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS"),
                 )
@@ -1826,7 +1834,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     6,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS"),
                 )
@@ -1840,7 +1848,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS"),
                 )
@@ -1858,7 +1866,7 @@ class Barbs:
                         iGameTurn,
                         11,
                         0,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_SCOTS"),
                     )
@@ -1872,7 +1880,7 @@ class Barbs:
                         iGameTurn,
                         11,
                         0,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_SCOTS"),
                     )
@@ -1887,7 +1895,7 @@ class Barbs:
                         iGameTurn,
                         9,
                         0,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_SCOTS"),
                     )
@@ -1900,7 +1908,7 @@ class Barbs:
                         iGameTurn,
                         17,
                         4,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_SCOTS"),
                     )
@@ -1914,7 +1922,7 @@ class Barbs:
                         iGameTurn,
                         17,
                         4,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_SCOTS"),
                     )
@@ -1931,7 +1939,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WELSH"),
                 )
@@ -1945,7 +1953,7 @@ class Barbs:
                     iGameTurn,
                     13,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WELSH"),
                 )
@@ -1960,7 +1968,7 @@ class Barbs:
                     iGameTurn,
                     12,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WELSH"),
                 )
@@ -1974,7 +1982,7 @@ class Barbs:
                     iGameTurn,
                     9,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WELSH"),
                 )
@@ -1990,7 +1998,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MAGYARS"),
             )
@@ -2003,7 +2011,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 2,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MAGYARS"),
             )
@@ -2017,7 +2025,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MAGYARS"),
                 )
@@ -2031,7 +2039,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MAGYARS"),
                 )
@@ -2048,7 +2056,7 @@ class Barbs:
                     iGameTurn,
                     6,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2062,7 +2070,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2079,7 +2087,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2092,7 +2100,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2105,7 +2113,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2119,7 +2127,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2132,7 +2140,7 @@ class Barbs:
                     iGameTurn,
                     2,
                     0,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_WENDS"),
                 )
@@ -2151,7 +2159,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     3,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                 )
@@ -2165,7 +2173,7 @@ class Barbs:
                         iGameTurn,
                         11,
                         3,
-                        utils.outerInvasion,
+                        outerInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                     )
@@ -2178,7 +2186,7 @@ class Barbs:
                         iGameTurn,
                         8,
                         1,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                     )
@@ -2192,7 +2200,7 @@ class Barbs:
                     iGameTurn,
                     10,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                 )
@@ -2206,7 +2214,7 @@ class Barbs:
                         iGameTurn,
                         10,
                         2,
-                        utils.outerInvasion,
+                        outerInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                     )
@@ -2219,7 +2227,7 @@ class Barbs:
                         iGameTurn,
                         7,
                         3,
-                        utils.forcedInvasion,
+                        forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_BEDUINS"),
                     )
@@ -2236,7 +2244,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL"),
                 )
@@ -2249,7 +2257,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL"),
                 )
@@ -2263,7 +2271,7 @@ class Barbs:
                     iGameTurn,
                     11,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL"),
                 )
@@ -2276,7 +2284,7 @@ class Barbs:
                     iGameTurn,
                     8,
                     5,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL"),
                 )
@@ -2290,7 +2298,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN"),
             )
@@ -2306,7 +2314,7 @@ class Barbs:
                 iGameTurn,
                 13,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
         elif DateTurn.i1020AD <= iGameTurn < DateTurn.i1236AD:
@@ -2319,7 +2327,7 @@ class Barbs:
                 iGameTurn,
                 9,
                 5,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.KIEV.value == iHuman:
@@ -2332,7 +2340,7 @@ class Barbs:
                     iGameTurn,
                     10,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
 
@@ -2347,7 +2355,7 @@ class Barbs:
                 iGameTurn,
                 10,
                 1,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
             self.spawnUnits(
@@ -2359,7 +2367,7 @@ class Barbs:
                 iGameTurn,
                 14,
                 2,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
             self.spawnUnits(
@@ -2371,7 +2379,7 @@ class Barbs:
                 iGameTurn,
                 16,
                 6,
-                utils.outerInvasion,
+                outerInvasion,
                 UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.BYZANTIUM.value == iHuman:
@@ -2384,7 +2392,7 @@ class Barbs:
                     iGameTurn,
                     10,
                     1,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
@@ -2396,7 +2404,7 @@ class Barbs:
                     iGameTurn,
                     14,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
@@ -2408,7 +2416,7 @@ class Barbs:
                     iGameTurn,
                     14,
                     2,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
@@ -2420,7 +2428,7 @@ class Barbs:
                     iGameTurn,
                     16,
                     6,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
@@ -2432,7 +2440,7 @@ class Barbs:
                     iGameTurn,
                     16,
                     6,
-                    utils.outerInvasion,
+                    outerInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                 )
 
@@ -2447,7 +2455,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2460,7 +2468,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2473,7 +2481,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2486,7 +2494,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2499,7 +2507,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2512,7 +2520,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2525,7 +2533,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2538,7 +2546,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2551,7 +2559,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2564,7 +2572,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
             )
@@ -2578,7 +2586,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2591,7 +2599,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2604,7 +2612,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2617,7 +2625,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2630,7 +2638,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2643,7 +2651,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2656,7 +2664,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2669,7 +2677,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2682,7 +2690,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2695,7 +2703,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2709,7 +2717,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2722,7 +2730,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2735,7 +2743,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_SELJUKS"),
                 )
@@ -2752,7 +2760,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_DANISHMENDS"),
                 )
@@ -2766,7 +2774,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_DANISHMENDS"),
                 )
@@ -2784,7 +2792,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2797,7 +2805,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2811,7 +2819,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2824,7 +2832,7 @@ class Barbs:
                     iGameTurn,
                     3,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2839,7 +2847,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2852,7 +2860,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2866,7 +2874,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2879,7 +2887,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2894,7 +2902,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2908,7 +2916,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2923,7 +2931,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2937,7 +2945,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
                 )
@@ -2951,7 +2959,7 @@ class Barbs:
                 iGameTurn,
                 4,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
             )
@@ -2964,7 +2972,7 @@ class Barbs:
                 iGameTurn,
                 6,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
             )
@@ -2978,7 +2986,7 @@ class Barbs:
                 iGameTurn,
                 3,
                 2,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
             )
@@ -2991,7 +2999,7 @@ class Barbs:
                 iGameTurn,
                 6,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_MONGOLS"),
             )
@@ -3010,7 +3018,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
             )
@@ -3025,7 +3033,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3038,7 +3046,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3051,7 +3059,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     2,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3065,7 +3073,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3078,7 +3086,7 @@ class Barbs:
                     iGameTurn,
                     5,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3093,7 +3101,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3107,7 +3115,7 @@ class Barbs:
                     iGameTurn,
                     4,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_TIMURIDS"),
                 )
@@ -3123,7 +3131,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 1,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_NOGAIS"),
             )
@@ -3137,7 +3145,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     1,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_NOGAIS"),
                 )
@@ -3153,7 +3161,7 @@ class Barbs:
                 iGameTurn,
                 7,
                 0,
-                utils.forcedInvasion,
+                forcedInvasion,
                 UnitAITypes.UNITAI_ATTACK,
                 text("TXT_KEY_BARBARIAN_NAMES_KALMYKS"),
             )
@@ -3167,7 +3175,7 @@ class Barbs:
                     iGameTurn,
                     7,
                     0,
-                    utils.forcedInvasion,
+                    forcedInvasion,
                     UnitAITypes.UNITAI_ATTACK,
                     text("TXT_KEY_BARBARIAN_NAMES_KALMYKS"),
                 )
@@ -3239,7 +3247,7 @@ class Barbs:
         unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
-            plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
+            plotList = squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = random_entry(plotList)
                 if tPlot is not None:
@@ -3259,7 +3267,7 @@ class Barbs:
         unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
-            plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
+            plotList = squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = random_entry(plotList)
                 if tPlot is not None:
@@ -3284,7 +3292,7 @@ class Barbs:
         unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
-            plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
+            plotList = squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = random_entry(plotList)
                 if tPlot is not None:
@@ -3326,7 +3334,7 @@ class Barbs:
             1,
             1,
             0,
-            utils.outerInvasion,
+            outerInvasion,
             UnitAITypes.UNITAI_ATTACK,
         )
 
@@ -3422,13 +3430,13 @@ class Barbs:
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
-                utils.cultureManager(tCity, 50, iNewCiv, iPlayer, False, True, True)
-                utils.flipUnitsInCitySecession(tCity, iNewCiv, iPlayer)
+                cultureManager(tCity, 50, iNewCiv, iPlayer, False, True, True)
+                flipUnitsInCitySecession(tCity, iNewCiv, iPlayer)
                 self.setTempFlippingCity(tCity)
-                utils.flipCity(
+                flipCity(
                     tCity, 0, 0, iNewCiv, [iPlayer]
                 )  # by trade because by conquest may raze the city
-                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+                flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
     def eventApply7627(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
@@ -3510,13 +3518,13 @@ class Barbs:
                     text("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", sNationName, pCity.getName()),
                     color=MessageData.ORANGE,
                 )
-                utils.cultureManager(tCity, 50, iNewCiv, iPlayer, False, True, True)
-                utils.flipUnitsInCitySecession(tCity, iNewCiv, iPlayer)
+                cultureManager(tCity, 50, iNewCiv, iPlayer, False, True, True)
+                flipUnitsInCitySecession(tCity, iNewCiv, iPlayer)
                 self.setTempFlippingCity(tCity)
-                utils.flipCity(
+                flipCity(
                     tCity, 0, 0, iNewCiv, [iPlayer]
                 )  # by trade because by conquest may raze the city
-                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+                flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
     # Absinthe: revolution choice effects:
     # base chance: stability bonus adjusted with the revolt strength + base chance + passive military presence - revolt strength

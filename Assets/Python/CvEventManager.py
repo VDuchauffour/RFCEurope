@@ -20,7 +20,7 @@ import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
 from PyUtils import percentage_chance, rand, choice
-import RFCUtils
+from RFCUtils import getBaseUnit, getUniqueUnit
 import GameBalance
 import random
 from Consts import MessageData
@@ -28,7 +28,6 @@ from CoreData import civilizations, civilization
 from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
-utils = RFCUtils.RFCUtils()
 balance = GameBalance.GameBalance()
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -1027,16 +1026,16 @@ class CvEventManager:
 
         if pTeam.isTrainVassalUU():
             l_vassalUU = []
-            iDefaultUnit = utils.getBaseUnit(iUnitType)
+            iDefaultUnit = getBaseUnit(iUnitType)
             for iLoopPlayer in civilizations().majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive():
                     if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
-                        iUniqueUnit = utils.getUniqueUnit(iLoopPlayer, iUnitType)
+                        iUniqueUnit = getUniqueUnit(iLoopPlayer, iUnitType)
                         if iUniqueUnit != iDefaultUnit:
                             l_vassalUU.append(iUniqueUnit)
             if l_vassalUU:  # Only convert if vassal UU is possible
-                iPlayerUU = utils.getUniqueUnit(iPlayer, iUnitType)
+                iPlayerUU = getUniqueUnit(iPlayer, iUnitType)
                 if iPlayerUU != iDefaultUnit:
                     # double chance for the original UU
                     l_vassalUU.append(iPlayerUU)

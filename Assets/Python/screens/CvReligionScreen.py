@@ -4,12 +4,10 @@ from CvPythonExtensions import *
 import PyHelpers
 import CvUtil
 import CvScreenEnums
-import RFCUtils
 from CoreTypes import Scenario, FaithPointBonusCategory, Technology
 from Scenario import get_scenario, get_scenario_start_years
 from CoreFunctions import text
 
-utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
 
 # globals

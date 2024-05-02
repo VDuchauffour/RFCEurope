@@ -12,13 +12,12 @@ from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
 import PyHelpers
 from PyUtils import rand  # Absinthe
-import RFCUtils
+from RFCUtils import prosecute
 import Stability  # Absinthe
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
-utils = RFCUtils.RFCUtils()  # Absinthe
 sta = Stability.Stability()  # Absinthe
 
 
@@ -334,7 +333,7 @@ class CvGameUtils:
                 pUnit,
             )
         else:
-            utils.prosecute(pCity.getX(), pCity.getY(), pUnit.getID())
+            prosecute(pCity.getX(), pCity.getY(), pUnit.getID())
 
     def AI_doWar(self, argsList):
         eTeam = argsList[0]

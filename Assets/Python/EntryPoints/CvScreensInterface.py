@@ -53,9 +53,10 @@ import CvMercenaryManager
 
 
 # Rhye - start
-import RFCUtils
+from RFCUtils import countAchievedGoals as _countAchievedGoals
+from RFCUtils import toggleStabilityOverlay as _toggleStabilityOverlay
+from RFCUtils import *  #  setLastRecordedStabilityStuff comes from RFC classic
 
-utils = RFCUtils.RFCUtils()
 g_bIsScreenActive = -1
 
 
@@ -64,23 +65,23 @@ def getStability(argsList):
 
 
 def countAchievedGoals(argsList):
-    return utils.countAchievedGoals(argsList[0])
+    return _countAchievedGoals(argsList[0])
 
 
-def resetStabilityParameters(argsList):
-    utils.setLastRecordedStabilityStuff(0, 0)
-    utils.setLastRecordedStabilityStuff(1, 0)
-    utils.setLastRecordedStabilityStuff(2, 0)
-    utils.setLastRecordedStabilityStuff(3, 0)
-    utils.setLastRecordedStabilityStuff(4, 0)
-    utils.setLastRecordedStabilityStuff(5, 0)
+def resetStabilityParameters(argsList):  # TODO is this actually used ? if not remove it
+    setLastRecordedStabilityStuff(0, 0)  # type: ignore
+    setLastRecordedStabilityStuff(1, 0)  # type: ignore
+    setLastRecordedStabilityStuff(2, 0)  # type: ignore
+    setLastRecordedStabilityStuff(3, 0)  # type: ignore
+    setLastRecordedStabilityStuff(4, 0)  # type: ignore
+    setLastRecordedStabilityStuff(5, 0)  # type: ignore
 
 
 # Rhye - end
 
 # Absinthe: stability overlay
 def toggleStabilityOverlay():
-    utils.toggleStabilityOverlay()
+    _toggleStabilityOverlay()
 
 
 # Absinthe: end

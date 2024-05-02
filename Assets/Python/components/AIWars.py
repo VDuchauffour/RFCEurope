@@ -4,16 +4,23 @@ from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
 from CoreData import civilizations, civilization
 from CoreFunctions import get_data_from_upside_down_map
-from CoreStructures import is_major_civ, turn, year, plots
+from CoreStructures import is_independent_civ, is_major_civ, turn, year, plots
 from CoreTypes import Civ
 from PyUtils import rand
-import RFCUtils
+from RFCUtils import (
+    getMaster,
+    getPlagueCountdown,
+    isAVassal,
+    minorCoreWars,
+    minorWars,
+    restorePeaceAI,
+    restorePeaceHuman,
+)
 from Scenario import get_scenario_start_turn
 from StoredData import data
 from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 
 iMinIntervalEarly = 15
 iMaxIntervalEarly = 30
@@ -51,7 +58,7 @@ class AIWars:
             }
             for civ, value in turn_peace_human_mapper.items():
                 if iGameTurn % 20 == value:
-                    utils.restorePeaceHuman(civ.value)
+                    restorePeaceHuman(civ.value)
 
             turn_peace_ai_mapper = {
                 Civ.INDEPENDENT: 0,
@@ -61,7 +68,7 @@ class AIWars:
             }
             for civ, value in turn_peace_ai_mapper.items():
                 if iGameTurn % 36 == value:
-                    utils.restorePeaceAI(civ.value, False)
+                    restorePeaceAI(civ.value, False)
 
             # Absinthe: automatically turn war on between independent cities and some AI major civs
             # runned on the 2nd turn after restorePeaceAI()
@@ -73,7 +80,7 @@ class AIWars:
             }
             for civ, value in turn_minor_wars_mapper.items():
                 if iGameTurn % 36 == value:
-                    utils.minorWars(civ.value, iGameTurn)
+                    minorWars(civ.value, iGameTurn)
 
             # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
             # so the AI will declare war much sooner after an indy city appeared in it's core
@@ -85,7 +92,7 @@ class AIWars:
             }
             for civ, value in turn_minor_core_wars_mapper.items():
                 if iGameTurn % 12 == value:
-                    utils.minorCoreWars(civ.value, iGameTurn)
+                    minorCoreWars(civ.value, iGameTurn)
 
         # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
         if iGameTurn % 9 == 2:
@@ -95,7 +102,7 @@ class AIWars:
                 if pRagusaPlot.isCity():
                     pRagusaCity = pRagusaPlot.getPlotCity()
                     iOwner = pRagusaCity.getOwner()
-                    if utils.isIndep(iOwner):
+                    if is_independent_civ(iOwner):
                         # Absinthe: probably better to use declareWar instead of setAtWar
                         teamVenice = gc.getTeam(pVenice.getTeam())
                         teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
@@ -108,7 +115,7 @@ class AIWars:
                 if pZagrebPlot.isCity():
                     pZagrebCity = pZagrebPlot.getPlotCity()
                     iOwner = pZagrebCity.getOwner()
-                    if utils.isIndep(iOwner):
+                    if is_independent_civ(iOwner):
                         # Absinthe: probably better to use declareWar instead of setAtWar
                         teamHungary = gc.getTeam(pHungary.getTeam())
                         teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
@@ -166,11 +173,10 @@ class AIWars:
                 iLoopCiv = i % iMaxCivs
                 if gc.getPlayer(iLoopCiv).isAlive() and not gc.getPlayer(iLoopCiv).isHuman():
                     if (
-                        utils.getPlagueCountdown(iLoopCiv) >= -10
-                        and utils.getPlagueCountdown(iLoopCiv) <= 0
+                        getPlagueCountdown(iLoopCiv) >= -10 and getPlagueCountdown(iLoopCiv) <= 0
                     ):  # civ is not under plague or quit recently from it
                         iAlreadyAttacked = self.getAttackingCivsArray(iLoopCiv)
-                        if utils.isAVassal(iLoopCiv):
+                        if isAVassal(iLoopCiv):
                             iAlreadyAttacked += 1  # less likely to attack
                         # check if a world war is already in place:
                         iNumAlreadyWar = 0
@@ -246,15 +252,15 @@ class AIWars:
                 lTargetCivs[iLoopCiv] /= attitude
             # exploit plague
             if (
-                utils.getPlagueCountdown(iLoopCiv) > 0
-                or utils.getPlagueCountdown(iLoopCiv) < -10
+                getPlagueCountdown(iLoopCiv) > 0
+                or getPlagueCountdown(iLoopCiv) < -10
                 and not turn() <= civilization(iLoopCiv).date.birth + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2
 
             # balanced with master's attitude
-            iMaster = utils.getMaster(iCiv)
+            iMaster = getMaster(iCiv)
             if iMaster != -1:
                 attitude = 2 * (gc.getPlayer(iMaster).AI_getAttitude(iLoopCiv) - 2)
                 if attitude > 0:

@@ -25,14 +25,13 @@ from CoreTypes import (
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
 import PyHelpers
 from PyUtils import rand
-import RFCUtils
+from RFCUtils import calculateDistance, countAchievedGoals, getCargoShips, getMostAdvancedCiv
 import UniquePowers
 from StoredData import data
 import random
 
 from Consts import MessageData
 
-utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
 
@@ -542,7 +541,7 @@ class Victory:
         # Generic checks:
         if not pPlayer.getUHV2of3():
             if (
-                utils.countAchievedGoals(iPlayer) >= 2
+                countAchievedGoals(iPlayer) >= 2
             ):  # in case the last 2 goals were achieved in the same turn
                 # intermediate bonus
                 pPlayer.setUHV2of3(True)
@@ -592,7 +591,7 @@ class Victory:
                                     # bigger chance for close civs
                                     PlayerCapital = gc.getPlayer(iPlayer).getCapitalCity()
                                     CivCapital = gc.getPlayer(iCiv).getCapitalCity()
-                                    iDistance = utils.calculateDistance(
+                                    iDistance = calculateDistance(
                                         CivCapital.getX(),
                                         CivCapital.getY(),
                                         PlayerCapital.getX(),
@@ -1088,7 +1087,7 @@ class Victory:
         # UHV 2: Control the Levant and Egypt in 1291AD while being the most advanced civilization
         elif iGameTurn == year(1291):
             if self.isPossibleUHV(Civ.ARABIA.value, 1, True):
-                iMostAdvancedCiv = utils.getMostAdvancedCiv()
+                iMostAdvancedCiv = getMostAdvancedCiv()
                 if (
                     self.checkProvincesStates(Civ.ARABIA.value, tArabiaControlII)
                     and iMostAdvancedCiv == Civ.ARABIA.value
@@ -1752,7 +1751,7 @@ class Victory:
         elif iGameTurn == year(1444):
             if self.isPossibleUHV(Civ.ARAGON.value, 1, True):
                 iPorts = player(Civ.ARAGON).countNumBuildings(Building.ARAGON_SEAPORT.value)
-                iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
+                iCargoShips = getCargoShips(Civ.ARAGON.value)
                 if iPorts >= 12 and iCargoShips >= 30:
                     self.wonUHV(Civ.ARAGON.value, 1)
                 else:

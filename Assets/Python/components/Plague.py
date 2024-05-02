@@ -9,15 +9,14 @@ from CoreStructures import human, player, turn, year, cities, plots
 from CoreStructures import city as _city
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
-import RFCUtils
 
+from RFCUtils import calculateDistance, isMortalUnit
 from StoredData import data
 import random
 
 from MiscData import PLAGUE_IMMUNITY
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 
 
 # Absinthe: Black Death is more severe, while the Plague of Justinian is less severe than the others plagues
@@ -307,7 +306,7 @@ class Plague:
                 else:
                     i = iNumUnitsInAPlot - j - 1  # count back from the weakest unit
                 unit = plot.getUnit(i)
-                if utils.isMortalUnit(unit) and percentage_chance(
+                if isMortalUnit(unit) and percentage_chance(
                     iThreshold + 5 * iCityHealthRate, strict=True, reverse=True
                 ):
                     iUnitDamage = unit.getDamage()
@@ -472,7 +471,7 @@ class Plague:
                             self.infectCitiesNear(plot.getOwner(), *location(plot))
             # kill units around the city
             for plot in plots().surrounding(city, radius=3).entities():
-                iDistance = utils.calculateDistance(city.getX(), city.getY(), *location(plot))
+                iDistance = calculateDistance(city.getX(), city.getY(), *location(plot))
                 if iDistance == 0:  # City
                     self.killUnitsByPlague(city, plot, 20, 40, 2)
                 elif not plot.isCity():
@@ -531,7 +530,7 @@ class Plague:
                         city
                         for city in lInfectedCities
                         if targetCity.isConnectedTo(city)
-                        and utils.calculateDistance(
+                        and calculateDistance(
                             targetCity.getX(), targetCity.getY(), city.getX(), city.getY()
                         )
                         <= 10
@@ -582,7 +581,7 @@ class Plague:
             if not city.hasBuilding(PlagueType.PLAGUE.value)
         ]
         for city in cityList:
-            if utils.calculateDistance(city.getX(), city.getY(), startingX, startingY) <= 3:
+            if calculateDistance(city.getX(), city.getY(), startingX, startingY) <= 3:
                 self.infectCity(city)
 
     def preStopPlague(self, iPlayer, iPlagueCountDown):
@@ -630,7 +629,7 @@ class Plague:
                         for cityNear in cities().owner(iNewOwner).entities():
                             if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
                                 if (
-                                    utils.calculateDistance(
+                                    calculateDistance(
                                         city.getX(), city.getY(), cityNear.getX(), cityNear.getY()
                                     )
                                     <= 3
@@ -645,7 +644,7 @@ class Plague:
                         for cityNear in cities().owner(iNewOwner).entities():
                             if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
                                 if (
-                                    utils.calculateDistance(
+                                    calculateDistance(
                                         city.getX(), city.getY(), cityNear.getX(), cityNear.getY()
                                     )
                                     <= 3

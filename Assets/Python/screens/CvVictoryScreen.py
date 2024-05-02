@@ -21,14 +21,13 @@ from CoreTypes import (
 import CvUtil
 from LocationsData import CITIES
 import PyHelpers
-import RFCUtils
+from RFCUtils import getCargoShips, getMostAdvancedCiv
 import Victory as vic
 import UniquePowers
 
 PyPlayer = PyHelpers.PyPlayer
 
 up = UniquePowers.UniquePowers()
-utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 
@@ -2161,9 +2160,9 @@ class CvVictoryScreen:
                 # iRow = screen.appendTableRow(szTable)
                 # screen.setTableText(szTable, 0, iRow, text(tGoals[self.iActivePlayer][i]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # screen.setTableText(szTable, 2, iRow, text("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                # if (utils.getGoal(self.iActivePlayer, i) == 1):
+                # if (getGoal(self.iActivePlayer, i) == 1):
                 # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_YES"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                # elif (utils.getGoal(self.iActivePlayer, i) == 0):
+                # elif (getGoal(self.iActivePlayer, i) == 0):
                 # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_NO"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # else:
                 # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_NOTYET"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -2394,7 +2393,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tArabiaControlI)
         # sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, year(955)), (vic.tArabiaControlII, year(1291))])
         # UHV2
-        iMostAdvancedCiv = utils.getMostAdvancedCiv()
+        iMostAdvancedCiv = getMostAdvancedCiv()
         if iMostAdvancedCiv != -1:
             pMostAdvancedCiv = gc.getPlayer(iMostAdvancedCiv)
             sCivShortName = str(pMostAdvancedCiv.getCivilizationShortDescriptionKey())
@@ -2974,7 +2973,7 @@ class CvVictoryScreen:
             + u"<font=1>\n\n</font>"
         )
         iSeaports = pPlayer.countNumBuildings(Building.ARAGON_SEAPORT.value)
-        iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
+        iCargoShips = getCargoShips(Civ.ARAGON.value)
         sText2 += (
             text("TXT_KEY_UHV_CURRENTLY")
             + ": "
