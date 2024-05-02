@@ -34,7 +34,7 @@ from LocationsData import (
     CIV_VISIBLE_AREA,
     COMPANY_REGION,
 )
-from MiscData import CIV_DAWN_OF_MAN_VALUES, COMPANY_LIMIT
+from MiscData import COMPANY_LIMIT
 from Scenario import get_scenario
 from TimelineData import (
     CIV_BIRTHDATE,
@@ -82,7 +82,6 @@ CIVILIZATIONS_BASE = (
     .attach("stability_bonus", CIV_STABILITY_AI_BONUS, key="ai")
     .attach("reformation_threshold", CIV_AI_REFORMATION_THRESHOLD, key="ai")
     .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
-    .attach("dawn_of_man", CIV_DAWN_OF_MAN_VALUES, key="misc")
     .attach("birth", CIV_BIRTHDATE, key="date")
     .attach("collapse", CIV_COLLAPSE_DATE, key="date")
     .attach("respawning", CIV_RESPAWNING_DATE, key="date")

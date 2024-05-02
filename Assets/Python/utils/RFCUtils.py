@@ -6,6 +6,7 @@ from CoreStructures import (
     human,
     make_unit,
     make_units,
+    name,
     player,
     team,
     teamtype,
@@ -19,6 +20,7 @@ from CoreTypes import (
     Civ,
     PlagueType,
     Religion,
+    Scenario,
     UniquePower,
     Wonder,
     Promotion,
@@ -33,6 +35,7 @@ from LocationsData import CITIES
 import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand
+from Scenario import get_scenario
 from SettlerMapData import SETTLERS_MAP
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
@@ -44,6 +47,7 @@ from CoreFunctions import (
     location,
     message,
     text,
+    text_if_exists,
 )
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
@@ -1514,3 +1518,13 @@ class RFCUtils:
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]
+
+    def getDawnOfManText(self, iPlayer):
+        scenario = get_scenario()
+        base_key = "TXT_KEY_DOM_%s" % str(name(iPlayer).replace(" ", "_").upper())
+
+        full_key = base_key
+        if scenario == Scenario.i1200AD:
+            full_key += "_1200AD"
+
+        return text_if_exists(full_key, otherwise=base_key)

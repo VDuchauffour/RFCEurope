@@ -1,4 +1,4 @@
-from BaseStructures import CompanyDataMapper, EnumDataMapper, CivDataMapper
+from BaseStructures import CompanyDataMapper, EnumDataMapper
 from CoreTypes import Building, Civ, Company, Religion, Unit, Wonder
 
 PLAGUE_IMMUNITY = 20
@@ -65,40 +65,6 @@ COMPANY_LIMIT = CompanyDataMapper(
         Company.ST_GEORGE: 3,
         Company.DRAGON: 5,
         Company.CALATRAVA: 5,
-    }
-)
-
-CIV_DAWN_OF_MAN_VALUES = CivDataMapper(
-    {
-        Civ.BYZANTIUM: ("500", "TXT_KEY_AD"),
-        Civ.FRANCE: ("500", "TXT_KEY_AD"),
-        Civ.ARABIA: ("632", "TXT_KEY_AD"),
-        Civ.BULGARIA: ("680", "TXT_KEY_AD"),
-        Civ.CORDOBA: ("711", "TXT_KEY_AD"),
-        Civ.VENECIA: ("810", "TXT_KEY_AD"),
-        Civ.BURGUNDY: ("843", "TXT_KEY_AD"),
-        Civ.GERMANY: ("856", "TXT_KEY_AD"),
-        Civ.NOVGOROD: ("864", "TXT_KEY_AD"),
-        Civ.NORWAY: ("872", "TXT_KEY_AD"),
-        Civ.KIEV: ("880", "TXT_KEY_AD"),
-        Civ.HUNGARY: ("895", "TXT_KEY_AD"),
-        Civ.CASTILE: ("910", "TXT_KEY_AD"),
-        Civ.DENMARK: ("936", "TXT_KEY_AD"),
-        Civ.SCOTLAND: ("960", "TXT_KEY_AD"),
-        Civ.POLAND: ("966", "TXT_KEY_AD"),
-        Civ.GENOA: ("1016", "TXT_KEY_AD"),
-        Civ.MOROCCO: ("1040", "TXT_KEY_AD"),
-        Civ.ENGLAND: ("1066", "TXT_KEY_AD"),
-        Civ.PORTUGAL: ("1139", "TXT_KEY_AD"),
-        Civ.ARAGON: ("1164", "TXT_KEY_AD"),
-        Civ.SWEDEN: ("1210", "TXT_KEY_AD"),
-        Civ.PRUSSIA: ("1224", "TXT_KEY_AD"),
-        Civ.LITHUANIA: ("1236", "TXT_KEY_AD"),
-        Civ.AUSTRIA: ("1282", "TXT_KEY_AD"),
-        Civ.OTTOMAN: ("1356", "TXT_KEY_AD"),
-        Civ.MOSCOW: ("1380", "TXT_KEY_AD"),
-        Civ.DUTCH: ("1581", "TXT_KEY_AD"),
-        Civ.POPE: ("500", "TXT_KEY_AD"),
     }
 )
 

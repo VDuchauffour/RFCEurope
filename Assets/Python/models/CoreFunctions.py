@@ -207,6 +207,16 @@ def text(key, *format):
     return translator.getText(str(key), tuple(format))
 
 
+def text_if_exists(key, *format, **kwargs):
+    otherwise = kwargs.get("otherwise")
+    key_text = text(key, *format)
+    if key_text != key:
+        return key_text
+    elif otherwise:
+        return text(otherwise, *format)
+    return ""
+
+
 def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
