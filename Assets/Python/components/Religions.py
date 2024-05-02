@@ -24,8 +24,8 @@ from CoreTypes import (
 from LocationsData import CITIES
 import PyHelpers
 import Popup
-import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
+from RFCUtils import getBaseBuilding, getPersecutionData, getPersecutionReligions, prosecute
 from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
 
@@ -33,7 +33,6 @@ from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
-utils = RFCUtils.RFCUtils()
 
 
 ### Regions to spread religion ###
@@ -542,7 +541,7 @@ class Religions:
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             # Absinthe: Wonders: Mont Saint-Michel wonder effect
-            if utils.getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
+            if getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
                 if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
                     pPlayer.changeFaith(1)
         if iBuilding in RELIGIOUS_WONDERS:
@@ -553,9 +552,8 @@ class Religions:
             pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
             # Kazimierz tries to spread Judaism to a couple new cities
             cityList = cities().owner(iPlayer).entities()
-            iJewCityNum = max(
-                (len(cityList) + 2) / 3 + 1, 3
-            )  # number of tries are based on number of cities, but at least 3
+            iJewCityNum = int(max((len(cityList) + 2) / 3 + 1, 3))
+            # number of tries are based on number of cities, but at least 3
             for i in range(iJewCityNum):
                 city = choice(cityList)
                 if not city.isHasReligion(Religion.JUDAISM.value):
@@ -1049,11 +1047,11 @@ class Religions:
 
     def eventApply7628(self, popupReturn):  # Absinthe: persecution popup
         """Persecution popup event."""
-        iPlotX, iPlotY, iUnitID = utils.getPersecutionData()
-        religionList = utils.getPersecutionReligions()
+        iPlotX, iPlotY, iUnitID = getPersecutionData()
+        religionList = getPersecutionReligions()
         iChosenButton = popupReturn.getButtonClicked()
         iChosenReligion = religionList[iChosenButton]
-        utils.prosecute(iPlotX, iPlotY, iUnitID, iChosenReligion)
+        prosecute(iPlotX, iPlotY, iUnitID, iChosenReligion)
 
     def doCounterReformationYes(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)

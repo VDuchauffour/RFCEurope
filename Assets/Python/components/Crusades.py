@@ -16,9 +16,9 @@ from CoreStructures import (
 )
 import PyHelpers
 from PyUtils import percentage, percentage_chance, rand, choice
-import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
+from RFCUtils import convertPlotCulture, getMaster, getUniqueUnit, isAVassal
 from StoredData import data
 import random
 
@@ -29,7 +29,6 @@ from LocationsData import CITIES
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
-utils = RFCUtils.RFCUtils()
 cnm = CityNameManager.CityNameManager()
 
 
@@ -1076,7 +1075,7 @@ class Crusades:
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
                     # should check if Constantinople is their capital city to be fully correct, but we can assume that's the case
-                    bIsNotAVassal = not utils.isAVassal(Civ.BYZANTIUM.value)
+                    bIsNotAVassal = not isAVassal(Civ.BYZANTIUM.value)
                     if iConstantinopleOwner == Civ.BYZANTIUM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.BYZANTIUM.value)
                         bStolen = True
@@ -1089,7 +1088,7 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamCordoba):
                     # Only if Cordoba is Muslim and not a vassal
-                    bIsNotAVassal = not utils.isAVassal(Civ.CORDOBA.value)
+                    bIsNotAVassal = not isAVassal(Civ.CORDOBA.value)
                     if pCordoba.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.CORDOBA.value)
                         bStolen = True
@@ -1102,7 +1101,7 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamTurkey):
                     # Only if the Ottomans are Muslim and not a vassal
-                    bIsNotAVassal = not utils.isAVassal(Civ.OTTOMAN.value)
+                    bIsNotAVassal = not isAVassal(Civ.OTTOMAN.value)
                     if pTurkey.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.OTTOMAN.value)
                         bStolen = True
@@ -1589,7 +1588,7 @@ class Crusades:
             pPlayer.changeGoldenAgeTurns(gc.getPlayer(iPlayer).getGoldenAgeLength())
             self.setSucceeded()
             for plot in plots().surrounding(CITIES[City.JERUSALEM]).entities():
-                utils.convertPlotCulture(plot, iPlayer, 100, False)
+                convertPlotCulture(plot, iPlayer, 100, False)
 
     # Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
     def checkPlayerTurn(self, iGameTurn, iPlayer):
@@ -1843,9 +1842,9 @@ class Crusades:
             Unit.SWORDSMAN.value,
         ]
         for iUnit in lUnits:
-            if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
-                return utils.getUniqueUnit(iPlayer, iUnit)
-        return utils.getUniqueUnit(iPlayer, Unit.AXEMAN.value)
+            if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
+                return getUniqueUnit(iPlayer, iUnit)
+        return getUniqueUnit(iPlayer, Unit.AXEMAN.value)
 
     def getDefensiveCrusadeBestCavalry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
@@ -1856,9 +1855,9 @@ class Crusades:
             Unit.LANCER.value,
         ]
         for iUnit in lUnits:
-            if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
-                return utils.getUniqueUnit(iPlayer, iUnit)
-        return utils.getUniqueUnit(iPlayer, Unit.SCOUT.value)
+            if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
+                return getUniqueUnit(iPlayer, iUnit)
+        return getUniqueUnit(iPlayer, Unit.SCOUT.value)
 
     def do1200ADCrusades(self):
         self.setCrusadeInit(0, year(1096))
@@ -1870,7 +1869,7 @@ class Crusades:
         iReligion = pPlayer.getStateReligion()
         if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
             return True
-        iMaster = utils.getMaster(iPlayer)
+        iMaster = getMaster(iPlayer)
         if iMaster != -1:
             iMasterReligion = gc.getPlayer(iMaster).getStateReligion()
             if iMasterReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:

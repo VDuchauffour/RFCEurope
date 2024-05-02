@@ -8,14 +8,13 @@ import CvUtil
 import CvScreenEnums
 
 
-import RFCUtils  # Rhye
+from RFCUtils import *  # getArrow comes from RFC classic
 import Stability  # Absinthe
 
 # Mercenary Upkeep
 # import MercenaryUtils
 # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
-utils = RFCUtils.RFCUtils()  # Rhye
 stab = Stability.Stability()  # Absinthe
 
 # globals
@@ -1115,7 +1114,7 @@ class CvFinanceAdvisor:
                 panel,
                 "Background",
                 unichr(  # type: ignore
-                    CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(iParameter)
+                    CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + getArrow(iParameter)  # type: ignore
                 ),
                 CvUtil.FONT_CENTER_JUSTIFY,
                 x,

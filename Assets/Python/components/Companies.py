@@ -8,9 +8,9 @@ from CoreFunctions import get_enum_by_id, text, message
 from CoreStructures import human, player, turn, year, cities
 from LocationsData import CITIES
 from PyUtils import rand
-import RFCUtils
 import Crusades
 from operator import itemgetter
+from RFCUtils import getUniqueBuilding
 from Scenario import get_scenario
 
 from MiscData import COMPANY_BUILDINGS
@@ -28,7 +28,6 @@ from CoreTypes import (
     Wonder,
 )
 
-utils = RFCUtils.RFCUtils()
 crus = Crusades.Crusades()
 gc = CyGlobalContext()
 
@@ -434,44 +433,34 @@ class Companies:
         iBuildCounter = 0  # building bonus counter: we don't want buildings to be the deciding factor in company spread
         if iCompany in [Company.HOSPITALLERS.value, Company.TEMPLARS.value, Company.TEUTONS.value]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
                 iBuildCounter += 2
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+                iBuildCounter += 1
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+                iBuildCounter += 1
             if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.BARRACKS.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value)
-                )
-                > 0
-            ):
-                iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
-                iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value)
-                )
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value))
                 > 0
             ):
                 iBuildCounter += 1
             if (
                 city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
+                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
                 )
                 > 0
             ):
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.GUILD_HALL.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
                 iBuildCounter += 1
             iValue += (4 * iBuildCounter) / iMaxPossible  # maximum is 4, with all buildings built
             # wonders should be handled separately
@@ -487,101 +476,69 @@ class Companies:
                     iValue += 2
         elif iCompany == Company.CALATRAVA.value:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
                 iBuildCounter += 2
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+                iBuildCounter += 1
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+                iBuildCounter += 1
             if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.BARRACKS.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value)
-                )
-                > 0
-            ):
-                iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
-                iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value)
-                )
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value))
                 > 0
             ):
                 iBuildCounter += 1
             if (
                 city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
+                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
                 )
                 > 0
             ):
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.STAR_FORT.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT.value)) > 0:
                 iBuildCounter += 1
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
         elif iCompany == Company.DRAGON.value:
             iMaxPossible = 9  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
                 iBuildCounter += 2
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+                iBuildCounter += 1
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+                iBuildCounter += 1
             if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.BARRACKS.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value)
-                )
-                > 0
-            ):
-                iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
-                iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.STAR_FORT.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT.value)) > 0:
                 iBuildCounter += 2
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
         elif iCompany in [Company.MEDICI.value, Company.AUGSBURG.value, Company.ST_GEORGE.value]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.BANK.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BANK.value)) > 0:
                 iBuildCounter += 3
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.JEWELER.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.JEWELER.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.GUILD_HALL.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.LUXURY_STORE.value)
-                )
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LUXURY_STORE.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.COURTHOUSE.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.COURTHOUSE.value)) > 0:
                 iBuildCounter += 2
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
             # wonders should be handled separately
@@ -593,52 +550,27 @@ class Companies:
             iValue += max(0, city.getTradeRoutes() - 1)
         elif iCompany == Company.HANSA.value:
             iMaxPossible = 16  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.HARBOR.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.HARBOR.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.LIGHTHOUSE.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LIGHTHOUSE.value)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WHARF.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WHARF.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.CUSTOM_HOUSE.value)
-                )
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CUSTOM_HOUSE.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.BREWERY.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BREWERY.value)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WEAVER.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WEAVER.value)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.GUILD_HALL.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.WAREHOUSE.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WAREHOUSE.value)) > 0:
                 iBuildCounter += 2
-            if (
-                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Building.TANNERY.value))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TANNERY.value)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    utils.getUniqueBuilding(iOwner, Building.TEXTILE_MILL.value)
-                )
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TEXTILE_MILL.value)) > 0:
                 iBuildCounter += 1
             iValue += (6 * iBuildCounter) / iMaxPossible  # maximum is 6, with all buildings built
             # bonus from trade routes

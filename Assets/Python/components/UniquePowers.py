@@ -6,13 +6,12 @@ from CoreStructures import human, make_unit, cities, plots
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
 
+from RFCUtils import getMaster, getUniqueUnit
 import Religions
-import RFCUtils
 
 from Consts import MessageData
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 religion = Religions.Religions()
 
 
@@ -149,7 +148,7 @@ class UniquePowers:
             for city in (
                 plots().rectangle(start, end).cities().coastal(5).not_owner(iPlayer).entities()
             ):
-                if not bVassal or city.getOwner() != utils.getMaster(city.getOwner()) != iPlayer:
+                if not bVassal or city.getOwner() != getMaster(city.getOwner()) != iPlayer:
                     iCities += 1
         return iCities
 
@@ -207,7 +206,7 @@ class UniquePowers:
     def defianceUP(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         # One ranged/gun class
-        RangedClass = utils.getUniqueUnit(iPlayer, Unit.ARCHER.value)
+        RangedClass = getUniqueUnit(iPlayer, Unit.ARCHER.value)
         lRangedList = [
             Unit.LINE_INFANTRY.value,
             Unit.MUSKETMAN.value,
@@ -217,16 +216,16 @@ class UniquePowers:
             Unit.ARCHER.value,
         ]
         for iUnit in lRangedList:
-            if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
-                RangedClass = utils.getUniqueUnit(iPlayer, iUnit)
+            if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
+                RangedClass = getUniqueUnit(iPlayer, iUnit)
                 break
 
         # One polearm class
-        PolearmClass = utils.getUniqueUnit(iPlayer, Unit.SPEARMAN.value)
+        PolearmClass = getUniqueUnit(iPlayer, Unit.SPEARMAN.value)
         lPolearmList = [Unit.LINE_INFANTRY.value, Unit.PIKEMAN.value, Unit.GUISARME.value]
         for iUnit in lPolearmList:
-            if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
-                PolearmClass = utils.getUniqueUnit(iPlayer, iUnit)
+            if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
+                PolearmClass = getUniqueUnit(iPlayer, iUnit)
                 break
 
         for city in cities().owner(iPlayer).entities():

@@ -11,13 +11,11 @@ import PyHelpers
 from PyUtils import percentage_chance, rand, choice
 
 # import cPickle as pickle
-import RFCUtils
 from StoredData import data
 
 from Consts import MessageData
 
 # globals
-utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 PyPlayer = PyHelpers.PyPlayer

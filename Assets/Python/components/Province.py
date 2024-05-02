@@ -1,12 +1,10 @@
 from CoreStructures import player, year, cities
-import RFCUtils
+from RFCUtils import refreshStabilityOverlay
 from Scenario import get_scenario
 
 from ProvinceMapData import PROVINCES_MAP
 from CoreData import civilization, civilizations
 from CoreTypes import Province, Event, Scenario, ProvinceType
-
-utils = RFCUtils.RFCUtils()
 
 
 class ProvinceManager:
@@ -38,7 +36,7 @@ class ProvinceManager:
         province = PROVINCES_MAP[y][x]
         if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
             civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
-            utils.refreshStabilityOverlay()
+            refreshStabilityOverlay()
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
         if iPlayer not in civilizations().main().ids():
@@ -47,7 +45,7 @@ class ProvinceManager:
         province = city.getProvince()
         if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
             civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
-            utils.refreshStabilityOverlay()
+            refreshStabilityOverlay()
 
     def onCityRazed(self, iOwner, iPlayer, city):
         pass
@@ -58,7 +56,7 @@ class ProvinceManager:
             province = city.getProvince()
             if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
                 civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
-        utils.refreshStabilityOverlay()
+        refreshStabilityOverlay()
 
     def onRespawn(self, iPlayer):
         # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
@@ -90,4 +88,4 @@ class ProvinceManager:
             for civ, province, province_type in events:
                 player(civ).setProvinceType(province.value, province_type.value)
 
-        utils.refreshStabilityOverlay()
+        refreshStabilityOverlay()

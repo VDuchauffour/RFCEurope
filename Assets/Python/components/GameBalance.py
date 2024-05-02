@@ -23,7 +23,6 @@ from CoreTypes import (
     FaithPointBonusCategory,
 )
 from ProvinceMapData import PROVINCES_MAP
-import RFCUtils
 from MiscData import (
     DIPLOMACY_MODIFIERS,
     HISTORICAL_ENEMIES,
@@ -36,7 +35,6 @@ from LocationsData import CITIES
 from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()  # LOQ
-utils = RFCUtils.RFCUtils()
 
 
 class GameBalance:
@@ -154,7 +152,7 @@ class GameBalance:
     def setBuildingPreferences(self):
         # use values -10 for very unlikely, 0 for default neutral and positive for desirable
         # values less than -10 might not work, above 10 should be fine
-        # the utils.getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
+        # the getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
         # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
         for civ in civilizations().majors():
             gc.setBuildingPref(civ.id, Building.WALLS.value, 5)

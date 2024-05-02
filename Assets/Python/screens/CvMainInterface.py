@@ -8,8 +8,6 @@ from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
 
-import RFCUtils  # Rhye
-
 # < Mercenaries Start >
 import CvMercenaryManager
 
@@ -17,13 +15,24 @@ import CvMercenaryManager
 # import MercenaryUtils
 # import CvMercenaryModGameUtils #Rhye
 import CvGameInterface
+from RFCUtils import (
+    StabilityOverlayCiv,
+    countAchievedGoals,
+    getCargoShips,
+    getGoalsColor,
+    getPlagueCountdown,
+    prosecute,
+    saint,
+    setPersecutionData,
+    setPersecutionReligions,
+    showPersecutionPopup,
+)
 
 # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 gameUtils = CvGameInterface.gameUtils()
 
 # < Mercenaries End >
 
-utils = RFCUtils.RFCUtils()  # Rhye
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 
@@ -3399,10 +3408,10 @@ class CvMainInterface:
                     szFaithButton = u"<font=2>%c</font>" % (
                         CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
                     )
-                    # szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
+                    # szPietyText = ": %s (%d)" %(getFavorLevelText(ePlayer), iPiety)
                     szFaithText = ": " + text("TXT_KEY_FAITH_POINTS") + (" (%i) " % iFaithPoints)
-                    # screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
-                    # screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
+                    # screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
+                    # screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
                     screen.setLabel(
                         "FaithButton",
                         "Background",
@@ -3974,7 +3983,7 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif ePlayer == Civ.ARAGON.value:
-                    iAragonCargoShips = utils.getCargoShips(Civ.ARAGON.value)
+                    iAragonCargoShips = getCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and turn() < (year(1444) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
@@ -6451,7 +6460,7 @@ class CvMainInterface:
                                                     )
                                                     szBuffer = szBuffer + szTempBuffer
                                             # Rhye - start plague
-                                            if utils.getPlagueCountdown(ePlayer) > 0:
+                                            if getPlagueCountdown(ePlayer) > 0:
                                                 szTempBuffer = unichr(  # type: ignore
                                                     CyGame().getSymbolID(FontSymbols.POWER_CHAR)
                                                     + 6
@@ -6486,13 +6495,13 @@ class CvMainInterface:
                                         # Rhye - end
 
                                         # Rhye - start victory
-                                        # szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
+                                        # szTempBuffer = u"%d" %(countAchievedGoals(ePlayer)) #white
                                         # szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
                                         if gc.getPlayer(ePlayer).isAlive():
                                             if ePlayer < civilizations().majors().len():
                                                 szTempBuffer = u"<color=%s>%d/3</color>" % (
-                                                    utils.getGoalsColor(ePlayer),
-                                                    utils.countAchievedGoals(ePlayer),
+                                                    getGoalsColor(ePlayer),
+                                                    countAchievedGoals(ePlayer),
                                                 )
                                                 szBuffer = szBuffer + " - " + szTempBuffer
                                         # Rhye - end victory
@@ -7081,7 +7090,7 @@ class CvMainInterface:
             inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED
             and inputClass.getData2() == 1234
         ):
-            utils.StabilityOverlayCiv(inputClass.getData1())
+            StabilityOverlayCiv(inputClass.getData1())
 
         # 3Miro religious prosecutions
         # Inquisitor button
@@ -7103,7 +7112,7 @@ class CvMainInterface:
             ##iOwner = g_pSelectedUnit.getOwner()
             # iUnitID = g_pSelectedUnit.getID()
 
-            # utils.prosecute( iPlotX, iPlotY, iUnitID )
+            # prosecute( iPlotX, iPlotY, iUnitID )
             ## Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
             ##CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
 
@@ -7123,19 +7132,17 @@ class CvMainInterface:
                         ):
                             religionList.append(iReligion)
                     if len(religionList) == 1:
-                        utils.prosecute(
+                        prosecute(
                             g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
                         )
                     elif len(religionList) > 1:
-                        utils.setPersecutionReligions(religionList)
-                        utils.setPersecutionData(
+                        setPersecutionReligions(religionList)
+                        setPersecutionData(
                             g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
                         )
-                        utils.showPersecutionPopup()
+                        showPersecutionPopup()
             else:
-                utils.prosecute(
-                    g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
-                )
+                prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
             # Absinthe: end
 
         # 3Miro: Saint
@@ -7146,7 +7153,7 @@ class CvMainInterface:
         ):
             # iUnitID = g_pSelectedUnit.getID()
 
-            utils.saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
+            saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
 
         return 0
 

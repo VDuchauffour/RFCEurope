@@ -12,7 +12,6 @@ import CvUtil
 import string
 
 from LocationsData import COLONY_LOCATIONS
-import RFCUtils
 
 from PyHelpers import PyPlayer
 
@@ -22,7 +21,6 @@ from Scenario import get_scenario, get_scenario_start_years
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
-utils = RFCUtils.RFCUtils()
 
 
 def iff(b, x, y):
