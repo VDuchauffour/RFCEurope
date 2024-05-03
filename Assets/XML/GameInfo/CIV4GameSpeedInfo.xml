@@ -8,52 +8,6 @@
 <Civ4GameSpeedInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<GameSpeedInfos>
 		<GameSpeedInfo>
-			<Type>GAMESPEED_MARATHON</Type>
-			<Description>TXT_KEY_GAMESPEED_MARATHON</Description>
-			<Help>TXT_KEY_GAMESPEED_MARATHON_HELP</Help>
-			<iGrowthPercent>300</iGrowthPercent>
-			<iTrainPercent>300</iTrainPercent>
-			<iConstructPercent>300</iConstructPercent>
-			<iCreatePercent>300</iCreatePercent>
-			<iResearchPercent>300</iResearchPercent>
-			<iBuildPercent>300</iBuildPercent>
-			<iImprovementPercent>300</iImprovementPercent>
-			<iGreatPeoplePercent>300</iGreatPeoplePercent>
-			<iCulturePercent>330</iCulturePercent>
-			<iAnarchyPercent>220</iAnarchyPercent>
-			<iBarbPercent>400</iBarbPercent>
-			<iFeatureProductionPercent>300</iFeatureProductionPercent>
-			<iUnitDiscoverPercent>300</iUnitDiscoverPercent>
-			<iUnitHurryPercent>300</iUnitHurryPercent>
-			<iUnitTradePercent>300</iUnitTradePercent>
-			<iUnitGreatWorkPercent>300</iUnitGreatWorkPercent>
-			<iGoldenAgePercent>300</iGoldenAgePercent>
-			<iHurryPercent>33</iHurryPercent>
-			<iHurryConscriptAngerPercent>300</iHurryConscriptAngerPercent>
-			<iInflationPercent>18</iInflationPercent>
-			<iInflationOffset>-360</iInflationOffset>
-			<iVictoryDelayPercent>300</iVictoryDelayPercent>
-			<GameTurnInfos>
-				<GameTurnInfo>
-					<iMonthIncrement>24</iMonthIncrement>
-					<iTurnsPerIncrement>250</iTurnsPerIncrement> <!-- 250*24/12=500 years -->
-				</GameTurnInfo>
-				<GameTurnInfo>
-					<iMonthIncrement>12</iMonthIncrement>
-					<iTurnsPerIncrement>600</iTurnsPerIncrement> <!-- 600*12/12=600 years -->
-				</GameTurnInfo>
-				<GameTurnInfo>
-					<iMonthIncrement>6</iMonthIncrement>
-					<iTurnsPerIncrement>400</iTurnsPerIncrement> <!-- 400*6/12=200 years -->
-				</GameTurnInfo>
-				<GameTurnInfo>
-					<iMonthIncrement>3</iMonthIncrement>
-					<iTurnsPerIncrement>160</iTurnsPerIncrement> <!-- 160*3/12=200 years -->
-				</GameTurnInfo>
-				<!-- 1410 turns = 1340 years (from 500 AD to 1840 AD) -->
-			</GameTurnInfos>
-		</GameSpeedInfo>
-		<GameSpeedInfo>
 			<Type>GAMESPEED_EPIC</Type>
 			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
 			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
