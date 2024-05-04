@@ -36,19 +36,19 @@
 			<GameTurnInfos>
 				<GameTurnInfo>
 					<iMonthIncrement>36</iMonthIncrement>
-					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 200*36/12=600 years -->
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 3 years of increment 200*3=600 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>24</iMonthIncrement>
-					<iTurnsPerIncrement>250</iTurnsPerIncrement> <!-- 250*24/12=500 years -->
+					<iTurnsPerIncrement>250</iTurnsPerIncrement> <!-- 2 years of increment 250*2=500 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>12</iMonthIncrement>
-					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 200*12/12=200 years -->
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 1 years of increment 200*1=200 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>6</iMonthIncrement>
-					<iTurnsPerIncrement>80</iTurnsPerIncrement> <!-- 80*12/6=40 years -->
+					<iTurnsPerIncrement>80</iTurnsPerIncrement> <!-- 6 mounths of increment 80*0.5=40 years -->
 				</GameTurnInfo>
 				<!-- 800 turns = 1340 years (from 500 AD to 1840 AD) -->
 			</GameTurnInfos>
@@ -82,19 +82,19 @@
 			<GameTurnInfos>
 				<GameTurnInfo>
 					<iMonthIncrement>48</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 100*48/12=400 years -->
+					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 4 years of increment 100*4=400 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>36</iMonthIncrement>
-					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 200*36/12=600 years -->
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 3 years of increment 200*3=600 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>24</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 100*24/12=200 years -->
+					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 2 years of increment 100*2=200 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>12</iMonthIncrement>
-					<iTurnsPerIncrement>140</iTurnsPerIncrement> <!-- 140*12/12=140 years -->
+					<iTurnsPerIncrement>140</iTurnsPerIncrement> <!-- 1 years of increment 140*1=140 years -->
 				</GameTurnInfo>
 				<!-- 540 turns = 1340 years (from 500 AD to 1840 AD) -->
 			</GameTurnInfos>
