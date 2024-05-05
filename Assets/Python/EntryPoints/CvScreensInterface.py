@@ -502,7 +502,7 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
             -1,
             -1,
             -1,
-            true,
+            True,
         )
 
     if worldBuilderScreen.setCurrentAdvancedStartIndex(iIndex):
@@ -645,7 +645,7 @@ def forceScreenUpdate(argsList):
 
     # Tech chooser update (forced from net message)
     if argsList[0] == TECH_CHOOSER:
-        techChooser.updateTechRecords(false)
+        techChooser.updateTechRecords(False)
     # Main interface Screen
     elif argsList[0] == MAIN_INTERFACE:
         mainInterface.updateScreen()
@@ -664,7 +664,7 @@ def forceScreenRedraw(argsList):
     if argsList[0] == MAIN_INTERFACE:
         mainInterface.redraw()
     elif argsList[0] == TECH_CHOOSER:
-        techChooser.updateTechRecords(true)
+        techChooser.updateTechRecords(True)
 
 
 def minimapClicked(argsList):
