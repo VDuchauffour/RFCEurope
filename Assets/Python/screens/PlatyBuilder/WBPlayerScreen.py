@@ -120,7 +120,7 @@ class WBPlayerScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isEverAlive():
                 sText = pPlayerX.getName()
@@ -160,7 +160,7 @@ class WBPlayerScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getNumEraInfos()):
+        for i in xrange(gc.getNumEraInfos()):  # type: ignore
             screen.addPullDownString(
                 "CurrentEra", gc.getEraInfo(i).getDescription(), i, i, i == pPlayer.getCurrentEra()
             )
@@ -168,7 +168,7 @@ class WBPlayerScreen:
         global lReligions
 
         lReligions = []
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             ItemInfo = gc.getReligionInfo(i)
             lReligions.append(
                 [ItemInfo.getDescription() + " (" + str(pPlayer.getHasReligionCount(i)) + ")", i]
@@ -209,12 +209,12 @@ class WBPlayerScreen:
         )
         sText = pPlayer.getName()
         lTraits = []
-        for iTrait in xrange(gc.getNumTraitInfos()):
+        for iTrait in xrange(gc.getNumTraitInfos()):  # type: ignore
             if pPlayer.hasTrait(iTrait):
                 lTraits.append(iTrait)
         if len(lTraits):
             sText += " ["
-            for iTrait in xrange(len(lTraits)):
+            for iTrait in xrange(len(lTraits)):  # type: ignore
                 sText += CyTranslator().getText(
                     gc.getTraitInfo(lTraits[iTrait]).getShortDescription(), ()
                 )
@@ -518,7 +518,7 @@ class WBPlayerScreen:
         )
 
         iY += 30
-        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
             iX = 20
             screen.hide("CommerceFlexiblePlus" + str(i))
             screen.hide("CommerceFlexibleMinus" + str(i))
@@ -643,7 +643,7 @@ class WBPlayerScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBPlayerResearch", i, "", iWidth / nColumns)
 
         iCurrentTech = pPlayer.getCurrentResearch()
@@ -665,7 +665,7 @@ class WBPlayerScreen:
             -1,
             CvUtil.FONT_LEFT_JUSTIFY,
         )
-        for iTech in xrange(gc.getNumTechInfos()):
+        for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
             if pPlayer.canResearch(iTech, False):
                 iColumn = iCount % nColumns
                 iRow = iCount / nColumns
@@ -956,13 +956,13 @@ class WBPlayerScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(iColumns):
+        for i in xrange(iColumns):  # type: ignore
             screen.setTableColumnHeader("WBPlayerCivics", i, "", iWidth / iColumns)
 
         iMaxRow = -1
         iCurrentMaxRow = 0
 
-        for iCivicOption in xrange(gc.getNumCivicOptionInfos()):
+        for iCivicOption in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
             iColumn = iCivicOption % iColumns
             iRow = iCurrentMaxRow
             if iRow > iMaxRow:
@@ -985,7 +985,7 @@ class WBPlayerScreen:
                 -1,
                 CvUtil.FONT_CENTER_JUSTIFY,
             )
-            for item in xrange(gc.getNumCivicInfos()):
+            for item in xrange(gc.getNumCivicInfos()):  # type: ignore
                 ItemInfo = gc.getCivicInfo(item)
                 if ItemInfo.getCivicOptionType() != iCivicOption:
                     continue

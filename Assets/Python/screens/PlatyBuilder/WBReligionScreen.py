@@ -134,7 +134,7 @@ class WBReligionScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isEverAlive():
                 sText = pPlayerX.getName()
@@ -213,7 +213,7 @@ class WBReligionScreen:
         global lCities
         lCities = []
         iSelectedTeam = gc.getPlayer(iSelectedPlayer).getTeam()
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iSelectedPlayer:
                 continue
@@ -246,7 +246,7 @@ class WBReligionScreen:
             TableStyles.TABLE_STYLE_STANDARD,
         )
         screen.setTableColumnHeader("WBAllReligions", 0, "", 150)
-        for i in xrange(2):
+        for i in xrange(2):  # type: ignore
             screen.appendTableRow("WBAllReligions")
         sText = CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ())
         screen.setTableText(
@@ -272,7 +272,7 @@ class WBReligionScreen:
             CvUtil.FONT_CENTER_JUSTIFY,
         )
 
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             sText = u"%c" % (gc.getReligionInfo(i).getChar())
             screen.setTableColumnHeader(
                 "WBAllReligions", i + 1, "", (iWidth - 150) / gc.getNumReligionInfos()
@@ -316,7 +316,7 @@ class WBReligionScreen:
         screen.setTableColumnHeader("WBCityReligions", 0, "", 24)
         screen.setTableColumnHeader("WBCityReligions", 1, "", 24)
         screen.setTableColumnHeader("WBCityReligions", 2, "", 102)
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             screen.setTableColumnHeader(
                 "WBCityReligions", i + 3, "", (iWidth - 150) / gc.getNumReligionInfos()
             )
@@ -365,7 +365,7 @@ class WBReligionScreen:
                 loopCity.getID(),
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
-            for i in xrange(gc.getNumReligionInfos()):
+            for i in xrange(gc.getNumReligionInfos()):  # type: ignore
                 sText = " "
                 if loopCity.isHasReligion(i):
                     sText = u"%c" % (gc.getReligionInfo(i).getChar())
@@ -407,7 +407,7 @@ class WBReligionScreen:
         screen.setTableColumnHeader("WBHolyCity", 1, "", 24)
         screen.setTableColumnHeader("WBHolyCity", 2, "", iWidth - 48)
 
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             iRow = screen.appendTableRow("WBHolyCity")
             screen.setTableText(
                 "WBHolyCity",
@@ -478,7 +478,7 @@ class WBReligionScreen:
         screen.setTableColumnHeader("WBStateReligion", 1, "", 24)
         screen.setTableColumnHeader("WBStateReligion", 2, "", iWidth - 48)
 
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if not pPlayerX.isAlive():
                 continue

@@ -80,7 +80,7 @@ class WBTechScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_TEAMS()):
+        for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
             loopTeam = gc.getTeam(i)
             if loopTeam.isAlive():
                 iLeader = loopTeam.getLeaderID()
@@ -147,7 +147,7 @@ class WBTechScreen:
         screen.addPullDownString(
             "TechEra", CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()), -1, -1, True
         )
-        for i in xrange(gc.getNumEraInfos()):
+        for i in xrange(gc.getNumEraInfos()):  # type: ignore
             screen.addPullDownString(
                 "TechEra", gc.getEraInfo(i).getDescription(), i, i, i == iSelectedEra
             )
@@ -267,14 +267,14 @@ class WBTechScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBTech", i, "", iWidth / nColumns)
 
         nRows = (len(lTech) + nColumns - 1) / nColumns
-        for i in xrange(nRows):
+        for i in xrange(nRows):  # type: ignore
             screen.appendTableRow("WBTech")
 
-        for iCount in xrange(len(lTech)):
+        for iCount in xrange(len(lTech)):  # type: ignore
             item = lTech[iCount]
             iRow = iCount % nRows
             iColumn = iCount / nRows
@@ -380,7 +380,7 @@ class WBTechScreen:
     def editTech(self, item):
         iType = iChangeType
         if bApplyAll:
-            for i in xrange(gc.getMAX_TEAMS()):
+            for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(i)
                 if pTeamX.isBarbarian() and bNoBarb:
                     continue
@@ -396,7 +396,7 @@ class WBTechScreen:
     def createTechList(self):
         global lTech
         lTech = []
-        for i in xrange(gc.getNumTechInfos()):
+        for i in xrange(gc.getNumTechInfos()):  # type: ignore
             ItemInfo = gc.getTechInfo(i)
             if iSelectedEra == -1 or iSelectedEra == ItemInfo.getEra():
                 lTech.append([ItemInfo.getDescription(), i])

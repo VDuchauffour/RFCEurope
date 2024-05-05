@@ -84,7 +84,7 @@ class WBProjectScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_TEAMS()):
+        for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
             if gc.getTeam(i).isAlive():
                 iLeader = gc.getTeam(i).getLeaderID()
                 sName = gc.getPlayer(iLeader).getName()
@@ -275,7 +275,7 @@ class WBProjectScreen:
         screen = CyGInterfaceScreen("WBProjectScreen", CvScreenEnums.WB_PROJECT)
         global lProject
         lProject = []
-        for i in xrange(gc.getNumProjectInfos()):
+        for i in xrange(gc.getNumProjectInfos()):  # type: ignore
             Info = gc.getProjectInfo(i)
             if iProjectType == 1 and not isTeamProject(i):
                 continue
@@ -313,13 +313,13 @@ class WBProjectScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBProject", i, "", iWidth / nColumns)
         nRows = (len(lProject) + nColumns - 1) / nColumns
-        for i in xrange(nRows):
+        for i in xrange(nRows):  # type: ignore
             screen.appendTableRow("WBProject")
 
-        for iCount in xrange(len(lProject)):
+        for iCount in xrange(len(lProject)):  # type: ignore
             item = lProject[iCount]
             iRow = iCount % nRows
             iColumn = iCount / nRows
@@ -430,7 +430,7 @@ class WBProjectScreen:
 
     def editProject(self, item):
         if bApplyAll:
-            for i in xrange(gc.getMAX_TEAMS()):
+            for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(i)
                 if pTeamX.isBarbarian() and bNoBarb:
                     continue
@@ -459,7 +459,7 @@ class WBProjectScreen:
         if CvPlatyBuilderScreen.bPython and iCount > 0:
             pCapital = gc.getPlayer(pTeamX.getLeaderID()).getCapitalCity()
             if not pCapital.isNone():
-                for i in xrange(iCount):
+                for i in xrange(iCount):  # type: ignore
                     CvEventManager.CvEventManager().onProjectBuilt([pCapital, item])
 
     def update(self, fDelta):

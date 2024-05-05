@@ -83,7 +83,7 @@ class WBPlayerUnits:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isEverAlive():
                 sText = pPlayerX.getName()
@@ -160,7 +160,7 @@ class WBPlayerUnits:
         screen.addDropDownBoxGFC(
             "ActivityType", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
         )
-        for i in xrange(len(CvPlatyBuilderScreen.Activities)):
+        for i in xrange(len(CvPlatyBuilderScreen.Activities)):  # type: ignore
             screen.addPullDownString(
                 "ActivityType", CvPlatyBuilderScreen.Activities[i], i, i, i == iActivityType
             )
@@ -282,7 +282,7 @@ class WBPlayerUnits:
                 break
                 (loopUnit, iter) = pPlayer.nextUnit(iter, False)
 
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iPlayer:
                 continue
@@ -348,7 +348,7 @@ class WBPlayerUnits:
                 break
                 (loopCity, iter) = pPlayer.nextCity(iter, False)
 
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iPlayer:
                 continue
@@ -797,13 +797,13 @@ class WBPlayerUnits:
         sTemp = ""
         if pCity.isConnectedToCapital(iCityOwner):
             sTemp += CyTranslator().getText("[ICON_TRADE]", ())
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             if pCity.isHolyCityByType(i):
                 sTemp += u"%c" % (gc.getReligionInfo(i).getHolyCityChar())
             elif pCity.isHasReligion(i):
                 sTemp += u"%c" % (gc.getReligionInfo(i).getChar())
 
-        for i in xrange(gc.getNumCorporationInfos()):
+        for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
             if pCity.isHeadquartersByType(i):
                 sTemp += u"%c" % (gc.getCorporationInfo(i).getHeadquarterChar())
             elif pCity.isHasCorporation(i):
@@ -855,7 +855,7 @@ class WBPlayerUnits:
         )
 
         lTemp = []
-        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
             iAmount = pCity.getCommerceRateTimes100(i)
             if iAmount <= 0:
                 continue
@@ -867,7 +867,7 @@ class WBPlayerUnits:
             lTemp.append(sTemp)
         if len(lTemp) > 0:
             sText += "\n"
-            for i in xrange(len(lTemp)):
+            for i in xrange(len(lTemp)):  # type: ignore
                 sText += lTemp[i]
                 if i < len(lTemp) - 1:
                     sText += ", "

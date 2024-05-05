@@ -162,7 +162,7 @@ class WBTeamScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_TEAMS()):
+        for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
             if gc.getTeam(i).isAlive():
                 iLeader = gc.getTeam(i).getLeaderID()
                 sName = gc.getPlayer(iLeader).getName()
@@ -189,7 +189,7 @@ class WBTeamScreen:
         screen.addPullDownString(
             "MergeTeam", CyTranslator().getText("TXT_KEY_WB_MERGE_TEAM", ()), -1, -1, True
         )
-        for i in xrange(gc.getMAX_TEAMS()):
+        for i in xrange(gc.getMAX_TEAMS()):  # type: ignore
             if gc.getTeam(i).isAlive():
                 if i == iTeam:
                     continue
@@ -211,7 +211,7 @@ class WBTeamScreen:
         global lAbilities
 
         lImprovements = []
-        for i in xrange(gc.getNumImprovementInfos()):
+        for i in xrange(gc.getNumImprovementInfos()):  # type: ignore
             ItemInfo = gc.getImprovementInfo(i)
             if ItemInfo.isGraphicalOnly():
                 continue
@@ -219,15 +219,15 @@ class WBTeamScreen:
         lImprovements.sort()
 
         lRoutes = []
-        for i in xrange(gc.getNumRouteInfos()):
+        for i in xrange(gc.getNumRouteInfos()):  # type: ignore
             ItemInfo = gc.getRouteInfo(i)
             lRoutes.append([ItemInfo.getDescription(), i])
         lRoutes.sort()
 
         lVoteBuildings = []
-        for i in xrange(gc.getNumVoteSourceInfos()):
+        for i in xrange(gc.getNumVoteSourceInfos()):  # type: ignore
             iVoteBuilding = -1
-            for j in xrange(gc.getNumBuildingInfos()):
+            for j in xrange(gc.getNumBuildingInfos()):  # type: ignore
                 if gc.getBuildingInfo(j).getVoteSourceType() == i:
                     iVoteBuilding = j
                     break
@@ -239,9 +239,9 @@ class WBTeamScreen:
         lVoteBuildings.sort()
 
         lAbilities = []
-        for i in xrange(13):
+        for i in xrange(13):  # type: ignore
             lAbilities.append([WidgetTypes.WIDGET_GENERAL, -1])
-        for i in xrange(gc.getNumTechInfos()):
+        for i in xrange(gc.getNumTechInfos()):  # type: ignore
             ItemInfo = gc.getTechInfo(i)
             if ItemInfo.isMapCentering():
                 lAbilities[0][0] = WidgetTypes.WIDGET_HELP_MAP_CENTER
@@ -696,7 +696,7 @@ class WBTeamScreen:
         )
         screen.setTableColumnHeader("WBTeamDomainMoves", 0, "", iWidth / 2)
         screen.setTableColumnHeader("WBTeamDomainMoves", 1, "", iWidth / 2)
-        for i in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+        for i in xrange(DomainTypes.NUM_DOMAIN_TYPES):  # type: ignore
             Info = gc.getDomainInfo(i)
             screen.appendTableRow("WBTeamDomainMoves")
             screen.setTableText(
@@ -755,7 +755,7 @@ class WBTeamScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(YieldTypes.NUM_YIELD_TYPES):
+        for i in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
             screen.addPullDownString(
                 "YieldType", gc.getYieldInfo(i).getDescription(), i, i, iSelectedYield == i
             )
@@ -793,7 +793,7 @@ class WBTeamScreen:
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
             sText = ""
-            for j in xrange(YieldTypes.NUM_YIELD_TYPES):
+            for j in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
                 iYieldChange = pTeam.getImprovementYieldChange(item[1], j)
                 if iYieldChange != 0:
                     sText += u"%d%c" % (iYieldChange, gc.getYieldInfo(j).getChar())
@@ -843,7 +843,7 @@ class WBTeamScreen:
         screen.setTableColumnHeader("WBTeamMembers", 0, "", iWidth / 2)
         screen.setTableColumnHeader("WBTeamMembers", 1, "", iWidth / 2)
         lMembers = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             iTeamX = pPlayerX.getTeam()
             pTeamX = gc.getTeam(iTeamX)
@@ -1311,7 +1311,7 @@ class WBTeamScreen:
             self.placeVotes()
 
         elif inputClass.getFunctionName() == "AbilitiesAll":
-            for i in xrange(13):
+            for i in xrange(13):  # type: ignore
                 self.doTeamAbilities(i, not bRemove)
             self.placeAbilities()
 

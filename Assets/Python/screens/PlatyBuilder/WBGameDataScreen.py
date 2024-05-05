@@ -579,11 +579,11 @@ class WBGameDataScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBNewCiv", i, "", iWidth / nColumns)
 
         lList = []
-        for item in xrange(gc.getNumCivilizationInfos()):
+        for item in xrange(gc.getNumCivilizationInfos()):  # type: ignore
             Info = gc.getCivilizationInfo(item)
             if CyGame().isCivEverActive(item) and not bRepeat:
                 continue
@@ -591,10 +591,10 @@ class WBGameDataScreen:
                 lList.append([Info.getShortDescription(0), item])
         lList.sort()
         iNumRows = (len(lList) + nColumns - 1) / nColumns
-        for i in xrange(iNumRows):
+        for i in xrange(iNumRows):  # type: ignore
             screen.appendTableRow("WBNewCiv")
 
-        for i in xrange(len(lList)):
+        for i in xrange(len(lList)):  # type: ignore
             item = lList[i][1]
             Info = gc.getCivilizationInfo(item)
             iColumn = i / iNumRows
@@ -630,11 +630,11 @@ class WBGameDataScreen:
                 24,
                 TableStyles.TABLE_STYLE_STANDARD,
             )
-            for i in xrange(nColumns):
+            for i in xrange(nColumns):  # type: ignore
                 screen.setTableColumnHeader("WBNewLeader", i, "", iWidth / nColumns)
 
             lList = []
-            for item in xrange(gc.getNumLeaderHeadInfos()):
+            for item in xrange(gc.getNumLeaderHeadInfos()):  # type: ignore
                 Info = gc.getLeaderHeadInfo(item)
                 if not CyGame().isLeaderEverActive(item) or bRepeat:
                     if CyGame().isOption(
@@ -643,10 +643,10 @@ class WBGameDataScreen:
                         lList.append([Info.getDescription(), item])
             lList.sort()
             iNumRows = (len(lList) + nColumns - 1) / nColumns
-            for i in xrange(iNumRows):
+            for i in xrange(iNumRows):  # type: ignore
                 screen.appendTableRow("WBNewLeader")
 
-            for i in xrange(len(lList)):
+            for i in xrange(len(lList)):  # type: ignore
                 item = lList[i][1]
                 Info = gc.getLeaderHeadInfo(item)
                 iColumn = i / iNumRows
@@ -786,21 +786,21 @@ class WBGameDataScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBGameOptions", i * 2, "", iWidth2)
             screen.setTableColumnHeader("WBGameOptions", i * 2 + 1, "", iWidth1)
 
         lList = []
-        for item in xrange(gc.getNumGameOptionInfos()):
+        for item in xrange(gc.getNumGameOptionInfos()):  # type: ignore
             Info = gc.getGameOptionInfo(item)
             if Info.getVisible() or bHiddenOption:
                 lList.append([Info.getDescription(), item])
         lList.sort()
         iNumRows = (len(lList) + nColumns - 1) / nColumns
-        for i in xrange(iNumRows):
+        for i in xrange(iNumRows):  # type: ignore
             screen.appendTableRow("WBGameOptions")
 
-        for i in xrange(len(lList)):
+        for i in xrange(len(lList)):  # type: ignore
             item = lList[i][1]
             Info = gc.getGameOptionInfo(item)
             iColumn = i / iNumRows
@@ -965,7 +965,7 @@ class WBGameDataScreen:
             self.interfaceScreen()
 
         elif inputClass.getFunctionName() == "CreatePlayer":
-            for i in xrange(gc.getMAX_CIV_PLAYERS()):
+            for i in xrange(gc.getMAX_CIV_PLAYERS()):  # type: ignore
                 if not gc.getPlayer(i).isEverAlive():
                     CyGame().addPlayer(i, iSelectedLeader, iSelectedCiv)
                     break
@@ -992,18 +992,18 @@ class WBGameDataScreen:
         elif iGameOption == GameOptionTypes.GAMEOPTION_NO_VASSAL_STATES and CyGame().isOption(
             iGameOption
         ):
-            for iTeamX in xrange(gc.getMAX_CIV_TEAMS()):
+            for iTeamX in xrange(gc.getMAX_CIV_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(iTeamX)
-                for iTeamY in xrange(gc.getMAX_CIV_TEAMS()):
+                for iTeamY in xrange(gc.getMAX_CIV_TEAMS()):  # type: ignore
                     pTeamX.freeVassal(iTeamY)
         elif iGameOption == GameOptionTypes.GAMEOPTION_ALWAYS_PEACE and CyGame().isOption(
             iGameOption
         ):
-            for iTeamX in xrange(gc.getMAX_CIV_TEAMS()):
+            for iTeamX in xrange(gc.getMAX_CIV_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(iTeamX)
                 if CyGame().isOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) and pTeamX.isHuman():
                     continue
-                for iTeamY in xrange(gc.getMAX_CIV_TEAMS()):
+                for iTeamY in xrange(gc.getMAX_CIV_TEAMS()):  # type: ignore
                     if (
                         CyGame().isOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR)
                         and gc.getTeam(iTeamY).isHuman()
@@ -1013,14 +1013,14 @@ class WBGameDataScreen:
         elif iGameOption == GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE and CyGame().isOption(
             iGameOption
         ):
-            for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isHuman():
-                    (loopCity, iter) = pPlayerX.firstCity(false)
+                    (loopCity, iter) = pPlayerX.firstCity(False)
                     while loopCity:
                         if not loopCity.isCapital():
                             loopCity.kill()
-                        (loopCity, iter) = pPlayerX.nextCity(iter, false)
+                        (loopCity, iter) = pPlayerX.nextCity(iter, False)
         elif iGameOption == GameOptionTypes.GAMEOPTION_NO_BARBARIANS and CyGame().isOption(
             iGameOption
         ):

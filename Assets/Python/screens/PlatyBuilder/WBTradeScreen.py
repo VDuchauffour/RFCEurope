@@ -111,7 +111,7 @@ class WBTradeScreen:
         )
         screen.enableSelect("TradeTable", True)
         screen.setStyle("TradeTable", "Table_StandardCiv_Style")
-        for i in xrange(CyGame().getIndexAfterLastDeal()):
+        for i in xrange(CyGame().getIndexAfterLastDeal()):  # type: ignore
             pDeal = CyGame().getDeal(i)
             sText = ""
             iPlayer1 = pDeal.getFirstPlayer()
@@ -124,7 +124,7 @@ class WBTradeScreen:
                     pPlayer1.getPlayerTextColorA(),
                 )
                 sText += sColor + pPlayer1.getName() + ": </color>"
-                for j in xrange(pDeal.getLengthFirstTrades()):
+                for j in xrange(pDeal.getLengthFirstTrades()):  # type: ignore
                     pTrade = pDeal.getFirstTrade(j)
                     iType = pTrade.ItemType
                     if iType == -1:
@@ -143,7 +143,7 @@ class WBTradeScreen:
                     pPlayer2.getPlayerTextColorA(),
                 )
                 sText += sColor + pPlayer2.getName() + ": </color>"
-                for j in xrange(pDeal.getLengthSecondTrades()):
+                for j in xrange(pDeal.getLengthSecondTrades()):  # type: ignore
                     pTrade = pDeal.getSecondTrade(j)
                     iType = pTrade.ItemType
                     if iType == -1:

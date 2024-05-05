@@ -191,7 +191,7 @@ class WBInfoScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isAlive():
                 sText = pPlayerX.getName()
@@ -306,7 +306,7 @@ class WBInfoScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("PlotTable", i, "", iWidth / nColumns)
 
         iCount = 0
@@ -535,10 +535,10 @@ class WBInfoScreen:
         lItems = []
         if iMode == 0:
             iData1 = 8202
-            for i in xrange(gc.getNumUnitInfos()):
+            for i in xrange(gc.getNumUnitInfos()):  # type: ignore
                 Info = gc.getUnitInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isAlive():
                     (loopUnit, i) = pPlayerX.firstUnit(False)
@@ -552,15 +552,15 @@ class WBInfoScreen:
                         (loopUnit, i) = pPlayerX.nextUnit(i, False)
         elif iMode == 1:
             iData1 = 7873
-            for i in xrange(gc.getNumPromotionInfos()):
+            for i in xrange(gc.getNumPromotionInfos()):  # type: ignore
                 Info = gc.getPromotionInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isAlive():
                     (loopUnit, i) = pPlayerX.firstUnit(False)
                     while loopUnit:
-                        for iItemX in xrange(gc.getNumPromotionInfos()):
+                        for iItemX in xrange(gc.getNumPromotionInfos()):  # type: ignore
                             if loopUnit.isHasPromotion(iItemX):
                                 if iPlayerX == iSelectedPlayer:
                                     lItems[iItemX][1] += 1
@@ -570,15 +570,15 @@ class WBInfoScreen:
                         (loopUnit, i) = pPlayerX.nextUnit(i, False)
         elif iMode == 2:
             iData1 = 7870
-            for i in xrange(gc.getNumBuildingInfos()):
+            for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
                 Info = gc.getBuildingInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isAlive():
                     (loopCity, i) = pPlayerX.firstCity(False)
                     while loopCity:
-                        for iItemX in xrange(gc.getNumBuildingInfos()):
+                        for iItemX in xrange(gc.getNumBuildingInfos()):  # type: ignore
                             if loopCity.isHasBuilding(iItemX):
                                 if iPlayerX == iSelectedPlayer:
                                     lItems[iItemX][1] += 1
@@ -589,15 +589,15 @@ class WBInfoScreen:
         elif iMode == 3:
             iData1 = 7879
             pPlayer = gc.getPlayer(iSelectedPlayer)
-            for i in xrange(gc.getNumSpecialistInfos()):
+            for i in xrange(gc.getNumSpecialistInfos()):  # type: ignore
                 Info = gc.getSpecialistInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isAlive():
                     (loopCity, i) = pPlayerX.firstCity(False)
                     while loopCity:
-                        for iItemX in xrange(gc.getNumSpecialistInfos()):
+                        for iItemX in xrange(gc.getNumSpecialistInfos()):  # type: ignore
                             iCount = loopCity.getSpecialistCount(
                                 iItemX
                             ) + loopCity.getFreeSpecialistCount(iItemX)
@@ -611,7 +611,7 @@ class WBInfoScreen:
         elif iMode == 4:
             iData1 = 7869
             pPlayer = gc.getPlayer(iSelectedPlayer)
-            for i in xrange(gc.getNumReligionInfos()):
+            for i in xrange(gc.getNumReligionInfos()):  # type: ignore
                 Info = gc.getReligionInfo(i)
                 lItems.append(
                     [
@@ -623,13 +623,13 @@ class WBInfoScreen:
                         [],
                     ]
                 )
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
                 if pPlot.isCity():
                     pCity = pPlot.getPlotCity()
-                    for iItemX in xrange(gc.getNumReligionInfos()):
+                    for iItemX in xrange(gc.getNumReligionInfos()):  # type: ignore
                         if pCity.isHasReligion(iItemX):
                             if [pPlot.getX(), pPlot.getY()] in lItems[iItemX][5]:
                                 continue
@@ -637,7 +637,7 @@ class WBInfoScreen:
         elif iMode == 5:
             iData1 = 8201
             pPlayer = gc.getPlayer(iSelectedPlayer)
-            for i in xrange(gc.getNumCorporationInfos()):
+            for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
                 Info = gc.getCorporationInfo(i)
                 lItems.append(
                     [
@@ -649,23 +649,23 @@ class WBInfoScreen:
                         [],
                     ]
                 )
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
                 if pPlot.isCity():
                     pCity = pPlot.getPlotCity()
-                    for iItemX in xrange(gc.getNumCorporationInfos()):
+                    for iItemX in xrange(gc.getNumCorporationInfos()):  # type: ignore
                         if pCity.isHasCorporation(iItemX):
                             if [pPlot.getX(), pPlot.getY()] in lItems[iItemX][5]:
                                 continue
                             lItems[iItemX][5].append([pCity.getOwner(), pCity.getID()])
         elif iMode == 6:
             iData1 = 7875
-            for i in xrange(gc.getNumTerrainInfos()):
+            for i in xrange(gc.getNumTerrainInfos()):  # type: ignore
                 Info = gc.getTerrainInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
@@ -681,10 +681,10 @@ class WBInfoScreen:
                 lItems[iItemX][5].append([pPlot.getX(), pPlot.getY()])
         elif iMode == 7:
             iData1 = 7874
-            for i in xrange(gc.getNumFeatureInfos()):
+            for i in xrange(gc.getNumFeatureInfos()):  # type: ignore
                 Info = gc.getFeatureInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
@@ -700,10 +700,10 @@ class WBInfoScreen:
                 lItems[iItemX][5].append([pPlot.getX(), pPlot.getY()])
         elif iMode == 8:
             iData1 = 7878
-            for i in xrange(gc.getNumBonusInfos()):
+            for i in xrange(gc.getNumBonusInfos()):  # type: ignore
                 Info = gc.getBonusInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
@@ -719,10 +719,10 @@ class WBInfoScreen:
                 lItems[iItemX][5].append([pPlot.getX(), pPlot.getY()])
         elif iMode == 9:
             iData1 = 7877
-            for i in xrange(gc.getNumImprovementInfos()):
+            for i in xrange(gc.getNumImprovementInfos()):  # type: ignore
                 Info = gc.getImprovementInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
@@ -738,10 +738,10 @@ class WBInfoScreen:
                 lItems[iItemX][5].append([pPlot.getX(), pPlot.getY()])
         elif iMode == 10:
             iData1 = 6788
-            for i in xrange(gc.getNumRouteInfos()):
+            for i in xrange(gc.getNumRouteInfos()):  # type: ignore
                 Info = gc.getRouteInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 pPlot = CyMap().plotByIndex(i)
                 if pPlot.isNone():
                     continue
@@ -757,13 +757,13 @@ class WBInfoScreen:
                 lItems[iItemX][5].append([pPlot.getX(), pPlot.getY()])
         elif iMode == 11:
             iData1 = 8205
-            for i in xrange(gc.getNumCivicInfos()):
+            for i in xrange(gc.getNumCivicInfos()):  # type: ignore
                 Info = gc.getCivicInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 pPlayerX = gc.getPlayer(iPlayerX)
                 if pPlayerX.isAlive():
-                    for iItemX in xrange(gc.getNumCivicInfos()):
+                    for iItemX in xrange(gc.getNumCivicInfos()):  # type: ignore
                         if pPlayerX.isCivic(iItemX):
                             if iPlayerX == iSelectedPlayer:
                                 lItems[iItemX][1] += 1
@@ -771,13 +771,13 @@ class WBInfoScreen:
                             lItems[iItemX][5].append([iPlayerX, -1])
         elif iMode == 12:
             iData1 = 7871
-            for i in xrange(gc.getNumTechInfos()):
+            for i in xrange(gc.getNumTechInfos()):  # type: ignore
                 Info = gc.getTechInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iTeamX in xrange(gc.getMAX_TEAMS()):
+            for iTeamX in xrange(gc.getMAX_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(iTeamX)
                 if pTeamX.isAlive():
-                    for iItemX in xrange(gc.getNumTechInfos()):
+                    for iItemX in xrange(gc.getNumTechInfos()):  # type: ignore
                         iCount = pTeamX.isHasTech(iItemX)
                         if gc.getTechInfo(iItemX).isRepeat():
                             iCount = pTeamX.getTechCount(iItemX)
@@ -788,13 +788,13 @@ class WBInfoScreen:
                             lItems[iItemX][5].append([iTeamX, -1])
         elif iMode == 13:
             iData1 = 6785
-            for i in xrange(gc.getNumProjectInfos()):
+            for i in xrange(gc.getNumProjectInfos()):  # type: ignore
                 Info = gc.getProjectInfo(i)
                 lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
-            for iTeamX in xrange(gc.getMAX_TEAMS()):
+            for iTeamX in xrange(gc.getMAX_TEAMS()):  # type: ignore
                 pTeamX = gc.getTeam(iTeamX)
                 if pTeamX.isAlive():
-                    for iItemX in xrange(gc.getNumProjectInfos()):
+                    for iItemX in xrange(gc.getNumProjectInfos()):  # type: ignore
                         iCount = pTeamX.getProjectCount(iItemX)
                         if iCount > 0:
                             if iTeamX == gc.getPlayer(iSelectedPlayer).getTeam():

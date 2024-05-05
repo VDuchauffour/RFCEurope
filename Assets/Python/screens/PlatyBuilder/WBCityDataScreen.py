@@ -239,7 +239,7 @@ class WBCityDataScreen:
 
         lSpecialist = []
         lGreatPeople = []
-        for i in xrange(gc.getNumSpecialistInfos()):
+        for i in xrange(gc.getNumSpecialistInfos()):  # type: ignore
             ItemInfo = gc.getSpecialistInfo(i)
             lSpecialist.append((ItemInfo.getDescription(), i))
             iGPClass = ItemInfo.getGreatPeopleUnitClass()
@@ -253,7 +253,7 @@ class WBCityDataScreen:
             if iGP not in lGreatPeople:
                 lGreatPeople.append(iGP)
 
-        for i in xrange(gc.getNumBuildingInfos()):
+        for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
             ItemInfo = gc.getBuildingInfo(i)
             iGPClass = ItemInfo.getGreatPeopleUnitClass()
             if iGPClass == -1:
@@ -266,7 +266,7 @@ class WBCityDataScreen:
             if iGP not in lGreatPeople:
                 lGreatPeople.append(iGP)
 
-        for i in xrange(len(lGreatPeople)):
+        for i in xrange(len(lGreatPeople)):  # type: ignore
             GPInfo = gc.getUnitInfo(lGreatPeople[i])
             lGreatPeople[i] = [GPInfo.getDescription(), lGreatPeople[i]]
         lSpecialist.sort()
@@ -281,7 +281,7 @@ class WBCityDataScreen:
 
     def sortCities(self):
         self.lCities = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iPlayer:
                 continue
@@ -361,7 +361,7 @@ class WBCityDataScreen:
     def sortBuildings(self):
         global lBuilding
         lBuilding = []
-        for i in xrange(gc.getNumBuildingClassInfos()):
+        for i in xrange(gc.getNumBuildingClassInfos()):  # type: ignore
             if gc.getBuildingClassInfo(i).isGraphicalOnly():
                 continue
             if bWonder and not isLimitedWonderClass(i):
@@ -425,11 +425,11 @@ class WBCityDataScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(YieldTypes.NUM_YIELD_TYPES):
+        for i in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
             screen.addPullDownString(
                 "YieldType", gc.getYieldInfo(i).getDescription(), i, i, iSelectedYield == i
             )
-        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+        for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
             screen.addPullDownString(
                 "YieldType",
                 gc.getCommerceInfo(i).getDescription(),
@@ -459,7 +459,7 @@ class WBCityDataScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(2):
+        for i in xrange(2):  # type: ignore
             screen.setTableColumnHeader("WBModifyBuilding", i, "", iTableWidth / 2)
         for item in lBuilding:
             ItemInfo = gc.getBuildingInfo(item[1])
@@ -487,11 +487,11 @@ class WBCityDataScreen:
                 sText += u"%d%s" % (iChange, CyTranslator().getText("[ICON_HEALTHY]", ()))
             elif iChange < 0:
                 sText += u"%d%s" % (-iChange, CyTranslator().getText("[ICON_UNHEALTHY]", ()))
-            for j in xrange(YieldTypes.NUM_YIELD_TYPES):
+            for j in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
                 iChange = pCity.getBuildingYieldChange(iBuildingClass, j)
                 if iChange != 0:
                     sText += u"%d%c" % (iChange, gc.getYieldInfo(j).getChar())
-            for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+            for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
                 iChange = pCity.getBuildingCommerceChange(iBuildingClass, j)
                 if iChange != 0:
                     sText += u"%d%c" % (iChange, gc.getCommerceInfo(j).getChar())
@@ -754,7 +754,7 @@ class WBCityDataScreen:
     def createBonusList(self):
         global lBonus
         lBonus = []
-        for i in xrange(gc.getNumBonusInfos()):
+        for i in xrange(gc.getNumBonusInfos()):  # type: ignore
             ItemInfo = gc.getBonusInfo(i)
             if iSelectedClass != ItemInfo.getBonusClassType() and iSelectedClass > -1:
                 continue
@@ -924,7 +924,7 @@ class WBCityDataScreen:
             self.sortCities()
 
         elif inputClass.getFunctionName() == "SpecialistAll":
-            for item in xrange(gc.getNumSpecialistInfos()):
+            for item in xrange(gc.getNumSpecialistInfos()):  # type: ignore
                 self.editFreeSpecialist(item)
             self.placeSpecialist()
 

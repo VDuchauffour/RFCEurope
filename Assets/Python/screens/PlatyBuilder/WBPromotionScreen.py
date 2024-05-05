@@ -215,7 +215,7 @@ class WBPromotionScreen:
             -2,
             -2 == iSelectedClass,
         )
-        for iCombatClass in xrange(gc.getNumUnitCombatInfos()):
+        for iCombatClass in xrange(gc.getNumUnitCombatInfos()):  # type: ignore
             screen.addPullDownString(
                 "CombatClass",
                 gc.getUnitCombatInfo(iCombatClass).getDescription(),
@@ -302,7 +302,7 @@ class WBPromotionScreen:
         screen = CyGInterfaceScreen("WBPromotionScreen", CvScreenEnums.WB_PROMOTION)
         global lUnits
         lUnits = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != pUnit.getOwner():
                 continue
@@ -414,7 +414,7 @@ class WBPromotionScreen:
         screen = CyGInterfaceScreen("WBPromotionScreen", CvScreenEnums.WB_PROMOTION)
         global lList
         lList = []
-        for i in xrange(gc.getNumPromotionInfos()):
+        for i in xrange(gc.getNumPromotionInfos()):  # type: ignore
             ItemInfo = gc.getPromotionInfo(i)
             if CvPlatyBuilderScreen.bHideInactive and not isPromotionValid(
                 i, pUnit.getUnitType(), True
@@ -444,14 +444,14 @@ class WBPromotionScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBPromotion", i, "", iWidth / nColumns)
 
         nRows = (len(lList) + nColumns - 1) / nColumns
-        for i in xrange(nRows):
+        for i in xrange(nRows):  # type: ignore
             screen.appendTableRow("WBPromotion")
 
-        for iCount in xrange(len(lList)):
+        for iCount in xrange(len(lList)):  # type: ignore
             item = lList[iCount]
             iRow = iCount % nRows
             iColumn = iCount / nRows

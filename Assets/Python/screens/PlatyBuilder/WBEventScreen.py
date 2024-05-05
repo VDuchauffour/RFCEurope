@@ -106,19 +106,19 @@ class WBEventScreen:
         global lBuildings
 
         lCorporations = []
-        for i in xrange(gc.getNumCorporationInfos()):
+        for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
             ItemInfo = gc.getCorporationInfo(i)
             lCorporations.append([ItemInfo.getDescription(), i])
         lCorporations.sort()
 
         lBuildings = []
-        for i in xrange(gc.getNumBuildingInfos()):
+        for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
             ItemInfo = gc.getBuildingInfo(i)
             lBuildings.append([ItemInfo.getDescription(), i])
         lBuildings.sort()
 
         lEvents = []
-        for i in xrange(gc.getNumEventTriggerInfos()):
+        for i in xrange(gc.getNumEventTriggerInfos()):  # type: ignore
             sEvent = gc.getEventTriggerInfo(i).getType()[13:]
             sEvent = sEvent.lower()
             sEvent = sEvent.replace("_", " ")
@@ -127,7 +127,7 @@ class WBEventScreen:
         lEvents.sort()
 
         lReligions = []
-        for i in xrange(gc.getNumReligionInfos()):
+        for i in xrange(gc.getNumReligionInfos()):  # type: ignore
             ItemInfo = gc.getReligionInfo(i)
             lReligions.append([ItemInfo.getDescription(), i])
         lReligions.sort()
@@ -163,7 +163,7 @@ class WBEventScreen:
         screen.setTableColumnHeader("WBEventPlayer", 0, "", 24)
         screen.setTableColumnHeader("WBEventPlayer", 1, "", iWidth - 24)
 
-        for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if pPlayerX.isAlive():
                 if iEventPlayer == -1:
@@ -235,7 +235,7 @@ class WBEventScreen:
         screen.setTableColumnHeader("WBEventUnit", 1, "", 24)
         screen.setTableColumnHeader("WBEventUnit", 2, "", iWidth - 48)
 
-        for i in xrange(pPlot.getNumUnits()):
+        for i in xrange(pPlot.getNumUnits()):  # type: ignore
             pUnitX = pPlot.getUnit(i)
             if pUnitX.isNone():
                 continue
@@ -528,7 +528,7 @@ class WBEventScreen:
         screen.setTableColumnHeader("WBOtherPlayer", 0, "", 24)
         screen.setTableColumnHeader("WBOtherPlayer", 1, "", iWidth - 24)
 
-        for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_CIV_PLAYERS()):  # type: ignore
             if iPlayerX == iEventPlayer:
                 continue
             pPlayerX = gc.getPlayer(iPlayerX)

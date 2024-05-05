@@ -160,7 +160,7 @@ class WBCityEditScreen:
         screen.addDropDownBoxGFC(
             "CityOwner", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isEverAlive():
                 sText = pPlayerX.getName()
@@ -288,7 +288,7 @@ class WBCityEditScreen:
 
     def sortCities(self):
         self.lCities = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iPlayer:
                 continue
@@ -423,7 +423,7 @@ class WBCityEditScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getNumCultureLevelInfos()):
+        for i in xrange(gc.getNumCultureLevelInfos()):  # type: ignore
             screen.addPullDownString(
                 "CityCultureLevel",
                 gc.getCultureLevelInfo(i).getDescription(),
@@ -480,7 +480,7 @@ class WBCityEditScreen:
         )
 
         iY += 30
-        for i in xrange(YieldTypes.NUM_YIELD_TYPES):
+        for i in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
             iYield = pCity.getBaseYieldRate(YieldTypes(i))
             screen.setButtonGFC(
                 "BaseYieldPlus" + str(i),
@@ -1235,11 +1235,11 @@ class WBCityEditScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(iColumns):
+        for i in xrange(iColumns):  # type: ignore
             screen.setTableColumnHeader("WBCityProduction", i, "", iWidth / iColumns)
         iMaxRow = -1
         iRow = 0
-        for i in xrange(gc.getNumUnitInfos()):
+        for i in xrange(gc.getNumUnitInfos()):  # type: ignore
             if pCity.canTrain(i, True, False):
                 if iRow > iMaxRow:
                     screen.appendTableRow("WBCityProduction")
@@ -1261,12 +1261,12 @@ class WBCityEditScreen:
                 )
                 iRow += 1
         iRow = 0
-        for i in xrange(gc.getNumBuildingInfos()):
+        for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
             bEligible = False
             if pCity.canConstruct(i, True, False, False):
                 bEligible = True
             if not bEligible:
-                for j in xrange(pCity.getOrderQueueLength()):
+                for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                     iOrderData = pCity.getOrderFromQueue(j)
                     if (
                         iOrderData.eOrderType == OrderTypes.ORDER_CONSTRUCT
@@ -1311,12 +1311,12 @@ class WBCityEditScreen:
             CvUtil.FONT_LEFT_JUSTIFY,
         )
         iRow = 1
-        for i in xrange(gc.getNumProjectInfos()):
+        for i in xrange(gc.getNumProjectInfos()):  # type: ignore
             bEligible = False
             if pCity.canCreate(i, True, False):
                 bEligible = True
             if not bEligible:
-                for j in xrange(pCity.getOrderQueueLength()):
+                for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                     iOrderData = pCity.getOrderFromQueue(j)
                     if iOrderData.eOrderType == OrderTypes.ORDER_CREATE and iOrderData.iData1 == i:
                         bEligible = True
@@ -1341,7 +1341,7 @@ class WBCityEditScreen:
                 )
                 iRow += 1
 
-        for i in xrange(gc.getNumProcessInfos()):
+        for i in xrange(gc.getNumProcessInfos()):  # type: ignore
             if pCity.canMaintain(i, True):
                 if iRow > iMaxRow:
                     screen.appendTableRow("WBCityProduction")
@@ -1595,14 +1595,14 @@ class WBCityEditScreen:
                 elif iIndex == 3:
                     self.top.iPlayerAddMode = "MoveCityPlus"
                     self.top.lMoveUnit = []
-                    for i in xrange(pPlot.getNumUnits()):
+                    for i in xrange(pPlot.getNumUnits()):  # type: ignore
                         pUnitX = pPlot.getUnit(i)
                         if pUnitX.getOwner() == iPlayer:
                             self.top.lMoveUnit.append([iPlayer, pUnitX.getID()])
                 elif iIndex == 4:
                     self.top.iPlayerAddMode = "DuplicateCityPlus"
                     self.top.lMoveUnit = []
-                    for i in xrange(pPlot.getNumUnits()):
+                    for i in xrange(pPlot.getNumUnits()):  # type: ignore
                         pUnitX = pPlot.getUnit(i)
                         if pUnitX.getOwner() == iPlayer:
                             self.top.lMoveUnit.append([iPlayer, pUnitX.getID()])
@@ -1611,7 +1611,7 @@ class WBCityEditScreen:
 
     def handlePlatyChooseProduction(self, inputClass):
         if inputClass.getButtonType() == WidgetTypes.WIDGET_HELP_BUILDING:
-            for j in xrange(pCity.getOrderQueueLength()):
+            for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                 iOrderData = pCity.getOrderFromQueue(j)
                 if (
                     iOrderData.eOrderType == OrderTypes.ORDER_CONSTRUCT
@@ -1623,7 +1623,7 @@ class WBCityEditScreen:
                 OrderTypes.ORDER_CONSTRUCT, inputClass.getData1(), -1, False, False, False, True
             )
         elif inputClass.getData1() == 8202:
-            for j in xrange(pCity.getOrderQueueLength()):
+            for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                 iOrderData = pCity.getOrderFromQueue(j)
                 if (
                     iOrderData.eOrderType == OrderTypes.ORDER_TRAIN
@@ -1635,7 +1635,7 @@ class WBCityEditScreen:
                 OrderTypes.ORDER_TRAIN, inputClass.getData2(), -1, False, False, False, True
             )
         elif inputClass.getData1() == 6785:
-            for j in xrange(pCity.getOrderQueueLength()):
+            for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                 iOrderData = pCity.getOrderFromQueue(j)
                 if (
                     iOrderData.eOrderType == OrderTypes.ORDER_CREATE
@@ -1647,7 +1647,7 @@ class WBCityEditScreen:
                 OrderTypes.ORDER_CREATE, inputClass.getData2(), -1, False, False, False, True
             )
         elif inputClass.getData1() == 6787:
-            for j in xrange(pCity.getOrderQueueLength()):
+            for j in xrange(pCity.getOrderQueueLength()):  # type: ignore
                 iOrderData = pCity.getOrderFromQueue(j)
                 if (
                     iOrderData.eOrderType == OrderTypes.ORDER_MAINTAIN

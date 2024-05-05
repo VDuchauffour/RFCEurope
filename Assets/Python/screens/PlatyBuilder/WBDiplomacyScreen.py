@@ -163,7 +163,7 @@ class WBDiplomacyScreen:
             FontTypes.GAME_FONT,
         )
         lPlayers = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if pPlayerX.isEverAlive():
                 if bHideDead and not pPlayerX.isAlive():
@@ -333,7 +333,7 @@ class WBDiplomacyScreen:
             TableStyles.TABLE_STYLE_EMPTY,
         )
         screen.appendTableRow("DiplomacyAll")
-        for i in xrange(4):
+        for i in xrange(4):  # type: ignore
             screen.setTableColumnHeader("DiplomacyAll", i, "", 24)
         screen.setTableText(
             "DiplomacyAll",
@@ -585,7 +585,7 @@ class WBDiplomacyScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(MemoryTypes.NUM_MEMORY_TYPES):
+        for i in xrange(MemoryTypes.NUM_MEMORY_TYPES):  # type: ignore
             screen.addPullDownString(
                 "CurrentMemory", gc.getMemoryInfo(i).getDescription(), i, i, i == iSelectedMemory
             )
@@ -1026,7 +1026,7 @@ class WBDiplomacyScreen:
         if not pSelectedTeam.isHasMet(iTeam):
             return
         if bCancel:
-            for i in xrange(CyGame().getIndexAfterLastDeal()):
+            for i in xrange(CyGame().getIndexAfterLastDeal()):  # type: ignore
                 pDeal = CyGame().getDeal(i)
                 iPlayer1 = pDeal.getFirstPlayer()
                 iPlayer2 = pDeal.getSecondPlayer()
@@ -1037,7 +1037,7 @@ class WBDiplomacyScreen:
                 if (iTeam1 == iTeam and iTeam2 == iSelectedTeam) or (
                     iTeam2 == iTeam and iTeam1 == iSelectedTeam
                 ):
-                    for j in xrange(pDeal.getLengthFirstTrades()):
+                    for j in xrange(pDeal.getLengthFirstTrades()):  # type: ignore
                         if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_DEFENSIVE_PACT:
                             pDeal.kill()
                             self.interfaceScreen(iSelectedPlayer)
@@ -1049,7 +1049,7 @@ class WBDiplomacyScreen:
         if not pSelectedTeam.isHasMet(iTeam):
             return
         if bCancel:
-            for i in xrange(CyGame().getIndexAfterLastDeal()):
+            for i in xrange(CyGame().getIndexAfterLastDeal()):  # type: ignore
                 pDeal = CyGame().getDeal(i)
                 iPlayer1 = pDeal.getFirstPlayer()
                 iPlayer2 = pDeal.getSecondPlayer()
@@ -1060,7 +1060,7 @@ class WBDiplomacyScreen:
                 if (iTeam1 == iTeam and iTeam2 == iSelectedTeam) or (
                     iTeam2 == iTeam and iTeam1 == iSelectedTeam
                 ):
-                    for j in xrange(pDeal.getLengthFirstTrades()):
+                    for j in xrange(pDeal.getLengthFirstTrades()):  # type: ignore
                         if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_OPEN_BORDERS:
                             pDeal.kill()
                             return
@@ -1185,12 +1185,12 @@ class WBDiplomacyScreen:
                 if (iTeam1 == iTeamX and iTeam2 == iTeamY) or (
                     iTeam2 == iTeamX and iTeam1 == iTeamY
                 ):
-                    for j in xrange(pDeal.getLengthFirstTrades()):
+                    for j in xrange(pDeal.getLengthFirstTrades()):  # type: ignore
                         if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_VASSAL:
                             return 1
                         if pDeal.getFirstTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:
                             return 0
-                    for j in xrange(pDeal.getLengthSecondTrades()):
+                    for j in xrange(pDeal.getLengthSecondTrades()):  # type: ignore
                         if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_VASSAL:
                             return 1
                         if pDeal.getSecondTrade(j).ItemType == TradeableItems.TRADE_SURRENDER:

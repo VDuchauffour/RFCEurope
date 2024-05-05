@@ -323,7 +323,7 @@ class WBUnitScreen:
 
         global lUnitAI
         lUnitAI = []
-        for i in xrange(UnitAITypes.NUM_UNITAI_TYPES):
+        for i in xrange(UnitAITypes.NUM_UNITAI_TYPES):  # type: ignore
             sText = gc.getUnitAIInfo(i).getDescription()
             sList = ""
             while len(sText):
@@ -420,7 +420,7 @@ class WBUnitScreen:
         lMissionData = []
         iFirstMission = -1
         bResetMission = False
-        for i in xrange(gc.getNumMissionInfos()):
+        for i in xrange(gc.getNumMissionInfos()):  # type: ignore
             MissionInfo = gc.getMissionInfo(i)
             sType = MissionInfo.getType()
             lData1 = []
@@ -429,23 +429,23 @@ class WBUnitScreen:
             if sType == "MISSION_MOVE_TO_UNIT":
                 continue
             elif sType == "MISSION_BUILD":
-                for j in xrange(gc.getNumBuildInfos()):
+                for j in xrange(gc.getNumBuildInfos()):  # type: ignore
                     if UnitInfo.getBuilds(j):
                         lData1.append(j)
             elif sType == "MISSION_SPREAD":
-                for j in xrange(gc.getNumReligionInfos()):
+                for j in xrange(gc.getNumReligionInfos()):  # type: ignore
                     if UnitInfo.getReligionSpreads(j) > 0:
                         lData1.append(j)
             elif sType == "MISSION_SPREAD_CORPORATION":
-                for j in xrange(gc.getNumCorporationInfos()):
+                for j in xrange(gc.getNumCorporationInfos()):  # type: ignore
                     if UnitInfo.getCorporationSpreads(j) > 0:
                         lData1.append(j)
             elif sType == "MISSION_JOIN":
-                for j in xrange(gc.getNumSpecialistInfos()):
+                for j in xrange(gc.getNumSpecialistInfos()):  # type: ignore
                     if UnitInfo.getGreatPeoples(j):
                         lData1.append(j)
             elif sType == "MISSION_CONSTRUCT":
-                for j in xrange(gc.getNumBuildingInfos()):
+                for j in xrange(gc.getNumBuildingInfos()):  # type: ignore
                     if UnitInfo.getBuildings(j) or UnitInfo.getForceBuildings(j):
                         lData1.append(j)
             elif sType == "MISSION_GOLDEN_AGE":
@@ -495,7 +495,7 @@ class WBUnitScreen:
         screen.hide("MissionInput")
         if sMissionType in self.lSelectableMissions:
             screen.show("MissionInput")
-            for i in xrange(len(lMissionData)):
+            for i in xrange(len(lMissionData)):  # type: ignore
                 iData1 = lMissionData[i]
                 if iMissionData1 not in lMissionData:
                     iMissionData1 = iData1
@@ -754,7 +754,7 @@ class WBUnitScreen:
             24,
             TableStyles.TABLE_STYLE_EMPTY,
         )
-        for i in xrange(3):
+        for i in xrange(3):  # type: ignore
             screen.setTableColumnHeader("WBUnitDirection", i, "", iHeight / 3)
             screen.appendTableRow("WBUnitDirection")
         screen.setTableText(
@@ -1168,7 +1168,7 @@ class WBUnitScreen:
         screen.addDropDownBoxGFC(
             "UnitOwner", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
         )
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if pPlayerX.isEverAlive():
                 sName = pPlayerX.getName()
@@ -1593,7 +1593,7 @@ class WBUnitScreen:
             -1,
             -1 == iSelectedClass,
         )
-        for iCombatClass in xrange(gc.getNumUnitCombatInfos()):
+        for iCombatClass in xrange(gc.getNumUnitCombatInfos()):  # type: ignore
             screen.addPullDownString(
                 "CombatClass",
                 gc.getUnitCombatInfo(iCombatClass).getDescription(),
@@ -1620,7 +1620,7 @@ class WBUnitScreen:
         screen.setTableColumnHeader("WBUnitType", 0, "", iWidth)
 
         lUnitType = []
-        for i in xrange(gc.getNumUnitInfos()):
+        for i in xrange(gc.getNumUnitInfos()):  # type: ignore
             UnitInfo = gc.getUnitInfo(i)
             if UnitInfo.getUnitCombatType() != iSelectedClass and iSelectedClass > -2:
                 continue
@@ -1661,7 +1661,7 @@ class WBUnitScreen:
         screen = CyGInterfaceScreen("WBUnitScreen", CvScreenEnums.WB_UNIT)
         global lUnits
         lUnits = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != pUnit.getOwner():
                 continue
@@ -1861,7 +1861,7 @@ class WBUnitScreen:
             )
 
             if pUnit.cargoSpace() > 0:
-                for i in xrange(pPlot.getNumUnits()):
+                for i in xrange(pPlot.getNumUnits()):  # type: ignore
                     pUnitX = pPlot.getUnit(i)
                     if pUnitX.isNone():
                         continue
@@ -1897,7 +1897,7 @@ class WBUnitScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
         else:
-            for i in xrange(pPlot.getNumUnits()):
+            for i in xrange(pPlot.getNumUnits()):  # type: ignore
                 pUnitX = pPlot.getUnit(i)
                 if pUnitX.isNone():
                     continue
@@ -2146,7 +2146,7 @@ class WBUnitScreen:
             if iCommandUnitType == 0:
                 lUnits.append(pUnit)
             else:
-                for i in xrange(pPlot.getNumUnits()):
+                for i in xrange(pPlot.getNumUnits()):  # type: ignore
                     pUnitX = pPlot.getUnit(i)
                     if pUnitX.isNone():
                         continue
@@ -2224,7 +2224,7 @@ class WBUnitScreen:
             self.top.lMoveUnit.append([pUnitX.getOwner(), pUnitX.getID()])
             return 0
         elif iIndex == 3:
-            for i in xrange(iChange + 1):
+            for i in xrange(iChange + 1):  # type: ignore
                 pNewUnit = gc.getPlayer(pUnitX.getOwner()).initUnit(
                     pUnitX.getUnitType(),
                     pUnitX.getX(),
@@ -2281,10 +2281,10 @@ class WBUnitScreen:
         if iNewDirection == iOldDirection:
             return
         if iOldDirection > iNewDirection:
-            for i in xrange(iOldDirection - iNewDirection):
+            for i in xrange(iOldDirection - iNewDirection):  # type: ignore
                 pUnitX.rotateFacingDirectionCounterClockwise()
         else:
-            for i in xrange(iNewDirection - iOldDirection):
+            for i in xrange(iNewDirection - iOldDirection):  # type: ignore
                 pUnitX.rotateFacingDirectionClockwise()
 
     def changeOwner(self, iPlayer):
@@ -2315,7 +2315,7 @@ class WBUnitScreen:
             pNewUnit.convert(pUnit)
             pNewUnit.setScriptData("PlatyUnit" + pUnit.getScriptData())
             pUnit.kill(False, -1)
-            for i in xrange(pPlot.getNumUnits()):
+            for i in xrange(pPlot.getNumUnits()):  # type: ignore
                 pUnitX = pPlot.getUnit(i)
                 if pUnitX.getScriptData().find("PlatyUnit") == 0:
                     pUnitX.setScriptData(pUnitX.getScriptData()[9:])

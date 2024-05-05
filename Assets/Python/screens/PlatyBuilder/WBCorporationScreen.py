@@ -157,7 +157,7 @@ class WBCorporationScreen:
             -1,
             FontTypes.GAME_FONT,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isEverAlive():
                 sText = pPlayerX.getName()
@@ -196,7 +196,7 @@ class WBCorporationScreen:
         global lCities
         lCities = []
         iSelectedTeam = gc.getPlayer(iSelectedPlayer).getTeam()
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iSelectedPlayer:
                 continue
@@ -229,7 +229,7 @@ class WBCorporationScreen:
             TableStyles.TABLE_STYLE_STANDARD,
         )
         screen.setTableColumnHeader("WBAllCorporations", 0, "", 150)
-        for i in xrange(2):
+        for i in xrange(2):  # type: ignore
             screen.appendTableRow("WBAllCorporations")
         sText = CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ())
         screen.setTableText(
@@ -255,7 +255,7 @@ class WBCorporationScreen:
             CvUtil.FONT_CENTER_JUSTIFY,
         )
 
-        for i in xrange(gc.getNumCorporationInfos()):
+        for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
             sText = u"%c" % (gc.getCorporationInfo(i).getChar())
             screen.setTableColumnHeader(
                 "WBAllCorporations", i + 1, "", (iWidth - 150) / gc.getNumCorporationInfos()
@@ -299,7 +299,7 @@ class WBCorporationScreen:
         screen.setTableColumnHeader("WBCityCorporations", 0, "", 24)
         screen.setTableColumnHeader("WBCityCorporations", 1, "", 24)
         screen.setTableColumnHeader("WBCityCorporations", 2, "", 102)
-        for i in xrange(gc.getNumCorporationInfos()):
+        for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
             screen.setTableColumnHeader(
                 "WBCityCorporations", i + 3, "", (iWidth - 150) / gc.getNumCorporationInfos()
             )
@@ -348,7 +348,7 @@ class WBCorporationScreen:
                 loopCity.getID(),
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
-            for i in xrange(gc.getNumCorporationInfos()):
+            for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
                 sText = " "
                 if loopCity.isHasCorporation(i):
                     sText = u"%c" % (gc.getCorporationInfo(i).getChar())
@@ -390,7 +390,7 @@ class WBCorporationScreen:
         screen.setTableColumnHeader("WBHeadquarter", 1, "", 24)
         screen.setTableColumnHeader("WBHeadquarter", 2, "", iWidth - 48)
 
-        for i in xrange(gc.getNumCorporationInfos()):
+        for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
             iRow = screen.appendTableRow("WBHeadquarter")
             screen.setTableText(
                 "WBHeadquarter",

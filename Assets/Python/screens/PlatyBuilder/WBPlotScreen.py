@@ -83,7 +83,7 @@ class WBPlotScreen:
             -1,
             pPlot.getOwner() == -1,
         )
-        for i in xrange(gc.getMAX_PLAYERS()):
+        for i in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(i)
             if pPlayerX.isAlive():
                 screen.addPullDownString(
@@ -194,7 +194,7 @@ class WBPlotScreen:
         )
 
         iIndex = -1
-        for i in xrange(CyMap().numPlots()):
+        for i in xrange(CyMap().numPlots()):  # type: ignore
             pLoopPlot = CyMap().plotByIndex(i)
             if pLoopPlot.getX() == pPlot.getX() and pLoopPlot.getY() == pPlot.getY():
                 iIndex = i
@@ -335,9 +335,9 @@ class WBPlotScreen:
         global lImprovements
 
         lFeatures = []
-        for i in xrange(gc.getNumFeatureInfos()):
+        for i in xrange(gc.getNumFeatureInfos()):  # type: ignore
             ItemInfo = gc.getFeatureInfo(i)
-            for j in xrange(ItemInfo.getNumVarieties()):
+            for j in xrange(ItemInfo.getNumVarieties()):  # type: ignore
                 sText = ItemInfo.getDescription()
                 if ItemInfo.getNumVarieties() > 1:
                     sText += " (" + str(j) + ")"
@@ -345,13 +345,13 @@ class WBPlotScreen:
         lFeatures.sort()
 
         lRoutes = []
-        for i in xrange(gc.getNumRouteInfos()):
+        for i in xrange(gc.getNumRouteInfos()):  # type: ignore
             ItemInfo = gc.getRouteInfo(i)
             lRoutes.append([ItemInfo.getDescription(), i])
         lRoutes.sort()
 
         lImprovements = []
-        for i in xrange(gc.getNumImprovementInfos()):
+        for i in xrange(gc.getNumImprovementInfos()):  # type: ignore
             ItemInfo = gc.getImprovementInfo(i)
             if ItemInfo.isGraphicalOnly():
                 continue
@@ -437,9 +437,9 @@ class WBPlotScreen:
         )
 
         lSigns = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             lSigns.append(-1)
-        for i in xrange(CyEngine().getNumSigns()):
+        for i in xrange(CyEngine().getNumSigns()):  # type: ignore
             pSign = CyEngine().getSignByIndex(i)
             if pSign.getPlot().getX() != pPlot.getX():
                 continue
@@ -465,7 +465,7 @@ class WBPlotScreen:
         screen.setTableColumnHeader("WBSigns", 2, "", (iSignWidth - 48) / 3)
         screen.setTableColumnHeader("WBSigns", 3, "", (iSignWidth - 48) * 2 / 3)
 
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if pPlayerX.isEverAlive():
                 iRow = screen.appendTableRow("WBSigns")
@@ -565,7 +565,7 @@ class WBPlotScreen:
             -1,
         )
         iY += 30
-        for i in xrange(YieldTypes.NUM_YIELD_TYPES):
+        for i in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
             iX = 10
             iYield = pPlot.getYield(YieldTypes(i))
             iImprovement = pPlot.getImprovementType()
@@ -1125,7 +1125,7 @@ class WBPlotScreen:
     def createBonusList(self):
         global lBonus
         lBonus = []
-        for i in xrange(gc.getNumBonusInfos()):
+        for i in xrange(gc.getNumBonusInfos()):  # type: ignore
             ItemInfo = gc.getBonusInfo(i)
             if iSelectedClass != ItemInfo.getBonusClassType() and iSelectedClass > -1:
                 continue
@@ -1242,7 +1242,7 @@ class WBPlotScreen:
         )
         screen.setTableColumnHeader("WBPlotTerrain", 0, "", iWidth)
 
-        for i in xrange(gc.getNumTerrainInfos()):
+        for i in xrange(gc.getNumTerrainInfos()):  # type: ignore
             TerrainInfo = gc.getTerrainInfo(i)
             if TerrainInfo.isGraphicalOnly():
                 continue
@@ -1333,7 +1333,7 @@ class WBPlotScreen:
             TableStyles.TABLE_STYLE_STANDARD,
         )
         screen.setTableColumnHeader("WBPlotType", 0, "", iWidth)
-        for iTerrain in xrange(PlotTypes.NUM_PLOT_TYPES):
+        for iTerrain in xrange(PlotTypes.NUM_PLOT_TYPES):  # type: ignore
             screen.appendTableRow("WBPlotType")
 
         iTerrain = gc.getInfoTypeForString("TERRAIN_PEAK")
@@ -1562,7 +1562,7 @@ class WBPlotScreen:
             if iEditType == 0:
                 pPlot.setPlotType(PlotTypes(inputClass.getData()), True, True)
             elif iEditType == 1:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1577,7 +1577,7 @@ class WBPlotScreen:
             if iEditType == 0:
                 pPlot.setTerrainType(iTerrain, True, True)
             else:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1604,7 +1604,7 @@ class WBPlotScreen:
                 else:
                     pPlot.setBonusType(-1)
             else:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1633,7 +1633,7 @@ class WBPlotScreen:
                 else:
                     pPlot.setImprovementType(-1)
             else:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1675,7 +1675,7 @@ class WBPlotScreen:
                 else:
                     pPlot.setFeatureType(-1, 0)
             else:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1705,7 +1705,7 @@ class WBPlotScreen:
                 else:
                     pPlot.setRouteType(-1)
             else:
-                for i in xrange(CyMap().numPlots()):
+                for i in xrange(CyMap().numPlots()):  # type: ignore
                     pLoopPlot = CyMap().plotByIndex(i)
                     if pLoopPlot.isNone():
                         continue
@@ -1733,7 +1733,7 @@ class WBPlotScreen:
         elif inputClass.getFunctionName() == "EditLandMark":
             iIndex = -1
             sText = ""
-            for i in xrange(CyEngine().getNumSigns()):
+            for i in xrange(CyEngine().getNumSigns()):  # type: ignore
                 pSign = CyEngine().getSignByIndex(i)
                 if pSign.getPlot().getX() != pPlot.getX():
                     continue

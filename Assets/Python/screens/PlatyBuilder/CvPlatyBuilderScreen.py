@@ -176,20 +176,20 @@ class CvWorldBuilderScreen:
                 if self.m_iCost <= 0:
                     return []
 
-        if (self.m_pCurrentPlot != 0) and not self.m_bShowBigBrush and isMouseOverGameSurface():
+        if (self.m_pCurrentPlot != 0) and not self.m_bShowBigBrush and isMouseOverGameSurface():  # type: ignore
             return (self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
         return []
 
     def update(self, fDelta):
-        if (not self.m_bChangeFocus) and (not isMouseOverGameSurface()):
+        if (not self.m_bChangeFocus) and (not isMouseOverGameSurface()):  # type: ignore
             self.m_bChangeFocus = True
         if (
             self.m_bChangeFocus
-            and isMouseOverGameSurface()
+            and isMouseOverGameSurface()  # type: ignore
             and (self.iPlayerAddMode != "EditUnit" and self.iPlayerAddMode != "EditCity")
         ):
             self.m_bChangeFocus = False
-            setFocusToCVG()
+            setFocusToCVG()  # type: ignore
         return
 
     # Will update the screen (every 250 MS)
@@ -240,7 +240,7 @@ class CvWorldBuilderScreen:
 
     def refreshReveal(self):
         CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-        for i in xrange(CyMap().numPlots()):
+        for i in xrange(CyMap().numPlots()):  # type: ignore
             pPlot = CyMap().plotByIndex(i)
             if pPlot.isNone():
                 continue
@@ -248,7 +248,7 @@ class CvWorldBuilderScreen:
 
     def refreshStartingPlots(self):
         CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             pPlot = pPlayerX.getStartingPlot()
             if not pPlot.isNone():
@@ -322,7 +322,7 @@ class CvWorldBuilderScreen:
     def getASActiveUnit(self):
         # Unit Tab
         if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-            iUnitType = getASUnit(
+            iUnitType = getASUnit(  # type: ignore
                 self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
             )
             return iUnitType
@@ -384,7 +384,7 @@ class CvWorldBuilderScreen:
                 self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()]
                 == self.m_iASBuildingsListID
             ):
-                iBuildingType = getASBuilding(
+                iBuildingType = getASBuilding(  # type: ignore
                     self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
                 )
                 return iBuildingType
@@ -398,7 +398,7 @@ class CvWorldBuilderScreen:
                 self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()]
                 == self.m_iASRoutesListID
             ):
-                iRouteType = getASRoute(
+                iRouteType = getASRoute(  # type: ignore
                     self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
                 )
                 if -1 == iRouteType:
@@ -416,7 +416,7 @@ class CvWorldBuilderScreen:
                 self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()]
                 == self.m_iASImprovementsListID
             ):
-                iImprovementType = getASImprovement(
+                iImprovementType = getASImprovement(  # type: ignore
                     self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
                 )
                 if -1 == iImprovementType:
@@ -507,7 +507,7 @@ class CvWorldBuilderScreen:
                     ):
                         if pPlot.isCity():
                             pCity = pPlot.getPlotCity()
-                            iBuildingType = getASBuilding(
+                            iBuildingType = getASBuilding(  # type: ignore
                                 self.m_iAdvancedStartCurrentIndexes[
                                     self.m_advancedStartTabCtrl.getActiveTab()
                                 ]
@@ -530,7 +530,7 @@ class CvWorldBuilderScreen:
 
                 # Unit Tab
                 elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-                    iUnitType = getASUnit(
+                    iUnitType = getASUnit(  # type: ignore
                         self.m_iAdvancedStartCurrentIndexes[
                             self.m_advancedStartTabCtrl.getActiveTab()
                         ]
@@ -557,7 +557,7 @@ class CvWorldBuilderScreen:
                         ]
                         == self.m_iASRoutesListID
                     ):
-                        iRouteType = getASRoute(
+                        iRouteType = getASRoute(  # type: ignore
                             self.m_iAdvancedStartCurrentIndexes[
                                 self.m_advancedStartTabCtrl.getActiveTab()
                             ]
@@ -582,7 +582,7 @@ class CvWorldBuilderScreen:
                         ]
                         == self.m_iASImprovementsListID
                     ):
-                        iImprovementType = getASImprovement(
+                        iImprovementType = getASImprovement(  # type: ignore
                             self.m_iAdvancedStartCurrentIndexes[
                                 self.m_advancedStartTabCtrl.getActiveTab()
                             ]
@@ -623,11 +623,11 @@ class CvWorldBuilderScreen:
         if self.iPlayerAddMode == "EraseAll":
             self.m_pCurrentPlot.erase()
             CyEngine().removeLandmark(self.m_pCurrentPlot)
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
         elif self.iPlayerAddMode == "AddLandMark":
             iIndex = -1
-            for i in xrange(CyEngine().getNumSigns()):
+            for i in xrange(CyEngine().getNumSigns()):  # type: ignore
                 pSign = CyEngine().getSignByIndex(i)
                 if pSign.getPlot().getX() != self.m_pCurrentPlot.getX():
                     continue
@@ -657,7 +657,7 @@ class CvWorldBuilderScreen:
             self.m_pCurrentPlot.setOwner(self.m_iCurrentPlayer)
         ## Python Effects ##
         elif self.iPlayerAddMode == "Units":
-            for i in xrange(iChange):
+            for i in xrange(iChange):  # type: ignore
                 gc.getPlayer(self.m_iCurrentPlayer).initUnit(
                     self.iSelection,
                     self.m_pCurrentPlot.getX(),
@@ -823,7 +823,7 @@ class CvWorldBuilderScreen:
                     ):
                         if pPlot.isCity():
                             if pPlot.getPlotCity().getOwner() == self.m_iCurrentPlayer:
-                                iBuildingType = getASBuilding(
+                                iBuildingType = getASBuilding(  # type: ignore
                                     self.m_iAdvancedStartCurrentIndexes[
                                         self.m_advancedStartTabCtrl.getActiveTab()
                                     ]
@@ -840,7 +840,7 @@ class CvWorldBuilderScreen:
 
                 # Unit Tab
                 elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-                    iUnitType = getASUnit(
+                    iUnitType = getASUnit(  # type: ignore
                         self.m_iAdvancedStartCurrentIndexes[
                             self.m_advancedStartTabCtrl.getActiveTab()
                         ]
@@ -864,7 +864,7 @@ class CvWorldBuilderScreen:
                         ]
                         == self.m_iASRoutesListID
                     ):
-                        iRouteType = getASRoute(
+                        iRouteType = getASRoute(  # type: ignore
                             self.m_iAdvancedStartCurrentIndexes[
                                 self.m_advancedStartTabCtrl.getActiveTab()
                             ]
@@ -886,7 +886,7 @@ class CvWorldBuilderScreen:
                         ]
                         == self.m_iASImprovementsListID
                     ):
-                        iImprovementType = getASImprovement(
+                        iImprovementType = getASImprovement(  # type: ignore
                             self.m_iAdvancedStartCurrentIndexes[
                                 self.m_advancedStartTabCtrl.getActiveTab()
                             ]
@@ -913,12 +913,12 @@ class CvWorldBuilderScreen:
         if self.iPlayerAddMode == "EraseAll":
             self.m_pCurrentPlot.erase()
             CyEngine().removeLandmark(self.m_pCurrentPlot)
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
         elif self.iPlayerAddMode == "Ownership":
             self.m_pCurrentPlot.setOwner(-1)
         elif self.iPlayerAddMode == "Units":
-            for i in xrange(self.m_pCurrentPlot.getNumUnits()):
+            for i in xrange(self.m_pCurrentPlot.getNumUnits()):  # type: ignore
                 pUnit = self.m_pCurrentPlot.getUnit(i)
                 if pUnit.getUnitType() == self.iSelection:
                     pUnit.kill(False, PlayerTypes.NO_PLAYER)
@@ -1104,8 +1104,8 @@ class CvWorldBuilderScreen:
         self.iSelectClass = -2
         self.iSelection = -1
         self.refreshSideMenu()
-        getWBToolNormalPlayerTabCtrl().enable(False)
-        getWBToolNormalMapTabCtrl().enable(False)
+        getWBToolNormalPlayerTabCtrl().enable(False)  # type: ignore
+        getWBToolNormalMapTabCtrl().enable(False)  # type: ignore
         return
 
     def normalMapTabModeCB(self):
@@ -1854,7 +1854,7 @@ class CvWorldBuilderScreen:
                     -1,
                     FontTypes.GAME_FONT,
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                     if gc.getPlayer(iPlayer).isEverAlive():
                         sName = gc.getPlayer(iPlayer).getName()
                         if not gc.getPlayer(iPlayer).isAlive():
@@ -2076,7 +2076,7 @@ class CvWorldBuilderScreen:
                     gc.getBARBARIAN_PLAYER(),
                     self.m_iCurrentPlayer == gc.getBARBARIAN_PLAYER(),
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                     if iPlayer == gc.getBARBARIAN_PLAYER():
                         continue
                     if gc.getPlayer(iPlayer).isEverAlive():
@@ -2298,7 +2298,7 @@ class CvWorldBuilderScreen:
                     -1,
                     FontTypes.GAME_FONT,
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                     if gc.getPlayer(iPlayer).isEverAlive():
                         sName = gc.getPlayer(iPlayer).getName()
                         if not gc.getPlayer(iPlayer).isAlive():
@@ -2484,7 +2484,7 @@ class CvWorldBuilderScreen:
                 -1,
                 -1 == self.iSelectClass,
             )
-            for iCombatClass in xrange(gc.getNumUnitCombatInfos()):
+            for iCombatClass in xrange(gc.getNumUnitCombatInfos()):  # type: ignore
                 screen.addPullDownString(
                     "WBSelectClass",
                     gc.getUnitCombatInfo(iCombatClass).getDescription(),
@@ -2494,7 +2494,7 @@ class CvWorldBuilderScreen:
                 )
 
             lItems = []
-            for i in xrange(gc.getNumUnitInfos()):
+            for i in xrange(gc.getNumUnitInfos()):  # type: ignore
                 ItemInfo = gc.getUnitInfo(i)
                 if bHideInactive:
                     iClass = ItemInfo.getUnitClassType()
@@ -2592,7 +2592,7 @@ class CvWorldBuilderScreen:
             )
 
             lItems = []
-            for i in xrange(gc.getNumBuildingInfos()):
+            for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
                 ItemInfo = gc.getBuildingInfo(i)
                 iClass = ItemInfo.getBuildingClassType()
                 if bHideInactive:
@@ -2653,7 +2653,7 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "Features":
             iY = 55
             lItems = []
-            for i in xrange(gc.getNumFeatureInfos()):
+            for i in xrange(gc.getNumFeatureInfos()):  # type: ignore
                 ItemInfo = gc.getFeatureInfo(i)
                 lItems.append([ItemInfo.getDescription(), i])
             lItems.sort()
@@ -2692,7 +2692,7 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "Improvements":
             iY = 25
             lItems = []
-            for i in xrange(gc.getNumImprovementInfos()):
+            for i in xrange(gc.getNumImprovementInfos()):  # type: ignore
                 ItemInfo = gc.getImprovementInfo(i)
                 if ItemInfo.isGraphicalOnly():
                     continue
@@ -2772,7 +2772,7 @@ class CvWorldBuilderScreen:
                 iBonusClass += 1
 
             lItems = []
-            for i in xrange(gc.getNumBonusInfos()):
+            for i in xrange(gc.getNumBonusInfos()):  # type: ignore
                 ItemInfo = gc.getBonusInfo(i)
                 if ItemInfo.getBonusClassType() != self.iSelectClass and self.iSelectClass > -1:
                     continue
@@ -2814,7 +2814,7 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "Routes":
             iY = 25
             lItems = []
-            for i in xrange(gc.getNumRouteInfos()):
+            for i in xrange(gc.getNumRouteInfos()):  # type: ignore
                 ItemInfo = gc.getRouteInfo(i)
                 lItems.append([ItemInfo.getDescription(), i])
             lItems.sort()
@@ -2853,7 +2853,7 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "Terrain":
             iY = 25
             lItems = []
-            for i in xrange(gc.getNumTerrainInfos()):
+            for i in xrange(gc.getNumTerrainInfos()):  # type: ignore
                 ItemInfo = gc.getTerrainInfo(i)
                 if ItemInfo.isGraphicalOnly():
                     continue
@@ -2908,7 +2908,7 @@ class CvWorldBuilderScreen:
                 TableStyles.TABLE_STYLE_EMPTY,
             )
             screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
-            for i in xrange(PlotTypes.NUM_PLOT_TYPES):
+            for i in xrange(PlotTypes.NUM_PLOT_TYPES):  # type: ignore
                 screen.appendTableRow("WBSelectItem")
             item = gc.getInfoTypeForString("TERRAIN_PEAK")
             if self.iSelection == -1:
@@ -3050,7 +3050,7 @@ class CvWorldBuilderScreen:
                     -1,
                     FontTypes.GAME_FONT,
                 )
-                for i in xrange(ItemInfo.getNumVarieties()):
+                for i in xrange(ItemInfo.getNumVarieties()):  # type: ignore
                     screen.addPullDownString(
                         "WBSelectClass",
                         CyTranslator().getText("TXT_KEY_WB_FEATURE_VARIETY", (i,)),
@@ -3142,7 +3142,7 @@ class CvWorldBuilderScreen:
 
     ## Platy Reveal Mode Start ##
     def revealAll(self, bReveal):
-        for i in xrange(CyMap().numPlots()):
+        for i in xrange(CyMap().numPlots()):  # type: ignore
             pPlot = CyMap().plotByIndex(i)
             if pPlot.isNone():
                 continue
@@ -3249,9 +3249,9 @@ class CvWorldBuilderScreen:
             self.m_iAdvancedStartCurrentIndexes = []
             self.m_iAdvancedStartCurrentList = []
 
-            initWBToolAdvancedStartControl()
+            initWBToolAdvancedStartControl()  # type: ignore
 
-            self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
+            self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()  # type: ignore
 
             self.m_advancedStartTabCtrl.setNumColumns((gc.getNumBuildingInfos() / 10) + 2)
             self.m_advancedStartTabCtrl.addTabSection(
@@ -3293,13 +3293,13 @@ class CvWorldBuilderScreen:
 
             self.m_iAdvancedStartCurrentList.append(0)
 
-            addWBAdvancedStartControlTabs()
+            addWBAdvancedStartControlTabs()  # type: ignore
 
             self.m_advancedStartTabCtrl.setActiveTab(iActiveTab)
             self.setCurrentAdvancedStartIndex(iActiveIndex)
             self.setCurrentAdvancedStartList(iActiveList)
         else:
-            self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
+            self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()  # type: ignore
             self.m_advancedStartTabCtrl.enable(False)
         return
 
@@ -3314,8 +3314,8 @@ class CvWorldBuilderScreen:
             1,
         )
 
-        for x in xrange(self.m_pRiverStartPlot.getX() - 1, self.m_pRiverStartPlot.getX() + 2):
-            for y in xrange(self.m_pRiverStartPlot.getY() - 1, self.m_pRiverStartPlot.getY() + 2):
+        for x in xrange(self.m_pRiverStartPlot.getX() - 1, self.m_pRiverStartPlot.getX() + 2):  # type: ignore
+            for y in xrange(self.m_pRiverStartPlot.getY() - 1, self.m_pRiverStartPlot.getY() + 2):  # type: ignore
                 if x == self.m_pRiverStartPlot.getX() and y == self.m_pRiverStartPlot.getY():
                     continue
                 CyEngine().addColoredPlotAlt(
@@ -3440,7 +3440,7 @@ class CvWorldBuilderScreen:
                         pNewUnit.setLevel(loopUnit.getLevel())
                         pNewUnit.setExperience(loopUnit.getExperience(), -1)
                         pNewUnit.setBaseCombatStr(loopUnit.baseCombatStr())
-                        for iPromotion in xrange(gc.getNumPromotionInfos()):
+                        for iPromotion in xrange(gc.getNumPromotionInfos()):  # type: ignore
                             pNewUnit.setHasPromotion(
                                 iPromotion, loopUnit.isHasPromotion(iPromotion)
                             )
@@ -3458,25 +3458,25 @@ class CvWorldBuilderScreen:
 
     def copyCityStats(self, pOldCity, pNewCity, bMove):
         pNewCity.setPopulation(pOldCity.getPopulation())
-        for iBuilding in xrange(gc.getNumBuildingInfos()):
+        for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore
             pNewCity.setBuildingProduction(iBuilding, pOldCity.getBuildingProduction(iBuilding))
             if gc.getBuildingInfo(iBuilding).isCapital() and not bMove:
                 continue
             pNewCity.setNumRealBuilding(iBuilding, pOldCity.getNumRealBuilding(iBuilding))
-        for iClass in xrange(gc.getNumBuildingClassInfos()):
-            for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+        for iClass in xrange(gc.getNumBuildingClassInfos()):  # type: ignore
+            for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
                 pNewCity.setBuildingCommerceChange(
                     iClass, iCommerce, pOldCity.getBuildingCommerceChange(iClass, iCommerce)
                 )
-            for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+            for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):  # type: ignore
                 pNewCity.setBuildingYieldChange(
                     iClass, iYield, pOldCity.getBuildingYieldChange(iClass, iYield)
                 )
         ##		pNewCity.setBuildingHappyChange(iClass, pOldCity.getBuildingHappyChange(iClass))
         ##		pNewCity.setBuildingHealthChange(iClass, pOldCity.getBuildingHealthChange(iClass))
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pNewCity.setCultureTimes100(iPlayerX, pOldCity.getCultureTimes100(iPlayerX), False)
-        for iReligion in xrange(gc.getNumReligionInfos()):
+        for iReligion in xrange(gc.getNumReligionInfos()):  # type: ignore
             pNewCity.setHasReligion(iReligion, pOldCity.isHasReligion(iReligion), False, False)
             if bMove and pOldCity.isHolyCityByType(iReligion):
                 CyGame().setHolyCity(iReligion, pNewCity, False)
@@ -3490,35 +3490,35 @@ class CvWorldBuilderScreen:
                 pOldCity.getStateReligionHappiness(iReligion)
                 - pNewCity.getStateReligionHappiness(iReligion),
             )
-        for iCorporation in xrange(gc.getNumCorporationInfos()):
+        for iCorporation in xrange(gc.getNumCorporationInfos()):  # type: ignore
             pNewCity.setHasCorporation(
                 iCorporation, pOldCity.isHasCorporation(iCorporation), False, False
             )
             if bMove and pOldCity.isHeadquartersByType(iCorporation):
                 CyGame().setHeadquarters(iCorporation, pNewCity, False)
-        for iImprovement in xrange(gc.getNumImprovementInfos()):
+        for iImprovement in xrange(gc.getNumImprovementInfos()):  # type: ignore
             pNewCity.changeImprovementFreeSpecialists(
                 iImprovement,
                 pOldCity.getImprovementFreeSpecialists(iImprovement)
                 - pNewCity.getImprovementFreeSpecialists(iImprovement),
             )
-        for iSpecialist in xrange(gc.getNumSpecialistInfos()):
+        for iSpecialist in xrange(gc.getNumSpecialistInfos()):  # type: ignore
             pNewCity.setFreeSpecialistCount(
                 iSpecialist, pOldCity.getFreeSpecialistCount(iSpecialist)
             )
             pNewCity.setForceSpecialistCount(
                 iSpecialist, pOldCity.getForceSpecialistCount(iSpecialist)
             )
-        for iUnit in xrange(gc.getNumUnitInfos()):
+        for iUnit in xrange(gc.getNumUnitInfos()):  # type: ignore
             pNewCity.setUnitProduction(iUnit, pOldCity.getUnitProduction(iUnit))
             pNewCity.setGreatPeopleUnitProgress(iUnit, pOldCity.getGreatPeopleUnitProgress(iUnit))
-        for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+        for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
             pNewCity.changeSpecialistCommerce(
                 iCommerce,
                 pOldCity.getSpecialistCommerce(iCommerce)
                 - pNewCity.getSpecialistCommerce(iCommerce),
             )
-        for iBonus in xrange(gc.getNumBonusInfos()):
+        for iBonus in xrange(gc.getNumBonusInfos()):  # type: ignore
             pNewCity.changeFreeBonus(
                 iBonus, pOldCity.getFreeBonus(iBonus) - pNewCity.getFreeBonus(iBonus)
             )
@@ -3527,7 +3527,7 @@ class CvWorldBuilderScreen:
                     pNewCity.changeNoBonusCount(iBonus, 1)
                 else:
                     pNewCity.changeNoBonusCount(iBonus, -1)
-        for iOrder in xrange(pOldCity.getOrderQueueLength()):
+        for iOrder in xrange(pOldCity.getOrderQueueLength()):  # type: ignore
             OrderData = pOldCity.getOrderFromQueue(iOrder)
             pNewCity.pushOrder(
                 OrderData.eOrderType,
@@ -3618,7 +3618,7 @@ class CvWorldBuilderScreen:
         global bHideInactive
 
         if inputClass.getFunctionName() == "WorldBuilderEraseAll":
-            for i in xrange(CyMap().numPlots()):
+            for i in xrange(CyMap().numPlots()):  # type: ignore
                 self.m_pCurrentPlot = CyMap().plotByIndex(i)
                 self.placeObject()
 

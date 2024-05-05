@@ -357,7 +357,7 @@ class WBBuildingScreen:
 
     def sortCities(self):
         self.lCities = []
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
             pPlayerX = gc.getPlayer(iPlayerX)
             if iOwnerType == 1 and iPlayerX != iPlayer:
                 continue
@@ -443,7 +443,7 @@ class WBBuildingScreen:
         lNational = []
         lTeam = []
         lWorld = []
-        for i in xrange(gc.getNumBuildingInfos()):
+        for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
             BuildingInfo = gc.getBuildingInfo(i)
             iClass = BuildingInfo.getBuildingClassType()
             if CvPlatyBuilderScreen.bHideInactive:
@@ -488,16 +488,16 @@ class WBBuildingScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBBuilding", i, "", iWidth / nColumns)
 
         nRows = len(lBuilding) / nColumns
         if len(lBuilding) % nColumns:
             nRows += 1
-        for i in xrange(nRows):
+        for i in xrange(nRows):  # type: ignore
             screen.appendTableRow("WBBuilding")
 
-        for iCount in xrange(len(lBuilding)):
+        for iCount in xrange(len(lBuilding)):  # type: ignore
             item = lBuilding[iCount]
             iRow = iCount % nRows
             iColumn = iCount / nRows
@@ -547,14 +547,14 @@ class WBBuildingScreen:
             24,
             TableStyles.TABLE_STYLE_STANDARD,
         )
-        for i in xrange(nColumns):
+        for i in xrange(nColumns):  # type: ignore
             screen.setTableColumnHeader("WBWonders", i, "", iWidth / nColumns)
 
         nRows = (len(lWonders) + nColumns - 1) / nColumns
-        for i in xrange(nRows):
+        for i in xrange(nRows):  # type: ignore
             screen.appendTableRow("WBWonders")
 
-        for iCount in xrange(len(lWonders)):
+        for iCount in xrange(len(lWonders)):  # type: ignore
             item = lWonders[iCount]
             iRow = iCount % nRows
             iColumn = iCount / nRows
