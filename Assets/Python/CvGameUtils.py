@@ -1,8 +1,3 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-##
-## Implementation of miscellaneous game functions
-
 from CoreData import civilization
 from CoreFunctions import get_religion_by_id, text
 from CoreStructures import turn
@@ -15,7 +10,6 @@ from PyUtils import rand  # Absinthe
 from RFCUtils import prosecute
 import Stability  # Absinthe
 
-# globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
 sta = Stability.Stability()  # Absinthe
@@ -28,10 +22,7 @@ class CvGameUtils:
         pass
 
     def isVictoryTest(self):
-        if gc.getGame().getElapsedGameTurns() > 10:
-            return True
-        else:
-            return False
+        return CyGame().getElapsedGameTurns() > 10
 
     def isVictory(self, argsList):
         eVictory = argsList[0]
@@ -43,9 +34,7 @@ class CvGameUtils:
 
     def getExtraCost(self, argsList):
         ePlayer = argsList[0]
-        pPlayer = gc.getPlayer(ePlayer)
-        iExtraCost = 0
-        return iExtraCost
+        return 0
 
     def createBarbarianCities(self):
         return False
@@ -70,7 +59,7 @@ class CvGameUtils:
         eFirstTech = argsList[1]
         return TechTypes.NO_TECH
 
-    def canRaze(self, argsList):
+    def canRazeCity(self, argsList):
         iRazingPlayer, pCity = argsList
         return True
 
@@ -580,13 +569,11 @@ class CvGameUtils:
         iConscriptUnitType = (
             -1
         )  # return this with the value of the UNIT TYPE you want to be conscripted, -1 uses default system
-
         return iConscriptUnitType
 
     def getCityFoundValue(self, argsList):
         iPlayer, iPlotX, iPlotY = argsList
         iFoundValue = -1  # Any value besides -1 will be used
-
         return iFoundValue
 
     def canPickPlot(self, argsList):
@@ -596,7 +583,6 @@ class CvGameUtils:
     def getUnitCostMod(self, argsList):
         iPlayer, iUnit = argsList
         iCostMod = -1  # Any value > 0 will be used
-
         return iCostMod
 
     def getBuildingCostMod(self, argsList):
@@ -625,9 +611,7 @@ class CvGameUtils:
 
     def canUpgradeAnywhere(self, argsList):
         pUnit = argsList
-
         bCanUpgradeAnywhere = 0
-
         return bCanUpgradeAnywhere
 
     def getWidgetHelp(self, argsList):
@@ -641,6 +625,358 @@ class CvGameUtils:
             return text("TXT_KEY_MERCENARY_HELP")
         elif iData1 == 1920:
             return text("TXT_KEY_BARBONLY_HELP")
+        ## Platy WorldBuilder ##
+        elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
+            if iData1 == 1027:
+                return text("TXT_KEY_WB_PLOT_DATA")
+            elif iData1 == 1028:
+                return gc.getGameOptionInfo(iData2).getHelp()
+            elif iData1 == 1029:
+                if iData2 == 0:
+                    sText = text("TXT_KEY_WB_PYTHON")
+                    sText += "\n" + text("[ICON_BULLET]") + "onFirstContact"
+                    sText += "\n" + text("[ICON_BULLET]") + "onChangeWar"
+                    sText += "\n" + text("[ICON_BULLET]") + "onVassalState"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCityAcquired"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCityBuilt"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCultureExpansion"
+                    sText += "\n" + text("[ICON_BULLET]") + "onGoldenAge"
+                    sText += "\n" + text("[ICON_BULLET]") + "onEndGoldenAge"
+                    sText += "\n" + text("[ICON_BULLET]") + "onGreatPersonBorn"
+                    sText += "\n" + text("[ICON_BULLET]") + "onPlayerChangeStateReligion"
+                    sText += "\n" + text("[ICON_BULLET]") + "onReligionFounded"
+                    sText += "\n" + text("[ICON_BULLET]") + "onReligionSpread"
+                    sText += "\n" + text("[ICON_BULLET]") + "onReligionRemove"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCorporationFounded"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCorporationSpread"
+                    sText += "\n" + text("[ICON_BULLET]") + "onCorporationRemove"
+                    sText += "\n" + text("[ICON_BULLET]") + "onUnitCreated"
+                    sText += "\n" + text("[ICON_BULLET]") + "onUnitLost"
+                    sText += "\n" + text("[ICON_BULLET]") + "onUnitPromoted"
+                    sText += "\n" + text("[ICON_BULLET]") + "onBuildingBuilt"
+                    sText += "\n" + text("[ICON_BULLET]") + "onProjectBuilt"
+                    sText += "\n" + text("[ICON_BULLET]") + "onTechAcquired"
+                    sText += "\n" + text("[ICON_BULLET]") + "onImprovementBuilt"
+                    sText += "\n" + text("[ICON_BULLET]") + "onImprovementDestroyed"
+                    sText += "\n" + text("[ICON_BULLET]") + "onRouteBuilt"
+                    sText += "\n" + text("[ICON_BULLET]") + "onPlotRevealed"
+                    return sText
+                elif iData2 == 1:
+                    return text("TXT_KEY_WB_PLAYER_DATA")
+                elif iData2 == 2:
+                    return text("TXT_KEY_WB_TEAM_DATA")
+                elif iData2 == 3:
+                    return text("TXT_KEY_PEDIA_CATEGORY_TECH")
+                elif iData2 == 4:
+                    return text("TXT_KEY_PEDIA_CATEGORY_PROJECT")
+                elif iData2 == 5:
+                    return (
+                        text("TXT_KEY_PEDIA_CATEGORY_UNIT")
+                        + " + "
+                        + text("TXT_KEY_CONCEPT_CITIES")
+                    )
+                elif iData2 == 6:
+                    return text("TXT_KEY_PEDIA_CATEGORY_PROMOTION")
+                elif iData2 == 7:
+                    return text("TXT_KEY_WB_CITY_DATA2")
+                elif iData2 == 8:
+                    return text("TXT_KEY_PEDIA_CATEGORY_BUILDING")
+                elif iData2 == 9:
+                    return "Platy Builder\nVersion: 4.17b"
+                elif iData2 == 10:
+                    return text("TXT_KEY_CONCEPT_EVENTS")
+                elif iData2 == 11:
+                    return text("TXT_KEY_WB_RIVER_PLACEMENT")
+                elif iData2 == 12:
+                    return text("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT")
+                elif iData2 == 13:
+                    return text("TXT_KEY_PEDIA_CATEGORY_BONUS")
+                elif iData2 == 14:
+                    return text("TXT_KEY_WB_PLOT_TYPE")
+                elif iData2 == 15:
+                    return text("TXT_KEY_CONCEPT_TERRAIN")
+                elif iData2 == 16:
+                    return text("TXT_KEY_PEDIA_CATEGORY_ROUTE")
+                elif iData2 == 17:
+                    return text("TXT_KEY_PEDIA_CATEGORY_FEATURE")
+                elif iData2 == 18:
+                    return text("TXT_KEY_MISSION_BUILD_CITY")
+                elif iData2 == 19:
+                    return text("TXT_KEY_WB_ADD_BUILDINGS")
+                elif iData2 == 20:
+                    return text("TXT_KEY_PEDIA_CATEGORY_RELIGION")
+                elif iData2 == 21:
+                    return text("TXT_KEY_CONCEPT_CORPORATIONS")
+                elif iData2 == 22:
+                    return text("TXT_KEY_ESPIONAGE_CULTURE")
+                elif iData2 == 23:
+                    return text("TXT_KEY_PITBOSS_GAME_OPTIONS")
+                elif iData2 == 24:
+                    return text("TXT_KEY_WB_SENSIBILITY")
+                elif iData2 == 27:
+                    return text("TXT_KEY_WB_ADD_UNITS")
+                elif iData2 == 28:
+                    return text("TXT_KEY_WB_TERRITORY")
+                elif iData2 == 29:
+                    return text("TXT_KEY_WB_ERASE_ALL_PLOTS")
+                elif iData2 == 30:
+                    return text("TXT_KEY_WB_REPEATABLE")
+                elif iData2 == 31:
+                    return text("TXT_KEY_PEDIA_HIDE_INACTIVE")
+                elif iData2 == 32:
+                    return text("TXT_KEY_WB_STARTING_PLOT")
+                elif iData2 == 33:
+                    return text("TXT_KEY_INFO_SCREEN")
+                elif iData2 == 34:
+                    return text("TXT_KEY_CONCEPT_TRADE")
+            elif iData1 > 1029 and iData1 < 1040:
+                if iData1 % 2:
+                    return "-"
+                return "+"
+            elif iData1 == 1041:
+                return text("TXT_KEY_WB_KILL")
+            elif iData1 == 1042:
+                return text("TXT_KEY_MISSION_SKIP")
+            elif iData1 == 1043:
+                if iData2 == 0:
+                    return text("TXT_KEY_WB_DONE")
+                elif iData2 == 1:
+                    return text("TXT_KEY_WB_FORTIFY")
+                elif iData2 == 2:
+                    return text("TXT_KEY_WB_WAIT")
+            elif iData1 == 6785:
+                return CyGameTextMgr().getProjectHelp(iData2, False, CyCity())
+            elif iData1 == 6787:
+                return gc.getProcessInfo(iData2).getDescription()
+            elif iData1 == 6788:
+                if iData2 == -1:
+                    return text("TXT_KEY_CULTURELEVEL_NONE")
+                return gc.getRouteInfo(iData2).getDescription()
+            ## City Hover Text ##
+            elif iData1 > 7199 and iData1 < 7300:
+                iPlayer = iData1 - 7200
+                pPlayer = gc.getPlayer(iPlayer)
+                pCity = pPlayer.getCity(iData2)
+                if CyGame().GetWorldBuilderMode():
+                    sText = "<font=3>"
+                    if pCity.isCapital():
+                        sText += text("[ICON_STAR]")
+                    elif pCity.isGovernmentCenter():
+                        sText += text("[ICON_SILVER_STAR]")
+                    sText += u"%s: %d<font=2>" % (pCity.getName(), pCity.getPopulation())
+                    sTemp = ""
+                    if pCity.isConnectedToCapital(iPlayer):
+                        sTemp += text("[ICON_TRADE]")
+                    for i in xrange(gc.getNumReligionInfos()):
+                        if pCity.isHolyCityByType(i):
+                            sTemp += u"%c" % (gc.getReligionInfo(i).getHolyCityChar())
+                        elif pCity.isHasReligion(i):
+                            sTemp += u"%c" % (gc.getReligionInfo(i).getChar())
+
+                    for i in xrange(gc.getNumCorporationInfos()):
+                        if pCity.isHeadquartersByType(i):
+                            sTemp += u"%c" % (gc.getCorporationInfo(i).getHeadquarterChar())
+                        elif pCity.isHasCorporation(i):
+                            sTemp += u"%c" % (gc.getCorporationInfo(i).getChar())
+                    if len(sTemp) > 0:
+                        sText += "\n" + sTemp
+
+                    iMaxDefense = pCity.getTotalDefense(False)
+                    if iMaxDefense > 0:
+                        sText += u"\n%s: " % (text("[ICON_DEFENSE]"))
+                        iCurrent = pCity.getDefenseModifier(False)
+                        if iCurrent != iMaxDefense:
+                            sText += u"%d/" % (iCurrent)
+                        sText += u"%d%%" % (iMaxDefense)
+
+                    sText += u"\n%s: %d/%d" % (
+                        text("[ICON_FOOD]"),
+                        pCity.getFood(),
+                        pCity.growthThreshold(),
+                    )
+                    iFoodGrowth = pCity.foodDifference(True)
+                    if iFoodGrowth != 0:
+                        sText += u" %+d" % (iFoodGrowth)
+
+                    if pCity.isProduction():
+                        sText += u"\n%s:" % (text("[ICON_PRODUCTION]"))
+                        if not pCity.isProductionProcess():
+                            sText += u" %d/%d" % (
+                                pCity.getProduction(),
+                                pCity.getProductionNeeded(),
+                            )
+                            iProduction = pCity.getCurrentProductionDifference(False, True)
+                            if iProduction != 0:
+                                sText += u" %+d" % (iProduction)
+                        sText += u" (%s)" % (pCity.getProductionName())
+
+                    iGPRate = pCity.getGreatPeopleRate()
+                    iProgress = pCity.getGreatPeopleProgress()
+                    if iGPRate > 0 or iProgress > 0:
+                        sText += u"\n%s: %d/%d %+d" % (
+                            text("[ICON_GREATPEOPLE]"),
+                            iProgress,
+                            pPlayer.greatPeopleThreshold(False),
+                            iGPRate,
+                        )
+
+                    sText += u"\n%s: %d/%d (%s)" % (
+                        text("[ICON_CULTURE]"),
+                        pCity.getCulture(iPlayer),
+                        pCity.getCultureThreshold(),
+                        gc.getCultureLevelInfo(pCity.getCultureLevel()).getDescription(),
+                    )
+
+                    lTemp = []
+                    for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+                        iAmount = pCity.getCommerceRateTimes100(i)
+                        if iAmount <= 0:
+                            continue
+                        sTemp = u"%d.%02d%c" % (
+                            pCity.getCommerceRate(i),
+                            pCity.getCommerceRateTimes100(i) % 100,
+                            gc.getCommerceInfo(i).getChar(),
+                        )
+                        lTemp.append(sTemp)
+                    if len(lTemp) > 0:
+                        sText += "\n"
+                        for i in xrange(len(lTemp)):
+                            sText += lTemp[i]
+                            if i < len(lTemp) - 1:
+                                sText += ", "
+
+                    iMaintenance = pCity.getMaintenanceTimes100()
+                    if iMaintenance != 0:
+                        sText += (
+                            "\n"
+                            + text("[COLOR_WARNING_TEXT]")
+                            + text("INTERFACE_CITY_MAINTENANCE")
+                            + " </color>"
+                        )
+                        sText += u"-%d.%02d%c" % (
+                            iMaintenance / 100,
+                            iMaintenance % 100,
+                            gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),
+                        )
+
+                    lBuildings = []
+                    lWonders = []
+                    for i in xrange(gc.getNumBuildingInfos()):
+                        if pCity.isHasBuilding(i):
+                            Info = gc.getBuildingInfo(i)
+                            if isLimitedWonderClass(Info.getBuildingClassType()):
+                                lWonders.append(Info.getDescription())
+                            else:
+                                lBuildings.append(Info.getDescription())
+                    if len(lBuildings) > 0:
+                        lBuildings.sort()
+                        sText += (
+                            "\n"
+                            + text("[COLOR_BUILDING_TEXT]")
+                            + text("TXT_KEY_PEDIA_CATEGORY_BUILDING")
+                            + ": </color>"
+                        )
+                        for i in xrange(len(lBuildings)):
+                            sText += lBuildings[i]
+                            if i < len(lBuildings) - 1:
+                                sText += ", "
+                    if len(lWonders) > 0:
+                        lWonders.sort()
+                        sText += (
+                            "\n"
+                            + text("[COLOR_SELECTED_TEXT]")
+                            + text("TXT_KEY_CONCEPT_WONDERS")
+                            + ": </color>"
+                        )
+                        for i in xrange(len(lWonders)):
+                            sText += lWonders[i]
+                            if i < len(lWonders) - 1:
+                                sText += ", "
+                    sText += "</font>"
+                    return sText
+            ## Religion Widget Text##
+            elif iData1 == 7869:
+                return CyGameTextMgr().parseReligionInfo(iData2, False)
+            ## Building Widget Text##
+            elif iData1 == 7870:
+                return CyGameTextMgr().getBuildingHelp(iData2, False, False, False, None)
+            ## Tech Widget Text##
+            elif iData1 == 7871:
+                if iData2 == -1:
+                    return text("TXT_KEY_CULTURELEVEL_NONE")
+                return CyGameTextMgr().getTechHelp(iData2, False, False, False, False, -1)
+            ## Civilization Widget Text##
+            elif iData1 == 7872:
+                iCiv = iData2 % 10000
+                return CyGameTextMgr().parseCivInfos(iCiv, False)
+            ## Promotion Widget Text##
+            elif iData1 == 7873:
+                return CyGameTextMgr().getPromotionHelp(iData2, False)
+            ## Feature Widget Text##
+            elif iData1 == 7874:
+                if iData2 == -1:
+                    return text("TXT_KEY_CULTURELEVEL_NONE")
+                iFeature = iData2 % 10000
+                return CyGameTextMgr().getFeatureHelp(iFeature, False)
+            ## Terrain Widget Text##
+            elif iData1 == 7875:
+                return CyGameTextMgr().getTerrainHelp(iData2, False)
+            ## Leader Widget Text##
+            elif iData1 == 7876:
+                iLeader = iData2 % 10000
+                return CyGameTextMgr().parseLeaderTraits(iLeader, -1, False, False)
+            ## Improvement Widget Text##
+            elif iData1 == 7877:
+                if iData2 == -1:
+                    return text("TXT_KEY_CULTURELEVEL_NONE")
+                return CyGameTextMgr().getImprovementHelp(iData2, False)
+            ## Bonus Widget Text##
+            elif iData1 == 7878:
+                if iData2 == -1:
+                    return text("TXT_KEY_CULTURELEVEL_NONE")
+                return CyGameTextMgr().getBonusHelp(iData2, False)
+            ## Specialist Widget Text##
+            elif iData1 == 7879:
+                return CyGameTextMgr().getSpecialistHelp(iData2, False)
+            ## Yield Text##
+            elif iData1 == 7880:
+                return gc.getYieldInfo(iData2).getDescription()
+            ## Commerce Text##
+            elif iData1 == 7881:
+                return gc.getCommerceInfo(iData2).getDescription()
+            ## Build Text##
+            elif iData1 == 7882:
+                return gc.getBuildInfo(iData2).getDescription()
+            ## Corporation Screen ##
+            elif iData1 == 8201:
+                return CyGameTextMgr().parseCorporationInfo(iData2, False)
+            ## Military Screen ##
+            elif iData1 == 8202:
+                if iData2 == -1:
+                    return text("TXT_KEY_PEDIA_ALL_UNITS")
+                return CyGameTextMgr().getUnitHelp(iData2, False, False, False, None)
+            elif iData1 > 8299 and iData1 < 8400:
+                iPlayer = iData1 - 8300
+                pUnit = gc.getPlayer(iPlayer).getUnit(iData2)
+                sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
+                if CyGame().GetWorldBuilderMode():
+                    sText += "\n" + text("TXT_KEY_WB_UNIT") + " ID: " + str(iData2)
+                    sText += "\n" + text("TXT_KEY_WB_GROUP") + " ID: " + str(pUnit.getGroupID())
+                    sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
+                    sText += "\n" + text("TXT_KEY_WB_AREA_ID") + ": " + str(pUnit.plot().getArea())
+                return sText
+            ## Civics Screen ##
+            elif iData1 == 8205 or iData1 == 8206:
+                sText = CyGameTextMgr().parseCivicInfo(iData2, False, True, False)
+                if gc.getCivicInfo(iData2).getUpkeep() > -1:
+                    sText += (
+                        "\n"
+                        + gc.getUpkeepInfo(gc.getCivicInfo(iData2).getUpkeep()).getDescription()
+                    )
+                else:
+                    sText += "\n" + text("TXT_KEY_CIVICS_SCREEN_NO_UPKEEP")
+                return sText
+        ## Ultrapack ##
         return u""
 
     # Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert
@@ -679,7 +1015,6 @@ class CvGameUtils:
 
     def getUpgradePriceOverride(self, argsList):
         iPlayer, iUnitID, iUnitTypeUpgrade = argsList
-
         return -1  # Any value 0 or above will be used
 
     def getExperienceNeeded(self, argsList):
@@ -690,9 +1025,7 @@ class CvGameUtils:
 
         # regular epic game experience
         iExperienceNeeded = iLevel * iLevel + 1
-
         iModifier = gc.getPlayer(iOwner).getLevelExperienceModifier()
         if 0 != iModifier:
             iExperienceNeeded += (iExperienceNeeded * iModifier + 99) / 100  # ROUND UP
-
         return iExperienceNeeded
