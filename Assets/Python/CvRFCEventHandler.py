@@ -168,7 +168,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.pm = Province.ProvinceManager()
         self.rnf = RiseAndFall.RiseAndFall()
         self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
@@ -201,7 +200,7 @@ class CvRFCEventHandler:
         "Called at the start of the game"
         DataLoader.setup()
         data.setup()
-        self.pm.setup()
+        self.province.setup()
         self.rnf.setup()
         self.rel.setup()
         self.pla.setup()
