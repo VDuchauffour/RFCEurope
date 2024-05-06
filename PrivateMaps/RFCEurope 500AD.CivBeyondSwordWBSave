@@ -20862,7 +20862,6 @@ BeginPlot
 	x=52,y=28
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=52,y=29
@@ -21254,31 +21253,26 @@ BeginPlot
 	x=53,y=26
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=53,y=27
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=53,y=28
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=53,y=29
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=53,y=30
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=53,y=31
@@ -21661,38 +21655,32 @@ BeginPlot
 	x=54,y=25
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=27
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=28
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=29
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=30
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=54,y=31
@@ -22101,20 +22089,17 @@ BeginPlot
 	x=55,y=24
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=25
 	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=27
@@ -22123,7 +22108,6 @@ BeginPlot
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=28
@@ -22131,7 +22115,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=29
@@ -22140,7 +22123,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=30
@@ -22150,7 +22132,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=31
@@ -22158,7 +22139,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=55,y=32
@@ -22538,25 +22518,21 @@ BeginPlot
 	x=56,y=23
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=24
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=26
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=27
@@ -22598,33 +22574,28 @@ BeginPlot
 		HolyCityReligionType=RELIGION_CATHOLICISM
 		Player28Culture=2000, (The Pope)
 	EndCity
-	Player28Culture=63, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=28
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=29
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=30
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=31
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=56,y=32
@@ -23003,60 +22974,51 @@ BeginPlot
 	x=57,y=23
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=24
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=25
 	BonusType=BONUS_MARBLE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=26
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=27
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=28
 	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=62, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=29
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=30
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=31
 	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=57,y=32
@@ -23430,47 +23392,40 @@ BeginPlot
 	x=58,y=24
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=25
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=26
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=27
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=28
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player28Culture=41, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=29
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=30
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=58,y=31
@@ -23850,45 +23805,38 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=25
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=26
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=27
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=28
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=21, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=29
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=30
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=59,y=31
@@ -24297,19 +24245,16 @@ BeginPlot
 	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=60,y=27
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=60,y=28
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
 	x=60,y=29
@@ -27599,20 +27544,17 @@ BeginPlot
 	x=68,y=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=68,y=6
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=68,y=7
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=68,y=8
@@ -28020,7 +27962,6 @@ BeginPlot
 	x=69,y=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=69,y=6
@@ -28039,13 +27980,11 @@ BeginPlot
 		CityPopulation=1
 		ReligionType=RELIGION_ORTHODOXY
 	EndCity
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=69,y=7
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=69,y=8
@@ -28465,20 +28404,17 @@ BeginPlot
 	x=70,y=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=6
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=7
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=8
@@ -28561,21 +28497,18 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=22
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=23
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=70,y=24
@@ -28980,32 +28913,27 @@ BeginPlot
 	x=71,y=17
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=18
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=19
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=20
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=21
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=22
@@ -29015,7 +28943,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=23
@@ -29023,7 +28950,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=24
@@ -29032,7 +28958,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=71,y=25
@@ -29425,14 +29350,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=17
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=18
@@ -29441,27 +29364,23 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=19
 	BonusType=BONUS_MARBLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=20
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=21
 	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=22
@@ -29506,7 +29425,6 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=20, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=23
@@ -29514,14 +29432,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=24
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=72,y=25
@@ -29904,13 +29820,11 @@ BeginPlot
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=17
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=18
@@ -29948,19 +29862,16 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=50, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=19
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=20
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=21
@@ -29968,27 +29879,23 @@ BeginPlot
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=22
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=23
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=24
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=73,y=25
@@ -30384,65 +30291,55 @@ BeginPlot
 	x=74,y=16
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=17
 	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=18
 	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=19
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=20
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=21
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=22
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=23
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=24
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=25
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=26
@@ -30451,7 +30348,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=74,y=27
@@ -30835,19 +30731,16 @@ BeginPlot
 	x=75,y=17
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=18
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=19
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=20
@@ -30868,14 +30761,12 @@ BeginPlot
 	x=75,y=23
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=24
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=25
@@ -30885,7 +30776,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=26
@@ -30893,14 +30783,12 @@ BeginPlot
 	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=27
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=75,y=28
@@ -31321,7 +31209,6 @@ BeginPlot
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=76,y=24
@@ -31329,7 +31216,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=76,y=25
@@ -31361,21 +31247,18 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=20, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=76,y=26
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=76,y=27
 	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=76,y=28
@@ -31754,19 +31637,16 @@ BeginPlot
 	x=77,y=17
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=18
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=19
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=20
@@ -31790,13 +31670,11 @@ BeginPlot
 	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=24
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=25
@@ -31804,13 +31682,11 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=26
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=27
@@ -31818,7 +31694,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=77,y=28
@@ -32187,7 +32062,6 @@ BeginPlot
 	x=78,y=17
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=18
@@ -32210,7 +32084,6 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=10, (Justinian I)
 	EndCity
-	Player0Culture=3, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=19
@@ -32222,7 +32095,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=20
@@ -32253,20 +32125,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=25
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=26
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=78,y=27
@@ -32651,14 +32520,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=18
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=19
@@ -32667,7 +32534,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=20
@@ -32690,7 +32556,6 @@ BeginPlot
 	x=79,y=23
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=24
@@ -32699,14 +32564,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=25
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=79,y=26
@@ -33144,20 +33007,17 @@ BeginPlot
 	x=80,y=22
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=80,y=23
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=80,y=24
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=80,y=25
@@ -33166,13 +33026,11 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=80,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=80,y=27
@@ -33478,19 +33336,16 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=3
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=4
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=5
@@ -33592,13 +33447,11 @@ BeginPlot
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=23
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=24
@@ -33656,7 +33509,6 @@ BeginPlot
 		HolyCityReligionType=RELIGION_ORTHODOXY
 		Player0Culture=100, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=25
@@ -33674,13 +33526,11 @@ BeginPlot
 		FacingDirection=4
 		UnitAIType=UNITAI_ASSAULT_SEA
 	EndUnit
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=81,y=27
@@ -33974,7 +33824,6 @@ BeginPlot
 	x=82,y=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=2
@@ -33982,25 +33831,21 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=3
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=4
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=5
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=6
@@ -34103,7 +33948,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=23
@@ -34111,7 +33955,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=24
@@ -34120,20 +33963,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=26
 	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=82,y=27
@@ -34424,14 +34264,12 @@ BeginPlot
 	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=2
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=3
@@ -34466,20 +34304,17 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=50, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=4
 	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=5
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=6
@@ -34587,7 +34422,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=24
@@ -34597,13 +34431,11 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=83,y=26
@@ -34905,7 +34737,6 @@ BeginPlot
 	x=84,y=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=2
@@ -34916,7 +34747,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=3
@@ -34927,7 +34757,6 @@ BeginPlot
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=4
@@ -34936,13 +34765,11 @@ BeginPlot
 	FeatureType=FEATURE_MARSH, FeatureVariety=1
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=5
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=6
@@ -35055,19 +34882,16 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=26
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=84,y=27
@@ -35392,7 +35216,6 @@ BeginPlot
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=3
@@ -35401,7 +35224,6 @@ BeginPlot
 	FeatureType=FEATURE_MARSH, FeatureVariety=1
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=4
@@ -35410,7 +35232,6 @@ BeginPlot
 	FeatureType=FEATURE_MARSH, FeatureVariety=1
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=5
@@ -35478,13 +35299,11 @@ BeginPlot
 	x=85,y=17
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=18
 	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=19
@@ -35493,7 +35312,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=20
@@ -35525,32 +35343,27 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=24
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=27
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=85,y=28
@@ -35930,32 +35743,27 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=17
 	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=18
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=19
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=20
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=21
@@ -35972,14 +35780,12 @@ BeginPlot
 	x=86,y=23
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=24
 	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=25
@@ -36007,19 +35813,16 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=20, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=27
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=86,y=28
@@ -36391,14 +36194,12 @@ BeginPlot
 	x=87,y=16
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=17
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=18
@@ -36419,19 +36220,16 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=20, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=19
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=20
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=21
@@ -36449,13 +36247,11 @@ BeginPlot
 	x=87,y=23
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=24
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=25
@@ -36463,20 +36259,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=27
 	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=87,y=28
@@ -36847,7 +36640,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=17
@@ -36855,25 +36647,21 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=18
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=19
 	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=20
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=21
@@ -36899,20 +36687,17 @@ BeginPlot
 	x=88,y=24
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=25
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=26
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=88,y=27
@@ -37288,20 +37073,17 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=89,y=18
 	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=89,y=19
 	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=89,y=20
@@ -37722,20 +37504,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=16
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=17
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=18
@@ -37783,7 +37562,6 @@ BeginPlot
 	x=90,y=25
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=26
@@ -37791,13 +37569,11 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=27
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=90,y=28
@@ -38088,19 +37864,16 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=5
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=6
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=7
@@ -38146,7 +37919,6 @@ BeginPlot
 	x=91,y=15
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=16
@@ -38168,7 +37940,6 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=10, (Justinian I)
 	EndCity
-	Player0Culture=3, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=17
@@ -38176,7 +37947,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=18
@@ -38189,7 +37959,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=20
@@ -38200,13 +37969,11 @@ BeginPlot
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=21
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=22
@@ -38231,7 +37998,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=26
@@ -38252,13 +38018,11 @@ BeginPlot
 		BuildingType=BUILDING_HARBOR
 		ReligionType=RELIGION_ORTHODOXY
 	EndCity
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=27
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=91,y=28
@@ -38553,7 +38317,6 @@ BeginPlot
 	x=92,y=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=4
@@ -38561,13 +38324,11 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=5
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=6
@@ -38576,32 +38337,27 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=7
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=8
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=9
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=10
 	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=11
@@ -38617,19 +38373,16 @@ BeginPlot
 	x=92,y=13
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=14
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=15
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=3, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=16
@@ -38637,7 +38390,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=17
@@ -38645,7 +38397,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=18
@@ -38660,7 +38411,6 @@ BeginPlot
 	x=92,y=19
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=20
@@ -38694,7 +38444,6 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=10, (Justinian I)
 	EndCity
-	Player0Culture=3, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=21
@@ -38702,7 +38451,6 @@ BeginPlot
 	RiverWEDirection=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=22
@@ -38727,20 +38475,17 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=26
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=27
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=92,y=28
@@ -39038,7 +38783,6 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=4
@@ -39046,7 +38790,6 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_FARM
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=5
@@ -39082,13 +38825,11 @@ BeginPlot
 		HolyCityReligionType=RELIGION_JUDAISM
 		Player0Culture=30, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=6
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=7
@@ -39097,14 +38838,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=8
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=9
@@ -39128,13 +38867,11 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 	EndCity
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=10
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=11
@@ -39145,33 +38882,28 @@ BeginPlot
 	x=93,y=12
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=13
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=14
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=15
 	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=16
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=17
@@ -39188,14 +38920,12 @@ BeginPlot
 	x=93,y=19
 	TerrainType=TERRAIN_PLAINS
 	PlotType=0
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=20
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=21
@@ -39206,7 +38936,6 @@ BeginPlot
 	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=93,y=22
@@ -39528,19 +39257,16 @@ BeginPlot
 	x=94,y=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=4
 	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=5
 	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=6
@@ -39549,7 +39275,6 @@ BeginPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=7
@@ -39557,13 +39282,11 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=8
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=9
@@ -39573,14 +39296,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=10
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=11
@@ -39600,7 +39321,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=13
@@ -39611,7 +39331,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=14
@@ -39658,7 +39377,6 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=30, (Justinian I)
 	EndCity
-	Player0Culture=23, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=15
@@ -39668,14 +39386,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=16
 	BonusType=BONUS_DYE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=94,y=17
@@ -40043,21 +39759,18 @@ BeginPlot
 	x=95,y=4
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=5
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=6
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=7
@@ -40093,34 +39806,29 @@ BeginPlot
 	x=95,y=12
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=13
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=14
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=15
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=22, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=16
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=95,y=17
@@ -40545,7 +40253,6 @@ BeginPlot
 	x=96,y=13
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=96,y=14
@@ -40553,14 +40260,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=96,y=15
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=1, (Justinian I)
 EndPlot
 BeginPlot
 	x=96,y=16
@@ -41004,7 +40709,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=97,y=15
@@ -41012,7 +40716,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=97,y=16
@@ -41020,7 +40723,6 @@ BeginPlot
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=97,y=17
@@ -41452,7 +41154,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=98,y=15
@@ -41479,13 +41180,11 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=10, (Justinian I)
 	EndCity
-	Player0Culture=3, (Justinian I)
 EndPlot
 BeginPlot
 	x=98,y=16
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=98,y=17
@@ -41920,19 +41619,16 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=99,y=15
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=99,y=16
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
-	Player0Culture=2, (Justinian I)
 EndPlot
 BeginPlot
 	x=99,y=17
