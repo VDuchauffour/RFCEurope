@@ -8,7 +8,7 @@ from CvPythonExtensions import (
 from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreFunctions import event_popup, get_religion_by_id, location, message, text
-from CoreStructures import human, player, year, cities
+from CoreStructures import human, player, year, cities, units
 from CoreTypes import (
     Building,
     Civ,
@@ -22,7 +22,6 @@ from CoreTypes import (
     Wonder,
 )
 from LocationsData import CITIES
-import PyHelpers
 import Popup
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import getBaseBuilding, getPersecutionData, getPersecutionReligions, prosecute
@@ -32,7 +31,6 @@ from PyUtils import choice, percentage, percentage_chance, rand
 from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
 
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 
 
 ### Regions to spread religion ###
@@ -790,8 +788,7 @@ class Religions:
 
         # disband catholic missionaries of the AI civs on reformation
         if iCiv != human():
-            unitList = PyPlayer(iCiv).getUnitList()
-            for pUnit in unitList:
+            for pUnit in units().owner(iCiv).entities():
                 iUnitType = pUnit.getUnitType()
                 if iUnitType == Unit.CATHOLIC_MISSIONARY.value:
                     pUnit.kill(0, -1)
@@ -804,7 +801,6 @@ class Religions:
         pPlayer.setFaith(iFaith)
 
     def reformationno(self, iCiv):
-        cityList = PyPlayer(iCiv).getCityList()
         iLostFaith = 0
         pPlayer = gc.getPlayer(iCiv)
         for city in cities().owner(iCiv).entities():

@@ -13,8 +13,8 @@ from CoreStructures import (
     year,
     cities,
     plots,
+    units,
 )
-import PyHelpers
 from PyUtils import percentage, percentage_chance, rand, choice
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
@@ -26,9 +26,7 @@ from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
 from MiscData import NUM_CRUSADES
 from LocationsData import CITIES
 
-# globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 cnm = CityNameManager.CityNameManager()
 
 
@@ -577,8 +575,7 @@ class Crusades:
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2
             )
             # Absinthe: some units from Chivalric Orders might leave you nevertheless
-            unitList = PyPlayer(iHuman).getUnitList()
-            for pUnit in unitList:
+            for pUnit in units().owner(iHuman).entities():
                 iUnitType = pUnit.getUnitType()
                 if iUnitType in [
                     Unit.KNIGHT_OF_ST_JOHNS.value,
@@ -1438,7 +1435,6 @@ class Crusades:
 
     def freeCrusaders(self, iPlayer):
         # the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
-        unitList = PyPlayer(iPlayer).getUnitList()
         iPrevGameTurn = (
             turn() - 1
         )  # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for the current turn
@@ -1446,7 +1442,7 @@ class Crusades:
             iPrevGameTurn
         )  # Absinthe: the Crusader units are called back before the next Crusade is initialized
         iHuman = human()
-        for pUnit in unitList:
+        for pUnit in units().owner(iPlayer).entities():
             if pUnit.getMercID() == (
                 -5 - iActiveCrusade
             ):  # Absinthe: so this is a Crusader Unit of the active Crusade

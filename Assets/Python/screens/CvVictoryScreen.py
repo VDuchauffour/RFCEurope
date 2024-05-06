@@ -21,7 +21,7 @@ from CoreTypes import (
 import CvUtil
 from LocationsData import CITIES
 import PyHelpers
-from RFCUtils import getCargoShips, getMostAdvancedCiv
+from RFCUtils import getNumberCargoShips, getMostAdvancedCiv
 import Victory as vic
 import UniquePowers
 
@@ -2973,7 +2973,7 @@ class CvVictoryScreen:
             + u"<font=1>\n\n</font>"
         )
         iSeaports = pPlayer.countNumBuildings(Building.ARAGON_SEAPORT.value)
-        iCargoShips = getCargoShips(Civ.ARAGON.value)
+        iCargoShips = getNumberCargoShips(Civ.ARAGON.value)
         sText2 += (
             text("TXT_KEY_UHV_CURRENTLY")
             + ": "

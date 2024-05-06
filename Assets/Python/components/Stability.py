@@ -4,7 +4,6 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import message, text
 from CoreStructures import human, cities
-import PyHelpers
 
 from Consts import MessageData
 from CoreTypes import (
@@ -33,9 +32,7 @@ from Scenario import get_scenario
 rnf = RiseAndFall.RiseAndFall()
 pm = Province.ProvinceManager()
 
-# globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 
 tStabilityPenalty = (-5, -2, 0, 0, 0)  # province type: unstable, border, potential, historic, core
 
@@ -549,10 +546,9 @@ class Stability:
             self.zeroStability(iPlayer)
 
     def printStability(self, iGameTurn, iPlayer):
-        cyPlayer = PyHelpers.PyPlayer(iPlayer)
         pPlayer = gc.getPlayer(iPlayer)
         print(" Turn: ", iGameTurn)
-        print(" ---------------- New Stability For " + cyPlayer.getCivilizationShortDescription())
+        print(" ---------------- New Stability For " + pPlayer.getCivilizationShortDescription())
         print("                  Stability : ", pPlayer.getStability())
         print(
             "                  Cities    : ",

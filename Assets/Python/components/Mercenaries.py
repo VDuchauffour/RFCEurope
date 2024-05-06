@@ -1,13 +1,9 @@
-# Rhye's and Fall of Civilization: Europe - Mercenaries
-# Written mostly by 3Miro
-
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import message, text
-from CoreStructures import human, turn, cities
+from CoreStructures import human, turn, cities, units
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
-import PyHelpers
 from PyUtils import percentage_chance, rand, choice
 
 # import cPickle as pickle
@@ -15,10 +11,8 @@ from StoredData import data
 
 from Consts import MessageData
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-PyPlayer = PyHelpers.PyPlayer
 
 
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
@@ -2946,9 +2940,7 @@ class MercenaryManager:
             message(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
 
         while True:
-            lHiredMercs = [
-                unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1
-            ]
+            lHiredMercs = units().owner(iPlayer).mercenaries().entities()
 
             if lHiredMercs:
                 self.GMU.fireMerc(choice(lHiredMercs))
@@ -3066,10 +3058,6 @@ class MercenaryManager:
             # check to see if it has been replaced by an upgraded (promoted) version of itself
             # Get the list of units for the player
             iPlayer = pUnit.getOwner()
-            # unitList = PyPlayer( iPlayer ).getUnitList()
-            # for pTestUnit in unitList:
-            # 	if ( pTestUnit.getMercID() == iMerc ):
-            # 		return
 
             # unit is gone
             pPlayer = gc.getPlayer(iPlayer)
@@ -3146,7 +3134,7 @@ class MercenaryManager:
 
     def FireMercAI(self, iPlayer):
         iGameTurn = turn()
-        lMercs = [unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1]
+        lMercs = units().owner(iPlayer).mercenaries().entities()
 
         if lMercs:
             # we have mercs, so fire someone
@@ -3251,7 +3239,7 @@ class GlobalMercenaryUtils:
 
     def playerMakeUpkeepSane(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        lMercs = [unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1]
+        lMercs = units().owner(iPlayer).mercenaries().entities()
 
         iTotalUpkeep = 0
         for pUnit in lMercs:

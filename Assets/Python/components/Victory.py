@@ -25,7 +25,7 @@ from CoreTypes import (
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
 import PyHelpers
 from PyUtils import rand
-from RFCUtils import calculateDistance, countAchievedGoals, getCargoShips, getMostAdvancedCiv
+from RFCUtils import calculateDistance, countAchievedGoals, getNumberCargoShips, getMostAdvancedCiv
 import UniquePowers
 from StoredData import data
 import random
@@ -1751,7 +1751,7 @@ class Victory:
         elif iGameTurn == year(1444):
             if self.isPossibleUHV(Civ.ARAGON.value, 1, True):
                 iPorts = player(Civ.ARAGON).countNumBuildings(Building.ARAGON_SEAPORT.value)
-                iCargoShips = getCargoShips(Civ.ARAGON.value)
+                iCargoShips = getNumberCargoShips(Civ.ARAGON.value)
                 if iPorts >= 12 and iCargoShips >= 30:
                     self.wonUHV(Civ.ARAGON.value, 1)
                 else:
