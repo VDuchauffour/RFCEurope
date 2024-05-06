@@ -15,25 +15,28 @@ class CyDeal
 {
 
 public:
-	CyDeal(CvDeal* pDeal = NULL);
-	virtual ~CyDeal();
-	CvDeal* getDeal() const { return m_pDeal; }
+  CyDeal(CvDeal *pDeal = NULL);
+  virtual ~CyDeal();
+  CvDeal *getDeal() const
+  {
+    return m_pDeal;
+  }
 
-	bool isNone();
+  bool isNone();
 
-	int getID() const;
-	int getInitialGameTurn() const;
-	int getFirstPlayer() const;
-	int getSecondPlayer() const;
-	int getLengthFirstTrades() const;
-	int getLengthSecondTrades() const;
-	TradeData* getFirstTrade(int i) const;
-	TradeData* getSecondTrade(int i) const;
+  int getID() const;
+  int getInitialGameTurn() const;
+  int getFirstPlayer() const;
+  int getSecondPlayer() const;
+  int getLengthFirstTrades() const;
+  int getLengthSecondTrades() const;
+  TradeData *getFirstTrade(int i) const;
+  TradeData *getSecondTrade(int i) const;
 
-	void kill();
+  void kill();
 
 protected:
-	CvDeal* m_pDeal;
+  CvDeal *m_pDeal;
 };
 
 #endif

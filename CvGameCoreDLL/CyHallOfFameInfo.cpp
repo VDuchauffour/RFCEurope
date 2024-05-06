@@ -6,19 +6,17 @@ CyHallOfFameInfo::CyHallOfFameInfo()
 {
 }
 
-
 void CyHallOfFameInfo::loadReplays()
 {
-	m_hallOfFame.loadReplays();
+  m_hallOfFame.loadReplays();
 }
 
 int CyHallOfFameInfo::getNumGames() const
 {
-	return m_hallOfFame.getNumGames();
+  return m_hallOfFame.getNumGames();
 }
 
-CyReplayInfo* CyHallOfFameInfo::getReplayInfo(int i)
+CyReplayInfo *CyHallOfFameInfo::getReplayInfo(int i)
 {
-	return (new CyReplayInfo(m_hallOfFame.getReplayInfo(i)));
+  return (new CyReplayInfo(m_hallOfFame.getReplayInfo(i)));
 }
-

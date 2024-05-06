@@ -13,51 +13,49 @@ class CvPlotGroup
 {
 
 public:
+  CvPlotGroup();
+  virtual ~CvPlotGroup();
 
-	CvPlotGroup();
-	virtual ~CvPlotGroup();
+  void init(int iID, PlayerTypes eOwner, CvPlot *pPlot);
+  void uninit();
+  void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
-	void init(int iID, PlayerTypes eOwner, CvPlot* pPlot);
-	void uninit();
-	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall=false);
+  void addPlot(CvPlot *pPlot);
+  void removePlot(CvPlot *pPlot);
+  void recalculatePlots();
 
-	void addPlot(CvPlot* pPlot);
-	void removePlot(CvPlot* pPlot);
-	void recalculatePlots();														
+  DllExport int getID() const;
+  void setID(int iID);
 
-	DllExport int getID() const;
-	void setID(int iID);
-
-	PlayerTypes getOwner() const;
+  PlayerTypes getOwner() const;
 #ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
+  inline PlayerTypes getOwnerINLINE() const
+  {
+    return m_eOwner;
+  }
 #endif
-	int getNumBonuses(BonusTypes eBonus) const;
-	bool hasBonus(BonusTypes eBonus);										
-	void changeNumBonuses(BonusTypes eBonus, int iChange);
+  int getNumBonuses(BonusTypes eBonus) const;
+  bool hasBonus(BonusTypes eBonus);
+  void changeNumBonuses(BonusTypes eBonus, int iChange);
 
-	void insertAtEndPlots(XYCoords xy);			
-	CLLNode<XYCoords>* deletePlotsNode(CLLNode<XYCoords>* pNode);
-	CLLNode<XYCoords>* nextPlotsNode(CLLNode<XYCoords>* pNode);
-	int getLengthPlots();
-	CLLNode<XYCoords>* headPlotsNode();
+  void insertAtEndPlots(XYCoords xy);
+  CLLNode<XYCoords> *deletePlotsNode(CLLNode<XYCoords> *pNode);
+  CLLNode<XYCoords> *nextPlotsNode(CLLNode<XYCoords> *pNode);
+  int getLengthPlots();
+  CLLNode<XYCoords> *headPlotsNode();
 
-	// for serialization
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+  // for serialization
+  void read(FDataStreamBase *pStream);
+  void write(FDataStreamBase *pStream);
 
 protected:
+  int m_iID;
 
-	int m_iID;
+  PlayerTypes m_eOwner;
 
-	PlayerTypes m_eOwner;
+  int *m_paiNumBonuses;
 
-	int* m_paiNumBonuses;
-
-	CLinkList<XYCoords> m_plots;
+  CLinkList<XYCoords> m_plots;
 };
 
 #endif

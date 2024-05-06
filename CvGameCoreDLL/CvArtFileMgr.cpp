@@ -19,29 +19,29 @@
 #include "CvDLLUtilityIFaceBase.h"
 
 // Macro for Building Art Info Maps
-#if 0	// DEBUGGING
-#define BUILD_INFO_MAP(map, infoArray, numInfos) \
-{ \
-	int iI; \
-	for (iI = 0; iI < numInfos; iI++) \
-	{ \
-		char temp[256];	\
-		sprintf(temp, "type = %s\n", infoArray(iI).getType()); \
-		OutputDebugString(temp); \
-		sprintf(temp, "description = %S\n", infoArray(iI).getDescription()); \
-		OutputDebugString(temp); \
-		(map)[infoArray(iI).getTag()] = &infoArray(iI); \
-	} \
-}
+#if 0 // DEBUGGING
+#define BUILD_INFO_MAP(map, infoArray, numInfos)                                                                       \
+  {                                                                                                                    \
+    int iI;                                                                                                            \
+    for (iI = 0; iI < numInfos; iI++)                                                                                  \
+    {                                                                                                                  \
+      char temp[256];                                                                                                  \
+      sprintf(temp, "type = %s\n", infoArray(iI).getType());                                                           \
+      OutputDebugString(temp);                                                                                         \
+      sprintf(temp, "description = %S\n", infoArray(iI).getDescription());                                             \
+      OutputDebugString(temp);                                                                                         \
+      (map)[infoArray(iI).getTag()] = &infoArray(iI);                                                                  \
+    }                                                                                                                  \
+  }
 #else
-#define BUILD_INFO_MAP(map, infoArray, numInfos) \
-{ \
-	int iI; \
-	for (iI = 0; iI < numInfos; iI++) \
-	{ \
-	(map)[infoArray(iI).getTag()] = &infoArray(iI); \
-	} \
-}
+#define BUILD_INFO_MAP(map, infoArray, numInfos)                                                                       \
+  {                                                                                                                    \
+    int iI;                                                                                                            \
+    for (iI = 0; iI < numInfos; iI++)                                                                                  \
+    {                                                                                                                  \
+      (map)[infoArray(iI).getTag()] = &infoArray(iI);                                                                  \
+    }                                                                                                                  \
+  }
 #endif
 
 //
@@ -49,47 +49,57 @@
 // creates a static var of that artItem type which constructs (and registers) at startup.
 // creates a getFooArtInfo() function that searches the map based on the id provided and returns the artInfo struct or null.
 //
-#define ART_INFO_DEFN(name) \
-\
-class Cv##name##ArtInfoItem : public CvArtFileMgr::ArtInfoItem \
-{ \
-	void init() { ARTFILEMGR.m_map##name##ArtInfos = new CvArtFileMgr::ArtInfo##name##MapType; } \
-	void deInit(); \
-	void buildMap() { BUILD_INFO_MAP(*ARTFILEMGR.m_map##name##ArtInfos, ARTFILEMGR.get##name##ArtInfo, ARTFILEMGR.getNum##name##ArtInfos()); } \
-}; \
-\
-static Cv##name##ArtInfoItem g##name##ArtInfoItem; \
-\
-CvArtInfo##name##* CvArtFileMgr::get##name##ArtInfo( const char *szArtDefineTag ) const \
-{ \
-	FAssertMsg(szArtDefineTag, "NULL string on art info lookup?"); \
-	ArtInfo##name##MapType::const_iterator it = m_map##name##ArtInfos->find( szArtDefineTag );\
-	if ( it == m_map##name##ArtInfos->end() ) \
-	{\
-		char szErrorMsg[256]; \
-		sprintf(szErrorMsg, "get##name##ArtInfo: %s was not found", szArtDefineTag); \
-		FAssertMsg(false, szErrorMsg ); \
-		if ( 0 == strcmp(szArtDefineTag, "ERROR") ) \
-		{ \
-			return NULL; \
-		} \
-		else \
-		{ \
-			return get##name##ArtInfo( "ERROR" ); \
-		} \
-	} \
-	return it->second; \
-} \
-void Cv##name##ArtInfoItem::deInit() \
-{ \
-	SAFE_DELETE(ARTFILEMGR.m_map##name##ArtInfos); \
-	for (uint i = 0; i < ARTFILEMGR.m_pa##name##ArtInfo.size(); ++i) \
-	{ \
-		SAFE_DELETE(ARTFILEMGR.m_pa##name##ArtInfo[i]); \
-	} \
-	ARTFILEMGR.m_pa##name##ArtInfo.clear(); \
-} \
-CvArtInfo##name##& CvArtFileMgr::get##name##ArtInfo(int i) { return *(m_pa##name##ArtInfo[i]); }
+#define ART_INFO_DEFN(name)                                                                                            \
+                                                                                                                       \
+  class Cv##name##ArtInfoItem : public CvArtFileMgr::ArtInfoItem                                                       \
+  {                                                                                                                    \
+    void init()                                                                                                        \
+    {                                                                                                                  \
+      ARTFILEMGR.m_map##name##ArtInfos = new CvArtFileMgr::ArtInfo##name##MapType;                                     \
+    }                                                                                                                  \
+    void deInit();                                                                                                     \
+    void buildMap()                                                                                                    \
+    {                                                                                                                  \
+      BUILD_INFO_MAP(*ARTFILEMGR.m_map##name##ArtInfos, ARTFILEMGR.get##name##ArtInfo,                                 \
+                     ARTFILEMGR.getNum##name##ArtInfos());                                                             \
+    }                                                                                                                  \
+  };                                                                                                                   \
+                                                                                                                       \
+  static Cv##name##ArtInfoItem g##name##ArtInfoItem;                                                                   \
+                                                                                                                       \
+  CvArtInfo##name##*CvArtFileMgr::get##name##ArtInfo(const char *szArtDefineTag) const                                 \
+  {                                                                                                                    \
+    FAssertMsg(szArtDefineTag, "NULL string on art info lookup?");                                                     \
+    ArtInfo##name##MapType::const_iterator it = m_map##name##ArtInfos->find(szArtDefineTag);                           \
+    if (it == m_map##name##ArtInfos->end())                                                                            \
+    {                                                                                                                  \
+      char szErrorMsg[256];                                                                                            \
+      sprintf(szErrorMsg, "get##name##ArtInfo: %s was not found", szArtDefineTag);                                     \
+      FAssertMsg(false, szErrorMsg);                                                                                   \
+      if (0 == strcmp(szArtDefineTag, "ERROR"))                                                                        \
+      {                                                                                                                \
+        return NULL;                                                                                                   \
+      }                                                                                                                \
+      else                                                                                                             \
+      {                                                                                                                \
+        return get##name##ArtInfo("ERROR");                                                                            \
+      }                                                                                                                \
+    }                                                                                                                  \
+    return it->second;                                                                                                 \
+  }                                                                                                                    \
+  void Cv##name##ArtInfoItem::deInit()                                                                                 \
+  {                                                                                                                    \
+    SAFE_DELETE(ARTFILEMGR.m_map##name##ArtInfos);                                                                     \
+    for (uint i = 0; i < ARTFILEMGR.m_pa##name##ArtInfo.size(); ++i)                                                   \
+    {                                                                                                                  \
+      SAFE_DELETE(ARTFILEMGR.m_pa##name##ArtInfo[i]);                                                                  \
+    }                                                                                                                  \
+    ARTFILEMGR.m_pa##name##ArtInfo.clear();                                                                            \
+  }                                                                                                                    \
+  CvArtInfo##name##&CvArtFileMgr::get##name##ArtInfo(int i)                                                            \
+  {                                                                                                                    \
+    return *(m_pa##name##ArtInfo[i]);                                                                                  \
+  }
 
 //----------------------------------------------------------------------------
 //
@@ -98,10 +108,10 @@ CvArtInfo##name##& CvArtFileMgr::get##name##ArtInfo(int i) { return *(m_pa##name
 //	PURPOSE:	Get the instance of this class.
 //
 //----------------------------------------------------------------------------
-CvArtFileMgr& CvArtFileMgr::GetInstance()
+CvArtFileMgr &CvArtFileMgr::GetInstance()
 {
-	static CvArtFileMgr gs_ArtFileMgr;
-	return gs_ArtFileMgr;
+  static CvArtFileMgr gs_ArtFileMgr;
+  return gs_ArtFileMgr;
 }
 
 //----------------------------------------------------------------------------
@@ -113,11 +123,11 @@ CvArtFileMgr& CvArtFileMgr::GetInstance()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::Init()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
-	{
-		m_artInfoItems[i]->init();
-	}
+  int i;
+  for (i = 0; i < (int)m_artInfoItems.size(); i++)
+  {
+    m_artInfoItems[i]->init();
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -129,11 +139,11 @@ void CvArtFileMgr::Init()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::DeInit()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
-	{
-		m_artInfoItems[i]->deInit();
-	}
+  int i;
+  for (i = 0; i < (int)m_artInfoItems.size(); i++)
+  {
+    m_artInfoItems[i]->deInit();
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -145,11 +155,11 @@ void CvArtFileMgr::DeInit()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::Reset()
 {
-	DeInit();		// Cleans Art Defines
-	CvXMLLoadUtility XMLLoadUtility;
-	XMLLoadUtility.SetGlobalArtDefines();		// Reloads/allocs Art Defines
-	Init();			// reallocs maps
-	buildArtFileInfoMaps();
+  DeInit(); // Cleans Art Defines
+  CvXMLLoadUtility XMLLoadUtility;
+  XMLLoadUtility.SetGlobalArtDefines(); // Reloads/allocs Art Defines
+  Init();                               // reallocs maps
+  buildArtFileInfoMaps();
 }
 
 //----------------------------------------------------------------------------
@@ -161,11 +171,11 @@ void CvArtFileMgr::Reset()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::buildArtFileInfoMaps()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
-	{
-		m_artInfoItems[i]->buildMap();
-	}
+  int i;
+  for (i = 0; i < (int)m_artInfoItems.size(); i++)
+  {
+    m_artInfoItems[i]->buildMap();
+  }
 }
 
 // Macros the creation of the art file info maps
