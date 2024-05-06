@@ -1,4 +1,5 @@
 Platy Builder
+bLoadSpecial=1
 Version=11
 BeginGame
 	Calendar=CALENDAR_DEFAULT
