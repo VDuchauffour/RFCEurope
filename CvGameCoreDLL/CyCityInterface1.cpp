@@ -607,9 +607,10 @@ void CyCityPythonInterface1(python::class_<CyCity> &x)
       // 3Miro: New functions
       // Absinthe: with the new persecution code added from SoI, these functions are currently unused
       /*.def("canPurgeReligion", &CyCity::canPurgeReligion, "bool ()")
-		.def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")*/
+      .def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")*/
       // Absinthe: end
       .def("getProvince", &CyCity::getProvince, "int ()")
+      .def("getProvinceID", &CyCity::getProvinceID, "int ()")
 
       .def("getNumForeignReligions", &CyCity::getNumForeignReligions, "int ()");
 }

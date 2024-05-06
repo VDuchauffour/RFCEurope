@@ -990,7 +990,7 @@ public:
 
   // 3MiroProvinces
   int getProvince();
-
+  int getProvinceID() const;
   // 3MiroBuildings: StarFort bombard immune defense
   int getBombImmuneDefense() const;
   void chnageBombImmuneDefense(int iChange);
