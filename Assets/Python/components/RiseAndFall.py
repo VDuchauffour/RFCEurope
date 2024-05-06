@@ -15,7 +15,6 @@ from CoreStructures import (
     cities,
     plots,
 )
-import PyHelpers  # LOQ
 from PyUtils import chance, percentage, percentage_chance, rand, choice
 import Province
 from RFCUtils import (
@@ -76,8 +75,7 @@ from CoreTypes import (
 from CoreFunctions import event_popup, get_civ_by_id, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 
-gc = CyGlobalContext()  # LOQ
-PyPlayer = PyHelpers.PyPlayer  # LOQ
+gc = CyGlobalContext()
 rel = Religions.Religions()
 vic = Victory.Victory()
 cru = Crusades.Crusades()

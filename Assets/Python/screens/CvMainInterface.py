@@ -18,7 +18,7 @@ import CvGameInterface
 from RFCUtils import (
     StabilityOverlayCiv,
     countAchievedGoals,
-    getCargoShips,
+    getNumberCargoShips,
     getGoalsColor,
     getPlagueCountdown,
     prosecute,
@@ -3983,7 +3983,7 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif ePlayer == Civ.ARAGON.value:
-                    iAragonCargoShips = getCargoShips(Civ.ARAGON.value)
+                    iAragonCargoShips = getNumberCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and turn() < (year(1444) + 2):
                         szUHVButton = u"<font=2>%c</font>" % (

@@ -32,7 +32,6 @@ from CoreTypes import (
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES
-import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand
 from Scenario import get_scenario
@@ -53,10 +52,8 @@ from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 from Consts import MINOR_CIVS, WORLD_HEIGHT, MessageData
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-PyPlayer = PyHelpers.PyPlayer
 
 
 tCol = ("255,255,255", "200,200,200", "150,150,150", "128,128,128")
@@ -145,7 +142,7 @@ def isMortalUnit(unit):
 
 # AIWars
 def checkUnitsInEnemyTerritory(iCiv1, iCiv2):
-    unitList = PyPlayer(iCiv1).getUnitList()
+    unitList = units().owner(iCiv1).entities()
     if unitList:
         for unit in unitList:
             iX = unit.getX()
@@ -1547,14 +1544,8 @@ def getMostAdvancedCiv():
     return iBestCiv
 
 
-def getCargoShips(iPlayer):
-    iCargoShips = 0
-    unitList = PyPlayer(iPlayer).getUnitList()
-    for unit in unitList:
-        iCargoSpace = unit.cargoSpace()
-        if iCargoSpace > 0:
-            iCargoShips += 1
-    return iCargoShips
+def getNumberCargoShips(iPlayer):
+    return units().owner(iPlayer).filter(lambda u: u.cargoSpace() > 0).len()
 
 
 def isWonder(iBuilding):

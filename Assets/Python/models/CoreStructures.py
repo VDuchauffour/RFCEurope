@@ -916,6 +916,9 @@ class Units(EntitiesCollection):
     def combat(self, combat_type):
         return self.filter(lambda u: u.getUnitCombatType() == combat_type)
 
+    def mercenaries(self):
+        return self.filter(lambda u: u.getMercID() > -1)
+
 
 class UnitFactory:
     def of(self, units):
