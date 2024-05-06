@@ -511,6 +511,7 @@ public:
 
   // 3MiroProvinces
   int getProvince();
+  int getProvinceID();
 
   // 3Miro: some tests for stability
   int getNumForeignReligions();

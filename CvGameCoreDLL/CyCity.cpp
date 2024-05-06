@@ -2349,6 +2349,12 @@ int CyCity::getProvince()
 {
   return m_pCity->getProvince();
 };
+
+int CyCity::getProvinceID()
+{
+  return m_pCity ? m_pCity->getProvinceID() : -1;
+};
+
 int CyCity::getNumForeignReligions()
 {
   return m_pCity->getNumForeignReligions();

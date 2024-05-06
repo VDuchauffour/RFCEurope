@@ -14582,6 +14582,11 @@ int CvCity::getProvince()
   return provinceMap[getY_INLINE() * EARTH_X + getX_INLINE()];
 };
 
+int CvCity::getProvinceID() const
+{
+  return plot()->getProvinceID();
+};
+
 int CvCity::getNumForeignReligions()
 {
   int iLoopReligion, iCount = 0, iStateReligion;
