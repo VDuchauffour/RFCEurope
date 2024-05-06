@@ -1,22 +1,10 @@
 Platy Builder
-bLoadSpecial=1
 Version=11
 BeginGame
-	Era=ERA_ANCIENT
-	Speed=GAMESPEED_NORMAL
 	Calendar=CALENDAR_DEFAULT
 	Option=GAMEOPTION_AGGRESSIVE_AI
 	Option=GAMEOPTION_NO_TECH_BROKERING
-	Victory=VICTORY_TIME
-	Victory=VICTORY_DOMINATION
-	Victory=VICTORY_CULTURAL
-	Victory=VICTORY_DIPLOMATIC
-	Victory=VICTORY_HISTORICAL
 	GameTurn=0
-	MaxTurns=500
-	MaxCityElimination=0
-	NumAdvancedStartPoints=720
-	TargetScore=0
 	StartYear=500
 	Description=TXT_KEY_WB_DESC
 	ModPath=Mods\RFCEurope
@@ -37,2375 +25,375 @@ BeginTeam
 	Tech=TECH_LITERATURE
 	Tech=TECH_CODE_OF_LAWS
 	Tech=TECH_CLASSICAL_KNOWLEDGE
-	ContactWithTeam=28, (The Pope)
-	AtWar=2, ()
-	AtWar=3, ()
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	BridgeBuilding=1
-	WaterWork=1
 EndTeam
 BeginTeam
 	TeamID=1, (Charlemagne)
 	Tech=TECH_BRONZE_CASTING
 	Tech=TECH_THEOLOGY
-	AtWar=18, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	GoldTrading=1
 EndTeam
 BeginTeam
 	TeamID=2, ()
-	AtWar=0, (Justinian I)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3, ()
-	AtWar=0, (Justinian I)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4, ()
-	AtWar=12, ()
-	AtWar=19, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=5, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=6, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=7, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=8, ()
-	AtWar=22, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=9, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=10, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=11, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=12, ()
-	AtWar=4, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=13, ()
-	AtWar=21, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=14, ()
-	AtWar=18, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=15, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=16, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=17, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=18, ()
-	AtWar=1, (Charlemagne)
-	AtWar=14, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19, ()
-	AtWar=4, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=20, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=21, ()
-	AtWar=13, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=22, ()
-	AtWar=8, ()
-	AtWar=23, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=23, ()
-	AtWar=22, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25, ()
-	AtWar=0, (Justinian I)
-	AtWar=2, ()
-	AtWar=3, ()
-	AtWar=29, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=26, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=27, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=28, (The Pope)
 	Tech=TECH_CALENDAR
 	Tech=TECH_THEOLOGY
 	Tech=TECH_ASTROLABE
-	ContactWithTeam=0, (Justinian I)
-	ContactWithTeam=29, ()
-	ContactWithTeam=30, ()
-	ContactWithTeam=31, ()
-	ContactWithTeam=32, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	OpenBordersTrading=1
-	WaterWork=1
 EndTeam
 BeginTeam
 	TeamID=29, ()
-	ContactWithTeam=28, (The Pope)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=30, ()
-	ContactWithTeam=28, (The Pope)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=31, ()
-	ContactWithTeam=28, (The Pope)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=32, ()
-	ContactWithTeam=28, (The Pope)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=33, (Barbarian)
-	ContactWithTeam=0, (Justinian I)
-	ContactWithTeam=1, (Charlemagne)
-	ContactWithTeam=2, ()
-	ContactWithTeam=3, ()
-	ContactWithTeam=4, ()
-	ContactWithTeam=5, ()
-	ContactWithTeam=6, ()
-	ContactWithTeam=7, ()
-	ContactWithTeam=8, ()
-	ContactWithTeam=9, ()
-	ContactWithTeam=10, ()
-	ContactWithTeam=11, ()
-	ContactWithTeam=12, ()
-	ContactWithTeam=13, ()
-	ContactWithTeam=14, ()
-	ContactWithTeam=15, ()
-	ContactWithTeam=16, ()
-	ContactWithTeam=17, ()
-	ContactWithTeam=18, ()
-	ContactWithTeam=19, ()
-	ContactWithTeam=20, ()
-	ContactWithTeam=21, ()
-	ContactWithTeam=22, ()
-	ContactWithTeam=23, ()
-	ContactWithTeam=24, ()
-	ContactWithTeam=25, ()
-	ContactWithTeam=26, ()
-	ContactWithTeam=27, ()
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=29, ()
-	ContactWithTeam=30, ()
-	ContactWithTeam=31, ()
-	ContactWithTeam=32, ()
-	AtWar=0, (Justinian I)
-	AtWar=1, (Charlemagne)
-	AtWar=2, ()
-	AtWar=3, ()
-	AtWar=4, ()
-	AtWar=5, ()
-	AtWar=6, ()
-	AtWar=7, ()
-	AtWar=8, ()
-	AtWar=9, ()
-	AtWar=10, ()
-	AtWar=11, ()
-	AtWar=12, ()
-	AtWar=13, ()
-	AtWar=14, ()
-	AtWar=15, ()
-	AtWar=16, ()
-	AtWar=17, ()
-	AtWar=18, ()
-	AtWar=19, ()
-	AtWar=20, ()
-	AtWar=21, ()
-	AtWar=22, ()
-	AtWar=23, ()
-	AtWar=24, ()
-	AtWar=25, ()
-	AtWar=26, ()
-	AtWar=27, ()
-	AtWar=28, (The Pope)
-	AtWar=29, ()
-	AtWar=30, ()
-	AtWar=31, ()
-	AtWar=32, ()
-	RevealMap=0
 EndTeam
 BeginPlayer
 	Team=0
 	LeaderType=LEADER_JUSTINIAN
-	LeaderName=Justinian I
-	CivDesc=TXT_KEY_DN_BYZ00
-	CivShortDesc=TXT_KEY_CIV_BYZANTIUM_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BYZANTIUM_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Byzantine_Labarum.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BYZANTIUM
-	Color=PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1200
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_IMPERIALISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=1
 	LeaderType=LEADER_CHARLEMAGNE
-	LeaderName=Charlemagne
-	CivDesc=TXT_KEY_DN_FRA00
-	CivShortDesc=TXT_KEY_CIV_FRANCE_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_FRANCE_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_France_3FleurDeLis2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_FRANCE
-	Color=PLAYERCOLOR_DARK_BLUE
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=100
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=2
 	LeaderType=LEADER_ABU_BAKR
-	LeaderName=Abu Bakr
-	CivDesc=TXT_KEY_DN_ARA00
-	CivShortDesc=TXT_KEY_CIV_ARABIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ARABIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Arabic.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ARABIA
-	Color=PLAYERCOLOR_GREEN_AND_WHITE
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=200
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=3
 	LeaderType=LEADER_SIMEON
-	LeaderName=Simeon I
-	CivDesc=TXT_KEY_DN_BUL00
-	CivShortDesc=TXT_KEY_CIV_BULGARIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BULGARIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BULGARIA
-	Color=PLAYERCOLOR_LIME
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=100
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=4
 	LeaderType=LEADER_ABD_AR_RAHMAN
-	LeaderName=Abd-ar-Rahman III
-	CivDesc=TXT_KEY_DN_COR00
-	CivShortDesc=TXT_KEY_CIV_CORDOBA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_CORDOBA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Cordoba_Moorish2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_CORDOBA
-	Color=PLAYERCOLOR_LIGHT_GREEN
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=200
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=5
 	LeaderType=LEADER_ENRICO_DANDOLO
-	LeaderName=Enrico Dandolo
-	CivDesc=TXT_KEY_DN_VEN00
-	CivShortDesc=TXT_KEY_CIV_VENEZIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_VENEZIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Venice.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_VENEZIA
-	Color=PLAYERCOLOR_VENETIAN_RED_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=6
 	LeaderType=LEADER_OTTO_WILLIAM
-	LeaderName=Otto-William
-	CivDesc=TXT_KEY_DN_BUR00
-	CivShortDesc=TXT_KEY_CIV_BURGUNDY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BURGUNDY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Burgundy.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BURGUNDY
-	Color=PLAYERCOLOR_BURGUNDY
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=7
 	LeaderType=LEADER_OTTO
-	LeaderName=Otto I
-	CivDesc=TXT_KEY_DN_GER00
-	CivShortDesc=TXT_KEY_CIV_GERMANY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GERMANY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Germany_HolyRomanEmpire3.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GERMANY
-	Color=PLAYERCOLOR_DARK_LEMON
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=8
 	LeaderType=LEADER_RURIK
-	LeaderName=Rurik
-	CivDesc=TXT_KEY_DN_NOV00
-	CivShortDesc=TXT_KEY_CIV_NOVGOROD_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_NOVGOROD_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Novgorod.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_NOVGOROD
-	Color=PLAYERCOLOR_MIDDLE_GREEN
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=9
 	LeaderType=LEADER_HARALD_HARDRADA
-	LeaderName=Harald Hardrada
-	CivDesc=TXT_KEY_DN_NOR00
-	CivShortDesc=TXT_KEY_CIV_NORWAY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_NORWAY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Norway.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_NORWAY
-	Color=PLAYERCOLOR_LIGHT_BLUE
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=10
 	LeaderType=LEADER_YAROSLAV
-	LeaderName=Yaroslav
-	CivDesc=TXT_KEY_DN_KIE00
-	CivShortDesc=TXT_KEY_CIV_KIEV_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_KIEV_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Kiev.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_KIEV
-	Color=PLAYERCOLOR_LIGHT_PURPLE
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=11
 	LeaderType=LEADER_STEPHEN
-	LeaderName=István I
-	CivDesc=TXT_KEY_DN_HUN00
-	CivShortDesc=TXT_KEY_CIV_HUNGARY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_HUNGARY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Hungary2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_HUNGARY
-	Color=PLAYERCOLOR_BROWN_AND_WHITE
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=12
 	LeaderType=LEADER_FERDINAND_III
-	LeaderName=Ferdinand III
-	CivDesc=TXT_KEY_DN_SPN00
-	CivShortDesc=TXT_KEY_CIV_SPAIN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SPAIN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Spain_Castle4.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SPAIN
-	Color=PLAYERCOLOR_DARK_YELLOW
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=13
 	LeaderType=LEADER_HARALD_BLUETOOTH
-	LeaderName=Harald Bluetooth
-	CivDesc=TXT_KEY_DN_DEN00
-	CivShortDesc=TXT_KEY_CIV_DENMARK_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_DENMARK_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_StGeorgeCross.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_DENMARK
-	Color=PLAYERCOLOR_DARK_RED
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=14
 	LeaderType=LEADER_ROBERT_THE_BRUCE
-	LeaderName=Robert the Bruce
-	CivDesc=TXT_KEY_DN_SCO00
-	CivShortDesc=TXT_KEY_CIV_SCOTLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SCOTLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Scotland.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SCOTLAND
-	Color=PLAYERCOLOR_SCOTLAND
-	ArtStyle=ARTSTYLE_ANGLO_AMERICA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=15
 	LeaderType=LEADER_MIESZKO
-	LeaderName=Mieszko I
-	CivDesc=TXT_KEY_DN_POL00
-	CivShortDesc=TXT_KEY_CIV_POLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_POLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Poland.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_POLAND
-	Color=PLAYERCOLOR_CERISE
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=16
 	LeaderType=LEADER_EMBRIACO
-	LeaderName=Guglielmo Embriaco
-	CivDesc=TXT_KEY_DN_GEN00
-	CivShortDesc=TXT_KEY_CIV_GENOA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GENOA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Genoa_StGeorgeCross.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GENOA
-	Color=PLAYERCOLOR_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=17
 	LeaderType=LEADER_YAQUB_AL_MANSUR
-	LeaderName=Yaqub al-Mansur
-	CivDesc=TXT_KEY_DN_MOR00
-	CivShortDesc=TXT_KEY_CIV_MOROCCO_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_MOROCCO_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Morocco.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_MOROCCO
-	Color=PLAYERCOLOR_MOROCCO
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=18
 	LeaderType=LEADER_WILLIAM
-	LeaderName=William I
-	CivDesc=TXT_KEY_DN_ENG00
-	CivShortDesc=TXT_KEY_CIV_ENGLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ENGLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_England_Lions.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ENGLAND
-	Color=PLAYERCOLOR_RED_AND_GOLD
-	ArtStyle=ARTSTYLE_ANGLO_AMERICA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=19
 	LeaderType=LEADER_AFONSO
-	LeaderName=Afonso Henriques
-	CivDesc=TXT_KEY_DN_POR00
-	CivShortDesc=TXT_KEY_CIV_PORTUGAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PORTUGAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Portugal_Escudo.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PORTUGAL
-	Color=PLAYERCOLOR_DARK_DARK_GREEN
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=450
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=20
 	LeaderType=LEADER_JAMES_I
-	LeaderName=James I
-	CivDesc=TXT_KEY_DN_ARG00
-	CivShortDesc=TXT_KEY_CIV_ARAGON_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ARAGON_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Aragon.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ARAGON
-	Color=PLAYERCOLOR_DARK_PINK
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=450
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=21
 	LeaderType=LEADER_MAGNUS_LADULAS
-	LeaderName=Magnus Ladulas
-	CivDesc=TXT_KEY_DN_SWE00
-	CivShortDesc=TXT_KEY_CIV_SWEDEN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SWEDEN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Sweden.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SWEDEN
-	Color=PLAYERCOLOR_DARK_CYAN_AND_LEMON
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=22
 	LeaderType=LEADER_HERMANN_VON_SALZA
-	LeaderName=Hermann von Salza
-	CivDesc=TXT_KEY_DN_PRU00
-	CivShortDesc=TXT_KEY_CIV_PRUSSIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PRUSSIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Prussia.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PRUSSIA
-	Color=PLAYERCOLOR_WHITE_AND_BLACK
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=23
 	LeaderType=LEADER_MINDAUGAS
-	LeaderName=Mindaugas
-	CivDesc=TXT_KEY_DN_LIT00
-	CivShortDesc=TXT_KEY_CIV_LITHUANIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_LITHUANIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Lithuania.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_LITHUANIA
-	Color=PLAYERCOLOR_GRAY
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=24
 	LeaderType=LEADER_MAXIMILIAN
-	LeaderName=Maximilian I
-	CivDesc=TXT_KEY_DN_AUS00
-	CivShortDesc=TXT_KEY_CIV_AUSTRIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_AUSTRIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Austria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_AUSTRIA
-	Color=PLAYERCOLOR_CYAN_AND_BLACK
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=25
 	LeaderType=LEADER_MEHMED
-	LeaderName=Mehmed II
-	CivDesc=TXT_KEY_DN_TUR00
-	CivShortDesc=TXT_KEY_CIV_OTTOMAN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_OTTOMAN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Ottoman_Tugra.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_OTTOMAN
-	Color=PLAYERCOLOR_DARK_ORANGE
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_GUILDS
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=26
 	LeaderType=LEADER_IVAN_IV
-	LeaderName=Ivan IV
-	CivDesc=TXT_KEY_DN_MOS00
-	CivShortDesc=TXT_KEY_CIV_MOSCOW_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_MOSCOW_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Moscow.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_MOSCOW
-	Color=PLAYERCOLOR_VERYDARK_RED
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=27
 	LeaderType=LEADER_WILLEM_VAN_ORANJE
-	LeaderName=Willem van Oranje
-	CivDesc=TXT_KEY_DN_DUT00
-	CivShortDesc=TXT_KEY_CIV_DUTCH_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_DUTCH_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Dutch_Leeuw.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_DUTCH
-	Color=PLAYERCOLOR_ORANGE
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1500
 	StateReligion=RELIGION_PROTESTANTISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_COLONIALISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=28
 	LeaderType=LEADER_THE_POPE
-	LeaderName=TXT_KEY_LEADER_THE_POPE
-	CivDesc=TXT_KEY_DN_POP00
-	CivShortDesc=TXT_KEY_CIV_PAPAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PAPAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_PapalState.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PAPAL
-	Color=PLAYERCOLOR_OFF_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=50
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=29
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT
-	Color=PLAYERCOLOR_DARK_GRAY1
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=30
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT2
-	Color=PLAYERCOLOR_DARK_GRAY2
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=31
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT3
-	Color=PLAYERCOLOR_DARK_GRAY3
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=32
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT4
-	Color=PLAYERCOLOR_DARK_GRAY4
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
-EndPlayer
-BeginPlayer
-	Team=33
-	LeaderType=LEADER_BARBARIAN
-	LeaderName=TXT_KEY_LEADER_BARBARIAN
-	CivDesc=TXT_KEY_CIV_BARBARIAN_DESC
-	CivShortDesc=TXT_KEY_CIV_BARBARIAN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BARBARIAN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Barbarian_Skull2.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_BARBARIAN
-	Color=PLAYERCOLOR_BLACK
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	Handicap=HANDICAP_PRINCE
-	ScriptData=(dp1
-S'lPlagueCountdown'
-p2
-(lp3
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lColonistsAlreadyGiven'
-p4
-(lp5
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iFavorite'
-p6
-I0
-sS'bAlreadySwitched'
-p7
-I00
-sS'lMercGlobalPool'
-p8
-(lp9
-sS'iCrusadePower'
-p10
-I0
-sS'lLastRespawnTurn'
-p11
-(lp12
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lLatestRebellionTurn'
-p13
-(lp14
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iRebelCiv'
-p15
-I0
-sS'lAttackingCivsArray'
-p16
-(lp17
-I0
-aI0
-aI-1
-aI-1
-aI0
-aI0
-aI0
-aI-1
-aI0
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI0
-aI0
-aI0
-aI-1
-aI-1
-aI0
-aI0
-aI-1
-aI0
-aI0
-aI-1
-aI-1
-aI-1
-aI0
-aI0
-asS'iOldCivFlip'
-p18
-I-1
-sS'iCrusadeToReturn'
-p19
-I-1
-sS'iCrusadeSucceeded'
-p20
-I0
-sS'lDeviateTargets'
-p21
-(lp22
-I00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-asS'lSpecialRespawnTurn'
-p23
-(lp24
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lVotingPower'
-p25
-(lp26
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lDeleteMode'
-p27
-(lp28
-I-1
-aI-1
-aI-1
-asS'bDCEnabled'
-p29
-I00
-sS'lMercsHiredBy'
-p30
-(lp31
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lPersecutionData'
-p32
-(lp33
-I-1
-aI-1
-aI-1
-asS'lEventRandomness'
-p34
-(lp35
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lGenericPlagueDates'
-p36
-(lp37
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'iRichestCatholic'
-p38
-I0
-sS'bCounterReformationActive'
-p39
-I00
-sS'lReligionChoices'
-p40
-(lp41
-sS'iTempFlippingCity'
-p42
-I-1
-sS'lCrusadeInit'
-p43
-(lp44
-I-2
-aI-2
-aI-2
-aI-2
-aI-2
-aI-2
-asS'lNumUnitsSent'
-p45
-(lp46
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'bBadPlague'
-p47
-I00
-sS'iPowerful'
-p48
-I0
-sS'lRebelCities'
-p49
-(lp50
-sS'bParticipate'
-p51
-I00
-sS'lCheatersCheck'
-p52
-(lp53
-I0
-aI-1
-asS'lNextMinorRevolt'
-p54
-(lp55
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lFlipsDelay'
-p56
-(lp57
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lBaseStabilityLastTurn'
-p58
-(lp59
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lPersecutionReligions'
-p60
-(lp61
-sS'lRebelSuppress'
-p62
-(lp63
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lVotesGathered'
-p64
-(lp65
-I0
-aI0
-asS'iDCLast'
-p66
-I0
-sS'bReformationActive'
-p67
-I00
-sS'iLeader'
-p68
-I0
-sS'iTempBottomRight'
-p69
-I-1
-sS'tTarget'
-p70
-(I0
-I0
-tp71
-sS'iNewCiv'
-p72
-I-1
-sS'lNumCities'
-p73
-(lp74
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iSpawnWar'
-p75
-I0
-sS'bIgnoreAIUHV'
-p76
-I01
-sS'lExileData'
-p77
-(lp78
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lSelectedUnits'
-p79
-(lp80
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lReformationHitMatrix'
-p81
-(lp82
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lReligionFounded'
-p83
-(lp84
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lRevoltinNationRevoltIndex'
-p85
-(lp86
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'bFirstPlague'
-p87
-I00
-sS'iNextTurnAIWar'
-p88
-I-1
-sS'lSpawnDelay'
-p89
-(lp90
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lLastTurnAlive'
-p91
-(lp92
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iTempTopLeft'
-p93
-I-1
-sS'iBetrayalTurns'
-p94
-I0
-sS'iNewCivFlip'
-p95
-I-1
-s.
 EndPlayer
 BeginMap
 	grid width=100

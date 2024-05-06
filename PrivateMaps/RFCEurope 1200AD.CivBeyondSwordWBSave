@@ -1,22 +1,10 @@
 Platy Builder
-bLoadSpecial=1
 Version=11
 BeginGame
-	Era=ERA_ANCIENT
-	Speed=GAMESPEED_NORMAL
 	Calendar=CALENDAR_DEFAULT
 	Option=GAMEOPTION_AGGRESSIVE_AI
 	Option=GAMEOPTION_NO_TECH_BROKERING
-	Victory=VICTORY_TIME
-	Victory=VICTORY_DOMINATION
-	Victory=VICTORY_CULTURAL
-	Victory=VICTORY_DIPLOMATIC
-	Victory=VICTORY_HISTORICAL
 	GameTurn=200
-	MaxTurns=500
-	MaxCityElimination=0
-	NumAdvancedStartPoints=720
-	TargetScore=0
 	StartYear=500
 	Description=TXT_KEY_WB_DESC
 	ModPath=Mods\RFCEurope
@@ -27,3286 +15,422 @@ BeginTeam
 	Tech=TECH_ARCHITECTURE
 	Tech=TECH_BRONZE_CASTING
 	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
 	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
 	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
 	Tech=TECH_MUSIC
 	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
 	Tech=TECH_LITERATURE
 	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
 	Tech=TECH_CLASSICAL_KNOWLEDGE
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=3, (Ivan Asen II)
-	AtWar=5, (Andrea Gritti)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
+	Tech=TECH_ASTROLABE
 EndTeam
 BeginTeam
 	TeamID=1, (Philip Augustus)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
 	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=18, (William I)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=2, (Saladin)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	Tech=TECH_ARABIC_KNOWLEDGE
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=7, (Frederick Barbarossa)
-	AtWar=16, (Simone Boccanegra)
-	AtWar=19, (Afonso Henriques)
-	AtWar=20, (James I)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=3, (Ivan Asen II)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=11, (Béla III)
-	AtWar=0, (Michael VIII Palaiologos)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=4, ()
-	ContactWithTeam=12, (Isabella)
-	AtWar=19, (Afonso Henriques)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=5, (Andrea Gritti)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=0, (Michael VIII Palaiologos)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=6, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=7, (Frederick Barbarossa)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=2, (Saladin)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=8, (Alexander Nevsky)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=22, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=9, (Haakon IV)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=10, (Mstislav I)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=15, (Casimir III)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
-	TeamID=11, (Béla III)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
+	TeamID=11, (Bï¿½la III)
 EndTeam
 BeginTeam
 	TeamID=12, (Isabella)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=4, ()
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=19, (Afonso Henriques)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	AtWar=17, (Yaqub al-Mansur)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=13, (Margaret I)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=21, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=14, (Robert the Bruce)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	AtWar=18, (William I)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=15, (Casimir III)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=28, (The Pope)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=16, (Simone Boccanegra)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=2, (Saladin)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=17, (Yaqub al-Mansur)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	Tech=TECH_ARABIC_KNOWLEDGE
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=19, (Afonso Henriques)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=12, (Isabella)
-	AtWar=19, (Afonso Henriques)
-	AtWar=20, (James I)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=18, (William I)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	AtWar=1, (Philip Augustus)
-	AtWar=14, (Robert the Bruce)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=19, (Afonso Henriques)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	AtWar=2, (Saladin)
-	AtWar=4, ()
-	AtWar=17, (Yaqub al-Mansur)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=20, (James I)
-	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
-	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
-	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=19, (Afonso Henriques)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=2, (Saladin)
-	AtWar=17, (Yaqub al-Mansur)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=21, ()
-	AtWar=13, (Margaret I)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=22, ()
-	AtWar=8, (Alexander Nevsky)
-	AtWar=23, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=23, ()
-	AtWar=22, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25, ()
-	AtWar=0, (Michael VIII Palaiologos)
-	AtWar=30, (Independent Leader)
-	AtWar=31, (Independent Leader)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=26, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=27, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=28, (The Pope)
 	Tech=TECH_CALENDAR
-	Tech=TECH_ARCHITECTURE
-	Tech=TECH_BRONZE_CASTING
 	Tech=TECH_THEOLOGY
-	Tech=TECH_MANORIALISM
-	Tech=TECH_STIRRUP
-	Tech=TECH_ENGINEERING
-	Tech=TECH_CHAIN_MAIL
-	Tech=TECH_ART
-	Tech=TECH_MONASTICISM
-	Tech=TECH_VASSALAGE
 	Tech=TECH_ASTROLABE
-	Tech=TECH_MACHINERY
-	Tech=TECH_VAULTED_ARCHES
-	Tech=TECH_MUSIC
-	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_FEUDALISM
-	Tech=TECH_FARRIERS
-	Tech=TECH_MAP_MAKING
-	Tech=TECH_BLAST_FURNACE
-	Tech=TECH_SIEGE_ENGINES
-	Tech=TECH_GOTHIC_ARCHITECTURE
-	Tech=TECH_LITERATURE
-	Tech=TECH_CODE_OF_LAWS
-	Tech=TECH_ARISTOCRACY
-	Tech=TECH_LATEEN_SAILS
-	Tech=TECH_PLATE_ARMOR
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=19, (Afonso Henriques)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=29, ()
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=33, (Barbarian)
-	RevealMap=0
-	MapCentering=1
-	TechTrading=1
-	GoldTrading=1
-	OpenBordersTrading=1
-	VassalStateTrading=1
-	BridgeBuilding=1
-	WaterWork=1
-	RouteType=ROUTE_ROAD, ExtraMoves=-10
 EndTeam
 BeginTeam
 	TeamID=29, ()
-	ContactWithTeam=28, (The Pope)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=30, (Independent Leader)
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=31, (Independent Leader)
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=25, ()
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=32, (Independent Leader)
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	AtWar=33, (Barbarian)
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=33, (Barbarian)
-	ContactWithTeam=0, (Michael VIII Palaiologos)
-	ContactWithTeam=1, (Philip Augustus)
-	ContactWithTeam=2, (Saladin)
-	ContactWithTeam=3, (Ivan Asen II)
-	ContactWithTeam=4, ()
-	ContactWithTeam=5, (Andrea Gritti)
-	ContactWithTeam=6, ()
-	ContactWithTeam=7, (Frederick Barbarossa)
-	ContactWithTeam=8, (Alexander Nevsky)
-	ContactWithTeam=9, (Haakon IV)
-	ContactWithTeam=10, (Mstislav I)
-	ContactWithTeam=11, (Béla III)
-	ContactWithTeam=12, (Isabella)
-	ContactWithTeam=13, (Margaret I)
-	ContactWithTeam=14, (Robert the Bruce)
-	ContactWithTeam=15, (Casimir III)
-	ContactWithTeam=16, (Simone Boccanegra)
-	ContactWithTeam=17, (Yaqub al-Mansur)
-	ContactWithTeam=18, (William I)
-	ContactWithTeam=19, (Afonso Henriques)
-	ContactWithTeam=20, (James I)
-	ContactWithTeam=21, ()
-	ContactWithTeam=22, ()
-	ContactWithTeam=23, ()
-	ContactWithTeam=24, ()
-	ContactWithTeam=25, ()
-	ContactWithTeam=26, ()
-	ContactWithTeam=27, ()
-	ContactWithTeam=28, (The Pope)
-	ContactWithTeam=29, ()
-	ContactWithTeam=30, (Independent Leader)
-	ContactWithTeam=31, (Independent Leader)
-	ContactWithTeam=32, (Independent Leader)
-	AtWar=0, (Michael VIII Palaiologos)
-	AtWar=1, (Philip Augustus)
-	AtWar=2, (Saladin)
-	AtWar=3, (Ivan Asen II)
-	AtWar=4, ()
-	AtWar=5, (Andrea Gritti)
-	AtWar=6, ()
-	AtWar=7, (Frederick Barbarossa)
-	AtWar=8, (Alexander Nevsky)
-	AtWar=9, (Haakon IV)
-	AtWar=10, (Mstislav I)
-	AtWar=11, (Béla III)
-	AtWar=12, (Isabella)
-	AtWar=13, (Margaret I)
-	AtWar=14, (Robert the Bruce)
-	AtWar=15, (Casimir III)
-	AtWar=16, (Simone Boccanegra)
-	AtWar=17, (Yaqub al-Mansur)
-	AtWar=18, (William I)
-	AtWar=19, (Afonso Henriques)
-	AtWar=20, (James I)
-	AtWar=21, ()
-	AtWar=22, ()
-	AtWar=23, ()
-	AtWar=24, ()
-	AtWar=25, ()
-	AtWar=26, ()
-	AtWar=27, ()
-	AtWar=28, (The Pope)
-	AtWar=29, ()
-	AtWar=30, (Independent Leader)
-	AtWar=31, (Independent Leader)
-	AtWar=32, (Independent Leader)
-	RevealMap=0
 EndTeam
 BeginPlayer
 	Team=0
 	LeaderType=LEADER_PALAIOLOGOS
-	LeaderName=Michael VIII Palaiologos
-	CivDesc=TXT_KEY_DN_BYZ00
-	CivShortDesc=TXT_KEY_CIV_BYZANTIUM_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BYZANTIUM_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Byzantine_Labarum.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BYZANTIUM
-	Color=PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=750
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	AttitudePlayer=2, AttitudeExtra=-2
-, (Saladin)	Handicap=HANDICAP_PRINCE
+	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=1
 	LeaderType=LEADER_PHILIP_AUGUSTUS
-	LeaderName=Philip Augustus
-	CivDesc=TXT_KEY_DN_FRA03
-	CivShortDesc=TXT_KEY_CIV_FRANCE_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_FRANCE_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_France_3FleurDeLis2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_FRANCE
-	Color=PLAYERCOLOR_DARK_BLUE
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	AttitudePlayer=14, AttitudeExtra=4
-, (Robert the Bruce)	Handicap=HANDICAP_PRINCE
+	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=2
 	LeaderType=LEADER_SALADIN
-	LeaderName=Saladin
-	CivDesc=TXT_KEY_DN_ARA32
-	CivShortDesc=TXT_KEY_CIV_ARABIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ARABIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Arabic.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ARABIA
-	Color=PLAYERCOLOR_GREEN_AND_WHITE
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	AttitudePlayer=0, AttitudeExtra=-2
-, (Michael VIII Palaiologos)	Handicap=HANDICAP_PRINCE
+	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=3
 	LeaderType=LEADER_IVAN_ASEN
-	LeaderName=Ivan Asen II
-	CivDesc=TXT_KEY_DN_BUL03
-	CivShortDesc=TXT_KEY_CIV_BULGARIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BULGARIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BULGARIA
-	Color=PLAYERCOLOR_LIME
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=150
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=4
 	LeaderType=LEADER_MOHAMMED_IBN_NASR
-	LeaderName=TXT_KEY_LEADER_MOHAMMED_IBN_NASR
-	CivDesc=TXT_KEY_DN_COR00
-	CivShortDesc=TXT_KEY_CIV_CORDOBA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_CORDOBA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Cordoba_Moorish2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_CORDOBA
-	Color=PLAYERCOLOR_LIGHT_GREEN
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=0
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=5
 	LeaderType=LEADER_ANDREA_GRITTI
-	LeaderName=Andrea Gritti
-	CivDesc=TXT_KEY_DN_VEN05
-	CivShortDesc=TXT_KEY_CIV_VENEZIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_VENEZIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Venice.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_VENEZIA
-	Color=PLAYERCOLOR_VENETIAN_RED_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=6
 	LeaderType=LEADER_BEATRICE
-	LeaderName=TXT_KEY_LEADER_BEATRICE
-	CivDesc=TXT_KEY_DN_BUR00
-	CivShortDesc=TXT_KEY_CIV_BURGUNDY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BURGUNDY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Burgundy.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BURGUNDY
-	Color=PLAYERCOLOR_BURGUNDY
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=0
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=7
 	LeaderType=LEADER_BARBAROSSA
-	LeaderName=Frederick Barbarossa
-	CivDesc=TXT_KEY_DN_GER03
-	CivShortDesc=TXT_KEY_CIV_GERMANY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GERMANY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Germany_HolyRomanEmpire3.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GERMANY
-	Color=PLAYERCOLOR_DARK_LEMON
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=8
 	LeaderType=LEADER_ALEXANDER_NEVSKY
-	LeaderName=Alexander Nevsky
-	CivDesc=TXT_KEY_DN_NOV05
-	CivShortDesc=TXT_KEY_CIV_NOVGOROD_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_NOVGOROD_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Novgorod.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_NOVGOROD
-	Color=PLAYERCOLOR_MIDDLE_GREEN
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
+	StateReligion=RELIGION_ORTHODOXY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=9
 	LeaderType=LEADER_HAAKON_IV
-	LeaderName=Haakon IV
-	CivDesc=TXT_KEY_DN_NOR01
-	CivShortDesc=TXT_KEY_CIV_NORWAY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_NORWAY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Norway.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_NORWAY
-	Color=PLAYERCOLOR_LIGHT_BLUE
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=10
 	LeaderType=LEADER_MSTISLAV
-	LeaderName=Mstislav I
-	CivDesc=TXT_KEY_DN_KIE03
-	CivShortDesc=TXT_KEY_CIV_KIEV_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_KIEV_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Kiev.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_KIEV
-	Color=PLAYERCOLOR_LIGHT_PURPLE
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=11
 	LeaderType=LEADER_BELA_III
-	LeaderName=Béla III
-	CivDesc=TXT_KEY_DN_HUN01
-	CivShortDesc=TXT_KEY_CIV_HUNGARY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_HUNGARY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Hungary2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_HUNGARY
-	Color=PLAYERCOLOR_BROWN_AND_WHITE
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=12
 	LeaderType=LEADER_ISABELLA
-	LeaderName=Isabella
-	CivDesc=TXT_KEY_DN_SPN03
-	CivShortDesc=TXT_KEY_CIV_SPAIN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SPAIN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Spain_Castle4.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SPAIN
-	Color=PLAYERCOLOR_DARK_YELLOW
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=13
 	LeaderType=LEADER_MARGARET_I
-	LeaderName=Margaret I
-	CivDesc=TXT_KEY_DN_DEN01
-	CivShortDesc=TXT_KEY_CIV_DENMARK_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_DENMARK_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_StGeorgeCross.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_DENMARK
-	Color=PLAYERCOLOR_DARK_RED
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=14
 	LeaderType=LEADER_ROBERT_THE_BRUCE
-	LeaderName=Robert the Bruce
-	CivDesc=TXT_KEY_DN_SCO01
-	CivShortDesc=TXT_KEY_CIV_SCOTLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SCOTLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Scotland.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SCOTLAND
-	Color=PLAYERCOLOR_SCOTLAND
-	ArtStyle=ARTSTYLE_ANGLO_AMERICA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	AttitudePlayer=1, AttitudeExtra=4
-, (Philip Augustus)	Handicap=HANDICAP_PRINCE
+	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=15
 	LeaderType=LEADER_CASIMIR
-	LeaderName=Casimir III
-	CivDesc=TXT_KEY_DN_POL02
-	CivShortDesc=TXT_KEY_CIV_POLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_POLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Poland.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_POLAND
-	Color=PLAYERCOLOR_CERISE
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=16
 	LeaderType=LEADER_BOCCANEGRA
-	LeaderName=Simone Boccanegra
-	CivDesc=TXT_KEY_DN_GEN02
-	CivShortDesc=TXT_KEY_CIV_GENOA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GENOA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Genoa_StGeorgeCross.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GENOA
-	Color=PLAYERCOLOR_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
+	PlayableCiv=8
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=17
 	LeaderType=LEADER_YAQUB_AL_MANSUR
-	LeaderName=Yaqub al-Mansur
-	CivDesc=TXT_KEY_DN_MOR02
-	CivShortDesc=TXT_KEY_CIV_MOROCCO_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_MOROCCO_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Morocco.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_MOROCCO
-	Color=PLAYERCOLOR_MOROCCO
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=18
 	LeaderType=LEADER_WILLIAM
-	LeaderName=William I
-	CivDesc=TXT_KEY_DN_ENG01
-	CivShortDesc=TXT_KEY_CIV_ENGLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ENGLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_England_Lions.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ENGLAND
-	Color=PLAYERCOLOR_RED_AND_GOLD
-	ArtStyle=ARTSTYLE_ANGLO_AMERICA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=19
 	LeaderType=LEADER_AFONSO
-	LeaderName=Afonso Henriques
-	CivDesc=TXT_KEY_DN_POR01
-	CivShortDesc=TXT_KEY_CIV_PORTUGAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PORTUGAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Portugal_Escudo.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PORTUGAL
-	Color=PLAYERCOLOR_DARK_DARK_GREEN
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=450
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=20
 	LeaderType=LEADER_JAMES_I
-	LeaderName=James I
-	CivDesc=TXT_KEY_DN_ARG01
-	CivShortDesc=TXT_KEY_CIV_ARAGON_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ARAGON_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Aragon.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ARAGON
-	Color=PLAYERCOLOR_DARK_PINK
-	ArtStyle=ARTSTYLE_IBERIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=450
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=21
 	LeaderType=LEADER_MAGNUS_LADULAS
-	LeaderName=Magnus Ladulas
-	CivDesc=TXT_KEY_DN_SWE00
-	CivShortDesc=TXT_KEY_CIV_SWEDEN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SWEDEN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Sweden.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SWEDEN
-	Color=PLAYERCOLOR_DARK_CYAN_AND_LEMON
-	ArtStyle=ARTSTYLE_NORSE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=22
 	LeaderType=LEADER_HERMANN_VON_SALZA
-	LeaderName=Hermann von Salza
-	CivDesc=TXT_KEY_DN_PRU00
-	CivShortDesc=TXT_KEY_CIV_PRUSSIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PRUSSIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Prussia.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PRUSSIA
-	Color=PLAYERCOLOR_WHITE_AND_BLACK
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=23
 	LeaderType=LEADER_MINDAUGAS
-	LeaderName=Mindaugas
-	CivDesc=TXT_KEY_DN_LIT00
-	CivShortDesc=TXT_KEY_CIV_LITHUANIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_LITHUANIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Lithuania.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_LITHUANIA
-	Color=PLAYERCOLOR_GRAY
-	ArtStyle=ARTSTYLE_LITHUANIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=24
 	LeaderType=LEADER_MAXIMILIAN
-	LeaderName=Maximilian I
-	CivDesc=TXT_KEY_DN_AUS00
-	CivShortDesc=TXT_KEY_CIV_AUSTRIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_AUSTRIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Austria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_AUSTRIA
-	Color=PLAYERCOLOR_CYAN_AND_BLACK
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=25
 	LeaderType=LEADER_MEHMED
-	LeaderName=Mehmed II
-	CivDesc=TXT_KEY_DN_TUR00
-	CivShortDesc=TXT_KEY_CIV_OTTOMAN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_OTTOMAN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Ottoman_Tugra.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_OTTOMAN
-	Color=PLAYERCOLOR_DARK_ORANGE
-	ArtStyle=ARTSTYLE_ARABIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_GUILDS
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_OCCUPATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=26
 	LeaderType=LEADER_IVAN_IV
-	LeaderName=Ivan IV
-	CivDesc=TXT_KEY_DN_MOS00
-	CivShortDesc=TXT_KEY_CIV_MOSCOW_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_MOSCOW_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Moscow.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_MOSCOW
-	Color=PLAYERCOLOR_VERYDARK_RED
-	ArtStyle=ARTSTYLE_RUSSIA
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_VASSALAGE
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=27
 	LeaderType=LEADER_WILLEM_VAN_ORANJE
-	LeaderName=Willem van Oranje
-	CivDesc=TXT_KEY_DN_DUT00
-	CivShortDesc=TXT_KEY_CIV_DUTCH_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_DUTCH_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Dutch_Leeuw.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_DUTCH
-	Color=PLAYERCOLOR_ORANGE
-	ArtStyle=ARTSTYLE_EUROPE
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1500
 	StateReligion=RELIGION_PROTESTANTISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_COLONIALISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=28
 	LeaderType=LEADER_THE_POPE
-	LeaderName=TXT_KEY_LEADER_THE_POPE
-	CivDesc=TXT_KEY_DN_POP00
-	CivShortDesc=TXT_KEY_CIV_PAPAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PAPAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_PapalState.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PAPAL
-	Color=PLAYERCOLOR_OFF_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=200
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=29
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT
-	Color=PLAYERCOLOR_DARK_GRAY1
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=30
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT2
-	Color=PLAYERCOLOR_DARK_GRAY2
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=31
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT3
-	Color=PLAYERCOLOR_DARK_GRAY3
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=32
-	LeaderType=LEADER_PETER
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Independent_X.dds
-	WhiteFlag=0
+	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT4
-	Color=PLAYERCOLOR_DARK_GRAY4
-	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
-EndPlayer
-BeginPlayer
-	Team=33
-	LeaderType=LEADER_BARBARIAN
-	LeaderName=TXT_KEY_LEADER_BARBARIAN
-	CivDesc=TXT_KEY_CIV_BARBARIAN_DESC
-	CivShortDesc=TXT_KEY_CIV_BARBARIAN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BARBARIAN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Barbarian_Skull2.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_BARBARIAN
-	Color=PLAYERCOLOR_BLACK
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=0
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	Handicap=HANDICAP_PRINCE
-	ScriptData=(dp1
-S'lPlagueCountdown'
-p2
-(lp3
-I-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI-20
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lColonistsAlreadyGiven'
-p4
-(lp5
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iFavorite'
-p6
-I0
-sS'bAlreadySwitched'
-p7
-I00
-sS'lMercGlobalPool'
-p8
-(lp9
-sS'iCrusadePower'
-p10
-I0
-sS'lLastRespawnTurn'
-p11
-(lp12
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lLatestRebellionTurn'
-p13
-(lp14
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iRebelCiv'
-p15
-I0
-sS'lAttackingCivsArray'
-p16
-(lp17
-I0
-aI0
-aI-1
-aI-1
-aI0
-aI0
-aI0
-aI-1
-aI0
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI0
-aI0
-aI0
-aI-1
-aI-1
-aI0
-aI0
-aI-1
-aI0
-aI0
-aI-1
-aI-1
-aI-1
-aI0
-aI0
-asS'iOldCivFlip'
-p18
-I-1
-sS'iCrusadeToReturn'
-p19
-I-1
-sS'iCrusadeSucceeded'
-p20
-I0
-sS'lDeviateTargets'
-p21
-(lp22
-I00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-aI00
-asS'lSpecialRespawnTurn'
-p23
-(lp24
-I1014
-aI350
-aI166
-aI198
-aI224
-aI992
-aI237
-aI1009
-aI997
-aI992
-aI382
-aI392
-aI294
-aI240
-aI220
-aI277
-aI990
-aI371
-aI387
-aI263
-aI306
-aI328
-aI362
-aI993
-aI323
-aI302
-aI1007
-aI1015
-aI989
-asS'lVotingPower'
-p25
-(lp26
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lDeleteMode'
-p27
-(lp28
-I-1
-aI-1
-aI-1
-asS'bDCEnabled'
-p29
-I00
-sS'lMercsHiredBy'
-p30
-(lp31
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lPersecutionData'
-p32
-(lp33
-I-1
-aI-1
-aI-1
-asS'lEventRandomness'
-p34
-(lp35
-I15
-aI5
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lGenericPlagueDates'
-p36
-(lp37
-I21
-aI259
-aI307
-aI368
-aI429
-asS'iRichestCatholic'
-p38
-I0
-sS'bCounterReformationActive'
-p39
-I00
-sS'lReligionChoices'
-p40
-(lp41
-sS'iTempFlippingCity'
-p42
-I-1
-sS'lCrusadeInit'
-p43
-(lp44
-ccopy_reg
-_reconstructor
-p45
-(cCoreStructures
-Turn
-p46
-c__builtin__
-int
-p47
-I165
-tRp48
-ag45
-(g46
-g47
-I182
-tRp49
-ag45
-(g46
-g47
-I196
-tRp50
-aI-2
-aI-2
-aI-2
-asS'lNumUnitsSent'
-p51
-(lp52
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'bBadPlague'
-p53
-I00
-sS'iPowerful'
-p54
-I0
-sS'lRebelCities'
-p55
-(lp56
-sS'bParticipate'
-p57
-I00
-sS'lCheatersCheck'
-p58
-(lp59
-I0
-aI-1
-asS'lNextMinorRevolt'
-p60
-(lp61
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lFlipsDelay'
-p62
-(lp63
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lBaseStabilityLastTurn'
-p64
-(lp65
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lPersecutionReligions'
-p66
-(lp67
-sS'lRebelSuppress'
-p68
-(lp69
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lVotesGathered'
-p70
-(lp71
-I0
-aI0
-asS'iDCLast'
-p72
-I0
-sS'bReformationActive'
-p73
-I00
-sS'iLeader'
-p74
-I0
-sS'iTempBottomRight'
-p75
-I-1
-sS'tTarget'
-p76
-(I0
-I0
-tp77
-sS'iNewCiv'
-p78
-I-1
-sS'lNumCities'
-p79
-(lp80
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iSpawnWar'
-p81
-I0
-sS'bIgnoreAIUHV'
-p82
-I00
-sS'lExileData'
-p83
-(lp84
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lSelectedUnits'
-p85
-(lp86
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lReformationHitMatrix'
-p87
-(lp88
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lReligionFounded'
-p89
-(lp90
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'lRevoltinNationRevoltIndex'
-p91
-(lp92
-I-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-aI-1
-asS'bFirstPlague'
-p93
-I00
-sS'iNextTurnAIWar'
-p94
-g45
-(g46
-g47
-I206
-tRp95
-sS'lSpawnDelay'
-p96
-(lp97
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'lLastTurnAlive'
-p98
-(lp99
-I0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-aI0
-asS'iTempTopLeft'
-p100
-I-1
-sS'iBetrayalTurns'
-p101
-I0
-sS'iNewCivFlip'
-p102
-I-1
-s.
 EndPlayer
 BeginMap
 	grid width=100
@@ -33478,7 +30602,7 @@ BeginPlot
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,1,5,7,11,16,28,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player28Culture=1, (The Pope)
 EndPlot
 BeginPlot
@@ -33486,14 +30610,14 @@ BeginPlot
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,1,5,7,11,16,28,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=59,y=32
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,1,5,7,11,16,28,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=59,y=33
@@ -34111,28 +31235,28 @@ BeginPlot
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=30
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=22, (Béla III)
+	Player11Culture=22, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=31
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=22, (Béla III)
+	Player11Culture=22, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=32
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=33
@@ -34140,7 +31264,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,16,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=34
@@ -34148,7 +31272,7 @@ BeginPlot
 	PlotType=1
 	TeamReveal=0,5,7,11,16,30,
 	Player5Culture=1, (Andrea Gritti)
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=60,y=35
@@ -34161,7 +31285,7 @@ BeginPlot
 	PlotType=2
 	TeamReveal=0,5,7,11,16,30,
 	Player5Culture=1, (Andrea Gritti)
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -34738,7 +31862,7 @@ BeginPlot
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=30
@@ -34747,7 +31871,7 @@ BeginPlot
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,5,7,11,16,
-	Player11Culture=22, (Béla III)
+	Player11Culture=22, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=31
@@ -34755,20 +31879,20 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
-		CityName=Zára
+		CityOwner=11, (Bï¿½la III)
+		CityName=Zï¿½ra
 		CityPopulation=6
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BARRACKS
@@ -34781,10 +31905,10 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
-		Player11Culture=20, (Béla III)
+		Player11Culture=20, (Bï¿½la III)
 	EndCity
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=32
@@ -34793,7 +31917,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,5,7,11,16,28,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=33
@@ -34805,7 +31929,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,5,7,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=34
@@ -34815,7 +31939,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=61,y=35
@@ -34825,7 +31949,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -34835,7 +31959,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player30Culture=8, (Independent Leader)
 EndPlot
 BeginPlot
@@ -35350,14 +32474,14 @@ BeginPlot
 	PlotType=3
 	TeamReveal=0,5,11,16,
 	Player5Culture=1, (Andrea Gritti)
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=30
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,5,11,16,28,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=31
@@ -35366,7 +32490,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,5,11,16,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=32
@@ -35375,7 +32499,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,5,11,16,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=33
@@ -35385,7 +32509,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=34
@@ -35393,20 +32517,20 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_GUISARME, UnitOwner=11, (Béla III)
+		UnitType=UNIT_GUISARME, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
-		CityName=Zágráb
+		CityOwner=11, (Bï¿½la III)
+		CityName=Zï¿½grï¿½b
 		CityPopulation=6
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BARRACKS
@@ -35417,10 +32541,10 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
-		Player11Culture=20, (Béla III)
+		Player11Culture=20, (Bï¿½la III)
 	EndCity
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=62,y=35
@@ -35430,7 +32554,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -35442,7 +32566,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player30Culture=8, (Independent Leader)
 EndPlot
 BeginPlot
@@ -35959,7 +33083,7 @@ BeginPlot
 	PlotType=2
 	TeamReveal=0,5,11,16,
 	Player5Culture=1, (Andrea Gritti)
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=31
@@ -35967,7 +33091,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,11,16,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=32
@@ -35977,7 +33101,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,11,16,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=33
@@ -35987,7 +33111,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=34
@@ -35998,7 +33122,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=35
@@ -36008,14 +33132,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=63,y=36
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,5,7,11,30,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -36023,7 +33147,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,5,7,11,15,30,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -36031,7 +33155,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,15,30,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player30Culture=1, (Independent Leader)
 EndPlot
 BeginPlot
@@ -36552,7 +33676,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,5,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=34
@@ -36562,7 +33686,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,5,7,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=35
@@ -36570,14 +33694,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,30,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=36
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=5,7,11,30,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=37
@@ -36586,7 +33710,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,30,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=38
@@ -36595,7 +33719,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,30,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=39
@@ -36607,7 +33731,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,30,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=40
@@ -36616,7 +33740,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=41
@@ -36626,7 +33750,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=42
@@ -36634,7 +33758,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=64,y=43
@@ -37145,7 +34269,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,3,5,7,11,30,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=35
@@ -37155,21 +34279,21 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,30,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=36
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=3,5,7,11,30,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=37
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,5,7,11,15,30,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=38
@@ -37178,7 +34302,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=39
@@ -37187,7 +34311,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=40
@@ -37195,7 +34319,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=41
@@ -37205,7 +34329,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=42
@@ -37215,7 +34339,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=43
@@ -37223,7 +34347,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=65,y=44
@@ -37805,7 +34929,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,3,5,7,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=35
@@ -37814,7 +34938,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,5,7,11,32,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=36
@@ -37824,7 +34948,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=37
@@ -37834,55 +34958,55 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	BeginUnit
-		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Béla III)
+		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_ATTACK
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Béla III)
+		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_ATTACK
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Béla III)
+		UnitType=UNIT_HUNGARIAN_HUSZAR, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_ATTACK
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=11, (Béla III)
+		UnitType=UNIT_WORKER, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_WORKER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=11, (Béla III)
+		UnitType=UNIT_WORKER, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_WORKER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=11, (Béla III)
+		UnitType=UNIT_WORKER, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_WORKER
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
+		CityOwner=11, (Bï¿½la III)
 		CityName=Buda
 		CityPopulation=8
 		BuildingType=BUILDING_PALACE
@@ -37899,10 +35023,10 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_CATHOLICISM
-		Player11Culture=250, (Béla III)
+		Player11Culture=250, (Bï¿½la III)
 	EndCity
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=15, (Béla III)
+	Player11Culture=15, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=38
@@ -37914,7 +35038,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=39
@@ -37924,14 +35048,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=40
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=41
@@ -37939,20 +35063,20 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_GUISARME, UnitOwner=11, (Béla III)
+		UnitType=UNIT_GUISARME, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
-		CityName=Trencsén
+		CityOwner=11, (Bï¿½la III)
+		CityName=Trencsï¿½n
 		CityPopulation=4
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BARRACKS
@@ -37962,10 +35086,10 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_PRESSBURG
 		ReligionType=RELIGION_CATHOLICISM
-		Player11Culture=20, (Béla III)
+		Player11Culture=20, (Bï¿½la III)
 	EndCity
 	TeamReveal=5,7,11,15,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=42
@@ -37975,7 +35099,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=66,y=43
@@ -37983,7 +35107,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player15Culture=1, (Casimir III)
 EndPlot
 BeginPlot
@@ -38482,7 +35606,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,3,5,7,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=35
@@ -38492,7 +35616,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,32,
-	Player11Culture=7, (Béla III)
+	Player11Culture=7, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=36
@@ -38502,14 +35626,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=37
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=38
@@ -38517,7 +35641,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=14, (Béla III)
+	Player11Culture=14, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=39
@@ -38525,7 +35649,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=40
@@ -38535,7 +35659,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=41
@@ -38544,7 +35668,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=67,y=42
@@ -38554,7 +35678,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 	TeamReveal=7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 	Player15Culture=1, (Casimir III)
 EndPlot
 BeginPlot
@@ -38565,7 +35689,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player15Culture=8, (Casimir III)
 EndPlot
 BeginPlot
@@ -39094,7 +36218,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=36
@@ -39104,7 +36228,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,5,7,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=37
@@ -39112,14 +36236,14 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=38
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=39
@@ -39127,7 +36251,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=40
@@ -39136,7 +36260,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=41
@@ -39146,7 +36270,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=68,y=42
@@ -39154,7 +36278,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 	TeamReveal=7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 	Player15Culture=1, (Casimir III)
 EndPlot
 BeginPlot
@@ -39661,7 +36785,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=69,y=36
@@ -39671,7 +36795,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,5,7,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=69,y=37
@@ -39683,7 +36807,7 @@ BeginPlot
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=69,y=38
@@ -39694,7 +36818,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=69,y=39
@@ -39704,7 +36828,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=69,y=40
@@ -40206,14 +37330,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,5,7,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=70,y=36
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,5,7,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=70,y=37
@@ -40221,13 +37345,13 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
+		CityOwner=11, (Bï¿½la III)
 		CityName=Debrecen
 		CityPopulation=5
 		BuildingType=BUILDING_WALLS
@@ -40238,10 +37362,10 @@ BeginPlot
 		BuildingType=BUILDING_MANOR_HOUSE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
-		Player11Culture=20, (Béla III)
+		Player11Culture=20, (Bï¿½la III)
 	EndCity
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=70,y=38
@@ -40249,7 +37373,7 @@ BeginPlot
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 	TeamReveal=3,5,7,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=70,y=39
@@ -40259,7 +37383,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=5,7,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=70,y=40
@@ -40796,7 +37920,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,3,11,32,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=35
@@ -40806,14 +37930,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,32,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=36
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,11,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=37
@@ -40823,7 +37947,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=38
@@ -40831,7 +37955,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=39
@@ -40844,7 +37968,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=71,y=40
@@ -41371,14 +38495,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=34
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=35
@@ -41388,7 +38512,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=36
@@ -41398,21 +38522,21 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=37
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=2, (Béla III)
+	Player11Culture=2, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=38
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=72,y=39
@@ -41950,7 +39074,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=73,y=34
@@ -41958,7 +39082,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=73,y=35
@@ -41970,20 +39094,20 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Béla III)
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=11, (Bï¿½la III)
 		Level=1, Experience=0
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginCity
-		CityOwner=11, (Béla III)
-		CityName=Gyulafehérvár
+		CityOwner=11, (Bï¿½la III)
+		CityName=Gyulafehï¿½rvï¿½r
 		CityPopulation=5
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BARRACKS
@@ -41997,10 +39121,10 @@ BeginPlot
 		ReligionType=RELIGION_CATHOLICISM
 		ReligionType=RELIGION_ORTHODOXY
 		CorporationType=CORPORATION_3
-		Player11Culture=20, (Béla III)
+		Player11Culture=20, (Bï¿½la III)
 	EndCity
 	TeamReveal=3,11,
-	Player11Culture=9, (Béla III)
+	Player11Culture=9, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=73,y=36
@@ -42008,7 +39132,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=73,y=37
@@ -42016,7 +39140,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=73,y=38
@@ -42574,7 +39698,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=74,y=34
@@ -42582,14 +39706,14 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=74,y=35
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=74,y=36
@@ -42601,7 +39725,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=3,11,
-	Player11Culture=8, (Béla III)
+	Player11Culture=8, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=74,y=37
@@ -42609,7 +39733,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,11,15,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=74,y=38
@@ -43218,7 +40342,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=75,y=35
@@ -43226,7 +40350,7 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=75,y=36
@@ -43238,7 +40362,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=3,11,
-	Player11Culture=1, (Béla III)
+	Player11Culture=1, (Bï¿½la III)
 EndPlot
 BeginPlot
 	x=75,y=37
