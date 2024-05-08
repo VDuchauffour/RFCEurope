@@ -1,45 +1,36 @@
-# DLL Data Loader for RFC Europe
-# Implemented by AbsintheRed, based on SoI
-
-from CvPythonExtensions import *
-from CityMapData import CITIES_MAP
-from ProvinceMapData import PROVINCES_MAP
+from CoreFunctions import get_data_from_province_map, get_data_from_upside_down_map
+from CoreFunctions import plot as _plot
+from CoreFunctions import location as _location
 from CoreData import civilizations
+from CoreStructures import plots
 from LocationsData import LAKE_LOCATIONS
-
-gc = CyGlobalContext()
+from CityMapData import CITIES_MAP
 
 
 def setup():
     """Loads the data from RFCEMaps.py into appropriate objects within CvGameCoreDLL."""
+    update_province_id()
+    update_city_name()
+    update_lake_id()
 
-    # Region (province) maps
-    map = CyMap()
-    for y in range(len(PROVINCES_MAP)):
-        for x in range(len(PROVINCES_MAP[y])):
-            plot = map.plot(x, y)
-            if plot:
-                plot.setProvinceID(PROVINCES_MAP[y][x])
 
-    # City name maps
-    # currently neither the papal nor the default maps are added
+def update_province_id():
+    for plot in plots().all().entities():
+        plot.setProvinceID(get_data_from_province_map(plot))
+
+
+def update_city_name():
     for civ in civilizations().main():
-        for y, row in enumerate(CITIES_MAP[civ.key]):
-            for x, cell in enumerate(row):
-                plot = map.plot(x, len(CITIES_MAP[civ.key]) - 1 - y)
-                if plot:
-                    plot.setCityNameMap(civ.id, cell)
+        for plot in plots().all().entities():
+            value = get_data_from_upside_down_map(CITIES_MAP, civ.id, plot)
+            _plot(plot).setCityNameMap(civ.id, value)
 
-    # Lake name IDs
-    # first set all plots to -1
-    for y in range(len(PROVINCES_MAP)):
-        for x in range(len(PROVINCES_MAP[y])):
-            plot = map.plot(x, y)
-            if plot:
-                plot.setLakeNameID(-1)
-    # then we add the ID to the actual lake tiles
-    for name, locations in LAKE_LOCATIONS.items():
-        for location in locations:
-            plot = map.plot(*location)
-            if plot:
-                plot.setLakeNameID(name.value)
+
+def update_lake_id():
+    for plot in plots().all().entities():
+        for name, locations in LAKE_LOCATIONS.items():
+            if _location(plot) in locations:
+                value = name.value
+            else:
+                value = -1
+            plot.setLakeNameID(value)
