@@ -14,6 +14,17 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE enhancements:
 
+v1.6.4: This release fix a major issue with savegame
+
+- The game modifiers injected at the start of the game have been corrected, allowing existing saves to be loaded
+- Switch from Worldbuilder to Platybuilder (v4.17b)
+- Add the getProvinceID method for CyCity objects
+
+v1.6.3: This release adds two things:
+
+- Map centering happens with map making tech for consistency with the date display
+- Add missing Dawn of man texts for 1200AD scenario
+
 v1.6.2: This release contains lots of codebase refactoring, but it also coming with the following changes.
 
 - Map centering happens now with lateen sails tech
