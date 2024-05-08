@@ -32,7 +32,7 @@ import Stability
 import Plague
 import Crusades
 import Companies
-import DataLoader
+import Setup
 import Province
 import Mercenaries
 
@@ -198,7 +198,7 @@ class CvRFCEventHandler:
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        DataLoader.setup()
+        Setup.setup()
         data.setup()
         self.province.setup()
         self.rnf.setup()
@@ -852,7 +852,7 @@ class CvRFCEventHandler:
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
         data.load()  # edead: load & unpickle script data
-        DataLoader.setup()  # Absinthe: also needed on loading saved games
+        Setup.setup()  # Absinthe: also needed on loading saved games
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
