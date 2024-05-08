@@ -39,9 +39,10 @@ gc = CyGlobalContext()  # LOQ
 
 class GameBalance:
     def setBalanceParameters(self):
+        self.setProvinceTypes()
         self.setModifiers()
         self.setDiplomacyModifier()
-        self.setTechTimeline()
+        self.setTechTimelineModifier()
         self.setInitialBuilding()
         self.setBuildingPreferences()
         self.setUniquePowers()
@@ -50,6 +51,7 @@ class GameBalance:
         self.setHistoricalEnemies()
         self.setProvinceTypeParameters()
         self.setOtherParameters()
+        self.postAreas()
         self.set_starting_workers()
 
     def setModifiers(self):
@@ -130,13 +132,15 @@ class GameBalance:
         for civ1, civ2, value in DIPLOMACY_MODIFIERS:
             gc.setDiplomacyModifiers(civ1.value, civ2.value, value)
 
-    def setTechTimeline(self):
+    def setTechTimelineModifier(self):
         gc.setTimelineTechModifiers(
             9, 25, -50, 1, 100, 50
         )  # go between 10 times slower and 4 times faster
         # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
         # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
         # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
+
+    def setTechTimelineDate(self):
         for tech, turn in TIMELINE_TECH_MODIFIER:
             gc.setTimelineTechDateForTech(tech.value, year(turn))
 
