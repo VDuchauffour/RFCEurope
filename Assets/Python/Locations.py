@@ -4,13 +4,12 @@ from CoreFunctions import get_data_from_province_map, get_data_from_upside_down_
 from CoreFunctions import plot as _plot
 from CoreFunctions import location as _location
 from CoreData import civilizations
-from CoreStructures import year, plots
+from CoreStructures import plots
 from CoreTypes import Civ, PlagueType, ProvinceType, Religion, Technology
 from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
 from ProvinceMapData import PROVINCES_MAP
 from SettlerMapData import SETTLERS_MAP
-from TimelineData import TIMELINE_TECH_MODIFIER
 from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()
@@ -28,7 +27,6 @@ def init_values():
     update_lake_id()
     update_core()
     set_vizualization_areas()
-    set_tech_timeline_date()
 
 
 def init_player_variables():
@@ -129,8 +127,3 @@ def set_vizualization_areas():
     # hold down the alt key, and hover over the map
     gc.setCoreToPlot(gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
     gc.setNormalToPlot(gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
-
-
-def set_tech_timeline_date():
-    for tech, turn in TIMELINE_TECH_MODIFIER:
-        gc.setTimelineTechDateForTech(tech.value, year(turn))

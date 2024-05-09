@@ -33,6 +33,7 @@ import Plague
 import Crusades
 import Companies
 import Locations
+import Modifiers
 import Province
 import Mercenaries
 
@@ -199,6 +200,7 @@ class CvRFCEventHandler:
     def onGameStart(self, argsList):
         "Called at the start of the game"
         Locations.init_values()
+        Modifiers.init_values()
         data.setup()
         self.province.setup()
         self.rnf.setup()
@@ -853,6 +855,7 @@ class CvRFCEventHandler:
     def onLoadGame(self, argsList):
         data.load()  # edead: load & unpickle script data
         Locations.init_values()
+        Modifiers.init_values()
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
