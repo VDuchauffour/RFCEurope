@@ -18,6 +18,7 @@ gc = CyGlobalContext()
 def setup():
     init_player_variables()
     init_player_maps()
+    init_player_births()
     set_province_type_parameters()
 
 
@@ -57,7 +58,8 @@ def init_player_maps():
                 gc.setProvince(x, y, PROVINCES_MAP[y][x])
     gc.createProvinceCrossreferenceList()
 
-    # birth turns for the players, do not change this loop
+
+def init_player_births():
     for civ in civilizations().drop(Civ.BARBARIAN):
         gc.setStartingTurn(civ.id, civ.date.birth)
 
