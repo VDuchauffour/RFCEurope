@@ -849,10 +849,8 @@ def resetUHV(iPlayer):
 
 
 def clearPlague(iCiv):
-    for city in (
-        cities().owner(iCiv).filter(lambda c: c.hasBuilding(PlagueType.PLAGUE.value)).entities()
-    ):
-        city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+    for city in cities().owner(iCiv).building(PlagueType.PLAGUE).entities():
+        city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
 
 # TODO refacto with structure

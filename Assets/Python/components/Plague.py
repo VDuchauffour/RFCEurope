@@ -385,18 +385,8 @@ class Plague:
         pPlayer = gc.getPlayer(iPlayer)
         iHuman = human()
 
-        lInfectedCities = (
-            cities()
-            .owner(iPlayer)
-            .filter(lambda c: c.hasBuilding(PlagueType.PLAGUE.value))
-            .entities()
-        )
-        lNotInfectedCities = (
-            cities()
-            .owner(iPlayer)
-            .filter(lambda c: not c.hasBuilding(PlagueType.PLAGUE.value))
-            .entities()
-        )
+        lInfectedCities = cities().owner(iPlayer).building(PlagueType.PLAGUE).entities()
+        lNotInfectedCities = cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
 
         # first spread to close locations
         for city in lInfectedCities:
@@ -495,7 +485,7 @@ class Plague:
                 for iTradeRoute in range(city.getTradeRoutes()):
                     loopCity = city.getTradeCity(iTradeRoute)
                     if not loopCity.isNone():
-                        if not loopCity.hasBuilding(PlagueType.PLAGUE.value):
+                        if not loopCity.isHasRealBuilding(PlagueType.PLAGUE):
                             iOwner = loopCity.getOwner()
                             if iOwner == iPlayer:
                                 self.infectCity(loopCity)
@@ -535,9 +525,8 @@ class Plague:
                         )
                         <= 10
                     ]:
-                        if not targetCity.hasBuilding(
-                            PlagueType.PLAGUE.value
-                        ):  # might have changed since the beginning of the function
+                        if not targetCity.isHasRealBuilding(PlagueType.PLAGUE):
+                            # might have changed since the beginning of the function
                             self.infectCity(targetCity)
                             iInfections += 1
                             if iInfections >= iNumSpreads:
@@ -560,12 +549,8 @@ class Plague:
                 else:
                     iMaxNumInfections = 1
                 iInfections = 0
-                _cities = (
-                    cities()
-                    .owner(iPlayer)
-                    .filter(lambda c: not c.hasBuilding(PlagueType.PLAGUE.value))
-                    .entities()
-                )
+                _cities = cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
+                # TODO fix shuffle
                 random.shuffle(_cities)
                 for city in _cities:
                     if percentage_chance(20, strict=True):
@@ -575,21 +560,12 @@ class Plague:
                             break
 
     def infectCitiesNear(self, iPlayer, startingX, startingY):
-        cityList = [
-            city
-            for city in cities().owner(iPlayer).entities()
-            if not city.hasBuilding(PlagueType.PLAGUE.value)
-        ]
-        for city in cityList:
+        for city in cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities():
             if calculateDistance(city.getX(), city.getY(), startingX, startingY) <= 3:
                 self.infectCity(city)
 
     def preStopPlague(self, iPlayer, iPlagueCountDown):
-        cityList = [
-            city
-            for city in cities().owner(iPlayer).entities()
-            if city.hasBuilding(PlagueType.PLAGUE.value)
-        ]
+        cityList = cities().owner(iPlayer).building(PlagueType.PLAGUE).entities()
         if cityList:
             iRemoveModifier = 0
             iTimeModifier = iPlagueCountDown * 15
@@ -604,19 +580,20 @@ class Plague:
                     100 - iTimeModifier - iPopModifier + iHealthModifier - iRemoveModifier,
                     strict=True,
                 ):
-                    city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+                    city.setHasRealBuilding(PlagueType.PLAGUE, False)
                     iRemoveModifier += 5  # less chance for each city which already quit
 
     def stopPlague(self, iPlayer):
         self.setPlagueCountdown(iPlayer, -PLAGUE_IMMUNITY)
         for city in cities().owner(iPlayer).entities():
-            city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+            city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
-        if city.hasBuilding(PlagueType.PLAGUE.value):
+        if city.isHasRealBuilding(PlagueType.PLAGUE):
+            # TODO when plague will not kill units anymore, remove this
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-            if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
-                city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+            if city.getOwner() in [Civ.FRANCE, Civ.POPE] and turn() <= year(632):
+                city.setHasRealBuilding(PlagueType.PLAGUE, False)
                 return
 
             # only if it's not a recently born civ
@@ -627,7 +604,7 @@ class Plague:
                     if self.getPlagueCountdown(iNewOwner) <= 0:
                         self.spreadPlague(iNewOwner, -1)
                         for cityNear in cities().owner(iNewOwner).entities():
-                            if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
+                            if not cityNear.isHasRealBuilding(PlagueType.PLAGUE):
                                 if (
                                     calculateDistance(
                                         city.getX(), city.getY(), cityNear.getX(), cityNear.getY()
