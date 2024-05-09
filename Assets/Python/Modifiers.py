@@ -60,7 +60,7 @@ def set_modifiers():
         set_tech_preference_modifier(civ)
 
 
-def _setModifier(civ, modifier, function):
+def set_modifier(civ, modifier, function):
     """Modifiers and functions are tuple."""
     if modifier is not None:
         function(civ.id, *modifier)
@@ -74,8 +74,8 @@ def set_growth_modifier(civ):
     # 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
     human_modifier = civ.human.modifiers.get(Modifier.GROWTH)
     ai_modifier = civ.ai.modifiers.get(Modifier.GROWTH)
-    _setModifier(civ, human_modifier, gc.setGrowthModifiersHu)
-    _setModifier(civ, ai_modifier, gc.setGrowthModifiersAI)
+    set_modifier(civ, human_modifier, gc.setGrowthModifiersHu)
+    set_modifier(civ, ai_modifier, gc.setGrowthModifiersAI)
 
 
 def set_production_modifier(civ):
@@ -84,8 +84,8 @@ def set_production_modifier(civ):
     # 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
     human_modifier = civ.human.modifiers.get(Modifier.PRODUCTION)
     ai_modifier = civ.ai.modifiers.get(Modifier.PRODUCTION)
-    _setModifier(civ, human_modifier, gc.setProductionModifiersHu)
-    _setModifier(civ, ai_modifier, gc.setProductionModifiersAI)
+    set_modifier(civ, human_modifier, gc.setProductionModifiersHu)
+    set_modifier(civ, ai_modifier, gc.setProductionModifiersAI)
 
 
 def set_support_modifier(civ):
@@ -95,8 +95,8 @@ def set_support_modifier(civ):
     # note that the base for inflation is modified by turn number (among many other things)
     human_modifier = civ.human.modifiers.get(Modifier.SUPPORT)
     ai_modifier = civ.ai.modifiers.get(Modifier.SUPPORT)
-    _setModifier(civ, human_modifier, gc.setSupportModifiersHu)
-    _setModifier(civ, ai_modifier, gc.setSupportModifiersAI)
+    set_modifier(civ, human_modifier, gc.setSupportModifiersHu)
+    set_modifier(civ, ai_modifier, gc.setSupportModifiersAI)
 
 
 def set_city_cluster_modifier(civ):
@@ -109,7 +109,7 @@ def set_city_cluster_modifier(civ):
     # for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
     ai_modifier = civ.ai.modifiers.get(Modifier.CITY_CLUSTER)
     if ai_modifier is not None:
-        _setModifier(civ, ai_modifier, gc.setCityClusterAI)
+        set_modifier(civ, ai_modifier, gc.setCityClusterAI)
 
 
 def set_city_war_distance_modifier(civ):
