@@ -13,6 +13,7 @@ import CvAdvisorUtils
 from PyUtils import percentage_chance, rand, choice
 from RFCUtils import getBaseUnit, getUniqueUnit
 import Modifiers
+import Setup
 import random
 from Consts import MessageData
 from CoreData import civilizations, civilization
@@ -42,7 +43,8 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        Modifiers.init()
+        Setup.setup()
+        Modifiers.setup()
 
         self.bCtrl = False
         self.bShift = False

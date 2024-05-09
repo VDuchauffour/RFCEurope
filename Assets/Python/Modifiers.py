@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from Consts import WORLD_WIDTH, WORLD_HEIGHT
 from CoreTypes import (
     Modifier,
     Building,
@@ -9,7 +8,6 @@ from CoreTypes import (
     Civic,
     Colony,
     Feature,
-    PlagueType,
     Promotion,
     Terrain,
     ProvinceType,
@@ -21,7 +19,6 @@ from CoreTypes import (
     Unit,
     FaithPointBonusCategory,
 )
-from ProvinceMapData import PROVINCES_MAP
 from MiscData import (
     DIPLOMACY_MODIFIERS,
     HISTORICAL_ENEMIES,
@@ -29,15 +26,12 @@ from MiscData import (
     PROSECUTOR_UNITCLASS,
 )
 from TimelineData import DateTurn
-from SettlerMapData import SETTLERS_MAP
 from LocationsData import CITIES
-from WarMapData import WARS_MAP
 
-gc = CyGlobalContext()  # LOQ
+gc = CyGlobalContext()
 
 
-def init():
-    set_province_type()
+def setup():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
@@ -48,7 +42,6 @@ def init():
     set_religion_spread_factor()
     set_religion_benefit()
     set_historical_enemies()
-    set_province_type_parameters()
     set_other_parameters()
 
 
@@ -482,46 +475,3 @@ def set_other_parameters():
 
     # 3MiroMercs: set the merc promotion
     gc.setMercPromotion(Promotion.MERC.value)
-
-
-def set_province_type_parameters():
-    # How much culture should we get into a province of this type, ignore the war and settler values (0,0)
-    gc.setProvinceTypeParams(ProvinceType.NONE.value, 0, 0, 1, 3)  # 1/3 culture
-    gc.setProvinceTypeParams(ProvinceType.CONTESTED.value, 0, 0, 1, 1)  # no change to culture
-    gc.setProvinceTypeParams(ProvinceType.POTENTIAL.value, 0, 0, 1, 1)  # same as outer culture
-    gc.setProvinceTypeParams(ProvinceType.HISTORICAL.value, 0, 0, 2, 1)  # double-culture
-    gc.setProvinceTypeParams(ProvinceType.CORE.value, 0, 0, 3, 1)  # triple-culture
-
-
-def set_province_type():
-    # settlersMaps, DO NOT CHANGE THIS CODE
-    gc.setSizeNPlayers(
-        WORLD_WIDTH,
-        WORLD_HEIGHT,
-        civilizations().majors().len(),
-        civilizations().drop(Civ.BARBARIAN).len(),
-        len(Technology),
-        PlagueType.BUILDING_PLAGUE.value,
-        len(Religion),
-    )
-    for civ in civilizations().majors():
-        for y in range(WORLD_HEIGHT):
-            for x in range(WORLD_WIDTH):
-                gc.setSettlersMap(civ.id, y, x, SETTLERS_MAP[civ.key][y][x])
-                gc.setWarsMap(civ.id, y, x, WARS_MAP[civ.key][y][x])
-
-    for y in range(WORLD_HEIGHT):
-        for x in range(WORLD_WIDTH):
-            if PROVINCES_MAP[y][x] > -1:
-                # "no province" of ocean is settled different than -1, set only non-negative values,
-                # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
-                # "no-province" is returned as -1 via the Cy interface
-                gc.setProvince(x, y, PROVINCES_MAP[y][x])
-    gc.createProvinceCrossreferenceList()  # make sure to call this AFTER setting all the Province entries
-
-    # set the Number of Provinces, call this before you set any AI or culture modifiers
-    gc.setProvinceTypeNumber(len(ProvinceType))
-
-    # birth turns for the players, do not change this loop
-    for civ in civilizations().drop(Civ.BARBARIAN):
-        gc.setStartingTurn(civ.id, civ.date.birth)

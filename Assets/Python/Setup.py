@@ -1,24 +1,76 @@
 from CvPythonExtensions import CyGlobalContext
-from CoreFunctions import get_data_from_province_map, get_data_from_upside_down_map
+from Consts import WORLD_HEIGHT, WORLD_WIDTH
+from CoreFunctions import get_data_from_province_map, get_data_from_upside_down_map, location
 from CoreFunctions import plot as _plot
 from CoreFunctions import location as _location
 from CoreData import civilizations
 from CoreStructures import year, plots
+from CoreTypes import Civ, PlagueType, ProvinceType, Religion, Technology
 from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
+from ProvinceMapData import PROVINCES_MAP
+from SettlerMapData import SETTLERS_MAP
 from TimelineData import TIMELINE_TECH_MODIFIER
+from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()
 
 
 def setup():
-    """Loads the data from RFCEMaps.py into appropriate objects within CvGameCoreDLL."""
+    init_player_variables()
+    init_player_maps()
+    set_province_type_parameters()
+
+
+def init_values():
     update_province_id()
     update_city_name()
     update_lake_id()
     update_core()
     set_vizualization_areas()
     set_tech_timeline_date()
+
+
+def init_player_variables():
+    gc.setSizeNPlayers(
+        WORLD_WIDTH,
+        WORLD_HEIGHT,
+        civilizations().majors().len(),
+        civilizations().drop(Civ.BARBARIAN).len(),
+        len(Technology),
+        PlagueType.BUILDING_PLAGUE.value,
+        len(Religion),
+    )
+    # set the Number of Provinces, call this before you set any AI or culture modifiers
+    gc.setProvinceTypeNumber(len(ProvinceType))
+
+
+def init_player_maps():
+    for civ in civilizations().majors():
+        for plot in plots().all().entities():
+            x, y = location(plot)
+            gc.setSettlersMap(civ.id, y, x, SETTLERS_MAP[civ.key][y][x])
+            gc.setWarsMap(civ.id, y, x, WARS_MAP[civ.key][y][x])
+
+    # for plot in plots().all().filter(lambda p: get_data_from_province_map(p) > -1).entities():
+    for y in range(WORLD_HEIGHT):
+        for x in range(WORLD_WIDTH):
+            if PROVINCES_MAP[y][x] > -1:
+                gc.setProvince(x, y, PROVINCES_MAP[y][x])
+    gc.createProvinceCrossreferenceList()
+
+    # birth turns for the players, do not change this loop
+    for civ in civilizations().drop(Civ.BARBARIAN):
+        gc.setStartingTurn(civ.id, civ.date.birth)
+
+
+def set_province_type_parameters():
+    # How much culture should we get into a province of this type, ignore the war and settler values (0,0)
+    gc.setProvinceTypeParams(ProvinceType.NONE.value, 0, 0, 1, 3)  # 1/3 culture
+    gc.setProvinceTypeParams(ProvinceType.CONTESTED.value, 0, 0, 1, 1)  # no change to culture
+    gc.setProvinceTypeParams(ProvinceType.POTENTIAL.value, 0, 0, 1, 1)  # same as outer culture
+    gc.setProvinceTypeParams(ProvinceType.HISTORICAL.value, 0, 0, 2, 1)  # double-culture
+    gc.setProvinceTypeParams(ProvinceType.CORE.value, 0, 0, 3, 1)  # triple-culture
 
 
 def update_province_id():

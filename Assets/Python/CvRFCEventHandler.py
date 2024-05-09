@@ -198,7 +198,7 @@ class CvRFCEventHandler:
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        Setup.setup()
+        Setup.init_values()
         data.setup()
         self.province.setup()
         self.rnf.setup()
@@ -852,7 +852,7 @@ class CvRFCEventHandler:
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
         data.load()  # edead: load & unpickle script data
-        Setup.setup()  # Absinthe: also needed on loading saved games
+        Setup.init_values()
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
