@@ -1467,14 +1467,26 @@ class Cities(Locations):
     def religion(self, identifier):
         return self.filter(lambda city: city.isHasReligion(identifier))
 
+    def not_religion(self, identifier):
+        return self.filter(lambda city: not city.isHasReligion(identifier))
+
     def corporation(self, identifier):
         return self.filter(lambda city: city.isHasCorporation(identifier))
+
+    def not_corporation(self, identifier):
+        return self.filter(lambda city: not city.isHasCorporation(identifier))
 
     def building(self, identifier):
         return self.filter(lambda city: city.isHasRealBuilding(identifier))
 
+    def not_building(self, identifier):
+        return self.filter(lambda city: not city.isHasRealBuilding(identifier))
+
     def building_effect(self, identifier):
         return self.filter(lambda city: city.isHasBuildingEffect(identifier))
+
+    def not_building_effect(self, identifier):
+        return self.filter(lambda city: not city.isHasBuildingEffect(identifier))
 
     def coastal(self, value=10):
         return self.filter(lambda city: city.isCoastal(value))
