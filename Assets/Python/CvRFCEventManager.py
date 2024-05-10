@@ -1,5 +1,3 @@
-# Rhye's and Fall of Civilization: Europe - Event manager
-
 import CvEventManager
 import CvRFCEventHandler
 import RiseAndFall
@@ -47,6 +45,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
     def __init__(self, *args, **kwargs):
         super(CvRFCEventManager, self).__init__(*args, **kwargs)
         # map the initial EventHandlerMap values into the new data structure
+
         for eventType, eventHandler in self.EventHandlerMap.iteritems():
             self.setEventHandler(eventType, eventHandler)
 

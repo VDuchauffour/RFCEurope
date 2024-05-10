@@ -14,6 +14,7 @@ from CvPythonExtensions import *
 
 normalEventManager = CvRFCEventManager.CvRFCEventManager()
 
+import Handlers  # noqa: E402, F401
 
 def getEventManager():
     return normalEventManager

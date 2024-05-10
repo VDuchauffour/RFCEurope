@@ -44,9 +44,6 @@ def setup():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
-
-
-def init_values():
     set_tech_timeline_date()
 
 
