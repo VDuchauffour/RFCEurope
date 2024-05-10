@@ -231,6 +231,15 @@ class CvRFCEventHandler:
 
         return 0
 
+    def onPreSave(self, argsList):
+        "called before a game is actually saved"
+        data.save()  # edead: pickle & save script data
+
+    # This method creates a new instance of the MercenaryUtils class to be used later
+    def onLoadGame(self, argsList):
+        data.load()  # edead: load & unpickle script data
+        Locations.init_values()
+        Modifiers.init_values()
     def onCityAcquired(self, argsList):
         "City Acquired"
         owner, playerType, city, bConquest, bTrade = argsList
@@ -847,15 +856,6 @@ class CvRFCEventHandler:
             self.rel.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
 
-    def onPreSave(self, argsList):
-        "called before a game is actually saved"
-        data.save()  # edead: pickle & save script data
-
-    # This method creates a new instance of the MercenaryUtils class to be used later
-    def onLoadGame(self, argsList):
-        data.load()  # edead: load & unpickle script data
-        Locations.init_values()
-        Modifiers.init_values()
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
