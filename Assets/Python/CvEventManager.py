@@ -12,7 +12,8 @@ import CvTopCivs
 import CvAdvisorUtils
 from PyUtils import percentage_chance, rand, choice
 from RFCUtils import getBaseUnit, getUniqueUnit
-import GameBalance
+import Modifiers
+import Locations
 import random
 from Consts import MessageData
 from CoreData import civilizations, civilization
@@ -29,7 +30,6 @@ import CvPlatyBuilderScreen
 
 ## Ultrapack ##
 
-balance = GameBalance.GameBalance()
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
@@ -43,7 +43,8 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        balance.setBalanceParameters()
+        Locations.setup()
+        Modifiers.setup()
 
         self.bCtrl = False
         self.bShift = False
@@ -412,28 +413,10 @@ class CvEventManager:
 
     def onLoadGame(self, argsList):
         CvAdvisorUtils.resetNoLiberateCities()
-        # Absinthe: separate visualization function for spawn and respawn areas
-        # 			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
-        balance.setTechTimelineDate()
-        gc.setCoreToPlot(
-            gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY")
-        )  # hold down the shift key, and hover over the map
-        gc.setNormalToPlot(
-            gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")
-        )  # hold down the alt key, and hover over the map
         return 0
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        balance.setTechTimelineDate()
-        # Absinthe: separate visualization function for spawn and respawn areas
-        # 			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
-        gc.setCoreToPlot(
-            gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY")
-        )  # hold down the shift key, and hover over the map
-        gc.setNormalToPlot(
-            gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")
-        )  # hold down the alt key, and hover over the map
 
         # Rhye - Dawn of Man must appear in late starts too
         if (
