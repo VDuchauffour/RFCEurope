@@ -32,8 +32,8 @@ from LocationsData import CITIES
 gc = CyGlobalContext()
 
 
-def init():
-    """Run in Handlers when the game starts."""
+
+def setup():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
@@ -45,9 +45,6 @@ def init():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
-
-
-def setup():
     set_tech_timeline_date()
 
 

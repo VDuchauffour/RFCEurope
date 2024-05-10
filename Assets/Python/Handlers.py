@@ -44,4 +44,3 @@ import UniquePowers
 # import Wonders
 
 Locations.init()
-Modifiers.init()
