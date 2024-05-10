@@ -27,7 +27,6 @@ def setup():
     update_province_id()
     update_city_name()
     update_lake_id()
-    init_player_births()
     update_core()
     set_vizualization_areas()
 
@@ -62,10 +61,6 @@ def init_provinces():
                 gc.setProvince(x, y, PROVINCES_MAP[y][x])
     gc.createProvinceCrossreferenceList()
 
-
-def init_player_births():
-    for civ in civilizations().drop(Civ.BARBARIAN):
-        gc.setStartingTurn(civ.id, civ.date.birth)
 
 
 def set_province_type_parameters():

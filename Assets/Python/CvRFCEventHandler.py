@@ -35,6 +35,7 @@ import Companies
 import Locations
 import Modifiers
 import Province
+import Civilizations
 import Mercenaries
 
 from Scenario import get_scenario
@@ -201,6 +202,7 @@ class CvRFCEventHandler:
         "Called at the start of the game"
         Locations.setup()
         Modifiers.setup()
+        Civilizations.setup()
 
         data.setup()
         self.province.setup()
@@ -241,6 +243,7 @@ class CvRFCEventHandler:
         data.load()  # edead: load & unpickle script data
         Locations.setup()
         Modifiers.setup()
+        Civilizations.setup()
 
     def onCityAcquired(self, argsList):
         "City Acquired"
