@@ -16,10 +16,14 @@ gc = CyGlobalContext()
 
 
 def init():
+    """Run in Handlers when the game starts."""
     init_player_variables()
     init_player_maps()
     init_provinces()
     set_province_type_parameters()
+
+
+def setup():
     update_province_id()
     update_city_name()
     update_lake_id()

@@ -199,8 +199,8 @@ class CvRFCEventHandler:
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        Locations.init()
-        Modifiers.init()
+        Locations.setup()
+        Modifiers.setup()
 
         data.setup()
         self.province.setup()
@@ -239,8 +239,8 @@ class CvRFCEventHandler:
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
         data.load()  # edead: load & unpickle script data
-        Locations.init()
-        Modifiers.init()
+        Locations.setup()
+        Modifiers.setup()
 
     def onCityAcquired(self, argsList):
         "City Acquired"

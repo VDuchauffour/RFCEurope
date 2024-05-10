@@ -42,3 +42,6 @@ import Stability
 import UniquePowers
 # import Victories
 # import Wonders
+
+Locations.init()
+Modifiers.init()
