@@ -3,7 +3,14 @@ line-length = 99
 skip_magic_trailing_comma = true
 target-version = ["py27"]
 force-exclude = """
-Assets/Python/data/maps/
+/(
+  | Assets/Python/data/maps/
+  | Assets/Python/BUFFY/
+  | Assets/Python/BUG/
+  | Assets/Python/Contrib/
+  | Assets/Python/Screens/
+  | Assets/Python/pyHelper/
+)
 """
 
 [tool.ruff]
@@ -16,12 +23,21 @@ select = [
 ]
 ignore = [
   "E501",
+  "E722", # bare except are okay
   "F841", # unused variables are okay
   "F402", # shadowing an import with loop variables is okay
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
-extend-exclude = ["Docs/Tools/*.py", "Assets/Python/data/maps/*.py"]
+extend-exclude = [
+  "Docs/Tools/*.py",
+  "Assets/Python/data/maps/*.py",
+  "Assets/Python/BUFFY/",
+  "Assets/Python/BUG/",
+  "Assets/Python/Contrib/",
+  "Assets/Python/Screens/",
+  "Assets/Python/pyHelper/",
+]
 target-version = "py37"
 
 [tool.pyright]
@@ -37,6 +53,10 @@ executionEnvironments = [
     "Assets/Python/EntryPoints",
     "Assets/Python/pyWB",
     "Assets/Python/screens",
+    "Assets/Python/BUFFY/",
+    "Assets/Python/BUG/",
+    "Assets/Python/Contrib/",
+    "Assets/Python/pyHelper/",
     # Folders from Sid Meier's Civilization IV Beyond the Sword/Beyond the Sword/Assets/Python
     "../../Assets/Python",
     "../../Assets/Python/EntryPoints",
