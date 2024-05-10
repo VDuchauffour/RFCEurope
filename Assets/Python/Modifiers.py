@@ -32,7 +32,7 @@ from LocationsData import CITIES
 gc = CyGlobalContext()
 
 
-def setup():
+def init():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
@@ -44,9 +44,6 @@ def setup():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
-
-
-def init_values():
     set_tech_timeline_date()
 
 

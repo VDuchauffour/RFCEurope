@@ -4,8 +4,6 @@ import RiseAndFall
 import Crusades
 import Religions
 import Barbs
-import Modifiers
-import Locations
 
 
 class CvRFCEventManager(CvEventManager.CvEventManager, object):
@@ -47,8 +45,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
     def __init__(self, *args, **kwargs):
         super(CvRFCEventManager, self).__init__(*args, **kwargs)
         # map the initial EventHandlerMap values into the new data structure
-        Locations.setup()
-        Modifiers.setup()
 
         for eventType, eventHandler in self.EventHandlerMap.iteritems():
             self.setEventHandler(eventType, eventHandler)

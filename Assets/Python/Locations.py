@@ -15,14 +15,11 @@ from WarMapData import WARS_MAP
 gc = CyGlobalContext()
 
 
-def setup():
+def init():
     init_player_variables()
     init_player_maps()
     init_provinces()
     set_province_type_parameters()
-
-
-def init_values():
     update_province_id()
     update_city_name()
     update_lake_id()
