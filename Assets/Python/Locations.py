@@ -18,7 +18,7 @@ gc = CyGlobalContext()
 def setup():
     init_player_variables()
     init_player_maps()
-    init_player_births()
+    init_provinces()
     set_province_type_parameters()
 
 
@@ -26,6 +26,7 @@ def init_values():
     update_province_id()
     update_city_name()
     update_lake_id()
+    init_player_births()
     update_core()
     set_vizualization_areas()
 
@@ -51,6 +52,8 @@ def init_player_maps():
             gc.setSettlersMap(civ.id, y, x, SETTLERS_MAP[civ.key][y][x])
             gc.setWarsMap(civ.id, y, x, WARS_MAP[civ.key][y][x])
 
+
+def init_provinces():
     # for plot in plots().all().filter(lambda p: get_data_from_province_map(p) > -1).entities():
     for y in range(WORLD_HEIGHT):
         for x in range(WORLD_WIDTH):
