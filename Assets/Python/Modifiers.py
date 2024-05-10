@@ -32,7 +32,6 @@ from LocationsData import CITIES
 gc = CyGlobalContext()
 
 
-
 def setup():
     set_modifiers()
     set_diplomacy_modifier()
