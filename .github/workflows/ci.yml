@@ -2,9 +2,6 @@
 name: CI Pipeline
 
 on:
-  push:
-    paths:
-      - "Assets/Python/**"
   pull_request:
     paths:
       - "Assets/Python/**"
