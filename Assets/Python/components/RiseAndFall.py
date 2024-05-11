@@ -73,7 +73,6 @@ from CoreTypes import (
     PlayerType,
     Scenario,
     Religion,
-    Specialist,
     Terrain,
     Feature,
     Improvement,
@@ -85,6 +84,7 @@ from CoreTypes import (
 )
 from CoreFunctions import event_popup, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
+from Wonders import leaning_tower_effect
 
 gc = CyGlobalContext()
 rel = Religions.Religions()
@@ -468,7 +468,7 @@ class RiseAndFall:
 
             set_starting_faith()
             set_starting_diplomacy_1200AD()
-            self.LeaningTowerGP()
+            leaning_tower_effect()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
             # Temporarily all civs get the same starting techs as Aragon
@@ -2276,9 +2276,3 @@ class RiseAndFall:
                 other = civilization(contact)
                 if other.is_alive() and not civ.isHasMet(other.teamtype):
                     civ.meet(other.teamtype, bMeet)
-
-    def LeaningTowerGP(self):
-        iGP = rand(7)
-        pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
-        iSpecialist = Specialist.GREAT_PROPHET.value + iGP
-        pFlorentia.setFreeSpecialistCount(iSpecialist, 1)
