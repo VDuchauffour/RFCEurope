@@ -1,13 +1,13 @@
 from CvPythonExtensions import *
 from Civilizations import (
-    assign1200ADtechs,
-    assignGold,
-    assignTechs,
-    create1200ADstartingUnits,
-    create500ADstartingUnits,
+    set_starting_techs_1200AD,
+    set_starting_gold,
+    set_starting_techs,
+    create_starting_units_1200AD,
+    create_starting_units_500AD,
     create_starting_workers,
-    setDiplo1200AD,
-    setStartingFaith,
+    set_starting_diplomacy_1200AD,
+    set_starting_faith,
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
@@ -448,13 +448,13 @@ class RiseAndFall:
 
         iHuman = human()
         if get_scenario() == Scenario.i500AD:
-            create500ADstartingUnits()
+            create_starting_units_500AD()
             for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
                 self.showArea(civ)
                 self.initContact(civ)
 
         else:
-            create1200ADstartingUnits()
+            create_starting_units_1200AD()
             for civ in (
                 civilizations()
                 .main()
@@ -464,18 +464,18 @@ class RiseAndFall:
                 self.showArea(civ)
                 self.initContact(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
-                assign1200ADtechs(civ)
+                set_starting_techs_1200AD(civ)
 
-            setStartingFaith()
-            setDiplo1200AD()
+            set_starting_faith()
+            set_starting_diplomacy_1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
             # Temporarily all civs get the same starting techs as Aragon
-            assign1200ADtechs(Civ.POPE)
+            set_starting_techs_1200AD(Civ.POPE)
             cru.do1200ADCrusades()
 
-        assignGold()
+        set_starting_gold()
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -1754,7 +1754,7 @@ class RiseAndFall:
                         killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
                     else:
                         flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False)
-                assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
                 self.setFlipsDelay(iCiv, iFlipsDelay)  # save
@@ -1830,7 +1830,7 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
-                assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
             flipUnitsInArea(
@@ -1876,7 +1876,7 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
-                assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
             else:
@@ -1887,7 +1887,7 @@ class RiseAndFall:
                     create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
                         self.ottomanInvasion(iCiv, (77, 23))
-                    assignTechs(iCiv)
+                    set_starting_techs(iCiv)
                     setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     clearPlague(iCiv)
             flipUnitsInArea(

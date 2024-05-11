@@ -19,14 +19,14 @@ def init_player_births():
         gc.setStartingTurn(civ.id, civ.date.birth)
 
 
-def assignGold():
+def set_starting_gold():
     for civ in civilizations():
         condition = civ.scenario.get("condition")
         if condition is not None:
             civ.player.changeGold(condition.gold)
 
 
-def setStartingFaith():
+def set_starting_faith():
     for civ in civilizations():
         condition = civ.scenario.get("condition")
         if condition is not None:
@@ -37,7 +37,7 @@ def create_starting_workers(iCiv, tPlot):
     make_units(iCiv, Unit.WORKER, tPlot, civilization(iCiv).initial.workers)
 
 
-def create500ADstartingUnits():
+def create_starting_units_500AD():
     make_units(Civ.FRANCE, Unit.SETTLER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 3)
     make_units(Civ.FRANCE, Unit.ARCHER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 4)
     make_units(Civ.FRANCE, Unit.AXEMAN, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 5)
@@ -68,7 +68,7 @@ def create500ADstartingUnits():
         make_unit(iHuman, Unit.SPEARMAN, tStart)
 
 
-def create1200ADstartingUnits():
+def create_starting_units_1200AD():
     iHuman = human()
     if civilization(iHuman).date.birth > year(1200):
         # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
@@ -102,7 +102,7 @@ def create1200ADstartingUnits():
         make_unit(iHuman, Unit.MACEMAN, tStart)
 
 
-def assignTechs(iCiv):
+def set_starting_techs(iCiv):
     civ = civilization(iCiv)
     techs = civ.initial.get("tech")
     if techs is not None:
@@ -110,7 +110,7 @@ def assignTechs(iCiv):
             civ.add_tech(tech)
 
 
-def assign1200ADtechs(iCiv):
+def set_starting_techs_1200AD(iCiv):
     # As a temporary solution, everyone gets Aragon's starting techs
     civ = civilization(iCiv)
     for tech in TECH_STARTERS_1200AD:
@@ -120,6 +120,6 @@ def assign1200ADtechs(iCiv):
         civ.add_tech(Technology.ARABIC_KNOWLEDGE)
 
 
-def setDiplo1200AD():
+def set_starting_diplomacy_1200AD():
     change_attitude_extra_between_civ(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
     change_attitude_extra_between_civ(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)
