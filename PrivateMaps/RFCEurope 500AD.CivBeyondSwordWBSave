@@ -27990,7 +27990,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=24
-	ImprovementType=IMPROVEMENT_CITY_RUINS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -41539,7 +41538,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=11
-	ImprovementType=IMPROVEMENT_CITY_RUINS
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
