@@ -1720,6 +1720,8 @@ class RiseAndFall:
                     (tCapital[0] - 1, tCapital[1] - 1), (tCapital[0] + 1, tCapital[1] + 1)
                 )
                 self.createStartingUnits(iCiv, (tCapital[0], tCapital[1]))
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 # Absinthe: there was another mistake here with barbarian and indy unit flips...
                 # 			we don't simply want to check an area based on distance from capital, as it might lead out from the actual spawn area
                 # 			so we only check plots which are in the core area: in 4 distance for barb units, 2 distance for indies
@@ -1831,6 +1833,8 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
@@ -1877,6 +1881,8 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
@@ -1885,6 +1891,8 @@ class RiseAndFall:
                 if plotList:
                     plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
+                    reveal_areas(iCiv)
+                    set_initial_contacts(iCiv)
                     create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
                         self.ottomanInvasion(iCiv, (77, 23))
@@ -2257,6 +2265,3 @@ class RiseAndFall:
             if tSeaPlot:
                 make_units(iCiv, Unit.WORKBOAT, tSeaPlot, 2)
                 make_units(iCiv, Unit.GALLEON, tSeaPlot, 2)
-
-        reveal_areas(iCiv)
-        set_initial_contacts(iCiv)
