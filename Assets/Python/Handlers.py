@@ -3,9 +3,11 @@
 import StoredData
 import Locations
 
-# import SettlerMaps
-# import WarMaps
-# import RegionMap
+import LocationsData
+import CityMapData
+import ProvinceMapData
+import SettlerMapData
+import WarMapData
 import CityNameManager
 import Civilizations
 import Modifiers
