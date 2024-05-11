@@ -1,4 +1,14 @@
 from CvPythonExtensions import *
+from Civilizations import (
+    set_starting_techs_1200AD,
+    set_starting_gold,
+    set_starting_techs,
+    create_starting_units_1200AD,
+    create_starting_units_500AD,
+    create_starting_workers,
+    set_starting_diplomacy_1200AD,
+    set_starting_faith,
+)
 from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreStructures import (
@@ -15,6 +25,7 @@ from CoreStructures import (
     cities,
     plots,
 )
+from History import ottoman_invasion
 from PyUtils import chance, percentage, percentage_chance, rand, choice
 import Province
 from RFCUtils import (
@@ -72,7 +83,7 @@ from CoreTypes import (
     Technology,
     Unit,
 )
-from CoreFunctions import event_popup, get_civ_by_id, location, message, text
+from CoreFunctions import event_popup, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 
 gc = CyGlobalContext()
@@ -437,13 +448,13 @@ class RiseAndFall:
 
         iHuman = human()
         if get_scenario() == Scenario.i500AD:
-            self.create500ADstartingUnits()
+            create_starting_units_500AD()
             for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
                 self.showArea(civ)
                 self.initContact(civ)
 
         else:
-            self.create1200ADstartingUnits()
+            create_starting_units_1200AD()
             for civ in (
                 civilizations()
                 .main()
@@ -453,29 +464,18 @@ class RiseAndFall:
                 self.showArea(civ)
                 self.initContact(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
-                self.assign1200ADtechs(civ)
-            self.setStartingFaith()
-            self.setDiplo1200AD()
+                set_starting_techs_1200AD(civ)
+
+            set_starting_faith()
+            set_starting_diplomacy_1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
             # Temporarily all civs get the same starting techs as Aragon
-            self.assign1200ADtechs(Civ.POPE.value)
+            set_starting_techs_1200AD(Civ.POPE)
             cru.do1200ADCrusades()
 
-        self.assignGold()
-
-    def assignGold(self):
-        for civ in civilizations():
-            condition = civ.scenario.get("condition")
-            if condition is not None:
-                civ.player.changeGold(condition.gold)
-
-    def setStartingFaith(self):
-        for civ in civilizations():
-            condition = civ.scenario.get("condition")
-            if condition is not None:
-                civ.player.setFaith(condition.faith)
+        set_starting_gold()
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -1754,7 +1754,7 @@ class RiseAndFall:
                         killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
                     else:
                         flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False)
-                self.assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
                 self.setFlipsDelay(iCiv, iFlipsDelay)  # save
@@ -1801,9 +1801,9 @@ class RiseAndFall:
 
             if gc.getPlayer(iCiv).getNumCities() > 0:
                 capital = gc.getPlayer(iCiv).getCapitalCity()
-                self.create_starting_workers(iCiv, (capital.getX(), capital.getY()))
+                create_starting_workers(iCiv, (capital.getX(), capital.getY()))
                 if iCiv == Civ.OTTOMAN:
-                    self.ottomanInvasion(iCiv, (77, 23))
+                    ottoman_invasion(iCiv, (77, 23))
 
             if iNumHumanCitiesToConvert > 0:
                 self.flipPopup(iCiv, tTopLeft, tBottomRight)
@@ -1830,7 +1830,7 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
-                self.assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
             flipUnitsInArea(
@@ -1876,7 +1876,7 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
-                self.assignTechs(iCiv)
+                set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
             else:
@@ -1884,10 +1884,10 @@ class RiseAndFall:
                 if plotList:
                     plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
-                    self.create_starting_workers(iCiv, plot)
+                    create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
                         self.ottomanInvasion(iCiv, (77, 23))
-                    self.assignTechs(iCiv)
+                    set_starting_techs(iCiv)
                     setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     clearPlague(iCiv)
             flipUnitsInArea(
@@ -2260,103 +2260,6 @@ class RiseAndFall:
         self.showArea(iCiv)
         self.initContact(iCiv)
 
-    def create1200ADstartingUnits(self):
-        iHuman = human()
-        if civilization(iHuman).date.birth > year(
-            1200
-        ):  # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
-            tStart = civilization(iHuman).location.capital
-
-            # Absinthe: changes in the unit positions, in order to prohibit these contacts in 1200AD
-            if iHuman == Civ.SWEDEN:  # contact with Denmark
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.SWEDEN][0] - 2,
-                    CIV_CAPITAL_LOCATIONS[Civ.SWEDEN][1] + 2,
-                )
-            elif iHuman == Civ.PRUSSIA:  # contact with Poland
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.PRUSSIA][0] + 1,
-                    CIV_CAPITAL_LOCATIONS[Civ.PRUSSIA][1] + 1,
-                )
-            elif iHuman == Civ.LITHUANIA:  # contact with Kiev
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.LITHUANIA][0] - 2,
-                    CIV_CAPITAL_LOCATIONS[Civ.LITHUANIA][1],
-                )
-            elif iHuman == Civ.AUSTRIA:  # contact with Germany and Hungary
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.AUSTRIA][0] - 3,
-                    CIV_CAPITAL_LOCATIONS[Civ.AUSTRIA][1] - 1,
-                )
-            elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
-                tStart = (98, 18)
-
-            make_unit(iHuman, Unit.SETTLER, tStart)
-            make_unit(iHuman, Unit.MACEMAN, tStart)
-
-    def ottomanInvasion(self, iCiv, tPlot):
-        # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
-        make_units(iCiv, Unit.LONGBOWMAN, tPlot, 2)
-        make_units(iCiv, Unit.MACEMAN, tPlot, 2)
-        make_units(iCiv, Unit.KNIGHT, tPlot, 3)
-        make_units(iCiv, Unit.TURKEY_GREAT_BOMBARD, tPlot, 2)
-        make_units(iCiv, Unit.ISLAMIC_MISSIONARY, tPlot, 2)
-
-    def create500ADstartingUnits(self):
-        make_units(Civ.FRANCE, Unit.SETTLER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 3)
-        make_units(Civ.FRANCE, Unit.ARCHER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 4)
-        make_units(Civ.FRANCE, Unit.AXEMAN, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 5)
-        make_unit(Civ.FRANCE, Unit.SCOUT, CIV_CAPITAL_LOCATIONS[Civ.FRANCE])
-        make_units(Civ.FRANCE, Unit.WORKER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
-        make_units(Civ.FRANCE, Unit.CATHOLIC_MISSIONARY, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
-
-        iHuman = human()
-        if civilization(iHuman).date.birth > year(
-            500
-        ):  # so everyone apart from Byzantium and France
-            tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)]
-
-            # Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
-            if iHuman == Civ.ARABIA:  # contact with Byzantium
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.ARABIA][0],
-                    CIV_CAPITAL_LOCATIONS[Civ.ARABIA][1] - 10,
-                )
-            elif iHuman == Civ.BULGARIA:  # contact with Byzantium
-                tStart = (
-                    CIV_CAPITAL_LOCATIONS[Civ.BULGARIA][0],
-                    CIV_CAPITAL_LOCATIONS[Civ.BULGARIA][1] + 1,
-                )
-            elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
-                tStart = (97, 23)
-
-            make_unit(iHuman, Unit.SETTLER, tStart)
-            make_unit(iHuman, Unit.SPEARMAN, tStart)
-
-    def assign1200ADtechs(self, iCiv):
-        # As a temporary solution, everyone gets Aragon's starting techs
-        teamCiv = gc.getTeam(iCiv)
-        for iTech in range(Technology.FARRIERS.value + 1):
-            teamCiv.setHasTech(iTech, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.BLAST_FURNACE.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.CODE_OF_LAWS.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.LITERATURE.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.LATEEN_SAILS.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.MAPMAKING.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.ARISTOCRACY.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.PLATE_ARMOR.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.GOTHIC_ARCHITECTURE.value, True, iCiv, False, False)
-        teamCiv.setHasTech(Technology.SIEGE_ENGINES.value, True, iCiv, False, False)
-        if iCiv in [Civ.ARABIA.value, Civ.MOROCCO.value]:
-            teamCiv.setHasTech(Technology.ARABIC_KNOWLEDGE.value, True, iCiv, False, False)
-
-    def assignTechs(self, iCiv):
-        civ = civilization(iCiv)
-        techs = civ.initial.get("tech")
-        if techs is not None:
-            for tech in techs:
-                civ.add_tech(tech)
-
     def showRect(self, iCiv, area):
         for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
             plot.setRevealed(teamtype(iCiv), True, False, -1)
@@ -2379,14 +2282,3 @@ class RiseAndFall:
         pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
         iSpecialist = Specialist.GREAT_PROPHET.value + iGP
         pFlorentia.setFreeSpecialistCount(iSpecialist, 1)
-
-    def setDiplo1200AD(self):
-        self.changeAttitudeExtra(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
-        self.changeAttitudeExtra(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)
-
-    def changeAttitudeExtra(self, iPlayer1, iPlayer2, iValue):
-        gc.getPlayer(iPlayer1).AI_changeAttitudeExtra(iPlayer2, iValue)
-        gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
-
-    def create_starting_workers(self, iCiv, tPlot):
-        make_units(iCiv, Unit.WORKER, tPlot, civilization(iCiv).initial.workers)

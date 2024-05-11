@@ -14,6 +14,36 @@ from CoreTypes import (
     Wonder,
 )
 
+TECH_STARTERS_1200AD = [
+    Technology.CALENDAR,
+    Technology.ARCHITECTURE,
+    Technology.BRONZE_CASTING,
+    Technology.THEOLOGY,
+    Technology.MANORIALISM,
+    Technology.STIRRUP,
+    Technology.ENGINEERING,
+    Technology.CHAIN_MAIL,
+    Technology.ART,
+    Technology.MONASTICISM,
+    Technology.VASSALAGE,
+    Technology.ASTROLABE,
+    Technology.MACHINERY,
+    Technology.VAULTED_ARCHES,
+    Technology.MUSIC,
+    Technology.HERBAL_MEDICINE,
+    Technology.FEUDALISM,
+    Technology.FARRIERS,
+    Technology.MAPMAKING,
+    Technology.BLAST_FURNACE,
+    Technology.SIEGE_ENGINES,
+    Technology.GOTHIC_ARCHITECTURE,
+    Technology.LITERATURE,
+    Technology.CODE_OF_LAWS,
+    Technology.ARISTOCRACY,
+    Technology.LATEEN_SAILS,
+    Technology.PLATE_ARMOR,
+]
+
 TECH_STARTERS = [
     [
         Technology.CALENDAR,

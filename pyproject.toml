@@ -2,7 +2,7 @@
 line-length = 99
 skip_magic_trailing_comma = true
 target-version = ["py27"]
-force-exclude = """
+extend-exclude = """
 /(
   | Assets/Python/data/maps/
   | Assets/Python/BUFFY/
