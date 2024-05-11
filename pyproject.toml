@@ -8,8 +8,8 @@ extend-exclude = """
   | Assets/Python/BUFFY/
   | Assets/Python/BUG/
   | Assets/Python/Contrib/
-  | Assets/Python/Screens/
   | Assets/Python/pyHelper/
+  | Assets/Python/CvUtil.py
 )
 """
 
@@ -23,6 +23,7 @@ select = [
 ]
 ignore = [
   "E501",
+  "E402", # module import not at top are okay
   "E722", # bare except are okay
   "F841", # unused variables are okay
   "F402", # shadowing an import with loop variables is okay
@@ -35,8 +36,8 @@ extend-exclude = [
   "Assets/Python/BUFFY/",
   "Assets/Python/BUG/",
   "Assets/Python/Contrib/",
-  "Assets/Python/Screens/",
   "Assets/Python/pyHelper/",
+  "Assets/Python/CvUtil.py",
 ]
 target-version = "py37"
 
