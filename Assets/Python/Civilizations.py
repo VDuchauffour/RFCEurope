@@ -11,10 +11,10 @@ gc = CyGlobalContext()
 
 
 def setup():
-    init_player_births()
+    set_starting_turns()
 
 
-def init_player_births():
+def set_starting_turns():
     for civ in civilizations().drop(Civ.BARBARIAN):
         gc.setStartingTurn(civ.id, civ.date.birth)
 
