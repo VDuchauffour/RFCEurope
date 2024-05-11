@@ -5,6 +5,7 @@ from CoreFunctions import get_civ_by_id
 from CoreStructures import human, make_unit, make_units, year
 from CoreTypes import Civ, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
+from RFCUtils import change_attitude_extra_between_civ
 
 gc = CyGlobalContext()
 
@@ -16,6 +17,24 @@ def setup():
 def init_player_births():
     for civ in civilizations().drop(Civ.BARBARIAN):
         gc.setStartingTurn(civ.id, civ.date.birth)
+
+
+def assignGold():
+    for civ in civilizations():
+        condition = civ.scenario.get("condition")
+        if condition is not None:
+            civ.player.changeGold(condition.gold)
+
+
+def setStartingFaith():
+    for civ in civilizations():
+        condition = civ.scenario.get("condition")
+        if condition is not None:
+            civ.player.setFaith(condition.faith)
+
+
+def create_starting_workers(iCiv, tPlot):
+    make_units(iCiv, Unit.WORKER, tPlot, civilization(iCiv).initial.workers)
 
 
 def create500ADstartingUnits():
@@ -99,3 +118,8 @@ def assign1200ADtechs(iCiv):
 
     if iCiv in [Civ.ARABIA, Civ.MOROCCO]:
         civ.add_tech(Technology.ARABIC_KNOWLEDGE)
+
+
+def setDiplo1200AD():
+    change_attitude_extra_between_civ(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
+    change_attitude_extra_between_civ(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)

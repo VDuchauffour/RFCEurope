@@ -1,9 +1,13 @@
 from CvPythonExtensions import *
 from Civilizations import (
     assign1200ADtechs,
+    assignGold,
     assignTechs,
     create1200ADstartingUnits,
     create500ADstartingUnits,
+    create_starting_workers,
+    setDiplo1200AD,
+    setStartingFaith,
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
@@ -461,8 +465,9 @@ class RiseAndFall:
                 self.initContact(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
                 assign1200ADtechs(civ)
-            self.setStartingFaith()
-            self.setDiplo1200AD()
+
+            setStartingFaith()
+            setDiplo1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
@@ -470,19 +475,7 @@ class RiseAndFall:
             assign1200ADtechs(Civ.POPE)
             cru.do1200ADCrusades()
 
-        self.assignGold()
-
-    def assignGold(self):
-        for civ in civilizations():
-            condition = civ.scenario.get("condition")
-            if condition is not None:
-                civ.player.changeGold(condition.gold)
-
-    def setStartingFaith(self):
-        for civ in civilizations():
-            condition = civ.scenario.get("condition")
-            if condition is not None:
-                civ.player.setFaith(condition.faith)
+        assignGold()
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -1808,7 +1801,7 @@ class RiseAndFall:
 
             if gc.getPlayer(iCiv).getNumCities() > 0:
                 capital = gc.getPlayer(iCiv).getCapitalCity()
-                self.create_starting_workers(iCiv, (capital.getX(), capital.getY()))
+                create_starting_workers(iCiv, (capital.getX(), capital.getY()))
                 if iCiv == Civ.OTTOMAN:
                     ottoman_invasion(iCiv, (77, 23))
 
@@ -1891,7 +1884,7 @@ class RiseAndFall:
                 if plotList:
                     plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
-                    self.create_starting_workers(iCiv, plot)
+                    create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
                         self.ottomanInvasion(iCiv, (77, 23))
                     assignTechs(iCiv)
@@ -2289,14 +2282,3 @@ class RiseAndFall:
         pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
         iSpecialist = Specialist.GREAT_PROPHET.value + iGP
         pFlorentia.setFreeSpecialistCount(iSpecialist, 1)
-
-    def setDiplo1200AD(self):
-        self.changeAttitudeExtra(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
-        self.changeAttitudeExtra(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)
-
-    def changeAttitudeExtra(self, iPlayer1, iPlayer2, iValue):
-        gc.getPlayer(iPlayer1).AI_changeAttitudeExtra(iPlayer2, iValue)
-        gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
-
-    def create_starting_workers(self, iCiv, tPlot):
-        make_units(iCiv, Unit.WORKER, tPlot, civilization(iCiv).initial.workers)
