@@ -1,5 +1,7 @@
 from CvPythonExtensions import *
 from Civilizations import (
+    set_initial_contacts,
+    reveal_areas,
     set_starting_techs_1200AD,
     set_starting_gold,
     set_starting_techs,
@@ -19,7 +21,6 @@ from CoreStructures import (
     make_units,
     player,
     team,
-    teamtype,
     turn,
     year,
     cities,
@@ -450,8 +451,8 @@ class RiseAndFall:
         if get_scenario() == Scenario.i500AD:
             create_starting_units_500AD()
             for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
-                self.showArea(civ)
-                self.initContact(civ)
+                reveal_areas(civ)
+                set_initial_contacts(civ)
 
         else:
             create_starting_units_1200AD()
@@ -461,8 +462,8 @@ class RiseAndFall:
                 .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
                 .ids()
             ):
-                self.showArea(civ)
-                self.initContact(civ, False)
+                reveal_areas(civ)
+                set_initial_contacts(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
                 set_starting_techs_1200AD(civ)
 
@@ -2257,22 +2258,5 @@ class RiseAndFall:
                 make_units(iCiv, Unit.WORKBOAT, tSeaPlot, 2)
                 make_units(iCiv, Unit.GALLEON, tSeaPlot, 2)
 
-        self.showArea(iCiv)
-        self.initContact(iCiv)
-
-    def showRect(self, iCiv, area):
-        for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
-            plot.setRevealed(teamtype(iCiv), True, False, -1)
-
-    def showArea(self, iCiv):
-        for area in civilization(iCiv).location.visible_area:
-            self.showRect(iCiv, area)
-
-    def initContact(self, iCiv, bMeet=True):
-        civ = team(iCiv)
-        contacts = civilization(iCiv).scenario.get("contact")
-        if contacts is not None:
-            for contact in contacts:
-                other = civilization(contact)
-                if other.is_alive() and not civ.isHasMet(other.teamtype):
-                    civ.meet(other.teamtype, bMeet)
+        reveal_areas(iCiv)
+        set_initial_contacts(iCiv)
