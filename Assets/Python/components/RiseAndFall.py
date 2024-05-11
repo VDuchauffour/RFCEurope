@@ -21,6 +21,7 @@ from CoreStructures import (
     cities,
     plots,
 )
+from History import ottoman_invasion
 from PyUtils import chance, percentage, percentage_chance, rand, choice
 import Province
 from RFCUtils import (
@@ -1809,7 +1810,7 @@ class RiseAndFall:
                 capital = gc.getPlayer(iCiv).getCapitalCity()
                 self.create_starting_workers(iCiv, (capital.getX(), capital.getY()))
                 if iCiv == Civ.OTTOMAN:
-                    self.ottomanInvasion(iCiv, (77, 23))
+                    ottoman_invasion(iCiv, (77, 23))
 
             if iNumHumanCitiesToConvert > 0:
                 self.flipPopup(iCiv, tTopLeft, tBottomRight)
@@ -2265,14 +2266,6 @@ class RiseAndFall:
 
         self.showArea(iCiv)
         self.initContact(iCiv)
-
-    def ottomanInvasion(self, iCiv, tPlot):
-        # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
-        make_units(iCiv, Unit.LONGBOWMAN, tPlot, 2)
-        make_units(iCiv, Unit.MACEMAN, tPlot, 2)
-        make_units(iCiv, Unit.KNIGHT, tPlot, 3)
-        make_units(iCiv, Unit.TURKEY_GREAT_BOMBARD, tPlot, 2)
-        make_units(iCiv, Unit.ISLAMIC_MISSIONARY, tPlot, 2)
 
     def showRect(self, iCiv, area):
         for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
