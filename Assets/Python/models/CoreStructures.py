@@ -506,6 +506,14 @@ def turn(turn=None):
     return year(turn)
 
 
+def until(iTurn):
+    return iTurn - turn()
+
+
+def since(iTurn):
+    return turn() - iTurn
+
+
 class InfoCollection(EntitiesCollection):
     def __init__(self, info_class, *infos):
         super(InfoCollection, self).__init__(*infos)
