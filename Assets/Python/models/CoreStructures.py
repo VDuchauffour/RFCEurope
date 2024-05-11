@@ -236,11 +236,11 @@ class Civilization(Item):
 
     def add_tech(self, id, as_first=False, annoncing=False):
         """Add tech `id` to the civilization."""
-        self.team.setHasTech(id.value, True, self.id, as_first, annoncing)
+        self.team.setHasTech(id, True, self.id, as_first, annoncing)
 
     def remove_tech(self, id):
         """Remove tech `id` to the civilization."""
-        self.team.setHasTech(id.value, False, self.id, False, False)
+        self.team.setHasTech(id, False, self.id, False, False)
 
     def has_open_borders(self, id):
         """Return True if the civilization has open borders with the civilization `id`."""
