@@ -767,13 +767,13 @@ class CvGameUtils:
                     sTemp = ""
                     if pCity.isConnectedToCapital(iPlayer):
                         sTemp += text("[ICON_TRADE]")
-                    for i in xrange(gc.getNumReligionInfos()):
+                    for i in xrange(gc.getNumReligionInfos()):  # type: ignore
                         if pCity.isHolyCityByType(i):
                             sTemp += u"%c" % (gc.getReligionInfo(i).getHolyCityChar())
                         elif pCity.isHasReligion(i):
                             sTemp += u"%c" % (gc.getReligionInfo(i).getChar())
 
-                    for i in xrange(gc.getNumCorporationInfos()):
+                    for i in xrange(gc.getNumCorporationInfos()):  # type: ignore
                         if pCity.isHeadquartersByType(i):
                             sTemp += u"%c" % (gc.getCorporationInfo(i).getHeadquarterChar())
                         elif pCity.isHasCorporation(i):
@@ -828,7 +828,7 @@ class CvGameUtils:
                     )
 
                     lTemp = []
-                    for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+                    for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):  # type: ignore
                         iAmount = pCity.getCommerceRateTimes100(i)
                         if iAmount <= 0:
                             continue
@@ -840,7 +840,7 @@ class CvGameUtils:
                         lTemp.append(sTemp)
                     if len(lTemp) > 0:
                         sText += "\n"
-                        for i in xrange(len(lTemp)):
+                        for i in xrange(len(lTemp)):  # type: ignore
                             sText += lTemp[i]
                             if i < len(lTemp) - 1:
                                 sText += ", "
@@ -861,7 +861,7 @@ class CvGameUtils:
 
                     lBuildings = []
                     lWonders = []
-                    for i in xrange(gc.getNumBuildingInfos()):
+                    for i in xrange(gc.getNumBuildingInfos()):  # type: ignore
                         if pCity.isHasBuilding(i):
                             Info = gc.getBuildingInfo(i)
                             if isLimitedWonderClass(Info.getBuildingClassType()):
@@ -876,7 +876,7 @@ class CvGameUtils:
                             + text("TXT_KEY_PEDIA_CATEGORY_BUILDING")
                             + ": </color>"
                         )
-                        for i in xrange(len(lBuildings)):
+                        for i in xrange(len(lBuildings)):  # type: ignore
                             sText += lBuildings[i]
                             if i < len(lBuildings) - 1:
                                 sText += ", "
@@ -888,7 +888,7 @@ class CvGameUtils:
                             + text("TXT_KEY_CONCEPT_WONDERS")
                             + ": </color>"
                         )
-                        for i in xrange(len(lWonders)):
+                        for i in xrange(len(lWonders)):  # type: ignore
                             sText += lWonders[i]
                             if i < len(lWonders) - 1:
                                 sText += ", "

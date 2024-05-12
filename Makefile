@@ -36,6 +36,7 @@ clean-misc:
 lint:
 	black --check .
 	ruff check .
+	pyright
 
 # test the package
 test: clean

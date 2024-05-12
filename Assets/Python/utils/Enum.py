@@ -25,7 +25,7 @@ except ImportError:
     OrderedDict = None
 
 try:
-    basestring
+    basestring  # type: ignore
 except NameError:
     # In Python 2 basestring is the ancestor of both str and unicode
     # in Python 3 it's just str, but was missing in 3.1

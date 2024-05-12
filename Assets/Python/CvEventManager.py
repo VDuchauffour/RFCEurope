@@ -1004,7 +1004,7 @@ class CvEventManager:
 
         if not self.__LOG_PUSH_MISSION:
             return
-        if pHeadUnit:
+        if pHeadUnit:  # type: ignore
             CvUtil.pyPrint("Selection Group pushed mission %d" % (eMission))
 
     def onUnitMove(self, argsList):
@@ -1475,7 +1475,7 @@ class CvEventManager:
         CvUtil.pyPrint(
             "%s has been removed from Player %d Civilization %s city of %s"
             % (
-                gc.getReligionInfo(iReligion).getDescription(),
+                gc.getReligionInfo(iReligion).getDescription(),  # type: ignore
                 iOwner,
                 player.getCivilizationName(),
                 pRemoveCity.getName(),
@@ -1675,7 +1675,7 @@ class CvEventManager:
                         pTeam.changeResearchProgress(
                             iTech,
                             max(
-                                -pPreviousTeam.getResearchProgress(iTech),
+                                -pPreviousTeam.getResearchProgress(iTech),  # type: ignore
                                 -pTeam.getResearchCost(iTech) / 5,
                             ),
                             iPlayer,

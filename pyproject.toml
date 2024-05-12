@@ -71,6 +71,7 @@ executionEnvironments = [
   ] },
 ]
 stubPath = "Assets/Python/.stubs"
+reportUndefinedVariable = "error"
 reportMissingModuleSource = false
 reportGeneralTypeIssues = false
 reportMissingImports = false
