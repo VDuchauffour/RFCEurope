@@ -154,3 +154,21 @@ class GameData:
 
 
 data = GameData()
+
+
+def get_data(key, subkey=None):
+    if subkey is None:
+        return data.__dict__[key]
+    else:
+        return data.__dict__[key][subkey]
+
+
+def set_data(key, value, subkey=None):
+    if subkey is None:
+        data.__dict__[key] = value
+    else:
+        data.__dict__[key][subkey] = value
+
+
+def mod_data(key, value=1, subkey=None):
+    set_data(key, get_data(key, subkey) + value, subkey)
