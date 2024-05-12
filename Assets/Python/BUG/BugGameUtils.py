@@ -226,7 +226,7 @@ class Dispatcher:
         self._setDefault("doReligion", False)
         self._setDefault("cannotSpreadReligion", False)
         self._setDefault("doGreatPeople", False)
-        self._setDefault("doMeltdown", False)
+        # self._setDefault("doMeltdown", False)
         self._setDefault("doReviveActivePlayer", False)
         self._setDefault("citiesDestroyFeatures", True)
         self._setDefault("canFoundCitiesOnWater", False)
