@@ -18,12 +18,12 @@ gc = CyGlobalContext()
 def init():
     """Run in Handlers when the game starts."""
     init_player_variables()
-    init_player_maps()
     init_provinces()
     set_province_type_parameters()
 
 
 def setup():
+    init_player_maps()
     update_province_id()
     update_city_name()
     update_lake_id()
@@ -60,7 +60,6 @@ def init_provinces():
             if PROVINCES_MAP[y][x] > -1:
                 gc.setProvince(x, y, PROVINCES_MAP[y][x])
     gc.createProvinceCrossreferenceList()
-
 
 
 def set_province_type_parameters():
