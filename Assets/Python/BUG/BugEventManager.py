@@ -105,6 +105,12 @@ import BugUtil
 import InputUtil
 import types
 
+import CvRFCEventHandler
+import RiseAndFall
+import Crusades
+import Religions
+import Barbs
+
 # BUG - Mac Support - start
 BugUtil.fixSets(globals())
 # BUG - Mac Support - end
@@ -191,13 +197,50 @@ class BugEventManager(CvEventManager.CvEventManager):
         self.addEventHandler("gameUpdate", self.onGameUpdate)
 
         # BULL events
-        self.addEvent("unitUpgraded")
-        self.addEvent("unitCaptured")
-        self.addEvent("combatWithdrawal")
-        self.addEvent("combatRetreat")
-        self.addEvent("combatLogCollateral")
-        self.addEvent("combatLogFlanking")
-        self.addEvent("playerRevolution")
+        # self.addEvent("unitUpgraded")
+        # self.addEvent("unitCaptured")
+        # self.addEvent("combatWithdrawal")
+        # self.addEvent("combatRetreat")
+        # self.addEvent("combatLogCollateral")
+        # self.addEvent("combatLogFlanking")
+        # self.addEvent("playerRevolution")
+
+        self.CustomEvents = {
+            7614: ("RiseAndFallPopupEvent", self.rnfEventApply7614, self.rnfEventBegin7614),
+            7615: ("FlipPopupEvent", self.rnfEventApply7615, self.rnfEventBegin7615),
+            7616: ("CrusadeInitVoteEvent", self.crusadeApply7616, self.crusadeBegin7616),
+            7617: ("InformForLeaderPopup", self.crusadeApply7617, self.crusadeBegin7617),
+            7618: ("HumanVotePopup", self.crusadeApply7618, self.crusadeBegin7618),
+            7619: ("HumanDeviate", self.crusadeApply7619, self.crusadeBegin7619),
+            7620: ("ChoseNewCrusadeTarget", self.crusadeApply7620, self.crusadeBegin7620),
+            7621: ("Under Attack", self.crusadeApply7621, self.crusadeBegin7621),
+            7622: ("ResurrectionEvent", self.rnfEventApply7622, self.rnfEventBegin7622),
+            7624: (
+                "ReformationEvent",
+                self.relEventApply7624,
+                self.relEventBegin7624,
+            ),  ### Reformation Begin ###
+            7625: ("DefensiveCrusadeEvent", self.crusadeApply7625, self.crusadeBegin7625),
+            7626: ("CounterReformationEvent", self.relEventApply7626, self.relEventBegin7626),
+            7627: ("CounterReformationEvent", self.barbEventApply7627, self.barbEventBegin7627),
+            7628: (
+                "Religious Persecution",
+                self.relEventApply7628,
+                self.relEventBegin7628,
+            ),  # Absinthe: persecution popup
+            7629: (
+                "Free Religious Revolution",
+                self.relEventApply7629,
+                self.relEventBegin7629,
+            ),  # Absinthe: free religion change
+        }
+
+        # --> INSERT EVENT HANDLER INITIALIZATION HERE <--
+        CvRFCEventHandler.CvRFCEventHandler(self)
+        self.rnf = RiseAndFall.RiseAndFall()
+        self.crus = Crusades.Crusades()
+        self.rel = Religions.Religions()
+        self.barb = Barbs.Barbs()
 
     def setLogging(self, logging):
         if logging is not None:
@@ -552,6 +595,106 @@ class BugEventManager(CvEventManager.CvEventManager):
             iAnarchyTurns,
             ", ".join(civics),
         )
+    # popup events
+    def rnfEventBegin7614(self):
+        pass
+
+    def rnfEventApply7614(self, playerID, netUserData, popupReturn):
+        self.rnf.eventApply7614(popupReturn)
+
+    def rnfEventBegin7615(self):
+        pass
+
+    def rnfEventApply7615(self, playerID, netUserData, popupReturn):  # 3Miro: flip
+        self.rnf.eventApply7615(popupReturn)
+
+    def crusadeBegin7616(self):
+        pass
+
+    def crusadeApply7616(self, playerID, netUserData, popupReturn):
+        self.crus.eventApply7616(popupReturn)
+
+    def crusadeBegin7617(self):
+        pass
+
+    def crusadeApply7617(self, playerID, netUserData, popupReturn):
+        pass
+
+    def crusadeBegin7618(self):
+        pass
+
+    def crusadeApply7618(self, playerID, netUserData, popupReturn):
+        self.crus.eventApply7618(popupReturn)
+
+    def crusadeBegin7619(self):
+        pass
+
+    def crusadeApply7619(self, playerID, netUserData, popupReturn):
+        self.crus.eventApply7619(popupReturn)
+
+    def crusadeBegin7620(self):
+        pass
+
+    def crusadeApply7620(self, playerID, netUserData, popupReturn):
+        self.crus.eventApply7620(popupReturn)
+
+    def crusadeBegin7621(self):
+        pass
+
+    def crusadeApply7621(self, playerID, netUserData, popupReturn):
+        pass
+
+    def rnfEventBegin7622(self):
+        pass
+
+    def rnfEventApply7622(self, playerID, netUserData, popupReturn):  # 3Miro: rebel
+        self.rnf.eventApply7622(popupReturn)
+
+    ### Begin Reformation ###
+    def relEventBegin7624(self):
+        pass
+
+    def relEventApply7624(self, playerID, netUserData, popupReturn):
+        self.rel.eventApply7624(popupReturn)
+
+    def relEventBegin7626(self):
+        pass
+
+    def relEventApply7626(self, playerID, netUserData, popupReturn):
+        self.rel.eventApply7626(popupReturn)
+
+    ### End Reformation ###
+
+    def crusadeBegin7625(self):
+        pass
+
+    def crusadeApply7625(self, playerID, netUserData, popupReturn):
+        self.crus.eventApply7625(popupReturn)
+
+    def barbEventBegin7627(self):
+        pass
+
+    def barbEventApply7627(self, playerID, netUserData, popupReturn):
+        self.barb.eventApply7627(popupReturn)
+
+    # Absinthe: persecution popup
+    def relEventBegin7628(self):
+        pass
+
+    def relEventApply7628(self, playerID, netUserData, popupReturn):
+        self.rel.eventApply7628(popupReturn)
+
+    # Absinthe: end
+
+    # Absinthe: free religion change
+    def relEventBegin7629(self):
+        pass
+
+    def relEventApply7629(self, playerID, netUserData, popupReturn):
+        self.rel.eventApply7629(playerID, popupReturn)
+
+    # Absinthe: end
+
 
 
 EVENT_FUNCTION_MAP = {
