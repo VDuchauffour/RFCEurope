@@ -1,3 +1,5 @@
+*.patch
+
 # Taken from https://github.com/dguenms/Dawn-of-Civilization/
 
 **/CIV4ArtDefines_Misc.xml
