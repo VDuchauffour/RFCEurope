@@ -150,12 +150,6 @@ class RiseAndFall:
     def setAlreadySwitched(self, bNewValue):
         data.bAlreadySwitched = bNewValue
 
-    def getColonistsAlreadyGiven(self, iCiv):
-        return data.lColonistsAlreadyGiven[iCiv]
-
-    def setColonistsAlreadyGiven(self, iCiv, iNewValue):
-        data.lColonistsAlreadyGiven[iCiv] = iNewValue
-
     def getNumCities(self, iCiv):
         return data.lNumCities[iCiv]
 
@@ -203,12 +197,6 @@ class RiseAndFall:
 
     def setRebelSuppress(self, lSuppressList):
         data.lRebelSuppress = lSuppressList
-
-    def getExileData(self, i):
-        return data.lExileData[i]
-
-    def setExileData(self, i, iNewValue):
-        data.lExileData[i] = iNewValue
 
     def getTempFlippingCity(self):
         return data.iTempFlippingCity

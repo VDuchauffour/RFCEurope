@@ -995,32 +995,13 @@ def showPersecutionPopup():
     popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
     popup.setHeaderString("Religious Persecution")
     popup.setBodyString("Choose a religious minority to deal with...")
-    religionList = getPersecutionReligions()
-    for iReligion in religionList:
+    for iReligion in data.lPersecutionReligions:
         strIcon = gc.getReligionInfo(iReligion).getType()
         strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
         strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())
         popup.addButton(strButtonText)
     popup.launch(False)
 
-
-def getPersecutionData():
-    return (data.lPersecutionData[0], data.lPersecutionData[1], data.lPersecutionData[2])
-
-
-def setPersecutionData(iPlotX, iPlotY, iUnitID):
-    data.lPersecutionData = [iPlotX, iPlotY, iUnitID]
-
-
-def getPersecutionReligions():
-    return data.lPersecutionReligions
-
-
-def setPersecutionReligions(val):
-    data.lPersecutionReligions = val
-
-
-# Absinthe: end
 
 # Absinthe: persecution
 def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):

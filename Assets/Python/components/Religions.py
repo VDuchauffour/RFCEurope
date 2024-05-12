@@ -24,7 +24,7 @@ from CoreTypes import (
 from LocationsData import CITIES
 import Popup
 from ProvinceMapData import PROVINCES_MAP
-from RFCUtils import getBaseBuilding, getPersecutionData, getPersecutionReligions, prosecute
+from RFCUtils import getBaseBuilding, prosecute
 from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
 
@@ -646,7 +646,7 @@ class Religions:
                             len(religionList) == gc.getNumReligionInfos()
                         ):  # no need to check any further, if we already have all religions in the list
                             break
-                    self.setFreeRevolutionReligions(religionList)
+                    data.lReligionChoices = religionList
                     # no popup if no available religions
                     if religionList:
                         self.showFreeRevolutionPopup(iPlayer, religionList)
@@ -679,12 +679,6 @@ class Religions:
                     pPlayer = gc.getPlayer(iPlayer)
                     pPlayer.convertForFree(iBestReligion)
 
-    def getFreeRevolutionReligions(self):
-        return data.lReligionChoices
-
-    def setFreeRevolutionReligions(self, val):
-        data.lReligionChoices = val
-
     # Absinthe: free religion change popup
     def showFreeRevolutionPopup(self, iPlayer, religionList):
         """Possibility for the human player to select a religion anarchy-free."""
@@ -702,11 +696,8 @@ class Religions:
     # Absinthe: event of the free religion change popup
     def eventApply7629(self, playerID, popupReturn):
         """Free religious revolution."""
-        iDecision = popupReturn.getButtonClicked()
-        religionList = self.getFreeRevolutionReligions()
         # the last option is the no change option
-        pPlayer = gc.getPlayer(playerID)
-        pPlayer.convertForFree(religionList[popupReturn.getButtonClicked()])
+        player(playerID).convertForFree(data.lReligionChoices[popupReturn.getButtonClicked()])
 
     # REFORMATION
 
@@ -1043,10 +1034,8 @@ class Religions:
 
     def eventApply7628(self, popupReturn):  # Absinthe: persecution popup
         """Persecution popup event."""
-        iPlotX, iPlotY, iUnitID = getPersecutionData()
-        religionList = getPersecutionReligions()
-        iChosenButton = popupReturn.getButtonClicked()
-        iChosenReligion = religionList[iChosenButton]
+        iPlotX, iPlotY, iUnitID = data.lPersecutionData
+        iChosenReligion = data.lPersecutionReligions[popupReturn.getButtonClicked()]
         prosecute(iPlotX, iPlotY, iUnitID, iChosenReligion)
 
     def doCounterReformationYes(self, iPlayer):

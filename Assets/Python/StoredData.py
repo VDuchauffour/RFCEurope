@@ -31,7 +31,6 @@ class GameData:
         self.iOldCivFlip = -1
         self.iSpawnWar = 0  # if 1, add units and declare war. If >=2, do nothing
         self.bAlreadySwitched = False
-        self.lColonistsAlreadyGiven = [0] * civilizations().majors().len()
         self.lNumCities = [0] * civilizations().majors().len()
         self.lSpawnDelay = [0] * civilizations().majors().len()
         self.lFlipsDelay = [0] * civilizations().majors().len()
@@ -40,7 +39,6 @@ class GameData:
         self.iRebelCiv = 0
         self.lRebelCities = []  # 3Miro: store the rebelling cities
         self.lRebelSuppress = [0] * civilizations().majors().len()
-        self.lExileData = [-1, -1, -1, -1, -1]
         self.lCheatersCheck = [0, -1]
         self.lDeleteMode = [
             -1,
@@ -48,8 +46,6 @@ class GameData:
             -1,
         ]  # first is a bool, the other values are capital coordinates
 
-        # Religions
-        self.lReligionFounded = [-1, -1, -1, -1, -1]
         # Absinthe: Reformation
         self.bReformationActive = False
         self.lReformationHitMatrix = [0] * civilizations().majors().len()
@@ -154,3 +150,21 @@ class GameData:
 
 
 data = GameData()
+
+
+def get_data(key, subkey=None):
+    if subkey is None:
+        return data.__dict__[key]
+    else:
+        return data.__dict__[key][subkey]
+
+
+def set_data(key, value, subkey=None):
+    if subkey is None:
+        data.__dict__[key] = value
+    else:
+        data.__dict__[key][subkey] = value
+
+
+def mod_data(key, value=1, subkey=None):
+    set_data(key, get_data(key, subkey) + value, subkey)
