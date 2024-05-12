@@ -1,5 +1,7 @@
 from CvPythonExtensions import *
 from Civilizations import (
+    set_initial_contacts,
+    reveal_areas,
     set_starting_techs_1200AD,
     set_starting_gold,
     set_starting_techs,
@@ -19,7 +21,6 @@ from CoreStructures import (
     make_units,
     player,
     team,
-    teamtype,
     turn,
     year,
     cities,
@@ -73,7 +74,6 @@ from CoreTypes import (
     PlayerType,
     Scenario,
     Religion,
-    Specialist,
     Terrain,
     Feature,
     Improvement,
@@ -85,6 +85,7 @@ from CoreTypes import (
 )
 from CoreFunctions import event_popup, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
+from Wonders import leaning_tower_effect
 
 gc = CyGlobalContext()
 rel = Religions.Religions()
@@ -450,8 +451,8 @@ class RiseAndFall:
         if get_scenario() == Scenario.i500AD:
             create_starting_units_500AD()
             for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
-                self.showArea(civ)
-                self.initContact(civ)
+                reveal_areas(civ)
+                set_initial_contacts(civ)
 
         else:
             create_starting_units_1200AD()
@@ -461,14 +462,14 @@ class RiseAndFall:
                 .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
                 .ids()
             ):
-                self.showArea(civ)
-                self.initContact(civ, False)
+                reveal_areas(civ)
+                set_initial_contacts(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
                 set_starting_techs_1200AD(civ)
 
             set_starting_faith()
             set_starting_diplomacy_1200AD()
-            self.LeaningTowerGP()
+            leaning_tower_effect()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
             # Temporarily all civs get the same starting techs as Aragon
@@ -1719,6 +1720,8 @@ class RiseAndFall:
                     (tCapital[0] - 1, tCapital[1] - 1), (tCapital[0] + 1, tCapital[1] + 1)
                 )
                 self.createStartingUnits(iCiv, (tCapital[0], tCapital[1]))
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 # Absinthe: there was another mistake here with barbarian and indy unit flips...
                 # 			we don't simply want to check an area based on distance from capital, as it might lead out from the actual spawn area
                 # 			so we only check plots which are in the core area: in 4 distance for barb units, 2 distance for indies
@@ -1830,6 +1833,8 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
@@ -1876,6 +1881,8 @@ class RiseAndFall:
             if plotList:
                 plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
+                reveal_areas(iCiv)
+                set_initial_contacts(iCiv)
                 set_starting_techs(iCiv)
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
@@ -1884,6 +1891,8 @@ class RiseAndFall:
                 if plotList:
                     plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
+                    reveal_areas(iCiv)
+                    set_initial_contacts(iCiv)
                     create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
                         self.ottomanInvasion(iCiv, (77, 23))
@@ -2256,29 +2265,3 @@ class RiseAndFall:
             if tSeaPlot:
                 make_units(iCiv, Unit.WORKBOAT, tSeaPlot, 2)
                 make_units(iCiv, Unit.GALLEON, tSeaPlot, 2)
-
-        self.showArea(iCiv)
-        self.initContact(iCiv)
-
-    def showRect(self, iCiv, area):
-        for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
-            plot.setRevealed(teamtype(iCiv), True, False, -1)
-
-    def showArea(self, iCiv):
-        for area in civilization(iCiv).location.visible_area:
-            self.showRect(iCiv, area)
-
-    def initContact(self, iCiv, bMeet=True):
-        civ = team(iCiv)
-        contacts = civilization(iCiv).scenario.get("contact")
-        if contacts is not None:
-            for contact in contacts:
-                other = civilization(contact)
-                if other.is_alive() and not civ.isHasMet(other.teamtype):
-                    civ.meet(other.teamtype, bMeet)
-
-    def LeaningTowerGP(self):
-        iGP = rand(7)
-        pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
-        iSpecialist = Specialist.GREAT_PROPHET.value + iGP
-        pFlorentia.setFreeSpecialistCount(iSpecialist, 1)

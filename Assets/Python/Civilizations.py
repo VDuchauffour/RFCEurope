@@ -2,7 +2,7 @@ from CvPythonExtensions import CyGlobalContext
 from CivilizationsData import TECH_STARTERS_1200AD
 from CoreData import civilization, civilizations
 from CoreFunctions import get_civ_by_id
-from CoreStructures import human, make_unit, make_units, year
+from CoreStructures import human, make_unit, make_units, team, teamtype, year, plots
 from CoreTypes import Civ, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from RFCUtils import change_attitude_extra_between_civ
@@ -123,3 +123,23 @@ def set_starting_techs_1200AD(iCiv):
 def set_starting_diplomacy_1200AD():
     change_attitude_extra_between_civ(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
     change_attitude_extra_between_civ(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)
+
+
+def set_initial_contacts(iCiv, bMeet=True):
+    civ = team(iCiv)
+    contacts = civilization(iCiv).scenario.get("contact")
+    if contacts is not None:
+        for contact in contacts:
+            other = civilization(contact)
+            if other.is_alive() and not civ.isHasMet(other.teamtype):
+                civ.meet(other.teamtype, bMeet)
+
+
+def reveal_rectangle(iCiv, area):
+    for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
+        plot.setRevealed(teamtype(iCiv), True, False, -1)
+
+
+def reveal_areas(iCiv):
+    for area in civilization(iCiv).location.visible_area:
+        reveal_rectangle(iCiv, area)
