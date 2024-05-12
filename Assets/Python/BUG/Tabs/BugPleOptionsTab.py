@@ -75,4 +75,4 @@ class BugPleOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addColorDropdown(screen, rightL, rightR, "PLE__Promotion_Specialties_Color")
 
         self.addSpacer(screen, right, "PLE_Move_Highlighter", 1)
-         self.addCheckbox(screen, right, "PLE__Move_Highlighter")
+        self.addCheckbox(screen, right, "PLE__Move_Highlighter")
