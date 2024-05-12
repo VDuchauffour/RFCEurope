@@ -37,15 +37,9 @@ class AIWars:
     def setAttackingCivsArray(self, iCiv, iNewValue):
         data.lAttackingCivsArray[iCiv] = iNewValue
 
-    def getNextTurnAIWar(self):
-        return data.iNextTurnAIWar
-
-    def setNextTurnAIWar(self, iNewValue):
-        data.iNextTurnAIWar = iNewValue
-
     def setup(self):
         iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
-        self.setNextTurnAIWar(iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly))
+        data.iNextTurnAIWar = iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly)
 
     def checkTurn(self, iGameTurn):
         if iGameTurn > 20:
@@ -120,7 +114,7 @@ class AIWars:
                         teamHungary = gc.getTeam(pHungary.getTeam())
                         teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
 
-        if iGameTurn == self.getNextTurnAIWar():
+        if iGameTurn == data.iNextTurnAIWar:
             iMinInterval = iMinIntervalEarly
             iMaxInterval = iMaxIntervalEarly
 
@@ -130,7 +124,7 @@ class AIWars:
                 if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
-            self.setNextTurnAIWar(iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval))
+            data.iNextTurnAIWar = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
 
     def pickCivs(self):
         iCiv = self.chooseAttackingPlayer()
@@ -146,11 +140,11 @@ class AIWars:
         teamAgressor = gc.getTeam(gc.getPlayer(iCiv).getTeam())
         if teamAgressor.canDeclareWar(iTargetCiv):
             gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1)
-            self.setNextTurnAIWar(iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval))
+            data.iNextTurnAIWar = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
         # Absinthe: if not, next try will come the 1/2 of this time later
         else:
-            self.setNextTurnAIWar(
-                iGameTurn + (iMinInterval + rand(iMaxInterval - iMinInterval) / 2)
+            data.iNextTurnAIWar = iGameTurn + (
+                iMinInterval + rand(iMaxInterval - iMinInterval) / 2
             )
 
     def chooseAttackingPlayer(self):

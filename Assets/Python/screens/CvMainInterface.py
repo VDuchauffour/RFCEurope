@@ -8,12 +8,6 @@ from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
 
-# < Mercenaries Start >
-import CvMercenaryManager
-
-# import CvConfigParser #Rhye
-# import MercenaryUtils
-# import CvMercenaryModGameUtils #Rhye
 import CvGameInterface
 from RFCUtils import (
     StabilityOverlayCiv,
@@ -23,10 +17,13 @@ from RFCUtils import (
     getPlagueCountdown,
     prosecute,
     saint,
-    setPersecutionData,
-    setPersecutionReligions,
     showPersecutionPopup,
 )
+from StoredData import data
+
+
+# < Mercenaries Start >
+import CvMercenaryManager
 
 # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 gameUtils = CvGameInterface.gameUtils()
@@ -7136,10 +7133,12 @@ class CvMainInterface:
                             g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
                         )
                     elif len(religionList) > 1:
-                        setPersecutionReligions(religionList)
-                        setPersecutionData(
-                            g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
-                        )
+                        data.lPersecutionReligions = religionList
+                        data.lPersecutionData = [
+                            g_pSelectedUnit.getX(),
+                            g_pSelectedUnit.getY(),
+                            g_pSelectedUnit.getID(),
+                        ]
                         showPersecutionPopup()
             else:
                 prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())

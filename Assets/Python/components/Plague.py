@@ -10,7 +10,7 @@ from CoreStructures import city as _city
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 
-from RFCUtils import calculateDistance, isMortalUnit
+from RFCUtils import calculateDistance, getPlagueCountdown, isMortalUnit, setPlagueCountdown
 from StoredData import data
 import random
 
@@ -28,17 +28,6 @@ iBlackDeath = 1
 
 
 class Plague:
-
-    ##################################################
-    ### Secure storage & retrieval of script data ###
-    ################################################
-
-    def getPlagueCountdown(self, iCiv):
-        return data.lPlagueCountdown[iCiv]
-
-    def setPlagueCountdown(self, iCiv, iNewValue):
-        data.lPlagueCountdown[iCiv] = iNewValue
-
     def getGenericPlagueDates(self, i):
         return data.lGenericPlagueDates[i]
 
@@ -64,7 +53,7 @@ class Plague:
     def setup(self):
 
         for i in civilizations().majors().ids():
-            self.setPlagueCountdown(i, -PLAGUE_IMMUNITY)
+            setPlagueCountdown(i, -PLAGUE_IMMUNITY)
 
         # Sedna17: Set number of GenericPlagues in StoredData
         # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
@@ -78,17 +67,17 @@ class Plague:
 
         for iPlayer in civilizations().ids():
             if gc.getPlayer(iPlayer).isAlive():
-                if self.getPlagueCountdown(iPlayer) > 0:
-                    self.setPlagueCountdown(iPlayer, self.getPlagueCountdown(iPlayer) - 1)
-                    iPlagueCountDown = self.getPlagueCountdown(iPlayer)
+                if getPlagueCountdown(iPlayer) > 0:
+                    setPlagueCountdown(iPlayer, getPlagueCountdown(iPlayer) - 1)
+                    iPlagueCountDown = getPlagueCountdown(iPlayer)
                     if iPlagueCountDown == 2:
                         self.preStopPlague(iPlayer, iPlagueCountDown)
                     elif iPlagueCountDown == 1:
                         self.preStopPlague(iPlayer, iPlagueCountDown)
                     elif iPlagueCountDown == 0:
                         self.stopPlague(iPlayer)
-                elif self.getPlagueCountdown(iPlayer) < 0:
-                    self.setPlagueCountdown(iPlayer, self.getPlagueCountdown(iPlayer) + 1)
+                elif getPlagueCountdown(iPlayer) < 0:
+                    setPlagueCountdown(iPlayer, getPlagueCountdown(iPlayer) + 1)
 
         for iPlague in range(iNumPlagues):
             if iGameTurn == self.getGenericPlagueDates(iPlague):
@@ -101,17 +90,14 @@ class Plague:
                 if not bFirstPlague:
                     iInfectedCounter = 0
                     for iPlayer in civilizations().ids():
-                        if (
-                            gc.getPlayer(iPlayer).isAlive()
-                            and self.getPlagueCountdown(iPlayer) > 0
-                        ):
+                        if gc.getPlayer(iPlayer).isAlive() and getPlagueCountdown(iPlayer) > 0:
                             iInfectedCounter += 1
                     if iInfectedCounter <= 1:
                         self.startPlague(iPlague)
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         if iPlayer < civilizations().len():
-            if self.getPlagueCountdown(iPlayer) > 0:
+            if getPlagueCountdown(iPlayer) > 0:
                 self.processPlague(iPlayer)
 
     def startPlague(self, iPlagueCount):
@@ -169,10 +155,10 @@ class Plague:
     def isVulnerable(self, iPlayer):
         # Absinthe: based on recent infections and the average city healthiness (also tech immunity should go here if it's ever added to the mod)
         if iPlayer >= civilizations().majors().len():
-            if self.getPlagueCountdown(iPlayer) == 0:
+            if getPlagueCountdown(iPlayer) == 0:
                 return True
         else:
-            if self.getPlagueCountdown(iPlayer) == 0:
+            if getPlagueCountdown(iPlayer) == 0:
                 # Absinthe: health doesn't matter for the Black Death, everyone is vulnerable
                 if self.getBadPlague():
                     return True
@@ -236,7 +222,7 @@ class Plague:
             iValue = max(
                 ((iBaseAIDuration + iCityDuration - iHealthDuration) / 2), 4
             )  # at least 4
-        self.setPlagueCountdown(iPlayer, iValue)
+        setPlagueCountdown(iPlayer, iValue)
 
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
@@ -426,7 +412,7 @@ class Plague:
                         )
 
             # infect vassals
-            if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
+            if getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                 if city.isCapital():
                     for iLoopCiv in civilizations().majors().ids():
                         if gc.getTeam(pPlayer.getTeam()).isVassal(iLoopCiv) or gc.getTeam(
@@ -441,7 +427,7 @@ class Plague:
                                     self.infectCity(capital)
 
             # spread plague in 2 distance around the city
-            if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
+            if getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                 for plot in (
                     plots()
                     .surrounding(city, radius=2)
@@ -481,7 +467,7 @@ class Plague:
                                 self.killUnitsByPlague(city, plot, 40, 30, 0)
 
             # spread by the trade routes
-            if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
+            if getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                 for iTradeRoute in range(city.getTradeRoutes()):
                     loopCity = city.getTradeCity(iTradeRoute)
                     if not loopCity.isNone():
@@ -497,7 +483,7 @@ class Plague:
         # 			cities are chosen randomly from the possible targets
         # 			the maximum number of infections is based on the size of the empire
         if (
-            self.getPlagueCountdown(iPlayer) > 2
+            getPlagueCountdown(iPlayer) > 2
         ):  # don't spread in the last turns, when preStopPlague is active
             if lNotInfectedCities:
                 iTotalCities = pPlayer.getNumCities()
@@ -537,7 +523,7 @@ class Plague:
         # the civ would be immune otherwise, basically
         if len(lInfectedCities) == 0:
             if (
-                self.getPlagueCountdown(iPlayer) > 2
+                getPlagueCountdown(iPlayer) > 2
             ):  # don't spread in the last turns, when preStopPlague is active
                 iTotalCities = pPlayer.getNumCities()
                 if iTotalCities > 21:
@@ -584,7 +570,7 @@ class Plague:
                     iRemoveModifier += 5  # less chance for each city which already quit
 
     def stopPlague(self, iPlayer):
-        self.setPlagueCountdown(iPlayer, -PLAGUE_IMMUNITY)
+        setPlagueCountdown(iPlayer, -PLAGUE_IMMUNITY)
         for city in cities().owner(iPlayer).entities():
             city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
@@ -601,7 +587,7 @@ class Plague:
                 # reinfect the human player if conquering plagued cities
                 if iNewOwner == human():
                     # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague
-                    if self.getPlagueCountdown(iNewOwner) <= 0:
+                    if getPlagueCountdown(iNewOwner) <= 0:
                         self.spreadPlague(iNewOwner, -1)
                         for cityNear in cities().owner(iNewOwner).entities():
                             if not cityNear.isHasRealBuilding(PlagueType.PLAGUE):
@@ -616,7 +602,7 @@ class Plague:
                 # no reinfect for the AI, only infect
                 else:
                     # if > 0 do nothing, if < 0 keep immunity and remove plague from the city, if == 0 start the plague
-                    if self.getPlagueCountdown(iNewOwner) == 0:
+                    if getPlagueCountdown(iNewOwner) == 0:
                         self.spreadPlague(iNewOwner, -1)
                         for cityNear in cities().owner(iNewOwner).entities():
                             if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
@@ -628,7 +614,7 @@ class Plague:
                                 ):
                                     if percentage_chance(50, strict=True):
                                         self.infectCity(cityNear)
-                    elif self.getPlagueCountdown(iNewOwner) < 0:
+                    elif getPlagueCountdown(iNewOwner) < 0:
                         city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
             else:
                 city.setHasRealBuilding(PlagueType.PLAGUE.value, False)

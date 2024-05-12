@@ -31,7 +31,6 @@ class GameData:
         self.iOldCivFlip = -1
         self.iSpawnWar = 0  # if 1, add units and declare war. If >=2, do nothing
         self.bAlreadySwitched = False
-        self.lColonistsAlreadyGiven = [0] * civilizations().majors().len()
         self.lNumCities = [0] * civilizations().majors().len()
         self.lSpawnDelay = [0] * civilizations().majors().len()
         self.lFlipsDelay = [0] * civilizations().majors().len()
@@ -40,7 +39,6 @@ class GameData:
         self.iRebelCiv = 0
         self.lRebelCities = []  # 3Miro: store the rebelling cities
         self.lRebelSuppress = [0] * civilizations().majors().len()
-        self.lExileData = [-1, -1, -1, -1, -1]
         self.lCheatersCheck = [0, -1]
         self.lDeleteMode = [
             -1,
@@ -48,8 +46,6 @@ class GameData:
             -1,
         ]  # first is a bool, the other values are capital coordinates
 
-        # Religions
-        self.lReligionFounded = [-1, -1, -1, -1, -1]
         # Absinthe: Reformation
         self.bReformationActive = False
         self.lReformationHitMatrix = [0] * civilizations().majors().len()
