@@ -2,7 +2,7 @@
 line-length = 99
 skip_magic_trailing_comma = true
 target-version = ["py27"]
-extend-exclude = """
+force-exclude = """
 /(
   | Assets/Python/data/maps/
   | Assets/Python/BUFFY/
@@ -10,7 +10,7 @@ extend-exclude = """
   | Assets/Python/Contrib/
   | Assets/Python/pyHelper/
   | Assets/Python/CvUtil.py
-)
+)/
 """
 
 [tool.ruff]
@@ -30,7 +30,7 @@ ignore = [
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
-extend-exclude = [
+exclude = [
   "Docs/Tools/*.py",
   "Assets/Python/data/maps/*.py",
   "Assets/Python/BUFFY/",
