@@ -92,6 +92,7 @@ import TradeUtil
 import GameUtil
 
 import BugUnitPlot
+
 # BUG - 3.17 No Espionage - end
 
 # BUG - Reminders - start
@@ -4510,7 +4511,581 @@ class CvMainInterface:
 
     # BUG - city specialist - end
 
+    # Will update the citizen buttons
+    def updateCitizenButtons(self):
+
+        if not CyInterface().isCityScreenUp():
+            return 0
+
+        pHeadSelectedCity = CyInterface().getHeadSelectedCity()
+        if not (
+            pHeadSelectedCity
+            and CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW
+        ):
+            return 0
+
+        global MAX_CITIZEN_BUTTONS
+
+        bHandled = False
+        screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+
+        # Find out our resolution
+        xResolution = screen.getXResolution()
+        yResolution = screen.getYResolution()
+
+        if pHeadSelectedCity.angryPopulation(0) < MAX_CITIZEN_BUTTONS:
+            iCount = pHeadSelectedCity.angryPopulation(0)
+        else:
+            iCount = MAX_CITIZEN_BUTTONS
+
+        for i in range(iCount):
+            bHandled = True
+            szName = "AngryCitizen" + str(i)
+            screen.show(szName)
+
+        iFreeSpecialistCount = 0
+        for i in range(gc.getNumSpecialistInfos()):
+            iFreeSpecialistCount += pHeadSelectedCity.getFreeSpecialistCount(i)
+
+        iCount = 0
+
+        bHandled = False
+
+        if iFreeSpecialistCount > MAX_CITIZEN_BUTTONS:
+            for i in range(gc.getNumSpecialistInfos()):
+                if pHeadSelectedCity.getFreeSpecialistCount(i) > 0:
+                    if iCount < MAX_CITIZEN_BUTTONS:
+                        szName = "FreeSpecialist" + str(iCount)
+                        screen.setImageButton(
+                            szName,
+                            gc.getSpecialistInfo(i).getTexture(),
+                            (xResolution - 74 - (26 * iCount)),
+                            yResolution - 214,
+                            24,
+                            24,
+                            WidgetTypes.WIDGET_FREE_CITIZEN,
+                            i,
+                            1,
+                        )
+                        screen.show(szName)
+                        bHandled = true
+                    iCount += 1
+
+        else:
+            for i in range(gc.getNumSpecialistInfos()):
+                for j in range(pHeadSelectedCity.getFreeSpecialistCount(i)):
+                    if iCount < MAX_CITIZEN_BUTTONS:
+                        szName = "FreeSpecialist" + str(iCount)
+                        screen.setImageButton(
+                            szName,
+                            gc.getSpecialistInfo(i).getTexture(),
+                            (xResolution - 74 - (26 * iCount)),
+                            yResolution - 214,
+                            24,
+                            24,
+                            WidgetTypes.WIDGET_FREE_CITIZEN,
+                            i,
+                            -1,
+                        )
+                        screen.show(szName)
+                        bHandled = true
+
+                    iCount = iCount + 1
+
+        for i in range(gc.getNumSpecialistInfos()):
+
+            bHandled = False
+
+            if (
+                pHeadSelectedCity.getOwner() == gc.getGame().getActivePlayer()
+                or gc.getGame().isDebugMode()
+            ):
+
+                if pHeadSelectedCity.isCitizensAutomated():
+                    iSpecialistCount = max(
+                        pHeadSelectedCity.getSpecialistCount(i),
+                        pHeadSelectedCity.getForceSpecialistCount(i),
+                    )
+                else:
+                    iSpecialistCount = pHeadSelectedCity.getSpecialistCount(i)
+
+                if pHeadSelectedCity.isSpecialistValid(i, 1) and (
+                    pHeadSelectedCity.isCitizensAutomated()
+                    or iSpecialistCount
+                    < (
+                        pHeadSelectedCity.getPopulation()
+                        + pHeadSelectedCity.totalFreeSpecialists()
+                    )
+                ):
+                    szName = "IncreaseSpecialist" + str(i)
+                    screen.show(szName)
+                    szName = "CitizenDisabledButton" + str(i)
+                    screen.show(szName)
+
+                if iSpecialistCount > 0:
+                    szName = "CitizenDisabledButton" + str(i)
+                    screen.hide(szName)
+                    szName = "DecreaseSpecialist" + str(i)
+                    screen.show(szName)
+
+            if pHeadSelectedCity.getSpecialistCount(i) < MAX_CITIZEN_BUTTONS:
+                iCount = pHeadSelectedCity.getSpecialistCount(i)
+            else:
+                iCount = MAX_CITIZEN_BUTTONS
+
+            j = 0
+            for j in range(iCount):
+                bHandled = True
+                szName = "CitizenButton" + str((i * 100) + j)
+                screen.addCheckBoxGFC(
+                    szName,
+                    gc.getSpecialistInfo(i).getTexture(),
+                    "",
+                    xResolution - 74 - (26 * j),
+                    (yResolution - 272 - (26 * i)),
+                    24,
+                    24,
+                    WidgetTypes.WIDGET_CITIZEN,
+                    i,
+                    j,
+                    ButtonStyles.BUTTON_STYLE_LABEL,
+                )
+                screen.show(szName)
+                szName = "CitizenButtonHighlight" + str((i * 100) + j)
+                screen.addDDSGFC(
+                    szName,
+                    ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+                    xResolution - 74 - (26 * j),
+                    (yResolution - 272 - (26 * i)),
+                    24,
+                    24,
+                    WidgetTypes.WIDGET_CITIZEN,
+                    i,
+                    j,
+                )
+                if pHeadSelectedCity.getForceSpecialistCount(i) > j:
+                    screen.show(szName)
+                else:
+                    screen.hide(szName)
+
+            if not bHandled:
+                szName = "CitizenDisabledButton" + str(i)
+                screen.show(szName)
+
+        return 0
+
+    # BUG - city specialist - start
+    def updateCitizenButtons_Stacker(self):
+
+        if not CyInterface().isCityScreenUp():
+            return 0
+
+        pHeadSelectedCity = CyInterface().getHeadSelectedCity()
+        if not (
+            pHeadSelectedCity
+            and CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW
+        ):
+            return 0
+
+        global g_iSuperSpecialistCount
+        global g_iCitySpecialistCount
+        global g_iAngryCitizensCount
+
+        bHandled = False
+
+        screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+
+        # Find out our resolution
+        xResolution = screen.getXResolution()
+        yResolution = screen.getYResolution()
+
+        pHeadSelectedCity = CyInterface().getHeadSelectedCity()
+
+        currentAngryCitizenCount = pHeadSelectedCity.angryPopulation(0)
+
+        if currentAngryCitizenCount > 0:
+            stackWidth = 220 / currentAngryCitizenCount
+            if stackWidth > MAX_SPECIALIST_BUTTON_SPACING:
+                stackWidth = MAX_SPECIALIST_BUTTON_SPACING
+
+        for i in range(currentAngryCitizenCount):
+            bHandled = True
+            szName = "AngryCitizen" + str(i)
+            screen.setImageButton(
+                szName,
+                ArtFileMgr.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE").getPath(),
+                xResolution - SPECIALIST_AREA_MARGIN - (stackWidth * i),
+                yResolution - (282 - SPECIALIST_ROW_HEIGHT),
+                30,
+                30,
+                WidgetTypes.WIDGET_ANGRY_CITIZEN,
+                -1,
+                -1,
+            )
+            screen.show(szName)
+
+        # update the max ever citizen counts
+        if g_iAngryCitizensCount < currentAngryCitizenCount:
+            g_iAngryCitizensCount = currentAngryCitizenCount
+
+        iCount = 0
+        bHandled = False
+        currentSuperSpecialistCount = 0
+
+        for i in range(gc.getNumSpecialistInfos()):
+            if pHeadSelectedCity.getFreeSpecialistCount(i) > 0:
+                currentSuperSpecialistCount = (
+                    currentSuperSpecialistCount + pHeadSelectedCity.getFreeSpecialistCount(i)
+                )
+
+        if currentSuperSpecialistCount > 0:
+            stackWidth = 220 / currentSuperSpecialistCount
+            if stackWidth > MAX_SPECIALIST_BUTTON_SPACING:
+                stackWidth = MAX_SPECIALIST_BUTTON_SPACING
+
+        for i in range(gc.getNumSpecialistInfos()):
+            for j in range(pHeadSelectedCity.getFreeSpecialistCount(i)):
+
+                szName = "FreeSpecialist" + str(iCount)
+                screen.setImageButton(
+                    szName,
+                    gc.getSpecialistInfo(i).getTexture(),
+                    (xResolution - SPECIALIST_AREA_MARGIN - (stackWidth * iCount)),
+                    yResolution - (282 - SPECIALIST_ROW_HEIGHT * 2),
+                    30,
+                    30,
+                    WidgetTypes.WIDGET_FREE_CITIZEN,
+                    i,
+                    1,
+                )
+                screen.show(szName)
+                bHandled = true
+
+                iCount = iCount + 1
+
+        # update the max ever citizen counts
+        if g_iSuperSpecialistCount < iCount:
+            g_iSuperSpecialistCount = iCount
+
+        iXShiftVal = 0
+        iYShiftVal = 0
+        iSpecialistCount = 0
+
+        for i in range(gc.getNumSpecialistInfos()):
+
+            bHandled = False
+            if iSpecialistCount > SPECIALIST_ROWS:
+                iXShiftVal = 115
+                iYShiftVal = (iSpecialistCount % SPECIALIST_ROWS) + 1
+            else:
+                iYShiftVal = iSpecialistCount
+
+            if gc.getSpecialistInfo(i).isVisible():
+                iSpecialistCount = iSpecialistCount + 1
+
+            if gc.getPlayer(pHeadSelectedCity.getOwner()).isSpecialistValid(i) or i == 0:
+                iCount = (
+                    pHeadSelectedCity.getPopulation() - pHeadSelectedCity.angryPopulation(0)
+                ) + pHeadSelectedCity.totalFreeSpecialists()
+            else:
+                iCount = pHeadSelectedCity.getMaxSpecialistCount(i)
+
+            # update the max ever citizen counts
+            if g_iCitySpecialistCount < iCount:
+                g_iCitySpecialistCount = iCount
+
+            RowLength = 110
+            if i == 0:
+                # if (i == gc.getInfoTypeForString(gc.getDefineSTRING("DEFAULT_SPECIALIST"))):
+                RowLength *= 2
+
+            HorizontalSpacing = MAX_SPECIALIST_BUTTON_SPACING
+            if iCount > 0:
+                HorizontalSpacing = RowLength / iCount
+            if HorizontalSpacing > MAX_SPECIALIST_BUTTON_SPACING:
+                HorizontalSpacing = MAX_SPECIALIST_BUTTON_SPACING
+
+            for k in range(iCount):
+                if k >= pHeadSelectedCity.getSpecialistCount(i):
+                    szName = "IncresseCitizenBanner" + str((i * 100) + k)
+                    screen.addCheckBoxGFC(
+                        szName,
+                        gc.getSpecialistInfo(i).getTexture(),
+                        "",
+                        xResolution
+                        - (SPECIALIST_AREA_MARGIN + iXShiftVal)
+                        - (HorizontalSpacing * k),
+                        (yResolution - 282 - (SPECIALIST_ROW_HEIGHT * iYShiftVal)),
+                        30,
+                        30,
+                        WidgetTypes.WIDGET_CHANGE_SPECIALIST,
+                        i,
+                        1,
+                        ButtonStyles.BUTTON_STYLE_LABEL,
+                    )
+                    screen.enable(szName, False)
+                    screen.show(szName)
+
+                    szName = "IncresseCitizenButton" + str((i * 100) + k)
+                    screen.addCheckBoxGFC(
+                        szName,
+                        "",
+                        "",
+                        xResolution
+                        - (SPECIALIST_AREA_MARGIN + iXShiftVal)
+                        - (HorizontalSpacing * k),
+                        (yResolution - 282 - (SPECIALIST_ROW_HEIGHT * iYShiftVal)),
+                        30,
+                        30,
+                        WidgetTypes.WIDGET_CHANGE_SPECIALIST,
+                        i,
+                        1,
+                        ButtonStyles.BUTTON_STYLE_LABEL,
+                    )
+                    screen.show(szName)
+
+                else:
+                    szName = "DecresseCitizenButton" + str((i * 100) + k)
+                    screen.addCheckBoxGFC(
+                        szName,
+                        gc.getSpecialistInfo(i).getTexture(),
+                        "",
+                        xResolution
+                        - (SPECIALIST_AREA_MARGIN + iXShiftVal)
+                        - (HorizontalSpacing * k),
+                        (yResolution - 282 - (SPECIALIST_ROW_HEIGHT * iYShiftVal)),
+                        30,
+                        30,
+                        WidgetTypes.WIDGET_CHANGE_SPECIALIST,
+                        i,
+                        -1,
+                        ButtonStyles.BUTTON_STYLE_LABEL,
+                    )
+                    screen.show(szName)
+
+        screen.show("SpecialistBackground")
+        screen.show("SpecialistLabel")
+
+        return 0
+
+    # BUG - city specialist - end
+
+    # BUG - city specialist - start
+    def updateCitizenButtons_Chevron(self):
+
+        if not CyInterface().isCityScreenUp():
+            return 0
+
+        pHeadSelectedCity = CyInterface().getHeadSelectedCity()
+        if not (
+            pHeadSelectedCity
+            and CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW
+        ):
+            return 0
+
+        global MAX_CITIZEN_BUTTONS
+
+        bHandled = False
+
+        screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+
+        # Find out our resolution
+        xResolution = screen.getXResolution()
+        yResolution = screen.getYResolution()
+
+        pHeadSelectedCity = CyInterface().getHeadSelectedCity()
+
+        iCount = pHeadSelectedCity.angryPopulation(0)
+
+        j = 0
+        while iCount > 0:
+            bHandled = True
+            szName = "AngryCitizen" + str(j)
+            screen.show(szName)
+
+            xCoord = xResolution - 74 - (26 * j)
+            yCoord = yResolution - 238
+
+            szName = "AngryCitizenChevron" + str(j)
+            if iCount >= 20:
+                szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON20").getPath()
+                iCount -= 20
+            elif iCount >= 10:
+                szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON10").getPath()
+                iCount -= 10
+            elif iCount >= 5:
+                szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON5").getPath()
+                iCount -= 5
+            else:
+                szFileName = ""
+                iCount -= 1
+
+            if szFileName != "":
+                screen.addDDSGFC(
+                    szName,
+                    szFileName,
+                    xCoord,
+                    yCoord,
+                    10,
+                    10,
+                    WidgetTypes.WIDGET_CITIZEN,
+                    j,
+                    False,
+                )
+                screen.show(szName)
+
+            j += 1
+
+        iFreeSpecialistCount = 0
+        for i in range(gc.getNumSpecialistInfos()):
+            iFreeSpecialistCount += pHeadSelectedCity.getFreeSpecialistCount(i)
+
+        iCount = 0
+
+        bHandled = False
+
+        if iFreeSpecialistCount > MAX_CITIZEN_BUTTONS:
+            for i in range(gc.getNumSpecialistInfos()):
+                if pHeadSelectedCity.getFreeSpecialistCount(i) > 0:
+                    if iCount < MAX_CITIZEN_BUTTONS:
+                        szName = "FreeSpecialist" + str(iCount)
+                        screen.setImageButton(
+                            szName,
+                            gc.getSpecialistInfo(i).getTexture(),
+                            (xResolution - 74 - (26 * iCount)),
+                            yResolution - 214,
+                            24,
+                            24,
+                            WidgetTypes.WIDGET_FREE_CITIZEN,
+                            i,
+                            1,
+                        )
+                        screen.show(szName)
+                        bHandled = True
+                    iCount += 1
+
+        else:
+            for i in range(gc.getNumSpecialistInfos()):
+                for j in range(pHeadSelectedCity.getFreeSpecialistCount(i)):
+                    if iCount < MAX_CITIZEN_BUTTONS:
+                        szName = "FreeSpecialist" + str(iCount)
+                        screen.setImageButton(
+                            szName,
+                            gc.getSpecialistInfo(i).getTexture(),
+                            (xResolution - 74 - (26 * iCount)),
+                            yResolution - 214,
+                            24,
+                            24,
+                            WidgetTypes.WIDGET_FREE_CITIZEN,
+                            i,
+                            -1,
+                        )
+                        screen.show(szName)
+                        bHandled = True
+
+                    iCount = iCount + 1
+
+        for i in range(gc.getNumSpecialistInfos()):
+
+            bHandled = False
+
+            if (
+                pHeadSelectedCity.getOwner() == gc.getGame().getActivePlayer()
+                or gc.getGame().isDebugMode()
+            ):
+
+                if pHeadSelectedCity.isCitizensAutomated():
+                    iSpecialistCount = max(
+                        pHeadSelectedCity.getSpecialistCount(i),
+                        pHeadSelectedCity.getForceSpecialistCount(i),
+                    )
+                else:
+                    iSpecialistCount = pHeadSelectedCity.getSpecialistCount(i)
+
+                if pHeadSelectedCity.isSpecialistValid(i, 1) and (
+                    pHeadSelectedCity.isCitizensAutomated()
+                    or iSpecialistCount
+                    < (
+                        pHeadSelectedCity.getPopulation()
+                        + pHeadSelectedCity.totalFreeSpecialists()
+                    )
+                ):
+                    szName = "IncreaseSpecialist" + str(i)
+                    screen.show(szName)
+                    szName = "CitizenDisabledButton" + str(i)
+                    screen.show(szName)
+
+                if iSpecialistCount > 0:
+                    szName = "CitizenDisabledButton" + str(i)
+                    screen.hide(szName)
+                    szName = "DecreaseSpecialist" + str(i)
+                    screen.show(szName)
+
+            iCount = pHeadSelectedCity.getSpecialistCount(i)
+
+            j = 0
+            while iCount > 0:
+                bHandled = True
+
+                xCoord = xResolution - 74 - (26 * j)
+                yCoord = yResolution - 272 - (26 * i)
+
+                szName = "CitizenButton" + str((i * 100) + j)
+                screen.addCheckBoxGFC(
+                    szName,
+                    gc.getSpecialistInfo(i).getTexture(),
+                    "",
+                    xCoord,
+                    yCoord,
+                    24,
+                    24,
+                    WidgetTypes.WIDGET_CITIZEN,
+                    i,
+                    j,
+                    ButtonStyles.BUTTON_STYLE_LABEL,
+                )
+                screen.show(szName)
+
+                szName = "CitizenChevron" + str((i * 100) + j)
+                if iCount >= 20:
+                    szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON20").getPath()
+                    iCount -= 20
+                elif iCount >= 10:
+                    szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON10").getPath()
+                    iCount -= 10
+                elif iCount >= 5:
+                    szFileName = ArtFileMgr.getInterfaceArtInfo("OVERLAY_CHEVRON5").getPath()
+                    iCount -= 5
+                else:
+                    szFileName = ""
+                    iCount -= 1
+
+                if szFileName != "":
+                    screen.addDDSGFC(
+                        szName,
+                        szFileName,
+                        xCoord,
+                        yCoord,
+                        10,
+                        10,
+                        WidgetTypes.WIDGET_CITIZEN,
+                        i,
+                        False,
+                    )
+                    screen.show(szName)
+
+                j += 1
+
+            if not bHandled:
+                szName = "CitizenDisabledButton" + str(i)
+                screen.show(szName)
+
+        return 0
+
     # Will update the game data strings
+
+    # BUG - city specialist - end
+
     def updateGameDataStrings(self):
 
         screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
@@ -7784,12 +8359,18 @@ class CvMainInterface:
                             ).getTextKey(),
                             szRate,
                         )
-# BUG - Culture Turns - start
+                    # BUG - Culture Turns - start
                     if CityScreenOpt.isShowCultureTurns() and iRate > 0:
-                        iCultureTimes100 = pHeadSelectedCity.getCultureTimes100(pHeadSelectedCity.getOwner())
-                        iCultureLeftTimes100 = 100 * pHeadSelectedCity.getCultureThreshold() - iCultureTimes100
-                        szBuffer += u" " + localText.getText("INTERFACE_CITY_TURNS", (((iCultureLeftTimes100 + iRate - 1) / iRate),))
-# BUG - Culture Turns - end
+                        iCultureTimes100 = pHeadSelectedCity.getCultureTimes100(
+                            pHeadSelectedCity.getOwner()
+                        )
+                        iCultureLeftTimes100 = (
+                            100 * pHeadSelectedCity.getCultureThreshold() - iCultureTimes100
+                        )
+                        szBuffer += u" " + localText.getText(
+                            "INTERFACE_CITY_TURNS", (((iCultureLeftTimes100 + iRate - 1) / iRate),)
+                        )
+                    # BUG - Culture Turns - end
                     screen.setLabel(
                         "CultureText",
                         "Background",
@@ -7809,17 +8390,32 @@ class CvMainInterface:
                 if (pHeadSelectedCity.getGreatPeopleProgress() > 0) or (
                     pHeadSelectedCity.getGreatPeopleRate() > 0
                 ):
-# BUG - Great Person Turns - start
+                    # BUG - Great Person Turns - start
                     iRate = pHeadSelectedCity.getGreatPeopleRate()
                     if CityScreenOpt.isShowCityGreatPersonInfo():
                         iGPTurns = GPUtil.getCityTurns(pHeadSelectedCity)
-                        szBuffer = GPUtil.getGreatPeopleText(pHeadSelectedCity, iGPTurns, 230, MainOpt.isGPBarTypesNone(), MainOpt.isGPBarTypesOne(), False)
+                        szBuffer = GPUtil.getGreatPeopleText(
+                            pHeadSelectedCity,
+                            iGPTurns,
+                            230,
+                            MainOpt.isGPBarTypesNone(),
+                            MainOpt.isGPBarTypesOne(),
+                            False,
+                        )
                     else:
-                        szBuffer = localText.getText("INTERFACE_CITY_GREATPEOPLE_RATE", (CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR), pHeadSelectedCity.getGreatPeopleRate()))
+                        szBuffer = localText.getText(
+                            "INTERFACE_CITY_GREATPEOPLE_RATE",
+                            (
+                                CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR),
+                                pHeadSelectedCity.getGreatPeopleRate(),
+                            ),
+                        )
                         if CityScreenOpt.isShowGreatPersonTurns() and iRate > 0:
                             iGPTurns = GPUtil.getCityTurns(pHeadSelectedCity)
-                            szBuffer += u" " + localText.getText("INTERFACE_CITY_TURNS", (iGPTurns, ))
-# BUG - Great Person Turns - end
+                            szBuffer += u" " + localText.getText(
+                                "INTERFACE_CITY_TURNS", (iGPTurns,)
+                            )
+                    # BUG - Great Person Turns - end
 
                     screen.setLabel(
                         "GreatPeopleText",
@@ -7909,9 +8505,33 @@ class CvMainInterface:
 
             # Help Text Area
             if CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW:
-                screen.setHelpTextArea( 350, FontTypes.SMALL_FONT, 7, yResolution - 172, -0.1, False, "", True, False, CvUtil.FONT_LEFT_JUSTIFY, HELP_TEXT_MINIMUM_WIDTH )
+                screen.setHelpTextArea(
+                    350,
+                    FontTypes.SMALL_FONT,
+                    7,
+                    yResolution - 172,
+                    -0.1,
+                    False,
+                    "",
+                    True,
+                    False,
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    HELP_TEXT_MINIMUM_WIDTH,
+                )
             else:
-                screen.setHelpTextArea( 350, FontTypes.SMALL_FONT, 7, yResolution - 50, -0.1, False, "", True, False, CvUtil.FONT_LEFT_JUSTIFY, HELP_TEXT_MINIMUM_WIDTH )
+                screen.setHelpTextArea(
+                    350,
+                    FontTypes.SMALL_FONT,
+                    7,
+                    yResolution - 50,
+                    -0.1,
+                    False,
+                    "",
+                    True,
+                    False,
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    HELP_TEXT_MINIMUM_WIDTH,
+                )
 
             screen.hide("InterfaceTopLeftBackgroundWidget")
             screen.hide("InterfaceTopRightBackgroundWidget")
@@ -8029,24 +8649,31 @@ class CvMainInterface:
                     if CyInterface().getOrderNodeSave(i):
                         szLeftBuffer = u"*" + szLeftBuffer
 
-# BUG - Production Started - start
+                    # BUG - Production Started - start
                     if CityScreenOpt.isShowProductionStarted():
                         eUnit = CyInterface().getOrderNodeData1(i)
                         if pHeadSelectedCity.getUnitProduction(eUnit) > 0:
                             szRightBuffer = BugUtil.colorText(szRightBuffer, "COLOR_CYAN")
-# BUG - Production Started - end
-                    
-# BUG - Production Decay - start
+                    # BUG - Production Started - end
+
+                    # BUG - Production Decay - start
                     if BugDll.isPresent() and CityScreenOpt.isShowProductionDecayQueue():
                         eUnit = CyInterface().getOrderNodeData1(i)
                         if pHeadSelectedCity.getUnitProduction(eUnit) > 0:
                             if pHeadSelectedCity.isUnitProductionDecay(eUnit):
-                                szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,))
+                                szLeftBuffer = BugUtil.getText(
+                                    "TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,)
+                                )
                             elif pHeadSelectedCity.getUnitProductionTime(eUnit) > 0:
                                 iDecayTurns = pHeadSelectedCity.getUnitProductionDecayTurns(eUnit)
-                                if iDecayTurns <= CityScreenOpt.getProductionDecayQueueUnitThreshold():
-                                    szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,))
-# BUG - Production Decay - end
+                                if (
+                                    iDecayTurns
+                                    <= CityScreenOpt.getProductionDecayQueueUnitThreshold()
+                                ):
+                                    szLeftBuffer = BugUtil.getText(
+                                        "TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,)
+                                    )
+                # BUG - Production Decay - end
 
                 elif CyInterface().getOrderNodeType(i) == OrderTypes.ORDER_CONSTRUCT:
                     szLeftBuffer = gc.getBuildingInfo(
@@ -8062,24 +8689,33 @@ class CvMainInterface:
                         + ")"
                     )
 
-# BUG - Production Started - start
+                    # BUG - Production Started - start
                     if CityScreenOpt.isShowProductionStarted():
                         eBuilding = CyInterface().getOrderNodeData1(i)
                         if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
                             szRightBuffer = BugUtil.colorText(szRightBuffer, "COLOR_CYAN")
-# BUG - Production Started - end
+                    # BUG - Production Started - end
 
-# BUG - Production Decay - start
+                    # BUG - Production Decay - start
                     if BugDll.isPresent() and CityScreenOpt.isShowProductionDecayQueue():
                         eBuilding = CyInterface().getOrderNodeData1(i)
                         if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
                             if pHeadSelectedCity.isBuildingProductionDecay(eBuilding):
-                                szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,))
+                                szLeftBuffer = BugUtil.getText(
+                                    "TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,)
+                                )
                             elif pHeadSelectedCity.getBuildingProductionTime(eBuilding) > 0:
-                                iDecayTurns = pHeadSelectedCity.getBuildingProductionDecayTurns(eBuilding)
-                                if iDecayTurns <= CityScreenOpt.getProductionDecayQueueBuildingThreshold():
-                                    szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,))
-# BUG - Production Decay - end
+                                iDecayTurns = pHeadSelectedCity.getBuildingProductionDecayTurns(
+                                    eBuilding
+                                )
+                                if (
+                                    iDecayTurns
+                                    <= CityScreenOpt.getProductionDecayQueueBuildingThreshold()
+                                ):
+                                    szLeftBuffer = BugUtil.getText(
+                                        "TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,)
+                                    )
+                # BUG - Production Decay - end
 
                 elif CyInterface().getOrderNodeType(i) == OrderTypes.ORDER_CREATE:
                     szLeftBuffer = gc.getProjectInfo(
@@ -8095,12 +8731,12 @@ class CvMainInterface:
                         + ")"
                     )
 
-# BUG - Production Started - start
+                    # BUG - Production Started - start
                     if BugDll.isVersion(3) and CityScreenOpt.isShowProductionStarted():
                         eProject = CyInterface().getOrderNodeData1(i)
                         if pHeadSelectedCity.getProjectProduction(eProject) > 0:
                             szRightBuffer = BugUtil.colorText(szRightBuffer, "COLOR_CYAN")
-# BUG - Production Started - end
+                # BUG - Production Started - end
 
                 elif CyInterface().getOrderNodeType(i) == OrderTypes.ORDER_MAINTAIN:
                     szLeftBuffer = gc.getProcessInfo(
@@ -8151,29 +8787,50 @@ class CvMainInterface:
 
             if CyInterface().getLengthSelectionList() > 1:
 
-# BUG - Stack Movement Display - start
-                szBuffer = localText.getText("TXT_KEY_UNIT_STACK", (CyInterface().getLengthSelectionList(), ))
+                # BUG - Stack Movement Display - start
+                szBuffer = localText.getText(
+                    "TXT_KEY_UNIT_STACK", (CyInterface().getLengthSelectionList(),)
+                )
                 if MainOpt.isShowStackMovementPoints():
                     iMinMoves = 100000
                     iMaxMoves = 0
                     for i in range(CyInterface().getLengthSelectionList()):
                         pUnit = CyInterface().getSelectionUnit(i)
-                        if (pUnit is not None):
+                        if pUnit is not None:
                             iLoopMoves = pUnit.movesLeft()
-                            if (iLoopMoves > iMaxMoves):
+                            if iLoopMoves > iMaxMoves:
                                 iMaxMoves = iLoopMoves
-                            if (iLoopMoves < iMinMoves):
+                            if iLoopMoves < iMinMoves:
                                 iMinMoves = iLoopMoves
-                    if (iMinMoves == iMaxMoves):
+                    if iMinMoves == iMaxMoves:
                         fMinMoves = float(iMinMoves) / gc.getMOVE_DENOMINATOR()
-                        szBuffer += u" %.1f%c" % (fMinMoves, CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
+                        szBuffer += u" %.1f%c" % (
+                            fMinMoves,
+                            CyGame().getSymbolID(FontSymbols.MOVES_CHAR),
+                        )
                     else:
                         fMinMoves = float(iMinMoves) / gc.getMOVE_DENOMINATOR()
                         fMaxMoves = float(iMaxMoves) / gc.getMOVE_DENOMINATOR()
-                        szBuffer += u" %.1f - %.1f%c" % (fMinMoves, fMaxMoves, CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
-                
-                screen.setText( "SelectedUnitLabel", "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, 18, yResolution - 137, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_UNIT_NAME, -1, -1 )
-# BUG - Stack Movement Display - end
+                        szBuffer += u" %.1f - %.1f%c" % (
+                            fMinMoves,
+                            fMaxMoves,
+                            CyGame().getSymbolID(FontSymbols.MOVES_CHAR),
+                        )
+
+                screen.setText(
+                    "SelectedUnitLabel",
+                    "Background",
+                    szBuffer,
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    18,
+                    yResolution - 137,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_UNIT_NAME,
+                    -1,
+                    -1,
+                )
+                # BUG - Stack Movement Display - end
 
                 if (pSelectedGroup == 0) or (pSelectedGroup.getLengthMissionQueue() <= 1):
                     if pHeadSelectedUnit:
@@ -8337,29 +8994,45 @@ class CvMainInterface:
                     szLeftBuffer = u""
                     szRightBuffer = u""
 
-# BUG - Unit Movement Fraction - start
+                    # BUG - Unit Movement Fraction - start
                     szLeftBuffer = text("INTERFACE_PANE_MOVEMENT")
                     if MainOpt.isShowUnitMovementPointsFraction():
-                        szRightBuffer = u"%d%c" %(pHeadSelectedUnit.baseMoves(), CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
-                        if (pHeadSelectedUnit.movesLeft() == 0):
+                        szRightBuffer = u"%d%c" % (
+                            pHeadSelectedUnit.baseMoves(),
+                            CyGame().getSymbolID(FontSymbols.MOVES_CHAR),
+                        )
+                        if pHeadSelectedUnit.movesLeft() == 0:
                             szRightBuffer = u"0/" + szRightBuffer
-                        elif (pHeadSelectedUnit.movesLeft() == pHeadSelectedUnit.baseMoves() * gc.getMOVE_DENOMINATOR()):
+                        elif (
+                            pHeadSelectedUnit.movesLeft()
+                            == pHeadSelectedUnit.baseMoves() * gc.getMOVE_DENOMINATOR()
+                        ):
                             pass
                         else:
-                            fCurrMoves = float(pHeadSelectedUnit.movesLeft()) / gc.getMOVE_DENOMINATOR()
+                            fCurrMoves = (
+                                float(pHeadSelectedUnit.movesLeft()) / gc.getMOVE_DENOMINATOR()
+                            )
                             szRightBuffer = (u"%.1f/" % fCurrMoves) + szRightBuffer
                     else:
-                        if ( (pHeadSelectedUnit.movesLeft() % gc.getMOVE_DENOMINATOR()) > 0 ):
+                        if (pHeadSelectedUnit.movesLeft() % gc.getMOVE_DENOMINATOR()) > 0:
                             iDenom = 1
                         else:
                             iDenom = 0
-                        iCurrMoves = ((pHeadSelectedUnit.movesLeft() / gc.getMOVE_DENOMINATOR()) + iDenom )
-                        if (pHeadSelectedUnit.baseMoves() == iCurrMoves):
-                            szRightBuffer = u"%d%c" %(pHeadSelectedUnit.baseMoves(), CyGame().getSymbolID(FontSymbols.MOVES_CHAR) )
+                        iCurrMoves = (
+                            pHeadSelectedUnit.movesLeft() / gc.getMOVE_DENOMINATOR()
+                        ) + iDenom
+                        if pHeadSelectedUnit.baseMoves() == iCurrMoves:
+                            szRightBuffer = u"%d%c" % (
+                                pHeadSelectedUnit.baseMoves(),
+                                CyGame().getSymbolID(FontSymbols.MOVES_CHAR),
+                            )
                         else:
-                            szRightBuffer = u"%d/%d%c" %(iCurrMoves, pHeadSelectedUnit.baseMoves(), CyGame().getSymbolID(FontSymbols.MOVES_CHAR) )
-# BUG - Unit Movement Fraction - end
-
+                            szRightBuffer = u"%d/%d%c" % (
+                                iCurrMoves,
+                                pHeadSelectedUnit.baseMoves(),
+                                CyGame().getSymbolID(FontSymbols.MOVES_CHAR),
+                            )
+                    # BUG - Unit Movement Fraction - end
 
                     szBuffer = szLeftBuffer + "  " + szRightBuffer
                     screen.appendTableRow("SelectedUnitText")
@@ -8542,16 +9215,16 @@ class CvMainInterface:
 
         screen.hide("ScoreBackground")
 
-# BUG - Align Icons - start
-        for i in range( gc.getMAX_PLAYERS() ):
+        # BUG - Align Icons - start
+        for i in range(gc.getMAX_PLAYERS()):
             szName = "ScoreText" + str(i)
-            screen.hide( szName )
+            screen.hide(szName)
             szName = "ScoreTech" + str(i)
-            screen.hide( szName )
-            for j in range( Scoreboard.NUM_PARTS ):
-                szName = "ScoreText%d-%d" %( i, j )
-                screen.hide( szName )
-# BUG - Align Icons - end
+            screen.hide(szName)
+            for j in range(Scoreboard.NUM_PARTS):
+                szName = "ScoreText%d-%d" % (i, j)
+                screen.hide(szName)
+        # BUG - Align Icons - end
 
         iWidth = 0
         iCount = 0
@@ -8566,33 +9239,33 @@ class CvMainInterface:
                 and not CyInterface().isCityScreenUp()
                 and CyEngine().isGlobeviewUp() is False
             ):
-# BUG - Align Icons - start
+                # BUG - Align Icons - start
                 bAlignIcons = ScoreOpt.isAlignIcons()
-                if (bAlignIcons):
+                if bAlignIcons:
                     scores = Scoreboard.Scoreboard()
-# BUG - Align Icons - end
+                # BUG - Align Icons - end
 
-# BUG - 3.17 No Espionage - start
+                # BUG - 3.17 No Espionage - start
                 bEspionage = GameUtil.isEspionage()
-# BUG - 3.17 No Espionage - end
+                # BUG - 3.17 No Espionage - end
 
-# BUG - Power Rating - start
+                # BUG - Power Rating - start
                 bShowPower = ScoreOpt.isShowPower()
-                if (bShowPower):
+                if bShowPower:
                     iPlayerPower = gc.getActivePlayer().getPower()
                     iPowerColor = ScoreOpt.getPowerColor()
                     iHighPowerColor = ScoreOpt.getHighPowerColor()
                     iLowPowerColor = ScoreOpt.getLowPowerColor()
-                    
-                    if (bEspionage):
+
+                    if bEspionage:
                         iDemographicsMission = -1
                         for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
-                            if (gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics()):
+                            if gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics():
                                 iDemographicsMission = iMissionLoop
                                 break
-                        if (iDemographicsMission == -1):
+                        if iDemographicsMission == -1:
                             bShowPower = False
-# BUG - Power Rating - end
+                # BUG - Power Rating - end
 
                 i = gc.getMAX_CIV_TEAMS() - 1
                 while i > -1:
@@ -8603,10 +9276,10 @@ class CvMainInterface:
                         or gc.getTeam(eTeam).isHuman()
                         or gc.getGame().isDebugMode()
                     ):
-# BUG - Align Icons - start
-                        if (bAlignIcons):
+                        # BUG - Align Icons - start
+                        if bAlignIcons:
                             scores.addTeam(gc.getTeam(eTeam), i)
-# BUG - Align Icons - end
+                        # BUG - Align Icons - end
                         j = gc.getMAX_CIV_PLAYERS() - 1
                         while j > -1:
                             ePlayer = gc.getGame().getRankPlayer(j)
@@ -8616,318 +9289,657 @@ class CvMainInterface:
                                 or gc.getGame().getActivePlayer() == ePlayer
                             ):
 
-# BUG - Dead Civs - start
-                                if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isBarbarian()
-                                    and (gc.getPlayer(ePlayer).isAlive() or ScoreOpt.isShowDeadCivs())):
-# BUG - Dead Civs - end
-# BUG - Minor Civs - start
-                                    if (not gc.getPlayer(ePlayer).isMinorCiv() or ScoreOpt.isShowMinorCivs()):
-# BUG - Minor Civs - end
-                                        if (gc.getPlayer(ePlayer).getTeam() == eTeam):
+                                # BUG - Dead Civs - start
+                                if (
+                                    gc.getPlayer(ePlayer).isEverAlive()
+                                    and not gc.getPlayer(ePlayer).isBarbarian()
+                                    and (
+                                        gc.getPlayer(ePlayer).isAlive()
+                                        or ScoreOpt.isShowDeadCivs()
+                                    )
+                                ):
+                                    # BUG - Dead Civs - end
+                                    # BUG - Minor Civs - start
+                                    if (
+                                        not gc.getPlayer(ePlayer).isMinorCiv()
+                                        or ScoreOpt.isShowMinorCivs()
+                                    ):
+                                        # BUG - Minor Civs - end
+                                        if gc.getPlayer(ePlayer).getTeam() == eTeam:
                                             szBuffer = u"<font=2>"
-# BUG - Align Icons - start
-                                            if (bAlignIcons):
+                                            # BUG - Align Icons - start
+                                            if bAlignIcons:
                                                 scores.addPlayer(gc.getPlayer(ePlayer), j)
                                                 # BUG: Align Icons continues throughout -- if (bAlignIcons): scores.setFoo(foo)
-# BUG - Align Icons - end
-    
-                                            if (gc.getGame().isGameMultiPlayer()):
-                                                if (not (gc.getPlayer(ePlayer).isTurnActive())):
+                                            # BUG - Align Icons - end
+
+                                            if gc.getGame().isGameMultiPlayer():
+                                                if not (gc.getPlayer(ePlayer).isTurnActive()):
                                                     szBuffer = szBuffer + "*"
-                                                    if (bAlignIcons):
+                                                    if bAlignIcons:
                                                         scores.setWaiting()
-    
-# BUG - Dead Civs - start
-                                            if (ScoreOpt.isUsePlayerName()):
+
+                                            # BUG - Dead Civs - start
+                                            if ScoreOpt.isUsePlayerName():
                                                 szPlayerName = gc.getPlayer(ePlayer).getName()
                                             else:
-                                                szPlayerName = gc.getLeaderHeadInfo(gc.getPlayer(ePlayer).getLeaderType()).getDescription()
-                                            if (ScoreOpt.isShowBothNames()):
-                                                szCivName = gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
+                                                szPlayerName = gc.getLeaderHeadInfo(
+                                                    gc.getPlayer(ePlayer).getLeaderType()
+                                                ).getDescription()
+                                            if ScoreOpt.isShowBothNames():
+                                                szCivName = gc.getPlayer(
+                                                    ePlayer
+                                                ).getCivilizationShortDescription(0)
                                                 szPlayerName = szPlayerName + "/" + szCivName
-                                            elif (ScoreOpt.isShowBothNamesShort()):
-                                                szCivName = gc.getPlayer(ePlayer).getCivilizationDescription(0)
+                                            elif ScoreOpt.isShowBothNamesShort():
+                                                szCivName = gc.getPlayer(
+                                                    ePlayer
+                                                ).getCivilizationDescription(0)
                                                 szPlayerName = szPlayerName + "/" + szCivName
-                                            elif (ScoreOpt.isShowLeaderName()):
+                                            elif ScoreOpt.isShowLeaderName():
                                                 szPlayerName = szPlayerName
-                                            elif (ScoreOpt.isShowCivName()):
-                                                szCivName = gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
+                                            elif ScoreOpt.isShowCivName():
+                                                szCivName = gc.getPlayer(
+                                                    ePlayer
+                                                ).getCivilizationShortDescription(0)
                                                 szPlayerName = szCivName
                                             else:
-                                                szCivName = gc.getPlayer(ePlayer).getCivilizationDescription(0)
+                                                szCivName = gc.getPlayer(
+                                                    ePlayer
+                                                ).getCivilizationDescription(0)
                                                 szPlayerName = szCivName
-                                            
-                                            if (not gc.getPlayer(ePlayer).isAlive() and ScoreOpt.isShowDeadTag()):
-                                                szPlayerScore = localText.getText("TXT_KEY_BUG_DEAD_CIV", ())
-                                                if (bAlignIcons):
+
+                                            if (
+                                                not gc.getPlayer(ePlayer).isAlive()
+                                                and ScoreOpt.isShowDeadTag()
+                                            ):
+                                                szPlayerScore = localText.getText(
+                                                    "TXT_KEY_BUG_DEAD_CIV", ()
+                                                )
+                                                if bAlignIcons:
                                                     scores.setScore(szPlayerScore)
                                             else:
                                                 iScore = gc.getGame().getPlayerScore(ePlayer)
                                                 szPlayerScore = u"%d" % iScore
-                                                if (bAlignIcons):
+                                                if bAlignIcons:
                                                     scores.setScore(szPlayerScore)
-# BUG - Score Delta - start
-                                                if (ScoreOpt.isShowScoreDelta()):
+                                                # BUG - Score Delta - start
+                                                if ScoreOpt.isShowScoreDelta():
                                                     iGameTurn = gc.getGame().getGameTurn()
-                                                    if (ePlayer >= gc.getGame().getActivePlayer()):
+                                                    if ePlayer >= gc.getGame().getActivePlayer():
                                                         iGameTurn -= 1
-                                                    if (ScoreOpt.isScoreDeltaIncludeCurrentTurn()):
+                                                    if ScoreOpt.isScoreDeltaIncludeCurrentTurn():
                                                         iScoreDelta = iScore
-                                                    elif (iGameTurn >= 0):
-                                                        iScoreDelta = gc.getPlayer(ePlayer).getScoreHistory(iGameTurn)
+                                                    elif iGameTurn >= 0:
+                                                        iScoreDelta = gc.getPlayer(
+                                                            ePlayer
+                                                        ).getScoreHistory(iGameTurn)
                                                     else:
                                                         iScoreDelta = 0
                                                     iPrevGameTurn = iGameTurn - 1
-                                                    if (iPrevGameTurn >= 0):
-                                                        iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn)
-                                                    if (iScoreDelta != 0):
-                                                        if (iScoreDelta > 0):
-                                                            iColorType = gc.getInfoTypeForString("COLOR_GREEN")
-                                                        elif (iScoreDelta < 0):
-                                                            iColorType = gc.getInfoTypeForString("COLOR_RED")
+                                                    if iPrevGameTurn >= 0:
+                                                        iScoreDelta -= gc.getPlayer(
+                                                            ePlayer
+                                                        ).getScoreHistory(iPrevGameTurn)
+                                                    if iScoreDelta != 0:
+                                                        if iScoreDelta > 0:
+                                                            iColorType = gc.getInfoTypeForString(
+                                                                "COLOR_GREEN"
+                                                            )
+                                                        elif iScoreDelta < 0:
+                                                            iColorType = gc.getInfoTypeForString(
+                                                                "COLOR_RED"
+                                                            )
                                                         szScoreDelta = "%+d" % iScoreDelta
-                                                        if (iColorType >= 0):
-                                                            szScoreDelta = localText.changeTextColor(szScoreDelta, iColorType)
+                                                        if iColorType >= 0:
+                                                            szScoreDelta = (
+                                                                localText.changeTextColor(
+                                                                    szScoreDelta, iColorType
+                                                                )
+                                                            )
                                                         szPlayerScore += szScoreDelta + u" "
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setScoreDelta(szScoreDelta)
-# BUG - Score Delta - end
-                                            
-                                            if (not CyInterface().isFlashingPlayer(ePlayer) or CyInterface().shouldFlash(ePlayer)):
-                                                if (ePlayer == gc.getGame().getActivePlayer()):
-                                                    szPlayerName = u"[<color=%d,%d,%d,%d>%s</color>]" %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), szPlayerName)
+                                            # BUG - Score Delta - end
+
+                                            if not CyInterface().isFlashingPlayer(
+                                                ePlayer
+                                            ) or CyInterface().shouldFlash(ePlayer):
+                                                if ePlayer == gc.getGame().getActivePlayer():
+                                                    szPlayerName = (
+                                                        u"[<color=%d,%d,%d,%d>%s</color>]"
+                                                        % (
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getPlayerTextColorR(),
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getPlayerTextColorG(),
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getPlayerTextColorB(),
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getPlayerTextColorA(),
+                                                            szPlayerName,
+                                                        )
+                                                    )
                                                 else:
-                                                    if (not gc.getPlayer(ePlayer).isAlive() and ScoreOpt.isGreyOutDeadCivs()):
-                                                        szPlayerName = u"<color=%d,%d,%d,%d>%s</color>" %(175, 175, 175, gc.getPlayer(ePlayer).getPlayerTextColorA(), szPlayerName)
+                                                    if (
+                                                        not gc.getPlayer(ePlayer).isAlive()
+                                                        and ScoreOpt.isGreyOutDeadCivs()
+                                                    ):
+                                                        szPlayerName = (
+                                                            u"<color=%d,%d,%d,%d>%s</color>"
+                                                            % (
+                                                                175,
+                                                                175,
+                                                                175,
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getPlayerTextColorA(),
+                                                                szPlayerName,
+                                                            )
+                                                        )
                                                     else:
-                                                        szPlayerName = u"<color=%d,%d,%d,%d>%s</color>" %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), szPlayerName)
-                                            szTempBuffer = u"%s: %s" %(szPlayerScore, szPlayerName)
+                                                        szPlayerName = (
+                                                            u"<color=%d,%d,%d,%d>%s</color>"
+                                                            % (
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getPlayerTextColorR(),
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getPlayerTextColorG(),
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getPlayerTextColorB(),
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getPlayerTextColorA(),
+                                                                szPlayerName,
+                                                            )
+                                                        )
+                                            szTempBuffer = u"%s: %s" % (
+                                                szPlayerScore,
+                                                szPlayerName,
+                                            )
                                             szBuffer = szBuffer + szTempBuffer
-                                            if (bAlignIcons):
+                                            if bAlignIcons:
                                                 scores.setName(szPlayerName)
-                                                scores.setID(u"<color=%d,%d,%d,%d>%d</color>" %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), ePlayer))
-                                            
-                                            if (gc.getPlayer(ePlayer).isAlive()):
-                                                if (bAlignIcons):
+                                                scores.setID(
+                                                    u"<color=%d,%d,%d,%d>%d</color>"
+                                                    % (
+                                                        gc.getPlayer(
+                                                            ePlayer
+                                                        ).getPlayerTextColorR(),
+                                                        gc.getPlayer(
+                                                            ePlayer
+                                                        ).getPlayerTextColorG(),
+                                                        gc.getPlayer(
+                                                            ePlayer
+                                                        ).getPlayerTextColorB(),
+                                                        gc.getPlayer(
+                                                            ePlayer
+                                                        ).getPlayerTextColorA(),
+                                                        ePlayer,
+                                                    )
+                                                )
+
+                                            if gc.getPlayer(ePlayer).isAlive():
+                                                if bAlignIcons:
                                                     scores.setAlive()
                                                 # BUG: Rest of Dead Civs change is merely indentation by 1 level ...
-                                                if (gc.getTeam(eTeam).isAlive()):
-                                                    if ( not (gc.getTeam(gc.getGame().getActiveTeam()).isHasMet(eTeam)) ):
+                                                if gc.getTeam(eTeam).isAlive():
+                                                    if not (
+                                                        gc.getTeam(
+                                                            gc.getGame().getActiveTeam()
+                                                        ).isHasMet(eTeam)
+                                                    ):
                                                         szBuffer = szBuffer + (" ?")
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setNotMet()
-                                                    if (gc.getTeam(eTeam).isAtWar(gc.getGame().getActiveTeam())):
-                                                        szBuffer = szBuffer + "("  + localText.getColorText("TXT_KEY_CONCEPT_WAR", (), gc.getInfoTypeForString("COLOR_RED")).upper() + ")"
-                                                        if (bAlignIcons):
+                                                    if gc.getTeam(eTeam).isAtWar(
+                                                        gc.getGame().getActiveTeam()
+                                                    ):
+                                                        szBuffer = (
+                                                            szBuffer
+                                                            + "("
+                                                            + localText.getColorText(
+                                                                "TXT_KEY_CONCEPT_WAR",
+                                                                (),
+                                                                gc.getInfoTypeForString(
+                                                                    "COLOR_RED"
+                                                                ),
+                                                            ).upper()
+                                                            + ")"
+                                                        )
+                                                        if bAlignIcons:
                                                             scores.setWar()
-                                                    elif (gc.getTeam(gc.getGame().getActiveTeam()).isForcePeace(eTeam)):
-                                                        if (bAlignIcons):
+                                                    elif gc.getTeam(
+                                                        gc.getGame().getActiveTeam()
+                                                    ).isForcePeace(eTeam):
+                                                        if bAlignIcons:
                                                             scores.setPeace()
-                                                    elif (gc.getTeam(eTeam).isAVassal()):
+                                                    elif gc.getTeam(eTeam).isAVassal():
                                                         for iOwnerTeam in range(gc.getMAX_TEAMS()):
-                                                            if (gc.getTeam(eTeam).isVassal(iOwnerTeam) and gc.getTeam(gc.getGame().getActiveTeam()).isForcePeace(iOwnerTeam)):
-                                                                if (bAlignIcons):
+                                                            if gc.getTeam(eTeam).isVassal(
+                                                                iOwnerTeam
+                                                            ) and gc.getTeam(
+                                                                gc.getGame().getActiveTeam()
+                                                            ).isForcePeace(
+                                                                iOwnerTeam
+                                                            ):
+                                                                if bAlignIcons:
                                                                     scores.setPeace()
                                                                 break
-                                                    if (gc.getPlayer(ePlayer).canTradeNetworkWith(gc.getGame().getActivePlayer()) and (ePlayer != gc.getGame().getActivePlayer())):
-                                                        szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.TRADE_CHAR))
+                                                    if gc.getPlayer(ePlayer).canTradeNetworkWith(
+                                                        gc.getGame().getActivePlayer()
+                                                    ) and (
+                                                        ePlayer != gc.getGame().getActivePlayer()
+                                                    ):
+                                                        szTempBuffer = u"%c" % (
+                                                            CyGame().getSymbolID(
+                                                                FontSymbols.TRADE_CHAR
+                                                            )
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setTrade()
-                                                    if (gc.getTeam(eTeam).isOpenBorders(gc.getGame().getActiveTeam())):
-                                                        szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.OPEN_BORDERS_CHAR))
+                                                    if gc.getTeam(eTeam).isOpenBorders(
+                                                        gc.getGame().getActiveTeam()
+                                                    ):
+                                                        szTempBuffer = u"%c" % (
+                                                            CyGame().getSymbolID(
+                                                                FontSymbols.OPEN_BORDERS_CHAR
+                                                            )
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setBorders()
-                                                    if (gc.getTeam(eTeam).isDefensivePact(gc.getGame().getActiveTeam())):
-                                                        szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR))
+                                                    if gc.getTeam(eTeam).isDefensivePact(
+                                                        gc.getGame().getActiveTeam()
+                                                    ):
+                                                        szTempBuffer = u"%c" % (
+                                                            CyGame().getSymbolID(
+                                                                FontSymbols.DEFENSIVE_PACT_CHAR
+                                                            )
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setPact()
-                                                    if (gc.getPlayer(ePlayer).getStateReligion() != -1):
-                                                        if (gc.getPlayer(ePlayer).hasHolyCity(gc.getPlayer(ePlayer).getStateReligion())):
-                                                            szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getHolyCityChar())
+                                                    if (
+                                                        gc.getPlayer(ePlayer).getStateReligion()
+                                                        != -1
+                                                    ):
+                                                        if gc.getPlayer(ePlayer).hasHolyCity(
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getStateReligion()
+                                                        ):
+                                                            szTempBuffer = u"%c" % (
+                                                                gc.getReligionInfo(
+                                                                    gc.getPlayer(
+                                                                        ePlayer
+                                                                    ).getStateReligion()
+                                                                ).getHolyCityChar()
+                                                            )
                                                         else:
-                                                            szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getChar())
+                                                            szTempBuffer = u"%c" % (
+                                                                gc.getReligionInfo(
+                                                                    gc.getPlayer(
+                                                                        ePlayer
+                                                                    ).getStateReligion()
+                                                                ).getChar()
+                                                            )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setReligion(szTempBuffer)
-                                                    
-                                                    if (bEspionage and gc.getTeam(eTeam).getEspionagePointsAgainstTeam(gc.getGame().getActiveTeam()) < gc.getTeam(gc.getGame().getActiveTeam()).getEspionagePointsAgainstTeam(eTeam)):
-                                                        szTempBuffer = u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar())
+
+                                                    if bEspionage and gc.getTeam(
+                                                        eTeam
+                                                    ).getEspionagePointsAgainstTeam(
+                                                        gc.getGame().getActiveTeam()
+                                                    ) < gc.getTeam(
+                                                        gc.getGame().getActiveTeam()
+                                                    ).getEspionagePointsAgainstTeam(
+                                                        eTeam
+                                                    ):
+                                                        szTempBuffer = u"%c" % (
+                                                            gc.getCommerceInfo(
+                                                                CommerceTypes.COMMERCE_ESPIONAGE
+                                                            ).getChar()
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setEspionage()
-                                                
+
                                                 bEspionageCanSeeResearch = False
-                                                if (bEspionage):
-                                                    for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
-                                                        if (gc.getEspionageMissionInfo(iMissionLoop).isSeeResearch()):
-                                                            bEspionageCanSeeResearch = gc.getActivePlayer().canDoEspionageMission(iMissionLoop, ePlayer, None, -1)
+                                                if bEspionage:
+                                                    for iMissionLoop in range(
+                                                        gc.getNumEspionageMissionInfos()
+                                                    ):
+                                                        if gc.getEspionageMissionInfo(
+                                                            iMissionLoop
+                                                        ).isSeeResearch():
+                                                            bEspionageCanSeeResearch = gc.getActivePlayer().canDoEspionageMission(
+                                                                iMissionLoop, ePlayer, None, -1
+                                                            )
                                                             break
-                                                
-                                                if (((gc.getPlayer(ePlayer).getTeam() == gc.getGame().getActiveTeam()) and (gc.getTeam(gc.getGame().getActiveTeam()).getNumMembers() > 1)) or (gc.getTeam(gc.getPlayer(ePlayer).getTeam()).isVassal(gc.getGame().getActiveTeam())) or gc.getGame().isDebugMode() or bEspionageCanSeeResearch):
-                                                    if (gc.getPlayer(ePlayer).getCurrentResearch() != -1):
-                                                        szTempBuffer = u"-%s (%d)" %(gc.getTechInfo(gc.getPlayer(ePlayer).getCurrentResearch()).getDescription(), gc.getPlayer(ePlayer).getResearchTurnsLeft(gc.getPlayer(ePlayer).getCurrentResearch(), True))
+
+                                                if (
+                                                    (
+                                                        (
+                                                            gc.getPlayer(ePlayer).getTeam()
+                                                            == gc.getGame().getActiveTeam()
+                                                        )
+                                                        and (
+                                                            gc.getTeam(
+                                                                gc.getGame().getActiveTeam()
+                                                            ).getNumMembers()
+                                                            > 1
+                                                        )
+                                                    )
+                                                    or (
+                                                        gc.getTeam(
+                                                            gc.getPlayer(ePlayer).getTeam()
+                                                        ).isVassal(gc.getGame().getActiveTeam())
+                                                    )
+                                                    or gc.getGame().isDebugMode()
+                                                    or bEspionageCanSeeResearch
+                                                ):
+                                                    if (
+                                                        gc.getPlayer(ePlayer).getCurrentResearch()
+                                                        != -1
+                                                    ):
+                                                        szTempBuffer = u"-%s (%d)" % (
+                                                            gc.getTechInfo(
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getCurrentResearch()
+                                                            ).getDescription(),
+                                                            gc.getPlayer(
+                                                                ePlayer
+                                                            ).getResearchTurnsLeft(
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getCurrentResearch(),
+                                                                True,
+                                                            ),
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
-                                                            scores.setResearch(gc.getPlayer(ePlayer).getCurrentResearch(), gc.getPlayer(ePlayer).getResearchTurnsLeft(gc.getPlayer(ePlayer).getCurrentResearch(), True))
+                                                        if bAlignIcons:
+                                                            scores.setResearch(
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getCurrentResearch(),
+                                                                gc.getPlayer(
+                                                                    ePlayer
+                                                                ).getResearchTurnsLeft(
+                                                                    gc.getPlayer(
+                                                                        ePlayer
+                                                                    ).getCurrentResearch(),
+                                                                    True,
+                                                                ),
+                                                            )
                                                 # BUG: ...end of indentation
-# BUG - Dead Civs - end
-# BUG - Power Rating - start
+                                                # BUG - Dead Civs - end
+                                                # BUG - Power Rating - start
                                                 # if on, show according to espionage "see demographics" mission
-                                                if (bShowPower 
-                                                    and (gc.getGame().getActivePlayer() != ePlayer
-                                                        and (not bEspionage or gc.getActivePlayer().canDoEspionageMission(iDemographicsMission, ePlayer, None, -1)))):
+                                                if bShowPower and (
+                                                    gc.getGame().getActivePlayer() != ePlayer
+                                                    and (
+                                                        not bEspionage
+                                                        or gc.getActivePlayer().canDoEspionageMission(
+                                                            iDemographicsMission, ePlayer, None, -1
+                                                        )
+                                                    )
+                                                ):
                                                     iPower = gc.getPlayer(ePlayer).getPower()
-                                                    if (iPower > 0): # avoid divide by zero
-                                                        fPowerRatio = float(iPlayerPower) / float(iPower)
-                                                        if (ScoreOpt.isPowerThemVersusYou()):
-                                                            if (fPowerRatio > 0):
+                                                    if iPower > 0:  # avoid divide by zero
+                                                        fPowerRatio = float(iPlayerPower) / float(
+                                                            iPower
+                                                        )
+                                                        if ScoreOpt.isPowerThemVersusYou():
+                                                            if fPowerRatio > 0:
                                                                 fPowerRatio = 1.0 / fPowerRatio
                                                             else:
                                                                 fPowerRatio = 99.0
-                                                        cPower = gc.getGame().getSymbolID(FontSymbols.STRENGTH_CHAR)
-                                                        szTempBuffer = BugUtil.formatFloat(fPowerRatio, ScoreOpt.getPowerDecimals()) + u"%c" % (cPower)
-                                                        if (iHighPowerColor >= 0 and fPowerRatio >= ScoreOpt.getHighPowerRatio()):
-                                                            szTempBuffer = localText.changeTextColor(szTempBuffer, iHighPowerColor)
-                                                        elif (iLowPowerColor >= 0 and fPowerRatio <= ScoreOpt.getLowPowerRatio()):
-                                                            szTempBuffer = localText.changeTextColor(szTempBuffer, iLowPowerColor)
-                                                        elif (iPowerColor >= 0):
-                                                            szTempBuffer = localText.changeTextColor(szTempBuffer, iPowerColor)
+                                                        cPower = gc.getGame().getSymbolID(
+                                                            FontSymbols.STRENGTH_CHAR
+                                                        )
+                                                        szTempBuffer = BugUtil.formatFloat(
+                                                            fPowerRatio,
+                                                            ScoreOpt.getPowerDecimals(),
+                                                        ) + u"%c" % (cPower)
+                                                        if (
+                                                            iHighPowerColor >= 0
+                                                            and fPowerRatio
+                                                            >= ScoreOpt.getHighPowerRatio()
+                                                        ):
+                                                            szTempBuffer = (
+                                                                localText.changeTextColor(
+                                                                    szTempBuffer, iHighPowerColor
+                                                                )
+                                                            )
+                                                        elif (
+                                                            iLowPowerColor >= 0
+                                                            and fPowerRatio
+                                                            <= ScoreOpt.getLowPowerRatio()
+                                                        ):
+                                                            szTempBuffer = (
+                                                                localText.changeTextColor(
+                                                                    szTempBuffer, iLowPowerColor
+                                                                )
+                                                            )
+                                                        elif iPowerColor >= 0:
+                                                            szTempBuffer = (
+                                                                localText.changeTextColor(
+                                                                    szTempBuffer, iPowerColor
+                                                                )
+                                                            )
                                                         szBuffer = szBuffer + u" " + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setPower(szTempBuffer)
-# BUG - Power Rating - end
-# BUG - Attitude Icons - start
-                                                if (ScoreOpt.isShowAttitude()):
-                                                    if (not gc.getPlayer(ePlayer).isHuman()):
-                                                        iAtt = gc.getPlayer(ePlayer).AI_getAttitude(gc.getGame().getActivePlayer())
-                                                        cAtt =  unichr(ord(unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 4)) + iAtt)
+                                                # BUG - Power Rating - end
+                                                # BUG - Attitude Icons - start
+                                                if ScoreOpt.isShowAttitude():
+                                                    if not gc.getPlayer(ePlayer).isHuman():
+                                                        iAtt = gc.getPlayer(
+                                                            ePlayer
+                                                        ).AI_getAttitude(
+                                                            gc.getGame().getActivePlayer()
+                                                        )
+                                                        cAtt = unichr(
+                                                            ord(
+                                                                unichr(
+                                                                    CyGame().getSymbolID(
+                                                                        FontSymbols.POWER_CHAR
+                                                                    )
+                                                                    + 4
+                                                                )
+                                                            )
+                                                            + iAtt
+                                                        )
                                                         szBuffer += cAtt
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setAttitude(cAtt)
-# BUG - Attitude Icons - end
-# BUG - Refuses to Talk - start
-                                                if (not DiplomacyUtil.isWillingToTalk(ePlayer, gc.getGame().getActivePlayer())):
+                                                # BUG - Attitude Icons - end
+                                                # BUG - Refuses to Talk - start
+                                                if not DiplomacyUtil.isWillingToTalk(
+                                                    ePlayer, gc.getGame().getActivePlayer()
+                                                ):
                                                     cRefusesToTalk = u"!"
                                                     szBuffer += cRefusesToTalk
-                                                    if (bAlignIcons):
+                                                    if bAlignIcons:
                                                         scores.setWontTalk()
-# BUG - Refuses to Talk - end
+                                                # BUG - Refuses to Talk - end
 
-# BUG - Worst Enemy - start
-                                                if (ScoreOpt.isShowWorstEnemy()):
-                                                    if (AttitudeUtil.isWorstEnemy(ePlayer, gc.getGame().getActivePlayer())):
-                                                        cWorstEnemy = u"%c" %(CyGame().getSymbolID(FontSymbols.ANGRY_POP_CHAR))
+                                                # BUG - Worst Enemy - start
+                                                if ScoreOpt.isShowWorstEnemy():
+                                                    if AttitudeUtil.isWorstEnemy(
+                                                        ePlayer, gc.getGame().getActivePlayer()
+                                                    ):
+                                                        cWorstEnemy = u"%c" % (
+                                                            CyGame().getSymbolID(
+                                                                FontSymbols.ANGRY_POP_CHAR
+                                                            )
+                                                        )
                                                         szBuffer += cWorstEnemy
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setWorstEnemy()
-# BUG - Worst Enemy - end
-# BUG - WHEOOH - start
-                                                if (ScoreOpt.isShowWHEOOH()):
-                                                    if (PlayerUtil.isWHEOOH(ePlayer, PlayerUtil.getActivePlayerID())):
-                                                        szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.OCCUPATION_CHAR))
+                                                # BUG - Worst Enemy - end
+                                                # BUG - WHEOOH - start
+                                                if ScoreOpt.isShowWHEOOH():
+                                                    if PlayerUtil.isWHEOOH(
+                                                        ePlayer, PlayerUtil.getActivePlayerID()
+                                                    ):
+                                                        szTempBuffer = u"%c" % (
+                                                            CyGame().getSymbolID(
+                                                                FontSymbols.OCCUPATION_CHAR
+                                                            )
+                                                        )
                                                         szBuffer = szBuffer + szTempBuffer
-                                                        if (bAlignIcons):
+                                                        if bAlignIcons:
                                                             scores.setWHEOOH()
-# BUG - WHEOOH - end
-# BUG - Num Cities - start
-                                                if (ScoreOpt.isShowCountCities()):
-                                                    if (PlayerUtil.canSeeCityList(ePlayer)):
-                                                        szTempBuffer = u"%d" % PlayerUtil.getNumCities(ePlayer)
+                                                # BUG - WHEOOH - end
+                                                # BUG - Num Cities - start
+                                                if ScoreOpt.isShowCountCities():
+                                                    if PlayerUtil.canSeeCityList(ePlayer):
+                                                        szTempBuffer = (
+                                                            u"%d"
+                                                            % PlayerUtil.getNumCities(ePlayer)
+                                                        )
                                                     else:
-                                                        szTempBuffer = BugUtil.colorText(u"%d" % PlayerUtil.getNumRevealedCities(ePlayer), "COLOR_CYAN")
+                                                        szTempBuffer = BugUtil.colorText(
+                                                            u"%d"
+                                                            % PlayerUtil.getNumRevealedCities(
+                                                                ePlayer
+                                                            ),
+                                                            "COLOR_CYAN",
+                                                        )
                                                     szBuffer = szBuffer + " " + szTempBuffer
-                                                    if (bAlignIcons):
+                                                    if bAlignIcons:
                                                         scores.setNumCities(szTempBuffer)
-# BUG - Num Cities - end
-                                            
-                                            if (CyGame().isNetworkMultiPlayer()):
+                                            # BUG - Num Cities - end
+
+                                            if CyGame().isNetworkMultiPlayer():
                                                 szTempBuffer = CyGameTextMgr().getNetStats(ePlayer)
                                                 szBuffer = szBuffer + szTempBuffer
-                                                if (bAlignIcons):
+                                                if bAlignIcons:
                                                     scores.setNetStats(szTempBuffer)
-                                            
-                                            if (gc.getPlayer(ePlayer).isHuman() and CyInterface().isOOSVisible()):
-                                                szTempBuffer = u" <color=255,0,0>* %s *</color>" %(CyGameTextMgr().getOOSSeeds(ePlayer))
+
+                                            if (
+                                                gc.getPlayer(ePlayer).isHuman()
+                                                and CyInterface().isOOSVisible()
+                                            ):
+                                                szTempBuffer = (
+                                                    u" <color=255,0,0>* %s *</color>"
+                                                    % (CyGameTextMgr().getOOSSeeds(ePlayer))
+                                                )
                                                 szBuffer = szBuffer + szTempBuffer
-                                                if (bAlignIcons):
+                                                if bAlignIcons:
                                                     scores.setNetStats(szTempBuffer)
-                                                
+
                                             szBuffer = szBuffer + "</font>"
-    
-# BUG - Align Icons - start
-                                            if (not bAlignIcons):
-                                                if ( CyInterface().determineWidth( szBuffer ) > iWidth ):
-                                                    iWidth = CyInterface().determineWidth( szBuffer )
-        
+
+                                            # BUG - Align Icons - start
+                                            if not bAlignIcons:
+                                                if CyInterface().determineWidth(szBuffer) > iWidth:
+                                                    iWidth = CyInterface().determineWidth(szBuffer)
+
                                                 szName = "ScoreText" + str(ePlayer)
-                                                if ( CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW or CyInterface().isInAdvancedStart()):
+                                                if (
+                                                    CyInterface().getShowInterface()
+                                                    == InterfaceVisibility.INTERFACE_SHOW
+                                                    or CyInterface().isInAdvancedStart()
+                                                ):
                                                     yCoord = yResolution - 206
                                                 else:
                                                     yCoord = yResolution - 88
-        
-# BUG - Dead Civs - start
+
+                                                # BUG - Dead Civs - start
                                                 # Don't try to contact dead civs
-                                                if (gc.getPlayer(ePlayer).isAlive()):
+                                                if gc.getPlayer(ePlayer).isAlive():
                                                     iWidgetType = WidgetTypes.WIDGET_CONTACT_CIV
                                                     iPlayer = ePlayer
                                                 else:
                                                     iWidgetType = WidgetTypes.WIDGET_GENERAL
                                                     iPlayer = -1
-                                                screen.setText( szName, "Background", szBuffer, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 12, yCoord - (iCount * iBtnHeight), -0.3, FontTypes.SMALL_FONT, iWidgetType, iPlayer, -1 )
-# BUG - Dead Civs - end
-                                                screen.show( szName )
-                                                
-                                                CyInterface().checkFlashReset(ePlayer)
-        
-                                                iCount = iCount + 1
-# BUG - Align Icons - end
+                                                screen.setText(
+                                                    szName,
+                                                    "Background",
+                                                    szBuffer,
+                                                    CvUtil.FONT_RIGHT_JUSTIFY,
+                                                    xResolution - 12,
+                                                    yCoord - (iCount * iBtnHeight),
+                                                    -0.3,
+                                                    FontTypes.SMALL_FONT,
+                                                    iWidgetType,
+                                                    iPlayer,
+                                                    -1,
+                                                )
+                                                # BUG - Dead Civs - end
+                                                screen.show(szName)
 
-                                        # # TODO simplify this
-                                        # # Rhye - start stability
-                                        # if not is_minor_civ(ePlayer):
-                                        #     iStability = player(ePlayer).getStability()
-                                        #     if iStability < -15:
-                                        #         szTempBuffer = unichr(  # type: ignore
-                                        #             CyGame().getSymbolID(
-                                        #                 FontSymbols.COLLAPSING_CHAR
-                                        #             )
-                                        #         )
-                                        #     elif -15 <= iStability < -8:
-                                        #         szTempBuffer = unichr(  # type: ignore
-                                        #             CyGame().getSymbolID(FontSymbols.UNSTABLE_CHAR)
-                                        #         )
-                                        #     elif -8 <= iStability < 0:
-                                        #         szTempBuffer = unichr(  # type: ignore
-                                        #             CyGame().getSymbolID(FontSymbols.SHAKY_CHAR)
-                                        #         )
-                                        #     elif 0 <= iStability < 15:
-                                        #         szTempBuffer = unichr(  # type: ignore
-                                        #             CyGame().getSymbolID(FontSymbols.STABLE_CHAR)
-                                        #         )
-                                        #     elif iStability >= 15:
-                                        #         szTempBuffer = unichr(  # type: ignore
-                                        #             CyGame().getSymbolID(FontSymbols.SOLID_CHAR)
-                                        #         )
-                                        #     szBuffer = szBuffer + " - " + szTempBuffer
-                                        # # Rhye - end stability
+                                                CyInterface().checkFlashReset(ePlayer)
+
+                                                iCount = iCount + 1
+                            # BUG - Align Icons - end
+
+                            # # TODO simplify this
+                            # # Rhye - start stability
+                            # if not is_minor_civ(ePlayer):
+                            #     iStability = player(ePlayer).getStability()
+                            #     if iStability < -15:
+                            #         szTempBuffer = unichr(  # type: ignore
+                            #             CyGame().getSymbolID(
+                            #                 FontSymbols.COLLAPSING_CHAR
+                            #             )
+                            #         )
+                            #     elif -15 <= iStability < -8:
+                            #         szTempBuffer = unichr(  # type: ignore
+                            #             CyGame().getSymbolID(FontSymbols.UNSTABLE_CHAR)
+                            #         )
+                            #     elif -8 <= iStability < 0:
+                            #         szTempBuffer = unichr(  # type: ignore
+                            #             CyGame().getSymbolID(FontSymbols.SHAKY_CHAR)
+                            #         )
+                            #     elif 0 <= iStability < 15:
+                            #         szTempBuffer = unichr(  # type: ignore
+                            #             CyGame().getSymbolID(FontSymbols.STABLE_CHAR)
+                            #         )
+                            #     elif iStability >= 15:
+                            #         szTempBuffer = unichr(  # type: ignore
+                            #             CyGame().getSymbolID(FontSymbols.SOLID_CHAR)
+                            #         )
+                            #     szBuffer = szBuffer + " - " + szTempBuffer
+                            # # Rhye - end stability
 
                             j = j - 1
                     i = i - 1
 
-# BUG - Align Icons - start
-                if (bAlignIcons):
+                # BUG - Align Icons - start
+                if bAlignIcons:
                     scores.draw(screen)
                 else:
-                    if ( CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW or CyInterface().isInAdvancedStart()):
+                    if (
+                        CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW
+                        or CyInterface().isInAdvancedStart()
+                    ):
                         yCoord = yResolution - 186
                     else:
                         yCoord = yResolution - 68
-                    screen.setPanelSize( "ScoreBackground", xResolution - 21 - iWidth, yCoord - (iBtnHeight * iCount) - 4, iWidth + 12, (iBtnHeight * iCount) + 8 )
-                    screen.show( "ScoreBackground" )
-# BUG - Align Icons - end
+                    screen.setPanelSize(
+                        "ScoreBackground",
+                        xResolution - 21 - iWidth,
+                        yCoord - (iBtnHeight * iCount) - 4,
+                        iWidth + 12,
+                        (iBtnHeight * iCount) + 8,
+                    )
+                    screen.show("ScoreBackground")
+
+    # BUG - Align Icons - end
 
     # Will update the help Strings
     def updateHelpStrings(self):
@@ -8962,17 +9974,24 @@ class CvMainInterface:
 
         screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
         xResolution = screen.getXResolution()
-# BUG - Bars on single line for higher resolution screens - start
-        if (xResolution >= 1440
-        and (MainOpt.isShowGGProgressBar() or MainOpt.isShowGPProgressBar())):
+        # BUG - Bars on single line for higher resolution screens - start
+        if xResolution >= 1440 and (
+            MainOpt.isShowGGProgressBar() or MainOpt.isShowGPProgressBar()
+        ):
             xCoord = 268 + (xResolution - 1440) / 2
             xCoord += 6 + 84
-            screen.moveItem( szButtonID, 264 + ( ( xResolution - 1024 ) / 2 ) + ( 34 * ( iCount % 15 ) ), 0 + ( 34 * ( iCount / 15 ) ), -0.3 )
+            screen.moveItem(
+                szButtonID,
+                264 + ((xResolution - 1024) / 2) + (34 * (iCount % 15)),
+                0 + (34 * (iCount / 15)),
+                -0.3,
+            )
         else:
-            xCoord = 264 + ( ( xResolution - 1024 ) / 2 )
+            xCoord = 264 + ((xResolution - 1024) / 2)
 
-        screen.moveItem( szButtonID, xCoord + ( 34 * ( iCount % 15 ) ), 0 + ( 34 * ( iCount / 15 ) ), -0.3 )
-# BUG - Bars on single line for higher resolution screens - end
+        screen.moveItem(szButtonID, xCoord + (34 * (iCount % 15)), 0 + (34 * (iCount / 15)), -0.3)
+
+    # BUG - Bars on single line for higher resolution screens - end
 
     # Will set the selection button position
     def setScoreTextPosition(self, szButtonID, iWhichLine):
@@ -9449,55 +10468,61 @@ class CvMainInterface:
 
         #     saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
 
-#        BugUtil.debugInput(inputClass)
-# BUG - PLE - start
-        if  (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_ON) or \
-            (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_OFF) or \
-            (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED):
-            if (self.MainInterfaceInputMap.has_key(inputClass.getFunctionName())):
+        #        BugUtil.debugInput(inputClass)
+        # BUG - PLE - start
+        if (
+            (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_ON)
+            or (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_OFF)
+            or (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED)
+        ):
+            if self.MainInterfaceInputMap.has_key(inputClass.getFunctionName()):
                 return self.MainInterfaceInputMap.get(inputClass.getFunctionName())(inputClass)
-            if (self.MainInterfaceInputMap.has_key(inputClass.getFunctionName() + "1")):
-                return self.MainInterfaceInputMap.get(inputClass.getFunctionName() + "1")(inputClass)
-# BUG - PLE - end
+            if self.MainInterfaceInputMap.has_key(inputClass.getFunctionName() + "1"):
+                return self.MainInterfaceInputMap.get(inputClass.getFunctionName() + "1")(
+                    inputClass
+                )
+            # BUG - PLE - end
 
-# BUG - BUG Option Button - Start
+            # BUG - BUG Option Button - Start
             if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
                 if inputClass.getFunctionName() == "BUGOptionsScreenWidget":
                     BugOptionsScreen.showOptionsScreen()
                     return 1
-# BUG - BUG Option Button - End
+        # BUG - BUG Option Button - End
 
-
-# BUG - Raw Yields - start
-        if (inputClass.getFunctionName().startswith("RawYields")):
+        # BUG - Raw Yields - start
+        if inputClass.getFunctionName().startswith("RawYields"):
             return self.handleRawYieldsButtons(inputClass)
-# BUG - Raw Yields - end
+        # BUG - Raw Yields - end
 
-# BUG - Great Person Bar - start
-        if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED and inputClass.getFunctionName().startswith("GreatPersonBar")):
+        # BUG - Great Person Bar - start
+        if (
+            inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED
+            and inputClass.getFunctionName().startswith("GreatPersonBar")
+        ):
             # Zoom to next GP city
             iCity = inputClass.getData1()
-            if (iCity == -1):
+            if iCity == -1:
                 pCity, _ = GPUtil.findNextCity()
             else:
                 pCity = gc.getActivePlayer().getCity(iCity)
             if pCity and not pCity.isNone():
                 CyInterface().selectCity(pCity, False)
             return 1
-# BUG - Great Person Bar - end
+        # BUG - Great Person Bar - end
 
-# BUG - field of view slider - start
-        if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_SLIDER_NEWSTOP):
-            if (inputClass.getFunctionName() == self.szSliderId):
-                screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
+        # BUG - field of view slider - start
+        if inputClass.getNotifyCode() == NotifyCode.NOTIFY_SLIDER_NEWSTOP:
+            if inputClass.getFunctionName() == self.szSliderId:
+                screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
                 self.iField_View = inputClass.getData() + 1
                 self.setFieldofView(screen, False)
                 self.setFieldofView_Text(screen)
                 MainOpt.setFieldOfView(self.iField_View)
-# BUG - field of view slider - end
+        # BUG - field of view slider - end
         return 0
 
-# BUG - field of view slider - start
+    # BUG - field of view slider - start
     def setFieldofView(self, screen, bDefault):
         if bDefault or not MainOpt.isShowFieldOfView():
             self._setFieldofView(screen, DEFAULT_FIELD_OF_VIEW)
@@ -9511,8 +10536,21 @@ class CvMainInterface:
 
     def setFieldofView_Text(self, screen):
         zsFieldOfView_Text = "%s [%i]" % (self.sFieldOfView_Text, self.iField_View)
-        screen.setLabel(self.szSliderTextId, "", zsFieldOfView_Text, CvUtil.FONT_RIGHT_JUSTIFY, self.iX_FoVSlider, self.iY_FoVSlider + 6, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-# BUG - field of view slider - end
+        screen.setLabel(
+            self.szSliderTextId,
+            "",
+            zsFieldOfView_Text,
+            CvUtil.FONT_RIGHT_JUSTIFY,
+            self.iX_FoVSlider,
+            self.iY_FoVSlider + 6,
+            0,
+            FontTypes.GAME_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+
+    # BUG - field of view slider - end
 
     def update(self, fDelta):
         return
