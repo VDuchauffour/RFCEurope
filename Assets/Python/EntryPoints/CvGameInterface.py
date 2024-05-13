@@ -188,9 +188,7 @@ def AI_unitUpdate(argsList):
 # Absinthe: new code for AI persecution - handled through python
 def isHasPurgeTarget(argsList):
     "AI has target for persecution - return 0 if no possible targets, return 1 if there are at least one"
-    iCiv = argsList[0]
-    bReportCity = argsList[1]
-    return gameUtils().isHasPurgeTarget(iCiv, bReportCity)
+    return gameUtils().isHasPurgeTarget(argsList)
 
 
 def AI_doWar(argsList):

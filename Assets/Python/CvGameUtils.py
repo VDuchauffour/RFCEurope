@@ -242,7 +242,9 @@ class CvGameUtils:
         return False
 
     # Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
-    def isHasPurgeTarget(self, iCiv, bReportCity):
+    def isHasPurgeTarget(self, argsList):
+        iCiv = argsList[0]
+        bReportCity = argsList[1]
         iStateReligion = gc.getPlayer(iCiv).getStateReligion()
         iTolerance = civilization(iCiv).religion.tolerance
         apCityList = PyPlayer(iCiv).getCityList()
