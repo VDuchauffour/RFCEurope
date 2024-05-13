@@ -1281,6 +1281,22 @@
 			<Path>Art/Interface/Buttons/down_arrow.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
+				<Type>SCROLL_TOP_ARROW</Type>
+				<Path>Art/Interface/Buttons/top_arrow.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+				<Type>SCROLL_BOTTOM_ARROW</Type>
+				<Path>Art/Interface/Buttons/bottom_arrow.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+				<Type>SCROLL_PAGE_UP_ARROW</Type>
+				<Path>Art/Interface/Buttons/page_up_arrow.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+				<Type>SCROLL_PAGE_DOWN_ARROW</Type>
+				<Path>Art/Interface/Buttons/page_down_arrow.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
 			<Type>WHITE_CIRCLE_20</Type>
 			<Path>Art/Interface/Buttons/white_circle_20.dds</Path>
 		</InterfaceArtInfo>
