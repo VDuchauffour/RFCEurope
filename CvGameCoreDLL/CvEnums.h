@@ -942,7 +942,6 @@ enum FontSymbols // Exposed to Python
   UNSTABLE_CHAR,
   SHAKY_CHAR,
   STABLE_CHAR,
-  ACTUAL_STABLE_CHAR,
   SOLID_CHAR,
   PLAGUE_CHAR,
   UP_CHAR,
