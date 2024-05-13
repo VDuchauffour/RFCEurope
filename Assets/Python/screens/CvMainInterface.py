@@ -3668,45 +3668,45 @@ class CvMainInterface:
             # )
         # TODO check if the plugin is here
         # BUG - Build/Action Icon Size - start
-        if MainOpt.isBuildIconSizeLarge():
-            screen.addMultiListControlGFC(
-                "BottomButtonContainer",
-                u"",
-                iMultiListXL,
-                yResolution - 113 + 18,
-                xResolution - (iMultiListXL + iMultiListXR),
-                64,
-                4,
-                64,
-                64,
-                TableStyles.TABLE_STYLE_STANDARD,
-            )
-        elif MainOpt.isBuildIconSizeMedium():
-            screen.addMultiListControlGFC(
-                "BottomButtonContainer",
-                u"",
-                iMultiListXL,
-                yResolution - 113,
-                xResolution - (iMultiListXL + iMultiListXR),
-                100,
-                4,
-                48,
-                48,
-                TableStyles.TABLE_STYLE_STANDARD,
-            )
-        else:
-            screen.addMultiListControlGFC(
-                "BottomButtonContainer",
-                u"",
-                iMultiListXL,
-                yResolution - 113,
-                xResolution - (iMultiListXL + iMultiListXR),
-                114,
-                4,
-                36,
-                36,
-                TableStyles.TABLE_STYLE_STANDARD,
-            )
+            if MainOpt.isBuildIconSizeLarge():
+                screen.addMultiListControlGFC(
+                    "BottomButtonContainer",
+                    u"",
+                    iMultiListXL,
+                    yResolution - 113 + 18,
+                    xResolution - (iMultiListXL + iMultiListXR),
+                    64,
+                    4,
+                    64,
+                    64,
+                    TableStyles.TABLE_STYLE_STANDARD,
+                )
+            elif MainOpt.isBuildIconSizeMedium():
+                screen.addMultiListControlGFC(
+                    "BottomButtonContainer",
+                    u"",
+                    iMultiListXL,
+                    yResolution - 113,
+                    xResolution - (iMultiListXL + iMultiListXR),
+                    100,
+                    4,
+                    48,
+                    48,
+                    TableStyles.TABLE_STYLE_STANDARD,
+                )
+            else:
+                screen.addMultiListControlGFC(
+                    "BottomButtonContainer",
+                    u"",
+                    iMultiListXL,
+                    yResolution - 113,
+                    xResolution - (iMultiListXL + iMultiListXR),
+                    114,
+                    4,
+                    36,
+                    36,
+                    TableStyles.TABLE_STYLE_STANDARD,
+                )
         # EF: minimum icon size for disabled buttons to work is 33 so these sizes won't fly
 
     #         screen.addMultiListControlGFC( "BottomButtonContainer", u"", iMultiListXL, yResolution - 113, xResolution - (iMultiListXL+iMultiListXR), 102, 4, 32, 32, TableStyles.TABLE_STYLE_STANDARD )
