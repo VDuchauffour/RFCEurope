@@ -9148,6 +9148,7 @@ class CvMainInterface:
                                 if (
                                     gc.getPlayer(ePlayer).isEverAlive()
                                     and not gc.getPlayer(ePlayer).isBarbarian()
+                                    and not is_minor_civ(ePlayer)
                                     and (
                                         gc.getPlayer(ePlayer).isAlive()
                                         or ScoreOpt.isShowDeadCivs()
