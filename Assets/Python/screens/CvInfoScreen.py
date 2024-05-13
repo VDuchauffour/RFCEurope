@@ -1195,7 +1195,7 @@ class CvInfoScreen:
 #BUG: Change Graphs - end
 
         self.drawPermanentGraphWidgets()
-        self.drawGraph()
+        self.drawGraphs()
 
     def drawPermanentGraphWidgets(self):
 
