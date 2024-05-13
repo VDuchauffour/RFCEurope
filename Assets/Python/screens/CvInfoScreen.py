@@ -3005,7 +3005,7 @@ class CvInfoScreen:
                             pBuilding = gc.getBuildingInfo(iBuildingLoop)
 
                             # World Wonder Mode
-                            if self.szWonderDisplayMode == elf.szWDM_WorldWonder and isWorldWonderClass(
+                            if self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonderClass(
                                 gc.getBuildingInfo(iBuildingLoop).getBuildingClassType()
                             ):
 
