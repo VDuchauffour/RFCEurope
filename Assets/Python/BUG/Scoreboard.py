@@ -28,7 +28,7 @@ gc = CyGlobalContext()
 Z_DEPTH = -0.3
 
 # Columns IDs
-NUM_PARTS = 25
+NUM_PARTS = 26
 (
     ALIVE,
     WAR,
@@ -55,6 +55,7 @@ NUM_PARTS = 25
     WAITING,
     NET_STATS,
     OOS,
+    STABILITY,
 ) = range(NUM_PARTS)
 
 # Types
@@ -111,6 +112,7 @@ def init():
     columns.append(Column("D", PACT, FIXED, smallSymbol(FontSymbols.DEFENSIVE_PACT_CHAR)))
     columns.append(Column("R", RELIGION, DYNAMIC))
     columns.append(Column("A", ATTITUDE, DYNAMIC))
+    columns.append(Column('^', STABILITY, DYNAMIC))
     columns.append(Column("F", WONT_TALK, FIXED, smallText("!")))
     columns.append(Column("H", WORST_ENEMY, FIXED, smallSymbol(FontSymbols.ANGRY_POP_CHAR)))
     columns.append(Column("M", WHEOOH, FIXED, smallSymbol(FontSymbols.OCCUPATION_CHAR)))
@@ -279,6 +281,9 @@ class Scoreboard:
 
     def setAttitude(self, value):
         self._set(ATTITUDE, smallText(value))
+
+    def setStability(self, value):
+        self._set(STABILITY, smallText(value))
 
     def setWontTalk(self):
         self._set(WONT_TALK)
