@@ -9768,66 +9768,66 @@ class CvMainInterface:
     # Will handle the input for this screen...
     def handleInput(self, inputClass):
         # TODO this
-        # # < Mercenaries Start >
-        # # Handle the case where the "Mercenary Manager" button is pressed.
-        # if inputClass.getFunctionName() == "MercenaryManagerButton":
-        #     mercenaryManager.interfaceScreen()
-        # # < Mercenaries End >
+        # < Mercenaries Start >
+        # Handle the case where the "Mercenary Manager" button is pressed.
+        if inputClass.getFunctionName() == "MercenaryManagerButton":
+            mercenaryManager.interfaceScreen()
+        # < Mercenaries End >
 
-        # # Absinthe: stability overlay
-        # if (
-        #     inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED
-        #     and inputClass.getData2() == 1234
-        # ):
-        #     StabilityOverlayCiv(inputClass.getData1())
+        # Absinthe: stability overlay
+        if (
+            inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED
+            and inputClass.getData2() == 1234
+        ):
+            StabilityOverlayCiv(inputClass.getData1())
 
-        # # 3Miro religious prosecutions
-        # # Inquisitor button
-        # if (
-        #     inputClass.getNotifyCode() == 11
-        #     and inputClass.getData1() == 666
-        #     and inputClass.getData2() == 666
-        # ):
-        #     # Absinthe: persecution popup
-        #     if gc.getGame().getActivePlayer() == human():
-        #         pCity = (
-        #             gc.getMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY()).getPlotCity()
-        #         )
-        #         if not pCity.isNone():
-        #             religionList = []
-        #             pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
-        #             for iReligion in range(gc.getNumReligionInfos()):
-        #                 if (
-        #                     pCity.isHasReligion(iReligion)
-        #                     and not pCity.isHolyCityByType(iReligion)
-        #                     and iReligion != pPlayer.getStateReligion()
-        #                 ):
-        #                     religionList.append(iReligion)
-        #             if len(religionList) == 1:
-        #                 prosecute(
-        #                     g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
-        #                 )
-        #             elif len(religionList) > 1:
-        #                 data.lPersecutionReligions = religionList
-        #                 data.lPersecutionData = [
-        #                     g_pSelectedUnit.getX(),
-        #                     g_pSelectedUnit.getY(),
-        #                     g_pSelectedUnit.getID(),
-        #                 ]
-        #                 showPersecutionPopup()
-        #     else:
-        #         prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
-        #     # Absinthe: end
+        # 3Miro religious prosecutions
+        # Inquisitor button
+        if (
+            inputClass.getNotifyCode() == 11
+            and inputClass.getData1() == 666
+            and inputClass.getData2() == 666
+        ):
+            # Absinthe: persecution popup
+            if gc.getGame().getActivePlayer() == human():
+                pCity = (
+                    gc.getMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY()).getPlotCity()
+                )
+                if not pCity.isNone():
+                    religionList = []
+                    pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
+                    for iReligion in range(gc.getNumReligionInfos()):
+                        if (
+                            pCity.isHasReligion(iReligion)
+                            and not pCity.isHolyCityByType(iReligion)
+                            and iReligion != pPlayer.getStateReligion()
+                        ):
+                            religionList.append(iReligion)
+                    if len(religionList) == 1:
+                        prosecute(
+                            g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
+                        )
+                    elif len(religionList) > 1:
+                        data.lPersecutionReligions = religionList
+                        data.lPersecutionData = [
+                            g_pSelectedUnit.getX(),
+                            g_pSelectedUnit.getY(),
+                            g_pSelectedUnit.getID(),
+                        ]
+                        showPersecutionPopup()
+            else:
+                prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
+            # Absinthe: end
 
-        # # 3Miro: Saint
-        # if (
-        #     inputClass.getNotifyCode() == 11
-        #     and inputClass.getData1() == 1618
-        #     and inputClass.getData2() == 1618
-        # ):
-        #     # iUnitID = g_pSelectedUnit.getID()
+        # 3Miro: Saint
+        if (
+            inputClass.getNotifyCode() == 11
+            and inputClass.getData1() == 1618
+            and inputClass.getData2() == 1618
+        ):
+            # iUnitID = g_pSelectedUnit.getID()
 
-        #     saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
+            saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
 
         #        BugUtil.debugInput(inputClass)
         # BUG - PLE - start
