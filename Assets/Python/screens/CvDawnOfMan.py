@@ -11,6 +11,15 @@ from CvPythonExtensions import *
 from RFCUtils import getDawnOfManText
 from Scenario import get_scenario_start_turn
 
+## HOF MOD
+import Buffy
+import BugCore
+import GameSetUpCheck
+
+BUFFYOpt = BugCore.game.BUFFY
+## end HOF MOD
+
+
 ArtFileMgr = CyArtFileMgr()
 gc = CyGlobalContext()
 
@@ -102,6 +111,8 @@ class CvDawnOfMan:
 
         # Main
         szMainPanel = "DawnOfManMainPanel"
+
+		# Top
         screen.addPanel(
             szMainPanel,
             "",
