@@ -5323,66 +5323,6 @@ class CvMainInterface:
                     screen.show("EraText")
                 # BUG - NJAGC - end
 
-                # 3Miro: Show stability string from edead: start stability icon
-                iCount += 1
-                if (
-                    not CyInterface().isCityScreenUp()
-                    and turn() >= civilization(ePlayer).date.birth
-                ):
-                    iStability = pPlayer.getStability()
-                    szStabilityButton = u"<font=2>%c</font>" % (
-                        CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10
-                    )
-                    if iStability < -15:
-                        szTempBuffer = text("TXT_KEY_STABILITY_COLLAPSING")
-                    elif iStability >= -15 and iStability < -5:
-                        szTempBuffer = text("TXT_KEY_STABILITY_UNSTABLE")
-                    elif iStability >= -5 and iStability < 0:
-                        szTempBuffer = text("TXT_KEY_STABILITY_SHAKY")
-                    elif iStability >= 0 and iStability < 8:
-                        szTempBuffer = text("TXT_KEY_STABILITY_STABLE")
-                    elif iStability >= 8 and iStability < 15:
-                        szTempBuffer = text("TXT_KEY_STABILITY_SOLID")
-                    elif iStability >= 15:
-                        szTempBuffer = text("TXT_KEY_STABILITY_VERYSOLID")
-                    if iStability > 0:
-                        szStabilityNum = "+%d" % (iStability)
-                    else:
-                        szStabilityNum = "%d" % (iStability)
-                    szStabilityText = ": %s (%s)" % (szTempBuffer, szStabilityNum)
-                    screen.setLabel(
-                        "StabilityButton",
-                        "Background",
-                        szStabilityButton,
-                        CvUtil.FONT_RIGHT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.setLabel(
-                        "StabilityText",
-                        "Background",
-                        szStabilityText,
-                        CvUtil.FONT_LEFT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.show("StabilityButton")
-                    screen.show("StabilityText")
-                    iCount += 1
-                else:
-                    screen.hide("StabilityButton")
-                    screen.hide("StabilityText")
-
                 # edead: Piety/Faith Points
                 iFaithPoints = pPlayer.getFaith()
                 if (
