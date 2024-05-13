@@ -2534,6 +2534,10 @@ class CvMainInterface:
         #                 gc.getGame().getGameTurn(), gc.getGame().getActivePlayer(), CyInterface().getShowInterface(), CyInterface().getEndTurnState())
         screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 
+# BUG - Field of View - start
+        self.setFieldofView(screen, CyInterface().isCityScreenUp())
+# BUG - Field of View - end
+
         # Check Dirty Bits, see what we need to redraw...
         if CyInterface().isDirty(InterfaceDirtyBits.PercentButtons_DIRTY_BIT) is True:
             # Percent Buttons
@@ -3666,8 +3670,8 @@ class CvMainInterface:
             #     gc.getGame().getActivePlayer(),
             #     -1,
             # )
-        # TODO check if the plugin is here
-        # BUG - Build/Action Icon Size - start
+            # TODO check if the plugin is here
+            # BUG - Build/Action Icon Size - start
             if MainOpt.isBuildIconSizeLarge():
                 screen.addMultiListControlGFC(
                     "BottomButtonContainer",
@@ -10522,6 +10526,33 @@ class CvMainInterface:
         # BUG - field of view slider - end
         return 0
 
+    # BUG - Raw Yields - start
+    def handleRawYieldsButtons(self, inputClass):
+        iButton = inputClass.getID()
+        if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
+            self.PLE.displayHelpHover(RAW_YIELD_HELP[iButton])
+        elif inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_OFF:
+            self.PLE.hideInfoPane()
+        elif inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
+            global g_bYieldView
+            global g_iYieldType
+            global g_iYieldTiles
+            if iButton == 0:
+                g_bYieldView = False
+            elif iButton in (1, 2, 3):
+                g_bYieldView = True
+                g_iYieldType = RawYields.YIELDS[iButton - 1]
+            elif iButton in (4, 5, 6):
+                g_bYieldView = True
+                g_iYieldTiles = RawYields.TILES[iButton - 4]
+            else:
+                return 0
+            CyInterface().setDirty(InterfaceDirtyBits.CityScreen_DIRTY_BIT, True)
+            return 1
+        return 0
+
+    # BUG - Raw Yields - end
+
     # BUG - field of view slider - start
     def setFieldofView(self, screen, bDefault):
         if bDefault or not MainOpt.isShowFieldOfView():
@@ -10554,6 +10585,20 @@ class CvMainInterface:
 
     def update(self, fDelta):
         return
+
+    def forward(self):
+        if not CyInterface().isFocused() or CyInterface().isCityScreenUp():
+            if CyInterface().isCitySelection():
+                CyGame().doControl(ControlTypes.CONTROL_NEXTCITY)
+            else:
+                CyGame().doControl(ControlTypes.CONTROL_NEXTUNIT)
+
+    def back(self):
+        if not CyInterface().isFocused() or CyInterface().isCityScreenUp():
+            if CyInterface().isCitySelection():
+                CyGame().doControl(ControlTypes.CONTROL_PREVCITY)
+            else:
+                CyGame().doControl(ControlTypes.CONTROL_PREVUNIT)
 
     # 3Miro: Show GP string from edead: start code from Main Interface Mod (Impaler)
     def getnextGPCity(self):
