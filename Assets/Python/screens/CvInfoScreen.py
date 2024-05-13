@@ -90,6 +90,8 @@ class CvInfoScreen:
         # This is used to allow the wonders screen to refresh without redrawing everything
         self.iNumWondersPermanentWidgets = 0
 
+        self.iActiveTab = -1
+
         self.iGraphID = 0
         self.iDemographicsID = 1
         self.iTopCitiesID = 2
