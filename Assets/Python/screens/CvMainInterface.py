@@ -3659,17 +3659,17 @@ class CvMainInterface:
             screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
             xResolution = screen.getXResolution()
             yResolution = screen.getYResolution()
-            # screen.addFlagWidgetGFC(
-            #     "CivilizationFlag",
-            #     xResolution - 288,
-            #     yResolution - 138,
-            #     68,
-            #     250,
-            #     gc.getGame().getActivePlayer(),
-            #     WidgetTypes.WIDGET_FLAG,
-            #     gc.getGame().getActivePlayer(),
-            #     -1,
-            # )
+            screen.addFlagWidgetGFC(
+                "CivilizationFlag",
+                xResolution - 288,
+                yResolution - 138,
+                68,
+                250,
+                gc.getGame().getActivePlayer(),
+                WidgetTypes.WIDGET_FLAG,
+                gc.getGame().getActivePlayer(),
+                -1,
+            )
             # TODO check if the plugin is here
             # BUG - Build/Action Icon Size - start
             if MainOpt.isBuildIconSizeLarge():
