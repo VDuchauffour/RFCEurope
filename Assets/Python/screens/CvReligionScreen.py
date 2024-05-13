@@ -775,86 +775,86 @@ class CvReligionScreen:
             else:
                 szRightCities += u"<font=3>" + szCityName + u"</font>\n"
 
-        screen.addMultilineText(
-            "Child" + self.AREA1_ID,
-            szLeftCities,
-            self.X_CITY1_AREA + 5,
-            self.Y_CITY_AREA + 5,
-            self.W_CITY_AREA - 10,
-            self.H_CITY_AREA - 10,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-            CvUtil.FONT_LEFT_JUSTIFY,
-        )
-        screen.addMultilineText(
-            "Child" + self.AREA2_ID,
-            szRightCities,
-            self.X_CITY2_AREA + 5,
-            self.Y_CITY_AREA + 5,
-            self.W_CITY_AREA - 10,
-            self.H_CITY_AREA - 10,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-            CvUtil.FONT_LEFT_JUSTIFY,
-        )
-
-        # Convert Button....
-        iLink = 0
-        if gc.getPlayer(self.iActivePlayer).canChangeReligion():
-            iLink = 1
-
-        if not self.canConvert(iLinkReligion) or iLinkReligion == self.iReligionOriginal:
-            screen.setText(
-                self.CONVERT_NAME,
-                "Background",
-                self.EXIT_TEXT,
-                CvUtil.FONT_RIGHT_JUSTIFY,
-                self.X_EXIT,
-                self.Y_EXIT,
-                self.Z_TEXT,
-                FontTypes.TITLE_FONT,
+            screen.addMultilineText(
+                "Child" + self.AREA1_ID,
+                szLeftCities,
+                self.X_CITY1_AREA + 5,
+                self.Y_CITY_AREA + 5,
+                self.W_CITY_AREA - 10,
+                self.H_CITY_AREA - 10,
                 WidgetTypes.WIDGET_GENERAL,
-                1,
-                0,
+                -1,
+                -1,
+                CvUtil.FONT_LEFT_JUSTIFY,
             )
-            screen.hide(self.CANCEL_NAME)
-            szAnarchyTime = CyGameTextMgr().setConvertHelp(self.iActivePlayer, iLinkReligion)
-        else:
-            screen.setText(
-                self.CONVERT_NAME,
-                "Background",
-                self.CONVERT_TEXT,
-                CvUtil.FONT_RIGHT_JUSTIFY,
-                self.X_EXIT,
-                self.Y_EXIT,
-                self.Z_TEXT,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_CONVERT,
-                iLinkReligion,
-                1,
-            )
-            screen.show(self.CANCEL_NAME)
-            szAnarchyTime = text(
-                "TXT_KEY_ANARCHY_TURNS",
-                gc.getPlayer(self.iActivePlayer).getReligionAnarchyLength(),
+            screen.addMultilineText(
+                "Child" + self.AREA2_ID,
+                szRightCities,
+                self.X_CITY2_AREA + 5,
+                self.Y_CITY_AREA + 5,
+                self.W_CITY_AREA - 10,
+                self.H_CITY_AREA - 10,
+                WidgetTypes.WIDGET_GENERAL,
+                -1,
+                -1,
+                CvUtil.FONT_LEFT_JUSTIFY,
             )
 
-        # Turns of Anarchy Text...
-        screen.setLabel(
-            self.RELIGION_ANARCHY_WIDGET,
-            "Background",
-            u"<font=3>" + szAnarchyTime + u"</font>",
-            CvUtil.FONT_LEFT_JUSTIFY,
-            self.X_ANARCHY,
-            self.Y_ANARCHY,
-            self.Z_TEXT,
-            FontTypes.GAME_FONT,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-        )
+            # Convert Button....
+            iLink = 0
+            if gc.getPlayer(self.iActivePlayer).canChangeReligion():
+                iLink = 1
+
+            if not self.canConvert(iLinkReligion) or iLinkReligion == self.iReligionOriginal:
+                screen.setText(
+                    self.CONVERT_NAME,
+                    "Background",
+                    self.EXIT_TEXT,
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_EXIT,
+                    self.Y_EXIT,
+                    self.Z_TEXT,
+                    FontTypes.TITLE_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    1,
+                    0,
+                )
+                screen.hide(self.CANCEL_NAME)
+                szAnarchyTime = CyGameTextMgr().setConvertHelp(self.iActivePlayer, iLinkReligion)
+            else:
+                screen.setText(
+                    self.CONVERT_NAME,
+                    "Background",
+                    self.CONVERT_TEXT,
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_EXIT,
+                    self.Y_EXIT,
+                    self.Z_TEXT,
+                    FontTypes.TITLE_FONT,
+                    WidgetTypes.WIDGET_CONVERT,
+                    iLinkReligion,
+                    1,
+                )
+                screen.show(self.CANCEL_NAME)
+                szAnarchyTime = text(
+                    "TXT_KEY_ANARCHY_TURNS",
+                    gc.getPlayer(self.iActivePlayer).getReligionAnarchyLength(),
+                )
+
+            # Turns of Anarchy Text...
+            screen.setLabel(
+                self.RELIGION_ANARCHY_WIDGET,
+                "Background",
+                u"<font=3>" + szAnarchyTime + u"</font>",
+                CvUtil.FONT_LEFT_JUSTIFY,
+                self.X_ANARCHY,
+                self.Y_ANARCHY,
+                self.Z_TEXT,
+                FontTypes.GAME_FONT,
+                WidgetTypes.WIDGET_GENERAL,
+                -1,
+                -1,
+            )
 
     def drawFaithInfo(self):
         if not self.bScreenUp:
