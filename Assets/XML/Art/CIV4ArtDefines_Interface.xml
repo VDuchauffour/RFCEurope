@@ -1677,6 +1677,14 @@
 			<Type>BUG_OPTIONS_SCREEN_BUTTON</Type>
 			<Path>Art/BUG/BUGMantis.dds</Path>
 		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>QUESTION_MARK</Type>
+			<Path>Art/BUG/QuestionMark.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>INTERFACE_BUTTON_NULL</Type>
+			<Path>Art/BUG/Null.dds</Path>
+		</InterfaceArtInfo>
 <!-- BUG - Main Interface - BUG Options Screen - end -->
 
 		<InterfaceArtInfo>
