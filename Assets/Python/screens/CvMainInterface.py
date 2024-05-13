@@ -8062,24 +8062,24 @@ class CvMainInterface:
                         + ")"
                     )
 
-    # BUG - Production Started - start
-                        if CityScreenOpt.isShowProductionStarted():
-                            eBuilding = CyInterface().getOrderNodeData1(i)
-                            if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
-                                szRightBuffer = BugUtil.colorText(szRightBuffer, "COLOR_CYAN")
-    # BUG - Production Started - end
+# BUG - Production Started - start
+                    if CityScreenOpt.isShowProductionStarted():
+                        eBuilding = CyInterface().getOrderNodeData1(i)
+                        if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
+                            szRightBuffer = BugUtil.colorText(szRightBuffer, "COLOR_CYAN")
+# BUG - Production Started - end
 
-    # BUG - Production Decay - start
-                        if BugDll.isPresent() and CityScreenOpt.isShowProductionDecayQueue():
-                            eBuilding = CyInterface().getOrderNodeData1(i)
-                            if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
-                                if pHeadSelectedCity.isBuildingProductionDecay(eBuilding):
-                                    szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,))
-                                elif pHeadSelectedCity.getBuildingProductionTime(eBuilding) > 0:
-                                    iDecayTurns = pHeadSelectedCity.getBuildingProductionDecayTurns(eBuilding)
-                                    if iDecayTurns <= CityScreenOpt.getProductionDecayQueueBuildingThreshold():
-                                        szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,))
-    # BUG - Production Decay - end
+# BUG - Production Decay - start
+                    if BugDll.isPresent() and CityScreenOpt.isShowProductionDecayQueue():
+                        eBuilding = CyInterface().getOrderNodeData1(i)
+                        if pHeadSelectedCity.getBuildingProduction(eBuilding) > 0:
+                            if pHeadSelectedCity.isBuildingProductionDecay(eBuilding):
+                                szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szLeftBuffer,))
+                            elif pHeadSelectedCity.getBuildingProductionTime(eBuilding) > 0:
+                                iDecayTurns = pHeadSelectedCity.getBuildingProductionDecayTurns(eBuilding)
+                                if iDecayTurns <= CityScreenOpt.getProductionDecayQueueBuildingThreshold():
+                                    szLeftBuffer = BugUtil.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szLeftBuffer,))
+# BUG - Production Decay - end
 
                 elif CyInterface().getOrderNodeType(i) == OrderTypes.ORDER_CREATE:
                     szLeftBuffer = gc.getProjectInfo(
