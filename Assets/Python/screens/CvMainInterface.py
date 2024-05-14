@@ -5234,48 +5234,56 @@ class CvMainInterface:
                 # BUG - Gold Rate Warning - start
                 if MainOpt.isGoldRateWarning():
                     pPlayer = gc.getPlayer(ePlayer)
-                    iGold = pPlayer.getGold()
-                    iGoldRate = pPlayer.calculateGoldRate()
-                    if iGold < 0:
-                        szText = BugUtil.getText("TXT_KEY_MISC_NEG_GOLD", iGold)
-                        if iGoldRate != 0:
-                            if iGold + iGoldRate >= 0:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
-                                )
-                            elif iGoldRate >= 0:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN", iGoldRate
-                                )
-                            else:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
-                                )
-                    else:
-                        szText = BugUtil.getText("TXT_KEY_MISC_POS_GOLD", iGold)
-                        if iGoldRate != 0:
-                            if iGoldRate >= 0:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
-                                )
-                            elif iGold + iGoldRate >= 0:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN", iGoldRate
-                                )
-                            else:
-                                szText += BugUtil.getText(
-                                    "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
-                                )
+                    # iGold = pPlayer.getGold()
+                    # iGoldRate = pPlayer.calculateGoldRate()
+                    # if iGold < 0:
+                    #     szText = BugUtil.getText("TXT_KEY_MISC_NEG_GOLD", iGold)
+                    #     if iGoldRate != 0:
+                    #         if iGold + iGoldRate >= 0:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
+                    #             )
+                    #         elif iGoldRate >= 0:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN", iGoldRate
+                    #             )
+                    #         else:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
+                    #             )
+                    # else:
+                    #     szText = BugUtil.getText("TXT_KEY_MISC_POS_GOLD", iGold)
+                    #     if iGoldRate != 0:
+                    #         if iGoldRate >= 0:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
+                    #             )
+                    #         elif iGold + iGoldRate >= 0:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN", iGoldRate
+                    #             )
+                    #         else:
+                    #             szText += BugUtil.getText(
+                    #                 "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
+                    #             )
+
+                    # < Mercenaries Start >
+                    # Get the new modified gold string
+                    szText = mercenaryManager.getGoldText(ePlayer)
+                    # # < Mercenaries End   >
+
                     if pPlayer.isStrike():
                         szText += BugUtil.getPlainText("TXT_KEY_MISC_STRIKE")
                 else:
                     szText = CyGameTextMgr().getGoldStr(ePlayer)
                 # BUG - Gold Rate Warning - end
 
-                # < Mercenaries Start >
-                # Get the new modified gold string
-                szText = mercenaryManager.getGoldText(ePlayer)
-                # < Mercenaries End   >
+                if (
+                    (gc.getPlayer(ePlayer).calculateGoldRate() != 0)
+                    and not (gc.getPlayer(ePlayer).isAnarchy())
+                ) or (gc.getPlayer(ePlayer).getGold() != 0):
+                    screen.show("GoldText")
+
                 screen.setLabel(
                     "GoldText",
                     "Background",
