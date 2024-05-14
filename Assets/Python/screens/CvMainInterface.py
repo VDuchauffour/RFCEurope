@@ -1,20 +1,16 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from CoreFunctions import colortext, text
-from CoreStructures import human, is_minor_civ, player, turn, year
-from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
+from CoreData import civilization
+from CoreFunctions import  small_symbol, small_text, text
+from CoreStructures import human, is_minor_civ, player
+from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums
 
 import CvGameInterface
 from RFCUtils import (
     StabilityOverlayCiv,
-    countAchievedGoals,
-    getNumberCargoShips,
-    getGoalsColor,
-    getPlagueCountdown,
     prosecute,
     saint,
     showPersecutionPopup,
