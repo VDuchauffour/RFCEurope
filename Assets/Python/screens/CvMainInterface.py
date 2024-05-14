@@ -825,7 +825,7 @@ class CvMainInterface:
         screen.hide("TurnLogButton")
 
         # < Mercenaries Start >
-        iBtnX += iBtnAdvance
+        iBtnX += iBtnAdvance + 35
         # Set the mercenary manager button in the interface
         screen.setImageButton(
             "MercenaryManagerButton",
