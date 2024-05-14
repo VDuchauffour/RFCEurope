@@ -14,6 +14,7 @@ from RFCUtils import (
     prosecute,
     saint,
     showPersecutionPopup,
+    stability,
 )
 from StoredData import data
 
@@ -9185,20 +9186,9 @@ class CvMainInterface:
                                                             scores.setWHEOOH()
                                                 # BUG - WHEOOH - end
                                                 # Rhye - start stability
-                                                iStability = player(ePlayer).getStability()
-                                                if iStability < -15:
-                                                    szTempBuffer = unichr(symbol(FontSymbols.COLLAPSING_CHAR))
-                                                elif -15 <= iStability < -8:
-                                                    szTempBuffer = unichr(symbol(FontSymbols.UNSTABLE_CHAR))
-                                                elif -8 <= iStability < 0:
-                                                    szTempBuffer = unichr(symbol(FontSymbols.SHAKY_CHAR))
-                                                elif 0 <= iStability < 15:
-                                                    szTempBuffer = unichr(symbol(FontSymbols.STABLE_CHAR))
-                                                elif iStability >= 15:
-                                                    szTempBuffer = unichr(symbol(FontSymbols.SOLID_CHAR))
-                                                szBuffer = szBuffer + szTempBuffer
+                                                _, _, stability_symbol = stability(ePlayer)
                                                 if bAlignIcons:
-                                                    scores.setStability(szTempBuffer)
+                                                    scores.setStability(stability_symbol)
                                                 # Rhye - end stability
                                                 # BUG - Num Cities - start
                                                 if ScoreOpt.isShowCountCities():

@@ -1014,35 +1014,5 @@ class CvRFCEventHandler:
             self.lastProvinceID = -1
         # Absinthe: end
 
-    def printDebug(self, iGameTurn):
-        pass
-
     def printPlotsDebug(self):
         pass
-
-    def printEmbassyDebug(self):
-        pass
-
-    def printStabilityDebug(self):
-        for iCiv in civilizations().majors().ids():
-            if gc.getPlayer(iCiv).isAlive():
-                print(
-                    "Base:",
-                    getBaseStabilityLastTurn(iCiv),
-                    "Modifier:",
-                    player(iCiv).getStability() - getBaseStabilityLastTurn(iCiv),
-                    "Total:",
-                    player(iCiv).getStability(),
-                    "civic",
-                    gc.getPlayer(iCiv).getCivics(5),
-                    gc.getPlayer(iCiv).getCivilizationDescription(0),
-                )
-
-        for i in civilizations().majors().ids():
-            print(
-                gc.getPlayer(i).getCivilizationShortDescription(0),
-                "PLOT OWNERSHIP ABROAD:",
-                self.sta.getOwnedPlotsLastTurn(i),
-                "CITY OWNERSHIP LOST:",
-                self.sta.getOwnedCitiesLastTurn(i),
-            )

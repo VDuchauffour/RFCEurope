@@ -181,19 +181,7 @@ class CvFinanceAdvisor:
         screen = self.getScreen()
         player = gc.getPlayer(self.iActiveLeader)
 
-        stability_level = player.getStability()
-        if stability_level < -15:
-            stability_text = text("TXT_KEY_STABILITY_COLLAPSING")
-        elif stability_level >= -15 and stability_level < -5:
-            stability_text = text("TXT_KEY_STABILITY_UNSTABLE")
-        elif stability_level >= -5 and stability_level < 0:
-            stability_text = text("TXT_KEY_STABILITY_SHAKY")
-        elif stability_level >= 0 and stability_level < 8:
-            stability_text = text("TXT_KEY_STABILITY_STABLE")
-        elif stability_level >= 8 and stability_level < 15:
-            stability_text = text("TXT_KEY_STABILITY_SOLID")
-        elif stability_level >= 15:
-            stability_text = text("TXT_KEY_STABILITY_VERYSOLID")
+        stability_level, stability_text, _ = stability(player)
 
         if stability_level > 0:
             sValue = "+" + str(stability_level)
