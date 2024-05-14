@@ -28,7 +28,7 @@ gc = CyGlobalContext()
 Z_DEPTH = -0.3
 
 # Columns IDs
-NUM_PARTS = 26
+NUM_PARTS = 27
 (
     ALIVE,
     WAR,
@@ -55,6 +55,7 @@ NUM_PARTS = 26
     WAITING,
     NET_STATS,
     OOS,
+    PLAGUE,
     STABILITY,
 ) = range(NUM_PARTS)
 
@@ -112,6 +113,7 @@ def init():
     columns.append(Column("D", PACT, FIXED, smallSymbol(FontSymbols.DEFENSIVE_PACT_CHAR)))
     columns.append(Column("R", RELIGION, DYNAMIC))
     columns.append(Column("A", ATTITUDE, DYNAMIC))
+    columns.append(Column('@', PLAGUE, FIXED, smallSymbol(FontSymbols.PLAGUE_CHAR)))
     columns.append(Column('^', STABILITY, DYNAMIC))
     columns.append(Column("F", WONT_TALK, FIXED, smallText("!")))
     columns.append(Column("H", WORST_ENEMY, FIXED, smallSymbol(FontSymbols.ANGRY_POP_CHAR)))
@@ -291,6 +293,8 @@ class Scoreboard:
     def setWorstEnemy(self):
         self._set(WORST_ENEMY)
 
+    def setPlague(self):
+        self._set(PLAGUE)
     def setWaiting(self):
         self._set(WAITING)
 
