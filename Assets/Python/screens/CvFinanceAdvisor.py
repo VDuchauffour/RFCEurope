@@ -35,14 +35,14 @@ class CvFinanceAdvisor:
         self.H_SCREEN = 768
         self.Y_TITLE = 12
         self.BORDER_WIDTH = 4
-        self.PANE_HEIGHT = 340  # 450 #Rhye
+        self.PANE_HEIGHT = 380
         self.PANE_WIDTH = 283
         self.X_SLIDERS = 50
         self.X_INCOME = 373
         self.X_EXPENSES = 696
-        self.Y_TREASURY = 60  # 90 #Rhye
-        self.H_TREASURY = 60  # 100 #Rhye
-        self.Y_LOCATION = 130  # 230 #Rhye
+        self.Y_TREASURY = 70
+        self.H_TREASURY = 60
+        self.Y_LOCATION = 140
         self.Y_SPACING = 30
         self.TEXT_MARGIN = 15
         self.Z_BACKGROUND = -2.1
@@ -50,15 +50,17 @@ class CvFinanceAdvisor:
         self.DZ = -0.2
         self.X_EXIT = 994
         self.Y_EXIT = 726
-        self.Y_STABILITY = 480  # Rhye
-        self.Y_PARAMETERS = 550  # Rhye
-        self.H_PARAMETERS = 140  # Rhye
-        self.PARAMETERS_WIDTH = 170  # Rhye
-        self.X_PARAMETERS1 = self.X_SLIDERS  # Rhye
-        self.X_PARAMETERS2 = self.X_PARAMETERS1 + self.PARAMETERS_WIDTH + 20  # Rhye
-        self.X_PARAMETERS3 = self.X_PARAMETERS2 + self.PARAMETERS_WIDTH + 20  # Rhye
-        self.X_PARAMETERS4 = self.X_PARAMETERS3 + self.PARAMETERS_WIDTH + 20  # Rhye
-        self.X_PARAMETERS5 = self.X_PARAMETERS4 + self.PARAMETERS_WIDTH + 20  # Rhye
+
+        # Leoreth: stability display
+        self.Y_STABILITY = 520
+        self.Y_PARAMETERS = 580
+        self.H_PARAMETERS = 120
+        self.PARAMETERS_WIDTH = 180
+        self.X_PARAMETERS1 = self.X_SLIDERS
+        self.X_PARAMETERS2 = self.X_PARAMETERS1 + self.PARAMETERS_WIDTH + 7
+        self.X_PARAMETERS3 = self.X_PARAMETERS2 + self.PARAMETERS_WIDTH + 7
+        self.X_PARAMETERS4 = self.X_PARAMETERS3 + self.PARAMETERS_WIDTH + 7
+        self.X_PARAMETERS5 = self.X_PARAMETERS4 + self.PARAMETERS_WIDTH + 7
 
         self.nWidgetCount = 0
 
