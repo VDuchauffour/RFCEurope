@@ -18,6 +18,11 @@ try:
         DirectionTypes,
     )
     import Popup
+    import BugCore  # noqa: F401
+    import BugDll  # noqa: F401
+    import BugUtil  # noqa: F401
+    import DealUtil  # noqa: F401
+    import FontUtil
 
     gc = CyGlobalContext()
     map = gc.getMap()
@@ -219,6 +224,14 @@ def text_if_exists(key, *format, **kwargs):
 
 def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
+
+
+def small_text(text):
+    return u"<font=2>%s</font>" % text
+
+
+def small_symbol(symbol):
+    return small_text(FontUtil.getChar(symbol))
 
 
 def show(message, *format):
