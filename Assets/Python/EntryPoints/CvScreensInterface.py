@@ -1074,13 +1074,10 @@ HandleCloseMap = {
 #######################################################################################
 HandleInputMap = {
     MAIN_INTERFACE: mainInterface,
-    DOMESTIC_ADVISOR: domesticAdvisor,
     RELIGION_SCREEN: religionScreen,
     CORPORATION_SCREEN: corporationScreen,
     CIVICS_SCREEN: civicScreen,
     TECH_CHOOSER: techChooser,
-    FOREIGN_ADVISOR: foreignAdvisor,
-    FINANCE_ADVISOR: financeAdvisor,
     MILITARY_ADVISOR: militaryAdvisor,
     DAWN_OF_MAN: dawnOfMan,
     WONDER_MOVIE_SCREEN: wonderMovie,
@@ -1089,7 +1086,6 @@ HandleInputMap = {
     INTRO_MOVIE_SCREEN: introMovie,
     OPTIONS_SCREEN: optionsScreen,
     INFO_SCREEN: infoScreen,
-    TECH_SPLASH: techSplashScreen,
     REPLAY_SCREEN: replayScreen,
     VICTORY_SCREEN: victoryScreen,
     TOP_CIVS: topCivs,
@@ -1097,23 +1093,6 @@ HandleInputMap = {
     VICTORY_MOVIE_SCREEN: victoryMovie,
     ESPIONAGE_ADVISOR: espionageAdvisor,
     DAN_QUAYLE_SCREEN: danQuayleScreen,
-    PEDIA_MAIN: pediaMainScreen,
-    PEDIA_TECH: pediaMainScreen,
-    PEDIA_UNIT: pediaMainScreen,
-    PEDIA_BUILDING: pediaMainScreen,
-    PEDIA_PROMOTION: pediaMainScreen,
-    PEDIA_PROJECT: pediaMainScreen,
-    PEDIA_UNIT_CHART: pediaMainScreen,
-    PEDIA_BONUS: pediaMainScreen,
-    PEDIA_IMPROVEMENT: pediaMainScreen,
-    PEDIA_TERRAIN: pediaMainScreen,
-    PEDIA_FEATURE: pediaMainScreen,
-    PEDIA_CIVIC: pediaMainScreen,
-    PEDIA_CIVILIZATION: pediaMainScreen,
-    PEDIA_LEADER: pediaMainScreen,
-    PEDIA_RELIGION: pediaMainScreen,
-    PEDIA_CORPORATION: pediaMainScreen,
-    PEDIA_HISTORY: pediaMainScreen,
     WORLDBUILDER_SCREEN: worldBuilderScreen,
     DEBUG_INFO_SCREEN: debugInfoScreen,
     # add new screens here
@@ -1144,27 +1123,7 @@ HandleInputMap = {
 #######################################################################################
 ## Handle Navigation Map
 #######################################################################################
-HandleNavigationMap = {
-    MAIN_INTERFACE: mainInterface,
-    PEDIA_MAIN: pediaMainScreen,
-    PEDIA_TECH: pediaMainScreen,
-    PEDIA_UNIT: pediaMainScreen,
-    PEDIA_BUILDING: pediaMainScreen,
-    PEDIA_PROMOTION: pediaMainScreen,
-    PEDIA_PROJECT: pediaMainScreen,
-    PEDIA_UNIT_CHART: pediaMainScreen,
-    PEDIA_BONUS: pediaMainScreen,
-    PEDIA_IMPROVEMENT: pediaMainScreen,
-    PEDIA_TERRAIN: pediaMainScreen,
-    PEDIA_FEATURE: pediaMainScreen,
-    PEDIA_CIVIC: pediaMainScreen,
-    PEDIA_CIVILIZATION: pediaMainScreen,
-    PEDIA_LEADER: pediaMainScreen,
-    PEDIA_HISTORY: pediaMainScreen,
-    PEDIA_RELIGION: pediaMainScreen,
-    PEDIA_CORPORATION: pediaMainScreen
-    # add new screens here
-}
+HandleNavigationMap = {}
 
 # BUG - Options - start
 def init():
