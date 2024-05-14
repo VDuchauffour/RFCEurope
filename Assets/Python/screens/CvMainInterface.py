@@ -9171,6 +9171,42 @@ class CvMainInterface:
                                                         if bAlignIcons:
                                                             scores.setWHEOOH()
                                                 # BUG - WHEOOH - end
+                                                # Rhye - start stability
+                                                iStability = player(ePlayer).getStability()
+                                                if iStability < -15:
+                                                    szTempBuffer = unichr(  # type: ignore
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.COLLAPSING_CHAR
+                                                        )
+                                                    )
+                                                elif -15 <= iStability < -8:
+                                                    szTempBuffer = unichr(  # type: ignore
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.UNSTABLE_CHAR
+                                                        )
+                                                    )
+                                                elif -8 <= iStability < 0:
+                                                    szTempBuffer = unichr(  # type: ignore
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.SHAKY_CHAR
+                                                        )
+                                                    )
+                                                elif 0 <= iStability < 15:
+                                                    szTempBuffer = unichr(  # type: ignore
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.STABLE_CHAR
+                                                        )
+                                                    )
+                                                elif iStability >= 15:
+                                                    szTempBuffer = unichr(  # type: ignore
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.SOLID_CHAR
+                                                        )
+                                                    )
+                                                szBuffer = szBuffer + szTempBuffer
+                                                if bAlignIcons:
+                                                    scores.setStability(szTempBuffer)
+                                                # Rhye - end stability
                                                 # BUG - Num Cities - start
                                                 if ScoreOpt.isShowCountCities():
                                                     if PlayerUtil.canSeeCityList(ePlayer):
@@ -9189,7 +9225,7 @@ class CvMainInterface:
                                                     szBuffer = szBuffer + " " + szTempBuffer
                                                     if bAlignIcons:
                                                         scores.setNumCities(szTempBuffer)
-                                            # BUG - Num Cities - end
+                                                # BUG - Num Cities - end
 
                                             if CyGame().isNetworkMultiPlayer():
                                                 szTempBuffer = CyGameTextMgr().getNetStats(ePlayer)
@@ -9254,35 +9290,6 @@ class CvMainInterface:
 
                                                 iCount = iCount + 1
                             # BUG - Align Icons - end
-
-                            # # TODO simplify this
-                            # # Rhye - start stability
-                            # if not is_minor_civ(ePlayer):
-                            #     iStability = player(ePlayer).getStability()
-                            #     if iStability < -15:
-                            #         szTempBuffer = unichr(  # type: ignore
-                            #             CyGame().getSymbolID(
-                            #                 FontSymbols.COLLAPSING_CHAR
-                            #             )
-                            #         )
-                            #     elif -15 <= iStability < -8:
-                            #         szTempBuffer = unichr(  # type: ignore
-                            #             CyGame().getSymbolID(FontSymbols.UNSTABLE_CHAR)
-                            #         )
-                            #     elif -8 <= iStability < 0:
-                            #         szTempBuffer = unichr(  # type: ignore
-                            #             CyGame().getSymbolID(FontSymbols.SHAKY_CHAR)
-                            #         )
-                            #     elif 0 <= iStability < 15:
-                            #         szTempBuffer = unichr(  # type: ignore
-                            #             CyGame().getSymbolID(FontSymbols.STABLE_CHAR)
-                            #         )
-                            #     elif iStability >= 15:
-                            #         szTempBuffer = unichr(  # type: ignore
-                            #             CyGame().getSymbolID(FontSymbols.SOLID_CHAR)
-                            #         )
-                            #     szBuffer = szBuffer + " - " + szTempBuffer
-                            # # Rhye - end stability
 
                             j = j - 1
                     i = i - 1
