@@ -16,13 +16,9 @@ try:
         PlayerTypes,
         TeamTypes,
         DirectionTypes,
+        CyGame,
     )
     import Popup
-    import BugCore  # noqa: F401
-    import BugDll  # noqa: F401
-    import BugUtil  # noqa: F401
-    import DealUtil  # noqa: F401
-    import FontUtil
 
     gc = CyGlobalContext()
     map = gc.getMap()
@@ -225,15 +221,13 @@ def text_if_exists(key, *format, **kwargs):
 def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
-def symbol(iSymbol):
-    return FontUtil.getChar(iSymbol)
 
 def small_text(text, fontsize=2):
     return u"<font=%i>%s</font>" % (fontsize, text)
 
 
-def small_symbol(iSymbol, fontsize=2):
-    return small_text(symbol(iSymbol), fontsize)
+def symbol(identifier):
+    return unichr(CyGame().getSymbolID(identifier))  # noqa: F821
 
 
 def show(message, *format):

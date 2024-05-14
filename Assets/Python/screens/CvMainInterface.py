@@ -1,9 +1,8 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import civilization
-from CoreFunctions import  small_symbol, small_text, symbol, text
-from CoreStructures import human, is_minor_civ, player
+from CoreFunctions import  text
+from CoreStructures import human, is_minor_civ
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums

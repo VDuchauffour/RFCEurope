@@ -1564,20 +1564,20 @@ def stability(civ):
     level = player(civ).getStability()
     if level < -15:
         _text = text("TXT_KEY_STABILITY_COLLAPSING")
-        _symbol = unichr(symbol(FontSymbols.COLLAPSING_CHAR))
+        _symbol = symbol(FontSymbols.COLLAPSING_CHAR)
     elif -15 <= level < -5:
         _text = text("TXT_KEY_STABILITY_UNSTABLE")
-        _symbol = unichr(symbol(FontSymbols.UNSTABLE_CHAR))
+        _symbol = symbol(FontSymbols.UNSTABLE_CHAR)
     elif -5 <= level < 0:
         _text = text("TXT_KEY_STABILITY_SHAKY")
-        _symbol = unichr(symbol(FontSymbols.SHAKY_CHAR))
+        _symbol = symbol(FontSymbols.SHAKY_CHAR)
     elif 0 <= level < 8:
         _text = text("TXT_KEY_STABILITY_STABLE")
-        _symbol = unichr(symbol(FontSymbols.STABLE_CHAR))
+        _symbol = symbol(FontSymbols.STABLE_CHAR)
     elif 8 <= level < 15:
         _text = text("TXT_KEY_STABILITY_SOLID")
-        _symbol = unichr(symbol(FontSymbols.STABLE_CHAR))
+        _symbol = symbol(FontSymbols.STABLE_CHAR)
     elif level >= 15:
         _text = text("TXT_KEY_STABILITY_VERYSOLID")
-        _symbol = unichr(symbol(FontSymbols.SOLID_CHAR))
+        _symbol = symbol(FontSymbols.SOLID_CHAR)
     return level, _text, _symbol
