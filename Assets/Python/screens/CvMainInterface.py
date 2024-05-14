@@ -9123,8 +9123,17 @@ class CvMainInterface:
                                                             scores.setAttitude(cAtt)
                                                 # BUG - Attitude Icons - end
                                                 # Leoreth - Plague Icon - start
-                                                if gc.getPlayer(ePlayer).getBuildingClassCount(gc.getInfoTypeForString("BUILDINGCLASS_PLAGUE")) > 0:
-                                                    cPlague = unichr(CyGame().getSymbolID(FontSymbols.PLAGUE))
+                                                if (
+                                                    gc.getPlayer(ePlayer).getBuildingClassCount(
+                                                        gc.getInfoTypeForString(
+                                                            "BUILDINGCLASS_PLAGUE"
+                                                        )
+                                                    )
+                                                    > 0
+                                                ):
+                                                    cPlague = unichr(
+                                                        CyGame().getSymbolID(FontSymbols.PLAGUE)
+                                                    )
                                                     szBuffer += cPlague
                                                     if bAlignIcons:
                                                         scores.setPlague(cPlague)
