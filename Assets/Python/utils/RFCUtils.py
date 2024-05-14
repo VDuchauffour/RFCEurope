@@ -1553,7 +1553,7 @@ def change_attitude_extra_between_civ(iPlayer1, iPlayer2, iValue):
     gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
 
 
-def retrieve_stability_category_value(iPlayer, stability_category):
+def get_stability_category_value(iPlayer, stability_category):
     if stability_category == StabilityCategory.SWING:
         return player(iPlayer).getStabilitySwing()
     else:

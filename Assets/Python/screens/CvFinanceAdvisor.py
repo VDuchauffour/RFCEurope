@@ -381,8 +381,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szParametersPanel1,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.CITIES)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.CITIES)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
@@ -424,8 +423,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szParametersPanel2,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.CIVICS)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.CIVICS)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
@@ -467,8 +465,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szParametersPanel3,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.ECONOMY)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.ECONOMY)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
@@ -510,8 +507,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szParametersPanel4,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.EXPANSION)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.EXPANSION)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
@@ -553,8 +549,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szParametersPanel5,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.SWING)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.SWING)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,

@@ -5,7 +5,7 @@ from CoreFunctions import small_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
 import PyHelpers
 import CvUtil
-from RFCUtils import retrieve_stability_category_value, stability
+from RFCUtils import get_stability_category_value, stability
 import ScreenInput
 import CvScreenEnums
 import BugDll
@@ -413,8 +413,7 @@ class BugFinanceAdvisor:
             self.getNextWidgetName(),
             szCategoryPanel1,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.CITIES)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.CITIES)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
@@ -459,8 +458,7 @@ class BugFinanceAdvisor:
             self.getNextWidgetName(),
             szCategoryPanel2,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.CIVICS)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.CIVICS)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
@@ -505,8 +503,7 @@ class BugFinanceAdvisor:
             self.getNextWidgetName(),
             szCategoryPanel3,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.ECONOMY)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.ECONOMY)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
@@ -551,8 +548,7 @@ class BugFinanceAdvisor:
             self.getNextWidgetName(),
             szCategoryPanel4,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.EXPANSION)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.EXPANSION)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
@@ -597,8 +593,7 @@ class BugFinanceAdvisor:
             self.getNextWidgetName(),
             szCategoryPanel5,
             small_text(
-                str(retrieve_stability_category_value(player, StabilityCategory.SWING)),
-                fontsize=4,
+                str(get_stability_category_value(player, StabilityCategory.SWING)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
