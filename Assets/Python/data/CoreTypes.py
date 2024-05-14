@@ -892,6 +892,7 @@ class StabilityCategory(IntEnum):
     CIVICS = 1
     ECONOMY = 2
     EXPANSION = 3
+    SWING = 4
 
 
 class SpecialParameter(IntEnum):

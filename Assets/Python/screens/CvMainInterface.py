@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilization
-from CoreFunctions import  small_symbol, small_text, text
+from CoreFunctions import  small_symbol, small_text, symbol, text
 from CoreStructures import human, is_minor_civ, player
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
@@ -9187,35 +9187,15 @@ class CvMainInterface:
                                                 # Rhye - start stability
                                                 iStability = player(ePlayer).getStability()
                                                 if iStability < -15:
-                                                    szTempBuffer = unichr(  # type: ignore
-                                                        CyGame().getSymbolID(
-                                                            FontSymbols.COLLAPSING_CHAR
-                                                        )
-                                                    )
+                                                    szTempBuffer = unichr(symbol(FontSymbols.COLLAPSING_CHAR))
                                                 elif -15 <= iStability < -8:
-                                                    szTempBuffer = unichr(  # type: ignore
-                                                        CyGame().getSymbolID(
-                                                            FontSymbols.UNSTABLE_CHAR
-                                                        )
-                                                    )
+                                                    szTempBuffer = unichr(symbol(FontSymbols.UNSTABLE_CHAR))
                                                 elif -8 <= iStability < 0:
-                                                    szTempBuffer = unichr(  # type: ignore
-                                                        CyGame().getSymbolID(
-                                                            FontSymbols.SHAKY_CHAR
-                                                        )
-                                                    )
+                                                    szTempBuffer = unichr(symbol(FontSymbols.SHAKY_CHAR))
                                                 elif 0 <= iStability < 15:
-                                                    szTempBuffer = unichr(  # type: ignore
-                                                        CyGame().getSymbolID(
-                                                            FontSymbols.STABLE_CHAR
-                                                        )
-                                                    )
+                                                    szTempBuffer = unichr(symbol(FontSymbols.STABLE_CHAR))
                                                 elif iStability >= 15:
-                                                    szTempBuffer = unichr(  # type: ignore
-                                                        CyGame().getSymbolID(
-                                                            FontSymbols.SOLID_CHAR
-                                                        )
-                                                    )
+                                                    szTempBuffer = unichr(symbol(FontSymbols.SOLID_CHAR))
                                                 szBuffer = szBuffer + szTempBuffer
                                                 if bAlignIcons:
                                                     scores.setStability(szTempBuffer)

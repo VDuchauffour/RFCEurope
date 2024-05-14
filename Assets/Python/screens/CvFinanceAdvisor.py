@@ -1,9 +1,8 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import text
+from CoreFunctions import small_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
-from CoreStructures import player as _player
 import CvUtil
 import CvScreenEnums
 
@@ -181,26 +180,24 @@ class CvFinanceAdvisor:
         # Create a new screen, called FinanceAdvisor, using the file FinanceAdvisor.py for input
         screen = self.getScreen()
         player = gc.getPlayer(self.iActiveLeader)
-        ePlayer = self.iActiveLeader  # Rhye
 
-        # Rhye - start
-        iStability = player.getStability()
-        if iStability < -15:
-            szTempBuffer = text("TXT_KEY_STABILITY_COLLAPSING")
-        elif iStability >= -15 and iStability < -5:
-            szTempBuffer = text("TXT_KEY_STABILITY_UNSTABLE")
-        elif iStability >= -5 and iStability < 0:
-            szTempBuffer = text("TXT_KEY_STABILITY_SHAKY")
-        elif iStability >= 0 and iStability < 8:
-            szTempBuffer = text("TXT_KEY_STABILITY_STABLE")
-        elif iStability >= 8 and iStability < 15:
-            szTempBuffer = text("TXT_KEY_STABILITY_SOLID")
-        elif iStability >= 15:
-            szTempBuffer = text("TXT_KEY_STABILITY_VERYSOLID")
+        stability_level = player.getStability()
+        if stability_level < -15:
+            stability_text = text("TXT_KEY_STABILITY_COLLAPSING")
+        elif stability_level >= -15 and stability_level < -5:
+            stability_text = text("TXT_KEY_STABILITY_UNSTABLE")
+        elif stability_level >= -5 and stability_level < 0:
+            stability_text = text("TXT_KEY_STABILITY_SHAKY")
+        elif stability_level >= 0 and stability_level < 8:
+            stability_text = text("TXT_KEY_STABILITY_STABLE")
+        elif stability_level >= 8 and stability_level < 15:
+            stability_text = text("TXT_KEY_STABILITY_SOLID")
+        elif stability_level >= 15:
+            stability_text = text("TXT_KEY_STABILITY_VERYSOLID")
 
-        if gc.getPlayer(ePlayer).isHuman():
-            szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
-        # Rhye - end
+        if stability_level > 0:
+            sValue = "+" + str(stability_level)
+        stability_text += " (%s)" % sValue
 
         totalUnitCost = player.calculateUnitCost()
         totalUnitSupply = player.calculateUnitSupply()
@@ -353,11 +350,9 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szStabilityPanel,
-            u"<font=4>"
-            + text("TXT_KEY_STABILITY_ADVISOR_TITLE").upper()
-            + " "
-            + szTempBuffer
-            + u"</font>",
+            small_text(
+                text("TXT_KEY_STABILITY_ADVISOR_TITLE").upper() + " " + stability_text, fontsize=4
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             (self.X_SLIDERS + self.PANE_WIDTH + self.X_EXPENSES) / 2,
             self.Y_STABILITY + self.H_TREASURY / 2 - self.Y_SPACING / 2,
@@ -384,29 +379,30 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_CITIES").upper() + u"</font>",
+            small_text(text("TXT_KEY_STABILITY_PARAMETER_CITIES").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
             self.Z_CONTROLS + self.DZ,
             FontTypes.GAME_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel1,
-            u"<font=4>"
-            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.CITIES))
-            + u"</font>",
+            small_text(
+                str(retrieve_stability_category_value(player, StabilityCategory.CITIES)),
+                fontsize=4,
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
             FontTypes.TITLE_FONT,
-            WidgetTypes.WIDGET_GENERAL,  # pour context menu changer ce widget
-            -1,  # et mettre eplayer ici ?
+            WidgetTypes.WIDGET_GENERAL,
+            self.iActiveLeader,
             -1,
         )
 
@@ -426,29 +422,30 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_CIVICS").upper() + u"</font>",
+            small_text(text("TXT_KEY_STABILITY_PARAMETER_CIVICS").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
             self.Z_CONTROLS + self.DZ,
             FontTypes.GAME_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel2,
-            u"<font=4>"
-            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.CIVICS))
-            + u"</font>",
+            small_text(
+                str(retrieve_stability_category_value(player, StabilityCategory.CIVICS)),
+                fontsize=4,
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
 
@@ -468,29 +465,30 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_ECONOMY").upper() + u"</font>",
+            small_text(text("TXT_KEY_STABILITY_PARAMETER_ECONOMY").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
             self.Z_CONTROLS + self.DZ,
             FontTypes.GAME_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel3,
-            u"<font=4>"
-            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.ECONOMY))
-            + u"</font>",
+            small_text(
+                str(retrieve_stability_category_value(player, StabilityCategory.ECONOMY)),
+                fontsize=4,
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
 
@@ -510,29 +508,30 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_EXPANSION").upper() + u"</font>",
+            small_text(text("TXT_KEY_STABILITY_PARAMETER_EXPANSION").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
             self.Z_CONTROLS + self.DZ,
             FontTypes.GAME_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel4,
-            u"<font=4>"
-            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.EXPANSION))
-            + u"</font>",
+            small_text(
+                str(retrieve_stability_category_value(player, StabilityCategory.EXPANSION)),
+                fontsize=4,
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
 
@@ -552,27 +551,30 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_SWING").upper() + u"</font>",
+            small_text(text("TXT_KEY_STABILITY_PARAMETER_SWING").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
             self.Z_CONTROLS + self.DZ,
             FontTypes.GAME_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel5,
-            u"<font=4>" + str(self.retrieve_stability_category_value(ePlayer, None)) + u"</font>",
+            small_text(
+                str(retrieve_stability_category_value(player, StabilityCategory.SWING)),
+                fontsize=4,
+            ),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_GENERAL,
-            -1,
+            self.iActiveLeader,
             -1,
         )
 
@@ -866,7 +868,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>",  # type: ignore
+            u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1125,11 +1127,5 @@ class CvFinanceAdvisor:
                 -1,
                 -1,
             )
-
-    def retrieve_stability_category_value(self, player, stability_category):
-        if stability_category is not None:
-            return _player(player).getStabilityBase(stability_category.value)
-        else:
-            return _player(player).getStabilitySwing()
 
     # Rhye - end

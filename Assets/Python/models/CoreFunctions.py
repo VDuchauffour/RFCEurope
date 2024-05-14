@@ -225,13 +225,15 @@ def text_if_exists(key, *format, **kwargs):
 def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
+def symbol(iSymbol):
+    return FontUtil.getChar(iSymbol)
 
 def small_text(text, fontsize=2):
     return u"<font=%i>%s</font>" % (fontsize, text)
 
 
-def small_symbol(symbol, fontsize=2):
-    return small_text(FontUtil.getChar(symbol), fontsize)
+def small_symbol(iSymbol, fontsize=2):
+    return small_text(symbol(iSymbol), fontsize)
 
 
 def show(message, *format):
