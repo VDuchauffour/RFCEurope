@@ -21,6 +21,7 @@ from CoreTypes import (
     PlagueType,
     Religion,
     Scenario,
+    SpecialParameter,
     StabilityCategory,
     UniquePower,
     Wonder,
@@ -42,6 +43,7 @@ from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
 from CoreFunctions import (
     city,
+    colortext,
     get_data_from_upside_down_map,
     get_religion_by_id,
     location,
@@ -1581,3 +1583,52 @@ def stability(civ):
         _text = text("TXT_KEY_STABILITY_VERYSOLID")
         _symbol = symbol(FontSymbols.SOLID_CHAR)
     return level, _text, _symbol
+
+
+def calculate_gold_rate(identifier):
+    # Returns the new version of the gold text that takes into account the
+    # mercenary maintenance cost and contract income
+    pPlayer = player(identifier)
+
+    totalUnitCost = pPlayer.calculateUnitCost()
+    totalUnitSupply = pPlayer.calculateUnitSupply()
+    totalMaintenance = pPlayer.getTotalMaintenance()
+    totalCivicUpkeep = pPlayer.getCivicUpkeep([], False)
+    totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
+    totalInflatedCosts = pPlayer.calculateInflatedCosts()
+    totalMercenaryCost = (
+        pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+    ) / 100
+
+    # Colony Upkeep
+    iColonyNumber = pPlayer.getNumColonies()
+    iColonyUpkeep = 0
+    if iColonyNumber > 0:
+        iColonyUpkeep = int((0.5 * iColonyNumber * iColonyNumber + 0.5 * iColonyNumber) * 3 + 7)
+    goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
+
+    iIncome = 0
+    iExpenses = 0
+    iIncome = goldCommerce
+
+    goldFromCivs = pPlayer.getGoldPerTurn()
+    if goldFromCivs > 0:
+        iIncome += goldFromCivs
+
+    iInflation = totalInflatedCosts - totalPreInflatedCosts
+
+    iExpenses = (
+        totalUnitCost
+        + totalUnitSupply
+        + totalMaintenance
+        + totalCivicUpkeep
+        + iInflation
+        + totalMercenaryCost
+        + iColonyUpkeep
+    )
+
+    if goldFromCivs < 0:
+        iExpenses -= goldFromCivs
+
+    iDelta = iIncome - iExpenses
+    return iDelta

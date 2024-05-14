@@ -7,6 +7,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import text
+from CoreStructures import player
 from CoreTypes import SpecialParameter, Promotion
 import CvUtil
 import PyHelpers
@@ -17,6 +18,9 @@ import Mercenaries
 # from sets import Set
 # import CvConfigParser #Rhye
 from CvMercenaryScreensEnums import *
+from RFCUtils import calculate_gold_rate
+
+import BugUtil
 
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
@@ -757,7 +761,6 @@ class CvMercenaryManager:
         iCost = 0
         strCost = ""
 
-        # iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
         pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
         strCost = u"%s %c: %1.2f" % (
             "Mercenary Maintenance",
@@ -766,7 +769,39 @@ class CvMercenaryManager:
         )
 
         # Get the players current gold text
-        szText = self.getGoldText(gc.getGame().getActivePlayer())
+        iGold = player().getGold()
+        iGoldRate = calculate_gold_rate(player())
+        if iGold < 0:
+            szText = BugUtil.getText("TXT_KEY_MISC_NEG_GOLD", iGold)
+            if iGoldRate != 0:
+                if iGold + iGoldRate >= 0:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
+                    )
+                elif iGoldRate >= 0:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN", iGoldRate
+                    )
+                else:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
+                    )
+        else:
+            szText = BugUtil.getText("TXT_KEY_MISC_POS_GOLD", iGold)
+            if iGoldRate != 0:
+                if iGoldRate >= 0:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
+                    )
+                elif iGold + iGoldRate >= 0:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN", iGoldRate
+                    )
+                else:
+                    szText += BugUtil.getText(
+                        "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
+                    )
+
         screen.setLabel(
             "GoldText",
             "Background",
@@ -1054,86 +1089,6 @@ class CvMercenaryManager:
 
         # Populate the hired mercenaries panel
         self.populateHiredMercenariesPanel(screen)
-
-    # Returns the new version of the gold text that takes into account the
-    # mercenary maintenance cost and contract income
-    def getGoldText(self, iPlayer):
-
-        # Get the player
-        pPlayer = gc.getPlayer(iPlayer)
-
-        # get the number of cities the player owns
-        numCities = pPlayer.getNumCities()
-
-        totalUnitCost = pPlayer.calculateUnitCost()
-        totalUnitSupply = pPlayer.calculateUnitSupply()
-        totalMaintenance = pPlayer.getTotalMaintenance()
-        totalCivicUpkeep = pPlayer.getCivicUpkeep([], False)
-        totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
-        totalInflatedCosts = pPlayer.calculateInflatedCosts()
-        # totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-        totalMercenaryCost = (
-            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
-        ) / 100
-        # totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
-        # Colony Upkeep
-        iColonyNumber = pPlayer.getNumColonies()
-        iColonyUpkeep = 0
-        if iColonyNumber > 0:
-            iColonyUpkeep = int(
-                (0.5 * iColonyNumber * iColonyNumber + 0.5 * iColonyNumber) * 3 + 7
-            )
-        goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
-        gold = pPlayer.getGold()
-
-        goldFromCivs = pPlayer.getGoldPerTurn()
-
-        iIncome = 0
-
-        iExpenses = 0
-
-        iIncome = goldCommerce
-
-        if goldFromCivs > 0:
-            iIncome += goldFromCivs
-
-        iInflation = totalInflatedCosts - totalPreInflatedCosts
-
-        iExpenses = (
-            totalUnitCost
-            + totalUnitSupply
-            + totalMaintenance
-            + totalCivicUpkeep
-            + iInflation
-            + totalMercenaryCost
-            + iColonyUpkeep
-        )
-
-        if goldFromCivs < 0:
-            iExpenses -= goldFromCivs
-
-        iDelta = iIncome - iExpenses
-
-        # Build the gold string
-        strGoldText = u"%c: %d" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(), gold)
-
-        strDelta = ""
-
-        # Set the color for the gold/turn.
-        if iDelta > 0:
-            strDelta = u"%s" % (
-                localText.changeTextColor(
-                    " (+" + str(iDelta) + "/Turn)", gc.getInfoTypeForString("COLOR_GREEN")
-                )
-            )
-        elif iDelta < 0:
-            strDelta = u"%s" % (
-                localText.changeTextColor(
-                    " (" + str(iDelta) + "/Turn)", gc.getInfoTypeForString("COLOR_RED")
-                )
-            )
-
-        return strGoldText + strDelta
 
     # Hires a mercenary for a player
     def hireMercenary(self, screen, iMerc):
