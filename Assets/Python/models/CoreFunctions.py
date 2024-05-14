@@ -230,6 +230,10 @@ def symbol(identifier):
     return unichr(CyGame().getSymbolID(identifier))  # noqa: F821
 
 
+def small_symbol(iSymbol, fontsize=2):
+    return small_text(symbol(iSymbol), fontsize)
+
+
 def show(message, *format):
     if format:
         message = message % tuple(format)

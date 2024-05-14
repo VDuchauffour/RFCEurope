@@ -1,7 +1,8 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import text
+from CoreData import civilization
+from CoreFunctions import small_symbol, small_text, text
 from CoreStructures import human, is_minor_civ
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
@@ -5142,6 +5143,10 @@ class CvMainInterface:
             szString = "RateText" + str(iI)
             screen.hide(szString)
 
+        screen.hide("FaithText")
+        screen.hide("PersecutionText")
+        screen.hide("JanissaryText")
+
         if (
             CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL
             and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY
@@ -5212,6 +5217,231 @@ class CvMainInterface:
                             screen.show(szString)
 
                         iCount = iCount + 1
+
+                # Faith Points
+                if (
+                    civilization(ePlayer).has_a_state_religion()
+                    and not CyInterface().isCityScreenUp()
+                ):
+                    faith = (
+                        small_symbol(FontSymbols.RELIGION_CHAR)
+                        + " "
+                        + small_text(pPlayer.getFaith())
+                    )
+                    screen.setLabel(
+                        "FaithText",
+                        "Background",
+                        faith,
+                        CvUtil.FONT_LEFT_JUSTIFY,
+                        31,
+                        50 + (iCount * 19),
+                        -0.1,
+                        FontTypes.SMALL_FONT,
+                        WidgetTypes.WIDGET_GENERAL,
+                        -1,
+                        -1,
+                    )
+                    screen.show("FaithText")
+                    iCount += 1
+
+                # Absinthe: Persecution cooldown
+                persecution_points = pPlayer.getProsecutionCount()
+                # if iPersecutionPoints > 0 and not CyInterface().isCityScreenUp():
+                if not CyInterface().isCityScreenUp():
+                    persecution = (
+                        small_symbol(FontSymbols.RELIGION_CHAR)
+                        + " "
+                        + small_text(persecution_points)
+                        + " ("
+                        + small_text(text("TXT_KEY_FAITH_PERSECUTION"))
+                        + ")"
+                    )
+                    screen.setLabel(
+                        "PersecutionText",
+                        "Background",
+                        persecution,
+                        CvUtil.FONT_RIGHT_JUSTIFY,
+                        31,
+                        50 + (iCount * 19),
+                        -0.1,
+                        FontTypes.SMALL_FONT,
+                        WidgetTypes.WIDGET_GENERAL,
+                        -1,
+                        -1,
+                    )
+                    screen.show("PersecutionText")
+                    iCount += 1
+                else:
+                    screen.hide("PersecutionText")
+
+                # 3Miro: Janissary Points
+                if not CyInterface().isCityScreenUp() and ePlayer == Civ.OTTOMAN:
+                    janissary_text = unicode(  # type: ignore
+                        gc.getPlayer(ePlayer).getPicklefreeParameter(
+                            SpecialParameter.JANISSARY_POINTS
+                        )
+                    )
+                    janissary = (
+                        small_symbol(FontSymbols.STRENGTH_CHAR)
+                        + " "
+                        + small_text(janissary_text)
+                        + " /300 (Janissary)"
+                    )
+                    screen.setLabel(
+                        "JanissaryText",
+                        "Background",
+                        janissary,
+                        CvUtil.FONT_RIGHT_JUSTIFY,
+                        31,
+                        50 + (iCount * 19),
+                        -0.1,
+                        FontTypes.SMALL_FONT,
+                        WidgetTypes.WIDGET_GENERAL,
+                        -1,
+                        -1,
+                    )
+                    screen.setHitTest("JanissaryXPButton", HitTestTypes.HITTEST_NOHIT)
+                    screen.show("JanissaryText")
+                    iCount += 1
+                else:
+                    screen.hide("JanissaryText")
+
+                # edead: Piety/Faith Points
+                # iFaithPoints = pPlayer.getFaith()
+                # if (
+                #     iFaithPoints >= 0
+                #     and gc.getPlayer(ePlayer).getStateReligion() >= 0
+                #     and not CyInterface().isCityScreenUp()
+                # ):
+                #     szFaithButton = u"<font=2>%c</font>" % (
+                #         CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
+                #     )
+                #     # szPietyText = ": %s (%d)" %(getFavorLevelText(ePlayer), iPiety)
+                #     szFaithText = ": " + text("TXT_KEY_FAITH_POINTS") + (" (%i) " % iFaithPoints)
+                #     # screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
+                #     # screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
+                #     screen.setLabel(
+                #         "FaithButton",
+                #         "Background",
+                #         szFaithButton,
+                #         CvUtil.FONT_RIGHT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.setLabel(
+                #         "FaithText",
+                #         "Background",
+                #         szFaithText,
+                #         CvUtil.FONT_LEFT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.show("FaithButton")
+                #     screen.show("FaithText")
+                #     iCount += 1
+                # else:
+                #     screen.hide("FaithButton")
+                #     screen.hide("FaithText")
+
+                # # Absinthe: Persecution cooldown
+                # iPersecutionPoints = pPlayer.getProsecutionCount()
+                # if iPersecutionPoints > 0 and not CyInterface().isCityScreenUp():
+                #     szPersecutionButton = u"<font=2>%c</font>" % (
+                #         CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
+                #     )
+                #     szPersecutionText = (
+                #         ": " + text("TXT_KEY_FAITH_PERSECUTION") + (" (%i) " % iPersecutionPoints)
+                #     )
+                #     screen.setLabel(
+                #         "PersecutionButton",
+                #         "Background",
+                #         szPersecutionButton,
+                #         CvUtil.FONT_RIGHT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.setLabel(
+                #         "PersecutionText",
+                #         "Background",
+                #         szPersecutionText,
+                #         CvUtil.FONT_LEFT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.show("PersecutionButton")
+                #     screen.show("PersecutionText")
+                #     iCount += 1
+                # else:
+                #     screen.hide("PersecutionButton")
+                #     screen.hide("PersecutionText")
+
+                # # 3Miro: Janissary Points
+                # if not CyInterface().isCityScreenUp() and ePlayer == Civ.OTTOMAN.value:
+                #     eJanissaryXPButton = u"<font=2>%c</font>" % (
+                #         CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR)
+                #     )
+                #     eJanissaryXPText = (
+                #         ": Janissary ("
+                #         + unicode(  # type: ignore
+                #             gc.getPlayer(ePlayer).getPicklefreeParameter(
+                #                 SpecialParameter.JANISSARY_POINTS.value
+                #             )
+                #         )
+                #         + "/300)"
+                #     )
+                #     screen.setLabel(
+                #         "JanissaryXPButton",
+                #         "Background",
+                #         eJanissaryXPButton,
+                #         CvUtil.FONT_RIGHT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.setLabel(
+                #         "JanissaryXPText",
+                #         "Background",
+                #         eJanissaryXPText,
+                #         CvUtil.FONT_LEFT_JUSTIFY,
+                #         31,
+                #         50 + (iCount * 19),
+                #         -0.1,
+                #         FontTypes.SMALL_FONT,
+                #         WidgetTypes.WIDGET_GENERAL,
+                #         -1,
+                #         -1,
+                #     )
+                #     screen.setHitTest("JanissaryXPButton", HitTestTypes.HITTEST_NOHIT)
+                #     screen.show("JanissaryXPButton")
+                #     screen.show("JanissaryXPText")
+                #     iCount += 1
+                # else:
+                #     screen.hide("JanissaryXPButton")
+                #     screen.hide("JanissaryXPText")
 
             self.updateTimeText()
             screen.setLabel(
@@ -5323,143 +5553,6 @@ class CvMainInterface:
                     )
                     screen.show("EraText")
                 # BUG - NJAGC - end
-
-                # edead: Piety/Faith Points
-                iFaithPoints = pPlayer.getFaith()
-                if (
-                    iFaithPoints >= 0
-                    and gc.getPlayer(ePlayer).getStateReligion() >= 0
-                    and not CyInterface().isCityScreenUp()
-                ):
-                    szFaithButton = u"<font=2>%c</font>" % (
-                        CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
-                    )
-                    # szPietyText = ": %s (%d)" %(getFavorLevelText(ePlayer), iPiety)
-                    szFaithText = ": " + text("TXT_KEY_FAITH_POINTS") + (" (%i) " % iFaithPoints)
-                    # screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
-                    # screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, getFavorLevel(ePlayer), iFaithPoints)
-                    screen.setLabel(
-                        "FaithButton",
-                        "Background",
-                        szFaithButton,
-                        CvUtil.FONT_RIGHT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.setLabel(
-                        "FaithText",
-                        "Background",
-                        szFaithText,
-                        CvUtil.FONT_LEFT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.show("FaithButton")
-                    screen.show("FaithText")
-                    iCount += 1
-                else:
-                    screen.hide("FaithButton")
-                    screen.hide("FaithText")
-
-                # Absinthe: Persecution cooldown
-                iPersecutionPoints = pPlayer.getProsecutionCount()
-                if iPersecutionPoints > 0 and not CyInterface().isCityScreenUp():
-                    szPersecutionButton = u"<font=2>%c</font>" % (
-                        CyGame().getSymbolID(FontSymbols.RELIGION_CHAR)
-                    )
-                    szPersecutionText = (
-                        ": " + text("TXT_KEY_FAITH_PERSECUTION") + (" (%i) " % iPersecutionPoints)
-                    )
-                    screen.setLabel(
-                        "PersecutionButton",
-                        "Background",
-                        szPersecutionButton,
-                        CvUtil.FONT_RIGHT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.setLabel(
-                        "PersecutionText",
-                        "Background",
-                        szPersecutionText,
-                        CvUtil.FONT_LEFT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.show("PersecutionButton")
-                    screen.show("PersecutionText")
-                    iCount += 1
-                else:
-                    screen.hide("PersecutionButton")
-                    screen.hide("PersecutionText")
-
-                # 3Miro: Janissary Points
-                if not CyInterface().isCityScreenUp() and ePlayer == Civ.OTTOMAN.value:
-                    eJanissaryXPButton = u"<font=2>%c</font>" % (
-                        CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR)
-                    )
-                    eJanissaryXPText = (
-                        ": Janissary ("
-                        + unicode(  # type: ignore
-                            gc.getPlayer(ePlayer).getPicklefreeParameter(
-                                SpecialParameter.JANISSARY_POINTS.value
-                            )
-                        )
-                        + "/300)"
-                    )
-                    screen.setLabel(
-                        "JanissaryXPButton",
-                        "Background",
-                        eJanissaryXPButton,
-                        CvUtil.FONT_RIGHT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.setLabel(
-                        "JanissaryXPText",
-                        "Background",
-                        eJanissaryXPText,
-                        CvUtil.FONT_LEFT_JUSTIFY,
-                        31,
-                        50 + (iCount * 19),
-                        -0.1,
-                        FontTypes.SMALL_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    screen.setHitTest("JanissaryXPButton", HitTestTypes.HITTEST_NOHIT)
-                    screen.show("JanissaryXPButton")
-                    screen.show("JanissaryXPText")
-                    iCount += 1
-                else:
-                    screen.hide("JanissaryXPButton")
-                    screen.hide("JanissaryXPText")
 
                 if (
                     (gc.getPlayer(ePlayer).calculateGoldRate() != 0)
