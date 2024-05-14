@@ -5,6 +5,19 @@ import cPickle as pickle
 from MiscData import NUM_CRUSADES
 
 
+class CivData:
+    def __init__(self, civ):
+        self._civ = civ
+        self.setup()
+        self.save()
+
+    def load(self):
+        self.__dict__.update(pickle.loads(player(self._civ).getScriptData()))
+
+    def save(self):
+        player(self._civ).setScriptData(pickle.dumps(self.__dict__))
+
+
 class GameData:
     def __init__(self):
         self.setup()
