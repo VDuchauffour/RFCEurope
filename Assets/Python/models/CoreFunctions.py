@@ -226,12 +226,12 @@ def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
 
-def small_text(text):
-    return u"<font=2>%s</font>" % text
+def small_text(text, fontsize=2):
+    return u"<font=%i>%s</font>" % (fontsize, text)
 
 
-def small_symbol(symbol):
-    return small_text(FontUtil.getChar(symbol))
+def small_symbol(symbol, fontsize=2):
+    return small_text(FontUtil.getChar(symbol), fontsize)
 
 
 def show(message, *format):
