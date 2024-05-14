@@ -43,7 +43,6 @@ from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
 from CoreFunctions import (
     city,
-    colortext,
     get_data_from_upside_down_map,
     get_religion_by_id,
     location,
@@ -1544,10 +1543,6 @@ def getDawnOfManText(iPlayer):
         full_key += "_1200AD"
 
     return text_if_exists(full_key, otherwise=base_key)
-
-
-def getBaseStabilityLastTurn(civ):
-    return data.lBaseStabilityLastTurn[civ]
 
 
 def change_attitude_extra_between_civ(iPlayer1, iPlayer2, iValue):

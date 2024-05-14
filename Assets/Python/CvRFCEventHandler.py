@@ -21,7 +21,6 @@ import UniquePowers
 import AIWars
 from RFCUtils import (
     forcedInvasion,
-    getBaseStabilityLastTurn,
     getProvinceStabilityLevel,
     spreadMajorCulture,
     getUniqueBuilding,
@@ -860,7 +859,6 @@ class CvRFCEventHandler:
         ):
             self.rel.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
-
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
