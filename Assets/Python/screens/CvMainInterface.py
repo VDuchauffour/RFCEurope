@@ -3518,7 +3518,7 @@ class CvMainInterface:
         if (
             not pPlot
             or CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_HIDE_ALL
-            or CyEngine().isGlobeviewUp() == True
+            or CyEngine().isGlobeviewUp() is True
         ):
             self.BupPanel.clearUnits()
             self.BupPanel.Hide()
@@ -3668,7 +3668,6 @@ class CvMainInterface:
                 gc.getGame().getActivePlayer(),
                 -1,
             )
-            # TODO check if the plugin is here
             # BUG - Build/Action Icon Size - start
             if MainOpt.isBuildIconSizeLarge():
                 screen.addMultiListControlGFC(
@@ -9852,7 +9851,6 @@ class CvMainInterface:
 
     # Will handle the input for this screen...
     def handleInput(self, inputClass):
-        # TODO this
         # < Mercenaries Start >
         # Handle the case where the "Mercenary Manager" button is pressed.
         if inputClass.getFunctionName() == "MercenaryManagerButton":

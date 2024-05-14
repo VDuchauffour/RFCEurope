@@ -1379,20 +1379,18 @@ def refreshStabilityOverlay():
 
 
 def StabilityOverlayCiv(iChoice):
-
     engine = CyEngine()
-    map = CyMap()
 
     # clear the highlight
     engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 
-    # set up colors
-    colors = []
-    colors.append("COLOR_HIGHLIGHT_FOREIGN")
-    colors.append("COLOR_HIGHLIGHT_BORDER")
-    colors.append("COLOR_HIGHLIGHT_POTENTIAL")
-    colors.append("COLOR_HIGHLIGHT_NATURAL")
-    colors.append("COLOR_HIGHLIGHT_CORE")
+    colors = [
+        "COLOR_HIGHLIGHT_FOREIGN",
+        "COLOR_HIGHLIGHT_BORDER",
+        "COLOR_HIGHLIGHT_POTENTIAL",
+        "COLOR_HIGHLIGHT_NATURAL",
+        "COLOR_HIGHLIGHT_CORE",
+    ]
 
     iHuman = human()
     iHumanTeam = gc.getPlayer(iHuman).getTeam()
@@ -1444,17 +1442,13 @@ def StabilityOverlayCiv(iChoice):
             iMaxTextWidth = iTextWidth
 
     # apply the highlight
-    for i in range(map.numPlots()):
-        plot = map.plotByIndex(i)
+    for plot in plots().all().land().entities():
         if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-            if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
-                szColor = "COLOR_GREY"
-            else:
-                szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
-            engine.addColoredPlotAlt(
+            szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
+            engine.fillAreaBorderPlotAlt(
                 plot.getX(),
                 plot.getY(),
-                int(PlotStyles.PLOT_STYLE_BOX_FILL),
+                int(PlotStyles.PLOT_STYLE_TARGET),
                 int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER),
                 szColor,
                 0.2,
