@@ -222,16 +222,16 @@ def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
 
-def small_text(text, fontsize=2):
-    return u"<font=%i>%s</font>" % (fontsize, text)
+def font_text(text, fontsize=2):
+    return u"<font=%s>%s</font>" % (str(fontsize), text)
 
 
 def symbol(identifier):
     return unichr(CyGame().getSymbolID(identifier))  # noqa: F821
 
 
-def small_symbol(iSymbol, fontsize=2):
-    return small_text(symbol(iSymbol), fontsize)
+def font_symbol(iSymbol, fontsize=2):
+    return font_text(symbol(iSymbol), fontsize)
 
 
 def show(message, *format):

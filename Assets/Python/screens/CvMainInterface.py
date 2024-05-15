@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilization
-from CoreFunctions import small_symbol, small_text, text
+from CoreFunctions import font_symbol, font_text, text
 from CoreStructures import human, is_minor_civ
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
@@ -5223,9 +5223,9 @@ class CvMainInterface:
                     and not CyInterface().isCityScreenUp()
                 ):
                     faith = (
-                        small_symbol(FontSymbols.RELIGION_CHAR)
+                        font_symbol(FontSymbols.RELIGION_CHAR)
                         + " "
-                        + small_text(pPlayer.getFaith())
+                        + font_text(pPlayer.getFaith())
                     )
                     screen.setLabel(
                         "FaithText",
@@ -5248,11 +5248,11 @@ class CvMainInterface:
                 # if iPersecutionPoints > 0 and not CyInterface().isCityScreenUp():
                 if not CyInterface().isCityScreenUp():
                     persecution = (
-                        small_symbol(FontSymbols.RELIGION_CHAR)
+                        font_symbol(FontSymbols.RELIGION_CHAR)
                         + " "
-                        + small_text(persecution_points)
+                        + font_text(persecution_points)
                         + " ("
-                        + small_text(text("TXT_KEY_FAITH_PERSECUTION"))
+                        + font_text(text("TXT_KEY_FAITH_PERSECUTION"))
                         + ")"
                     )
                     screen.setLabel(
@@ -5281,9 +5281,9 @@ class CvMainInterface:
                         )
                     )
                     janissary = (
-                        small_symbol(FontSymbols.STRENGTH_CHAR)
+                        font_symbol(FontSymbols.STRENGTH_CHAR)
                         + " "
-                        + small_text(janissary_text)
+                        + font_text(janissary_text)
                         + " /300 (Janissary)"
                     )
                     screen.setLabel(

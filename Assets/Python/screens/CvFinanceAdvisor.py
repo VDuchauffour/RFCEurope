@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import small_text, text
+from CoreFunctions import font_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
 import CvUtil
 import CvScreenEnums
@@ -340,7 +340,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szStabilityPanel,
-            small_text(
+            font_text(
                 text("TXT_KEY_STABILITY_ADVISOR_TITLE").upper() + " " + stability_text, fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
@@ -369,7 +369,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            small_text(text("TXT_KEY_STABILITY_PARAMETER_CITIES").upper(), fontsize=3),
+            font_text(text("TXT_KEY_STABILITY_PARAMETER_CITIES").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -382,7 +382,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel1,
-            small_text(
+            font_text(
                 str(get_stability_category_value(player, StabilityCategory.CITIES)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
@@ -411,7 +411,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            small_text(text("TXT_KEY_STABILITY_PARAMETER_CIVICS").upper(), fontsize=3),
+            font_text(text("TXT_KEY_STABILITY_PARAMETER_CIVICS").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -424,7 +424,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel2,
-            small_text(
+            font_text(
                 str(get_stability_category_value(player, StabilityCategory.CIVICS)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
@@ -453,7 +453,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            small_text(text("TXT_KEY_STABILITY_PARAMETER_ECONOMY").upper(), fontsize=3),
+            font_text(text("TXT_KEY_STABILITY_PARAMETER_ECONOMY").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -466,7 +466,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel3,
-            small_text(
+            font_text(
                 str(get_stability_category_value(player, StabilityCategory.ECONOMY)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
@@ -495,7 +495,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            small_text(text("TXT_KEY_STABILITY_PARAMETER_EXPANSION").upper(), fontsize=3),
+            font_text(text("TXT_KEY_STABILITY_PARAMETER_EXPANSION").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -508,7 +508,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel4,
-            small_text(
+            font_text(
                 str(get_stability_category_value(player, StabilityCategory.EXPANSION)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
@@ -537,7 +537,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            small_text(text("TXT_KEY_STABILITY_PARAMETER_SWING").upper(), fontsize=3),
+            font_text(text("TXT_KEY_STABILITY_PARAMETER_SWING").upper(), fontsize=3),
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -550,7 +550,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szParametersPanel5,
-            small_text(
+            font_text(
                 str(get_stability_category_value(player, StabilityCategory.SWING)), fontsize=4
             ),
             CvUtil.FONT_CENTER_JUSTIFY,
