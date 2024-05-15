@@ -29,5 +29,6 @@
     "../../Assets/Python/pyHelper",
     "../../Assets/Python/PitBoss",
     "../../../Assets/Python/pyHelper"
-  ]
+  ],
+  "todo-tree.general.tags": ["HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]"]
 }
