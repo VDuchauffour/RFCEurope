@@ -5,6 +5,7 @@ from CoreFunctions import get_civ_by_id
 from CoreStructures import human, make_unit, make_units, team, teamtype, year, plots
 from CoreTypes import Civ, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
+from MiscData import REVEAL_DATE_TECHNOLOGY
 from RFCUtils import change_attitude_extra_between_civ
 
 gc = CyGlobalContext()
@@ -143,3 +144,8 @@ def reveal_rectangle(iCiv, area):
 def reveal_areas(iCiv):
     for area in civilization(iCiv).location.visible_area:
         reveal_rectangle(iCiv, area)
+
+def has_date_revealed(identifier=None):
+    if team(identifier).isHasTech(REVEAL_DATE_TECHNOLOGY):
+        return True
+    return False

@@ -5,6 +5,7 @@
 
 import math
 from CvPythonExtensions import *
+from Civilizations import has_date_revealed
 from CoreFunctions import colortext, text
 from CoreStructures import turn
 import CvUtil
@@ -2254,12 +2255,8 @@ class CvInfoScreen:
 
                 iTurnYear = CyGame().getTurnYear(pCity.getGameTurnFounded())
 
-                iActivePlayer = CyGame().getActivePlayer()
-                pActivePlayer = gc.getPlayer(iActivePlayer)
-                tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-
                 # Absinthe: top5 city foundation text
-                if tActivePlayer.isHasTech(Technology.MAPMAKING.value):
+                if has_date_revealed():
                     if iTurnYear <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
                             szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_500AD")
@@ -2606,15 +2603,10 @@ class CvInfoScreen:
                     self.iActiveWonderCounter
                 ]
                 if iTurnYear != -9999:  # -9999 used for wonders in progress
-
-                    iActivePlayer = CyGame().getActivePlayer()
-                    pActivePlayer = gc.getPlayer(iActivePlayer)
-                    tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-
                     if iTurnYear <= get_scenario_start_years():
                         szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_START")
                     else:
-                        if tActivePlayer.isHasTech(Technology.MAPMAKING.value):
+                        if has_date_revealed():
                             szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                         elif iTurnYear >= 1500:
                             szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
@@ -3867,12 +3859,9 @@ class CvInfoScreen:
 
     def getTurnDate(self, turn):
         year = CyGame().getTurnYear(turn)
-        iPlayer = CyGame().getActivePlayer()
-        pPlayer = gc.getPlayer(iPlayer)
-        tPlayer = gc.getTeam(pPlayer.getTeam())
 
         # Absinthe: based on the knowledge of map making and the corresponding era
-        if tPlayer.isHasTech(Technology.MAPMAKING.value):
+        if has_date_revealed():
             return text("TXT_KEY_TIME_AD", year)
         elif year >= 1500:
             return text("TXT_KEY_ERA_RENAISSANCE")
