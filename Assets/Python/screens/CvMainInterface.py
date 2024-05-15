@@ -55,11 +55,11 @@ import ReligionUtil
 # BUG - Limit/Extra Religions - end
 
 # BUG - PLE - start
-import MonkeyTools as mt
-import string
+import MonkeyTools as mt  # noqa: F401
+import string  # noqa: F401
 from AStarTools import *
 import PyHelpers
-import UnitUtil
+import UnitUtil  # noqa: F401
 
 PyPlayer = PyHelpers.PyPlayer
 
@@ -5528,9 +5528,12 @@ class CvMainInterface:
 
                 # BUG - NJAGC - start
                 if ClockOpt.isEnabled() and ClockOpt.isShowEra() and has_date_revealed():
-                    szText = localText.getText(
-                        "TXT_KEY_BUG_ERA",
-                        (gc.getEraInfo(gc.getPlayer(ePlayer).getCurrentEra()).getDescription(),),
+                    szText = font_text(
+                        text(
+                            "TXT_KEY_BUG_ERA",
+                            gc.getEraInfo(gc.getPlayer(ePlayer).getCurrentEra()).getDescription(),
+                        ),
+                        fontsize=1,
                     )
                     if ClockOpt.isUseEraColor():
                         iEraColor = ClockOpt.getEraColor(
@@ -5543,8 +5546,8 @@ class CvMainInterface:
                         "Background",
                         szText,
                         CvUtil.FONT_RIGHT_JUSTIFY,
-                        250,
-                        6,
+                        251,
+                        9,
                         -0.3,
                         FontTypes.GAME_FONT,
                         WidgetTypes.WIDGET_GENERAL,
