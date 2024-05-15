@@ -2522,14 +2522,21 @@ class CvInfoScreen:
                 szProjectDesc = u"<font=3b>" + pProjectInfo.getDescription().upper() + u"</font>"
                 szStatsText = szProjectDesc + "\n\n"
 
-                # Say whether this project is built yet or not
-
+                # Absinthe: project completion date
                 iTurnYear = self.aiTurnYearBuilt[self.iActiveWonderCounter]
-                if (iTurnYear == -6666):    # -6666 used for wonders in progress
-                    szTempText = localText.getText("TXT_KEY_BEING_BUILT", ())
-
+                if iTurnYear != -6666:  # -6666 used for wonders in progress
+                    if has_date_revealed():
+                        szTempText = text("TXT_KEY_TIME_AD", iTurnYear)
+                    elif iTurnYear >= 1500:
+                        szTempText = text("TXT_KEY_ERA_RENAISSANCE")
+                    elif iTurnYear >= 1200:
+                        szTempText = text("TXT_KEY_ERA_LATE_MEDIEVAL")
+                    elif iTurnYear >= 900:
+                        szTempText = text("TXT_KEY_ERA_HIGH_MEDIEVAL")
+                    else:
+                        szTempText = text("TXT_KEY_ERA_EARLY_MEDIEVAL")
                 else:
-                    szTempText = localText.getText("TXT_KEY_INFO_SCREEN_BUILT", ())
+                    szTempText = "%s" % (text("TXT_KEY_BEING_BUILT"))
 
                 szWonderDesc = "%s, %s" %(self.aiWonderBuiltBy[self.iActiveWonderCounter], szTempText)
                 szStatsText += szWonderDesc + "\n"
