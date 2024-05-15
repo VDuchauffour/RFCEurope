@@ -806,7 +806,7 @@ class CvMainInterface:
         iBtnAdvance = 25
         iBtnX = 24
         iBtnY = 27
-        iBtnX = 10  # moving the log button left = BUG Option Button
+        iBtnX = 35  # moving the log button left = BUG Option Button
 
         # Turn log Button
         screen.setImageButton(
@@ -824,7 +824,7 @@ class CvMainInterface:
         screen.hide("TurnLogButton")
 
         # < Mercenaries Start >
-        iBtnX += iBtnAdvance + 35
+        iBtnX += iBtnAdvance
         # Set the mercenary manager button in the interface
         screen.setImageButton(
             "MercenaryManagerButton",
@@ -2173,7 +2173,7 @@ class CvMainInterface:
         screen.setImageButton(
             "BUGOptionsScreenWidget",
             sBUGOptionsScreenButton,
-            iBtnX + 30,
+            iBtnX,
             iBtnY - 2,
             iBtnWidth,
             iBtnWidth,
