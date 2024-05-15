@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from Civilizations import has_date_revealed
 from CoreData import civilization
 from CoreFunctions import font_symbol, font_text, text
 from CoreStructures import human, is_minor_civ
@@ -5526,7 +5527,7 @@ class CvMainInterface:
                 screen.show("GoldText")
 
                 # BUG - NJAGC - start
-                if ClockOpt.isEnabled() and ClockOpt.isShowEra():
+                if ClockOpt.isEnabled() and ClockOpt.isShowEra() and has_date_revealed():
                     szText = localText.getText(
                         "TXT_KEY_BUG_ERA",
                         (gc.getEraInfo(gc.getPlayer(ePlayer).getCurrentEra()).getDescription(),),
