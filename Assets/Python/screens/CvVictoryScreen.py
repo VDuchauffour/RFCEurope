@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
-from CoreFunctions import colortext, text
+from CoreFunctions import colortext, font_text, text
 from CoreStructures import turn, year, cities
 from CoreTypes import (
     Building,
@@ -19,7 +19,7 @@ from CoreTypes import (
     Province,
 )
 import CvUtil
-from LocationsData import CITIES
+from LocationsData import CITIES, COLONY_LOCATIONS
 import PyHelpers
 from RFCUtils import getNumberCargoShips, getMostAdvancedCiv
 import Victory as vic
@@ -35,6 +35,7 @@ VICTORY_CONDITION_SCREEN = 0
 GAME_SETTINGS_SCREEN = 1
 UN_RESOLUTION_SCREEN = 2
 UN_MEMBERS_SCREEN = 3
+COLONY_SCREEN = 4
 
 
 class CvVictoryScreen:
@@ -49,11 +50,13 @@ class CvVictoryScreen:
         self.EXIT_ID = "VictoryScreenExit"
         self.BACKGROUND_ID = "VictoryScreenBackground"
         self.HEADER_ID = "VictoryScreenHeader"
+        self.COLONY_ID = "VictoryScreenColony"
         self.WIDGET_ID = "VictoryScreenWidget"
         self.VC_TAB_ID = "VictoryTabWidget"
         self.SETTINGS_TAB_ID = "SettingsTabWidget"
         self.UN_RESOLUTION_TAB_ID = "VotingTabWidget"
         self.UN_MEMBERS_TAB_ID = "MembersTabWidget"
+        self.COLONY_TAB_ID = "ColonyTabWidget"
         self.SPACESHIP_SCREEN_BUTTON = 1234
 
         self.Z_BACKGROUND = -6.1
@@ -74,13 +77,6 @@ class CvVictoryScreen:
         self.W_AREA = 1010
         self.H_AREA = 267
 
-        # 3Miro: resize the table to fit the long strings of UHVs (same idea as RFC 1.186)
-        # self.TABLE_WIDTH_0 = 350
-        # self.TABLE_WIDTH_1 = 80
-        # self.TABLE_WIDTH_2 = 180
-        # self.TABLE_WIDTH_3 = 100
-        # self.TABLE_WIDTH_4 = 180
-        # self.TABLE_WIDTH_5 = 100
         self.TABLE_WIDTH_0 = 575
         self.TABLE_WIDTH_1 = 5
         self.TABLE_WIDTH_2 = 135
@@ -219,9 +215,10 @@ class CvVictoryScreen:
             self.showVotingScreen()
         elif self.iScreen == UN_MEMBERS_SCREEN:
             self.showMembersScreen()
+        elif self.iScreen == COLONY_SCREEN:
+            self.showColoniesScreen()
 
     def drawTabs(self):
-
         screen = self.getScreen()
 
         xLink = self.X_LINK
@@ -246,6 +243,36 @@ class CvVictoryScreen:
                 u"<font=4>"
                 + colortext("TXT_KEY_MAIN_MENU_VICTORIES", "COLOR_YELLOW").upper()
                 + "</font>",
+                CvUtil.FONT_CENTER_JUSTIFY,
+                xLink,
+                self.Y_LINK,
+                0,
+                FontTypes.TITLE_FONT,
+                WidgetTypes.WIDGET_GENERAL,
+                -1,
+                -1,
+            )
+        xLink += self.DX_LINK
+
+        if self.iScreen != COLONY_SCREEN:
+            screen.setText(
+                self.COLONY_TAB_ID,
+                "",
+                font_text(text("Colonies").upper(), fontsize=4),
+                CvUtil.FONT_CENTER_JUSTIFY,
+                xLink,
+                self.Y_LINK,
+                0,
+                FontTypes.TITLE_FONT,
+                WidgetTypes.WIDGET_GENERAL,
+                -1,
+                -1,
+            )
+        else:
+            screen.setText(
+                self.COLONY_TAB_ID,
+                "",
+                font_text(colortext("Colonies", "COLOR_YELLOW").upper(), fontsize=4),
                 CvUtil.FONT_CENTER_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -716,6 +743,116 @@ class CvVictoryScreen:
                             )
 
                 iRow = screen.appendTableRow(szTable)
+
+        self.drawTabs()
+
+    def showColoniesScreen(self):
+        screen = self.getScreen()
+        self.BACKGROUND_ID = self.getNextWidgetName()
+
+        screen.addDDSGFC(
+            self.BACKGROUND_ID,
+            ArtFileMgr.getInterfaceArtInfo("MAINMENU_COLONIES").getPath(),
+            0,
+            50,
+            1024,
+            670,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+
+        self.aaColoniesBuilt = []
+        self.iNumColonies = 0
+        # Loop through players to determine Projects and place flags in Europe
+        for civ in civilizations().main():
+            aiTeamsUsed = []
+            if civ.teamtype not in aiTeamsUsed:
+                aiTeamsUsed.append(civ.teamtype)
+                self.home_flag = self.getNextWidgetName()
+                x, y = civ.location.home_colony
+                screen.addFlagWidgetGFC(
+                    self.home_flag,
+                    x - 40,
+                    y - 20,
+                    80,
+                    80,
+                    civ.id,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+                for col in Colony:
+                    for _ in range(civ.team.getProjectCount(col.value)):
+                        self.aaColoniesBuilt.append([col.value, civ.id])
+                        self.iNumColonies += 1
+
+        # Loop through to place flags first (so flags are all "under" the colony dots)
+        for col in Colony:
+            builtcount = 0
+            possible = 1
+            for colony in self.aaColoniesBuilt:
+                if col == colony[0]:
+                    self.flag = self.getNextWidgetName()
+                    screen.addFlagWidgetGFC(
+                        self.flag,
+                        COLONY_LOCATIONS[col][0] - 35 + 20 * builtcount,
+                        COLONY_LOCATIONS[col][1] - 20,
+                        80,
+                        80,
+                        colony[1],
+                        WidgetTypes.WIDGET_GENERAL,
+                        -1,
+                        -1,
+                    )
+                    builtcount += 1
+
+        # Loop through to place dots
+        for col in Colony:
+            builtcount = 0
+            possible = 1
+            for colony in self.aaColoniesBuilt:
+                if col == colony[0]:
+                    mark1 = self.getNextWidgetName()
+                    try:
+                        screen.addDDSGFC(
+                            mark1,
+                            ArtFileMgr.getInterfaceArtInfo("MASK_" + str(colony[1])).getPath(),
+                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
+                            COLONY_LOCATIONS[col][1] + 45,
+                            20,
+                            20,
+                            WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
+                            col,
+                            -1,
+                        )
+                    except AttributeError:
+                        screen.addDDSGFC(
+                            mark1,
+                            ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(),
+                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
+                            COLONY_LOCATIONS[col][1] + 45,
+                            20,
+                            20,
+                            WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
+                            col,
+                            -1,
+                        )
+                    builtcount += 1
+            if col in [Colony.CHINA, Colony.INDIA]:
+                possible = 3
+            for n in range(builtcount, possible):
+                screen.addDDSGFC(
+                    self.getNextWidgetName(),
+                    ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(),
+                    COLONY_LOCATIONS[col][0] - 5 + 25 * n,
+                    COLONY_LOCATIONS[col][1] + 45,
+                    20,
+                    20,
+                    WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
+                    col,
+                    -1,
+                )
 
         self.drawTabs()
 
@@ -2249,6 +2386,9 @@ class CvVictoryScreen:
             elif inputClass.getFunctionName() == self.UN_MEMBERS_TAB_ID:
                 self.iScreen = UN_MEMBERS_SCREEN
                 self.showMembersScreen()
+            elif inputClass.getFunctionName() == self.COLONY_TAB_ID:
+                self.iScreen = COLONY_SCREEN
+                self.showColoniesScreen()
             elif inputClass.getData1() == self.SPACESHIP_SCREEN_BUTTON:
                 # close screen
                 screen = self.getScreen()

@@ -5,18 +5,16 @@
 
 import math
 from CvPythonExtensions import *
-from CoreData import civilizations
 from CoreFunctions import colortext, text
 from CoreStructures import turn
 import CvUtil
 
 import string
 
-from LocationsData import COLONY_LOCATIONS
 
 from PyHelpers import PyPlayer
 
-from CoreTypes import Colony, Scenario, Technology
+from CoreTypes import Scenario, Technology
 from Scenario import get_scenario, get_scenario_start_years
 
 # BUG - 3.17 No Espionage - start
@@ -75,9 +73,8 @@ class CvInfoScreen:
 
         self.X_GRAPH_TAB = 30
         self.X_DEMOGRAPHICS_TAB = 165
-        self.X_TOP_CITIES_TAB = 325
+        self.X_TOP_CITIES_TAB = 375
         self.X_STATS_TAB        = 700
-        self.X_COLONIES_TAB = 700
         self.Y_TABS = 730
         self.W_BUTTON = 200
         self.H_BUTTON = 30
@@ -96,7 +93,6 @@ class CvInfoScreen:
         self.iDemographicsID = 1
         self.iTopCitiesID = 2
         self.iStatsID = 3
-        self.iColoniesID = 4
 
         self.iGraphTabID = -1
         self.iGraph_Smoothing_1in1 = -1
@@ -409,9 +405,6 @@ class CvInfoScreen:
         self.SCREEN_STATS_TITLE = (
             u"<font=4b>" + text("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE").upper() + u"</font>"
         )
-        # Sedna17 start
-        self.SCREEN_COLONIES_TITLE = u"<font=4b>" + text("Colonies").upper() + u"</font>"
-        # Sedna17 end
 
         self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + u"</font>"
 
@@ -426,12 +419,6 @@ class CvInfoScreen:
         self.TEXT_STATS = (
             u"<font=4>" + text("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE").upper() + u"</font>"
         )
-        # Sedna17 start
-        self.TEXT_COLONIES = u"<font=3>" + text("Colonies").upper() + u"</font>"
-        self.TEXT_COLONIES_YELLOW = (
-            u"<font=4>" + colortext("Colonies", "COLOR_YELLOW").upper() + u"</font>"
-        )
-        # Sedna17 end
 
         self.TEXT_GRAPH_YELLOW = (
             u"<font=4>" + colortext("TXT_KEY_INFO_GRAPH", "COLOR_YELLOW").upper() + u"</font>"
@@ -817,7 +804,6 @@ class CvInfoScreen:
         return
 
     def redrawContents(self):
-
         screen = self.getScreen()
         self.deleteAllWidgets(self.iNumPermanentWidgets)
         self.iNumWondersPermanentWidgets = 0
@@ -826,9 +812,6 @@ class CvInfoScreen:
         self.szDemographicsTabWidget = self.getNextWidgetName()
         self.szTopCitiesTabWidget = self.getNextWidgetName()
         self.szStatsTabWidget = self.getNextWidgetName()
-        # Sedna17 Start
-        self.szColoniesTabWidget = self.getNextWidgetName()
-        # Sedna17 End
 
         # Draw Tab buttons and tabs
         if self.iActiveTab == self.iGraphID:
@@ -884,21 +867,6 @@ class CvInfoScreen:
                 -1,
                 -1,
             )
-            # Sedna17 Start
-            screen.setText(
-                self.szColoniesTabWidget,
-                "",
-                self.TEXT_COLONIES,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_COLONIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            # Sedna17 End
             self.drawGraphTab()
 
         elif self.iActiveTab == self.iDemographicsID:
@@ -954,21 +922,6 @@ class CvInfoScreen:
                 -1,
                 -1,
             )
-            # Sedna17 Start
-            screen.setText(
-                self.szColoniesTabWidget,
-                "",
-                self.TEXT_COLONIES,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_COLONIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            # Sedna17 End
             self.drawDemographicsTab()
 
         elif self.iActiveTab == self.iTopCitiesID:
@@ -1024,21 +977,6 @@ class CvInfoScreen:
                 -1,
                 -1,
             )
-            # Sedna17 Start
-            screen.setText(
-                self.szColoniesTabWidget,
-                "",
-                self.TEXT_COLONIES,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_COLONIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            # Sedna17 End
             self.drawTopCitiesTab()
 
         elif self.iActiveTab == self.iStatsID:
@@ -1094,92 +1032,7 @@ class CvInfoScreen:
                 -1,
                 -1,
             )
-            # Sedna17 Start
-            screen.setText(
-                self.szColoniesTabWidget,
-                "b",
-                self.TEXT_COLONIES,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_COLONIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            # Sedna17 End
             self.drawStatsTab()
-
-        # Sedna17 Start
-        elif self.iActiveTab == self.iColoniesID:
-            screen.setText(
-                self.szGraphTabWidget,
-                "",
-                self.TEXT_GRAPH,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_GRAPH_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            screen.setText(
-                self.szDemographicsTabWidget,
-                "",
-                self.TEXT_DEMOGRAPHICS,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_DEMOGRAPHICS_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            screen.setText(
-                self.szTopCitiesTabWidget,
-                "",
-                self.TEXT_TOP_CITIES,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_TOP_CITIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            screen.setText(
-                self.szStatsTabWidget,
-                "",
-                self.TEXT_STATS,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_STATS_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            screen.setText(
-                self.szColoniesTabWidget,
-                "",
-                self.TEXT_COLONIES_YELLOW,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_COLONIES_TAB,
-                self.Y_TABS,
-                0,
-                FontTypes.TITLE_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            self.drawColoniesTab()
-        # Sedna17 End
 
     #############################################################################################################
     #################################################### GRAPH ##################################################
@@ -4221,14 +4074,7 @@ class CvInfoScreen:
                 self.iActiveTab = self.iStatsID
                 self.reset()
                 self.redrawContents()
-
-            # Sedna17 Start
-            elif szWidgetName == self.szColoniesTabWidget:
-                self.iActiveTab = self.iColoniesID
-                self.reset()
-                self.redrawContents()
-            # Sedna17 End
-                # Wonder type dropdown box
+            # Wonder type dropdown box
             elif (szShortWidgetName == self.BUGWorldWonderWidget
             or szShortWidgetName == self.BUGNatWonderWidget
             or szShortWidgetName == self.BUGProjectWidget):
@@ -4362,112 +4208,3 @@ class CvInfoScreen:
                     else:
                         self.aiPlayersMetNAEspionage.append(iLoopPlayer)
                         self.iNumPlayersMetNAEspionage += 1
-
-    def drawColoniesTab(self):
-
-        screen = self.getScreen()
-        self.BACKGROUND_ID = self.getNextWidgetName()
-
-        screen.addDDSGFC(
-            self.BACKGROUND_ID,
-            ArtFileMgr.getInterfaceArtInfo("MAINMENU_COLONIES").getPath(),
-            0,
-            50,
-            1024,
-            670,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-        )
-
-        self.aaColoniesBuilt = []
-        self.iNumColonies = 0
-        # Loop through players to determine Projects and place flags in Europe
-        for civ in civilizations().main():
-            aiTeamsUsed = []
-            if civ.teamtype not in aiTeamsUsed:
-                aiTeamsUsed.append(civ.teamtype)
-                self.home_flag = self.getNextWidgetName()
-                x, y = civ.location.home_colony
-                screen.addFlagWidgetGFC(
-                    self.home_flag,
-                    x - 40,
-                    y - 20,
-                    80,
-                    80,
-                    civ.id,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-                for col in Colony:
-                    for _ in range(civ.team.getProjectCount(col.value)):
-                        self.aaColoniesBuilt.append([col.value, civ.id])
-                        self.iNumColonies += 1
-
-        # Loop through to place flags first (so flags are all "under" the colony dots)
-        for col in Colony:
-            builtcount = 0
-            possible = 1
-            for colony in self.aaColoniesBuilt:
-                if col == colony[0]:
-                    self.flag = self.getNextWidgetName()
-                    screen.addFlagWidgetGFC(
-                        self.flag,
-                        COLONY_LOCATIONS[col][0] - 35 + 20 * builtcount,
-                        COLONY_LOCATIONS[col][1] - 20,
-                        80,
-                        80,
-                        colony[1],
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-                    builtcount += 1
-
-        # Loop through to place dots
-        for col in Colony:
-            builtcount = 0
-            possible = 1
-            for colony in self.aaColoniesBuilt:
-                if col == colony[0]:
-                    mark1 = self.getNextWidgetName()
-                    try:
-                        screen.addDDSGFC(
-                            mark1,
-                            ArtFileMgr.getInterfaceArtInfo("MASK_" + str(colony[1])).getPath(),
-                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
-                            COLONY_LOCATIONS[col][1] + 45,
-                            20,
-                            20,
-                            WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                            col,
-                            -1,
-                        )
-                    except AttributeError:
-                        screen.addDDSGFC(
-                            mark1,
-                            ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(),
-                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
-                            COLONY_LOCATIONS[col][1] + 45,
-                            20,
-                            20,
-                            WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                            col,
-                            -1,
-                        )
-                    builtcount += 1
-            if col in [Colony.CHINA, Colony.INDIA]:
-                possible = 3
-            for n in range(builtcount, possible):
-                screen.addDDSGFC(
-                    self.getNextWidgetName(),
-                    ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(),
-                    COLONY_LOCATIONS[col][0] - 5 + 25 * n,
-                    COLONY_LOCATIONS[col][1] + 45,
-                    20,
-                    20,
-                    WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                    col,
-                    -1,
-                )
