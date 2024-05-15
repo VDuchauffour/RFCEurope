@@ -966,21 +966,6 @@ class CvMainInterface:
 
         iBtnX += iBtnAdvance
         screen.setImageButton(
-            "EspionageAdvisorButton",
-            "",
-            iBtnX,
-            iBtnY,
-            iBtnWidth,
-            iBtnWidth,
-            WidgetTypes.WIDGET_ACTION,
-            gc.getControlInfo(ControlTypes.CONTROL_ESPIONAGE_SCREEN).getActionInfoIndex(),
-            -1,
-        )
-        screen.setStyle("EspionageAdvisorButton", "Button_HUDAdvisorEspionage_Style")
-        screen.hide("EspionageAdvisorButton")
-
-        iBtnX += iBtnAdvance
-        screen.setImageButton(
             "VictoryAdvisorButton",
             "",
             iBtnX,
