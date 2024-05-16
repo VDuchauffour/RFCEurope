@@ -399,6 +399,24 @@
 		<Portuguese>Diplomacy Boost:</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FAITH_STATUS</Tag>
+		<English>STATUS</English>
+		<French>STATUS</French>
+		<German>STATUS</German>
+		<Italian>STATO</Italian>
+		<Spanish>ESTADO</Spanish>
+		<Portuguese>ESTADO</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FAITH_BENEFITS</Tag>
+		<English>BENEFITS</English>
+		<French>B&#233;n&#233;fices</French>
+		<German>NUTZEN</German>
+		<Italian>VANTAGGI</Italian>
+		<Spanish>BENEFICIOS</Spanish>
+		<Portuguese>BENEF&#314;CIOS</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FAITH_GOLD_GIFT</Tag>
 		<English>You have received a gift of gold from the Pope, worth %d1!</English>
 		<French>Le Pape vous &#224; offert de l'or</French>

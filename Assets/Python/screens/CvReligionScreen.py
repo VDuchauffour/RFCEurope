@@ -6,10 +6,14 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import text
+from CoreStructures import player
 import PyHelpers
 import CvUtil
 import ScreenInput  # noqa: F401
 import CvScreenEnums
+from CoreTypes import Scenario, FaithPointBonusCategory, Technology
+from Scenario import get_scenario, get_scenario_start_years
+from CoreFunctions import font_text, text
 
 # BUG - start
 import BugUtil  # noqa: F401
@@ -34,18 +38,21 @@ class CvReligionScreen:
     def __init__(self):
 
         self.SCREEN_NAME = "ReligionScreen"
-        self.BUTTON_NAME = "ReligionScreenButton"
-        self.RELIGION_NAME = "ReligionText"
-        self.CONVERT_NAME = "ReligionConvertButton"
-        self.CANCEL_NAME = "ReligionCancelButton"
-        self.CITY_NAME = "ReligionCity"
-        self.HEADER_NAME = "ReligionScreenHeader"
         self.DEBUG_DROPDOWN_ID = "ReligionDropdownWidget"
         self.TABLE_ID = "ReligionTableWidget"
         self.AREA1_ID = "ReligionAreaWidget1"
         self.AREA2_ID = "ReligionAreaWidget2"
         self.BACKGROUND_ID = "ReligionBackground"
         self.RELIGION_PANEL_ID = "ReligionPanel"
+        self.FAITH_STATUS_PANEL_ID = "FaithStatusPanel"
+        self.FAITH_BENEFITS_PANEL_ID = "FaithBenefitsPanel"
+
+        self.BUTTON_NAME = "ReligionScreenButton"
+        self.RELIGION_NAME = "ReligionText"
+        self.CONVERT_NAME = "ReligionConvertButton"
+        self.CANCEL_NAME = "ReligionCancelButton"
+        self.CITY_NAME = "ReligionCity"
+        self.HEADER_NAME = "ReligionScreenHeader"
         self.RELIGION_ANARCHY_WIDGET = "ReligionAnarchyWidget"
 
         self.BORDER_WIDTH = 2
@@ -93,7 +100,13 @@ class CvReligionScreen:
         self.X_CITY2_AREA = 522
         self.Y_CITY_AREA = 282
         self.W_CITY_AREA = 457
-        self.H_CITY_AREA = 395
+        self.H_CITY_AREA = 280
+
+        self.X_FAITH_AREA = 45
+        self.X_FAITH_EFFECT_AREA = 522
+        self.Y_FAITH_AREA = 590
+        self.W_FAITH_AREA = 457
+        self.H_FAITH_AREA = 120
 
         self.X_CITY = 10
         self.DY_CITY = 38
@@ -303,12 +316,10 @@ class CvReligionScreen:
         )
         screen.setActivation("ReligionList", ActivationTypes.ACTIVATE_NORMAL)
 
-        # Draw Religion info
         self.drawReligionInfo()
-
         self.drawHelpInfo()
-
         self.drawCityInfo(self.iReligionSelected)
+        self.drawFaithInfo()
 
     # Draws the religion buttons and information
     def drawReligionInfo(self):
@@ -834,7 +845,6 @@ class CvReligionScreen:
                 self.H_CITY_AREA - self.H_SCROLL_OFFSET + 20,
                 PanelStyles.PANEL_STYLE_MAIN,
             )
-            # screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA + self.H_RELIGION_AREA + 3, self.W_RELIGION_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
         # Zappara end
         else:
             screen.addPanel(
@@ -1179,6 +1189,143 @@ class CvReligionScreen:
             -1,
             -1,
         )
+
+    def drawFaithInfo(self):
+        if not self.bScreenUp:
+            return
+
+        screen = self.getScreen()
+        faith_status, faith_benefits = self.getFaithStatusAndBenefits(self.iActivePlayer)
+
+        # left panel
+        screen.addPanel(
+            self.FAITH_STATUS_PANEL_ID,
+            "",
+            "",
+            True,
+            True,
+            self.X_FAITH_AREA,
+            self.Y_FAITH_AREA,
+            self.W_FAITH_AREA,
+            self.H_FAITH_AREA,
+            PanelStyles.PANEL_STYLE_MAIN,
+        )
+        screen.setLabel(
+            "",
+            self.FAITH_STATUS_PANEL_ID,
+            font_text(text("TXT_KEY_FAITH_STATUS").upper(), fontsize=3),
+            CvUtil.FONT_CENTER_JUSTIFY,
+            self.X_FAITH_AREA + self.W_FAITH_AREA / 2,
+            self.Y_FAITH_AREA + 15,
+            self.Z_CONTROLS + self.DZ,
+            FontTypes.GAME_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        screen.addMultilineText(
+            "",
+            font_text(faith_status, fontsize=3),
+            self.X_FAITH_AREA + 20,
+            self.Y_FAITH_AREA + 32,
+            self.W_FAITH_AREA - 20,
+            self.H_FAITH_AREA - 20,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+            CvUtil.FONT_LEFT_JUSTIFY,
+        )
+
+        # right panel
+        screen.addPanel(
+            self.FAITH_BENEFITS_PANEL_ID,
+            "",
+            "",
+            True,
+            True,
+            self.X_FAITH_EFFECT_AREA,
+            self.Y_FAITH_AREA,
+            self.W_FAITH_AREA,
+            self.H_FAITH_AREA,
+            PanelStyles.PANEL_STYLE_MAIN,
+        )
+        screen.setLabel(
+            "",
+            self.FAITH_BENEFITS_PANEL_ID,
+            font_text(text("TXT_KEY_FAITH_BENEFITS").upper(), fontsize=3),
+            CvUtil.FONT_CENTER_JUSTIFY,
+            self.X_FAITH_EFFECT_AREA + self.W_FAITH_AREA / 2,
+            self.Y_FAITH_AREA + 15,
+            self.Z_CONTROLS + self.DZ,
+            FontTypes.GAME_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        screen.addMultilineText(
+            "",
+            font_text(faith_benefits, fontsize=3),
+            self.X_FAITH_EFFECT_AREA + 20,
+            self.Y_FAITH_AREA + 32,
+            self.W_FAITH_AREA - 20,
+            self.H_FAITH_AREA - 20,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+            CvUtil.FONT_LEFT_JUSTIFY,
+        )
+
+    def getFaithStatusAndBenefits(self, civ):
+        pPlayer = player(civ)
+        iProsecutionCount = pPlayer.getProsecutionCount()
+
+        faith_point = text("TXT_KEY_FAITH_POINTS") + (": %i " % pPlayer.getFaith())
+        prosecution_count = text("TXT_KEY_FAITH_PROSECUTION_COUNT") + (": %i " % iProsecutionCount)
+        faith_status = faith_point + "\n" + prosecution_count
+
+        faith_benefits_mapper = {
+            FaithPointBonusCategory.BOOST_STABILITY: (
+                "TXT_KEY_FAITH_STABILITY",
+                "+%i",
+            ),
+            FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP: (
+                "TXT_KEY_FAITH_CIVIC",
+                "-%i percent",
+            ),
+            FaithPointBonusCategory.FASTER_POPULATION_GROWTH: (
+                "TXT_KEY_FAITH_GROWTH",
+                "+%i percent",
+            ),
+            FaithPointBonusCategory.REDUCING_COST_UNITS: (
+                "TXT_KEY_FAITH_UNITS",
+                "-%i percent",
+            ),
+            FaithPointBonusCategory.REDUCING_TECH_COST: (
+                "TXT_KEY_FAITH_SCIENCE",
+                "-%i percent",
+            ),
+            FaithPointBonusCategory.REDUCING_WONDER_COST: (
+                "TXT_KEY_FAITH_PRODUCTION",
+                "-%i percent",
+            ),
+            FaithPointBonusCategory.BOOST_DIPLOMACY: (
+                "TXT_KEY_FAITH_DIPLOMACY",
+                "+%i",
+            ),
+        }
+        faith_benefits = ""
+        for benefit, (_text, indicator) in faith_benefits_mapper.items():
+            if pPlayer.isFaithBenefit(benefit):
+                indicator = indicator % pPlayer.getFaithBenefit(benefit)
+                faith_benefits += text(_text) + " " + indicator + " \n"
+
+        if iProsecutionCount > 0:
+            iProsecutionInstability = (iProsecutionCount + 2) / 3
+            faith_benefits += text("TXT_KEY_FAITH_PROSECUTION_INSTABILITY") + (
+                " -%i \n" % iProsecutionInstability
+            )
+
+        return faith_status, faith_benefits
 
     def getReligionButtonName(self, iReligion):
         szName = self.BUTTON_NAME + str(iReligion)

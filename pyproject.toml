@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 99
-skip_magic_trailing_comma = true
+skip_magic_trailing_comma = false
 target-version = ["py27"]
 force-exclude = """
 /(
