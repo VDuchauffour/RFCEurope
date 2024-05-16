@@ -3361,7 +3361,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(self.iActivePlayer)
         iGoal = pPlayer.getUHV(iUHV)
         # 3Miro: I don't understand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string # type: ignore
-        # 	just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
+        #     just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
         if iGoal == 1:
             sString = (
                 u"<font=5>%c</font>" % (CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))

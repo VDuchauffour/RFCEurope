@@ -1215,7 +1215,7 @@ class Locations(EntitiesCollection):
         )
 
     # def owners(self):
-    # 	return Players(set(loc.getOwner() for loc in self.entities() if loc.getOwner() >= 0)) # TODO
+    #     return Players(set(loc.getOwner() for loc in self.entities() if loc.getOwner() >= 0)) # TODO
 
     def areas(self, *areas):
         return self.filter(lambda loc: loc.getArea() in [get_area(area) for area in areas])

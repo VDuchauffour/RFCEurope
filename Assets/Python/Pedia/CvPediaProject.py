@@ -145,7 +145,7 @@ class CvPediaProject:
             -1,
             -1,
         )
-        # 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getProjectInfo(self.iProject).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iProject, -1 )
+        #         screen.addDDSGFC(self.top.getNextWidgetName(), gc.getProjectInfo(self.iProject).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iProject, -1 )
 
         self.placeStats()
         self.placeRequires()
@@ -186,7 +186,7 @@ class CvPediaProject:
                 0,
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
-        # 			screen.attachTextGFC(panelName, "", szProjectType.upper(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+        #             screen.attachTextGFC(panelName, "", szProjectType.upper(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
         if isTeamProject(self.iProject):
             iMaxInstances = gc.getProjectInfo(self.iProject).getMaxTeamInstances()
@@ -201,7 +201,7 @@ class CvPediaProject:
                 0,
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
-        # 			screen.attachTextGFC(panelName, "", szProjectType.upper(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+        #             screen.attachTextGFC(panelName, "", szProjectType.upper(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
         if projectInfo.getProductionCost() > 0:
             if self.top.iActivePlayer == -1:
@@ -230,7 +230,7 @@ class CvPediaProject:
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
 
-    # 			screen.attachTextGFC(panelName, "", szCost.upper() + u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+    #             screen.attachTextGFC(panelName, "", szCost.upper() + u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
     # Place prereqs (techs, resources)
     def placeRequires(self):

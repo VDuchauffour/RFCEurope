@@ -139,7 +139,7 @@ class CvPediaFeature:
             -1,
             -1,
         )
-        # 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getFeatureInfo(self.iFeature).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iFeature, -1 )
+        #         screen.addDDSGFC(self.top.getNextWidgetName(), gc.getFeatureInfo(self.iFeature).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iFeature, -1 )
 
         self.placeStats()
         self.placeSpecial()
@@ -161,7 +161,7 @@ class CvPediaFeature:
             self.H_STATS_PANE,
             TableStyles.TABLE_STYLE_EMPTY,
         )
-        # 		screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
+        #         screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
         screen.enableSelect(panelName, False)
 
         for k in range(YieldTypes.NUM_YIELD_TYPES):
@@ -187,7 +187,7 @@ class CvPediaFeature:
                     CvUtil.FONT_LEFT_JUSTIFY,
                 )
 
-    # 				screen.attachTextGFC(panelName, "", szYield + (u"%c" % gc.getYieldInfo(k).getChar()), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+    #                 screen.attachTextGFC(panelName, "", szYield + (u"%c" % gc.getYieldInfo(k).getChar()), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
     def placeSpecial(self):
 

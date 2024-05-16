@@ -158,7 +158,7 @@ class CvPediaTerrain:
             self.H_STATS_PANE,
             TableStyles.TABLE_STYLE_EMPTY,
         )
-        # 		screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
+        #         screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
         screen.enableSelect(panelName, False)
 
         for k in range(YieldTypes.NUM_YIELD_TYPES):
@@ -175,7 +175,7 @@ class CvPediaTerrain:
                     CvUtil.FONT_LEFT_JUSTIFY,
                 )
 
-    # 				screen.attachTextGFC(panelName, "", szYield + (u"%c" % gc.getYieldInfo(k).getChar()), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+    #                 screen.attachTextGFC(panelName, "", szYield + (u"%c" % gc.getYieldInfo(k).getChar()), FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
     def placeSpecial(self):
 

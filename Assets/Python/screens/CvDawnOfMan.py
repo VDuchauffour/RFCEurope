@@ -74,7 +74,7 @@ class CvDawnOfMan:
         self.X_TEXT_PANEL = self.X_HEADER_PANEL
         self.Y_TEXT_PANEL = (
             self.Y_HEADER_PANEL + self.iMarginSpace
-        )  # 10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10		self.W_TEXT_PANEL = self.W_HEADER_PANEL
+        )  # 10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10        self.W_TEXT_PANEL = self.W_HEADER_PANEL
         self.W_TEXT_PANEL = self.W_HEADER_PANEL
         self.H_TEXT_PANEL = (
             self.H_MAIN_PANEL - 32
@@ -112,7 +112,7 @@ class CvDawnOfMan:
         # Main
         szMainPanel = "DawnOfManMainPanel"
 
-		# Top
+        # Top
         screen.addPanel(
             szMainPanel,
             "",

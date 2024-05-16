@@ -602,7 +602,7 @@ class CvPediaBuilding:
         )
 
         textName = self.top.getNextWidgetName()
-        # 		screen.attachMultilineText( panelName, textName, gc.getBuildingInfo(self.iBuilding).getCivilopedia(),WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+        #         screen.attachMultilineText( panelName, textName, gc.getBuildingInfo(self.iBuilding).getCivilopedia(),WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
         screen.addMultilineText(
             textName,
             gc.getBuildingInfo(self.iBuilding).getCivilopedia(),

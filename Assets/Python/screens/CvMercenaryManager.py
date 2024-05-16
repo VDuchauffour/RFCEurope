@@ -2074,7 +2074,7 @@ class CvMercenaryManager:
     # for all of the different panels in the mercenary manager screen. The
     # unit ID number 382343 is converted to: CHBCDC.
     def numberToAlpha(self, iNum):
-        # 			  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+        #               1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
         alphaList = [
             "A",
             "B",
@@ -2117,7 +2117,7 @@ class CvMercenaryManager:
     # for all of the different panels in the mercenary manager screen. The
     # string "CHBCDC" is converted to: 382343.
     def alphaToNumber(self, strAlpha):
-        # 			  1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+        #               1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
         alphaList = [
             "A",
             "B",

@@ -58,8 +58,8 @@ class CvPediaPromotion:
         self.H_UNIT_GROUP_PANE = 380
         self.DY_UNIT_GROUP_PANE = 25
 
-    # 		self.ITEMS_MARGIN = 18
-    # 		self.ITEMS_SEPARATION = 2
+    #         self.ITEMS_MARGIN = 18
+    #         self.ITEMS_SEPARATION = 2
 
     # Screen construction function
     def interfaceScreen(self, iPromotion):
@@ -151,7 +151,7 @@ class CvPediaPromotion:
             -1,
             -1,
         )
-        # 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getPromotionInfo(self.iPromotion).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iPromotion, -1 )
+        #         screen.addDDSGFC(self.top.getNextWidgetName(), gc.getPromotionInfo(self.iPromotion).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iPromotion, -1 )
 
         # Place Required promotions
         self.placePrereqs()

@@ -367,8 +367,8 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 
         screen.attachLabel(panelName, "", "  ")
 
-        # 		for j in range( gc.getNumUnitClassInfos() ):
-        # 			eLoopUnit = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationUnits(j)
+        #         for j in range( gc.getNumUnitClassInfos() ):
+        #             eLoopUnit = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationUnits(j)
         for eLoopUnit in range(gc.getNumUnitInfos()):
             if eLoopUnit != -1:
                 if isTechRequiredForUnit(self.iTech, eLoopUnit):
@@ -404,8 +404,8 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 
         screen.attachLabel(panelName, "", "  ")
 
-        # 		for j in range(gc.getNumBuildingClassInfos()):
-        # 			eLoopBuilding = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)
+        #         for j in range(gc.getNumBuildingClassInfos()):
+        #             eLoopBuilding = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)
         for eLoopBuilding in range(gc.getNumBuildingInfos()):
             if eLoopBuilding != -1:
                 if isTechRequiredForBuilding(self.iTech, eLoopBuilding):

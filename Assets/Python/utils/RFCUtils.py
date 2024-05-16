@@ -309,7 +309,7 @@ def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
                     bSafeUnit = True
             if not bSafeUnit:
                 # Absinthe: instead of switching all units to indy, only 60% chance that the unit will defect
-                # 			the first unit from the old owner should always defect though
+                #             the first unit from the old owner should always defect though
                 k += 1
                 if k < 2 or percentage_chance(60, strict=True):
                     unit.kill(False, Civ.BARBARIAN.value)
@@ -586,8 +586,8 @@ def cultureManager(
             city.setCulture(Civ.BARBARIAN.value, 0, True)
 
         # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-        # 			for the old civ some of the culture is lost when the city is conquered
-        # 			note that this is the amount of culture "resource" for each civ, not population percent
+        #             for the old civ some of the culture is lost when the city is conquered
+        #             note that this is the amount of culture "resource" for each civ, not population percent
         city.changeCulture(iNewOwner, iCurrentCityCulture * iCulturePercent / 100, False)
         # Absinthe: only half of the amount is lost, so only 25% on city secession and minor nation revolts
         city.setCulture(

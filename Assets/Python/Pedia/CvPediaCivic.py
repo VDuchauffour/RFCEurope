@@ -142,7 +142,7 @@ class CvPediaCivic:
             -1,
             -1,
         )
-        # 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getCivicInfo(self.iCivic).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iCivic, -1 )
+        #         screen.addDDSGFC(self.top.getNextWidgetName(), gc.getCivicInfo(self.iCivic).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iCivic, -1 )
 
         self.placeStats()
         self.placeSpecial()
@@ -178,7 +178,7 @@ class CvPediaCivic:
                 0,
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
-        # 			screen.setText(self.top.getNextWidgetName(), "Background", gc.getCivicOptionInfo(iCivicOptionType).getDescription().upper(), CvUtil.FONT_LEFT_JUSTIFY, self.X_STATS_PANE, self.Y_STATS_PANE-35, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+        #             screen.setText(self.top.getNextWidgetName(), "Background", gc.getCivicOptionInfo(iCivicOptionType).getDescription().upper(), CvUtil.FONT_LEFT_JUSTIFY, self.X_STATS_PANE, self.Y_STATS_PANE-35, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
         # Upkeep
         pUpkeepInfo = gc.getUpkeepInfo(gc.getCivicInfo(self.iCivic).getUpkeep())
@@ -192,7 +192,7 @@ class CvPediaCivic:
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
 
-    # 			screen.setText(self.top.getNextWidgetName(), "Background", pUpkeepInfo.getDescription().upper(), CvUtil.FONT_LEFT_JUSTIFY, self.X_STATS_PANE, self.Y_STATS_PANE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+    #             screen.setText(self.top.getNextWidgetName(), "Background", pUpkeepInfo.getDescription().upper(), CvUtil.FONT_LEFT_JUSTIFY, self.X_STATS_PANE, self.Y_STATS_PANE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
     def placeRequires(self):
 

@@ -169,7 +169,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT: self.placeConcepts,
             CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS: self.placeHints,
             # ---------------------- [MOD] UnitUpgrades -----------------------------
-            # 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS + 1 : self.placeUpgrades, #Rhye
+            #             CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS + 1 : self.placeUpgrades, #Rhye
             # -------------------- END [MOD] UnitUpgrades ---------------------------
         }
 
@@ -246,7 +246,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
         self.szCategoryHints = text("TXT_KEY_PEDIA_CATEGORY_HINTS")
 
         # ------------------------[MOD] UnitUpgrades ---------------------------------------
-        # 		self.szCategoryUpgrades = text("TXT_KEY_PEDIA_CATEGORY_UPGRADES") #Rhye
+        #         self.szCategoryUpgrades = text("TXT_KEY_PEDIA_CATEGORY_UPGRADES") #Rhye
         # ----------------------END [MOD] UnitUpgrades -------------------------------------
 
         self.listCategories = [
@@ -269,7 +269,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             self.szCategoryProject,
             self.szCategoryConcept,
             self.szCategoryHints,
-            # 					self.szCategoryUpgrades,		# [MOD] UnitUpgrades
+            #                     self.szCategoryUpgrades,        # [MOD] UnitUpgrades
         ]
 
         # Create a new screen
@@ -590,11 +590,11 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             iColumn = iCounter % nColumns
             iRow = iCounter // nColumns
             # Rhye - start
-            ##			if iRow >= iNumRows:
-            ##				iNumRows += 1
-            ##				screen.appendTableRow(self.SUBLIST_ID)
-            ##			screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
-            ##			iCounter += 1
+            ##            if iRow >= iNumRows:
+            ##                iNumRows += 1
+            ##                screen.appendTableRow(self.SUBLIST_ID)
+            ##            screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
+            ##            iCounter += 1
 
             if widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV:
                 if gc.getCivilizationInfo(item[1]).isPlayable():
@@ -669,7 +669,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
         # Lay down some Blooo
         # self.blooPanelName = self.getNextWidgetName()
         # screen.addPanel(self.blooPanelName, "", "", True, True,
-        # 	self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-4, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
+        #     self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-4, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
 
         self.szHints = self.getNextWidgetName()
         screen.addListBoxGFC(
@@ -698,35 +698,35 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 
     ####################### [MOD: VOVAN] UnitUpgrades #######################
     # Rhye - start comment
-    ##	def placeUpgrades(self):
-    ##		screen = self.getScreen()
+    ##    def placeUpgrades(self):
+    ##        screen = self.getScreen()
     ##
-    ##		if self.iLastScreen != CvScreenEnums.PEDIA_UPGRADES:
-    ##			self.iLastScreen = CvScreenEnums.PEDIA_UPGRADES
+    ##        if self.iLastScreen != CvScreenEnums.PEDIA_UPGRADES:
+    ##            self.iLastScreen = CvScreenEnums.PEDIA_UPGRADES
     ##
-    ##		# Strangely, this command works:
-    ##		self.getScreen().deleteWidget("PediaSubList")
+    ##        # Strangely, this command works:
+    ##        self.getScreen().deleteWidget("PediaSubList")
     ##
-    ##		self.UPGRADES_LIST = self.getNextWidgetName()
+    ##        self.UPGRADES_LIST = self.getNextWidgetName()
     ##
-    ##		screen.addScrollPanel( self.UPGRADES_LIST, u"", self.X_ITEMS_PANE, self.Y_PEDIA_PAGE, self.W_PEDIA_PAGE + self.W_ITEMS_PANE, self.H_PEDIA_PAGE-50, PanelStyles.PANEL_STYLE_STANDARD )
-    ##		screen.setActivation( self.UPGRADES_LIST, ActivationTypes.ACTIVATE_NORMAL )
+    ##        screen.addScrollPanel( self.UPGRADES_LIST, u"", self.X_ITEMS_PANE, self.Y_PEDIA_PAGE, self.W_PEDIA_PAGE + self.W_ITEMS_PANE, self.H_PEDIA_PAGE-50, PanelStyles.PANEL_STYLE_STANDARD )
+    ##        screen.setActivation( self.UPGRADES_LIST, ActivationTypes.ACTIVATE_NORMAL )
     ##
-    ##		upgradesGraph = UnitUpgradesGraph.UnitUpgradesGraph(self)
-    ##		graphs = upgradesGraph.getGraph()
-    ##		offset = 0
-    ##		unitWidth = self.BUTTON_SIZE
-    ##		unitHeight = self.BUTTON_SIZE
-    ##		hm = 60
-    ##		vm = 20
-    ##		for graph in graphs:
-    ##			layers = upgradesGraph.layoutLayers(graph, offset, unitWidth, unitHeight, hm, vm)
-    ##			for layer in layers:
-    ##				for unit,position in layer:
-    ##					if unit > -1:
-    ##						screen.setImageButtonAt("", self.UPGRADES_LIST, gc.getUnitInfo(unit).getButton(), position[0], position[1], self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
-    ##			upgradesGraph.drawGraphArrows(self, graph, layers)
-    ##			offset += upgradesGraph.calculateLayerHeight(upgradesGraph.maximumLayerSize(layers), unitHeight, vm) + vm
+    ##        upgradesGraph = UnitUpgradesGraph.UnitUpgradesGraph(self)
+    ##        graphs = upgradesGraph.getGraph()
+    ##        offset = 0
+    ##        unitWidth = self.BUTTON_SIZE
+    ##        unitHeight = self.BUTTON_SIZE
+    ##        hm = 60
+    ##        vm = 20
+    ##        for graph in graphs:
+    ##            layers = upgradesGraph.layoutLayers(graph, offset, unitWidth, unitHeight, hm, vm)
+    ##            for layer in layers:
+    ##                for unit,position in layer:
+    ##                    if unit > -1:
+    ##                        screen.setImageButtonAt("", self.UPGRADES_LIST, gc.getUnitInfo(unit).getButton(), position[0], position[1], self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
+    ##            upgradesGraph.drawGraphArrows(self, graph, layers)
+    ##            offset += upgradesGraph.calculateLayerHeight(upgradesGraph.maximumLayerSize(layers), unitHeight, vm) + vm
     # Rhye - end comment
     ##################### END [MOD: VOVAN] UnitUpgrades #####################
 

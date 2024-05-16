@@ -627,8 +627,8 @@ class CvEventManager:
             % (PyInfo.ImprovementInfo(iImprovement).getDescription(), iX, iY)
         )
         # Absinthe: Free walls if city is built on a fort
-        # 			This is a hack for it, checking what was the improvement before the city was built
-        # 			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
+        #             This is a hack for it, checking what was the improvement before the city was built
+        #             Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
         global iImpBeforeCity
         iImpBeforeCity = 10000 * iImprovement + 100 * iX + 1 * iY
 
@@ -1811,13 +1811,13 @@ class CvEventManager:
 
         # Absinthe: Partisans! - not used currently
         # if city.getPopulation > 1 and iOwner != -1 and iPlayer != -1:
-        # 	owner = gc.getPlayer(iOwner)
-        # 	if not owner.isBarbarian() and owner.getNumCities() > 0:
-        # 		if gc.getTeam(owner.getTeam()).isAtWar(gc.getPlayer(iPlayer).getTeam()):
-        # 			if gc.getNumEventTriggerInfos() > 0: # prevents mods that don't have events from getting an error
-        # 				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
-        # 				if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
-        # 					triggerData = owner.initTriggeredData(iEvent, True, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
+        #     owner = gc.getPlayer(iOwner)
+        #     if not owner.isBarbarian() and owner.getNumCities() > 0:
+        #         if gc.getTeam(owner.getTeam()).isAtWar(gc.getPlayer(iPlayer).getTeam()):
+        #             if gc.getNumEventTriggerInfos() > 0: # prevents mods that don't have events from getting an error
+        #                 iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
+        #                 if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
+        #                     triggerData = owner.initTriggeredData(iEvent, True, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
         # Absinthe: end
 
     def onCityAcquired(self, argsList):

@@ -169,7 +169,7 @@ class CvPediaBonus:
             -1,
             -1,
         )
-        # 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getBonusInfo(self.iBonus).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iBonus, -1 )
+        #         screen.addDDSGFC(self.top.getNextWidgetName(), gc.getBonusInfo(self.iBonus).getButton(), self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, WidgetTypes.WIDGET_GENERAL, self.iBonus, -1 )
 
         # Bonus animation
         if self.top.animations:
@@ -218,7 +218,7 @@ class CvPediaBonus:
             self.H_STATS_PANE,
             TableStyles.TABLE_STYLE_EMPTY,
         )
-        # 		screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
+        #         screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_EMPTY )
         screen.enableSelect(panelName, False)
 
         for k in range(YieldTypes.NUM_YIELD_TYPES):
@@ -413,7 +413,7 @@ class CvPediaBonus:
             CvUtil.FONT_LEFT_JUSTIFY,
         )
 
-    # 		screen.attachMultilineText( panelName, textName, gc.getBonusInfo(self.iBonus).getCivilopedia(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+    #         screen.attachMultilineText( panelName, textName, gc.getBonusInfo(self.iBonus).getCivilopedia(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
     def placeBuildings(self):
 
@@ -469,8 +469,8 @@ class CvPediaBonus:
         screen.attachLabel(panelName, "", "  ")
 
         # add unit buttons
-        # 		for k in range(gc.getNumUnitClassInfos()):
-        # 			eLoopUnit = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationUnits(k)
+        #         for k in range(gc.getNumUnitClassInfos()):
+        #             eLoopUnit = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationUnits(k)
         for eLoopUnit in range(gc.getNumUnitInfos()):
             bFound = False
             if eLoopUnit >= 0:

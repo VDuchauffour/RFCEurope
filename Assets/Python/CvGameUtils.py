@@ -513,8 +513,8 @@ class CvGameUtils:
 
     # Absinthe: not used in RFCE, we can remove it
     # def doMeltdown(self,argsList):
-    # 	pCity = argsList[0]
-    # 	return False
+    #     pCity = argsList[0]
+    #     return False
 
     def doReviveActivePlayer(self, argsList):
         "allows you to perform an action after an AIAutoPlay"

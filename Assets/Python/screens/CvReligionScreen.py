@@ -275,7 +275,7 @@ class CvReligionScreen:
             self.Y_RELIGION_AREA = 84 - 40
             self.W_RELIGION_AREA = 934
             self.H_RELIGION_AREA = 175 + 75
-            # 			screen.addPanel(szArea, "", "", False, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA - 40, self.W_RELIGION_AREA, self.H_RELIGION_AREA + 80, PanelStyles.PANEL_STYLE_MAIN)
+            #             screen.addPanel(szArea, "", "", False, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA - 40, self.W_RELIGION_AREA, self.H_RELIGION_AREA + 80, PanelStyles.PANEL_STYLE_MAIN)
             if AdvisorOpt.isShowAllReligions():
                 self.RELIGIONS = ReligionUtil.getAllReligions()
             elif AdvisorOpt.isShowFoundedReligions():
@@ -532,9 +532,9 @@ class CvReligionScreen:
                         -1,
                         -1,
                     )
-            # 			else:
-            # 				szFounded = "-"
-            # 				screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+            #             else:
+            #                 szFounded = "-"
+            #                 screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
             xLoop += self.DX_RELIGION
 
         # Influence...
@@ -1295,7 +1295,7 @@ class CvReligionScreen:
 
     # Will handle the input for this screen...
     def handleInput(self, inputClass):
-        # 		BugUtil.debugInput(inputClass)
+        #         BugUtil.debugInput(inputClass)
 
         screen = self.getScreen()
 
@@ -1321,7 +1321,7 @@ class CvReligionScreen:
                 screen.hideScreen()
                 pPlayer = gc.getPlayer(inputClass.getData1())
                 pCity = pPlayer.getCity(inputClass.getData2())
-                # 				CyCamera().JustLookAtPlot(pCity.plot())
+                #                 CyCamera().JustLookAtPlot(pCity.plot())
 
                 CyInterface().selectCity(pCity, True)
 
@@ -1376,10 +1376,10 @@ class CvReligionScreen:
     def calculateBuilding(self, city, bldg):
         if city.getNumBuilding(bldg) > 0:
             return self.objectHave
-        # 			if city.getNumActiveBuilding(bldg) > 0:
-        # 				return self.objectHave
-        # 			else:
-        # 				return self.objectHaveObsolete
+        #             if city.getNumActiveBuilding(bldg) > 0:
+        #                 return self.objectHave
+        #             else:
+        #                 return self.objectHaveObsolete
         elif city.GetCy().getFirstBuildingOrder(bldg) != -1:
             return self.objectUnderConstruction
         elif city.GetCy().canConstruct(bldg, False, False, False):
