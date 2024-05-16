@@ -198,8 +198,9 @@ class BugFinanceAdvisor:
 
         stability_level, stability_text, _ = stability(player)
 
+        sValue = str(stability_level)
         if stability_level > 0:
-            sValue = "+" + str(stability_level)
+            sValue = "+" + sValue
         stability_text += " (%s)" % sValue
 
         # Colony Upkeep
