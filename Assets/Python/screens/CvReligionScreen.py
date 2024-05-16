@@ -9,6 +9,7 @@ from CoreFunctions import text
 from CoreStructures import player
 import PyHelpers
 import CvUtil
+from RFCUtils import render_faith_benefits, render_faith_status
 import ScreenInput  # noqa: F401
 import CvScreenEnums
 from CoreTypes import Scenario, FaithPointBonusCategory, Technology
@@ -1195,7 +1196,8 @@ class CvReligionScreen:
             return
 
         screen = self.getScreen()
-        faith_status, faith_benefits = self.getFaithStatusAndBenefits(self.iActivePlayer)
+        faith_status = render_faith_status(self.iActivePlayer)
+        faith_benefits = render_faith_benefits(self.iActivePlayer)
 
         # left panel
         screen.addPanel(
@@ -1274,58 +1276,6 @@ class CvReligionScreen:
             -1,
             CvUtil.FONT_LEFT_JUSTIFY,
         )
-
-    def getFaithStatusAndBenefits(self, civ):
-        pPlayer = player(civ)
-        iProsecutionCount = pPlayer.getProsecutionCount()
-
-        faith_point = text("TXT_KEY_FAITH_POINTS") + (": %i " % pPlayer.getFaith())
-        prosecution_count = text("TXT_KEY_FAITH_PROSECUTION_COUNT") + (": %i " % iProsecutionCount)
-        faith_status = faith_point + "\n" + prosecution_count
-
-        faith_benefits_mapper = {
-            FaithPointBonusCategory.BOOST_STABILITY: (
-                "TXT_KEY_FAITH_STABILITY",
-                "+%i",
-            ),
-            FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP: (
-                "TXT_KEY_FAITH_CIVIC",
-                "-%i percent",
-            ),
-            FaithPointBonusCategory.FASTER_POPULATION_GROWTH: (
-                "TXT_KEY_FAITH_GROWTH",
-                "+%i percent",
-            ),
-            FaithPointBonusCategory.REDUCING_COST_UNITS: (
-                "TXT_KEY_FAITH_UNITS",
-                "-%i percent",
-            ),
-            FaithPointBonusCategory.REDUCING_TECH_COST: (
-                "TXT_KEY_FAITH_SCIENCE",
-                "-%i percent",
-            ),
-            FaithPointBonusCategory.REDUCING_WONDER_COST: (
-                "TXT_KEY_FAITH_PRODUCTION",
-                "-%i percent",
-            ),
-            FaithPointBonusCategory.BOOST_DIPLOMACY: (
-                "TXT_KEY_FAITH_DIPLOMACY",
-                "+%i",
-            ),
-        }
-        faith_benefits = ""
-        for benefit, (_text, indicator) in faith_benefits_mapper.items():
-            if pPlayer.isFaithBenefit(benefit):
-                indicator = indicator % pPlayer.getFaithBenefit(benefit)
-                faith_benefits += text(_text) + " " + indicator + " \n"
-
-        if iProsecutionCount > 0:
-            iProsecutionInstability = (iProsecutionCount + 2) / 3
-            faith_benefits += text("TXT_KEY_FAITH_PROSECUTION_INSTABILITY") + (
-                " -%i \n" % iProsecutionInstability
-            )
-
-        return faith_status, faith_benefits
 
     def getReligionButtonName(self, iReligion):
         szName = self.BUTTON_NAME + str(iReligion)

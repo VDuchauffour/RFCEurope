@@ -18,6 +18,7 @@ from CoreStructures import (
 from CoreTypes import (
     City,
     Civ,
+    FaithPointBonusCategory,
     PlagueType,
     Religion,
     Scenario,
@@ -963,10 +964,15 @@ def goodPlots(tCoords, argsList):
     if pCurrent.isHills() or pCurrent.isFlatlands():
         if not pCurrent.isImpassable():
             if not pCurrent.isCity() and not pCurrent.isUnit():
-                if pCurrent.getTerrainType() not in [
-                    Terrain.DESERT.value,
-                    Terrain.TUNDRA.value,
-                ] and pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+                if (
+                    pCurrent.getTerrainType()
+                    not in [
+                        Terrain.DESERT.value,
+                        Terrain.TUNDRA.value,
+                    ]
+                    and pCurrent.getFeatureType()
+                    not in [Feature.MARSH.value, Feature.JUNGLE.value]
+                ):
                     if pCurrent.countTotalCulture() == 0:
                         return True
     return False
@@ -1621,3 +1627,78 @@ def calculate_gold_rate(identifier):
 
     iDelta = iIncome - iExpenses
     return iDelta
+
+
+def render_faith_status(identifier):
+    pPlayer = player(identifier)
+    prosecution_count = pPlayer.getProsecutionCount()
+    faith_text = text("TXT_KEY_FAITH_POINTS") + (": %i " % pPlayer.getFaith())
+
+    prosecution_text = text("TXT_KEY_FAITH_PROSECUTION_COUNT") + (": %i " % prosecution_count)
+    faith_status = faith_text + "\n" + prosecution_text
+    return faith_status
+
+
+def _get_faith_benefits(identifier):
+    pPlayer = player(identifier)
+    prosecution_count = pPlayer.getProsecutionCount()
+
+    faith_benefits_mapper = {
+        FaithPointBonusCategory.BOOST_STABILITY: (
+            "TXT_KEY_FAITH_STABILITY",
+            "+%i",
+        ),
+        FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP: (
+            "TXT_KEY_FAITH_CIVIC",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.FASTER_POPULATION_GROWTH: (
+            "TXT_KEY_FAITH_GROWTH",
+            "+%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_COST_UNITS: (
+            "TXT_KEY_FAITH_UNITS",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_TECH_COST: (
+            "TXT_KEY_FAITH_SCIENCE",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_WONDER_COST: (
+            "TXT_KEY_FAITH_PRODUCTION",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.BOOST_DIPLOMACY: (
+            "TXT_KEY_FAITH_DIPLOMACY",
+            "+%i",
+        ),
+    }
+    faith_benefits = {}
+    faith_benefits_text = ""
+
+    for benefit, (_text, indicator) in faith_benefits_mapper.items():
+        if pPlayer.isFaithBenefit(benefit):
+            faith_benefit = pPlayer.getFaithBenefit(benefit)
+            indicator = indicator % faith_benefit
+            faith_benefits[benefit] = faith_benefit
+            faith_benefits_text += text(_text) + " " + indicator + " \n"
+
+    if prosecution_count > 0:
+        prosecution_stability = (prosecution_count + 2) / 3
+        faith_benefits["prosecution_stability"] = prosecution_stability
+        faith_benefits_text += text("TXT_KEY_FAITH_PROSECUTION_INSTABILITY") + (
+            " -%i \n" % prosecution_stability
+        )
+
+    return faith_benefits, faith_benefits_text
+
+
+def calculate_faith_benefits(identifier, total=True):
+    faith_benefits = _get_faith_benefits(identifier)[0]
+    if total:
+        faith_benefits = sum(faith_benefits.values())
+    return faith_benefits
+
+
+def render_faith_benefits(identifier):
+    return _get_faith_benefits(identifier)[1]
