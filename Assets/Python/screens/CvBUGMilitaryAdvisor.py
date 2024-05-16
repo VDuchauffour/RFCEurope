@@ -1024,7 +1024,7 @@ class CvMilitaryAdvisor:
 					loopUnit = unit.unit
 					bUnitSelected = self.isSelectedUnit(loopUnit.getOwner(), loopUnit.getID())
 					if (self.bUnitDetails):
-						szDescription = CyGameTextMgr().getSpecificUnitHelp(loopUnit, true, false)
+						szDescription = CyGameTextMgr().getSpecificUnitHelp(loopUnit, True, False)
 
 						listMatches = re.findall("<.*?color.*?>", szDescription)	
 						for szMatch in listMatches:
@@ -1100,7 +1100,7 @@ class CvMilitaryAdvisor:
 
 	def drawCombatExperience(self):
 	
-		if (gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(true) > 0):
+		if (gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(True) > 0):
 
 			screen = self.getScreen()
 
@@ -1130,7 +1130,7 @@ class CvMilitaryAdvisor:
 			screen.setStackedBarColors(szGGBar_ID, InfoBarTypes.INFOBAR_RATE, gc.getInfoTypeForString("COLOR_GREAT_PEOPLE_RATE"))
 			screen.setStackedBarColors(szGGBar_ID, InfoBarTypes.INFOBAR_RATE_EXTRA, gc.getInfoTypeForString("COLOR_EMPTY"))
 			screen.setStackedBarColors(szGGBar_ID, InfoBarTypes.INFOBAR_EMPTY, gc.getInfoTypeForString("COLOR_EMPTY"))
-			screen.setBarPercentage(szGGBar_ID, InfoBarTypes.INFOBAR_STORED, float(iExperience) / float(gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(true)))
+			screen.setBarPercentage(szGGBar_ID, InfoBarTypes.INFOBAR_STORED, float(iExperience) / float(gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(True)))
 
 			screen.setLabel(szGGTxt_ID, "", localText.getText("TXT_KEY_MISC_COMBAT_EXPERIENCE", ()), CvUtil.FONT_CENTER_JUSTIFY, self.X_GREAT_GENERAL_BAR + self.W_GREAT_GENERAL_BAR/2, self.Y_GREAT_GENERAL_BAR + 6, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_GREAT_GENERAL, -1, -1)
 

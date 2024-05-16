@@ -117,7 +117,7 @@ def clearSignsAndLandmarks(pPlot):
     engine.removeLandmark(pPlot)
     # Don't even know what this does; it was the last of my failed attempts to force the signs to show.
     #engine.setDirty(EngineDirtyBits.GlobeTexture_DIRTY_BIT, True)
-    return true
+    return True
 
 def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
     """ Places a landmark on a plot identifying a yield change with a short description.
@@ -548,7 +548,7 @@ def applySaltpeter(argsList):
             break
         iCount -= 1
         gc.getGame().setPlotExtraYield(loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1)
-        CyInterface().addMessage(kTriggeredData.ePlayer, false, gc.getEVENT_MESSAGE_TIME(), localText.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()), "", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, gc.getInfoTypeForString("COLOR_WHITE"), loopPlot[1].getX(), loopPlot[1].getY(), true, true)
+        CyInterface().addMessage(kTriggeredData.ePlayer, False, gc.getEVENT_MESSAGE_TIME(), localText.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()), "", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, gc.getInfoTypeForString("COLOR_WHITE"), loopPlot[1].getX(), loopPlot[1].getY(), True, True)
         # EventSigns start -- Add landmark for other plots, if there is still a yield change
         placeLandmark(loopPlot[1], sEventType, iFood, iProd, iComm, True, -1)
         # EventSigns end

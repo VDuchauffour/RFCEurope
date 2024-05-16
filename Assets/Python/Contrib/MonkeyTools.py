@@ -36,7 +36,7 @@ def debug(argsList):
 class ReInitInterceptorMision:
 
     def __init__(self):
-        self.firsttime = true
+        self.firsttime = True
 
     def doReInit(self):
         iPlayer = PyPlayer(CyGame().getActivePlayer())
@@ -52,9 +52,9 @@ class ReInitInterceptorMision:
                 pGroup.popMission()
                 pPlot = pGroup.plot()
                 # add new mission -> fortify
-                pGroup.pushMission(MissionTypes.MISSION_FORTIFY, 0, 0, 0, false, false, MissionAITypes.NO_MISSIONAI, pPlot, pLoopUnit)
+                pGroup.pushMission(MissionTypes.MISSION_FORTIFY, 0, 0, 0, False, False, MissionAITypes.NO_MISSIONAI, pPlot, pLoopUnit)
                 # add new mission -> air patrol
-                pGroup.pushMission(MissionTypes.MISSION_AIRPATROL, 0, 0, 0, false, false, MissionAITypes.NO_MISSIONAI, pPlot, pLoopUnit)
+                pGroup.pushMission(MissionTypes.MISSION_AIRPATROL, 0, 0, 0, False, False, MissionAITypes.NO_MISSIONAI, pPlot, pLoopUnit)
 
 ######################################################
 ###     Calculates index of an XP point
@@ -87,7 +87,7 @@ def GetPossiblePromotions(iXP1, iXP2):
 def getPossibleUpgrades(pUnit):
     lList = []
     for i in range(gc.getNumUnitInfos()):
-        if pUnit.canUpgrade(i, true):
+        if pUnit.canUpgrade(i, True):
             lList.append(i)
     return lList
 
@@ -116,14 +116,14 @@ def checkAnyUpgrade(pUnit):
 
 def getPromotionInfoText(pUnit):
     szPromotionInfo = u""
-    bBlitz = false
-    bAmphib = false
-    bRiver = false
-    bEnemyRoads = false
-    bAlwaysHeal = false
-    bHillsDoubleMove = false
-    bImmuneToFirstStrikes = false
-    lFeatureDoubleMove = [false]*gc.getNumFeatureInfos()
+    bBlitz = False
+    bAmphib = False
+    bRiver = False
+    bEnemyRoads = False
+    bAlwaysHeal = False
+    bHillsDoubleMove = False
+    bImmuneToFirstStrikes = False
+    lFeatureDoubleMove = [False]*gc.getNumFeatureInfos()
     iVisibilityChange = 0
     iMovesChange = 0
     iMoveDiscountChange = 0
@@ -146,22 +146,22 @@ def getPromotionInfoText(pUnit):
     for i in range(gc.getNumPromotionInfos()):
         if pUnit.isHasPromotion(i):
             if gc.getPromotionInfo(i).isBlitz():
-                bBlitz = true
+                bBlitz = True
             if gc.getPromotionInfo(i).isAmphib():
-                bAmphib = true
+                bAmphib = True
             if gc.getPromotionInfo(i).isRiver():
-                bRiver = true
+                bRiver = True
             if gc.getPromotionInfo(i).isEnemyRoute():
-                bEnemyRoads = true
+                bEnemyRoads = True
             if gc.getPromotionInfo(i).isAlwaysHeal():
-                bAlwaysHeal = true
+                bAlwaysHeal = True
             if gc.getPromotionInfo(i).isHillsDoubleMove():
-                bHillsDoubleMove = true
+                bHillsDoubleMove = True
             if gc.getPromotionInfo(i).isImmuneToFirstStrikes():
-                bImmuneToFirstStrikes = true
+                bImmuneToFirstStrikes = True
             for ii in range(gc.getNumFeatureInfos()):
                 if (gc.getPromotionInfo(i).getFeatureDoubleMove(ii)):
-                    lFeatureDoubleMove[ii] = true
+                    lFeatureDoubleMove[ii] = True
             iTemp = gc.getPromotionInfo(i).getVisibilityChange()
             if iTemp > 0:
                 iVisibilityChange += iTemp

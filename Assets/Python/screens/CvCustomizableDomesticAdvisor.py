@@ -1646,15 +1646,15 @@ class CvCustomizableDomesticAdvisor:
 
         player = gc.getActivePlayer()
         if player.canSplitEmpire():
-            self.bCanLiberate = true
+            self.bCanLiberate = True
         else:
-            self.bCanLiberate = false
-            (loopCity, iter) = player.firstCity(false)
+            self.bCanLiberate = False
+            (loopCity, iter) = player.firstCity(False)
             while loopCity:
-                if loopCity.getLiberationPlayer(false) != -1:
-                    self.bCanLiberate = true
+                if loopCity.getLiberationPlayer(False) != -1:
+                    self.bCanLiberate = True
                     break
-                (loopCity, iter) = player.nextCity(iter, false)
+                (loopCity, iter) = player.nextCity(iter, False)
 
         if self.bCanLiberate:
             screen.setImageButton(
@@ -1923,7 +1923,7 @@ class CvCustomizableDomesticAdvisor:
         screen.setText(
             self.GP_TEXT_NAME + self.NUMBER_TEXT,
             "Background",
-            "<font=2>" + str(iPlayer.player.greatPeopleThreshold(false)) + "</font>",
+            "<font=2>" + str(iPlayer.player.greatPeopleThreshold(False)) + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.nGPLevelX,
             self.nGPLevelY + self.nGPLevelDistance,
@@ -2295,7 +2295,7 @@ class CvCustomizableDomesticAdvisor:
 
         # City founded date...
         iTurnTime = city.getGameTurnFounded()
-        return unicode(CyGameTextMgr().getTimeStr(iTurnTime, false))
+        return unicode(CyGameTextMgr().getTimeStr(iTurnTime, False))
 
     def calculateFeatures(self, city, szKey, arg):
 
@@ -2749,7 +2749,7 @@ class CvCustomizableDomesticAdvisor:
         iGreatPersonRate = city.getGreatPeopleRate()
         if iGreatPersonRate > 0:
             iGPPLeft = (
-                gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(false)
+                gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(False)
                 - city.getGreatPeopleProgress()
             )
             return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
@@ -3810,7 +3810,7 @@ class CvCustomizableDomesticAdvisor:
                     screen.hideScreen()
 
                     CyInterface().selectCity(
-                        gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), true
+                        gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True
                     )
 
                     popupInfo = CyPopupInfo()
@@ -3853,7 +3853,7 @@ class CvCustomizableDomesticAdvisor:
                 screen.hideScreen()
 
                 CyInterface().selectCity(
-                    gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), true
+                    gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True
                 )
 
                 popupInfo = CyPopupInfo()

@@ -412,7 +412,7 @@ class PLE:
 
 						iLastUnitType 	= iActUnitType
 						iLastGroupID  	= iActGroupID
-						bFirstLoop 		= false
+						bFirstLoop 		= False
 
 			# left/right scroll buttons
 			if 	( ( self.sPLEMode == self.PLE_MODE_STANDARD ) and ( self.iVisibleUnits > self.getMaxCol() ) ) or \
@@ -1301,40 +1301,40 @@ class PLE:
 			# save act selection
 			self.pActPlotListUnit = pUnit
 			self.iActPlotListGroup = pUnit.getGroupID()
-			CyInterface().selectGroup( self.pActPlotListUnit, false, false, false )
+			CyInterface().selectGroup( self.pActPlotListUnit, False, False, False )
 	#			# check if the group has been changed 
 	#			if (self.iLastPlotListGroup != self.iActPlotListGroup):
 	#				self.deselectAll()
 	#			# deselect last selected unit
 	#			elif (self.pLastPlotListUnit):
 	#				if (self.pLastPlotListUnit.IsSelected()):
-	#					CyInterface().selectUnit(self.pLastPlotListUnit, false, true, false)
+	#					CyInterface().selectUnit(self.pLastPlotListUnit, False, True, False)
 	#			# check if the group has not been changed and the unit is selected again -> deselect all other units of the group
 	#			if (self.iLastPlotListGroup == self.iActPlotListGroup):
-	#				CyInterface().selectUnit(self.pActPlotListUnit, true, true, true)
+	#				CyInterface().selectUnit(self.pActPlotListUnit, True, True, True)
 	#			else:
-	#				CyInterface().selectUnit(self.pActPlotListUnit, false, true, true)
+	#				CyInterface().selectUnit(self.pActPlotListUnit, False, True, True)
 		elif bShift and (not (bCtrl or bAlt)):
 			self.pActPlotListUnit = pUnit
 			self.iActPlotListGroup = pUnit.getGroupID()
-	#			CyInterface().selectUnit(self.pActPlotListUnit, false, true, true)
-			CyInterface().selectGroup( self.pActPlotListUnit, true, false, false )
+	#			CyInterface().selectUnit(self.pActPlotListUnit, False, True, True)
+			CyInterface().selectGroup( self.pActPlotListUnit, True, False, False )
 		elif bCtrl and (not (bShift or bAlt)):
 			self.deselectAll()
 			self.pActPlotListUnit = pUnit
 			self.iActPlotListGroup = pUnit.getGroupID()
-			self.saveFilteredUnitsByType(self.pActPlotListUnit, false)
+			self.saveFilteredUnitsByType(self.pActPlotListUnit, False)
 			self.tempMove(0)
-			CyInterface().selectGroup( self.pActPlotListUnit, false, true, false )
+			CyInterface().selectGroup( self.pActPlotListUnit, False, True, False )
 			self.tempMove(1)
 			self.setPLEUnitList(True)
 		elif bCtrl and bShift and (not bAlt):
 	#			# self.deselectAll()
 			self.pActPlotListUnit = pUnit
 			self.iActPlotListGroup = pUnit.getGroupID()
-			self.saveFilteredUnitsByType(self.pActPlotListUnit, true)
+			self.saveFilteredUnitsByType(self.pActPlotListUnit, True)
 			self.tempMove(0)
-			CyInterface().selectGroup( self.pActPlotListUnit, true, true, false )
+			CyInterface().selectGroup( self.pActPlotListUnit, True, True, False )
 			self.tempMove(1)
 			self.setPLEUnitList(True)
 		elif bAlt and (not (bCtrl or bShift)):
@@ -1343,7 +1343,7 @@ class PLE:
 			self.iActPlotListGroup = pUnit.getGroupID()
 			self.saveFilteredUnitsByDomain(self.pActPlotListUnit)
 			self.tempMove(0)
-			CyInterface().selectGroup( self.pActPlotListUnit, false, false, true )
+			CyInterface().selectGroup( self.pActPlotListUnit, False, False, True )
 			self.tempMove(1)
 			self.setPLEUnitList(True)
 		# if we came from city screen -> focus view on the selected unit
@@ -1595,7 +1595,7 @@ class PLE:
 			# retrieve single unit
 			pUnit = pPlot.getUnit(i)
 			# only units which are visible for the player 
-			if not pUnit.isInvisible(gc.getPlayer(gc.getGame().getActivePlayer()).getTeam(), true):
+			if not pUnit.isInvisible(gc.getPlayer(gc.getGame().getActivePlayer()).getTeam(), True):
 				# check if the unit is loaded into any tranporter
 				# append empty list element. Each element stores the following information in given order :
 				lUnitInfo = self.getPLEUnitInfo(pUnit)
@@ -1687,10 +1687,10 @@ class PLE:
 			szStringUnitUpgrade = self.PLOT_LIST_UPGRADE_NAME + sID
 			szFileNameUpgrade = gc.getUnitInfo(iUnitIndex).getButton()
 			screen.setImageButton( szStringUnitUpgrade, szFileNameUpgrade, x, y, 34, 34, WidgetTypes.WIDGET_GENERAL, iUnitIndex, -1 )
-			if pUnit.canUpgrade(iUnitIndex, false):
-				screen.enable(szStringUnitUpgrade, true)
+			if pUnit.canUpgrade(iUnitIndex, False):
+				screen.enable(szStringUnitUpgrade, True)
 			else:
-				screen.enable(szStringUnitUpgrade, false)
+				screen.enable(szStringUnitUpgrade, False)
 			screen.show( szStringUnitUpgrade )
 		self.dUnitUpgradeList[iU] = lUnits
 		return
@@ -1737,7 +1737,7 @@ class PLE:
 		iPromo		= self.dUnitPromoList[idUnit][idPromo-1]
 
 		# promo info
-		szPromoInfo = u"<font=2>" + mt.removeLinks(CyGameTextMgr().getPromotionHelp(iPromo, false)) + u"</font>\n"
+		szPromoInfo = u"<font=2>" + mt.removeLinks(CyGameTextMgr().getPromotionHelp(iPromo, False)) + u"</font>\n"
 
 		# unit level 
 		iLevel = pUnit.getLevel()
@@ -1968,7 +1968,7 @@ class PLE:
 			szEspionage = u"<font=2>" + szEspionage + u"\n</font>"
 		
 		# unit type specialities 
-		szSpecialText 	= u"<font=2>" + localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()) + u":\n" + CyGameTextMgr().getUnitHelp( iUnitType, true, false, false, None )[1:] + u"</font>"
+		szSpecialText 	= u"<font=2>" + localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()) + u":\n" + CyGameTextMgr().getUnitHelp( iUnitType, True, False, False, None )[1:] + u"</font>"
 		szSpecialText = localText.changeTextColor(szSpecialText, PleOpt.getUnitTypeSpecialtiesColor())
 		
 		if iLevel > 1:
@@ -2017,11 +2017,11 @@ class PLE:
 		for i in range(gc.getNumPromotionInfos()):
 			szName = self.PLE_PROMO_BUTTONS_UNITINFO + str(i)
 			screen.hide( szName )
-		self.bUnitPromoButtonsActive = false
+		self.bUnitPromoButtonsActive = False
 
 	# displays the unit's promotion buttons in the info pane. They are not part of the info pane.
 	def displayUnitInfoPromoButtonPos( self, szName, iPromotionCount, yOffset ):
-		self.bUnitPromoButtonsActive = true
+		self.bUnitPromoButtonsActive = True
 		screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
 		if ( CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_SHOW ):
 			y = self.CFG_INFOPANE_Y

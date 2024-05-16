@@ -97,10 +97,10 @@ def canTriggerTheVedicAryans(argsList):
 
     #   If Barbarians are disabled in this game, this event will not occur.
     if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
-        return false
+        return False
 
     #   At least one civ on the board must know Polytheism.
-    bFoundValid = false
+    bFoundValid = False
 
     # BUFFY 3.19.003 - start
     # changes one of the key techs to Priesthood instead of Polytheism
@@ -114,24 +114,24 @@ def canTriggerTheVedicAryans(argsList):
         loopPlayer = gc.getPlayer(iPlayer)
         if loopPlayer.isAlive():
             if gc.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-                bFoundValid = true
+                bFoundValid = True
                 break
 
     if not bFoundValid:
-        return false
+        return False
 
     #   At least one civ on the board must know Archery.
-    bFoundValid = false
+    bFoundValid = False
     iTech = gc.getInfoTypeForString("TECH_ARCHERY")
     for iPlayer in range(gc.getMAX_CIV_PLAYERS()):
         loopPlayer = gc.getPlayer(iPlayer)
         if loopPlayer.isAlive():
             if gc.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-                bFoundValid = true
+                bFoundValid = True
                 break
 
     if not bFoundValid:
-        return false
+        return False
 
     # BUG - 3.17 - Start
     if GameUtil.isVersion(317):
@@ -142,19 +142,19 @@ def canTriggerTheVedicAryans(argsList):
             iCounterUnitClass
         )
         if iCounterUnit == -1:
-            return false
+            return False
 
-        (loopCity, iter) = player.firstCity(false)
-        bFound = false
+        (loopCity, iter) = player.firstCity(False)
+        bFound = False
         while loopCity:
-            if loopCity.canTrain(iCounterUnit, false, false):
-                bFound = true
+            if loopCity.canTrain(iCounterUnit, False, False):
+                bFound = True
                 break
 
-            (loopCity, iter) = player.nextCity(iter, false)
+            (loopCity, iter) = player.nextCity(iter, False)
 
         if not bFound:
-            return false
+            return False
     # BUG - 3.17 - End
 
     #     Find an eligible plot
@@ -166,8 +166,8 @@ def canTriggerTheVedicAryans(argsList):
             and not plot.isWater()
             and not plot.isImpassable()
             and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0
-            and plot.isAdjacentPlayer(kTriggeredData.ePlayer, true)
+            and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)
         ):
-            return true
+            return True
 
-    return false
+    return False

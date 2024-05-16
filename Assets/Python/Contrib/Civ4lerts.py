@@ -344,15 +344,15 @@ class AbstractCityTestAlert(AbstractCityAlert):
             addMessageAtCity(iPlayer, message, icon, city)
 
     def _passedTest(self, cityId):
-        "Returns true if the city passed the test last turn."
+        "Returns True if the city passed the test last turn."
         return cityId in self.cities
 
     def _passesTest(self, city):
-        "Returns true if the city passes the test."
+        "Returns True if the city passes the test."
         return False
 
     def _willPassTest(self, city):
-        "Returns true if the city will pass the test next turn based on current conditions."
+        "Returns True if the city will pass the test next turn based on current conditions."
         return False
 
     def _beforeReset(self):
@@ -366,7 +366,7 @@ class AbstractCityTestAlert(AbstractCityAlert):
         self.cities.discard(getCityId(city))
 
     def _isShowAlert(self, passes):
-        "Returns true if the alert is enabled."
+        "Returns True if the alert is enabled."
         return False
 
     def _getAlertMessageIcon(self, city, passes):
@@ -374,7 +374,7 @@ class AbstractCityTestAlert(AbstractCityAlert):
         return (None, None)
 
     def _isShowPendingAlert(self, passes):
-        "Returns true if the alert is enabled."
+        "Returns True if the alert is enabled."
         return False
 
     def _getPendingAlertMessageIcon(self, city, passes):

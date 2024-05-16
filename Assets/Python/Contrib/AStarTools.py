@@ -40,10 +40,10 @@ class AStar:
         self.pUnit                     = None
         self.fHeuristicMvmtFactor     = 0.0                 # possible smallest cost value a move from plot to plot will take
         self.fHeuristicTieBreak        = float(1.0/1000.0)     # assuming the paths are shorter than 400 steps
-        self.bResultValid            = false
+        self.bResultValid            = False
         self.iLoopCount                = 0
         self.eDomain                 = 0
-        self.bIgnoreMovesLeft        = false
+        self.bIgnoreMovesLeft        = False
         self.MODE_AREA                = 'A'
         self.MODE_PATH                = 'P'
 
@@ -103,8 +103,8 @@ class AStar:
             if (pTestPlot.isCoastalLand()):
                 pTestPlot = CyMap().plot(pPlot.getX(), pPlot.getY()+y)
                 if (pTestPlot.isCoastalLand()):
-                    return true
-        return false
+                    return True
+        return False
 
     # returns an adjacent plots reletaive to the coordinates of pPlot.
     # takes consideration of x and/or y overlows or underflows
@@ -140,10 +140,10 @@ class AStar:
                     if (dx != 0) and (dy != 0) and (self.eDomain == DomainTypes.DOMAIN_SEA):
                         bCont = not self.fnCheckLandBridge(pPlot, dx, dy)
                     else:
-                        bCont = true
+                        bCont = True
                     if bCont:
                         # check if the plot is passable
-                        if self.pUnit.canMoveOrAttackInto(pNewPlot, true):
+                        if self.pUnit.canMoveOrAttackInto(pNewPlot, True):
                             # check if the plot is already on the close list
                             if not self.pCloseList.exists(pNewPlot):
                                 # calculate movement cost from root plot to new plot
@@ -190,7 +190,7 @@ class AStar:
         if self.bResultValid:
             pWorkPlot     = self.pTargetPlot
             pParentPlot    = self.pTargetPlot
-            while true:
+            while True:
                 # adding target plot to the path
                 lPath.append(self.pCloseList.getXY(pWorkPlot))
                 # looking for the parent of the
@@ -215,17 +215,17 @@ class AStar:
     # Returns:
     #    int         (the costs to get from pFromPlot to pToPlot. -1 if no path could be found)
     #
-    # The parameter "bIgnoreMovesLeft" can be used to reduce execution time. If the parameter is true,
+    # The parameter "bIgnoreMovesLeft" can be used to reduce execution time. If the parameter is True,
     # the algorithm stops a single path examiation if the remaining moves of a unit are not enough
     # to reach the target plot. This significantly speeds up the algorithm in case you want to look for the
     # the movable area.
-    # The parameter should be set to false in case you want to find a path from plot A to B without
+    # The parameter should be set to False in case you want to find a path from plot A to B without
     # cost restrictions.
     #
     def generatePath(self, pUnit, pFromPlot, pToPlot, bIgnoreMovesLeft):
 
         # clear the actual results
-        self.bResultValid = false
+        self.bResultValid = False
         self.pOpenList.clear()
         self.pCloseList.clear()
         self.nMode = self.MODE_PATH
@@ -236,7 +236,7 @@ class AStar:
         self.pUnit                 = pUnit
         pNewPlot                 = pFromPlot
         pCurrentPlot            = pFromPlot
-        bBreak                     = false
+        bBreak                     = False
         self.iLoopCount            = 0
         self.iMovesLeft            = pUnit.movesLeft()
         self.bIgnoreMovesLeft    = bIgnoreMovesLeft
@@ -245,7 +245,7 @@ class AStar:
         if ((pFromPlot.getX() == pToPlot.getX()) and (pFromPlot.getY() == pToPlot.getY())):
             # From and To plot are equal -> break
             return -1
-        if not (self.pUnit.canMoveOrAttackInto(pToPlot, true)):
+        if not (self.pUnit.canMoveOrAttackInto(pToPlot, True)):
             # To plot not passable -> break
             return -1
 
@@ -256,7 +256,7 @@ class AStar:
         self.pOpenList.set(pCurrentPlot, pCurrentPlot, 0, self.calcHeuristic(pNewPlot))
 
         # repeat until target plot is reached
-        while (true):
+        while (True):
             self.addAdjacents(pCurrentPlot)
             self.moveToClose(pCurrentPlot)
             if (self.pCloseList.exists(self.pTargetPlot)):
@@ -264,7 +264,7 @@ class AStar:
                 break
             if (self.pOpenList.len() == 0):
                 # no path found
-                bBreak = true
+                bBreak = True
                 break
             # find the plot with the lowest costs on the open list
             pCurrentPlot = self.pOpenList.findMinFCost()
@@ -274,10 +274,10 @@ class AStar:
         if bBreak:
             # no path found
             iReturn = -1
-            self.bResultValid = false
+            self.bResultValid = False
         else:
             iReturn = int(self.pCloseList.getGCosts(pCurrentPlot))
-            self.bResultValid = true
+            self.bResultValid = True
 
         return iReturn
 
@@ -320,7 +320,7 @@ class AStar:
     def generateArea(self, pUnit, pFromPlot):
 
         # clear the actual results
-        self.bResultValid = false
+        self.bResultValid = False
         self.pOpenList.clear()
         self.pCloseList.clear()
         self.nMode = self.MODE_AREA
@@ -331,10 +331,10 @@ class AStar:
         self.pUnit                 = pUnit
         pNewPlot                 = pFromPlot
         pCurrentPlot            = pFromPlot
-        bBreak                     = false
+        bBreak                     = False
         self.iLoopCount            = 0
         self.iMovesLeft            = pUnit.movesLeft()
-        self.bIgnoreMovesLeft    = false
+        self.bIgnoreMovesLeft    = False
 
 
         # calculates some values for the heuristic
@@ -344,7 +344,7 @@ class AStar:
         self.pOpenList.set(pCurrentPlot, pCurrentPlot, 0, self.calcHeuristic(pNewPlot))
 
         # repeat until target plot is reached
-        while (true):
+        while (True):
             self.addAdjacents(pCurrentPlot)
             self.moveToClose(pCurrentPlot)
             if (self.pOpenList.len() == 0):
@@ -356,7 +356,7 @@ class AStar:
 
         # return the G-Costs of the Target Plot
         iReturn = 1
-        self.bResultValid = true
+        self.bResultValid = True
 
         return iReturn
 
@@ -397,9 +397,9 @@ class AStarMoveArea:
     # checks if there are any units on the plot and returns the corresponding color
     def checkUnit(self, pPlot):
         iNumUnits = pPlot.getNumUnits()
-        bEnemy = false
-        bNeutral = false
-        bBarbarian = false
+        bEnemy = False
+        bNeutral = False
+        bBarbarian = False
         for i in range(iNumUnits):
             pUnit = pPlot.getUnit(i)
             iTeam = pUnit.getTeam()
@@ -413,11 +413,11 @@ class AStarMoveArea:
                 else:
                     continue
             if (gc.getTeam(iTeam).isBarbarian()):
-                bBarbarian = true
+                bBarbarian = True
             elif (gc.getTeam(iTeam).isAtWar(self.iActivePlayerTeam)):
-                bEnemy = true
+                bEnemy = True
             else:
-                bNeutral = true
+                bNeutral = True
         if bEnemy:
             return PleOpt.MH_Color_Enemy_Unit()
         elif bBarbarian:
@@ -428,9 +428,9 @@ class AStarMoveArea:
 
     # checks if there forwign territory on the plot and returns the corresponding color
     def checkTerritory(self, pPlot):
-        iPlayer = pPlot.getRevealedOwner(self.iActivePlayerTeam, false)
+        iPlayer = pPlot.getRevealedOwner(self.iActivePlayerTeam, False)
         pPlayer = gc.getPlayer(iPlayer)
-        iTeam = pPlot.getRevealedTeam(self.iActivePlayerTeam, false)
+        iTeam = pPlot.getRevealedTeam(self.iActivePlayerTeam, False)
         pTeam = gc.getTeam(iTeam)
         if pPlot.isRevealedGoody(iTeam):
             if (pPlot.getImprovementType() == 3):#ImprovementTypes.IMPROVEMENT_GOODY_HUT):
@@ -447,9 +447,9 @@ class AStarMoveArea:
         for dx in range(-1, 2):
             for dy in range(-1, 2):
                 if not (dx == 0 and dy == 0):
-                    if CyMap().plot(pPlot.getX()+dx, pPlot.getY()+dy).isRevealed(self.iActivePlayerTeam, false):
-                        return true
-        return false
+                    if CyMap().plot(pPlot.getX()+dx, pPlot.getY()+dy).isRevealed(self.iActivePlayerTeam, False):
+                        return True
+        return False
 
     # handles the color for a plot
     def setPlotColor(self, x, y, iCosts):
@@ -463,12 +463,12 @@ class AStarMoveArea:
         # check if plot is reachable
         elif iCosts <= self.iMovesLeft:
             # check if the plot is reavealed
-            if pPlot.isRevealed(self.iActivePlayerTeam, false):
+            if pPlot.isRevealed(self.iActivePlayerTeam, False):
                 # check if a unit at that plot
-                if pPlot.isUnit() and pPlot.isVisible(self.iActivePlayerTeam, false):
+                if pPlot.isUnit() and pPlot.isVisible(self.iActivePlayerTeam, False):
                     self.dPlotList[tPlot] = self.checkUnit(pPlot)
                 # check if the plot is foreign territory
-                elif pPlot.isVisible(self.iActivePlayerTeam, false):
+                elif pPlot.isVisible(self.iActivePlayerTeam, False):
                     self.dPlotList[tPlot] = self.checkTerritory(pPlot)
                 # nothing special with that plot
                 else:
@@ -576,12 +576,12 @@ class AStarPlot:
         return (self.getX(), self.getY())
 
     # pCompPlot: AStarPlot()
-    # returns true if plot coords are equal
+    # returns True if plot coords are equal
     def compare(self, pCompPlot):
         if (self.getX() == pCompPlot.getX()) and (self.getY() == pCompPlot.getY()):
-            return true
+            return True
         else:
-            return false
+            return False
 
 
 #####################################################################
@@ -648,9 +648,9 @@ class AStarList:
         pAPlot = self.makeAPlot(pPlot)
         if self.dList.has_key(pAPlot.getXY()):
             del self.dList[pAPlot.getXY()]
-            return true
+            return True
         else:
-            return false
+            return False
 
     # pPlot : CyPlot
     # returns the g-costs as float
@@ -686,12 +686,12 @@ class AStarList:
         return pAPlot.getXY()
 
     # pPlot : CyPlot
-    # returns true if the plot exists in the list
+    # returns True if the plot exists in the list
     def exists(self, pPlot):
         pAPlot = self.makeAPlot(pPlot)
         if self.dList.has_key(pAPlot.getXY()):
-            return true
-        return false
+            return True
+        return False
 
     # pPlot : CyPlot
     # returns AStarPlot if found, else ()

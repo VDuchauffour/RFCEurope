@@ -4564,7 +4564,7 @@ class CvMainInterface:
                             1,
                         )
                         screen.show(szName)
-                        bHandled = true
+                        bHandled = True
                     iCount += 1
 
         else:
@@ -4584,7 +4584,7 @@ class CvMainInterface:
                             -1,
                         )
                         screen.show(szName)
-                        bHandled = true
+                        bHandled = True
 
                     iCount = iCount + 1
 
@@ -4755,7 +4755,7 @@ class CvMainInterface:
                     1,
                 )
                 screen.show(szName)
-                bHandled = true
+                bHandled = True
 
                 iCount = iCount + 1
 
