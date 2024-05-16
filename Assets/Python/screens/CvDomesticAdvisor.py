@@ -5,15 +5,15 @@ from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 
-# 	IMPORTANT INFORMATION
+#     IMPORTANT INFORMATION
 #
-# 	All widget names MUST be unique when creating screens.  If you create
-# 	a widget named 'Hello', and then try to create another named 'Hello', it
-# 	will modify the first hello.
+#     All widget names MUST be unique when creating screens.  If you create
+#     a widget named 'Hello', and then try to create another named 'Hello', it
+#     will modify the first hello.
 #
-# 	Also, when attaching widgets, 'Background' is a reserve word meant for
-# 	the background widget.  Do NOT use 'Background' to name any widget, but
-# 	when attaching to the background, please use the 'Background' keyword.
+#     Also, when attaching widgets, 'Background' is a reserve word meant for
+#     the background widget.  Do NOT use 'Background' to name any widget, but
+#     when attaching to the background, please use the 'Background' keyword.
 
 #  Thanks to Lee Reeves, AKA Taelis on civfanatics.com
 #  Thanks to Solver
