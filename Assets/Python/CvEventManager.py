@@ -1,10 +1,12 @@
 from CvPythonExtensions import *
 from CoreFunctions import get_data_from_upside_down_map, message, text
 from CoreStructures import human, player, team, cities
+import CvEspionageAdvisor
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
 import CvWBPopups
+from MiscData import MODNET_EVENTS
 import PyHelpers
 import Popup as PyPopup
 import CvCameraControls
@@ -375,8 +377,15 @@ class CvEventManager:
 
     def onModNetMessage(self, argsList):
         "Called whenever CyMessageControl().sendModNetMessage() is called - this is all for you modders!"
-
         iData1, iData2, iData3, iData4, iData5 = argsList
+        if iData1 == MODNET_EVENTS["CHANGE_COMMERCE_PERCENT"]:
+            CommerceType = [CommerceTypes.COMMERCE_GOLD, CommerceTypes.COMMERCE_RESEARCH, CommerceTypes.COMMERCE_CULTURE, CommerceTypes.COMMERCE_ESPIONAGE]
+            gc.getPlayer(iData2).changeCommercePercent(CommerceType[iData3], iData4)
+            if iData2 == CyGame().getActivePlayer():
+                screen = CvEspionageAdvisor.CvEspionageAdvisor().getScreen()
+                if screen.isActive():
+                    CvEspionageAdvisor.CvEspionageAdvisor().updateEspionageWeights()
+
         CvUtil.pyPrint("onModNetMessage")
 
     def onInit(self, argsList):

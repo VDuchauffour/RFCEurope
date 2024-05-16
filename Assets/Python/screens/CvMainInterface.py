@@ -129,6 +129,8 @@ MAX_SPECIALIST_BUTTON_SPACING = 30
 SPECIALIST_AREA_MARGIN = 45
 # BUG - city specialist - end
 
+import WidgetUtil
+
 g_NumEmphasizeInfos = 0
 g_NumCityTabTypes = 0
 g_NumHurryInfos = 0
@@ -349,6 +351,13 @@ class CvMainInterface:
         # < Mercenaries Start >
         self.repainting = False
         # < Mercenaries End   >
+
+        # Widgets
+        WidgetUtil.createWidget("WIDGET_PEDIA_JUMP_TO_RESOURCE")
+        WidgetUtil.createWidget("WIDGET_ESPIONAGE_SELECT_PLAYER")
+        WidgetUtil.createWidget("WIDGET_ESPIONAGE_SELECT_CITY")
+        WidgetUtil.createWidget("WIDGET_ESPIONAGE_SELECT_MISSION")
+        WidgetUtil.createWidget("WIDGET_GO_TO_CITY")
 
     ############## Basic operational functions ###################
 
