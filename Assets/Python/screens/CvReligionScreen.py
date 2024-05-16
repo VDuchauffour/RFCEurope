@@ -6,15 +6,12 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import text
-from CoreStructures import player
 import PyHelpers
 import CvUtil
 from RFCUtils import render_faith_benefits, render_faith_status
 import ScreenInput  # noqa: F401
 import CvScreenEnums
-from CoreTypes import Scenario, FaithPointBonusCategory, Technology
-from Scenario import get_scenario, get_scenario_start_years
-from CoreFunctions import font_text, text
+from CoreFunctions import font_text
 
 # BUG - start
 import BugUtil  # noqa: F401
@@ -105,7 +102,7 @@ class CvReligionScreen:
 
         self.X_FAITH_AREA = 45
         self.X_FAITH_EFFECT_AREA = 522
-        self.Y_FAITH_AREA = 590
+        self.Y_FAITH_AREA = 595
         self.W_FAITH_AREA = 457
         self.H_FAITH_AREA = 120
 
@@ -1229,7 +1226,7 @@ class CvReligionScreen:
             "",
             font_text(faith_status, fontsize=3),
             self.X_FAITH_AREA + 20,
-            self.Y_FAITH_AREA + 32,
+            self.Y_FAITH_AREA + 37,
             self.W_FAITH_AREA - 20,
             self.H_FAITH_AREA - 20,
             WidgetTypes.WIDGET_GENERAL,
@@ -1268,7 +1265,7 @@ class CvReligionScreen:
             "",
             font_text(faith_benefits, fontsize=3),
             self.X_FAITH_EFFECT_AREA + 20,
-            self.Y_FAITH_AREA + 32,
+            self.Y_FAITH_AREA + 37,
             self.W_FAITH_AREA - 20,
             self.H_FAITH_AREA - 20,
             WidgetTypes.WIDGET_GENERAL,
@@ -1315,6 +1312,7 @@ class CvReligionScreen:
             self.iActivePlayer = screen.getPullDownData(self.DEBUG_DROPDOWN_ID, iIndex)
             self.drawReligionInfo()
             self.drawCityInfo(self.iReligionSelected)
+            self.drawFaithInfo()
             return 1
 
         # BUG Zoom to City
