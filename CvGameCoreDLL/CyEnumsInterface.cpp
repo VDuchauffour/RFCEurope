@@ -372,7 +372,7 @@ void CyEnumsPythonInterface()
       .value("WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE",
              WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE)                              // Absinthe: mercenary upkeep
       .value("WIDGET_HELP_FINANCE_COLONY_UPKEEP", WIDGET_HELP_FINANCE_COLONY_UPKEEP) // Absinthe: colony upkeep
-
+      .value("WIDGET_HELP_REMOVE", WIDGET_HELP_REMOVE)
       .value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES);
 
   python::enum_<ButtonPopupTypes>("ButtonPopupTypes")

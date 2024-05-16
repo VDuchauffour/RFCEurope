@@ -544,6 +544,7 @@ enum WidgetTypes // Exposed to Python
   WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE, // Absinthe: mercenary upkeep
   WIDGET_HELP_FINANCE_COLONY_UPKEEP,         // Absinthe: colony upkeep
 
+  WIDGET_HELP_REMOVE, // Leoreth
 #ifdef _USRDLL
   NUM_WIDGET_TYPES
 #endif

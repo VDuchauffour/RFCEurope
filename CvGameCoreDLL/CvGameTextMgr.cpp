@@ -3963,8 +3963,8 @@ It is fine for a human player mouse-over (which is what it is used for).
 void createTestFontString(CvWStringBuffer &szString)
 {
   int iI;
-  szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[Ч]^_`abcdefghijklmnopqrstuvwxyz\n");
-  szString.append(L"{}~\\ЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦШЩЪЫЬЭЮџЯабвгдежзийклмнопрстуфхцчшщъыьэюяїЎ«»°ЉЊЋљњћ™©®ЂЈў”‘“…’");
+  szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[пїЅ]^_`abcdefghijklmnopqrstuvwxyz\n");
+  szString.append(L"{}~\\пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅЮџпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
   for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
     szString.append(CvWString::format(L"%c", GC.getYieldInfo((YieldTypes)iI).getChar()));
 
@@ -13591,6 +13591,35 @@ void CvGameTextMgr::setPromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes e
   parsePromotionHelp(szBuffer, ePromotion);
 }
 
+void CvGameTextMgr::setRemoveHelp(CvWStringBuffer &szBuffer, TechTypes eTech)
+{
+  CvWString szTempBuffer;
+
+  bool bFirst = true;
+  for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+  {
+    CvBuildInfo &kBuild = GC.getBuildInfo((BuildTypes)iI);
+    if (!kBuild.isGraphicalOnly() && kBuild.getTechPrereq() == NO_TECH)
+    {
+      for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+      {
+        if (kBuild.getFeatureTech(iJ) == eTech)
+        {
+          if (!bFirst)
+          {
+            szTempBuffer.Format(L", ");
+            szBuffer.append(szTempBuffer);
+          }
+
+          szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), kBuild.getDescription());
+          szBuffer.append(szTempBuffer);
+
+          bFirst = false;
+        }
+      }
+    }
+  }
+}
 void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat)
 {
   szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
