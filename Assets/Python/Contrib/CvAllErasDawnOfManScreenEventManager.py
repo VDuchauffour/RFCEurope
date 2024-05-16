@@ -19,14 +19,15 @@ def init():
 
 
 def onGameStart(argsList):
-    if gc.getGame().getGameTurnYear() != START_YEAR:
-        if (gc.getGame().getGameTurn() == gc.getGame().getStartTurn()) or (
-            gc.getGame().countNumHumanGameTurnActive() == 0
-        ):
-            for iPlayer in range(gc.getMAX_PLAYERS()):
-                pPlayer = gc.getPlayer(iPlayer)
-                if (pPlayer.isAlive()) and (pPlayer.isHuman()):
-                    popupInfo = CyPopupInfo()
-                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-                    popupInfo.setText(u"showDawnOfMan")
-                    popupInfo.addPopup(iPlayer)
+    # if gc.getGame().getGameTurnYear() != START_YEAR:
+    #     if (gc.getGame().getGameTurn() == gc.getGame().getStartTurn()) or (
+    #         gc.getGame().countNumHumanGameTurnActive() == 0
+    #     ):
+    #         for iPlayer in range(gc.getMAX_PLAYERS()):
+    #             pPlayer = gc.getPlayer(iPlayer)
+    #             if (pPlayer.isAlive()) and (pPlayer.isHuman()):
+    #                 popupInfo = CyPopupInfo()
+    #                 popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+    #                 popupInfo.setText(u"showDawnOfMan")
+    #                 popupInfo.addPopup(iPlayer)
+    pass

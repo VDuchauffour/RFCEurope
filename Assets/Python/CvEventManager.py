@@ -414,6 +414,7 @@ class CvEventManager:
         "Called at the start of the game"
 
         # Rhye - Dawn of Man must appear in late starts too
+        # Duplicate with Assets/Python/Contrib/CvAllErasDawnOfManScreenEventManager.py
         if (
             gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA")
             or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)
