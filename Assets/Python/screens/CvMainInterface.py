@@ -9064,7 +9064,7 @@ class CvMainInterface:
                                                     > 0
                                                 ):
                                                     cPlague = unichr(
-                                                        CyGame().getSymbolID(FontSymbols.PLAGUE)
+                                                        CyGame().getSymbolID(FontSymbols.PLAGUE_CHAR)
                                                     )
                                                     szBuffer += cPlague
                                                     if bAlignIcons:
