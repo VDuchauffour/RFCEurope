@@ -1565,16 +1565,16 @@ def stability(civ):
     elif -15 <= level < -5:
         _text = text("TXT_KEY_STABILITY_UNSTABLE")
         _symbol = symbol(FontSymbols.UNSTABLE_CHAR)
-    elif -5 <= level < 0:
+    elif -5 <= level < 5:
         _text = text("TXT_KEY_STABILITY_SHAKY")
         _symbol = symbol(FontSymbols.SHAKY_CHAR)
-    elif 0 <= level < 8:
+    elif 5 <= level < 15:
         _text = text("TXT_KEY_STABILITY_STABLE")
         _symbol = symbol(FontSymbols.STABLE_CHAR)
-    elif 8 <= level < 15:
-        _text = text("TXT_KEY_STABILITY_SOLID")
-        _symbol = symbol(FontSymbols.STABLE_CHAR)
     elif level >= 15:
+        _text = text("TXT_KEY_STABILITY_SOLID")
+        _symbol = symbol(FontSymbols.SOLID_CHAR)
+    elif level >= 25:
         _text = text("TXT_KEY_STABILITY_VERYSOLID")
         _symbol = symbol(FontSymbols.SOLID_CHAR)
     return level, _text, _symbol
