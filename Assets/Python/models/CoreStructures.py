@@ -1,3 +1,4 @@
+# from BugEventManager import g_eventManager as events
 from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH
 from CoreFunctions import (
     city,
@@ -1082,7 +1083,7 @@ def make_units(player, unit, plot, n_units=1, unit_ai=None, unit_name=None):
     for _ in range(n_units):
         _unit = _generate_unit(player, unit, plot, unit_ai, unit_name)
         units.append(_unit)
-        # events.fireEvent("unitCreated", unit) # TODO
+        # events.fireEvent("unitCreated", unit)
     return CreatedUnits(units)
 
 

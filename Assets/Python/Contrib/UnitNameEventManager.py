@@ -46,28 +46,29 @@
 ##    a. try to get the advanced naming convention
 ##    b. if it returns 'DEFAULT', then get the combat based naming convention
 ##    c. if naming convention is 'DEFAULT', get default naming convention
-##
+## 
 ## 2. determine if you have 'civ naming' or no valid naming codes in your naming convention, if YES, return 'NULL'
 ## 3. determine if you have 'random' in your naming convention, if YES, call random engine and return value
 ## 4. determine if you have 'random civ related' in your naming convention, if YES, call random civ related engine and return value
-##
+## 
 ## 5. swap out fixed items (ie unit, combat type, domain, leader, civilization, city, etc) from naming convention
-##
+## 
 ## 6. determine if you have any count items in naming convention; return if FALSE
-##
+## 
 ## 7. determine key for counting (this information is stored in the save file)
 ## a. get latest count from save (if not found, initilize)
 ## b. increment count by 1
 ## c. test against total (if required), adjust total and 2nd total if required
-##
+## 
 ## 8. format count items
-##
+## 
 ## 9. replace formatted count items in naming convention
-##
+## 
 ## 10. return name
 ##-------------------------------------------------------------------
 
 from CvPythonExtensions import *
+from CoreStructures import adjective
 import CvUtil
 import BugUtil
 import PyHelpers
@@ -78,7 +79,6 @@ import RandomNameUtils
 import random
 import Popup as PyPopup
 import BugData
-
 
 SD_MOD_ID = "UnitCnt"
 RENAME_EVENT_ID = CvUtil.getNewEventID("UnitNaming.Rename")
@@ -106,7 +106,7 @@ class UnitNameEventManager:
     def __init__(self, eventManager):
 
         BuildUnitName(eventManager)
-
+        
         # additions to self.Events
         moreEvents = {
             RENAME_EVENT_ID : ('', self.__eventUnitRenameApply,  self.__eventUnitRenameBegin),
@@ -173,7 +173,13 @@ class UnitNameEventManager:
         return
 
 
+class CityNameWrapper(object):
 
+    def __init__(self, name):
+        self.name = name
+    
+    def getName(self):
+        return self.name
 
 
 class AbstractBuildUnitName(object):
@@ -181,18 +187,41 @@ class AbstractBuildUnitName(object):
     def __init__(self, eventManager, *args, **kwargs):
         super(AbstractBuildUnitName, self).__init__(*args, **kwargs)
 
+
 class BuildUnitName(AbstractBuildUnitName):
 
     def __init__(self, eventManager, *args, **kwargs):
         super(BuildUnitName, self).__init__(eventManager, *args, **kwargs)
 
         eventManager.addEventHandler("kbdEvent", self.onKbdEvent)
+        eventManager.addEventHandler("unitCreated", self.onUnitCreated)
         eventManager.addEventHandler("unitBuilt", self.onUnitBuilt)
         eventManager.addEventHandler("cityBuilt", self.onCityBuilt)
         eventManager.addEventHandler("goodyReceived", self.onGoodyReceived)
 
         self.eventMgr = eventManager
         self.config = None
+
+    def onUnitCreated(self, argsList):
+        pUnit = argsList[0]
+        iPlayer = pUnit.getOwner()
+
+        if iPlayer == PlayerUtil.getActivePlayerID() and UnitNamingOpt.isEnabled():
+            pPlayer = gc.getPlayer(iPlayer)
+            pCity = pPlayer.getCapitalCity()
+            if pCity is None or pCity.isNone():
+                pCity = CityNameWrapper(adjective(iPlayer))
+            lUnitReName = UnitReName()
+            zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
+
+            if pUnit and not pUnit.isNone() and pUnit.getOwner() == iPlayer:
+                if pUnit.getNameNoDesc() == "":
+                    zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
+                    zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
+                    zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
+                    zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, True)
+                    if zsUnitName:
+                        pUnit.setName(zsUnitName)
 
     def onKbdEvent(self, argsList):
         eventType,key,mx,my,px,py = argsList
@@ -255,9 +284,9 @@ class BuildUnitName(AbstractBuildUnitName):
         """
         pCity = argsList[0]
         pPlayer = gc.getPlayer(pCity.getOwner())
-        if not (pCity.isCapital()
+        if not (pCity.isCapital() 
         and pPlayer.getNumCities() == 1
-        and pCity.getOwner() == PlayerUtil.getActivePlayerID()
+        and pCity.getOwner() == PlayerUtil.getActivePlayerID() 
         and UnitNamingOpt.isEnabled()):
             return
         lUnitReName = UnitReName()
@@ -309,7 +338,7 @@ class UnitReName(object):
 
         iPlayer = pUnit.getOwner()
         pPlayer = gc.getPlayer(iPlayer)
-
+        
         zsCiv = pPlayer.getCivilizationAdjective(0)
         zsLeader = pPlayer.getName()
         zsUnitCombat = self.getUnitCombat(pUnit)
@@ -379,9 +408,9 @@ class UnitReName(object):
             elif zsSDKey == "CITY":        zsSDKey = zsSDKey + zsCity
             elif zsSDKey == "UNITCITY": zsSDKey = zsSDKey + zsUnit + zsCity
             elif zsSDKey == "DOMAIN":    zsSDKey = zsSDKey + zsUnitDomain
-
+    
             #BUGPrint("UnitNameEM-E [" + zsSDKey + "]")
-
+    
 #            see if we have already started this counter
             if (not counters.hasTable(zsSDKey)):
                 #Since no record create entries
@@ -417,7 +446,7 @@ class UnitReName(object):
             zsName = self.swapCountCode(zsName, "^tt2", ziTT2)
 
         return zsName
-
+    
     def getUnitNameConvFromIniFile(self, Era, UnitClass, UnitCombat):
 ##    a. try to get the advanced naming convention
 ##    b. if it returns 'DEFAULT', then get the combat based naming convention
@@ -458,7 +487,7 @@ class UnitReName(object):
 
 # Return immediately if the unit passed in is invalid
         if (pUnit == None
-        or pUnit.isNone()):
+        or pUnit.isNone() ):
             return "UNITCOMBAT_None"
 
         iUnitCombat = pUnit.getUnitCombatType()
@@ -608,7 +637,7 @@ class UnitReName(object):
             return phonetic_array[(i - 1) % 26]
         elif (fmt == "g"):   # greek
             return greek_array[(i - 1) % 24]
-        elif (fmt == "n"):   # number
+        elif (fmt == "n"):   # number    
             return str(i)
         elif (fmt == "o"):   # ordinal
             return self.getOrdinal(i)

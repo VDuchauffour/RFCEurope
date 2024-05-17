@@ -230,4 +230,68 @@
 		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento da Assedio ('Combat[SIEGE]').</Italian>
 		<Spanish>Enter the user defined naming convention for combat units 'SIEGE'.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_LIGHT_CAVALRY_TEXT</Tag>
+		<English>Naming Convention: Combat[LIGHT CAVALRY]</English>
+		<French>Convention des Noms: Combat[LIGHT CAVALRY]</French>
+		<German>Benennungsregel: Kampf[LIGHT CAVALRY]</German>
+		<Italian>per le Unit&#224; Combat[LIGHT CAVALRY]</Italian>
+		<Spanish>Naming Convention: Combat[LIGHT CAVALRY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_LIGHT_CAVALRY_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'LIGHT CAVALRY'.</English>
+		<French>Entrez la convention des noms pour les unit&#233;s 'LIGHT CAVALRY'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel f&#252;r 'LIGHT CAVALRY'</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unit&#224; di Combattimento con Elicotteri ('Combat[LIGHT CAVALRY]').</Italian>
+		<Spanish>Enter the user defined naming convention for combat units 'LIGHT CAVALRY'.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_HEAVY_CAVALRY_TEXT</Tag>
+		<English>Naming Convention: Combat[HEAVY CAVALRY]</English>
+		<French>Convention des Noms: Combat[HEAVY CAVALRY]</French>
+		<German>Benennungsregel: Kampf[HUBSCHRAUBER]</German>
+		<Italian>- per le Unit&#224; di Combattimento con Elicotteri</Italian>
+		<Spanish>Naming Convention: Combat[HEAVY CAVALRY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_HEAVY_CAVALRY_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'HEAVY CAVALRY'.</English>
+		<French>Entrez la convention des noms pour les unit&#233;s 'HEAVY CAVALRY'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel f&#252;r Hubschrauber</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unit&#224; di Combattimento con Elicotteri ('Combat[HEAVY CAVALRY]').</Italian>
+		<Spanish>Enter the user defined naming convention for combat units 'HEAVY CAVALRY'.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_POLEARM_TEXT</Tag>
+		<English>Naming Convention: Combat[POLEARM]</English>
+		<French>Convention des Noms: Combat[POLEARM]</French>
+		<German>Benennungsregel: Kampf[POLEARM]</German>
+		<Italian>per le Unit&#224; Combat[POLEARM]</Italian>
+		<Spanish>Naming Convention: Combat[POLEARM]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_POLEARM_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'POLEARM'.</English>
+		<French>Entrez la convention des noms pour les unit&#233;s 'POLEARM'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel f&#252;r 'POLEARM'</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unit&#224; di Combattimento con Elicotteri ('Combat[POLEARM]').</Italian>
+		<Spanish>Enter the user defined naming convention for combat units 'POLEARM'.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_HEAVY_INFANTRY_TEXT</Tag>
+		<English>Naming Convention: Combat[HEAVY_INFANTRY]</English>
+		<French>Convention des Noms: Combat[HEAVY_INFANTRY]</French>
+		<German>Benennungsregel: Kampf[HEAVY_INFANTRY]</German>
+		<Italian>per le Unit&#224; Combat[HEAVY_INFANTRY]</Italian>
+		<Spanish>Naming Convention: Combat[HEAVY_INFANTRY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_HEAVY_INFANTRY_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'HEAVY_INFANTRY'.</English>
+		<French>Entrez la convention des noms pour les unit&#233;s 'HEAVY_INFANTRY'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel f&#252;r 'HEAVY_INFANTRY'</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unit&#224; di Combattimento con Elicotteri ('Combat[HEAVY_INFANTRY]').</Italian>
+		<Spanish>Enter the user defined naming convention for combat units 'HEAVY_INFANTRY'.</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -39,3 +39,7 @@ class BugUnitNameOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_None")
         self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_RECON")
         self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_SIEGE")
+        self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_LIGHT_CAVALRY")
+        self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_HEAVY_CAVALRY")
+        self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_POLEARM")
+        self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_HEAVY_INFANTRY")
