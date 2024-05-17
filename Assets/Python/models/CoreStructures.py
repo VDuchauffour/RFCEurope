@@ -1661,3 +1661,4 @@ techs = TechFactory
 units = UnitFactory
 plots = PlotFactory
 cities = CityFactory
+infos = Infos
