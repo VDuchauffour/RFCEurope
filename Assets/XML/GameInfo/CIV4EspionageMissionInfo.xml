@@ -45,7 +45,7 @@
 		<EspionageMissionInfo>
 			<Type>ESPIONAGEMISSION_SEE_ESPIONAGE</Type>
 			<Description>TXT_KEY_ESPIONAGE_SEE_ESPIONAGE</Description>
-			<Help>TXT_KEY_ESPIONAGE_SEE_ESPIONAGE_HELP</Help>
+			<!-- <Help>TXT_KEY_ESPIONAGE_SEE_ESPIONAGE_HELP</Help> -->
 			<iCost>100</iCost>
 			<bIsPassive>1</bIsPassive>
 			<bIsTwoPhases>0</bIsTwoPhases>
