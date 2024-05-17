@@ -21,6 +21,7 @@
     "./Assets/Python/EntryPoints",
     "./Assets/Python/pyWB",
     "./Assets/Python/screens",
+    "Assets/Python/screens/PlatyBuilder/",
     "../../Assets/Python",
     "../../Assets/Python/EntryPoints",
     "../../Assets/Python/pyWB",

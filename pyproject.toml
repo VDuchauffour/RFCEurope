@@ -54,6 +54,7 @@ executionEnvironments = [
     "Assets/Python/EntryPoints",
     "Assets/Python/pyWB",
     "Assets/Python/screens",
+    "Assets/Python/screens/PlatyBuilder/",
     "Assets/Python/BUFFY/",
     "Assets/Python/BUG/",
     "Assets/Python/Contrib/",
