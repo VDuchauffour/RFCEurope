@@ -72,6 +72,8 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         self.H_SPECIAL_PANE = 280
 
     def interfaceScreen(self, iTech):
+        if iTech < 0:
+            iTech = gc.getActivePlayer().getCurrentResearch()
 
         self.iTech = iTech
 
@@ -174,10 +176,13 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
                 "TXT_KEY_PEDIA_COST", gc.getTechInfo(iTech).getResearchCost()
             ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
         else:
-            szCostText = text(
-                "TXT_KEY_PEDIA_COST",
-                gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),
-            ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
+            szCostText = (
+                text(
+                    "TXT_KEY_PEDIA_COST",
+                    gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),
+                )
+                + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
+            )
         screen.setLabel(
             szCostId,
             "Background",
