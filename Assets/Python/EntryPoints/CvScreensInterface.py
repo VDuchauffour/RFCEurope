@@ -1,9 +1,11 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+# ruff: noqa: F401, F811
 from CoreStructures import player
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser
+import CvForeignAdvisor
 import CvExoticForeignAdvisor
 import CvMilitaryAdvisor
 import CvFinanceAdvisor
@@ -31,26 +33,39 @@ import CvEraMovieScreen
 import CvSpaceShipScreen
 
 import CvPediaMain
+import CvPediaHistory
 
+import CvDebugTools
 import CvDebugInfoScreen
 
+import CvUtil
+import CvEventInterface
 import CvScreenUtilsInterface
 import ScreenInput as PyScreenInput
 from CvScreenEnums import *
 from CvPythonExtensions import *
+from RFCUtils import toggleStabilityOverlay as _toggleStabilityOverlay
+from RFCUtils import countAchievedGoals as _countAchievedGoals
+
+# BUG - Options - end
+import BugCore
+
+AdvisorOpt = BugCore.game.Advisors
+CustDomAdvOpt = BugCore.game.CustDomAdv
+TechWindowOpt = BugCore.game.TechWindow
+# BUG - Options - end
 
 # < Mercenaries Mod Start >
 import CvMercenaryManager
 
 # < Mercenaries Mod End >
 
+g_bIsScreenActive = -1
 
-# Rhye - start
-from RFCUtils import countAchievedGoals as _countAchievedGoals
-from RFCUtils import toggleStabilityOverlay as _toggleStabilityOverlay
-from RFCUtils import *  #  setLastRecordedStabilityStuff comes from RFC classic
 
-## World Builder ##
+gc = CyGlobalContext()
+
+## World Builder ## Platypedia
 import CvPlatyBuilderScreen
 import WBPlotScreen
 import WBEventScreen
@@ -71,43 +86,6 @@ import WBCorporationScreen
 import WBInfoScreen
 import WBTradeScreen
 
-# BUG - Options - end
-import BugCore
-
-AdvisorOpt = BugCore.game.Advisors
-CustDomAdvOpt = BugCore.game.CustDomAdv
-TechWindowOpt = BugCore.game.TechWindow
-# BUG - Options - end
-
-g_bIsScreenActive = -1
-
-
-def getStability(argsList):
-    return player(argsList[0]).getStability()
-
-
-def countAchievedGoals(argsList):
-    return _countAchievedGoals(argsList[0])
-
-
-def resetStabilityParameters(argsList):  # TODO is this actually used ? if not remove it
-    setLastRecordedStabilityStuff(0, 0)  # type: ignore
-    setLastRecordedStabilityStuff(1, 0)  # type: ignore
-    setLastRecordedStabilityStuff(2, 0)  # type: ignore
-    setLastRecordedStabilityStuff(3, 0)  # type: ignore
-    setLastRecordedStabilityStuff(4, 0)  # type: ignore
-    setLastRecordedStabilityStuff(5, 0)  # type: ignore
-
-
-# Rhye - end
-
-# Absinthe: stability overlay
-def toggleStabilityOverlay():
-    _toggleStabilityOverlay()
-
-
-# Absinthe: end
-
 
 def toggleSetNoScreens():
     global g_bIsScreenActive
@@ -121,11 +99,17 @@ def toggleSetScreenOn(argsList):
     g_bIsScreenActive = argsList[0]
 
 
+# diplomacyScreen = CvDiplomacy.CvDiplomacy()
+
 mainInterface = CvMainInterface.CvMainInterface()
 
 
 def showMainInterface():
     mainInterface.interfaceScreen()
+
+
+def reinitMainInterface():
+    mainInterface.initState()
 
 
 def numPlotListButtons():
@@ -199,6 +183,8 @@ def createFinanceAdvisor():
 
             financeAdvisor = BugFinanceAdvisor.BugFinanceAdvisor()
         else:
+            import CvFinanceAdvisor
+
             financeAdvisor = CvFinanceAdvisor.CvFinanceAdvisor()
         HandleInputMap[FINANCE_ADVISOR] = financeAdvisor
 
@@ -224,6 +210,8 @@ def createDomesticAdvisor():
 
             domesticAdvisor = CvCustomizableDomesticAdvisor.CvCustomizableDomesticAdvisor()
         else:
+            import CvDomesticAdvisor
+
             domesticAdvisor = CvDomesticAdvisor.CvDomesticAdvisor()
         HandleInputMap[DOMESTIC_ADVISOR] = domesticAdvisor
 
@@ -249,12 +237,14 @@ def createMilitaryAdvisor():
 
             militaryAdvisor = CvBUGMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
         else:
+            import CvMilitaryAdvisor
+
             militaryAdvisor = CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
         HandleInputMap[MILITARY_ADVISOR] = militaryAdvisor
 
 
 def showMilitaryAdvisor():
-    if -1 != CyGame().getActivePlayer():
+    if CyGame().getActivePlayer() > -1:
         if AdvisorOpt.isBUG_MA():
             # TODO: move to CvBUGMilitaryAdvisor.interfaceScreen()
             militaryAdvisor.IconGridActive = False
@@ -262,7 +252,6 @@ def showMilitaryAdvisor():
 
 
 # BUG - Military Advisor - end
-
 
 espionageAdvisor = CvEspionageAdvisor.CvEspionageAdvisor()
 
@@ -311,8 +300,7 @@ spaceShip = CvSpaceShipScreen.CvSpaceShipScreen()
 
 
 def showSpaceShip(argsList):
-    if -1 != CyGame().getActivePlayer():
-        spaceShip.interfaceScreen(argsList[0])
+    showVictoryScreen(argsList)
 
 
 replayScreen = CvReplayScreen.CvReplayScreen(REPLAY_SCREEN)
@@ -379,6 +367,8 @@ def createTechSplash():
 
             techSplashScreen = TechWindowWide.CvTechSplashScreen(TECH_SPLASH)
         else:
+            import CvTechSplashScreen
+
             techSplashScreen = CvTechSplashScreen.CvTechSplashScreen(TECH_SPLASH)
     HandleInputMap[TECH_SPLASH] = techSplashScreen
 
@@ -398,12 +388,11 @@ def showTechSplash(argsList):
 
 # BUG - Tech Splash Screen - end
 
-
 victoryScreen = CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 
 
 def showVictoryScreen():
-    if -1 != CyGame().getActivePlayer():
+    if CyGame().getActivePlayer() > -1:
         victoryScreen.interfaceScreen()
 
 
@@ -413,18 +402,30 @@ mercenaryManager = CvMercenaryManager.CvMercenaryManager(MERCENARY_MANAGER)
 
 def showMercenaryManager():
     mercenaryManager.interfaceScreen()
+    # < Mercenaries Mod End >
 
 
-# < Mercenaries Mod End >
+# Absinthe: stability overlay
+def toggleStabilityOverlay():
+    _toggleStabilityOverlay()
+
+
+def getStability(argsList):
+    return player(argsList[0]).getStability()
+
+
+def countAchievedGoals(argsList):
+    return _countAchievedGoals(argsList[0])
+
+
+### PEDIA
 
 pediaMainScreen = None
-bUsingSevopedia = False
 
 
 def createCivilopedia():
     """Creates the correct Civilopedia based on an option."""
     global pediaMainScreen
-    global bUsingSevopedia
     if pediaMainScreen is None:
         pediaMainScreen = CvPediaMain.CvPediaMain()
         HandleInputMap.update(
@@ -805,7 +806,7 @@ def forceScreenRedraw(argsList):
     if argsList[0] == MAIN_INTERFACE:
         mainInterface.redraw()
     elif argsList[0] == TECH_CHOOSER:
-        techChooser.updateTechRecords(True)
+        techChooser.updateTechRecords(true)
 
 
 def minimapClicked(argsList):
@@ -993,14 +994,14 @@ HandleCloseMap = {
 #######################################################################################
 HandleInputMap = {
     MAIN_INTERFACE: mainInterface,
-    DOMESTIC_ADVISOR: domesticAdvisor,
+    # 					DOMESTIC_ADVISOR : domesticAdvisor,
     RELIGION_SCREEN: religionScreen,
     CORPORATION_SCREEN: corporationScreen,
     CIVICS_SCREEN: civicScreen,
     TECH_CHOOSER: techChooser,
     FOREIGN_ADVISOR: foreignAdvisor,
-    FINANCE_ADVISOR: financeAdvisor,
-    MILITARY_ADVISOR: militaryAdvisor,
+    # 					FINANCE_ADVISOR : financeAdvisor,
+    # 					MILITARY_ADVISOR : militaryAdvisor,
     DAWN_OF_MAN: dawnOfMan,
     WONDER_MOVIE_SCREEN: wonderMovie,
     ERA_MOVIE_SCREEN: eraMovie,
@@ -1008,7 +1009,7 @@ HandleInputMap = {
     INTRO_MOVIE_SCREEN: introMovie,
     OPTIONS_SCREEN: optionsScreen,
     INFO_SCREEN: infoScreen,
-    TECH_SPLASH: techSplashScreen,
+    # TECH_SPLASH: techSplashScreen,
     REPLAY_SCREEN: replayScreen,
     VICTORY_SCREEN: victoryScreen,
     TOP_CIVS: topCivs,
@@ -1046,6 +1047,7 @@ HandleInputMap = {
 ## Handle Navigation Map
 #######################################################################################
 HandleNavigationMap = {}
+
 
 # BUG - Options - start
 def init():
