@@ -31,5 +31,8 @@
     "../../Assets/Python/PitBoss",
     "../../../Assets/Python/pyHelper"
   ],
-  "todo-tree.general.tags": ["HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]"]
+  "todo-tree.general.tags": ["HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]"],
+  "files.exclude": {
+    "Autolog": true
+  }
 }
