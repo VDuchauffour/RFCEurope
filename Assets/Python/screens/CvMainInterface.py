@@ -6124,6 +6124,7 @@ class CvMainInterface:
                         iExtraFood = -iFoodDifference
                     else:
                         iExtraFood = pHeadSelectedCity.getFood()
+                    iFirst = float(iDeltaFood) / float(pHeadSelectedCity.growthThreshold())
                     screen.setBarPercentage("PopulationBar", InfoBarTypes.INFOBAR_STORED, iFirst)
                     screen.setBarPercentage("PopulationBar", InfoBarTypes.INFOBAR_RATE, 0.0)
                     if iFirst == 1:
@@ -9064,7 +9065,9 @@ class CvMainInterface:
                                                     > 0
                                                 ):
                                                     cPlague = unichr(
-                                                        CyGame().getSymbolID(FontSymbols.PLAGUE_CHAR)
+                                                        CyGame().getSymbolID(
+                                                            FontSymbols.PLAGUE_CHAR
+                                                        )
                                                     )
                                                     szBuffer += cPlague
                                                     if bAlignIcons:
