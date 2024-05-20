@@ -1,10 +1,12 @@
 from CvPythonExtensions import *
 from CoreFunctions import get_data_from_upside_down_map, message, text
 from CoreStructures import human, player, team, cities
+import CvEspionageAdvisor
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
 import CvWBPopups
+from MiscData import MODNET_EVENTS
 import PyHelpers
 import Popup as PyPopup
 import CvCameraControls
@@ -175,11 +177,6 @@ class CvEventManager:
                 self.__eventEditCityNameApply,
                 self.__eventEditCityNameBegin,
             ),
-            CvUtil.EventEditCity: (
-                "EditCity",
-                self.__eventEditCityApply,
-                self.__eventEditCityBegin,
-            ),
             CvUtil.EventPlaceObject: (
                 "PlaceObject",
                 self.__eventPlaceObjectApply,
@@ -194,11 +191,6 @@ class CvEventManager:
                 "EditUnitName",
                 self.__eventEditUnitNameApply,
                 self.__eventEditUnitNameBegin,
-            ),
-            CvUtil.EventWBAllPlotsPopup: (
-                "WBAllPlotsPopup",
-                self.__eventWBAllPlotsPopupApply,
-                self.__eventWBAllPlotsPopupBegin,
             ),
             ## Platy Builder ##
             CvUtil.EventWBLandmarkPopup: (
@@ -237,16 +229,6 @@ class CvEventManager:
                 self.__eventWBScriptPopupBegin,
             ),
             ## Platy Builder ##
-            CvUtil.EventWBScriptPopup: (
-                "WBScriptPopup",
-                self.__eventWBScriptPopupApply,
-                self.__eventWBScriptPopupBegin,
-            ),
-            CvUtil.EventWBStartYearPopup: (
-                "WBStartYearPopup",
-                self.__eventWBStartYearPopupApply,
-                self.__eventWBStartYearPopupBegin,
-            ),
         }
 
     #################### EVENT STARTERS ######################
@@ -375,8 +357,20 @@ class CvEventManager:
 
     def onModNetMessage(self, argsList):
         "Called whenever CyMessageControl().sendModNetMessage() is called - this is all for you modders!"
-
         iData1, iData2, iData3, iData4, iData5 = argsList
+        if iData1 == MODNET_EVENTS["CHANGE_COMMERCE_PERCENT"]:
+            CommerceType = [
+                CommerceTypes.COMMERCE_GOLD,
+                CommerceTypes.COMMERCE_RESEARCH,
+                CommerceTypes.COMMERCE_CULTURE,
+                CommerceTypes.COMMERCE_ESPIONAGE,
+            ]
+            gc.getPlayer(iData2).changeCommercePercent(CommerceType[iData3], iData4)
+            if iData2 == CyGame().getActivePlayer():
+                screen = CvEspionageAdvisor.CvEspionageAdvisor().getScreen()
+                if screen.isActive():
+                    CvEspionageAdvisor.CvEspionageAdvisor().updateEspionageWeights()
+
         CvUtil.pyPrint("onModNetMessage")
 
     def onInit(self, argsList):
@@ -414,6 +408,7 @@ class CvEventManager:
         "Called at the start of the game"
 
         # Rhye - Dawn of Man must appear in late starts too
+        # Duplicate with Assets/Python/Contrib/CvAllErasDawnOfManScreenEventManager.py
         if (
             gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA")
             or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)
@@ -617,8 +612,8 @@ class CvEventManager:
             % (PyInfo.ImprovementInfo(iImprovement).getDescription(), iX, iY)
         )
         # Absinthe: Free walls if city is built on a fort
-        # 			This is a hack for it, checking what was the improvement before the city was built
-        # 			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
+        #             This is a hack for it, checking what was the improvement before the city was built
+        #             Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
         global iImpBeforeCity
         iImpBeforeCity = 10000 * iImprovement + 100 * iX + 1 * iY
 
@@ -939,6 +934,13 @@ class CvEventManager:
             and (iPlayer == game.getActivePlayer())
             and isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType())
         ):
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+            popupInfo.setData1(iBuildingType)
+            popupInfo.setData2(pCity.getID())
+            popupInfo.setData3(0)
+            popupInfo.setText(u"showWonderMovie")
+            popupInfo.addPopup(iPlayer)
             ## Platy Builder ##
             if not CyGame().GetWorldBuilderMode():
                 ## Platy Builder ##
@@ -948,7 +950,7 @@ class CvEventManager:
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setData3(0)
                 popupInfo.setText(u"showWonderMovie")
-                popupInfo.addPopup(iPlayer)
+                popupInfo.addPopup(pCity.getOwner())
 
         CvAdvisorUtils.buildingBuiltFeats(pCity, iBuildingType)
 
@@ -969,6 +971,14 @@ class CvEventManager:
         iPlayer = pCity.getOwner()
         game = gc.getGame()
         if (not game.isNetworkMultiPlayer()) and (iPlayer == game.getActivePlayer()):
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+            popupInfo.setData1(iProjectType)
+            popupInfo.setData2(pCity.getID())
+            popupInfo.setData3(2)
+            popupInfo.setText(u"showWonderMovie")
+            popupInfo.addPopup(iPlayer)
+
             ## Platy Builder ##
             if not CyGame().GetWorldBuilderMode():
                 ## Platy Builder ##
@@ -993,7 +1003,8 @@ class CvEventManager:
                             text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
                             color=MessageData.GREEN,
                         )
-        # Absinthe: Torre del Oro end
+                # Absinthe: Torre del Oro end
+                popupInfo.addPopup(pCity.getOwner())
 
     def onSelectionGroupPushMission(self, argsList):
         "selection group mission"
@@ -1801,13 +1812,13 @@ class CvEventManager:
 
         # Absinthe: Partisans! - not used currently
         # if city.getPopulation > 1 and iOwner != -1 and iPlayer != -1:
-        # 	owner = gc.getPlayer(iOwner)
-        # 	if not owner.isBarbarian() and owner.getNumCities() > 0:
-        # 		if gc.getTeam(owner.getTeam()).isAtWar(gc.getPlayer(iPlayer).getTeam()):
-        # 			if gc.getNumEventTriggerInfos() > 0: # prevents mods that don't have events from getting an error
-        # 				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
-        # 				if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
-        # 					triggerData = owner.initTriggeredData(iEvent, True, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
+        #     owner = gc.getPlayer(iOwner)
+        #     if not owner.isBarbarian() and owner.getNumCities() > 0:
+        #         if gc.getTeam(owner.getTeam()).isAtWar(gc.getPlayer(iPlayer).getTeam()):
+        #             if gc.getNumEventTriggerInfos() > 0: # prevents mods that don't have events from getting an error
+        #                 iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
+        #                 if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
+        #                     triggerData = owner.initTriggeredData(iEvent, True, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
         # Absinthe: end
 
     def onCityAcquired(self, argsList):
@@ -2241,6 +2252,36 @@ class CvEventManager:
 
     #################### TRIGGERED EVENTS ##################
 
+    def __eventEditCityNameBegin(self, city, bRename):
+        popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
+        popup.setUserData((city.getID(), bRename))
+        popup.setHeaderString(text("TXT_KEY_NAME_CITY"))
+        popup.setBodyString(text("TXT_KEY_SETTLE_NEW_CITY_NAME"))
+        # Absinthe: if not a rename, it should offer the CNM__eventEditCityBegin name as the default name
+        if bRename:
+            popup.createEditBox(city.getName())
+        else:
+            szName = get_data_from_upside_down_map(CITIES_MAP, city.getOwner(), city)
+            if szName == "-1":
+                popup.createEditBox(city.getName())
+            else:
+                szName = unicode(szName, "latin-1")  # type: ignore
+                popup.createEditBox(szName)
+        # Absinthe: end
+        popup.setEditBoxMaxCharCount(15)
+        popup.launch()
+
+    def __eventEditCityNameApply(self, playerID, userData, popupReturn):
+        "Edit City Name Event"
+        iCityID = userData[0]
+        bRename = userData[1]
+        player = gc.getPlayer(playerID)
+        city = player.getCity(iCityID)
+        cityName = popupReturn.getEditBoxString(0)
+        if len(cityName) > 30:
+            cityName = cityName[:30]
+        city.setName(cityName, not bRename)
+
     def __eventEditCityBegin(self, argsList):
         "Edit City Event"
         px, py = argsList
@@ -2278,66 +2319,7 @@ class CvEventManager:
         if getChtLvl() > 0:
             CvDebugTools.CvDebugTools().applyWonderMovie((popupReturn))
 
-    def __eventWBAllPlotsPopupBegin(self, argsList):
-        CvScreensInterface.getWorldBuilderScreen().allPlotsCB()
-        return
-
-    def __eventWBAllPlotsPopupApply(self, playerID, userData, popupReturn):
-        if popupReturn.getButtonClicked() >= 0:
-            CvScreensInterface.getWorldBuilderScreen().handleAllPlotsCB(popupReturn)
-        return
-
-    def __eventWBScriptPopupApply(self, playerID, userData, popupReturn):
-        sScript = popupReturn.getEditBoxString(0)
-        CyGame().setScriptData(CvUtil.convertToStr(sScript))
-        WBGameDataScreen.WBGameDataScreen(
-            CvPlatyBuilderScreen.CvWorldBuilderScreen()
-        ).placeScript()
-        return
-
-    def __eventWBStartYearPopupBegin(self, argsList):
-        popup = PyPopup.PyPopup(CvUtil.EventWBStartYearPopup, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.createSpinBox(0, "", gc.getGame().getStartYear(), 1, 5000, -5000)
-        popup.launch()
-        return
-
-    def __eventWBStartYearPopupApply(self, playerID, userData, popupReturn):
-        iStartYear = popupReturn.getSpinnerWidgetValue(int(0))
-        CvScreensInterface.getWorldBuilderScreen().setStartYearCB(iStartYear)
-        return
-
     ## Platy Builder ##
-
-    def __eventEditCityNameBegin(self, city, bRename):
-        popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setUserData((city.getID(), bRename))
-        popup.setHeaderString(text("TXT_KEY_NAME_CITY"))
-        popup.setBodyString(text("TXT_KEY_SETTLE_NEW_CITY_NAME"))
-        # Absinthe: if not a rename, it should offer the CNM__eventEditCityBegin name as the default name
-        if bRename:
-            popup.createEditBox(city.getName())
-        else:
-            szName = get_data_from_upside_down_map(CITIES_MAP, city.getOwner(), city)
-            if szName == "-1":
-                popup.createEditBox(city.getName())
-            else:
-                szName = unicode(szName, "latin-1")  # type: ignore
-                popup.createEditBox(szName)
-        # Absinthe: end
-        popup.setEditBoxMaxCharCount(15)
-        popup.launch()
-
-    def __eventEditCityNameApply(self, playerID, userData, popupReturn):
-        "Edit City Name Event"
-        iCityID = userData[0]
-        bRename = userData[1]
-        player = gc.getPlayer(playerID)
-        city = player.getCity(iCityID)
-        cityName = popupReturn.getEditBoxString(0)
-        if len(cityName) > 30:
-            cityName = cityName[:30]
-        city.setName(cityName, not bRename)
-
     def __eventEditUnitNameBegin(self, argsList):
         pUnit = argsList
         popup = PyPopup.PyPopup(CvUtil.EventEditUnitName, EventContextTypes.EVENTCONTEXT_ALL)
@@ -2356,6 +2338,32 @@ class CvEventManager:
             WBUnitScreen.WBUnitScreen(
                 CvPlatyBuilderScreen.CvWorldBuilderScreen()
             ).placeCurrentUnit()
+
+    def __eventEditCityNameBegin(self, city, bRename):
+        popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
+        popup.setUserData((city.getID(), bRename, CyGame().getActivePlayer()))
+        popup.setHeaderString(text("TXT_KEY_NAME_CITY"))
+        popup.setBodyString(text("TXT_KEY_SETTLE_NEW_CITY_NAME"))
+        # Absinthe: if not a rename, it should offer the CNM__eventEditCityBegin name as the default name
+        if bRename:
+            popup.createEditBox(city.getName())
+        else:
+            szName = get_data_from_upside_down_map(CITIES_MAP, city.getOwner(), city)
+            if szName == "-1":
+                popup.createEditBox(city.getName())
+            else:
+                szName = unicode(szName, "latin-1")  # type: ignore
+                popup.createEditBox(szName)
+        # Absinthe: end
+        popup.setEditBoxMaxCharCount(15)
+        popup.launch()
+
+    def __eventEditCityNameApply(self, playerID, userData, popupReturn):
+        city = gc.getPlayer(userData[2]).getCity(userData[0])
+        cityName = popupReturn.getEditBoxString(0)
+        city.setName(cityName, not userData[1])
+        if CyGame().GetWorldBuilderMode() and not CyGame().isInAdvancedStart():
+            WBCityEditScreen.WBCityEditScreen().placeStats()
 
     def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
         sScript = popupReturn.getEditBoxString(0)

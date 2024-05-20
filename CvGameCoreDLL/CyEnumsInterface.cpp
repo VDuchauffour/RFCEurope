@@ -372,7 +372,7 @@ void CyEnumsPythonInterface()
       .value("WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE",
              WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE)                              // Absinthe: mercenary upkeep
       .value("WIDGET_HELP_FINANCE_COLONY_UPKEEP", WIDGET_HELP_FINANCE_COLONY_UPKEEP) // Absinthe: colony upkeep
-
+      .value("WIDGET_HELP_REMOVE", WIDGET_HELP_REMOVE)
       .value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES);
 
   python::enum_<ButtonPopupTypes>("ButtonPopupTypes")
@@ -601,8 +601,18 @@ void CyEnumsPythonInterface()
       .value("MAP_CHAR", MAP_CHAR)
       .value("OCCUPATION_CHAR", OCCUPATION_CHAR)
       .value("POWER_CHAR", POWER_CHAR)
-      .value("STABLE_CHAR", STABLE_CHAR)
+      .value("COLLAPSING_CHAR", COLLAPSING_CHAR)
       .value("UNSTABLE_CHAR", UNSTABLE_CHAR)
+      .value("SHAKY_CHAR", SHAKY_CHAR)
+      .value("STABLE_CHAR", STABLE_CHAR)
+      .value("SOLID_CHAR", SOLID_CHAR)
+      .value("PLAGUE_CHAR", PLAGUE_CHAR)
+      .value("UP_CHAR", UP_CHAR)
+      .value("EQUAL_CHAR", EQUAL_CHAR)
+      .value("DOWN_CHAR", DOWN_CHAR)
+      .value("SUCCESS_CHAR", SUCCESS_CHAR)
+      .value("FAILURE_CHAR", FAILURE_CHAR)
+      .value("SCALES_CHAR", SCALES_CHAR)
       .value("MAX_NUM_SYMBOLS", MAX_NUM_SYMBOLS);
 
   python::enum_<HandicapTypes>("HandicapTypes").value("NO_HANDICAP", NO_HANDICAP);

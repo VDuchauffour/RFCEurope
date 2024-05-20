@@ -1,10 +1,10 @@
-# RFCEurope
+# RFCEurope Enhanced Edition (RFC3E)
 
 This repository contains a fork of the mod `RFCEurope` for Civilization IV: Beyond the Sword, based on the popular Rhye's and Fall of Civilization mod.
 
 This fork enhances the original mod with some changes:
 
-- add [Advanced Combat Odds](https://forums.civfanatics.com/threads/pieceofminds-advanced-combat-odds.310415/) mod (v2.01)
+- add [BUG Mod](https://forums.civfanatics.com/forums/civ4-bts-unaltered-gameplay-bug-bat-and-bull.268/) mod (v4.4)
 - add [Blue Marble](https://www.civfanatics.net/bluemarble/content/index.php) mod (v4.50)
 - add [RFC DoC soundtrack](https://github.com/dguenms/DoC-Soundtrack/) for middle east civilizations
 

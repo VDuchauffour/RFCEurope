@@ -59,24 +59,12 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
             7620: ("ChoseNewCrusadeTarget", self.crusadeApply7620, self.crusadeBegin7620),
             7621: ("Under Attack", self.crusadeApply7621, self.crusadeBegin7621),
             7622: ("ResurrectionEvent", self.rnfEventApply7622, self.rnfEventBegin7622),
-            7624: (
-                "ReformationEvent",
-                self.relEventApply7624,
-                self.relEventBegin7624,
-            ),  ### Reformation Begin ###
+            7624: ("ReformationEvent", self.relEventApply7624, self.relEventBegin7624),
             7625: ("DefensiveCrusadeEvent", self.crusadeApply7625, self.crusadeBegin7625),
             7626: ("CounterReformationEvent", self.relEventApply7626, self.relEventBegin7626),
             7627: ("CounterReformationEvent", self.barbEventApply7627, self.barbEventBegin7627),
-            7628: (
-                "Religious Persecution",
-                self.relEventApply7628,
-                self.relEventBegin7628,
-            ),  # Absinthe: persecution popup
-            7629: (
-                "Free Religious Revolution",
-                self.relEventApply7629,
-                self.relEventBegin7629,
-            ),  # Absinthe: free religion change
+            7628: ("Religious Persecution", self.relEventApply7628, self.relEventBegin7628),
+            7629: ("Free Religious Revolution", self.relEventApply7629, self.relEventBegin7629),
         }
 
         # --> INSERT EVENT HANDLER INITIALIZATION HERE <--

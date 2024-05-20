@@ -240,7 +240,7 @@ class CvWorldBuilderScreen:
 
     def refreshReveal(self):
         CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-        for i in xrange(CyMap().numPlots()):  # type: ignore
+        for i in xrange(CyMap().numPlots()):
             pPlot = CyMap().plotByIndex(i)
             if pPlot.isNone():
                 continue
@@ -248,13 +248,13 @@ class CvWorldBuilderScreen:
 
     def refreshStartingPlots(self):
         CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-        for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+        for iPlayerX in xrange(gc.getMAX_PLAYERS()):
             pPlayerX = gc.getPlayer(iPlayerX)
             pPlot = pPlayerX.getStartingPlot()
             if not pPlot.isNone():
-                sColor = "COLOR_MAGENTA"
-                if iPlayerX == self.m_iCurrentPlayer:
-                    sColor = "COLOR_BLACK"
+                sColor = gc.getColorInfo(
+                    gc.getPlayerColorInfo(pPlayerX.getPlayerColor()).getColorTypePrimary()
+                ).getType()
                 CyEngine().fillAreaBorderPlotAlt(
                     pPlot.getX(),
                     pPlot.getY(),
@@ -1805,12 +1805,10 @@ class CvWorldBuilderScreen:
             screen.deleteWidget("SensibilityCheck")
             ## Panel Screen ##
             nRows = 1
-            if (
-                self.iPlayerAddMode in self.PlayerMode
-                or self.iPlayerAddMode in self.RevealMode
-                or self.iPlayerAddMode in self.MapMode
-            ):
+            if self.iPlayerAddMode in self.PlayerMode or self.iPlayerAddMode in self.RevealMode:
                 nRows = 3
+            elif self.iPlayerAddMode in self.MapMode:
+                nRows = 4
             iHeight = 16 + iAdjust * nRows
             iXStart = screen.getXResolution() - iScreenWidth
             screen.addPanel(
@@ -1854,7 +1852,7 @@ class CvWorldBuilderScreen:
                     -1,
                     FontTypes.GAME_FONT,
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):
                     if gc.getPlayer(iPlayer).isEverAlive():
                         sName = gc.getPlayer(iPlayer).getName()
                         if not gc.getPlayer(iPlayer).isAlive():
@@ -2076,7 +2074,7 @@ class CvWorldBuilderScreen:
                     gc.getBARBARIAN_PLAYER(),
                     self.m_iCurrentPlayer == gc.getBARBARIAN_PLAYER(),
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):
                     if iPlayer == gc.getBARBARIAN_PLAYER():
                         continue
                     if gc.getPlayer(iPlayer).isEverAlive():
@@ -2298,7 +2296,7 @@ class CvWorldBuilderScreen:
                     -1,
                     FontTypes.GAME_FONT,
                 )
-                for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+                for iPlayer in xrange(gc.getMAX_PLAYERS()):
                     if gc.getPlayer(iPlayer).isEverAlive():
                         sName = gc.getPlayer(iPlayer).getName()
                         if not gc.getPlayer(iPlayer).isAlive():

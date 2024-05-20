@@ -1,8 +1,8 @@
 [tool.black]
 line-length = 99
-skip_magic_trailing_comma = true
+skip_magic_trailing_comma = false
 target-version = ["py27"]
-extend-exclude = """
+force-exclude = """
 /(
   | Assets/Python/data/maps/
   | Assets/Python/BUFFY/
@@ -10,7 +10,7 @@ extend-exclude = """
   | Assets/Python/Contrib/
   | Assets/Python/pyHelper/
   | Assets/Python/CvUtil.py
-)
+)/
 """
 
 [tool.ruff]
@@ -30,7 +30,7 @@ ignore = [
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
-extend-exclude = [
+exclude = [
   "Docs/Tools/*.py",
   "Assets/Python/data/maps/*.py",
   "Assets/Python/BUFFY/",
@@ -54,6 +54,7 @@ executionEnvironments = [
     "Assets/Python/EntryPoints",
     "Assets/Python/pyWB",
     "Assets/Python/screens",
+    "Assets/Python/screens/PlatyBuilder/",
     "Assets/Python/BUFFY/",
     "Assets/Python/BUG/",
     "Assets/Python/Contrib/",

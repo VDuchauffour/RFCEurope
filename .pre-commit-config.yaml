@@ -47,6 +47,15 @@ repos:
     rev: 21.12b0
     hooks:
       - id: black
-        args: ["--config", "pyproject.toml", "-C"]
+        args: ["--config", "pyproject.toml"]
         additional_dependencies:
           - click==8.0
+        exclude: |
+          (?x)^(
+              Assets/Python/data/maps/.* |
+              Assets/Python/BUFFY/.* |
+              Assets/Python/BUG/.* |
+              Assets/Python/Contrib/.* |
+              Assets/Python/pyHelper/.* |
+              Assets/Python/CvUtil.py
+          )$

@@ -1,9 +1,11 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+# ruff: noqa: F401, F811
 from CoreStructures import player
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser
+import CvForeignAdvisor
 import CvExoticForeignAdvisor
 import CvMilitaryAdvisor
 import CvFinanceAdvisor
@@ -31,26 +33,39 @@ import CvEraMovieScreen
 import CvSpaceShipScreen
 
 import CvPediaMain
+import CvPediaHistory
 
+import CvDebugTools
 import CvDebugInfoScreen
 
+import CvUtil
+import CvEventInterface
 import CvScreenUtilsInterface
 import ScreenInput as PyScreenInput
 from CvScreenEnums import *
 from CvPythonExtensions import *
+from RFCUtils import toggleStabilityOverlay as _toggleStabilityOverlay
+from RFCUtils import countAchievedGoals as _countAchievedGoals
+
+# BUG - Options - end
+import BugCore
+
+AdvisorOpt = BugCore.game.Advisors
+CustDomAdvOpt = BugCore.game.CustDomAdv
+TechWindowOpt = BugCore.game.TechWindow
+# BUG - Options - end
 
 # < Mercenaries Mod Start >
 import CvMercenaryManager
 
 # < Mercenaries Mod End >
 
+g_bIsScreenActive = -1
 
-# Rhye - start
-from RFCUtils import countAchievedGoals as _countAchievedGoals
-from RFCUtils import toggleStabilityOverlay as _toggleStabilityOverlay
-from RFCUtils import *  #  setLastRecordedStabilityStuff comes from RFC classic
 
-## World Builder ##
+gc = CyGlobalContext()
+
+## World Builder ## Platypedia
 import CvPlatyBuilderScreen
 import WBPlotScreen
 import WBEventScreen
@@ -71,35 +86,6 @@ import WBCorporationScreen
 import WBInfoScreen
 import WBTradeScreen
 
-g_bIsScreenActive = -1
-
-
-def getStability(argsList):
-    return player(argsList[0]).getStability()
-
-
-def countAchievedGoals(argsList):
-    return _countAchievedGoals(argsList[0])
-
-
-def resetStabilityParameters(argsList):  # TODO is this actually used ? if not remove it
-    setLastRecordedStabilityStuff(0, 0)  # type: ignore
-    setLastRecordedStabilityStuff(1, 0)  # type: ignore
-    setLastRecordedStabilityStuff(2, 0)  # type: ignore
-    setLastRecordedStabilityStuff(3, 0)  # type: ignore
-    setLastRecordedStabilityStuff(4, 0)  # type: ignore
-    setLastRecordedStabilityStuff(5, 0)  # type: ignore
-
-
-# Rhye - end
-
-# Absinthe: stability overlay
-def toggleStabilityOverlay():
-    _toggleStabilityOverlay()
-
-
-# Absinthe: end
-
 
 def toggleSetNoScreens():
     global g_bIsScreenActive
@@ -113,11 +99,17 @@ def toggleSetScreenOn(argsList):
     g_bIsScreenActive = argsList[0]
 
 
+# diplomacyScreen = CvDiplomacy.CvDiplomacy()
+
 mainInterface = CvMainInterface.CvMainInterface()
 
 
 def showMainInterface():
     mainInterface.interfaceScreen()
+
+
+def reinitMainInterface():
+    mainInterface.initState()
 
 
 def numPlotListButtons():
@@ -178,7 +170,26 @@ def showForeignAdvisorScreen(argsList):
         foreignAdvisor.interfaceScreen(argsList[0])
 
 
-financeAdvisor = CvFinanceAdvisor.CvFinanceAdvisor()
+# BUG - Finance Advisor - start
+financeAdvisor = None
+
+
+def createFinanceAdvisor():
+    """Creates the correct Finance Advisor based on an option."""
+    global financeAdvisor
+    if financeAdvisor is None:
+        if AdvisorOpt.isBugFinanceAdvisor():
+            import BugFinanceAdvisor
+
+            financeAdvisor = BugFinanceAdvisor.BugFinanceAdvisor()
+        else:
+            import CvFinanceAdvisor
+
+            financeAdvisor = CvFinanceAdvisor.CvFinanceAdvisor()
+        HandleInputMap[FINANCE_ADVISOR] = financeAdvisor
+
+
+# BUG - Finance Advisor - end
 
 
 def showFinanceAdvisor():
@@ -186,7 +197,26 @@ def showFinanceAdvisor():
         financeAdvisor.interfaceScreen()
 
 
-domesticAdvisor = CvDomesticAdvisor.CvDomesticAdvisor()
+# BUG - CustDomAdv - start
+domesticAdvisor = None
+
+
+def createDomesticAdvisor():
+    """Creates the correct Domestic Advisor based on an option."""
+    global domesticAdvisor
+    if domesticAdvisor is None:
+        if CustDomAdvOpt.isEnabled():
+            import CvCustomizableDomesticAdvisor
+
+            domesticAdvisor = CvCustomizableDomesticAdvisor.CvCustomizableDomesticAdvisor()
+        else:
+            import CvDomesticAdvisor
+
+            domesticAdvisor = CvDomesticAdvisor.CvDomesticAdvisor()
+        HandleInputMap[DOMESTIC_ADVISOR] = domesticAdvisor
+
+
+# BUG - CustDomAdv - end
 
 
 def showDomesticAdvisor(argsList):
@@ -194,13 +224,34 @@ def showDomesticAdvisor(argsList):
         domesticAdvisor.interfaceScreen()
 
 
-militaryAdvisor = CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
+# BUG - Military Advisor - start
+militaryAdvisor = None
+
+
+def createMilitaryAdvisor():
+    """Creates the correct Military Advisor based on an option."""
+    global militaryAdvisor
+    if militaryAdvisor is None:
+        if AdvisorOpt.isBUG_MA():
+            import CvBUGMilitaryAdvisor
+
+            militaryAdvisor = CvBUGMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
+        else:
+            import CvMilitaryAdvisor
+
+            militaryAdvisor = CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
+        HandleInputMap[MILITARY_ADVISOR] = militaryAdvisor
 
 
 def showMilitaryAdvisor():
     if CyGame().getActivePlayer() > -1:
+        if AdvisorOpt.isBUG_MA():
+            # TODO: move to CvBUGMilitaryAdvisor.interfaceScreen()
+            militaryAdvisor.IconGridActive = False
         militaryAdvisor.interfaceScreen()
 
+
+# BUG - Military Advisor - end
 
 espionageAdvisor = CvEspionageAdvisor.CvEspionageAdvisor()
 
@@ -249,8 +300,7 @@ spaceShip = CvSpaceShipScreen.CvSpaceShipScreen()
 
 
 def showSpaceShip(argsList):
-    if -1 != CyGame().getActivePlayer():
-        spaceShip.interfaceScreen(argsList[0])
+    showVictoryScreen(argsList)
 
 
 replayScreen = CvReplayScreen.CvReplayScreen(REPLAY_SCREEN)
@@ -300,18 +350,49 @@ def showDebugInfoScreen():
     debugInfoScreen.interfaceScreen()
 
 
-techSplashScreen = CvTechSplashScreen.CvTechSplashScreen(TECH_SPLASH)
+# BUG - Tech Splash Screen - start
+techSplashScreen = None
+
+
+def createTechSplash():
+    """Creates the correct Tech Splash Screen based on an option."""
+    global techSplashScreen
+    if techSplashScreen is None:
+        if TechWindowOpt.isDetailedView():
+            import TechWindow
+
+            techSplashScreen = TechWindow.CvTechSplashScreen(TECH_SPLASH)
+        elif TechWindowOpt.isWideView():
+            import TechWindowWide
+
+            techSplashScreen = TechWindowWide.CvTechSplashScreen(TECH_SPLASH)
+        else:
+            import CvTechSplashScreen
+
+            techSplashScreen = CvTechSplashScreen.CvTechSplashScreen(TECH_SPLASH)
+    HandleInputMap[TECH_SPLASH] = techSplashScreen
+
+
+def deleteTechSplash(option=None, value=None):
+    global techSplashScreen
+    techSplashScreen = None
+    if TECH_SPLASH in HandleInputMap:
+        del HandleInputMap[TECH_SPLASH]
 
 
 def showTechSplash(argsList):
+    if techSplashScreen is None:
+        createTechSplash()
     techSplashScreen.interfaceScreen(argsList[0])
 
+
+# BUG - Tech Splash Screen - end
 
 victoryScreen = CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 
 
 def showVictoryScreen():
-    if -1 != CyGame().getActivePlayer():
+    if CyGame().getActivePlayer() > -1:
         victoryScreen.interfaceScreen()
 
 
@@ -321,14 +402,74 @@ mercenaryManager = CvMercenaryManager.CvMercenaryManager(MERCENARY_MANAGER)
 
 def showMercenaryManager():
     mercenaryManager.interfaceScreen()
+    # < Mercenaries Mod End >
 
 
-# < Mercenaries Mod End >
+# Absinthe: stability overlay
+def toggleStabilityOverlay():
+    _toggleStabilityOverlay()
 
-#################################################
-## Civilopedia
-#################################################
-pediaMainScreen = CvPediaMain.CvPediaMain()
+
+def getStability(argsList):
+    return player(argsList[0]).getStability()
+
+
+def countAchievedGoals(argsList):
+    return _countAchievedGoals(argsList[0])
+
+
+### PEDIA
+
+pediaMainScreen = None
+
+
+def createCivilopedia():
+    """Creates the correct Civilopedia based on an option."""
+    global pediaMainScreen
+    if pediaMainScreen is None:
+        pediaMainScreen = CvPediaMain.CvPediaMain()
+        HandleInputMap.update(
+            {
+                PEDIA_MAIN: pediaMainScreen,
+                PEDIA_TECH: pediaMainScreen,
+                PEDIA_UNIT: pediaMainScreen,
+                PEDIA_BUILDING: pediaMainScreen,
+                PEDIA_PROMOTION: pediaMainScreen,
+                PEDIA_PROJECT: pediaMainScreen,
+                PEDIA_UNIT_CHART: pediaMainScreen,
+                PEDIA_BONUS: pediaMainScreen,
+                PEDIA_IMPROVEMENT: pediaMainScreen,
+                PEDIA_TERRAIN: pediaMainScreen,
+                PEDIA_FEATURE: pediaMainScreen,
+                PEDIA_CIVIC: pediaMainScreen,
+                PEDIA_CIVILIZATION: pediaMainScreen,
+                PEDIA_LEADER: pediaMainScreen,
+                PEDIA_RELIGION: pediaMainScreen,
+                PEDIA_CORPORATION: pediaMainScreen,
+                PEDIA_HISTORY: pediaMainScreen,
+            }
+        )
+        global HandleNavigationMap
+        HandleNavigationMap = {
+            MAIN_INTERFACE: mainInterface,
+            PEDIA_MAIN: pediaMainScreen,
+            PEDIA_TECH: pediaMainScreen,
+            PEDIA_UNIT: pediaMainScreen,
+            PEDIA_BUILDING: pediaMainScreen,
+            PEDIA_PROMOTION: pediaMainScreen,
+            PEDIA_PROJECT: pediaMainScreen,
+            PEDIA_UNIT_CHART: pediaMainScreen,
+            PEDIA_BONUS: pediaMainScreen,
+            PEDIA_IMPROVEMENT: pediaMainScreen,
+            PEDIA_TERRAIN: pediaMainScreen,
+            PEDIA_FEATURE: pediaMainScreen,
+            PEDIA_CIVIC: pediaMainScreen,
+            PEDIA_CIVILIZATION: pediaMainScreen,
+            PEDIA_LEADER: pediaMainScreen,
+            PEDIA_HISTORY: pediaMainScreen,
+            PEDIA_RELIGION: pediaMainScreen,
+            PEDIA_CORPORATION: pediaMainScreen,
+        }
 
 
 def linkToPedia(argsList):
@@ -336,6 +477,7 @@ def linkToPedia(argsList):
 
 
 def pediaShow():
+    createCivilopedia()
     return pediaMainScreen.pediaShow()
 
 
@@ -344,7 +486,7 @@ def pediaBack():
 
 
 def pediaForward():
-    pediaMainScreen.forward()
+    return pediaMainScreen.forward()
 
 
 def pediaMain(argsList):
@@ -664,7 +806,7 @@ def forceScreenRedraw(argsList):
     if argsList[0] == MAIN_INTERFACE:
         mainInterface.redraw()
     elif argsList[0] == TECH_CHOOSER:
-        techChooser.updateTechRecords(True)
+        techChooser.updateTechRecords(true)
 
 
 def minimapClicked(argsList):
@@ -852,14 +994,14 @@ HandleCloseMap = {
 #######################################################################################
 HandleInputMap = {
     MAIN_INTERFACE: mainInterface,
-    DOMESTIC_ADVISOR: domesticAdvisor,
+    # 					DOMESTIC_ADVISOR : domesticAdvisor,
     RELIGION_SCREEN: religionScreen,
     CORPORATION_SCREEN: corporationScreen,
     CIVICS_SCREEN: civicScreen,
     TECH_CHOOSER: techChooser,
     FOREIGN_ADVISOR: foreignAdvisor,
-    FINANCE_ADVISOR: financeAdvisor,
-    MILITARY_ADVISOR: militaryAdvisor,
+    # 					FINANCE_ADVISOR : financeAdvisor,
+    # 					MILITARY_ADVISOR : militaryAdvisor,
     DAWN_OF_MAN: dawnOfMan,
     WONDER_MOVIE_SCREEN: wonderMovie,
     ERA_MOVIE_SCREEN: eraMovie,
@@ -867,7 +1009,7 @@ HandleInputMap = {
     INTRO_MOVIE_SCREEN: introMovie,
     OPTIONS_SCREEN: optionsScreen,
     INFO_SCREEN: infoScreen,
-    TECH_SPLASH: techSplashScreen,
+    # TECH_SPLASH: techSplashScreen,
     REPLAY_SCREEN: replayScreen,
     VICTORY_SCREEN: victoryScreen,
     TOP_CIVS: topCivs,
@@ -875,29 +1017,11 @@ HandleInputMap = {
     VICTORY_MOVIE_SCREEN: victoryMovie,
     ESPIONAGE_ADVISOR: espionageAdvisor,
     DAN_QUAYLE_SCREEN: danQuayleScreen,
-    PEDIA_MAIN: pediaMainScreen,
-    PEDIA_TECH: pediaMainScreen,
-    PEDIA_UNIT: pediaMainScreen,
-    PEDIA_BUILDING: pediaMainScreen,
-    PEDIA_PROMOTION: pediaMainScreen,
-    PEDIA_PROJECT: pediaMainScreen,
-    PEDIA_UNIT_CHART: pediaMainScreen,
-    PEDIA_BONUS: pediaMainScreen,
-    PEDIA_IMPROVEMENT: pediaMainScreen,
-    PEDIA_TERRAIN: pediaMainScreen,
-    PEDIA_FEATURE: pediaMainScreen,
-    PEDIA_CIVIC: pediaMainScreen,
-    PEDIA_CIVILIZATION: pediaMainScreen,
-    PEDIA_LEADER: pediaMainScreen,
-    PEDIA_RELIGION: pediaMainScreen,
-    PEDIA_CORPORATION: pediaMainScreen,
-    PEDIA_HISTORY: pediaMainScreen,
-    WORLDBUILDER_SCREEN: worldBuilderScreen,
-    DEBUG_INFO_SCREEN: debugInfoScreen,
-    # add new screens here
     # < Mercenaries Mod Start >
     MERCENARY_MANAGER: mercenaryManager,
     # < Mercenaries Mod End   >
+    WORLDBUILDER_SCREEN: worldBuilderScreen,
+    DEBUG_INFO_SCREEN: debugInfoScreen,
     ## World Builder ##
     WB_PLOT: WBPlotScreen.WBPlotScreen(),
     WB_EVENT: WBEventScreen.WBEventScreen(),
@@ -922,24 +1046,16 @@ HandleInputMap = {
 #######################################################################################
 ## Handle Navigation Map
 #######################################################################################
-HandleNavigationMap = {
-    MAIN_INTERFACE: mainInterface,
-    PEDIA_MAIN: pediaMainScreen,
-    PEDIA_TECH: pediaMainScreen,
-    PEDIA_UNIT: pediaMainScreen,
-    PEDIA_BUILDING: pediaMainScreen,
-    PEDIA_PROMOTION: pediaMainScreen,
-    PEDIA_PROJECT: pediaMainScreen,
-    PEDIA_UNIT_CHART: pediaMainScreen,
-    PEDIA_BONUS: pediaMainScreen,
-    PEDIA_IMPROVEMENT: pediaMainScreen,
-    PEDIA_TERRAIN: pediaMainScreen,
-    PEDIA_FEATURE: pediaMainScreen,
-    PEDIA_CIVIC: pediaMainScreen,
-    PEDIA_CIVILIZATION: pediaMainScreen,
-    PEDIA_LEADER: pediaMainScreen,
-    PEDIA_HISTORY: pediaMainScreen,
-    PEDIA_RELIGION: pediaMainScreen,
-    PEDIA_CORPORATION: pediaMainScreen
-    # add new screens here
-}
+HandleNavigationMap = {}
+
+
+# BUG - Options - start
+def init():
+    createDomesticAdvisor()
+    createFinanceAdvisor()
+    createMilitaryAdvisor()
+    createCivilopedia()
+    createTechSplash()
+
+
+# BUG - Options - end

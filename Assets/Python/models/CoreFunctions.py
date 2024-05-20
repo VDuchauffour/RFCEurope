@@ -16,6 +16,7 @@ try:
         PlayerTypes,
         TeamTypes,
         DirectionTypes,
+        CyGame,
     )
     import Popup
 
@@ -219,6 +220,18 @@ def text_if_exists(key, *format, **kwargs):
 
 def colortext(key, color, *format):
     return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
+
+
+def font_text(text, fontsize=2):
+    return u"<font=%s>%s</font>" % (str(fontsize), text)
+
+
+def symbol(identifier):
+    return unichr(CyGame().getSymbolID(identifier))  # noqa: F821
+
+
+def font_symbol(iSymbol, fontsize=2):
+    return font_text(symbol(iSymbol), fontsize)
 
 
 def show(message, *format):

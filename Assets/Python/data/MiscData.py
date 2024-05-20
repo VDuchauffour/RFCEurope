@@ -1,10 +1,12 @@
 from BaseStructures import CompanyDataMapper, EnumDataMapper
-from CoreTypes import Building, Civ, Company, Religion, Unit, Wonder
+from CoreTypes import Building, Civ, Company, Religion, Technology, Unit, Wonder
 
 PLAGUE_IMMUNITY = 20
 GREAT_PROPHET_FAITH_POINT_BONUS = 8
 NUM_CRUSADES = 6
 PROSECUTOR_UNITCLASS = 53
+
+REVEAL_DATE_TECHNOLOGY = Technology.MAPMAKING
 
 MERCENARY_ONLY_UNITS = [
     Unit.CONDOTTIERI,
@@ -238,3 +240,7 @@ HISTORICAL_ENEMIES = [
     (Civ.AUSTRIA, Civ.GERMANY, 10),
     (Civ.GERMANY, Civ.AUSTRIA, -10),
 ]
+
+MODNET_EVENTS = {
+    "CHANGE_COMMERCE_PERCENT": 1200,
+}

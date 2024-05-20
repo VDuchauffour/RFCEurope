@@ -1,80 +1,123 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import text
-from PyHelpers import PyPlayer
-import CvUtil
 import CvScreenEnums
+import CvUtil
+from MiscData import MODNET_EVENTS
 
-# globals
 gc = CyGlobalContext()
-ArtFileMgr = CyArtFileMgr()
 
 
 class CvEspionageAdvisor:
     def __init__(self):
-        self.SCREEN_NAME = "EspionageAdvisor"
-        self.DEBUG_DROPDOWN_ID = "EspionageAdvisorDropdownWidget"
-        self.WIDGET_ID = "EspionageAdvisorWidget"
-        self.WIDGET_HEADER = "EspionageAdvisorWidgetHeader"
-        self.EXIT_ID = "EspionageAdvisorExitWidget"
-        self.BACKGROUND_ID = "EspionageAdvisorBackground"
-        self.X_SCREEN = 500
-        self.Y_SCREEN = 396
+
         self.W_SCREEN = 1024
-        self.H_SCREEN = 768
-        self.Y_TITLE = 12
-        self.BORDER_WIDTH = 4
-        self.PANE_HEIGHT = 450
-        self.PANE_WIDTH = 283
-        self.X_SLIDERS = 50
-        self.X_INCOME = 373
-        self.X_EXPENSES = 696
-        self.Y_TREASURY = 90
-        self.H_TREASURY = 100
-        self.Y_LOCATION = 230
-        self.Y_SPACING = 30
-        self.TEXT_MARGIN = 15
-        self.Z_BACKGROUND = -2.1
-        self.Z_CONTROLS = self.Z_BACKGROUND - 0.2
-        self.DZ = -0.2
+        self.H_SCREEN = 640
 
-        self.X_EXIT = 994
-        self.Y_EXIT = 726
+        self.W_TOP_PANEL = self.W_SCREEN
+        self.H_TOP_PANEL = 55
+        self.X_TOP_PANEL = 0
+        self.Y_TOP_PANEL = -2
 
-        self.nWidgetCount = 0
+        self.W_BOTTOM_PANEL = self.W_SCREEN
+        self.H_BOTTOM_PANEL = 55
+        self.X_BOTTOM_PANEL = 0
+        self.Y_BOTTOM_PANEL = self.H_SCREEN - self.H_BOTTOM_PANEL
 
-        self.iDirtyBit = 0
+        self.X_TITLE = self.X_TOP_PANEL + (self.W_TOP_PANEL / 2)
+        self.Y_TITLE = self.Y_TOP_PANEL + 14
+
+        self.ICON_SIZE = 48
+        self.MARGIN_SIZE = 10
+        self.WEIGHT_BUTTON_SIZE = self.ICON_SIZE / 3
+        self.LINE_SPACING = (self.ICON_SIZE / 3) + 1
+
+        self.X_LEFT_PANE = self.MARGIN_SIZE
+        self.Y_LEFT_PANE = self.Y_TOP_PANEL + self.H_TOP_PANEL + self.MARGIN_SIZE + 3
+        self.W_LEFT_PANE = 460
+        self.H_LEFT_PANE = self.Y_BOTTOM_PANEL - self.Y_LEFT_PANE - self.MARGIN_SIZE - 4
+
+        self.X_PLAYER_INFO = self.ICON_SIZE + 5
+        self.Y_PLAYER_INFO = -1
+        self.W_PLAYER_INFO = self.W_LEFT_PANE - 40
+        self.H_PLAYER_INFO = self.ICON_SIZE + 12
+
+        self.X_RIVAL_STATS = self.W_PLAYER_INFO - 120  # Left Side
+        self.X_PLAYER_STATS = self.W_PLAYER_INFO - 20  # Right Side
+
+        self.X_GREAT_SPY_BAR = self.X_LEFT_PANE + self.W_LEFT_PANE
+        self.Y_GREAT_SPY_BAR = self.Y_TOP_PANEL + self.H_TOP_PANEL + self.MARGIN_SIZE - 5
+        self.W_GREAT_SPY_BAR = self.W_SCREEN - self.X_GREAT_SPY_BAR - 10
+        self.H_GREAT_SPY_BAR = 32
+
+        self.X_RIGHT_PANE = self.X_GREAT_SPY_BAR
+        self.Y_RIGHT_PANE = self.Y_GREAT_SPY_BAR + self.H_GREAT_SPY_BAR
+        self.W_RIGHT_PANE = self.W_GREAT_SPY_BAR
+        self.H_RIGHT_PANE = self.Y_BOTTOM_PANEL - self.Y_RIGHT_PANE - self.MARGIN_SIZE
+
+        self.X_CITY_LIST = self.X_RIGHT_PANE + 20
+        self.Y_CITY_LIST = self.Y_RIGHT_PANE + 20
+        self.W_CITY_LIST = 250
+        self.H_CITY_LIST = self.H_RIGHT_PANE - 76
+
+        self.X_PASSIVE_MISSIONS = self.X_CITY_LIST + self.W_CITY_LIST + 20
+        self.Y_PASSIVE_MISSIONS = self.Y_CITY_LIST
+        self.W_PASSIVE_MISSIONS = self.W_RIGHT_PANE - self.W_CITY_LIST - 60
+        self.H_PASSIVE_MISSIONS = 144
+
+        self.X_ACTIVE_MISSIONS = self.X_PASSIVE_MISSIONS
+        self.Y_ACTIVE_MISSIONS = self.Y_CITY_LIST + self.H_PASSIVE_MISSIONS + 20
+        self.W_ACTIVE_MISSIONS = self.W_PASSIVE_MISSIONS
+        self.H_ACTIVE_MISSIONS = self.H_RIGHT_PANE - self.H_PASSIVE_MISSIONS - 60
+
+        self.X_GO_TO_CITY = self.X_CITY_LIST - 2
+        self.Y_GO_TO_CITY = self.Y_CITY_LIST + self.H_CITY_LIST + 8
+        self.W_GO_TO_CITY = 120
+        self.H_GO_TO_CITY = 31
+
+        self.W_INVESTIGATE_CITY = self.W_GO_TO_CITY
+        self.H_INVESTIGATE_CITY = self.H_GO_TO_CITY
+        self.X_INVESTIGATE_CITY = self.X_CITY_LIST + self.W_CITY_LIST - self.W_INVESTIGATE_CITY + 2
+        self.Y_INVESTIGATE_CITY = self.Y_GO_TO_CITY
+
+        self.X_WEIGHT_RESET = self.X_BOTTOM_PANEL + self.MARGIN_SIZE + 5
+        self.Y_WEIGHT_RESET = self.Y_BOTTOM_PANEL + 17
+        self.W_WEIGHT_RESET = 120
+        self.H_WEIGHT_RESET = 31
+
+        self.X_WEIGHT_INCREMENT = self.X_WEIGHT_RESET + self.W_WEIGHT_RESET + self.MARGIN_SIZE
+        self.Y_WEIGHT_INCREMENT = self.Y_WEIGHT_RESET
+        self.W_WEIGHT_INCREMENT = 120
+
+        self.X_EXIT = self.W_BOTTOM_PANEL - 25
+        self.Y_EXIT = self.Y_BOTTOM_PANEL + 20
 
         self.iTargetPlayer = -1
-
-        self.iActiveCityID = -1
-        self.iSelectedMission = -1
+        self.iTargetCity = -1
+        self.iMission = 3  # City Visibility
+        self.iIncrement = 1
+        self.CitySpies = []
 
     def getScreen(self):
-        return CyGInterfaceScreen(self.SCREEN_NAME, CvScreenEnums.ESPIONAGE_ADVISOR)
+        return CyGInterfaceScreen("EspionageAdvisor", CvScreenEnums.ESPIONAGE_ADVISOR)
 
     def interfaceScreen(self):
-
-        self.iTargetPlayer = -1
-        self.iActiveCityID = -1
-        self.iSelectedMission = -1
         self.iActivePlayer = CyGame().getActivePlayer()
+        self.pActivePlayer = gc.getPlayer(self.iActivePlayer)
+        self.iActiveTeam = self.pActivePlayer.getTeam()
+        self.pActiveTeam = gc.getTeam(self.iActiveTeam)
 
         screen = self.getScreen()
         if screen.isActive():
             return
+
         screen.setRenderInterfaceOnly(True)
+        screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
         screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-        # Set the background and exit button, and show the screen
-        screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
-
         screen.addDDSGFC(
-            self.BACKGROUND_ID,
-            ArtFileMgr.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(),
+            "EspionageBackground",
+            CyArtFileMgr().getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(),
             0,
             0,
             self.W_SCREEN,
@@ -84,220 +127,62 @@ class CvEspionageAdvisor:
             -1,
         )
         screen.addPanel(
-            "TechTopPanel",
+            "EspionageTopPanel",
             u"",
             u"",
             True,
             False,
-            0,
-            0,
-            self.W_SCREEN,
-            55,
+            self.X_TOP_PANEL,
+            self.Y_TOP_PANEL,
+            self.W_TOP_PANEL,
+            self.H_TOP_PANEL,
             PanelStyles.PANEL_STYLE_TOPBAR,
         )
         screen.addPanel(
-            "TechBottomPanel",
+            "EspionageBottomPanel",
             u"",
             u"",
             True,
             False,
-            0,
-            713,
-            self.W_SCREEN,
-            55,
+            self.X_BOTTOM_PANEL,
+            self.Y_BOTTOM_PANEL,
+            self.W_BOTTOM_PANEL,
+            self.H_BOTTOM_PANEL,
             PanelStyles.PANEL_STYLE_BOTTOMBAR,
         )
-
-        screen.showWindowBackground(False)
-        screen.setText(
-            self.EXIT_ID,
+        screen.setLabel(
+            "EspionageTitle",
             "Background",
-            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
+            u"<font=4b>ESPIONAGE ADVISOR</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
+            self.X_TITLE,
+            self.Y_TITLE,
+            -0.1,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        screen.setText(
+            "EspionageExit",
+            "Background",
+            u"<font=4>EXIT</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXIT,
             self.Y_EXIT,
-            self.Z_CONTROLS,
+            -0.1,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_CLOSE_SCREEN,
             -1,
             -1,
         )
 
-        # Header...
-        screen.setLabel(
-            self.WIDGET_HEADER,
-            "Background",
-            u"<font=4b>" + text("TXT_KEY_ESPIONAGE_SCREEN").upper() + u"</font>",
-            CvUtil.FONT_CENTER_JUSTIFY,
-            self.X_SCREEN,
-            self.Y_TITLE,
-            self.Z_CONTROLS,
-            FontTypes.TITLE_FONT,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-        )
-
-        if CyGame().isDebugMode():
-            self.iDebugDropdownID = 554
-            self.szDropdownName = self.DEBUG_DROPDOWN_ID
-            screen.addDropDownBoxGFC(
-                self.szDropdownName,
-                22,
-                12,
-                300,
-                WidgetTypes.WIDGET_GENERAL,
-                self.iDebugDropdownID,
-                -1,
-                FontTypes.GAME_FONT,
-            )
-            for j in range(gc.getMAX_PLAYERS()):
-                if gc.getPlayer(j).isAlive():
-                    screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getName(), j, j, False
-                    )
-
-        # draw the contents
-        self.drawContents()
-
-        self.refreshScreen()
-
-    def drawContents(self):
-
-        self.deleteAllWidgets()
-
-        # Create a new screen, called EspionageAdvisor, using the file EspionageAdvisor.py for input
-        screen = self.getScreen()
-
-        pActivePlayer = gc.getPlayer(self.iActivePlayer)
-        pActiveTeam = gc.getTeam(pActivePlayer.getTeam())
-
-        self.X_LEFT_PANE = 25
-        self.Y_LEFT_PANE = 70
-        self.W_LEFT_PANE = 400
-        self.H_LEFT_PANE = 620
-
-        self.szLeftPaneWidget = "LeftPane"
         screen.addPanel(
-            self.szLeftPaneWidget,
+            "RightPane",
             "",
             "",
-            True,
-            True,
-            self.X_LEFT_PANE,
-            self.Y_LEFT_PANE,
-            self.W_LEFT_PANE,
-            self.H_LEFT_PANE,
-            PanelStyles.PANEL_STYLE_MAIN,
-        )
-
-        self.X_SCROLL = self.X_LEFT_PANE + 20
-        self.Y_SCROLL = 90
-        self.W_SCROLL = 360
-        self.H_SCROLL = 580
-
-        self.szScrollPanel = "ScrollPanel"
-        screen.addPanel(
-            self.szScrollPanel,
-            "",
-            "",
-            True,
-            True,
-            self.X_SCROLL,
-            self.Y_SCROLL,
-            self.W_SCROLL,
-            self.H_SCROLL,
-            PanelStyles.PANEL_STYLE_EMPTY,
-        )
-
-        self.aiKnownPlayers = []
-        self.aiUnknownPlayers = []
-        self.iNumEntries = 0
-
-        for iLoop in range(gc.getMAX_PLAYERS()):
-            pPlayer = gc.getPlayer(iLoop)
-            # if (pPlayer.getTeam() != pActivePlayer.getTeam() and not pPlayer.isBarbarian()): #Rhye
-            if (
-                pPlayer.getTeam() != pActivePlayer.getTeam()
-                and iLoop < civilizations().majors().len()
-            ):  # Rhye
-                if pPlayer.isAlive():
-                    if pActiveTeam.isHasMet(pPlayer.getTeam()):
-
-                        self.aiKnownPlayers.append(iLoop)
-                        self.iNumEntries = self.iNumEntries + 1
-
-                        if self.iTargetPlayer == -1:
-                            self.iTargetPlayer = iLoop
-
-        while self.iNumEntries < 17:  # Rhye - why 17?
-            self.iNumEntries = self.iNumEntries + 1
-            self.aiUnknownPlayers.append(self.iNumEntries)
-
-        ############################
-        #### Total EPs Per Turn Text
-        ############################
-
-        self.X_TOTAL_PANE = self.X_LEFT_PANE + self.W_LEFT_PANE + 20
-        self.Y_TOTAL_PANE = self.Y_LEFT_PANE
-        self.W_TOTAL_PANE = 550
-        self.H_TOTAL_PANE = 60
-
-        self.szTotalPaneWidget = "TotalPane"
-        screen.addPanel(
-            self.szTotalPaneWidget,
-            "",
-            "",
-            True,
-            True,
-            self.X_TOTAL_PANE,
-            self.Y_TOTAL_PANE,
-            self.W_TOTAL_PANE,
-            self.H_TOTAL_PANE,
-            PanelStyles.PANEL_STYLE_MAIN,
-        )
-
-        self.szMakingText = "MakingText"
-        self.X_MAKING_TEXT = 490
-        self.Y_MAKING_TEXT = 85
-        szText = (
-            u"<font=4>"
-            + text(
-                "TXT_KEY_ESPIONAGE_SCREEN_TOTAL_NUM_EPS",
-                pActivePlayer.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE),
-            )
-            + "</font>"
-        )
-        screen.setLabel(
-            self.szMakingText,
-            "Background",
-            szText,
-            CvUtil.FONT_LEFT_JUSTIFY,
-            self.X_MAKING_TEXT,
-            self.Y_MAKING_TEXT,
-            self.Z_CONTROLS,
-            FontTypes.GAME_FONT,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-        )
-
-        ############################
-        #### Right Panel
-        ############################
-
-        self.X_RIGHT_PANE = self.X_TOTAL_PANE
-        self.Y_RIGHT_PANE = self.Y_TOTAL_PANE + self.H_TOTAL_PANE + 20
-        self.W_RIGHT_PANE = self.W_TOTAL_PANE
-        self.H_RIGHT_PANE = self.H_LEFT_PANE - self.H_TOTAL_PANE - 20
-
-        self.szRightPaneWidget = "RightPane"
-        screen.addPanel(
-            self.szRightPaneWidget,
-            "",
-            "",
-            True,
-            True,
+            False,
+            False,
             self.X_RIGHT_PANE,
             self.Y_RIGHT_PANE,
             self.W_RIGHT_PANE,
@@ -305,927 +190,983 @@ class CvEspionageAdvisor:
             PanelStyles.PANEL_STYLE_MAIN,
         )
 
-        self.X_CITY_LIST = self.X_RIGHT_PANE + 40
-        self.Y_CITY_LIST = self.Y_RIGHT_PANE + 60
-        self.W_CITY_LIST = 160
-        self.H_CITY_LIST = self.H_RIGHT_PANE - 90
+        # Weight Reset
+        screen.setButtonGFC(
+            "WeightResetButton",
+            "Reset Weights",
+            "",
+            self.X_WEIGHT_RESET,
+            self.Y_WEIGHT_RESET,
+            self.W_WEIGHT_RESET,
+            self.H_WEIGHT_RESET,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+            ButtonStyles.BUTTON_STYLE_STANDARD,
+        )
 
-        self.X_EFFECTS_LIST = self.X_CITY_LIST + self.W_CITY_LIST + 20
-        self.Y_EFFECTS_LIST = self.Y_CITY_LIST
-        self.W_EFFECTS_LIST = 210
-        self.H_EFFECTS_LIST = (self.H_CITY_LIST / 3) - 50
+        # Weight Increment
+        screen.addDropDownBoxGFC(
+            "WeightIncrementSelect",
+            self.X_WEIGHT_INCREMENT,
+            self.Y_WEIGHT_INCREMENT,
+            self.W_WEIGHT_INCREMENT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+            FontTypes.GAME_FONT,
+        )
+        i = 1
+        while i < 101:
+            screen.addPullDownString(
+                "WeightIncrementSelect", "(+/-) " + str(i), i, i, self.iIncrement == i
+            )
+            if str(i)[0] == "1":
+                i *= 5
+            else:
+                i *= 2
 
-        self.X_EFFECTS_COSTS_LIST = self.X_EFFECTS_LIST + self.W_EFFECTS_LIST + 10
-        self.Y_EFFECTS_COSTS_LIST = self.Y_EFFECTS_LIST
-        self.W_EFFECTS_COSTS_LIST = 60
-        self.H_EFFECTS_COSTS_LIST = self.H_EFFECTS_LIST
-
-        self.X_MISSIONS_LIST = self.X_CITY_LIST + self.W_CITY_LIST + 20
-        self.Y_MISSIONS_LIST = self.Y_EFFECTS_LIST + self.H_EFFECTS_LIST + 50
-        self.W_MISSIONS_LIST = self.W_EFFECTS_LIST
-        self.H_MISSIONS_LIST = self.H_CITY_LIST * 2 / 3  # - 45
-
-        self.X_MISSIONS_COSTS_LIST = self.X_MISSIONS_LIST + self.W_MISSIONS_LIST + 10
-        self.Y_MISSIONS_COSTS_LIST = self.Y_MISSIONS_LIST
-        self.W_MISSIONS_COSTS_LIST = self.W_EFFECTS_COSTS_LIST
-        self.H_MISSIONS_COSTS_LIST = self.H_MISSIONS_LIST
-
-        self.X_MISSION_BUTTON = self.X_MISSIONS_LIST
-        self.Y_MISSION_BUTTON = self.Y_MISSIONS_LIST + self.H_MISSIONS_LIST + 10
-        self.W_MISSION_BUTTON = self.W_MISSIONS_LIST + self.W_MISSIONS_COSTS_LIST + 10
-        self.H_MISSION_BUTTON = 30
-
-        if self.iTargetPlayer != -1:
-
-            self.szCitiesTitleText = "CitiesTitle"
-            szText = u"<font=4>" + text("TXT_KEY_CONCEPT_CITIES") + "</font>"
-            screen.setLabel(
-                self.szCitiesTitleText,
-                "Background",
-                szText,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_CITY_LIST,
-                self.Y_CITY_LIST - 40,
-                self.Z_CONTROLS,
-                FontTypes.GAME_FONT,
+        # Debug Player Select
+        if CyGame().isDebugMode():
+            screen.addDropDownBoxGFC(
+                "DebugPlayerSelect",
+                self.W_SCREEN - 220,
+                12,
+                200,
                 WidgetTypes.WIDGET_GENERAL,
+                554,
                 -1,
-                -1,
+                FontTypes.GAME_FONT,
+            )
+            for iPlayer in xrange(gc.getMAX_CIV_PLAYERS()):
+                if gc.getPlayer(iPlayer).isAlive():
+                    screen.addPullDownString(
+                        "DebugPlayerSelect",
+                        gc.getPlayer(iPlayer).getName(),
+                        iPlayer,
+                        iPlayer,
+                        False,
+                    )
+
+        self.updateLeftPanel()
+        self.updateRightPanel()
+
+        # Leoreth: draw espionage experience bar
+        # TODO implement the setter and getter espionage xp in C++
+        # int getEspionageExperience
+        # self.drawEspionageExperience()
+
+    def updateLeftPanel(self):
+        """"""
+        screen = self.getScreen()
+        screen.addPanel(
+            "EspionageHeader",
+            u"",
+            u"",
+            True,
+            False,
+            self.X_LEFT_PANE + 8,
+            self.Y_LEFT_PANE,
+            self.W_PLAYER_INFO,
+            24,
+            PanelStyles.PANEL_STYLE_IN,
+        )
+
+        if self.pActivePlayer.isCommerceFlexible(CommerceTypes.COMMERCE_ESPIONAGE):
+            screen.setButtonGFC(
+                "EspionagePlus",
+                "",
+                "",
+                self.X_LEFT_PANE + 17,
+                self.Y_LEFT_PANE + 1,
+                20,
+                20,
+                WidgetTypes.WIDGET_GENERAL,
+                CommerceTypes.COMMERCE_ESPIONAGE,
+                gc.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"),
+                ButtonStyles.BUTTON_STYLE_CITY_PLUS,
+            )
+            screen.setButtonGFC(
+                "EspionageMinus",
+                "",
+                "",
+                self.X_LEFT_PANE + 37,
+                self.Y_LEFT_PANE + 1,
+                20,
+                20,
+                WidgetTypes.WIDGET_GENERAL,
+                CommerceTypes.COMMERCE_ESPIONAGE,
+                -gc.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"),
+                ButtonStyles.BUTTON_STYLE_CITY_MINUS,
             )
 
-            self.szEffectsTitleText = "EffectsTitle"
-            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS") + "</font>"
-            screen.setLabel(
-                self.szEffectsTitleText,
-                "Background",
-                szText,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_EFFECTS_LIST,
-                self.Y_EFFECTS_LIST - 40,
-                self.Z_CONTROLS,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
+        szRivalLabel = CyTranslator().changeTextColor(
+            "vs. You", gc.getInfoTypeForString("COLOR_SELECTED_TEXT")
+        )
+        screen.setLabel(
+            "EspionageRivalLabel",
+            "EspionageHeader",
+            u"<font=2>" + szRivalLabel + "</font>",
+            CvUtil.FONT_RIGHT_JUSTIFY,
+            self.X_RIVAL_STATS + 20,
+            self.Y_LEFT_PANE + 4,
+            -0.1,
+            FontTypes.SMALL_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        szPlayerLabel = CyTranslator().changeTextColor(
+            "vs. Them", gc.getInfoTypeForString("COLOR_SELECTED_TEXT")
+        )
+        screen.setLabel(
+            "EspionagePlayerLabel",
+            "EspionageHeader",
+            u"<font=2>" + szPlayerLabel + "</font>",
+            CvUtil.FONT_RIGHT_JUSTIFY,
+            self.X_PLAYER_STATS + 20,
+            self.Y_LEFT_PANE + 4,
+            -0.1,
+            FontTypes.SMALL_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        screen.addScrollPanel(
+            "EspionageTable",
+            "",
+            self.X_LEFT_PANE,
+            self.Y_LEFT_PANE + 16,
+            self.W_LEFT_PANE,
+            self.H_LEFT_PANE - 40,
+            PanelStyles.PANEL_STYLE_EXTERNAL,
+        )
 
-            self.szMissionsTitleText = "MissionsTitle"
-            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS") + "</font>"
-            screen.setLabel(
-                self.szMissionsTitleText,
-                "Background",
-                szText,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_MISSIONS_LIST,
-                self.Y_MISSIONS_LIST - 40,
-                self.Z_CONTROLS,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
+        iSeeEspionage = gc.getInfoTypeForString("ESPIONAGEMISSION_SEE_ESPIONAGE")
 
-            self.szEffectsCostTitleText = "EffectsCostTitle"
-            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_COST") + "</font>"
-            screen.setLabel(
-                self.szEffectsCostTitleText,
-                "Background",
-                szText,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_EFFECTS_COSTS_LIST,
-                self.Y_EFFECTS_COSTS_LIST - 40,
-                self.Z_CONTROLS,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
+        iCount = 0
+        for iRival in civilizations().majors().drop(self.iActivePlayer).ids():
+            pRival = gc.getPlayer(iRival)
+            iRivalTeam = pRival.getTeam()
+            pRivalTeam = gc.getTeam(iRivalTeam)
 
-            self.szMissionsCostTitleText = "MissionsCostTitle"
-            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_COST") + "</font>"
-            screen.setLabel(
-                self.szMissionsCostTitleText,
-                "Background",
-                szText,
-                CvUtil.FONT_LEFT_JUSTIFY,
-                self.X_MISSIONS_COSTS_LIST,
-                self.Y_MISSIONS_COSTS_LIST - 40,
-                self.Z_CONTROLS,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
+            if pRival.isAlive() and self.pActiveTeam.isHasMet(iRivalTeam):
+                if self.iTargetPlayer == -1:
+                    self.iTargetPlayer = iRival
 
-            ############################
-            #### Left Leaders Panel
-            ############################
-
-            self.W_LEADER = 128
-            self.H_LEADER = 128
-
-            self.W_NAME_PANEL = 220
-            self.H_NAME_PANEL = 30
-
-            iPlayerLoop = 0
-
-            self.aszLeaderImages = []
-            self.aszLeaderNamePanels = []
-            self.aszNameTexts = []
-            self.aszPointsTexts = []
-            self.aszSpendingTexts = []
-            self.aszRelativeTexts = []
-            self.aszIncreaseButtons = []
-            self.aszDecreaseButtons = []
-            self.aszAmountTexts = []
-            self.aszEspionageIcons = []
-
-            for iPlayerID in self.aiKnownPlayers:
-
-                pTargetPlayer = gc.getPlayer(iPlayerID)
-
-                iTargetTeam = pTargetPlayer.getTeam()
-
-                iX = 0
-                iY = 14  # + (148 * iPlayerLoop)#(110 * iPlayerLoop)
-
-                attach = "LeaderContainer%d" % (iPlayerID)
-
-                screen.attachPanel(
-                    self.szScrollPanel,
-                    attach,
+                PlayerPanel = "PlayerPanel" + str(iRival)
+                screen.attachPanelAt(
+                    "EspionageTable",
+                    PlayerPanel,
                     "",
                     "",
-                    True,
                     False,
-                    PanelStyles.PANEL_STYLE_STANDARD,
+                    True,
+                    PanelStyles.PANEL_STYLE_IN,
+                    0,
+                    iCount * self.H_PLAYER_INFO,
+                    self.W_PLAYER_INFO,
+                    self.H_PLAYER_INFO,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
                 )
 
-                szName = "LeaderImageA%d" % (iPlayerID)
-                screen.attachSeparator(attach, szName, True, 30)
-
-                self.iLeaderImagesID = 456
-                szName = "LeaderImage%d" % (iPlayerID)
-                self.aszLeaderImages.append(szName)
-
-                # screen.addCheckBoxGFCAt(attach, szName, gc.getLeaderHeadInfo(gc.getPlayer(iPlayerID).getLeaderType()).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), #Rhye
+                # Leader Icon
+                LeaderIcon = "LeaderIcon" + str(iRival)
                 screen.addCheckBoxGFCAt(
-                    attach,
-                    szName,
-                    gc.getCivilizationInfo(
-                        gc.getPlayer(iPlayerID).getCivilizationType()
-                    ).getButton(),
-                    ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),  # Rhye
-                    iX + 21,
-                    iY - 14,
-                    32,
-                    32,
-                    WidgetTypes.WIDGET_GENERAL,
-                    self.iLeaderImagesID,
-                    iPlayerID,
+                    PlayerPanel,
+                    LeaderIcon,
+                    gc.getLeaderHeadInfo(pRival.getLeaderType()).getButton(),
+                    CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+                    0,
+                    0,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
+                    WidgetTypes.WIDGET_ESPIONAGE_SELECT_PLAYER,
+                    iRival,
+                    self.iActivePlayer,
                     ButtonStyles.BUTTON_STYLE_LABEL,
                     False,
                 )
-                if self.iTargetPlayer == iPlayerID:
-                    screen.setState(szName, True)
+                screen.setState(LeaderIcon, self.iTargetPlayer == iRival)
 
-                szName = "LeaderNamePanel%d" % (iPlayerID)
-                self.aszLeaderNamePanels.append(szName)
-                screen.attachPanelAt(
-                    attach,
-                    szName,
-                    "",
-                    "",
-                    True,
-                    False,
-                    PanelStyles.PANEL_STYLE_MAIN,
-                    iX + 5,
-                    iY - 15,
-                    self.W_NAME_PANEL,
-                    self.H_NAME_PANEL,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-
-                szName = "NameText%d" % (iPlayerID)
-                self.aszNameTexts.append(szName)
-                # szTempBuffer = u"<color=%d,%d,%d,%d>%s (%s)</color>" %(pTargetPlayer.getPlayerTextColorR(), pTargetPlayer.getPlayerTextColorG(), pTargetPlayer.getPlayerTextColorB(), pTargetPlayer.getPlayerTextColorA(), pTargetPlayer.getName(), self.getMultiplierAgainstTarget(iPlayerID)) #Rhye
-                szTempBuffer = u"<color=%d,%d,%d,%d>%s (%s)</color>" % (
-                    pTargetPlayer.getPlayerTextColorR(),
-                    pTargetPlayer.getPlayerTextColorG(),
-                    pTargetPlayer.getPlayerTextColorB(),
-                    pTargetPlayer.getPlayerTextColorA(),
-                    pTargetPlayer.getCivilizationDescription(0),
-                    self.getMultiplierAgainstTarget(iPlayerID),
-                )  # Rhye
-                szText = u"<font=2>" + szTempBuffer + "</font>"
+                # Leader Info
+                szLeaderName = u"<font=3b>" + pRival.getName() + u"</font>"
                 screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
+                    "LeaderName" + str(iRival),
+                    PlayerPanel,
+                    szLeaderName,
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    self.X_PLAYER_INFO,
                     0,
-                    iX + 55,
-                    iY - 15,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
                     -1,
                 )
 
-                szName = "PointsText%d" % (iPlayerID)
-                self.aszPointsTexts.append(szName)
-                szText = (
-                    u"<font=2>"
-                    + text(
-                        "TXT_KEY_ESPIONAGE_NUM_EPS",
-                        pActiveTeam.getEspionagePointsAgainstTeam(iTargetTeam),
-                    )
-                    + "</font>"
-                )
-                # Rhye
-                # screen.setLabelAt( szName, attach, szText, 0, 247, iY - 14, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 );
+                szCivName = u"<font=2>" + pRival.getCivilizationDescription(0) + u"</font>"
                 screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    317,
-                    iY - 14,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
+                    "CivName" + str(iRival),
+                    PlayerPanel,
+                    szCivName,
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    self.X_PLAYER_INFO,
+                    self.Y_PLAYER_INFO + self.LINE_SPACING,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
                     -1,
                 )
 
-                szName = "SpendingText%d" % (iPlayerID)
-                self.aszSpendingTexts.append(szName)
-                szText = u"<font=2>%s: %d</font>" % (
-                    text("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT"),
-                    pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam),
-                )
-                screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    85,
-                    iY - 1,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-
-                szName = "AmountText%d" % (iPlayerID)
-                self.aszAmountTexts.append(szName)
-                if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
-                    szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                        text(
-                            "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            pActivePlayer.getEspionageSpending(iTargetTeam),
-                        )
-                    )
-                else:
-                    szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                        text(
-                            "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            pActivePlayer.getEspionageSpending(iTargetTeam),
-                        )
-                    )
-
-                screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    247,
-                    iY - 1,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-
-                szName = "SpendingIcon%d" % (iPlayerID)
-                self.aszEspionageIcons.append(szName)
-                if pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) > 0:
-                    szText = u"<font=2>%c</font>" % (
-                        gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
-                    )
-                else:
-                    szText = u""
-
-                screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    3,
-                    iY - 9,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-
-                iSize = 16
-                self.iIncreaseButtonID = 555
-                szName = "IncreaseButton%d" % (iPlayerID)
-                self.aszIncreaseButtons.append(szName)
+                # Weight Buttons
                 screen.setImageButtonAt(
-                    szName,
-                    attach,
-                    ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_PLUS").getPath(),
-                    53,
-                    iY + 1,
-                    iSize,
-                    iSize,
+                    "WeightIncrease" + str(iRival),
+                    PlayerPanel,
+                    CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_PLUS").getPath(),
+                    self.X_PLAYER_INFO,
+                    self.Y_PLAYER_INFO + (self.LINE_SPACING * 2),
+                    self.WEIGHT_BUTTON_SIZE,
+                    self.WEIGHT_BUTTON_SIZE,
                     WidgetTypes.WIDGET_GENERAL,
-                    self.iIncreaseButtonID,
-                    iPlayerID,
+                    iRivalTeam + 1,
+                    self.iIncrement,
                 )
-                self.iDecreaseButtonID = 556
-                szName = "DecreaseButton%d" % (iPlayerID)
-                self.aszDecreaseButtons.append(szName)
                 screen.setImageButtonAt(
-                    szName,
-                    attach,
-                    ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_MINUS").getPath(),
-                    68,
-                    iY + 1,
-                    iSize,
-                    iSize,
+                    "WeightDecrease" + str(iRival),
+                    PlayerPanel,
+                    CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_MINUS").getPath(),
+                    self.X_PLAYER_INFO + self.WEIGHT_BUTTON_SIZE,
+                    self.Y_PLAYER_INFO + (self.LINE_SPACING * 2),
+                    self.WEIGHT_BUTTON_SIZE,
+                    self.WEIGHT_BUTTON_SIZE,
                     WidgetTypes.WIDGET_GENERAL,
-                    self.iDecreaseButtonID,
-                    iPlayerID,
+                    iRivalTeam + 1,
+                    self.iIncrement,
                 )
 
-                iPlayerLoop += 1
-
-            for iPlayerID in self.aiUnknownPlayers:
-                attach = "EmptyLeaderContainer%d" % (iPlayerID)
-                screen.attachPanel(
-                    self.szScrollPanel,
-                    attach,
-                    "",
-                    "",
-                    True,
-                    False,
-                    PanelStyles.PANEL_STYLE_STANDARD,
+                # Espionage Accumulated
+                iRivalAmount = pRivalTeam.getEspionagePointsAgainstTeam(self.iActiveTeam)
+                szRivalAmount = u"%s%c" % (
+                    self.addComma(iRivalAmount),
+                    gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar(),
                 )
-                screen.attachSeparator(attach, "EmptyLeaderImageA%d" % (iPlayerID), True, 30)
-
-    def getMultiplierAgainstTarget(self, iTargetPlayer=-1):
-
-        szMultiplier = ""
-
-        if iTargetPlayer == -1:
-            iTargetPlayer = self.iTargetPlayer
-
-        pActivePlayer = gc.getPlayer(self.iActivePlayer)
-        pActiveTeam = gc.getTeam(pActivePlayer.getTeam())
-        pTargetPlayer = gc.getPlayer(iTargetPlayer)
-        pTargetTeam = gc.getTeam(pTargetPlayer.getTeam())
-
-        szMultiplier = text(
-            "TXT_KEY_ESPIONAGE_COST",
-            getEspionageModifier(pActivePlayer.getTeam(), pTargetPlayer.getTeam()),
-        )
-
-        if pActiveTeam.getCounterespionageTurnsLeftAgainstTeam(pTargetPlayer.getTeam()) > 0:
-            szMultiplier += u"*"
-
-        if pTargetTeam.getCounterespionageTurnsLeftAgainstTeam(pActivePlayer.getTeam()) > 0:
-            szMultiplier += u"+"
-
-        return szMultiplier
-
-    def refreshScreen(self):
-
-        self.deleteAllWidgets()
-
-        if self.iTargetPlayer != -1:
-
-            # Create a new screen, called EspionageAdvisor, using the file EspionageAdvisor.py for input
-            screen = self.getScreen()
-
-            pActivePlayer = gc.getPlayer(self.iActivePlayer)
-            pActiveTeam = gc.getTeam(pActivePlayer.getTeam())
-
-            iPlayerLoop = 0
-
-            for iPlayerID in self.aiKnownPlayers:
-
-                iX = 0
-                iY = 15  # + (148 * iPlayerLoop)#(110 * iPlayerLoop)
-
-                pTargetPlayer = gc.getPlayer(iPlayerID)
-                iTargetTeam = pTargetPlayer.getTeam()
-
-                attach = "LeaderContainer%d" % (iPlayerID)
-
-                szName = "SpendingText%d" % (iPlayerID)
-                self.aszSpendingTexts.append(szName)
-                szText = (
-                    u"<font=2>"
-                    + text("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT")
-                    + ": %d</font>"
-                    % (pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam))
-                )
-                screen.deleteWidget(szName)
                 screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    85,
-                    iY,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
+                    "RivalAccumulated" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szRivalAmount + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_RIVAL_STATS,
+                    self.Y_PLAYER_INFO,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
                     -1,
                 )
 
-                szName = "AmountText%d" % (iPlayerID)
+                iPlayerAmount = self.pActiveTeam.getEspionagePointsAgainstTeam(iRivalTeam)
+                szPlayerAmount = u"%s%c" % (
+                    self.addComma(iPlayerAmount),
+                    gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar(),
+                )
+                screen.setLabelAt(
+                    "PlayerAccumulated" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szPlayerAmount + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_PLAYER_STATS,
+                    self.Y_PLAYER_INFO,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
 
-                if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
-                    szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                        text(
-                            "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            pActivePlayer.getEspionageSpending(iTargetTeam),
+                # Espionage Cost Modifier
+                szCost = CyTranslator().changeTextColor(
+                    "Cost: ", gc.getInfoTypeForString("COLOR_SELECTED_TEXT")
+                )
+                szRivalModifier = " - "
+
+                if self.pActivePlayer.canDoEspionageMission(
+                    iSeeEspionage, iRival, pRival.getCapitalCity().plot(), -1
+                ):
+                    iRivalModifier = getEspionageModifier(iRivalTeam, self.iActiveTeam)
+                    iRivalTurns = self.pActiveTeam.getCounterespionageTurnsLeftAgainstTeam(
+                        iRivalTeam
+                    )
+                    if iRivalTurns > 0:
+                        iRivalModifier *= (
+                            self.pActiveTeam.getCounterespionageModAgainstTeam(iRivalTeam) / 100
                         )
+                        szRivalModifier = CyTranslator().changeTextColor(
+                            str(iRivalModifier) + "%",
+                            gc.getInfoTypeForString("COLOR_POSITIVE_TEXT"),
+                        )
+                        szRivalModifier += u" (%d)" % iRivalTurns
+                    elif iRivalModifier < 100:
+                        szRivalModifier = szCost + CyTranslator().changeTextColor(
+                            str(iRivalModifier) + "%",
+                            gc.getInfoTypeForString("COLOR_NEGATIVE_TEXT"),
+                        )
+                    else:
+                        szRivalModifier = szCost + u"%d%%" % iRivalModifier
+
+                screen.setLabelAt(
+                    "RivalEspionageMultiplier" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szRivalModifier + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_RIVAL_STATS,
+                    self.Y_PLAYER_INFO + (self.LINE_SPACING * 2),
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+
+                iPlayerModifier = getEspionageModifier(self.iActiveTeam, iRivalTeam)
+                iPlayerTurns = pRivalTeam.getCounterespionageTurnsLeftAgainstTeam(self.iActiveTeam)
+                if iPlayerTurns > 0:
+                    iPlayerModifier *= (
+                        pRivalTeam.getCounterespionageModAgainstTeam(self.iActiveTeam) / 100
+                    )
+                    szPlayerModifier = CyTranslator().changeTextColor(
+                        str(iPlayerModifier) + "%", gc.getInfoTypeForString("COLOR_NEGATIVE_TEXT")
+                    )
+                    szPlayerModifier += u" (%d)" % iPlayerTurns
+                elif iPlayerModifier > 100:
+                    szPlayerModifier = szCost + CyTranslator().changeTextColor(
+                        str(iPlayerModifier) + "%", gc.getInfoTypeForString("COLOR_NEGATIVE_TEXT")
                     )
                 else:
-                    szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                        text(
-                            "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            pActivePlayer.getEspionageSpending(iTargetTeam),
+                    szPlayerModifier = szCost + u"%d%%" % iPlayerModifier
+
+                screen.setLabelAt(
+                    "PlayerEspionageMultiplier" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szPlayerModifier + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_PLAYER_STATS,
+                    self.Y_PLAYER_INFO + (self.LINE_SPACING * 2),
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+
+                iCount += 1
+
+        self.updateEspionageWeights()
+
+    def updateRightPanel(self):
+        screen = self.getScreen()
+
+        iInvestigate = -1
+        for iMission in xrange(gc.getNumEspionageMissionInfos()):
+            if gc.getEspionageMissionInfo(iMission).isInvestigateCity():
+                iInvestigate = iMission
+
+        if self.iTargetPlayer > -1:
+            pTargetPlayer = gc.getPlayer(self.iTargetPlayer)
+            iEspionage = self.pActiveTeam.getEspionagePointsAgainstTeam(pTargetPlayer.getTeam())
+
+            # City Table
+            screen.addTableControlGFC(
+                "CityTable",
+                3,
+                self.X_CITY_LIST,
+                self.Y_CITY_LIST,
+                self.W_CITY_LIST,
+                self.H_CITY_LIST,
+                True,
+                False,
+                24,
+                24,
+                TableStyles.TABLE_STYLE_STANDARD,
+            )
+            screen.setTableColumnHeader(
+                "CityTable", 0, u"<font=2>Known Cities</font>", self.W_CITY_LIST - 102
+            )
+            screen.setTableColumnHeader("CityTable", 1, u"<font=2>Spies</font>", 50)
+            screen.setTableColumnHeader("CityTable", 2, u"<font=2>Cost</font>", 50)
+            screen.setStyle("CityTable", "Table_StandardCiv_Style")
+            screen.enableSelect("CityTable", True)
+
+            (loopCity, iter) = pTargetPlayer.firstCity(False)
+            while loopCity:
+                if loopCity.isRevealed(self.iActiveTeam, False):
+                    iRow = screen.appendTableRow("CityTable")
+
+                    if self.iTargetCity == -1:
+                        self.iTargetCity = loopCity.getID()
+
+                    if self.iTargetCity == loopCity.getID():
+                        screen.selectRow("CityTable", iRow, True)
+
+                    # Status
+                    if loopCity.isCapital():
+                        szStatus = u"%c" % CyGame().getSymbolID(FontSymbols.STAR_CHAR)
+                    elif loopCity.isGovernmentCenter():
+                        szStatus = u"%c" % CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
+                    else:
+                        szStatus = u"%c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
+
+                    # Name
+                    szName = loopCity.getName()
+                    if self.iTargetCity == loopCity.getID():
+                        szName = CyTranslator().changeTextColor(
+                            szName, gc.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")
                         )
+
+                    screen.setTableText(
+                        "CityTable",
+                        0,
+                        iRow,
+                        szStatus + szName,
+                        "",
+                        WidgetTypes.WIDGET_ESPIONAGE_SELECT_CITY,
+                        loopCity.getID(),
+                        0,
+                        CvUtil.FONT_LEFT_JUSTIFY,
                     )
 
-                screen.deleteWidget(szName)
-                # Rhye
-                # screen.setLabelAt( szName, attach, szText, 0, 247, iY - 1, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 );
-                screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    281,
-                    iY - 1,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
+                    # Spies
+                    if self.iTargetCity == loopCity.getID():
+                        del self.CitySpies[:]
 
-                szName = "SpendingIcon%d" % (iPlayerID)
-                if pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) > 0:
-                    szText = u"<font=2>%c</font>" % (
-                        gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
-                    )
-                else:
-                    szText = u""
+                    iNumSpies = 0
+                    loopPlot = loopCity.plot()
+                    for iUnit in xrange(loopPlot.getNumUnits()):
+                        pUnit = loopPlot.getUnit(iUnit)
+                        if not pUnit.isNone():
+                            if pUnit.isCounterSpy() and pUnit.getOwner() == self.iActivePlayer:
+                                iNumSpies += 1
+                                if self.iTargetCity == loopCity.getID():
+                                    self.CitySpies.append(pUnit)
 
-                screen.deleteWidget(szName)
-                screen.setLabelAt(
-                    szName,
-                    attach,
-                    szText,
-                    0,
-                    3,
-                    iY - 9,
-                    self.Z_CONTROLS,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
-
-                iPlayerLoop += 1
-
-            # Is there any other players which have been met?
-            if self.iTargetPlayer != -1:
-
-                pTargetPlayer = gc.getPlayer(self.iTargetPlayer)
-                pyTargetPlayer = PyPlayer(self.iTargetPlayer)
-
-                # List of Cities
-                self.szCityListBox = self.getNextWidgetName()
-                screen.addListBoxGFC(
-                    self.szCityListBox,
-                    "",
-                    self.X_CITY_LIST,
-                    self.Y_CITY_LIST,
-                    self.W_CITY_LIST,
-                    self.H_CITY_LIST,
-                    TableStyles.TABLE_STYLE_STANDARD,
-                )
-                screen.enableSelect(self.szCityListBox, True)
-                screen.setStyle(self.szCityListBox, "Table_StandardCiv_Style")
-
-                # Loop through target's cities, see which are visible and add them to the list
-                apCityList = pyTargetPlayer.getCityList()
-
-                iLoop = 0
-
-                for pyCity in apCityList:
-
-                    pCity = pyCity.GetCy()
-
-                    if pCity.isRevealed(pActivePlayer.getTeam(), False):
-                        screen.appendListBoxString(
-                            self.szCityListBox,
-                            pCity.getName(),
-                            WidgetTypes.WIDGET_GENERAL,
-                            pCity.getID(),
+                    if iNumSpies > 0:
+                        screen.setTableInt(
+                            "CityTable",
+                            1,
+                            iRow,
+                            str(iNumSpies),
+                            "",
+                            WidgetTypes.WIDGET_ESPIONAGE_SELECT_CITY,
+                            loopCity.getID(),
                             0,
+                            CvUtil.FONT_RIGHT_JUSTIFY,
+                        )
+
+                    # Mission Cost
+                    if self.iMission > -1:
+                        iCost = self.pActivePlayer.getEspionageMissionCost(
+                            self.iMission, self.iTargetPlayer, loopPlot, -1
+                        )
+                        if iCost > -1:
+                            if iEspionage < iCost:
+                                szCost = CyTranslator().changeTextColor(
+                                    str(iCost), gc.getInfoTypeForString("COLOR_NEGATIVE_TEXT")
+                                )
+                            else:
+                                szCost = CyTranslator().changeTextColor(
+                                    str(iCost), gc.getInfoTypeForString("COLOR_POSITIVE_TEXT")
+                                )
+
+                            screen.setTableInt(
+                                "CityTable",
+                                2,
+                                iRow,
+                                szCost,
+                                "",
+                                WidgetTypes.WIDGET_ESPIONAGE_SELECT_CITY,
+                                loopCity.getID(),
+                                0,
+                                CvUtil.FONT_RIGHT_JUSTIFY,
+                            )
+
+                    iRow += 1
+                (loopCity, iter) = pTargetPlayer.nextCity(iter, False)
+
+            # Go to City Button
+            screen.setButtonGFC(
+                "ViewButton",
+                "Go to City",
+                "",
+                self.X_GO_TO_CITY,
+                self.Y_GO_TO_CITY,
+                self.W_GO_TO_CITY,
+                self.H_GO_TO_CITY,
+                WidgetTypes.WIDGET_GO_TO_CITY,
+                self.iTargetPlayer,
+                self.iTargetCity,
+                ButtonStyles.BUTTON_STYLE_STANDARD,
+            )
+            screen.enable("ViewButton", False)
+            if self.iTargetCity > -1:
+                screen.enable("ViewButton", True)
+
+            # Investigate City Button
+            screen.setButtonGFC(
+                "InvestigateButton",
+                "Investigate City",
+                "",
+                self.X_INVESTIGATE_CITY,
+                self.Y_INVESTIGATE_CITY,
+                self.W_INVESTIGATE_CITY,
+                self.H_INVESTIGATE_CITY,
+                WidgetTypes.WIDGET_ZOOM_CITY,
+                self.iTargetPlayer,
+                self.iTargetCity,
+                ButtonStyles.BUTTON_STYLE_STANDARD,
+            )
+            screen.enable("InvestigateButton", False)
+            if self.iTargetCity > -1 and iInvestigate > -1:
+                if self.pActivePlayer.canDoEspionageMission(
+                    iInvestigate,
+                    self.iTargetPlayer,
+                    pTargetPlayer.getCity(self.iTargetCity).plot(),
+                    -1,
+                ):
+                    screen.enable("InvestigateButton", True)
+
+            # Mission Tables
+            screen.addTableControlGFC(
+                "PassiveTable",
+                2,
+                self.X_PASSIVE_MISSIONS,
+                self.Y_PASSIVE_MISSIONS,
+                self.W_PASSIVE_MISSIONS,
+                self.H_PASSIVE_MISSIONS,
+                True,
+                False,
+                24,
+                24,
+                TableStyles.TABLE_STYLE_STANDARD,
+            )
+            screen.setTableColumnHeader(
+                "PassiveTable", 0, u"<font=2>Passive Missions</font>", self.W_PASSIVE_MISSIONS - 62
+            )
+            screen.setTableColumnHeader("PassiveTable", 1, u"<font=2>Cost</font>", 60)
+
+            screen.addTableControlGFC(
+                "ActiveTable",
+                2,
+                self.X_ACTIVE_MISSIONS,
+                self.Y_ACTIVE_MISSIONS,
+                self.W_ACTIVE_MISSIONS,
+                self.H_ACTIVE_MISSIONS,
+                True,
+                False,
+                24,
+                24,
+                TableStyles.TABLE_STYLE_STANDARD,
+            )
+            screen.setTableColumnHeader(
+                "ActiveTable", 0, u"<font=2>Active Missions</font>", self.W_ACTIVE_MISSIONS - 62
+            )
+            screen.setTableColumnHeader("ActiveTable", 1, u"<font=2>Cost</font>", 60)
+
+            for iLoopMission in xrange(gc.getNumEspionageMissionInfos()):
+                pMission = gc.getEspionageMissionInfo(iLoopMission)
+                if iLoopMission == gc.getInfoTypeForString("ESPIONAGEMISSION_SABOTAGE_PROJECT"):
+                    continue
+
+                if pMission.getCost() > -1:
+                    pPlot = None
+                    if self.iTargetCity > -1 and pMission.isTargetsCity():
+                        pTargetCity = pTargetPlayer.getCity(self.iTargetCity)
+                        if not pTargetCity.isNone():
+                            pPlot = pTargetCity.plot()
+
+                    if iLoopMission == self.iMission:
+                        szMission = CyTranslator().changeTextColor(
+                            pMission.getDescription(),
+                            gc.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"),
+                        )
+                    else:
+                        szMission = pMission.getDescription()
+
+                    iCost = self.pActivePlayer.getEspionageMissionCost(
+                        iLoopMission, self.iTargetPlayer, pPlot, -1
+                    )
+                    szCost = ""
+                    if iEspionage < iCost:
+                        szCost = CyTranslator().changeTextColor(
+                            str(iCost), gc.getInfoTypeForString("COLOR_NEGATIVE_TEXT")
+                        )
+                    elif iCost > -1:
+                        szCost = CyTranslator().changeTextColor(
+                            str(iCost), gc.getInfoTypeForString("COLOR_POSITIVE_TEXT")
+                        )
+
+                    if pMission.isPassive():
+                        iRow = screen.appendTableRow("PassiveTable")
+                        screen.setTableText(
+                            "PassiveTable",
+                            0,
+                            iRow,
+                            "<font=2>" + szMission + "</font>",
+                            "",
+                            WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION,
+                            iLoopMission,
+                            -1,
                             CvUtil.FONT_LEFT_JUSTIFY,
                         )
+                        screen.setTableInt(
+                            "PassiveTable",
+                            1,
+                            iRow,
+                            "<font=2>" + szCost + "</font>",
+                            "",
+                            WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION,
+                            iLoopMission,
+                            -1,
+                            CvUtil.FONT_RIGHT_JUSTIFY,
+                        )
 
-                        if (
-                            self.iActiveCityID == -1
-                            or pTargetPlayer.getCity(self.iActiveCityID).isNone()
-                        ):
-                            self.iActiveCityID = pCity.getID()
-
-                        if self.iActiveCityID == pCity.getID():
-                            screen.setSelectedListBoxStringGFC(self.szCityListBox, iLoop)
-
-                        iLoop += 1
-
-                # screen.updateListBox(self.szCityListBox)
-
-                self.W_TABLE_0 = self.W_EFFECTS_LIST
-                self.W_TABLE_1 = 0
-                self.W_TABLE_2 = self.W_EFFECTS_COSTS_LIST
-                self.W_TABLE_3 = 20
-
-                szEffectsTable = self.getNextWidgetName()
-                szHelpText = text("TXT_KEY_ESPIONAGE_PASSIVE_AUTOMATIC")
-                screen.addTableControlGFCWithHelp(
-                    szEffectsTable,
-                    4,
-                    self.X_EFFECTS_LIST,
-                    self.Y_EFFECTS_LIST,
-                    self.W_EFFECTS_LIST
-                    + self.W_EFFECTS_COSTS_LIST
-                    + self.W_TABLE_1
-                    + self.W_TABLE_3,
-                    self.H_EFFECTS_LIST,
-                    False,
-                    False,
-                    32,
-                    32,
-                    TableStyles.TABLE_STYLE_STANDARD,
-                    szHelpText,
-                )
-                screen.setTableColumnHeader(szEffectsTable, 0, "", self.W_TABLE_0)
-                screen.setTableColumnHeader(szEffectsTable, 1, "", self.W_TABLE_1)
-                screen.setTableColumnHeader(szEffectsTable, 2, "", self.W_TABLE_2)
-                screen.setTableColumnHeader(szEffectsTable, 3, "", self.W_TABLE_3)
-
-                szMissionsTable = self.getNextWidgetName()
-                szHelpText = text("TXT_KEY_ESPIONAGE_MISSIONS_SPY")
-                screen.addTableControlGFCWithHelp(
-                    szMissionsTable,
-                    4,
-                    self.X_MISSIONS_LIST,
-                    self.Y_MISSIONS_LIST,
-                    self.W_MISSIONS_LIST
-                    + self.W_MISSIONS_COSTS_LIST
-                    + self.W_TABLE_1
-                    + self.W_TABLE_3,
-                    self.H_MISSIONS_LIST,
-                    False,
-                    False,
-                    32,
-                    32,
-                    TableStyles.TABLE_STYLE_STANDARD,
-                    szHelpText,
-                )
-                screen.setTableColumnHeader(szMissionsTable, 0, "", self.W_TABLE_0)
-                screen.setTableColumnHeader(szMissionsTable, 1, "", self.W_TABLE_1)
-                screen.setTableColumnHeader(szMissionsTable, 2, "", self.W_TABLE_2)
-                screen.setTableColumnHeader(szMissionsTable, 3, "", self.W_TABLE_3)
-
-                # Loop through all Missions
-                for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
-
-                    pMission = gc.getEspionageMissionInfo(iMissionLoop)
-
-                    if pMission.getCost() != -1:
-
-                        # Only passive effects
-                        if pMission.isPassive():
-
-                            pPlot = None
-
-                            if self.iActiveCityID != -1 and pMission.isTargetsCity():
-
-                                pActiveCity = gc.getPlayer(self.iTargetPlayer).getCity(
-                                    self.iActiveCityID
-                                )
-                                pPlot = pActiveCity.plot()
-
-                            if self.iActiveCityID != -1 or not pMission.isTargetsCity():
-
-                                iCost = pActivePlayer.getEspionageMissionCost(
-                                    iMissionLoop, self.iTargetPlayer, pPlot, -1
-                                )
-
-                                szTechText = ""
-                                if pMission.getTechPrereq() != -1:
-                                    szTechText = " (%s)" % (
-                                        gc.getTechInfo(pMission.getTechPrereq()).getDescription()
-                                    )
-
-                                szText = pMission.getDescription() + szTechText
-
-                                if pMission.getTechPrereq() != -1:
-                                    pTeam = gc.getTeam(pActivePlayer.getTeam())
-                                    if not pTeam.isHasTech(pMission.getTechPrereq()):
-                                        szText = u"<color=255,0,0,0>%s</color>" % (szText)
-
-                                iRow = screen.appendTableRow(szEffectsTable)
-                                screen.setTableText(
-                                    szEffectsTable,
-                                    0,
-                                    iRow,
-                                    szText,
-                                    "",
-                                    WidgetTypes.WIDGET_GENERAL,
-                                    -1,
-                                    -1,
-                                    CvUtil.FONT_LEFT_JUSTIFY,
-                                )
-                                screen.setTableText(
-                                    szEffectsTable,
-                                    2,
-                                    iRow,
-                                    str(iCost),
-                                    "",
-                                    WidgetTypes.WIDGET_GENERAL,
-                                    -1,
-                                    -1,
-                                    CvUtil.FONT_RIGHT_JUSTIFY,
-                                )
-
-                        # Active Mission
-                        else:
-
-                            if self.iSelectedMission == -1:
-                                self.iSelectedMission = iMissionLoop
-
-                            pPlot = -1
-                            if self.iActiveCityID != -1:
-                                pPlot = pActiveCity.plot()
-                            else:
-                                pPlot = None
-
-                            iCost = pActivePlayer.getEspionageMissionCost(
-                                iMissionLoop, self.iTargetPlayer, pPlot, -1
-                            )
-
-                            szTechText = ""
-                            if pMission.getTechPrereq() != -1:
-                                szTechText = " (%s)" % (
-                                    gc.getTechInfo(pMission.getTechPrereq()).getDescription()
-                                )
-
-                            szText = pMission.getDescription() + szTechText
-
-                            if pMission.getTechPrereq() != -1:
-                                pTeam = gc.getTeam(pActivePlayer.getTeam())
-                                if not pTeam.isHasTech(pMission.getTechPrereq()):
-                                    szText = u"<color=255,0,0,0>%s</color>" % (szText)
-
-                            iRow = screen.appendTableRow(szMissionsTable)
-                            screen.setTableText(
-                                szMissionsTable,
-                                0,
+                    else:
+                        iRow = screen.appendTableRow("ActiveTable")
+                        screen.setTableText(
+                            "ActiveTable",
+                            0,
+                            iRow,
+                            "<font=2>" + szMission + "</font>",
+                            "",
+                            WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION,
+                            iLoopMission,
+                            -1,
+                            CvUtil.FONT_LEFT_JUSTIFY,
+                        )
+                        if iCost > 0:
+                            screen.setTableInt(
+                                "ActiveTable",
+                                1,
                                 iRow,
-                                szText,
+                                "<font=2>" + szCost + "   </font>",
                                 "",
-                                WidgetTypes.WIDGET_GENERAL,
+                                WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION,
+                                iLoopMission,
                                 -1,
-                                -1,
-                                CvUtil.FONT_LEFT_JUSTIFY,
+                                CvUtil.FONT_RIGHT_JUSTIFY,
                             )
-                            if iCost > 0:
-                                screen.setTableText(
-                                    szMissionsTable,
-                                    2,
-                                    iRow,
-                                    str(iCost),
-                                    "",
-                                    WidgetTypes.WIDGET_GENERAL,
-                                    -1,
-                                    -1,
-                                    CvUtil.FONT_RIGHT_JUSTIFY,
-                                )
 
-        return 0
-
-    # returns a unique ID for a widget in this screen
-    def getNextWidgetName(self):
-        szName = self.WIDGET_ID + str(self.nWidgetCount)
-        self.nWidgetCount += 1
-        return szName
-
-    def deleteAllWidgets(self):
+    def updateEspionageWeights(self):
         screen = self.getScreen()
-        i = self.nWidgetCount - 1
-        while i >= 0:
-            self.nWidgetCount = i
-            screen.deleteWidget(self.getNextWidgetName())
-            i -= 1
+        screen.enable("EspionagePlus", True)
+        screen.enable("EspionageMinus", True)
 
-        self.nWidgetCount = 0
+        self.iActivePlayer = CyGame().getActivePlayer()
+        self.pActivePlayer = gc.getPlayer(self.iActivePlayer)
+        self.iActiveTeam = self.pActivePlayer.getTeam()
+        self.pActiveTeam = gc.getTeam(self.iActiveTeam)
 
-    # Will handle the input for this screen...
+        iEspionagePercent = self.pActivePlayer.getCommercePercent(CommerceTypes.COMMERCE_ESPIONAGE)
+        if iEspionagePercent == 100:
+            screen.enable("EspionagePlus", False)
+        elif iEspionagePercent == 0:
+            screen.enable("EspionageMinus", False)
+
+        szEspionagePercent = u"%c:%d%%" % (
+            gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar(),
+            iEspionagePercent,
+        )
+        szEspionagePercent += CyTranslator().getText(
+            "TXT_KEY_MISC_POS_GOLD_PER_TURN",
+            (self.pActivePlayer.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE),),
+        )
+        screen.setLabel(
+            "EspionageInvestment",
+            "EspionageHeader",
+            u"<font=2>" + szEspionagePercent + "</font>",
+            CvUtil.FONT_LEFT_JUSTIFY,
+            self.X_PLAYER_INFO + 20,
+            self.Y_LEFT_PANE + 3,
+            -0.1,
+            FontTypes.SMALL_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+
+        iSeeEspionage = gc.getInfoTypeForString("ESPIONAGEMISSION_SEE_ESPIONAGE")
+
+        for iRival in xrange(gc.getMAX_CIV_PLAYERS()):
+            pRival = gc.getPlayer(iRival)
+            iRivalTeam = pRival.getTeam()
+            if iRivalTeam == self.iActiveTeam:
+                continue
+
+            if pRival.isBarbarian() or pRival.isMinorCiv():
+                continue
+
+            if pRival.isAlive() and self.pActiveTeam.isHasMet(iRivalTeam):
+                PlayerPanel = "PlayerPanel" + str(iRival)
+
+                # Espionage Weight
+                szWeight = CyTranslator().changeTextColor(
+                    "Weight: ", gc.getInfoTypeForString("COLOR_SELECTED_TEXT")
+                )
+                iWeight = self.pActivePlayer.getEspionageSpendingWeightAgainstTeam(iRivalTeam)
+                if iWeight > 0:
+                    szWeight += CyTranslator().changeTextColor(
+                        str(iWeight), gc.getInfoTypeForString("COLOR_POSITIVE_TEXT")
+                    )
+                else:
+                    szWeight += str(iWeight)
+
+                screen.setLabelAt(
+                    "EspionageWeight" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szWeight + "</font>",
+                    CvUtil.FONT_LEFT_JUSTIFY,
+                    self.X_PLAYER_INFO + (self.WEIGHT_BUTTON_SIZE * 2) + 2,
+                    self.Y_PLAYER_INFO + (self.LINE_SPACING * 2),
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+
+                # Espionage Rate
+                szRivalRate = " - "
+                if self.pActivePlayer.canDoEspionageMission(
+                    iSeeEspionage, iRival, pRival.getCapitalCity().plot(), -1
+                ):
+                    iRivalRate = pRival.getEspionageSpending(self.iActiveTeam)
+                    if iRivalRate > 0:
+                        szRivalRate = u"+%d/Turn" % iRivalRate
+
+                screen.setLabelAt(
+                    "RivalEspionageRate" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szRivalRate + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_RIVAL_STATS,
+                    self.Y_PLAYER_INFO + self.LINE_SPACING,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+
+                szPlayerRate = " - "
+                iPlayerRate = self.pActivePlayer.getEspionageSpending(iRivalTeam)
+                if iPlayerRate > 0:
+                    if iWeight > 0:
+                        szPlayerRate = CyTranslator().changeTextColor(
+                            u"+%d/Turn" % iPlayerRate,
+                            gc.getInfoTypeForString("COLOR_POSITIVE_TEXT"),
+                        )
+                    else:
+                        szPlayerRate = u"+%d/Turn" % iPlayerRate
+
+                screen.setLabelAt(
+                    "PlayerEspionageRate" + str(iRival),
+                    PlayerPanel,
+                    u"<font=2>" + szPlayerRate + "</font>",
+                    CvUtil.FONT_RIGHT_JUSTIFY,
+                    self.X_PLAYER_STATS,
+                    self.Y_PLAYER_INFO + self.LINE_SPACING,
+                    -0.1,
+                    FontTypes.SMALL_FONT,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+
+    def changeEspionageWeight(self, iTargetTeam, iChange):
+        if iChange < 0:
+            if self.pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) == 0:
+                return
+            iChange = min(
+                iChange, self.pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam)
+            )
+
+        CyMessageControl().sendEspionageSpendingWeightChange(iTargetTeam, iChange)
+        CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
+
+    def resetEspionageWeights(self):
+        iActivePlayer = CyGame().getActivePlayer()
+        iActiveTeam = CyGame().getActiveTeam()
+
+        for iRival in xrange(gc.getMAX_CIV_PLAYERS()):
+            pRival = gc.getPlayer(iRival)
+            iRivalTeam = pRival.getTeam()
+            if iRivalTeam == iActiveTeam:
+                continue
+
+            if pRival.isAlive() and gc.getTeam(iActiveTeam).isHasMet(iRivalTeam):
+                iChange = -1 * gc.getPlayer(iActivePlayer).getEspionageSpendingWeightAgainstTeam(
+                    iRivalTeam
+                )
+                CyMessageControl().sendEspionageSpendingWeightChange(iRivalTeam, iChange)
+
+        CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
+
+    def addComma(self, iValue):
+        sTemp = str(iValue)
+        sStart = ""
+        while len(sTemp) > 0:
+            if sTemp[0].isdigit():
+                break
+            sStart += sTemp[0]
+            sTemp = sTemp[1:]
+        sEnd = sTemp[-3:]
+        while len(sTemp) > 3:
+            sTemp = sTemp[:-3]
+            sEnd = sTemp[-3:] + "," + sEnd
+        return sStart + sEnd
+
     def handleInput(self, inputClass):
-        "Calls function mapped in EspionageAdvisorInputMap"
-
         screen = self.getScreen()
-        pActivePlayer = gc.getPlayer(self.iActivePlayer)
+        if self.iTargetPlayer > -1:
+            if inputClass.getButtonType() == WidgetTypes.WIDGET_ESPIONAGE_SELECT_PLAYER:
+                screen.setState("LeaderIcon" + str(self.iTargetPlayer), False)
+                self.iTargetPlayer = inputClass.getData1()
+                screen.setState("LeaderIcon" + str(self.iTargetPlayer), True)
+                self.iTargetCity = -1
+                self.updateRightPanel()
 
-        ##### Debug Dropdown #####
-        if CyGame().isDebugMode():
-            if inputClass.getFunctionName() == self.DEBUG_DROPDOWN_ID:
-                iIndex = screen.getSelectedPullDownID(self.DEBUG_DROPDOWN_ID)
-                self.iActivePlayer = screen.getPullDownData(self.DEBUG_DROPDOWN_ID, iIndex)
-                self.drawContents()
-                CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
+            elif inputClass.getFunctionName().startswith("WeightIncrease"):
+                self.changeEspionageWeight(inputClass.getData1() - 1, self.iIncrement)
 
-        if self.iTargetPlayer != -1:
+            elif inputClass.getFunctionName().startswith("WeightDecrease"):
+                self.changeEspionageWeight(inputClass.getData1() - 1, -self.iIncrement)
 
-            ##### Player Images #####
-            if inputClass.getData1() == self.iLeaderImagesID:
+        if (
+            inputClass.getFunctionName() == "EspionagePlus"
+            or inputClass.getFunctionName() == "EspionageMinus"
+        ):
+            iChange = inputClass.getData2()
+            if CyInterface().shiftKey():
+                if iChange > 0:
+                    iChange = 100
+                elif iChange < 0:
+                    iChange = -100
 
-                self.iTargetPlayer = inputClass.getData2()
+            CyMessageControl().sendModNetMessage(
+                MODNET_EVENTS["CHANGE_COMMERCE_PERCENT"],
+                self.iActivePlayer,
+                inputClass.getData1(),
+                iChange,
+                -1,
+            )
 
-                # Loop through all images
-                for iPlayerID in self.aiKnownPlayers:
-                    szName = "LeaderImage%d" % (iPlayerID)
-                    if self.iTargetPlayer == iPlayerID:
-                        screen.setState(szName, True)
-                    else:
-                        screen.setState(szName, False)
+        elif inputClass.getButtonType() == WidgetTypes.WIDGET_ESPIONAGE_SELECT_CITY:
+            self.iTargetCity = inputClass.getData1()
+            self.updateRightPanel()
 
-                    self.iActiveCityID = -1
+        elif inputClass.getButtonType() == WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION:
+            iSelectedMission = inputClass.getData1()
+            if self.iMission == iSelectedMission:
+                self.iMission = -1
+            else:
+                self.iMission = iSelectedMission
 
-                CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
+            self.updateRightPanel()
 
-            ##### City Listbox #####
-            if "%s%d" % (inputClass.getFunctionName(), inputClass.getID()) == self.szCityListBox:
-                iCityID = inputClass.getData1()
-                self.iActiveCityID = iCityID  # gc.getPlayer(self.iTargetPlayer).getCity(iCityID)
-                CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
+        elif inputClass.getButtonType() == WidgetTypes.WIDGET_GO_TO_CITY:
+            screen.hideScreen()
+            pCity = gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2())
+            CyCamera().JustLookAtPlot(pCity.plot())
+            if len(self.CitySpies) > 0:
+                pSelectedUnit = self.CitySpies[0]
+                for pSpy in self.CitySpies:
+                    if not pSpy.hasMoved():
+                        pSelectedUnit = pSpy
+                        break
+                CyInterface().selectUnit(pSelectedUnit, True, True, False)
 
-            # Is there any other players which have been met?
-            if self.iTargetPlayer != -1:
+        elif inputClass.getButtonType() == WidgetTypes.WIDGET_ZOOM_CITY:
+            screen.hideScreen()
+            CyInterface().selectCity(
+                gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True
+            )
 
-                ##### Increase Button #####
-                if inputClass.getData1() == self.iIncreaseButtonID:
+        if inputClass.getFunctionName() == "WeightIncrementSelect":
+            iIndex = screen.getSelectedPullDownID("WeightIncrementSelect")
+            self.iIncrement = screen.getPullDownData("WeightIncrementSelect", iIndex)
 
-                    iPlayerID = inputClass.getData2()
-                    iTargetTeam = gc.getPlayer(iPlayerID).getTeam()
+        elif inputClass.getFunctionName() == "WeightResetButton":
+            self.resetEspionageWeights()
 
-                    CyMessageControl().sendEspionageSpendingWeightChange(iTargetTeam, 1)
-
-                    if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
-                        szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                            text(
-                                "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                pActivePlayer.getEspionageSpending(iTargetTeam),
-                            )
-                        )
-                    else:
-                        szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                            text(
-                                "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                pActivePlayer.getEspionageSpending(iTargetTeam),
-                            )
-                        )
-
-                    screen.setLabelAt(
-                        "AmountText%d" % (iPlayerID),
-                        "LeaderContainer%d" % (iPlayerID),
-                        szText,
-                        0,
-                        247,
-                        15 - 1,
-                        self.Z_CONTROLS,
-                        FontTypes.TITLE_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-
-                    if pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) > 0:
-                        szText = u"<font=2>%c</font>" % (
-                            gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
-                        )
-                    else:
-                        szText = u""
-                    attach = "LeaderContainer%d" % (iPlayerID)
-                    iY = 15
-                    screen.setLabelAt(
-                        "SpendingIcon%d" % (iPlayerID),
-                        attach,
-                        szText,
-                        0,
-                        3,
-                        iY - 9,
-                        self.Z_CONTROLS,
-                        FontTypes.TITLE_FONT,
-                        WidgetTypes.WIDGET_GENERAL,
-                        -1,
-                        -1,
-                    )
-
-                    CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True)
-
-                ##### Decrease Button #####
-                elif inputClass.getData1() == self.iDecreaseButtonID:
-
-                    iPlayerID = inputClass.getData2()
-                    iTargetTeam = gc.getPlayer(iPlayerID).getTeam()
-
-                    if (
-                        pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) > 0
-                    ):  # Can't reduce weight below 0
-
-                        CyMessageControl().sendEspionageSpendingWeightChange(iTargetTeam, -1)
-
-                        if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
-                            szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                                text(
-                                    "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                    pActivePlayer.getEspionageSpending(iTargetTeam),
-                                )
-                            )
-                        else:
-                            szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                                text(
-                                    "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                    pActivePlayer.getEspionageSpending(iTargetTeam),
-                                )
-                            )
-
-                        screen.setLabelAt(
-                            "AmountText%d" % (iPlayerID),
-                            "LeaderContainer%d" % (iPlayerID),
-                            szText,
-                            0,
-                            247,
-                            15 - 1,
-                            self.Z_CONTROLS,
-                            FontTypes.TITLE_FONT,
-                            WidgetTypes.WIDGET_GENERAL,
-                            -1,
-                            -1,
-                        )
-
-                        if pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam) > 0:
-                            szText = u"<font=2>%c</font>" % (
-                                gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
-                            )
-                        else:
-                            szText = u""
-                        attach = "LeaderContainer%d" % (iPlayerID)
-                        iY = 15
-                        screen.setLabelAt(
-                            "SpendingIcon%d" % (iPlayerID),
-                            attach,
-                            szText,
-                            0,
-                            3,
-                            iY - 9,
-                            self.Z_CONTROLS,
-                            FontTypes.TITLE_FONT,
-                            WidgetTypes.WIDGET_GENERAL,
-                            -1,
-                            -1,
-                        )
-
-                        CyInterface().setDirty(
-                            InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, True
-                        )
+        elif inputClass.getFunctionName() == "DebugPlayerSelect":
+            iIndex = screen.getSelectedPullDownID("DebugPlayerSelect")
+            self.iActivePlayer = screen.getPullDownData("DebugPlayerSelect", iIndex)
+            self.iTargetPlayer = -1
+            self.iTargetCity = -1
+            self.updateLeftPanel()
+            self.updateRightPanel()
 
         return 0
 
     def update(self, fDelta):
-        if CyInterface().isDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT) is True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT):
+            self.updateEspionageWeights()
             CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, False)
-            self.refreshScreen()
         return
+
+    def drawEspionageExperience(self):
+        if gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(True) > 0:
+            screen = self.getScreen()
+
+            iExperience = gc.getPlayer(self.iActivePlayer).getEspionageExperience()
+
+            screen.addStackedBarGFC(
+                "Great Spy Bar",
+                self.X_GREAT_SPY_BAR,
+                self.Y_GREAT_SPY_BAR,
+                self.W_GREAT_SPY_BAR,
+                self.H_GREAT_SPY_BAR,
+                InfoBarTypes.NUM_INFOBAR_TYPES,
+                WidgetTypes.WIDGET_HELP_GREAT_SPY,
+                -1,
+                -1,
+            )
+            screen.setStackedBarColors(
+                "Great Spy Bar",
+                InfoBarTypes.INFOBAR_STORED,
+                gc.getInfoTypeForString("COLOR_GREAT_PEOPLE_STORED"),
+            )
+            screen.setStackedBarColors(
+                "Great Spy Bar",
+                InfoBarTypes.INFOBAR_RATE,
+                gc.getInfoTypeForString("COLOR_GREAT_PEOPLE_RATE"),
+            )
+            screen.setStackedBarColors(
+                "Great Spy Bar",
+                InfoBarTypes.INFOBAR_RATE_EXTRA,
+                gc.getInfoTypeForString("COLOR_EMPTY"),
+            )
+            screen.setStackedBarColors(
+                "Great Spy Bar", InfoBarTypes.INFOBAR_EMPTY, gc.getInfoTypeForString("COLOR_EMPTY")
+            )
+            screen.setBarPercentage(
+                "Great Spy Bar",
+                InfoBarTypes.INFOBAR_STORED,
+                float(iExperience) / float(gc.getPlayer(self.iActivePlayer).greatSpyThreshold()),
+            )
+
+            screen.setLabel(
+                "Great Spy Text",
+                "",
+                text("TXT_KEY_MISC_ESPIONAGE_EXPERIENCE"),
+                CvUtil.FONT_CENTER_JUSTIFY,
+                self.X_GREAT_SPY_BAR + self.W_GREAT_SPY_BAR / 2,
+                self.Y_GREAT_SPY_BAR + self.H_GREAT_SPY_BAR / 3 - 2,
+                0,
+                FontTypes.GAME_FONT,
+                WidgetTypes.WIDGET_HELP_GREAT_SPY,
+                -1,
+                -1,
+            )

@@ -242,7 +242,9 @@ class CvGameUtils:
         return False
 
     # Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
-    def isHasPurgeTarget(self, iCiv, bReportCity):
+    def isHasPurgeTarget(self, argsList):
+        iCiv = argsList[0]
+        bReportCity = argsList[1]
         iStateReligion = gc.getPlayer(iCiv).getStateReligion()
         iTolerance = civilization(iCiv).religion.tolerance
         apCityList = PyPlayer(iCiv).getCityList()
@@ -511,8 +513,8 @@ class CvGameUtils:
 
     # Absinthe: not used in RFCE, we can remove it
     # def doMeltdown(self,argsList):
-    # 	pCity = argsList[0]
-    # 	return False
+    #     pCity = argsList[0]
+    #     return False
 
     def doReviveActivePlayer(self, argsList):
         "allows you to perform an action after an AIAutoPlay"
@@ -977,6 +979,35 @@ class CvGameUtils:
                     sText += "\n" + text("TXT_KEY_CIVICS_SCREEN_NO_UPKEEP")
                 return sText
         ## Ultrapack ##
+
+        # Espionage Advisor
+        if eWidgetType == WidgetTypes.WIDGET_ESPIONAGE_SELECT_PLAYER:
+            pPlayer = gc.getPlayer(iData1)
+            szHelp = CyTranslator().changeTextColor(
+                pPlayer.getName(), gc.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")
+            )
+            szHelp += "\n"
+            szHelp += pPlayer.getCivilizationDescription(0)
+            szHelp += "\n\n"
+            szHelp += CyGameTextMgr().getAttitudeString(iData1, iData2)
+            return szHelp
+
+        elif eWidgetType == WidgetTypes.WIDGET_ESPIONAGE_SELECT_CITY:
+            return " "
+
+        elif eWidgetType == WidgetTypes.WIDGET_ESPIONAGE_SELECT_MISSION:
+            MissionInfo = gc.getEspionageMissionInfo(iData1)
+            szHelp = CyTranslator().changeTextColor(
+                MissionInfo.getDescription(), gc.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")
+            )
+            szHelp += "\n"
+            szHelp += MissionInfo.getHelp()
+            return szHelp
+
+        # Go to City
+        elif eWidgetType == WidgetTypes.WIDGET_GO_TO_CITY:
+            szHelp = "Locate this city in the world"
+            return szHelp
         return u""
 
     # Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert

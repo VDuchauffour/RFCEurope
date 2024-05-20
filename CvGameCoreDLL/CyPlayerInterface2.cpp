@@ -106,6 +106,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer> &x)
 
       //Leoreth
       .def("getDomainFreeExperience", &CyPlayer::getDomainFreeExperience, "int (int iDomainType)")
+      .def("canResearchGiven", &CyPlayer::canResearchGiven, "bool (int eTech, bool bTrade, int eGivenTech)")
 
       // Absinthe: original CyPlayerInterface2.cpp file started here
       .def("AI_updateFoundValues", &CyPlayer::AI_updateFoundValues, "void (bool bStartingLoc)")

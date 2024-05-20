@@ -1,3 +1,4 @@
+# from BugEventManager import g_eventManager as events
 from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH
 from CoreFunctions import (
     city,
@@ -462,6 +463,55 @@ def is_independent_civ(identifier):
 def is_barbarian_civ(identifier):
     """Return True if it's the barbarian."""
     return player(identifier).isBarbarian()
+
+
+def unittype(identifier):
+    if isinstance(identifier, CyUnit):
+        return identifier.getUnitType()
+
+    if isinstance(identifier, int):
+        return identifier
+
+    raise TypeError("Expected unit type to be CyUnit or int, received: '%s'" % type(identifier))
+
+
+def base_building(iBuilding):
+    if iBuilding is None:
+        return iBuilding
+
+    return gc.getBuildingClassInfo(
+        gc.getBuildingInfo(iBuilding).getBuildingClassType()
+    ).getDefaultBuildingIndex()
+
+
+def base_unit(iUnit):
+    return gc.getUnitClassInfo(
+        gc.getUnitInfo(unittype(iUnit)).getUnitClassType()
+    ).getDefaultUnitIndex()
+
+
+def unique_building_from_class(identifier, iBuildingClass):
+    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationBuildings(
+        iBuildingClass
+    )
+
+
+def unique_building(identifier, iBuilding):
+    if not player(identifier):
+        return base_building(iBuilding)
+    return unique_building_from_class(
+        identifier, gc.getBuildingInfo(iBuilding).getBuildingClassType()
+    )
+
+
+def unique_unit_from_class(identifier, iUnitClass):
+    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationUnits(iUnitClass)
+
+
+def unique_unit(identifier, iUnit):
+    if not player(identifier):
+        return base_unit(iUnit)
+    return unique_unit_from_class(identifier, gc.getUnitInfo(unittype(iUnit)).getUnitClassType())
 
 
 class Turn(int):
@@ -1033,7 +1083,7 @@ def make_units(player, unit, plot, n_units=1, unit_ai=None, unit_name=None):
     for _ in range(n_units):
         _unit = _generate_unit(player, unit, plot, unit_ai, unit_name)
         units.append(_unit)
-        # events.fireEvent("unitCreated", unit) # TODO
+        # events.fireEvent("unitCreated", unit)
     return CreatedUnits(units)
 
 
@@ -1166,7 +1216,7 @@ class Locations(EntitiesCollection):
         )
 
     # def owners(self):
-    # 	return Players(set(loc.getOwner() for loc in self.entities() if loc.getOwner() >= 0)) # TODO
+    #     return Players(set(loc.getOwner() for loc in self.entities() if loc.getOwner() >= 0)) # TODO
 
     def areas(self, *areas):
         return self.filter(lambda loc: loc.getArea() in [get_area(area) for area in areas])
@@ -1611,3 +1661,4 @@ techs = TechFactory
 units = UnitFactory
 plots = PlotFactory
 cities = CityFactory
+infos = Infos

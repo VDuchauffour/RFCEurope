@@ -18,9 +18,12 @@ from CoreStructures import (
 from CoreTypes import (
     City,
     Civ,
+    FaithPointBonusCategory,
     PlagueType,
     Religion,
     Scenario,
+    SpecialParameter,
+    StabilityCategory,
     UniquePower,
     Wonder,
     Promotion,
@@ -45,6 +48,7 @@ from CoreFunctions import (
     get_religion_by_id,
     location,
     message,
+    symbol,
     text,
     text_if_exists,
 )
@@ -305,7 +309,7 @@ def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
                     bSafeUnit = True
             if not bSafeUnit:
                 # Absinthe: instead of switching all units to indy, only 60% chance that the unit will defect
-                # 			the first unit from the old owner should always defect though
+                #             the first unit from the old owner should always defect though
                 k += 1
                 if k < 2 or percentage_chance(60, strict=True):
                     unit.kill(False, Civ.BARBARIAN.value)
@@ -582,8 +586,8 @@ def cultureManager(
             city.setCulture(Civ.BARBARIAN.value, 0, True)
 
         # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-        # 			for the old civ some of the culture is lost when the city is conquered
-        # 			note that this is the amount of culture "resource" for each civ, not population percent
+        #             for the old civ some of the culture is lost when the city is conquered
+        #             note that this is the amount of culture "resource" for each civ, not population percent
         city.changeCulture(iNewOwner, iCurrentCityCulture * iCulturePercent / 100, False)
         # Absinthe: only half of the amount is lost, so only 25% on city secession and minor nation revolts
         city.setCulture(
@@ -960,10 +964,15 @@ def goodPlots(tCoords, argsList):
     if pCurrent.isHills() or pCurrent.isFlatlands():
         if not pCurrent.isImpassable():
             if not pCurrent.isCity() and not pCurrent.isUnit():
-                if pCurrent.getTerrainType() not in [
-                    Terrain.DESERT.value,
-                    Terrain.TUNDRA.value,
-                ] and pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+                if (
+                    pCurrent.getTerrainType()
+                    not in [
+                        Terrain.DESERT.value,
+                        Terrain.TUNDRA.value,
+                    ]
+                    and pCurrent.getFeatureType()
+                    not in [Feature.MARSH.value, Feature.JUNGLE.value]
+                ):
                     if pCurrent.countTotalCulture() == 0:
                         return True
     return False
@@ -1376,20 +1385,18 @@ def refreshStabilityOverlay():
 
 
 def StabilityOverlayCiv(iChoice):
-
     engine = CyEngine()
-    map = CyMap()
 
     # clear the highlight
     engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 
-    # set up colors
-    colors = []
-    colors.append("COLOR_HIGHLIGHT_FOREIGN")
-    colors.append("COLOR_HIGHLIGHT_BORDER")
-    colors.append("COLOR_HIGHLIGHT_POTENTIAL")
-    colors.append("COLOR_HIGHLIGHT_NATURAL")
-    colors.append("COLOR_HIGHLIGHT_CORE")
+    colors = [
+        "COLOR_HIGHLIGHT_FOREIGN",
+        "COLOR_HIGHLIGHT_BORDER",
+        "COLOR_HIGHLIGHT_POTENTIAL",
+        "COLOR_HIGHLIGHT_NATURAL",
+        "COLOR_HIGHLIGHT_CORE",
+    ]
 
     iHuman = human()
     iHumanTeam = gc.getPlayer(iHuman).getTeam()
@@ -1441,17 +1448,13 @@ def StabilityOverlayCiv(iChoice):
             iMaxTextWidth = iTextWidth
 
     # apply the highlight
-    for i in range(map.numPlots()):
-        plot = map.plotByIndex(i)
+    for plot in plots().all().land().entities():
         if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-            if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
-                szColor = "COLOR_GREY"
-            else:
-                szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
-            engine.addColoredPlotAlt(
+            szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
+            engine.fillAreaBorderPlotAlt(
                 plot.getX(),
                 plot.getY(),
-                int(PlotStyles.PLOT_STYLE_BOX_FILL),
+                int(PlotStyles.PLOT_STYLE_TARGET),
                 int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER),
                 szColor,
                 0.2,
@@ -1542,10 +1545,160 @@ def getDawnOfManText(iPlayer):
     return text_if_exists(full_key, otherwise=base_key)
 
 
-def getBaseStabilityLastTurn(civ):
-    return data.lBaseStabilityLastTurn[civ]
-
-
 def change_attitude_extra_between_civ(iPlayer1, iPlayer2, iValue):
     gc.getPlayer(iPlayer1).AI_changeAttitudeExtra(iPlayer2, iValue)
     gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
+
+
+def get_stability_category_value(iPlayer, stability_category):
+    if stability_category == StabilityCategory.SWING:
+        return player(iPlayer).getStabilitySwing()
+    else:
+        return player(iPlayer).getStabilityBase(stability_category)
+
+
+def stability(civ):
+    level = player(civ).getStability()
+    if level < -15:
+        _text = text("TXT_KEY_STABILITY_COLLAPSING")
+        _symbol = symbol(FontSymbols.COLLAPSING_CHAR)
+    elif -15 <= level < -5:
+        _text = text("TXT_KEY_STABILITY_UNSTABLE")
+        _symbol = symbol(FontSymbols.UNSTABLE_CHAR)
+    elif -5 <= level < 5:
+        _text = text("TXT_KEY_STABILITY_SHAKY")
+        _symbol = symbol(FontSymbols.SHAKY_CHAR)
+    elif 5 <= level < 15:
+        _text = text("TXT_KEY_STABILITY_STABLE")
+        _symbol = symbol(FontSymbols.STABLE_CHAR)
+    elif level >= 15:
+        _text = text("TXT_KEY_STABILITY_SOLID")
+        _symbol = symbol(FontSymbols.SOLID_CHAR)
+    elif level >= 25:
+        _text = text("TXT_KEY_STABILITY_VERYSOLID")
+        _symbol = symbol(FontSymbols.SOLID_CHAR)
+    return level, _text, _symbol
+
+
+def calculate_gold_rate(identifier):
+    # Returns the new version of the gold text that takes into account the
+    # mercenary maintenance cost and contract income
+    pPlayer = player(identifier)
+
+    totalUnitCost = pPlayer.calculateUnitCost()
+    totalUnitSupply = pPlayer.calculateUnitSupply()
+    totalMaintenance = pPlayer.getTotalMaintenance()
+    totalCivicUpkeep = pPlayer.getCivicUpkeep([], False)
+    totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
+    totalInflatedCosts = pPlayer.calculateInflatedCosts()
+    totalMercenaryCost = (
+        pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+    ) / 100
+
+    # Colony Upkeep
+    iColonyNumber = pPlayer.getNumColonies()
+    iColonyUpkeep = 0
+    if iColonyNumber > 0:
+        iColonyUpkeep = int((0.5 * iColonyNumber * iColonyNumber + 0.5 * iColonyNumber) * 3 + 7)
+    goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
+
+    iIncome = 0
+    iExpenses = 0
+    iIncome = goldCommerce
+
+    goldFromCivs = pPlayer.getGoldPerTurn()
+    if goldFromCivs > 0:
+        iIncome += goldFromCivs
+
+    iInflation = totalInflatedCosts - totalPreInflatedCosts
+
+    iExpenses = (
+        totalUnitCost
+        + totalUnitSupply
+        + totalMaintenance
+        + totalCivicUpkeep
+        + iInflation
+        + totalMercenaryCost
+        + iColonyUpkeep
+    )
+
+    if goldFromCivs < 0:
+        iExpenses -= goldFromCivs
+
+    iDelta = iIncome - iExpenses
+    return iDelta
+
+
+def render_faith_status(identifier):
+    pPlayer = player(identifier)
+    prosecution_count = pPlayer.getProsecutionCount()
+    faith_text = text("TXT_KEY_FAITH_POINTS") + (": %i " % pPlayer.getFaith())
+
+    prosecution_text = text("TXT_KEY_FAITH_PROSECUTION_COUNT") + (": %i " % prosecution_count)
+    faith_status = faith_text + "\n" + prosecution_text
+    return faith_status
+
+
+def _get_faith_benefits(identifier):
+    pPlayer = player(identifier)
+    prosecution_count = pPlayer.getProsecutionCount()
+
+    faith_benefits_mapper = {
+        FaithPointBonusCategory.BOOST_STABILITY: (
+            "TXT_KEY_FAITH_STABILITY",
+            "+%i",
+        ),
+        FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP: (
+            "TXT_KEY_FAITH_CIVIC",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.FASTER_POPULATION_GROWTH: (
+            "TXT_KEY_FAITH_GROWTH",
+            "+%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_COST_UNITS: (
+            "TXT_KEY_FAITH_UNITS",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_TECH_COST: (
+            "TXT_KEY_FAITH_SCIENCE",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.REDUCING_WONDER_COST: (
+            "TXT_KEY_FAITH_PRODUCTION",
+            "-%i percent",
+        ),
+        FaithPointBonusCategory.BOOST_DIPLOMACY: (
+            "TXT_KEY_FAITH_DIPLOMACY",
+            "+%i",
+        ),
+    }
+    faith_benefits = {}
+    faith_benefits_text = ""
+
+    for benefit, (_text, indicator) in faith_benefits_mapper.items():
+        if pPlayer.isFaithBenefit(benefit):
+            faith_benefit = pPlayer.getFaithBenefit(benefit)
+            indicator = indicator % faith_benefit
+            faith_benefits[benefit] = faith_benefit
+            faith_benefits_text += text(_text) + " " + indicator + " \n"
+
+    if prosecution_count > 0:
+        prosecution_stability = (prosecution_count + 2) / 3
+        faith_benefits["prosecution_stability"] = prosecution_stability
+        faith_benefits_text += text("TXT_KEY_FAITH_PROSECUTION_INSTABILITY") + (
+            " -%i \n" % prosecution_stability
+        )
+
+    return faith_benefits, faith_benefits_text
+
+
+def calculate_faith_benefits(identifier, total=True):
+    faith_benefits = _get_faith_benefits(identifier)[0]
+    if total:
+        faith_benefits = sum(faith_benefits.values())
+    return faith_benefits
+
+
+def render_faith_benefits(identifier):
+    return _get_faith_benefits(identifier)[1]

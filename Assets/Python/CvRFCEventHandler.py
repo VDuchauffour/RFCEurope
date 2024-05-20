@@ -21,7 +21,6 @@ import UniquePowers
 import AIWars
 from RFCUtils import (
     forcedInvasion,
-    getBaseStabilityLastTurn,
     getProvinceStabilityLevel,
     spreadMajorCulture,
     getUniqueBuilding,
@@ -222,8 +221,8 @@ class CvRFCEventHandler:
         data.lEventRandomness[iByzantiumVikingAttack] = rand(10)
 
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
-        # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
-        # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
+        #             some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
+        #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
         if get_scenario() == Scenario.i1200AD:
             for city in cities().owner(Civ.HUNGARY.value).entities():
                 self.cnm.renameCities(city, Civ.HUNGARY.value)
@@ -276,7 +275,7 @@ class CvRFCEventHandler:
             self.up.janissaryNewCityUP(playerType, city, bConquest)
 
         # Absinthe: Scottish UP
-        # 			against all players (including indies and barbs), but only on conquest
+        #             against all players (including indies and barbs), but only on conquest
         if owner == Civ.SCOTLAND.value and bConquest:  # playerType < civilizations().len()
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
@@ -284,7 +283,7 @@ class CvRFCEventHandler:
                 self.up.defianceUP(owner)
 
         # Absinthe: Aragonese UP
-        # 			UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
+        #             UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
         if owner == Civ.ARAGON.value:
             self.up.confederationUP(owner)
         if playerType == Civ.ARAGON.value:
@@ -338,7 +337,7 @@ class CvRFCEventHandler:
                 self.crusade.success(playerType)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
-            # 			maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
+            #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
             if (
                 percentage_chance(15, strict=True)
                 and playerType in civilizations().majors().ids()
@@ -359,7 +358,7 @@ class CvRFCEventHandler:
             if pNewOwner.countNumBuildings(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
                 city.setHasRealBuilding(getUniqueBuilding(iNewOwner, Building.WALLS.value), True)
                 # Absinthe: if the Castle building were built with the Krak, then it should add stability
-                # 			the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
+                #             the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
                 if not (
                     city.isHasBuilding(Building.SPANISH_CITADEL.value)
                     or city.isHasBuilding(Building.MOSCOW_KREMLIN.value)
@@ -408,7 +407,7 @@ class CvRFCEventHandler:
         self.pla.onCityRazed(city, iPlayer)  # Plague
 
         # Absinthe: Aragonese UP
-        # 			UP tile yields should be recalculated if your new city is razed
+        #             UP tile yields should be recalculated if your new city is razed
         if iPlayer == Civ.ARAGON.value:
             self.up.confederationUP(iPlayer)
 
@@ -428,7 +427,7 @@ class CvRFCEventHandler:
         self.mercs.onCityBuilt(iOwner, city)
 
         # Absinthe: Aragonese UP
-        # 			UP tile yields should be recalculated on city foundation
+        #             UP tile yields should be recalculated on city foundation
         if iOwner == Civ.ARAGON.value:
             self.up.confederationUP(iOwner)
 
@@ -449,14 +448,14 @@ class CvRFCEventHandler:
                     city.setHasRealBuilding(Building.PORTUGAL_FEITORIA.value, True)
 
         # Absinthe: Free buildings if city is built on a tile improvement
-        # 			The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
-        # 			Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
-        # 			If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
-        # 			(only problem might be if currently there is no improvement on the city-founding tile, but the last destroyed improvement in the game
-        # 				was a fort on the exact same plot some turns ago - but IMO that's not much of a stress of reality, there was a fort there after all)
-        # 			Note that CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
-        # 				adding an improvement in the scenario map to one of the preplaced Byzantine cities won't work perfectly:
-        # 				while the improvement will be autorazed on the beginning of the 1st players turn when starting in 500AD, does nothing if you load a saved game
+        #             The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
+        #             Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
+        #             If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
+        #             (only problem might be if currently there is no improvement on the city-founding tile, but the last destroyed improvement in the game
+        #                 was a fort on the exact same plot some turns ago - but IMO that's not much of a stress of reality, there was a fort there after all)
+        #             Note that CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
+        #                 adding an improvement in the scenario map to one of the preplaced Byzantine cities won't work perfectly:
+        #                 while the improvement will be autorazed on the beginning of the 1st players turn when starting in 500AD, does nothing if you load a saved game
         iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
         iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
         iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
@@ -479,9 +478,9 @@ class CvRFCEventHandler:
                 city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.GRANARY.value), True)
 
         # Absinthe: Some initial food for all cities on foundation
-        # 			So Leon and Roskilde for example don't lose a population in the first couple turns
-        # 			Nor the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
-        # 			Currently 1/5 of the treshold of the next population growth
+        #             So Leon and Roskilde for example don't lose a population in the first couple turns
+        #             Nor the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
+        #             Currently 1/5 of the treshold of the next population growth
         city.setFood(city.growthThreshold() / 5)
 
         # 3MiroUP: spread religion on city foundation
@@ -861,7 +860,6 @@ class CvRFCEventHandler:
             self.rel.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
 
-
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
     def onUnitPromoted(self, argsList):
@@ -1014,35 +1012,5 @@ class CvRFCEventHandler:
             self.lastProvinceID = -1
         # Absinthe: end
 
-    def printDebug(self, iGameTurn):
-        pass
-
     def printPlotsDebug(self):
         pass
-
-    def printEmbassyDebug(self):
-        pass
-
-    def printStabilityDebug(self):
-        for iCiv in civilizations().majors().ids():
-            if gc.getPlayer(iCiv).isAlive():
-                print(
-                    "Base:",
-                    getBaseStabilityLastTurn(iCiv),
-                    "Modifier:",
-                    player(iCiv).getStability() - getBaseStabilityLastTurn(iCiv),
-                    "Total:",
-                    player(iCiv).getStability(),
-                    "civic",
-                    gc.getPlayer(iCiv).getCivics(5),
-                    gc.getPlayer(iCiv).getCivilizationDescription(0),
-                )
-
-        for i in civilizations().majors().ids():
-            print(
-                gc.getPlayer(i).getCivilizationShortDescription(0),
-                "PLOT OWNERSHIP ABROAD:",
-                self.sta.getOwnedPlotsLastTurn(i),
-                "CITY OWNERSHIP LOST:",
-                self.sta.getOwnedCitiesLastTurn(i),
-            )

@@ -5,6 +5,7 @@
 <!-- Copyright Firaxis Games 2006 -->
 <!-- -->
 <!-- Event Infos -->
+<!-- DAS: Adding Callbacks to all events which change plot yields in order to add landmarks -->
 <Civ4EventInfos xmlns="x-schema:CIV4EventSchema.xml">
 	<EventInfos>
 	<!--	<EventInfo>
@@ -3489,7 +3490,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -3580,7 +3581,7 @@
 			</AdditionalEvents>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -7503,7 +7504,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -7589,7 +7590,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -7675,7 +7676,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -7847,7 +7848,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -7933,7 +7934,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -8023,7 +8024,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -8109,7 +8110,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -8195,7 +8196,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -8281,7 +8282,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -8534,7 +8535,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -13909,7 +13910,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -14157,7 +14158,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>
@@ -23402,10 +23403,10 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonCallback>applyOverwhelmDone1</PythonCallback>
+			<PythonCallback/>
 			<PythonExpireCheck/>
-			<PythonCanDo>canApplyOverwhelmDone1</PythonCanDo>
-			<PythonHelp>getHelpOverwhelmDone1</PythonHelp>
+			<PythonCanDo/>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -24915,7 +24916,7 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback/>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<PythonExpireCheck/>
 			<PythonCanDo/>
 			<PythonHelp/>

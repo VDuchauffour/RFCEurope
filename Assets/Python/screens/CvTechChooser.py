@@ -6,22 +6,6 @@ from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums
 
-PIXEL_INCREMENT = 7
-BOX_INCREMENT_WIDTH = 33  # Should be a multiple of 3...
-BOX_INCREMENT_HEIGHT = 9  # Should be a multiple of 3...
-BOX_INCREMENT_Y_SPACING = 6  # Should be a multiple of 3...
-BOX_INCREMENT_X_SPACING = 9  # Should be a multiple of 3...
-
-TEXTURE_SIZE = 24
-X_START = 6
-X_INCREMENT = 27
-Y_ROW = 32
-
-CIV_HAS_TECH = 0
-CIV_IS_RESEARCHING = 1
-CIV_NO_RESEARCH = 2
-CIV_TECH_AVAILABLE = 3
-
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
@@ -58,6 +42,47 @@ class CvTechChooser:
         screen = CyGInterfaceScreen("TechChooser", CvScreenEnums.TECH_CHOOSER)
         screen.setRenderInterfaceOnly(True)
         screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
+
+        self.X_RESOLUTION = screen.getXResolution()
+        self.Y_RESOLUTION = screen.getYResolution()
+
+        if self.X_RESOLUTION >= 1280:
+            self.W_SCREEN = 1280
+            self.H_SCREEN = 768
+        else:
+            self.W_SCREEN = self.X_RESOLUTION
+            self.H_SCREEN = 768
+
+        self.W_TOP_PANEL = self.W_SCREEN
+        self.H_TOP_PANEL = 55
+        self.X_TOP_PANEL = 0
+        self.Y_TOP_PANEL = -2
+
+        self.W_BOTTOM_PANEL = self.W_SCREEN
+        self.H_BOTTOM_PANEL = 55
+        self.X_BOTTOM_PANEL = 0
+        self.Y_BOTTOM_PANEL = self.H_SCREEN - self.H_BOTTOM_PANEL
+
+        self.X_TITLE = self.X_TOP_PANEL + (self.W_TOP_PANEL / 2)
+        self.Y_TITLE = self.Y_TOP_PANEL + 14
+        self.PIXEL_INCREMENT = 7
+        self.BOX_INCREMENT_WIDTH = 33  # Should be a multiple of 3...
+        self.BOX_INCREMENT_HEIGHT = 9  # Should be a multiple of 3...
+        self.BOX_INCREMENT_Y_SPACING = 6  # Should be a multiple of 3...
+        self.BOX_INCREMENT_X_SPACING = 9  # Should be a multiple of 3...
+
+        self.ICON_SIZE = 24
+        self.X_START = 6
+        self.X_INCREMENT = 27
+        self.Y_ROW = 32
+
+        self.X_EXIT = self.W_BOTTOM_PANEL - 25
+        self.Y_EXIT = self.Y_BOTTOM_PANEL + 20
+
+        self.CIV_HAS_TECH = 0
+        self.CIV_IS_RESEARCHING = 1
+        self.CIV_NO_RESEARCH = 2
+        self.CIV_TECH_AVAILABLE = 3
 
         screen.hide("AddTechButton")
         screen.hide("ASPointsLabel")
@@ -117,22 +142,39 @@ class CvTechChooser:
             )
             screen.hide("AddTechButton")
 
-        # Here we set the background widget and exit button, and we show the screen
-        screen.showWindowBackground(False)
-        screen.setDimensions(screen.centerX(0), screen.centerY(0), 1024, 768)
-        screen.addPanel(
-            "TechTopPanel", u"", u"", True, False, 0, 0, 1024, 55, PanelStyles.PANEL_STYLE_TOPBAR
+        screen.setDimensions(
+            (self.X_RESOLUTION / 2) - (self.W_SCREEN / 2),
+            screen.centerY(0),
+            self.W_SCREEN,
+            self.H_SCREEN,
         )
+        screen.setRenderInterfaceOnly(True)
+        screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
         screen.addDDSGFC(
-            "TechBG",
-            ArtFileMgr.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(),
+            "ScreenBackground",
+            CyArtFileMgr().getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(),
             0,
-            48,
-            1024,
-            672,
+            0,
+            self.W_SCREEN,
+            self.H_SCREEN,
             WidgetTypes.WIDGET_GENERAL,
             -1,
             -1,
+        )
+        screen.moveToBack("ScreenBackground")
+        screen.showWindowBackground(False)
+
+        screen.addPanel(
+            "TechTopPanel",
+            u"",
+            u"",
+            True,
+            False,
+            self.X_TOP_PANEL,
+            self.Y_TOP_PANEL,
+            self.W_TOP_PANEL,
+            self.H_TOP_PANEL,
+            PanelStyles.PANEL_STYLE_TOPBAR,
         )
         screen.addPanel(
             "TechBottomPanel",
@@ -140,20 +182,33 @@ class CvTechChooser:
             u"",
             True,
             False,
-            0,
-            713,
-            1024,
-            55,
+            self.X_BOTTOM_PANEL,
+            self.Y_BOTTOM_PANEL,
+            self.W_BOTTOM_PANEL,
+            self.H_BOTTOM_PANEL,
             PanelStyles.PANEL_STYLE_BOTTOMBAR,
         )
-        screen.setText(
-            "TechChooserExit",
+        screen.setLabel(
+            "TechTitle",
             "Background",
-            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
+            u"<font=4b>TECHNOLOGY ADVISOR</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
+            self.X_TITLE,
+            self.Y_TITLE,
+            -0.1,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
+        screen.setText(
+            "TechExit",
+            "Background",
+            u"<font=4>EXIT</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
-            994,
-            726,
-            0,
+            self.X_EXIT,
+            self.Y_EXIT,
+            -0.1,
             FontTypes.TITLE_FONT,
             WidgetTypes.WIDGET_CLOSE_SCREEN,
             -1,
@@ -161,41 +216,23 @@ class CvTechChooser:
         )
         screen.setActivation("TechChooserExit", ActivationTypes.ACTIVATE_MIMICPARENTFOCUS)
 
-        # Header...
-        szText = u"<font=4>"
-        szText = szText + text("TXT_KEY_TECH_CHOOSER_TITLE").upper()
-        szText = szText + u"</font>"
-        screen.setLabel(
-            "TechTitleHeader",
-            "Background",
-            szText,
-            CvUtil.FONT_CENTER_JUSTIFY,
-            502,
-            8,
+        # Scrolling Panel
+        screen.addScrollPanel(
+            "TechList",
+            u"",
             0,
-            FontTypes.TITLE_FONT,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
+            60,
+            self.W_SCREEN,
+            self.H_SCREEN - 132,
+            PanelStyles.PANEL_STYLE_EXTERNAL,
         )
-
-        # Make the scrollable area for the tech list...
-        screen.addScrollPanel("TechList", u"", 0, 64, 1024, 626, PanelStyles.PANEL_STYLE_EXTERNAL)
         screen.setActivation("TechList", ActivationTypes.ACTIVATE_NORMAL)
         screen.hide("TechList")
 
-        # Add the Highlight
-        # screen.addDDSGFC( "TechHighlight", ArtFileMgr.getInterfaceArtInfo("TECH_HIGHLIGHT").getPath(), 0, 0, self.getXStart() + 6, 12 + ( BOX_INCREMENT_HEIGHT * PIXEL_INCREMENT ), WidgetTypes.WIDGET_GENERAL, -1, -1 )
-        # screen.hide( "TechHighlight" )
-
-        # Place the tech blocks
         self.placeTechs()
-
-        # Draw the arrows
         self.drawArrows()
 
         screen.moveToFront("CivDropDown")
-
         screen.moveToFront("AddTechButton")
 
     def placeTechs(self):
@@ -216,17 +253,20 @@ class CvTechChooser:
             # Create and place a tech in its proper location
             iX = 30 + (
                 (gc.getTechInfo(i).getGridX() - 1)
-                * ((BOX_INCREMENT_X_SPACING + BOX_INCREMENT_WIDTH) * PIXEL_INCREMENT)
+                * (
+                    (self.BOX_INCREMENT_X_SPACING + self.BOX_INCREMENT_WIDTH)
+                    * self.PIXEL_INCREMENT
+                )
             )
             iY = (gc.getTechInfo(i).getGridY() - 1) * (
-                BOX_INCREMENT_Y_SPACING * PIXEL_INCREMENT
+                self.BOX_INCREMENT_Y_SPACING * self.PIXEL_INCREMENT
             ) + 5
             szTechRecord = "TechRecord" + str(i)
 
             if iMaxX < iX + self.getXStart():
                 iMaxX = iX + self.getXStart()
-            if iMaxY < iY + (BOX_INCREMENT_HEIGHT * PIXEL_INCREMENT):
-                iMaxY = iY + (BOX_INCREMENT_HEIGHT * PIXEL_INCREMENT)
+            if iMaxY < iY + (self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT):
+                iMaxY = iY + (self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT)
 
             screen.attachPanelAt(
                 "TechList",
@@ -239,7 +279,7 @@ class CvTechChooser:
                 iX - 6,
                 iY - 6,
                 self.getXStart() + 6,
-                12 + (BOX_INCREMENT_HEIGHT * PIXEL_INCREMENT),
+                12 + (self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT),
                 WidgetTypes.WIDGET_TECH_TREE,
                 i,
                 -1,
@@ -253,19 +293,19 @@ class CvTechChooser:
 
             if gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam()).isHasTech(i):
                 screen.setPanelColor(szTechRecord, 85, 150, 87)
-                self.aiCurrentState.append(CIV_HAS_TECH)
+                self.aiCurrentState.append(self.CIV_HAS_TECH)
             elif gc.getPlayer(self.iCivSelected).getCurrentResearch() == i:
                 screen.setPanelColor(szTechRecord, 104, 158, 165)
-                self.aiCurrentState.append(CIV_IS_RESEARCHING)
+                self.aiCurrentState.append(self.CIV_IS_RESEARCHING)
             elif gc.getPlayer(self.iCivSelected).isResearchingTech(i):
                 screen.setPanelColor(szTechRecord, 104, 158, 165)
-                self.aiCurrentState.append(CIV_IS_RESEARCHING)
+                self.aiCurrentState.append(self.CIV_IS_RESEARCHING)
             elif gc.getPlayer(self.iCivSelected).canEverResearch(i):
                 screen.setPanelColor(szTechRecord, 100, 104, 160)
-                self.aiCurrentState.append(CIV_NO_RESEARCH)
+                self.aiCurrentState.append(self.CIV_NO_RESEARCH)
             else:
                 screen.setPanelColor(szTechRecord, 206, 65, 69)
-                self.aiCurrentState.append(CIV_TECH_AVAILABLE)
+                self.aiCurrentState.append(self.CIV_TECH_AVAILABLE)
 
             szTechID = "TechID" + str(i)
             szTechString = "<font=1>"
@@ -280,7 +320,7 @@ class CvTechChooser:
                 szTechRecord,
                 szTechString,
                 CvUtil.FONT_LEFT_JUSTIFY,
-                iX + 6 + X_INCREMENT,
+                iX + 6 + self.X_INCREMENT,
                 iY + 6,
                 -0.1,
                 FontTypes.SMALL_FONT,
@@ -297,15 +337,15 @@ class CvTechChooser:
                 gc.getTechInfo(i).getButton(),
                 iX + 6,
                 iY + 6,
-                TEXTURE_SIZE,
-                TEXTURE_SIZE,
+                self.ICON_SIZE,
+                self.ICON_SIZE,
                 WidgetTypes.WIDGET_TECH_TREE,
                 i,
                 -1,
                 False,
             )
 
-            fX = X_START
+            fX = self.X_START
 
             j = 0
             k = 0
@@ -323,15 +363,15 @@ class CvTechChooser:
                             szTechRecord,
                             gc.getPlayer(gc.getGame().getActivePlayer()).getUnitButton(eLoopUnit),
                             iX + fX,
-                            iY + Y_ROW,
-                            TEXTURE_SIZE,
-                            TEXTURE_SIZE,
+                            iY + self.Y_ROW,
+                            self.ICON_SIZE,
+                            self.ICON_SIZE,
                             WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT,
                             eLoopUnit,
                             1,
                             True,
                         )
-                        fX += X_INCREMENT
+                        fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -346,9 +386,9 @@ class CvTechChooser:
                 if eLoopBuilding != -1:
                     # Rhye - start
                     # if (gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i):
-                    # 	szBuildingButton = "Building" + str(j)
-                    # 	screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
-                    # 	fX += X_INCREMENT
+                    #     szBuildingButton = "Building" + str(j)
+                    #     screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
+                    #     fX += X_INCREMENT
                     if (
                         eLoopBuilding < PlagueType.BUILDING_PLAGUE.value
                         or eLoopBuilding == PlagueType.BUILDING_PLAGUE.value + self.iCivSelected
@@ -360,15 +400,15 @@ class CvTechChooser:
                                 szTechRecord,
                                 gc.getBuildingInfo(eLoopBuilding).getButton(),
                                 iX + fX,
-                                iY + Y_ROW,
-                                TEXTURE_SIZE,
-                                TEXTURE_SIZE,
+                                iY + self.Y_ROW,
+                                self.ICON_SIZE,
+                                self.ICON_SIZE,
                                 WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING,
                                 eLoopBuilding,
                                 1,
                                 True,
                             )
-                            fX += X_INCREMENT
+                            fX += self.X_INCREMENT
                     # Rhye - end
 
             j = 0
@@ -390,9 +430,9 @@ class CvTechChooser:
                             szTechRecord,
                             gc.getBuildingInfo(eLoopBuilding).getButton(),
                             iX + fX,
-                            iY + Y_ROW,
-                            TEXTURE_SIZE,
-                            TEXTURE_SIZE,
+                            iY + self.Y_ROW,
+                            self.ICON_SIZE,
+                            self.ICON_SIZE,
                             WidgetTypes.WIDGET_HELP_OBSOLETE,
                             eLoopBuilding,
                             -1,
@@ -403,15 +443,15 @@ class CvTechChooser:
                             szTechRecord,
                             ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_RED_X").getPath(),
                             iX + fX,
-                            iY + Y_ROW,
-                            TEXTURE_SIZE,
-                            TEXTURE_SIZE,
+                            iY + self.Y_ROW,
+                            self.ICON_SIZE,
+                            self.ICON_SIZE,
                             WidgetTypes.WIDGET_HELP_OBSOLETE,
                             eLoopBuilding,
                             -1,
                             False,
                         )
-                        fX += X_INCREMENT
+                        fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -427,9 +467,9 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getBonusInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS,
                         j,
                         -1,
@@ -440,15 +480,15 @@ class CvTechChooser:
                         szTechRecord,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_RED_X").getPath(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS,
                         j,
                         -1,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -464,9 +504,9 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getSpecialBuildingInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL,
                         j,
                         -1,
@@ -477,15 +517,15 @@ class CvTechChooser:
                         szTechRecord,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_RED_X").getPath(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL,
                         j,
                         -1,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -499,15 +539,15 @@ class CvTechChooser:
                         szTechRecord,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_MOVE_BONUS,
                         i,
                         -1,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -521,15 +561,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getPromotionInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION,
                         j,
                         -1,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -547,15 +587,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getPlayer(gc.getGame().getActivePlayer()).getUnitButton(eLoopUnit),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_FREE_UNIT,
                         eLoopUnit,
                         i,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -568,15 +608,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_FEATURE_PRODUCTION,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -589,15 +629,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_WORKER_RATE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -610,15 +650,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_TRADE_ROUTES").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_TRADE_ROUTES,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -631,15 +671,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_HEALTH_RATE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -652,15 +692,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_HAPPINESS_RATE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -673,15 +713,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_FREETECH").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_FREE_TECH,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -694,15 +734,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_LOS_BONUS,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -715,15 +755,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_MAPCENTER").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_MAP_CENTER,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -736,15 +776,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_MAP_REVEAL,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -757,15 +797,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_MAPTRADING").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_MAP_TRADE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -778,15 +818,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_TECHTRADING").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_TECH_TRADE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -799,15 +839,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_GOLDTRADING").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_GOLD_TRADE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -820,15 +860,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_OPENBORDERS").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_OPEN_BORDERS,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -841,15 +881,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_DEFENSIVEPACT").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_DEFENSIVE_PACT,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -862,15 +902,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_PERMALLIANCE").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_PERMANENT_ALLIANCE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -883,15 +923,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_VASSAL").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_VASSAL_STATE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -904,15 +944,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_BRIDGEBUILDING").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_BUILD_BRIDGE,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -925,15 +965,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_IRRIGATION").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_IRRIGATION,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -946,15 +986,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_NOIRRIGATION").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_IGNORE_IRRIGATION,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -967,15 +1007,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WATERWORK").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_WATER_WORK,
                     i,
                     -1,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1000,15 +1040,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getBuildInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_IMPROVEMENT,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1022,15 +1062,15 @@ class CvTechChooser:
                         szTechRecord,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1058,15 +1098,15 @@ class CvTechChooser:
                         szTechRecord,
                         szFileName,
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_ADJUST,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1082,15 +1122,15 @@ class CvTechChooser:
                         szTechRecord,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WATERTRADE").getPath(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_TERRAIN_TRADE,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = gc.getNumTerrainInfos()
             if gc.getTechInfo(i).isRiverTrade() and not (
@@ -1102,15 +1142,15 @@ class CvTechChooser:
                     szTechRecord,
                     ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_RIVERTRADE").getPath(),
                     iX + fX,
-                    iY + Y_ROW,
-                    TEXTURE_SIZE,
-                    TEXTURE_SIZE,
+                    iY + self.Y_ROW,
+                    self.ICON_SIZE,
+                    self.ICON_SIZE,
                     WidgetTypes.WIDGET_HELP_TERRAIN_TRADE,
                     i,
                     j,
                     False,
                 )
-                fX += X_INCREMENT
+                fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1124,15 +1164,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getSpecialBuildingInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_SPECIAL_BUILDING,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1149,15 +1189,15 @@ class CvTechChooser:
                                 szTechRecord,
                                 gc.getImprovementInfo(j).getButton(),
                                 iX + fX,
-                                iY + Y_ROW,
-                                TEXTURE_SIZE,
-                                TEXTURE_SIZE,
+                                iY + self.Y_ROW,
+                                self.ICON_SIZE,
+                                self.ICON_SIZE,
                                 WidgetTypes.WIDGET_HELP_YIELD_CHANGE,
                                 i,
                                 j,
                                 False,
                             )
-                            fX += X_INCREMENT
+                            fX += self.X_INCREMENT
                             bFound = True
 
             j = 0
@@ -1172,15 +1212,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getBonusInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_BONUS_REVEAL,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1194,15 +1234,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getCivicInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_CIVIC_REVEAL,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1216,15 +1256,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getProjectInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
                         j,
                         1,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1238,15 +1278,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getProcessInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_PROCESS_INFO,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             j = 0
             k = 0
@@ -1266,15 +1306,15 @@ class CvTechChooser:
                         szTechRecord,
                         szButton,
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_FOUND_RELIGION,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             for j in range(gc.getNumCorporationInfos()):
                 if gc.getCorporationInfo(j).getTechPrereq() == i:
@@ -1284,15 +1324,15 @@ class CvTechChooser:
                         szTechRecord,
                         gc.getCorporationInfo(j).getButton(),
                         iX + fX,
-                        iY + Y_ROW,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        iY + self.Y_ROW,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_FOUND_CORPORATION,
                         i,
                         j,
                         False,
                     )
-                    fX += X_INCREMENT
+                    fX += self.X_INCREMENT
 
             screen.show(szTechRecord)
 
@@ -1319,28 +1359,28 @@ class CvTechChooser:
             abChanged.append(0)
 
             if gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam()).isHasTech(i):
-                if self.aiCurrentState[i] != CIV_HAS_TECH:
-                    self.aiCurrentState[i] = CIV_HAS_TECH
+                if self.aiCurrentState[i] != self.CIV_HAS_TECH:
+                    self.aiCurrentState[i] = self.CIV_HAS_TECH
                     abChanged[i] = 1
                     bAnyChanged = 1
             elif gc.getPlayer(self.iCivSelected).getCurrentResearch() == i:
-                if self.aiCurrentState[i] != CIV_IS_RESEARCHING:
-                    self.aiCurrentState[i] = CIV_IS_RESEARCHING
+                if self.aiCurrentState[i] != self.CIV_IS_RESEARCHING:
+                    self.aiCurrentState[i] = self.CIV_IS_RESEARCHING
                     abChanged[i] = 1
                     bAnyChanged = 1
             elif gc.getPlayer(self.iCivSelected).isResearchingTech(i):
-                if self.aiCurrentState[i] != CIV_IS_RESEARCHING:
-                    self.aiCurrentState[i] = CIV_IS_RESEARCHING
+                if self.aiCurrentState[i] != self.CIV_IS_RESEARCHING:
+                    self.aiCurrentState[i] = self.CIV_IS_RESEARCHING
                     abChanged[i] = 1
                     bAnyChanged = 1
             elif gc.getPlayer(self.iCivSelected).canEverResearch(i):
-                if self.aiCurrentState[i] != CIV_NO_RESEARCH:
-                    self.aiCurrentState[i] = CIV_NO_RESEARCH
+                if self.aiCurrentState[i] != self.CIV_NO_RESEARCH:
+                    self.aiCurrentState[i] = self.CIV_NO_RESEARCH
                     abChanged[i] = 1
                     bAnyChanged = 1
             else:
-                if self.aiCurrentState[i] != CIV_TECH_AVAILABLE:
-                    self.aiCurrentState[i] = CIV_TECH_AVAILABLE
+                if self.aiCurrentState[i] != self.CIV_TECH_AVAILABLE:
+                    self.aiCurrentState[i] = self.CIV_TECH_AVAILABLE
                     abChanged[i] = 1
                     bAnyChanged = 1
 
@@ -1365,10 +1405,13 @@ class CvTechChooser:
 
                 iX = 30 + (
                     (gc.getTechInfo(i).getGridX() - 1)
-                    * ((BOX_INCREMENT_X_SPACING + BOX_INCREMENT_WIDTH) * PIXEL_INCREMENT)
+                    * (
+                        (self.BOX_INCREMENT_X_SPACING + self.BOX_INCREMENT_WIDTH)
+                        * self.PIXEL_INCREMENT
+                    )
                 )
                 iY = (gc.getTechInfo(i).getGridY() - 1) * (
-                    BOX_INCREMENT_Y_SPACING * PIXEL_INCREMENT
+                    self.BOX_INCREMENT_Y_SPACING * self.PIXEL_INCREMENT
                 ) + 5
 
                 szTechString += gc.getTechInfo(i).getDescription()
@@ -1386,7 +1429,7 @@ class CvTechChooser:
                     "TechList",
                     szTechString,
                     CvUtil.FONT_LEFT_JUSTIFY,
-                    iX + 6 + X_INCREMENT,
+                    iX + 6 + self.X_INCREMENT,
                     iY + 6,
                     -0.1,
                     FontTypes.SMALL_FONT,
@@ -1427,7 +1470,7 @@ class CvTechChooser:
 
             bFirst = 1
 
-            fX = (BOX_INCREMENT_WIDTH * PIXEL_INCREMENT) - 8
+            fX = (self.BOX_INCREMENT_WIDTH * self.PIXEL_INCREMENT) - 8
 
             for j in range(gc.getNUM_AND_TECH_PREREQS()):
 
@@ -1435,14 +1478,17 @@ class CvTechChooser:
 
                 if eTech > -1:
 
-                    fX = fX - X_INCREMENT
+                    fX = fX - self.X_INCREMENT
 
                     iX = 30 + (
                         (gc.getTechInfo(i).getGridX() - 1)
-                        * ((BOX_INCREMENT_X_SPACING + BOX_INCREMENT_WIDTH) * PIXEL_INCREMENT)
+                        * (
+                            (self.BOX_INCREMENT_X_SPACING + self.BOX_INCREMENT_WIDTH)
+                            * self.PIXEL_INCREMENT
+                        )
                     )
                     iY = (gc.getTechInfo(i).getGridY() - 1) * (
-                        BOX_INCREMENT_Y_SPACING * PIXEL_INCREMENT
+                        self.BOX_INCREMENT_Y_SPACING * self.PIXEL_INCREMENT
                     ) + 5
 
                     szTechPrereqID = "TechPrereqID" + str((i * 1000) + j)
@@ -1452,8 +1498,8 @@ class CvTechChooser:
                         gc.getTechInfo(eTech).getButton(),
                         iX + fX,
                         iY + 6,
-                        TEXTURE_SIZE,
-                        TEXTURE_SIZE,
+                        self.ICON_SIZE,
+                        self.ICON_SIZE,
                         WidgetTypes.WIDGET_HELP_TECH_PREPREQ,
                         eTech,
                         -1,
@@ -1473,10 +1519,13 @@ class CvTechChooser:
 
                     iX = 24 + (
                         (gc.getTechInfo(eTech).getGridX() - 1)
-                        * ((BOX_INCREMENT_X_SPACING + BOX_INCREMENT_WIDTH) * PIXEL_INCREMENT)
+                        * (
+                            (self.BOX_INCREMENT_X_SPACING + self.BOX_INCREMENT_WIDTH)
+                            * self.PIXEL_INCREMENT
+                        )
                     )
                     iY = (gc.getTechInfo(eTech).getGridY() - 1) * (
-                        BOX_INCREMENT_Y_SPACING * PIXEL_INCREMENT
+                        self.BOX_INCREMENT_Y_SPACING * self.PIXEL_INCREMENT
                     ) + 5
 
                     # j is the pre-req, i is the tech...
@@ -2048,19 +2097,22 @@ class CvTechChooser:
         return szName
 
     def getXStart(self):
-        return BOX_INCREMENT_WIDTH * PIXEL_INCREMENT
+        return self.BOX_INCREMENT_WIDTH * self.PIXEL_INCREMENT
 
     def getXSpacing(self):
-        return BOX_INCREMENT_X_SPACING * PIXEL_INCREMENT
+        return self.BOX_INCREMENT_X_SPACING * self.PIXEL_INCREMENT
 
     def getYStart(self, iY):
-        return int((((BOX_INCREMENT_HEIGHT * PIXEL_INCREMENT) / 6.0) * iY) - PIXEL_INCREMENT)
+        return int(
+            (((self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT) / 6.0) * iY)
+            - self.PIXEL_INCREMENT
+        )
 
     def getWidth(self, xDiff):
         return (xDiff * self.getXSpacing()) + ((xDiff - 1) * self.getXStart())
 
     def getHeight(self, yDiff, nFactor):
-        return (nFactor + ((abs(yDiff) - 1) * 6)) * PIXEL_INCREMENT
+        return (nFactor + ((abs(yDiff) - 1) * 6)) * self.PIXEL_INCREMENT
 
     def update(self, fDelta):
 

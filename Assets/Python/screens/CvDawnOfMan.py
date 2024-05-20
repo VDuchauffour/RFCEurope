@@ -11,6 +11,15 @@ from CvPythonExtensions import *
 from RFCUtils import getDawnOfManText
 from Scenario import get_scenario_start_turn
 
+## HOF MOD
+import Buffy
+import BugCore
+import GameSetUpCheck
+
+BUFFYOpt = BugCore.game.BUFFY
+## end HOF MOD
+
+
 ArtFileMgr = CyArtFileMgr()
 gc = CyGlobalContext()
 
@@ -65,7 +74,7 @@ class CvDawnOfMan:
         self.X_TEXT_PANEL = self.X_HEADER_PANEL
         self.Y_TEXT_PANEL = (
             self.Y_HEADER_PANEL + self.iMarginSpace
-        )  # 10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10		self.W_TEXT_PANEL = self.W_HEADER_PANEL
+        )  # 10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10        self.W_TEXT_PANEL = self.W_HEADER_PANEL
         self.W_TEXT_PANEL = self.W_HEADER_PANEL
         self.H_TEXT_PANEL = (
             self.H_MAIN_PANEL - 32
@@ -102,6 +111,8 @@ class CvDawnOfMan:
 
         # Main
         szMainPanel = "DawnOfManMainPanel"
+
+        # Top
         screen.addPanel(
             szMainPanel,
             "",

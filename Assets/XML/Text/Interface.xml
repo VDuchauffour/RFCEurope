@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Interface -->
+<Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ESPIONAGE_EXPERIENCE</Tag>
+		<English>Espionage Experience</English>
+		<French>Exp&#233;rience en espionnage</French>
+		<German>Spionage-Erfahrung</German>
+		<Italian>Espionage Experience</Italian>
+		<Spanish>Espionage Experience</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -254,7 +254,7 @@ void CvGameTextMgr::setDateStrPlayer(CvWString &szString, int iGameTurn, bool bS
                                      int iStartYear, GameSpeedTypes eSpeed, PlayerTypes ePlayer)
 {
   // Absinthe: this displays either the year (with map making, which is tech 18 in RFCE) or the current era
-  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)18) || iGameTurn < startingTurn[ePlayer])
+  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)MAPMAKING) || iGameTurn < startingTurn[ePlayer])
     setDateStr(szString, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
   else if (GET_PLAYER(ePlayer).getCurrentEra() >= 3)
     szString = gDLL->getText("TXT_KEY_ERA_RENAISSANCE");
@@ -3963,8 +3963,8 @@ It is fine for a human player mouse-over (which is what it is used for).
 void createTestFontString(CvWStringBuffer &szString)
 {
   int iI;
-  szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[×]^_`abcdefghijklmnopqrstuvwxyz\n");
-  szString.append(L"{}~\\ßÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞŸßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ¿¡«»°ŠŒšœ™©®€£¢”‘“…’");
+  szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[ï¿½]^_`abcdefghijklmnopqrstuvwxyz\n");
+  szString.append(L"{}~\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ŞŸï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
   for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
     szString.append(CvWString::format(L"%c", GC.getYieldInfo((YieldTypes)iI).getChar()));
 
@@ -13591,6 +13591,35 @@ void CvGameTextMgr::setPromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes e
   parsePromotionHelp(szBuffer, ePromotion);
 }
 
+void CvGameTextMgr::setRemoveHelp(CvWStringBuffer &szBuffer, TechTypes eTech)
+{
+  CvWString szTempBuffer;
+
+  bool bFirst = true;
+  for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+  {
+    CvBuildInfo &kBuild = GC.getBuildInfo((BuildTypes)iI);
+    if (!kBuild.isGraphicalOnly() && kBuild.getTechPrereq() == NO_TECH)
+    {
+      for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+      {
+        if (kBuild.getFeatureTech(iJ) == eTech)
+        {
+          if (!bFirst)
+          {
+            szTempBuffer.Format(L", ");
+            szBuffer.append(szTempBuffer);
+          }
+
+          szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), kBuild.getDescription());
+          szBuffer.append(szTempBuffer);
+
+          bFirst = false;
+        }
+      }
+    }
+  }
+}
 void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat)
 {
   szBuffer.append(GC.getUnitCombatInfo(eUnitCombat).getDescription());
