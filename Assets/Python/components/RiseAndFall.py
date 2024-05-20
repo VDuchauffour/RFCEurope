@@ -1070,7 +1070,7 @@ class RiseAndFall:
                     set_initial_contacts(iCiv)
                     create_starting_workers(iCiv, plot)
                     if iCiv == Civ.OTTOMAN:
-                        self.ottomanInvasion(iCiv, (77, 23))
+                        ottoman_invasion(iCiv, (77, 23))
                     set_starting_techs(iCiv)
                     setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     clearPlague(iCiv)
