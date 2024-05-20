@@ -1398,14 +1398,14 @@ class CvWorldBuilderScreen:
             )
             iX += iAdjust
             screen.setImageButton(
-                "WorldBuilderConvertSave",
+                "WorldBuilderRegenerateMap",
                 CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(),
                 iX,
                 iY,
                 iButtonWidth,
                 iButtonWidth,
-                WidgetTypes.WIDGET_PYTHON,
-                22004,
+                WidgetTypes.WIDGET_WB_REGENERATE_MAP,
+                -1,
                 -1,
             )
             iX += iAdjust
