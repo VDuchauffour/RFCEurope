@@ -28,6 +28,7 @@ from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, kill
 import RiseAndFall
 import Province
 from Scenario import get_scenario
+from Secession import revoltCity
 
 rnf = RiseAndFall.RiseAndFall()
 pm = Province.ProvinceManager()
@@ -472,7 +473,7 @@ class Stability:
                             if not collapseImmune(iPlayer):
                                 self.collapseCivilWar(iPlayer, iStability)
                         else:  # when won't collapse, secession should always happen
-                            rnf.revoltCity(iPlayer, False)
+                            revoltCity(iPlayer, False)
                     # Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
                     # 			if more than 8 cities: high chance for secession mechanics, low chance for collapse
                     # 			elif more than 4 cities: medium chance for collapse mechanics, medium chance for secession
@@ -487,7 +488,7 @@ class Stability:
                                 if iRand2 < (
                                     -3 - iStability
                                 ):  # 10% at -4, increasing by 10% with each point (100% with -13 or less)
-                                    rnf.revoltCity(iPlayer, False)
+                                    revoltCity(iPlayer, False)
                             elif (
                                 iRand3 < 1
                                 and iGameTurn >= civilization(iPlayer).date.birth + 20
@@ -502,7 +503,7 @@ class Stability:
                                 if iRand2 < (
                                     -3 - iStability
                                 ):  # 10% at -4, increasing by 10% with each point (100% with -13 or less)
-                                    rnf.revoltCity(iPlayer, False)
+                                    revoltCity(iPlayer, False)
                             elif (
                                 iRand3 < 4
                                 and iGameTurn >= civilization(iPlayer).date.birth + 20
