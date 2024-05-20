@@ -52,9 +52,10 @@ from RFCUtils import (
     updateMinorTechs,
 )
 import Religions
-from Resurrection import resurectCiv, resurrection
 from Scenario import get_scenario, get_scenario_start_turn
+from Collapse import collapseByBarbs, collapseGeneric, collapseMotherland
 from Secession import secession, secessionCloseCollapse
+from Resurrection import resurectCiv, resurrection
 import Victory
 from StoredData import data
 import Crusades
@@ -556,11 +557,11 @@ class RiseAndFall:
         # Motherland collapse: if no city is in the core area and the number of cities in the normal area is less than the number of foreign cities = collapse
         # Secession: if stability is negative there is a chance (bigger chance with worse stability) for a random city to declare it's independence
         if iGameTurn >= 64 and iGameTurn % 7 == 0:  # mainly for Seljuks, Mongols, Timurids
-            self.collapseByBarbs(iGameTurn)
+            collapseByBarbs(iGameTurn)
         if iGameTurn >= 34 and iGameTurn % 16 == 0:
-            self.collapseGeneric(iGameTurn)
+            collapseGeneric(iGameTurn)
         if iGameTurn >= 34 and iGameTurn % 9 == 7:
-            self.collapseMotherland(iGameTurn)
+            collapseMotherland(iGameTurn)
         if iGameTurn > 20 and iGameTurn % 3 == 1:
             secession(iGameTurn)
         if iGameTurn > 20 and iGameTurn % 7 == 3:
