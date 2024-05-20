@@ -883,7 +883,7 @@ class Crusades:
             message(
                 human(),
                 text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
-                sound="AS2D_BUILD_CHRISTIAN",
+                sound="AS2D_BUILD_CATHOLIC",
                 color=MessageData.ORANGE,
             )
         pUnit.kill(0, -1)
