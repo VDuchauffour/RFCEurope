@@ -20,7 +20,6 @@ from CoreStructures import (
     make_unit,
     make_units,
     player,
-    team,
     turn,
     year,
     cities,
@@ -34,7 +33,6 @@ from RFCUtils import (
     clearPlague,
     collapseImmune,
     convertPlotCulture,
-    createGarrisons,
     cultureManager,
     flipCity,
     flipUnitsInArea,
@@ -54,9 +52,6 @@ from RFCUtils import (
     killUnitsInPlots,
     outerInvasion,
     ownedCityPlots,
-    pushOutGarrisons,
-    relocateSeaGarrisons,
-    setLastRespawnTurn,
     setPlagueCountdown,
     squareSearch,
     updateMinorTechs,
@@ -80,7 +75,6 @@ from CoreTypes import (
     ProvinceType,
     UniquePower,
     StabilityCategory,
-    Technology,
     Unit,
 )
 from CoreFunctions import event_popup, location, message, text
@@ -174,23 +168,11 @@ class RiseAndFall:
     def setBetrayalTurns(self, iNewValue):
         data.iBetrayalTurns = iNewValue
 
-    def getLatestRebellionTurn(self, iCiv):
-        return data.lLatestRebellionTurn[iCiv]
-
-    def setLatestRebellionTurn(self, iCiv, iNewValue):
-        data.lLatestRebellionTurn[iCiv] = iNewValue
-
     def getRebelCiv(self):
         return data.iRebelCiv
 
-    def setRebelCiv(self, iNewValue):
-        data.iRebelCiv = iNewValue
-
     def getRebelCities(self):
         return data.lRebelCities
-
-    def setRebelCities(self, lCityList):
-        data.lRebelCities = lCityList
 
     def getRebelSuppress(self):
         return data.lRebelSuppress
@@ -347,22 +329,6 @@ class RiseAndFall:
                             )
                         self.setBetrayalTurns(iBetrayalPeriod)
                         self.initBetrayal()
-
-    # resurrection when some human controlled cities are also included
-    def rebellionPopup(self, iRebelCiv, iNumCities):
-        iLoyalPrice = min((10 * gc.getPlayer(human()).getGold()) / 100, 50 * iNumCities)
-        event_popup(
-            7622,
-            text("TXT_KEY_REBELLION_TITLE"),
-            text("TXT_KEY_REBELLION_HUMAN", player(iRebelCiv).getCivilizationAdjectiveKey()),
-            [
-                text("TXT_KEY_REBELLION_LETGO"),
-                text("TXT_KEY_REBELLION_DONOTHING"),
-                text("TXT_KEY_REBELLION_CRACK"),
-                text("TXT_KEY_REBELLION_BRIBE") + " " + str(iLoyalPrice),
-                text("TXT_KEY_REBELLION_BOTH"),
-            ],
-        )
 
     # resurrection when some human controlled cities are also included
     def eventApply7622(self, popupReturn):
@@ -1192,411 +1158,6 @@ class RiseAndFall:
             iTeamIndy = gc.getPlayer(iIndy).getTeam()
             if not teamPlayer.isAtWar(iTeamIndy):
                 teamPlayer.declareWar(iTeamIndy, False, WarPlanTypes.WARPLAN_LIMITED)
-
-    def resurrection(self, iGameTurn, iDeadCiv):
-        if iDeadCiv == -1:
-            iDeadCiv = self.findCivToResurect(iGameTurn, 0, -1)
-        else:
-            iDeadCiv = self.findCivToResurect(iGameTurn, 1, iDeadCiv)  # For special re-spawn
-        if iDeadCiv > -1:
-            self.suppressResurection(iDeadCiv)
-
-    def findCivToResurect(self, iGameTurn, bSpecialRespawn, iDeadCiv):
-        if bSpecialRespawn:
-            iMinNumCities = 1
-        else:
-            iMinNumCities = 2
-
-        iRndnum = rand(civilizations().majors().len())
-        for j in civilizations().majors().ids():
-            if not bSpecialRespawn:
-                iDeadCiv = (j + iRndnum) % civilizations().majors().len()
-            else:
-                iDeadCiv = iDeadCiv  # We want a specific civ for special re-spawn
-            cityList = []
-            if (
-                not gc.getPlayer(iDeadCiv).isAlive()
-                and iGameTurn > civilization(iDeadCiv).date.birth + 25
-                and iGameTurn > getLastTurnAlive(iDeadCiv) + 10
-            ):  # Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
-                tile_min = civilization(iDeadCiv).location.area.normal.tile_min
-                tile_max = civilization(iDeadCiv).location.area.normal.tile_max
-
-                for city in (
-                    plots()
-                    .rectangle(tile_min, tile_max)
-                    .filter(
-                        lambda p: p
-                        not in civilization(iDeadCiv).location.area.normal.exception_tiles
-                    )
-                    .cities()
-                    .entities()
-                ):
-                    if is_minor_civ(city.getOwner()):
-                        cityList.append(location(city))
-                    else:
-                        iMinNumCitiesOwner = 3
-                        iOwnerStability = player(city).getStability()
-                        if not player(city).isHuman():
-                            iMinNumCitiesOwner = 2
-                            iOwnerStability -= 5
-                        if player(city).getNumCities() >= iMinNumCitiesOwner:
-                            if iOwnerStability < -5:
-                                if not city.isWeLoveTheKingDay() and not city.isCapital():
-                                    cityList.append(location(city))
-                            elif iOwnerStability < 0:
-                                if (
-                                    not city.isWeLoveTheKingDay()
-                                    and not city.isCapital()
-                                    and location(city) != civilization(city).location.capital
-                                ):
-                                    if (
-                                        player(city).getNumCities() > 0
-                                    ):  # this check is needed, otherwise game crashes
-                                        capital = player(city).getCapitalCity()
-                                        x, y = location(city)
-                                        iDistance = calculateDistance(
-                                            x, y, capital.getX(), capital.getY()
-                                        )
-                                        if (
-                                            (iDistance >= 6 and player(city).getNumCities() >= 4)
-                                            or city.angryPopulation(0) > 0
-                                            or city.goodHealth() - city.badHealth(False) < -1
-                                            or city.getReligionBadHappiness() < 0
-                                            or city.getLargestCityHappiness() < 0
-                                            or city.getHurryAngerModifier() > 0
-                                            or city.getNoMilitaryPercentAnger() > 0
-                                        ):
-                                            cityList.append(location(city))
-                            if (
-                                not bSpecialRespawn
-                                and iOwnerStability < 10
-                                and (location(city) == civilization(iDeadCiv).location.capital)
-                                and location(city) not in cityList
-                            ):
-                                cityList.append(location(city))
-                if len(cityList) >= iMinNumCities:
-                    if bSpecialRespawn or percentage_chance(
-                        civilization(iDeadCiv).location.respawning_threshold, strict=True
-                    ):
-                        self.setRebelCities(cityList)
-                        self.setRebelCiv(iDeadCiv)  # for popup and CollapseCapitals()
-                        return iDeadCiv
-        return -1
-
-    def suppressResurection(self, iDeadCiv):
-        lSuppressList = self.getRebelSuppress()
-        lCityList = self.getRebelCities()
-        lCityCount = [0] * civilizations().majors().len()
-
-        for (x, y) in lCityList:
-            iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
-            if iOwner < civilizations().majors().len():
-                lCityCount[iOwner] += 1
-
-        iHuman = human()
-        for iCiv in civilizations().majors().ids():
-            # Absinthe: have to reset the suppress values
-            lSuppressList[iCiv] = 0
-            if iCiv != iHuman:
-                if lCityCount[iCiv] > 0:
-                    # Absinthe: for the AI there is 30% chance that the actual respawn does not happen (under these suppress situations), only some revolt in the corresponding cities
-                    if percentage_chance(30, strict=True):
-                        lSuppressList[iCiv] = 1
-                        for (x, y) in lCityList:
-                            pCity = gc.getMap().plot(x, y).getPlotCity()
-                            if pCity.getOwner() == iCiv:
-                                pCity.changeOccupationTimer(1)
-                                pCity.changeHurryAngerTimer(10)
-
-        self.setRebelSuppress(lSuppressList)
-
-        if lCityCount[iHuman] > 0:
-            self.rebellionPopup(iDeadCiv, lCityCount[iHuman])
-        else:
-            self.resurectCiv(iDeadCiv)
-
-    def resurectCiv(self, iDeadCiv):
-        lCityList = self.getRebelCities()
-        lSuppressList = self.getRebelSuppress()
-        bSuppressed = True
-        iHuman = human()
-        lCityCount = [0] * civilizations().majors().len()
-        for (x, y) in lCityList:
-            iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
-            if iOwner < civilizations().majors().len():
-                lCityCount[iOwner] += 1
-
-        # Absinthe: if any of the AI civs didn't manage to suppress it, there is resurrection
-        for iCiv in civilizations().majors().ids():
-            if iCiv != iHuman and lCityCount[iCiv] > 0 and lSuppressList[iCiv] == 0:
-                bSuppressed = False
-        if lCityCount[iHuman] > 0:
-            # Absinthe: if the human player didn't choose any suppress options or didn't succeed in it (so it has 0, 2 or 4 in the lSuppressList), there is resurrection
-            if lSuppressList[iHuman] in [0, 2, 4]:
-                bSuppressed = False
-            # Absinthe: if the human player managed to suppress it, message about it
-            else:
-                message(
-                    iHuman,
-                    text("TXT_KEY_SUPPRESSED_RESURRECTION"),
-                    force=True,
-                    color=MessageData.GREEN,
-                )
-        # Absinthe: if neither of the above happened, so everyone managed to suppress it, no resurrection
-        if bSuppressed:
-            return
-
-        pDeadCiv = gc.getPlayer(iDeadCiv)
-        teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
-
-        # Absinthe: respawn status
-        pDeadCiv.setRespawnedAlive(True)
-        pDeadCiv.setEverRespawned(
-            True
-        )  # needed for first turn vassalization and peace status fixes
-
-        # Absinthe: store the turn of the latest respawn for each civ
-        iGameTurn = turn()
-        setLastRespawnTurn(iDeadCiv, iGameTurn)
-
-        # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
-        self.pm.onRespawn(
-            iDeadCiv
-        )  # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
-
-        # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
-        # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
-        leaders = civilization(iDeadCiv).leaders.late
-        if leaders:
-            # no change if we are already at the last leader
-            for leader in leaders[:-1]:
-                if pDeadCiv.getLeader() == leader[0].value:
-                    if percentage_chance(60, strict=True):
-                        pDeadCiv.setLeader(leader[0].value)
-                    break
-
-        for iCiv in civilizations().majors().ids():
-            if iCiv != iDeadCiv:
-                if teamDeadCiv.isAtWar(iCiv):
-                    teamDeadCiv.makePeace(iCiv)
-        self.setNumCities(iDeadCiv, 0)  # reset collapse condition
-
-        # Absinthe: reset vassalage and update dynamic civ names
-        for iOtherCiv in civilizations().majors().ids():
-            if iOtherCiv != iDeadCiv:
-                if teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(
-                    gc.getPlayer(iOtherCiv).getTeam()
-                ).isVassal(iDeadCiv):
-                    teamDeadCiv.freeVassal(iOtherCiv)
-                    gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).freeVassal(iDeadCiv)
-                    gc.getPlayer(iOtherCiv).processCivNames()
-                    gc.getPlayer(iDeadCiv).processCivNames()
-
-        # Absinthe: no vassalization in the first 10 turns after resurrection?
-
-        iNewUnits = 2
-        if self.getLatestRebellionTurn(iDeadCiv) > 0:
-            iNewUnits = 4
-        self.setLatestRebellionTurn(iDeadCiv, turn())
-        bHuman = False
-        for (x, y) in lCityList:
-            if gc.getMap().plot(x, y).getPlotCity().getOwner() == iHuman:
-                bHuman = True
-                break
-
-        ownersList = []
-        bAlreadyVassal = False
-        for tCity in lCityList:
-            pCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
-            iOwner = pCity.getOwner()
-            teamOwner = gc.getTeam(gc.getPlayer(iOwner).getTeam())
-            bOwnerVassal = teamOwner.isAVassal()
-            bOwnerHumanVassal = teamOwner.isVassal(iHuman)
-
-            if iOwner >= civilizations().majors().len():
-                cultureManager(tCity, 100, iDeadCiv, iOwner, False, True, True)
-                flipUnitsInCityBefore(tCity, iDeadCiv, iOwner)
-                self.setTempFlippingCity(tCity)
-                flipCity(tCity, 0, 0, iDeadCiv, [iOwner])
-                flipUnitsInCityAfter(tCity, iOwner)
-                flipUnitsInArea(
-                    (tCity[0] - 2, tCity[1] - 2),
-                    (tCity[0] + 2, tCity[1] + 2),
-                    iDeadCiv,
-                    iOwner,
-                    True,
-                    False,
-                )
-            else:
-                if lSuppressList[iOwner] in [0, 2, 4]:
-                    cultureManager(tCity, 50, iDeadCiv, iOwner, False, True, True)
-                    pushOutGarrisons(tCity, iOwner)
-                    relocateSeaGarrisons(tCity, iOwner)
-                    self.setTempFlippingCity(tCity)
-                    flipCity(
-                        tCity, 0, 0, iDeadCiv, [iOwner]
-                    )  # by trade because by conquest may raze the city
-                    createGarrisons(tCity, iDeadCiv, iNewUnits)
-
-                # 3Miro: indent to make part of the else on the if statement, otherwise one can make peace with the Barbs
-                bAtWar = False  # AI won't vassalise if another owner has declared war; on the other hand, it won't declare war if another one has vassalised
-                if (
-                    iOwner != iHuman
-                    and iOwner not in ownersList
-                    and iOwner != iDeadCiv
-                    and lSuppressList[iOwner] == 0
-                ):  # declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
-                    rndNum = percentage()
-                    if (
-                        rndNum >= civilization(iOwner).ai.stop_birth_threshold
-                        and not bOwnerHumanVassal
-                        and not bAlreadyVassal
-                    ):  # if bOwnerHumanVassal is True, it will skip to the 3rd condition, as bOwnerVassal is True as well
-                        if not teamOwner.isAtWar(iDeadCiv):
-                            teamOwner.declareWar(iDeadCiv, False, -1)
-                        bAtWar = True
-                    # Absinthe: do we really want to auto-vassal them on respawn? why?
-                    # 			set it to 0 from 60 temporarily (so it's never True), as a quick fix until the mechanics are revised
-                    elif rndNum <= 0 - (civilization(iOwner).ai.stop_birth_threshold / 2):
-                        if teamOwner.isAtWar(iDeadCiv):
-                            teamOwner.makePeace(iDeadCiv)
-                        if (
-                            not bAlreadyVassal and not bHuman and not bOwnerVassal and not bAtWar
-                        ):  # bHuman == False cos otherwise human player can be deceived to declare war without knowing the new master
-                            gc.getTeam(gc.getPlayer(iDeadCiv).getTeam()).setVassal(
-                                iOwner, True, False
-                            )
-                            gc.getPlayer(
-                                iOwner
-                            ).processCivNames()  # setVassal already updates DCN for iDeadCiv
-                            bAlreadyVassal = True
-                    else:
-                        if teamOwner.isAtWar(iDeadCiv):
-                            teamOwner.makePeace(iDeadCiv)
-                    ownersList.append(iOwner)
-                    for iTech in range(len(Technology)):
-                        if teamOwner.isHasTech(iTech):
-                            teamDeadCiv.setHasTech(iTech, True, iDeadCiv, False, False)
-
-        # all techs added from minor civs
-        for iTech in range(len(Technology)):
-            if (
-                team(Civ.BARBARIAN).isHasTech(iTech)
-                or team(Civ.INDEPENDENT).isHasTech(iTech)
-                or team(Civ.INDEPENDENT_2).isHasTech(iTech)
-                or team(Civ.INDEPENDENT_3).isHasTech(iTech)
-                or team(Civ.INDEPENDENT_4).isHasTech(iTech)
-            ):
-                teamDeadCiv.setHasTech(iTech, True, iDeadCiv, False, False)
-
-        self.moveBackCapital(iDeadCiv)
-
-        if player().isExisting():
-            message(
-                iHuman,
-                text("TXT_KEY_INDEPENDENCE_TEXT", pDeadCiv.getCivilizationAdjectiveKey()),
-                force=True,
-                color=MessageData.DARK_PINK,
-            )
-        if lSuppressList[iHuman] in [2, 3, 4]:
-            if not gc.getTeam(gc.getPlayer(iHuman).getTeam()).isAtWar(iDeadCiv):
-                gc.getTeam(gc.getPlayer(iHuman).getTeam()).declareWar(iDeadCiv, False, -1)
-        else:
-            if gc.getTeam(gc.getPlayer(iHuman).getTeam()).isAtWar(iDeadCiv):
-                gc.getTeam(gc.getPlayer(iHuman).getTeam()).makePeace(iDeadCiv)
-
-        # Absinthe: the new civs start as slightly stable
-        pDeadCiv.changeStabilityBase(
-            StabilityCategory.CITIES.value,
-            -pDeadCiv.getStabilityBase(StabilityCategory.CITIES.value),
-        )
-        pDeadCiv.changeStabilityBase(
-            StabilityCategory.CIVICS.value,
-            -pDeadCiv.getStabilityBase(StabilityCategory.CIVICS.value),
-        )
-        pDeadCiv.changeStabilityBase(
-            StabilityCategory.ECONOMY.value,
-            -pDeadCiv.getStabilityBase(StabilityCategory.ECONOMY.value),
-        )
-        pDeadCiv.changeStabilityBase(
-            StabilityCategory.EXPANSION.value,
-            -pDeadCiv.getStabilityBase(StabilityCategory.EXPANSION.value),
-        )
-        pDeadCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 5)
-
-        # Absinthe: refresh dynamic civ name for the new civ
-        pDeadCiv.processCivNames()
-
-        setPlagueCountdown(iDeadCiv, -10)
-        clearPlague(iDeadCiv)
-        self.convertBackCulture(iDeadCiv)
-
-        # Absinthe: alive status is now updated right on respawn, otherwise it would only update on the beginning of the next turn
-        pDeadCiv.setAlive(True)
-
-    def moveBackCapital(self, iCiv):
-        cityList = cities().owner(iCiv).entities()
-        tiles = civilization(iCiv).location.get(
-            lambda c: c.new_capital, [civilization(iCiv).location.capital]
-        )
-
-        # TODO: remove for/else implementation
-        for tile in tiles:
-            plot = gc.getMap().plot(*tile)
-            if plot.isCity():
-                newCapital = plot.getPlotCity()
-                if newCapital.getOwner() == iCiv:
-                    if not newCapital.hasBuilding(Building.PALACE.value):
-                        for city in cityList:
-                            city.setHasRealBuilding((Building.PALACE.value), False)
-                        newCapital.setHasRealBuilding((Building.PALACE.value), True)
-                        self.makeResurectionUnits(iCiv, newCapital.getX(), newCapital.getY())
-        else:
-            iMaxValue = 0
-            bestCity = None
-            for loopCity in cityList:
-                # loopCity.AI_cityValue() doesn't work as area AI types aren't updated yet
-                loopValue = (
-                    max(0, 500 - loopCity.getGameTurnFounded()) + loopCity.getPopulation() * 10
-                )
-                if loopValue > iMaxValue:
-                    iMaxValue = loopValue
-                    bestCity = loopCity
-            if bestCity is not None:
-                for loopCity in cityList:
-                    if loopCity != bestCity:
-                        loopCity.setHasRealBuilding((Building.PALACE.value), False)
-                bestCity.setHasRealBuilding((Building.PALACE.value), True)
-                self.makeResurectionUnits(iCiv, bestCity.getX(), bestCity.getY())
-
-    def makeResurectionUnits(self, iPlayer, iX, iY):
-        if iPlayer == Civ.CORDOBA.value:
-            make_units(Civ.CORDOBA, Unit.SETTLER, (iX, iY), 2)
-            make_units(Civ.CORDOBA, Unit.CROSSBOWMAN, (iX, iY), 2)
-            make_unit(Civ.CORDOBA, Unit.ISLAMIC_MISSIONARY, (iX, iY))
-
-    def convertBackCulture(self, iCiv):
-        # 3Miro: same as Normal Areas in Resurrection
-        # Sedna17: restored to be normal areas, not core
-        tile_min = civilization(iCiv).location.area.normal.tile_min
-        tile_max = civilization(iCiv).location.area.normal.tile_max
-        # collect all the cities in the region
-        for city in plots().rectangle(tile_min, tile_max).cities().entities():
-            for plot in plots().surrounding(location(city)).entities():
-                iCivCulture = plot.getCulture(iCiv)
-                iLoopCivCulture = 0
-                for civ in civilizations().minors().ids():
-                    iLoopCivCulture += plot.getCulture(civ)
-                    plot.setCulture(civ, 0, True)
-                plot.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
-
-            iCivCulture = city.getCulture(iCiv)
-            iLoopCivCulture = 0
-            for civ in civilizations().minors().ids():
-                iLoopCivCulture += plot.getCulture(civ)
-                plot.setCulture(civ, 0, True)
-            city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
     def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
         iHuman = human()
