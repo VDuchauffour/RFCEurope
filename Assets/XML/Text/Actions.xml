@@ -4,10 +4,17 @@
 <TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SEE_ESPIONAGE</Tag>
 		<English>See Espionage</English>
+		<French>See Espionage</French>
 		<German>Spionage Anzeigen</German>
+		<Italian>See Espionage</Italian>
+		<Spanish>See Espionage</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SEE_ESPIONAGE_HELP</Tag>
 		<English>Lets you see more details about a rival civilization's espionage against you in the Espionage Advisor.</English>
+		<French>Lets you see more details about a rival civilization's espionage against you in the Espionage Advisor.</French>
+		<German>Lets you see more details about a rival civilization's espionage against you in the Espionage Advisor.</German>
+		<Italian>Lets you see more details about a rival civilization's espionage against you in the Espionage Advisor.</Italian>
+		<Spanish>Lets you see more details about a rival civilization's espionage against you in the Espionage Advisor.</Spanish>
 	</TEXT>
 </Civ4GameText>
