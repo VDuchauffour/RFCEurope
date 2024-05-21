@@ -27,7 +27,7 @@ from CoreStructures import (
 )
 from History import ottoman_invasion
 from PyUtils import percentage, percentage_chance, rand, choice
-import Province
+import Provinces
 from RFCUtils import (
     clearPlague,
     convertPlotCulture,
@@ -91,7 +91,7 @@ iEscapePeriod = 30
 
 class RiseAndFall:
     def __init__(self):
-        self.pm = Province.ProvinceManager()
+        self.pm = Provinces.ProvinceManager()
         # Init the Province Manager
 
     ##################################################

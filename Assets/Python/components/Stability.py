@@ -26,12 +26,12 @@ from PyUtils import percentage_chance, rand
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
 import RiseAndFall
-import Province
+import Provinces
 from Scenario import get_scenario
 from Secession import revoltCity
 
 rnf = RiseAndFall.RiseAndFall()
-pm = Province.ProvinceManager()
+pm = Provinces.ProvinceManager()
 
 gc = CyGlobalContext()
 

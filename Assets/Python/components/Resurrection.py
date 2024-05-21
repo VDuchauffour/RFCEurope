@@ -33,10 +33,10 @@ from RFCUtils import (
     setTempFlippingCity,
 )
 from StoredData import data
-import Province
+import Provinces
 
 gc = CyGlobalContext()
-pm = Province.ProvinceManager()
+pm = Provinces.ProvinceManager()
 
 
 def resurrection(iGameTurn, iDeadCiv):

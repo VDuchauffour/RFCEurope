@@ -33,7 +33,7 @@ import Crusades
 import Companies
 import Locations
 import Modifiers
-import Province
+import Provinces
 import Civilizations
 import Mercenaries
 
@@ -180,7 +180,7 @@ class CvRFCEventHandler:
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
-        self.province = Province.ProvinceManager()
+        self.provinces = Provinces.ProvinceManager()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
         self.company = Companies.Companies()  # Absinthe
 
@@ -204,7 +204,7 @@ class CvRFCEventHandler:
         Civilizations.setup()
 
         data.setup()
-        self.province.setup()
+        self.provinces.setup()
         self.rnf.setup()
         self.rel.setup()
         self.pla.setup()
@@ -659,7 +659,7 @@ class CvRFCEventHandler:
         self.vic.checkTurn(iGameTurn)
         self.sta.checkTurn(iGameTurn)
         self.crusade.checkTurn(iGameTurn)
-        self.province.checkTurn(iGameTurn)
+        self.provinces.checkTurn(iGameTurn)
         self.company.checkTurn(iGameTurn)
 
         return 0
