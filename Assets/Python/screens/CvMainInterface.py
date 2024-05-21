@@ -7089,11 +7089,9 @@ class CvMainInterface:
                     for ii in range(iCountReligions):
                         i = lReligions[ii]
                         xCoord = (
-                            xResolution - 242 + ((ii % iMaxButtons) * (iButtonSize + iButtonSpace))
-                        )
-                        # xCoord = xResolution - 242 + (i * 34) # Origional Civ4 Code
+                            xResolution - 238 + (ii * 48)
+                        )  # Absinthe: set distance between religion icons in the city screen
                         yCoord = 42 + iButtonSize * (ii // iMaxButtons)
-                        # yCoord = 42 # Origional Civ4 Code
 
                         bEnable = True
 
@@ -7184,7 +7182,9 @@ class CvMainInterface:
                 else:
 
                     for i in range(gc.getNumReligionInfos()):
-                        xCoord = xResolution - 242 + (i * 34)
+                        xCoord = (
+                            xResolution - 238 + (i * 48)
+                        )  # Absinthe: set distance between religion icons in the city screen
                         yCoord = 42
 
                         bEnable = True
@@ -7348,11 +7348,9 @@ class CvMainInterface:
                     for ii in range(iCountCorporations):
                         i = lCorporations[ii]
                         xCoord = (
-                            xResolution - 242 + ((ii % iMaxButtons) * (iButtonSize + iButtonSpace))
-                        )
-                        # xCoord = xResolution - 242 + (i * 34) # Origional Civ4 Code
+                            xResolution - 254 + (ii * 28)
+                        )  # Absinthe: set distance between company icons in the city screen
                         yCoord = 66 + iButtonSize * (ii // iMaxButtons)
-                        # yCoord = 66 # Origional Civ4 Code
 
                         bEnable = True
 
@@ -7443,7 +7441,9 @@ class CvMainInterface:
                 else:
 
                     for i in range(gc.getNumCorporationInfos()):
-                        xCoord = xResolution - 242 + (i * 34)
+                        xCoord = (
+                            xResolution - 254 + (i * 28)
+                        )  # Absinthe: set distance between company icons in the city screen
                         yCoord = 66
 
                         bEnable = True
