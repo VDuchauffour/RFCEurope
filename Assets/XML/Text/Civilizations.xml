@@ -5,7 +5,7 @@
 <!-- -->
 <!-- Game Text - RFCE Civilizations -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	
+
 		<!-- Civilization Burgundy -->
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BURGUNDY_DESC</Tag>
