@@ -20,7 +20,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>.</Text>
+			<Text>Catholic Missionary</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -49,7 +49,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>.</Text>
+			<Text>Orthodox Missionary</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -78,7 +78,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>.</Text>
+			<Text>Protestant Missionary</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -264,7 +264,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Sergente a Cavallo</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Mounted Sergeant</Spanish>
 		<Portuguese>Sargento Montado</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -365,7 +365,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Trebuchet</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREBUCHET_PEDIA</Tag>
@@ -408,7 +408,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Artiglieria da Campo</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Field Artillery</Spanish>
 		<Portuguese>Artilharia de Campo</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -584,7 +584,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Esploratore</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Skirmisher</Spanish>
 		<Portuguese>Escamoteiro</Portuguese>
 	</TEXT>
 	<TEXT>
