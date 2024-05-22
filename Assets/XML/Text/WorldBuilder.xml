@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
@@ -261,7 +261,7 @@
 		<Tag>TXT_KEY_WB_ERASE_ALL_PLOTS</Tag>
 		<English>Erase all plots</English>
 		<French>Effacer toutes les cases</French>
-		<German>Alle Felder löschen</German>
+		<German>Alle Felder l&#246;schen</German>
 		<Italian>Erase all plots</Italian>
 		<Spanish>Erase all plots</Spanish>
 	</TEXT>
@@ -293,7 +293,7 @@
 		<Tag>TXT_KEY_REVEAL_STEALTH</Tag>
 		<English>Reveal Stealth</English>
 		<French>R&#233;v&#233;ler furtivit&#233;</French>
-		<German>Tarnzerstörer sichtbar</German>
+		<German>Tarnzerst&#246;rer sichtbar</German>
 		<Italian>Reveal Stealth</Italian>
 		<Spanish>Revelar unidades invisibles</Spanish>
 	</TEXT>
@@ -343,7 +343,7 @@
 		<French>Ann&#233;e de d&#233;part</French>
 		<German>Startjahr</German>
 		<Italian>Start Year</Italian>
-		<Spanish>Año de inicio</Spanish>
+		<Spanish>A&#241;o de inicio</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GAME_YEAR</Tag>
@@ -413,9 +413,9 @@
 		<Tag>TXT_KEY_WB_ADD_NEW_PLAYER</Tag>
 		<English>Add New Player</English>
 		<French>Ajout nouveau joueur</French>
-		<German>Neuen Spieler hinzufügen</German>
+		<German>Neuen Spieler hinzuf&#252;gen</German>
 		<Italian>Aggiungi giocatore</Italian>
-		<Spanish>Añadir nuevo jugador</Spanish>
+		<Spanish>A&#241;adir nuevo jugador</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AREA_ID</Tag>
@@ -477,7 +477,7 @@
 		<Tag>TXT_KEY_WB_MOVES</Tag>
 		<English>Moves Left</English>
 		<French>Mouvements restants</French>
-		<German>Bewegungspunkte übig</German>
+		<German>Bewegungspunkte &#252;big</German>
 		<Italian>Movimenti rimanenti</Italian>
 		<Spanish>Movimientos restantes</Spanish>
 	</TEXT>
@@ -493,7 +493,7 @@
 		<Tag>TXT_KEY_WB_PROMOTION_READY</Tag>
 		<English>Promotion Ready</English>
 		<French>Pr&#234;t pour promotion</French>
-		<German>Beförderung kann vergeben werden</German>
+		<German>Bef&#246;rderung kann vergeben werden</German>
 		<Italian>Pronto per le promozioni</Italian>
 		<Spanish>Preparado para ascender</Spanish>
 	</TEXT>
@@ -519,7 +519,7 @@
 		<French>Direction</French>
 		<German>Blickrichtung</German>
 		<Italian>Direction</Italian>
-		<Spanish>Dirección</Spanish>
+		<Spanish>Direcci&#243;n</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_HURRY_ANGER</Tag>
@@ -535,7 +535,7 @@
 		<French>D&#233;fier r&#233;solution [ICON_UNHAPPY]: %d1</French>
 		<German>Defy Resolution [ICON_UNHAPPY]: %d1</German>
 		<Italian>Defy Resolution [ICON_UNHAPPY]: %d1</Italian>
-		<Spanish>Desafiar resolución [ICON_UNHAPPY]: %d1</Spanish>
+		<Spanish>Desafiar resoluci&#243;n [ICON_UNHAPPY]: %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TEMP_HAPPY</Tag>
@@ -557,7 +557,7 @@
 		<Tag>TXT_KEY_WB_GRANT_AVAILABLE</Tag>
 		<English>Grant Available</English>
 		<French>Accorder disponible</French>
-		<German>Verlehe alle verfügbaren</German>
+		<German>Verlehe alle verf&#252;gbaren</German>
 		<Italian>Grant Available</Italian>
 		<Spanish>Grant Available</Spanish>
 	</TEXT>
@@ -599,7 +599,7 @@
 		<French>Anarchie: %d1</French>
 		<German>Anarchie: %d1</German>
 		<Italian>Anarchia: %d1</Italian>
-		<Spanish>Anarquía: %d1</Spanish>
+		<Spanish>Anarqu&#237;a: %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_STATE_RELIGION_UNIT</Tag>
@@ -647,7 +647,7 @@
 		<French>Commerce de technologies</French>
 		<German>Techtausch</German>
 		<Italian>Commercio di tecnologie</Italian>
-		<Spanish>Comercio con tecnología</Spanish>
+		<Spanish>Comercio con tecnolog&#237;a</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAP_TRADING</Tag>
@@ -677,7 +677,7 @@
 		<Tag>TXT_KEY_WB_EXTRA_WATER_SIGHT</Tag>
 		<English>Extra Water Sight</English>
 		<French>Vision suppl&#233;mentaire sur eau</French>
-		<German>Zusätzliche Sicht über Wasser</German>
+		<German>Zus&#228;tzliche Sicht &#252;ber Wasser</German>
 		<Italian>Extra Water Sight</Italian>
 		<Spanish>Extra Water Sight</Spanish>
 	</TEXT>
@@ -685,15 +685,15 @@
 		<Tag>TXT_KEY_WB_BRIDGE_BUILDING</Tag>
 		<English>Bridge Building</English>
 		<French>Construction de ponts</French>
-		<German>Brückenbau</German>
+		<German>Br&#252;ckenbau</German>
 		<Italian>Costruzione di ponti</Italian>
-		<Spanish>Construcción de puentes</Spanish>
+		<Spanish>Construcci&#243;n de puentes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_IGNORE_IRRIGATION</Tag>
 		<English>Ignore Irrigation</English>
 		<French>Plus besoin d'irrigation</French>
-		<German>Bauernhöfe ohne Bewässerung</German>
+		<German>Bauernh&#246;fe ohne Bew&#228;sserung</German>
 		<Italian>Ignora l'irrigazione</Italian>
 		<Spanish>Ignora el riego</Spanish>
 	</TEXT>
@@ -701,7 +701,7 @@
 		<Tag>TXT_KEY_WB_MERGE_TEAM</Tag>
 		<English>Merge Team</English>
 		<French>Forger une &#233;quipe</French>
-		<German>Teams zusammenschließen</German>
+		<German>Teams zusammenschlie&#223;en</German>
 		<Italian>Crea una squadra</Italian>
 		<Spanish>Fusionar equipo</Spanish>
 	</TEXT>
@@ -711,15 +711,15 @@
 		<French>Interception de missiles nucl&#233;aires: %d1</French>
 		<German>Atomtaketen abfangen: %d1</German>
 		<Italian>Intercettazione di missili nucleari: %d1</Italian>
-		<Spanish>Interceptación de misiles nucleares: %d1</Spanish>
+		<Spanish>Interceptaci&#243;n de misiles nucleares: %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ENEMY_WAR_WEARINESS</Tag>
 		<English>Enemy War Weariness: %d1</English>
 		<French>Lassitude de la guerre chez ennemi: %d1</French>
-		<German>Feindliche Kriegsmüdigkeit: %d1</German>
+		<German>Feindliche Kriegsm&#252;digkeit: %d1</German>
 		<Italian>Enemy War Weariness: %d1</Italian>
-		<Spanish>Hastío bélico del enemigo: %d1</Spanish>
+		<Spanish>Hast&#237;o b&#233;lico del enemigo: %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GUARANTEED_ELIGIBILITY</Tag>
@@ -765,7 +765,7 @@
 		<Tag>TXT_KEY_WB_ATTITUDE</Tag>
 		<English>Attitude</English>
 		<French>Attitude</French>
-		<German>Verhältnis</German>
+		<German>Verh&#228;ltnis</German>
 		<Italian>Attitude</Italian>
 		<Spanish>Actitud</Spanish>
 	</TEXT>
@@ -805,7 +805,7 @@
 		<Tag>TXT_KEY_WB_KILL</Tag>
 		<English>Kill</English>
 		<French>Tuer</French>
-		<German>Löschen</German>
+		<German>L&#246;schen</German>
 		<Italian>Kill</Italian>
 		<Spanish>Matar</Spanish>
 	</TEXT>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -21,7 +21,7 @@
 		<German>Instabil</German>
 		<Italian>Instabile</Italian>
 		<Spanish>Inestable</Spanish>
-		<Portuguese>Instável</Portuguese>
+		<Portuguese>Inst&#225;vel</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SHAKY</Tag>
@@ -39,7 +39,7 @@
 		<German>Stabil</German>
 		<Italian>Stabile</Italian>
 		<Spanish>Estable</Spanish>
-		<Portuguese>Estável</Portuguese>
+		<Portuguese>Est&#225;vel</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SOLID</Tag>
@@ -48,7 +48,7 @@
 		<German>Solide</German>
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
-		<Portuguese>Sólido</Portuguese>
+		<Portuguese>S&#243;lido</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_VERYSOLID</Tag>
@@ -57,7 +57,7 @@
 		<German>Sehr solide</German>
 		<Italian>Molto solido</Italian>
 		<Spanish>Muy s&#243;lida</Spanish>
-		<Portuguese>Muito Sólido</Portuguese>
+		<Portuguese>Muito S&#243;lido</Portuguese>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_STABILITY_OVERLAY_WIDGET</Tag>
@@ -93,7 +93,7 @@
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
 		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
-		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+		<Portuguese>Seu imp&#233;rio estourou em Guerra Civil!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_BARBS</Tag>
@@ -111,7 +111,7 @@
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
 		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
-		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+		<Portuguese>Seu imp&#233;rio estourou em Guerra Civil!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_DECLINE</Tag>
@@ -129,7 +129,7 @@
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
 		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
-		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+		<Portuguese>Seu imp&#233;rio estourou em Guerra Civil!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND</Tag>
@@ -147,7 +147,7 @@
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
 		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
-		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+		<Portuguese>Seu imp&#233;rio estourou em Guerra Civil!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_STABILITY</Tag>
@@ -165,7 +165,7 @@
 		<German>hat seine Unabh&#228;ngigkeit erkl&#228;rt!</German>
 		<Italian>ha dichiarato la propria indipendenza!</Italian>
 		<Spanish>ha declarado su independencia.</Spanish>
-		<Portuguese>declarou sua independência!</Portuguese>
+		<Portuguese>declarou sua independ&#234;ncia!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PERIOD</Tag>
@@ -174,7 +174,7 @@
 		<German>Euer Reich durchlebt eine Phase der</German>
 		<Italian>Il tuo impero sta vivendo un periodo di</Italian>
 		<Spanish>Tu imperio est&#225; pasando por un periodo de</Spanish>
-		<Portuguese>Seu império está passando por um período de</Portuguese>
+		<Portuguese>Seu imp&#233;rio est&#225; passando por um per&#237;odo de</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_DEMOCRACY</Tag>
@@ -183,7 +183,7 @@
 		<German>Instabilit&#228;t, verursacht durch den Wechsel zur Demokratie!</German>
 		<Italian>instabilit&#224;, causata dal passaggio alla democrazia!</Italian>
 		<Spanish>inestabilidad causada por la transici&#243;n a la democracia.</Spanish>
-		<Portuguese>instabilidade causada pela transição para a democracia!</Portuguese>
+		<Portuguese>instabilidade causada pela transi&#231;&#227;o para a democracia!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TITLE</Tag>
@@ -228,7 +228,7 @@
 		<German>AUSLAND</German>
 		<Italian>ESTERO</Italian>
 		<Spanish>ASUNTOS EXTERIORES</Spanish>
-		<Portuguese>RELAÇÕES EXTERIORES</Portuguese>
+		<Portuguese>RELA&#199;&#213;ES EXTERIORES</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_ECONOMY</Tag>
@@ -246,7 +246,7 @@
 		<German>EXPANSION</German>
 		<Italian>ESPANSIONE</Italian>
 		<Spanish>EXPANSI&#211;N</Spanish>
-		<Portuguese>EXPANSÃO</Portuguese>
+		<Portuguese>EXPANS&#195;O</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_SWING</Tag>

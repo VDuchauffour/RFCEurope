@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -12,7 +12,7 @@
 		<German>Die St&#228;dte in der Gegend haben sich unserem aufstrebenden Reich angeschlossen!</German>
 		<Italian>Le citt&#224; di questa regione si sono unite al nostro impero!</Italian>
 		<Spanish>&#161;Las ciudades de la zona se han unido a nuestro naciente imperio!</Spanish>
-		<Portuguese>Cidades na região juntaram-se ao nosso Império nascente!</Portuguese>
+		<Portuguese>Cidades na regi&#227;o juntaram-se ao nosso Imp&#233;rio nascente!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_TITLE</Tag>
@@ -21,7 +21,7 @@
 		<German>Eine neue Zivilisation entsteht</German>
 		<Italian>Nasce una nuova civilt&#224;</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n</Spanish>
-		<Portuguese>Uma nova nação está nascendo</Portuguese>
+		<Portuguese>Uma nova na&#231;&#227;o est&#225; nascendo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_MESSAGE</Tag>
@@ -30,7 +30,7 @@
 		<German>Wollt Ihr die permanente Kontrolle &#252;ber das %s1:3 Volk &#252;bernehmen?</German>
 		<Italian>Vuoi assumere il controllo permanente della civilt&#224; %s1:2?</Italian>
 		<Spanish>&#191;Deseas tomar el control permanente de la civilizaci&#243;n %s1:2?</Spanish>
-		<Portuguese>Desejas tomar o controle permanente da civilização %s1:2</Portuguese>
+		<Portuguese>Desejas tomar o controle permanente da civiliza&#231;&#227;o %s1:2</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_MESSAGE1</Tag>
@@ -66,7 +66,7 @@
 		<German>[NEWLINE]wollen sich einer aufstrebenden Zivilisation anschlie&#223;en. Wenn wir es ihnen verweigern, h&#228;tte das einen Krieg zur Folge und einige unserer Truppen k&#246;nnten sich dem Feind anschlie&#223;en. Sollen wir die St&#228;dte ziehen lassen?</German>
 		<Italian>[NEWLINE]vogliono passare a una nuova civilt&#224;. Il nostro rifiuto potrebbe portare alla guerra e alcune nostre truppe potrebbero unirsi a loro. Le lasciamo andare?</Italian>
 		<Spanish>[NEWLINE]quieren unirse a la incipiente civilizaci&#243;n. Una negativa por nuestra parte podr&#237;a provocar la guerra y parte de nuestras tropas podr&#237;an unirse a ella. &#191;Debemos permitir que se unan?</Spanish>
-		<Portuguese>[NEWLINE]querem unir-se à civilização nascente. Nossa recusa pode levar à guerra e algumas de nossas tropas podem juntar-se à nova nação. Devemos deixá-los ir?</Portuguese>
+		<Portuguese>[NEWLINE]querem unir-se &#224; civiliza&#231;&#227;o nascente. Nossa recusa pode levar &#224; guerra e algumas de nossas tropas podem juntar-se &#224; nova na&#231;&#227;o. Devemos deix&#225;-los ir?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_AGREED</Tag>
@@ -75,7 +75,7 @@
 		<German>Wir lassen sie ziehen!</German>
 		<Italian>Siamo d'accordo sul passaggio!</Italian>
 		<Spanish>&#161;Hemos accedido a la cesi&#243;n!</Spanish>
-		<Portuguese>Nós concordamos com a secessão!</Portuguese>
+		<Portuguese>N&#243;s concordamos com a secess&#227;o!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_REFUSED</Tag>
@@ -84,7 +84,7 @@
 		<German>Wir lassen sie nicht ziehen. Das bedeutet Krieg!</German>
 		<Italian>Abbiamo rifiutato il passaggio: ci&#242; significa guerra!</Italian>
 		<Spanish>Nos hemos negado a la cesi&#243;n, &#161;esto significa la guerra!</Spanish>
-		<Portuguese>Nós recusamos a secessão, isso significa guerra!</Portuguese>
+		<Portuguese>N&#243;s recusamos a secess&#227;o, isso significa guerra!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_BETRAYAL</Tag>
@@ -93,7 +93,7 @@
 		<German>Einige unserer Streitkr&#228;fte schlie&#223;en sich dem Feind an, um ihm bei seinem Befreiungskrieg zu helfen!</German>
 		<Italian>Alcune delle nostre forze si uniscono al nemico per aiutarne la guerra di liberazione!</Italian>
 		<Spanish>&#161;Algunas de nuestras unidades se han unido al enemigo para luchar en su guerra de liberaci&#243;n!</Spanish>
-		<Portuguese>Algumas de nossas forças estão juntando-se ao inimigo para ajudá-lo na sua guerra de libertação!</Portuguese>
+		<Portuguese>Algumas de nossas for&#231;as est&#227;o juntando-se ao inimigo para ajud&#225;-lo na sua guerra de liberta&#231;&#227;o!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_BETRAYAL_NEW</Tag>
@@ -102,7 +102,7 @@
 		<German>Einige feindliche Streitkr&#228;fte schlie&#223;en sich uns an, um uns bei unserem Befreiungskrieg zu helfen!</German>
 		<Italian>Alcune forze del nemico si uniscono a noi per aiutarci nella guerra di liberazione!</Italian>
 		<Spanish>&#161;Algunas de las unidades del enemigo se han unido a nosotros para apoyarnos en nuestra guerra de liberaci&#243;n!</Spanish>
-		<Portuguese>Algumas das forças de nossos inimigos estão juntando se a nós para ajudar na guerra de libertação!</Portuguese>
+		<Portuguese>Algumas das for&#231;as de nossos inimigos est&#227;o juntando se a n&#243;s para ajudar na guerra de liberta&#231;&#227;o!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CIV_IS_BORN</Tag>
@@ -111,7 +111,7 @@
 		<German>Eine neue Zivilisation wurde geboren: %s1_CityName</German>
 		<Italian>&#200; nata una nuova civilt&#224;: %s1_CityName</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n: %s1_CityName</Spanish>
-		<Portuguese>Nasceu uma nova civilização: %s1_CityName</Portuguese>
+		<Portuguese>Nasceu uma nova civiliza&#231;&#227;o: %s1_CityName</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_WAS_TRADED_TO</Tag>
@@ -129,7 +129,7 @@
 		<German>%s1:3 St&#228;dte haben ihre Unabh&#228;ngigkeit von der Fremdherrschaft erkl&#228;rt!</German>
 		<Italian>Le citt&#224; %s1:4 hanno dichiarato la propria indipendenza dal dominio straniero!</Italian>
 		<Spanish>Las ciudades %s1:4 han declarado su independencia del dominio extranjero.</Spanish>
-		<Portuguese>As cidades %s1:4 declararam sua independência do domínio estrangeiro.</Portuguese>
+		<Portuguese>As cidades %s1:4 declararam sua independ&#234;ncia do dom&#237;nio estrangeiro.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_TITLE</Tag>
@@ -138,61 +138,61 @@
 		<German>Unabh&#228;ngigkeit!</German>
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
-		<Portuguese>Independência!</Portuguese>
+		<Portuguese>Independ&#234;ncia!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_HUMAN</Tag>
 		<English>The people of %s1_CivName are trying to regain their independence and rebuild their nation. Cities from our empire want to join them!</English>
 		<French></French>
-		<German>Die Einwohner von %s1_CivName versuchen ihre Unabhängigkeit wiederzuerlangen und ihre Nation wieder aufzubauen. Städte aus unserem Reich möchten sich ihnen anschließen!</German>
+		<German>Die Einwohner von %s1_CivName versuchen ihre Unabh&#228;ngigkeit wiederzuerlangen und ihre Nation wieder aufzubauen. St&#228;dte aus unserem Reich m&#246;chten sich ihnen anschlie&#223;en!</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>O povo de %s1_CivName está tentando reconquistar sua independência e reconstruir sua nação. Cidades do nosso império podem querer juntar-se a eles!</Portuguese>
+		<Portuguese>O povo de %s1_CivName est&#225; tentando reconquistar sua independ&#234;ncia e reconstruir sua na&#231;&#227;o. Cidades do nosso imp&#233;rio podem querer juntar-se a eles!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_LETGO</Tag>
 		<English>A sign of weakness: Let them go, they contribute nothing to our glorious empire are not worth the trouble.</English>
 		<French></French>
-		<German>Ein Anzeichen von Schwäche: Lasst sie ziehen, sie tragen nichts zu unserem gloreichen Reich bei und sind den Ärger nicht Wert.</German>
+		<German>Ein Anzeichen von Schw&#228;che: Lasst sie ziehen, sie tragen nichts zu unserem gloreichen Reich bei und sind den &#196;rger nicht Wert.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>Um sinal de fraqueza: Deixe-os ir, eles não contribuem em nada ao nosso glorioso império.</Portuguese>
+		<Portuguese>Um sinal de fraqueza: Deixe-os ir, eles n&#227;o contribuem em nada ao nosso glorioso imp&#233;rio.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_DONOTHING</Tag>
 		<English>Stretched too thin: We cannot deal with them right now. Let the local garrison best deal with the situation on their own.</English>
 		<French></French>
-		<German>In die Länge ziehen: Wir können uns im Moment nicht um sie kümmern. Die örtliche Besatzung soll das beste aus der Situation machen.</German>
+		<German>In die L&#228;nge ziehen: Wir k&#246;nnen uns im Moment nicht um sie k&#252;mmern. Die &#246;rtliche Besatzung soll das beste aus der Situation machen.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>Desgaste geral: Não podemos lidar com eles agora. Deixe as guarnições locais lidarem da melhor forma possível por si sós.</Portuguese>
+		<Portuguese>Desgaste geral: N&#227;o podemos lidar com eles agora. Deixe as guarni&#231;&#245;es locais lidarem da melhor forma poss&#237;vel por si s&#243;s.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_CRACK</Tag>
 		<English>The whip: Let them feel the strength of our Empire, no one rebel against my rule!</English>
 		<French></French>
-		<German>Die Peitsche: Lasst sie die Stärke unseres Reiches spüren, kein Rebell gegen meine Herrschaft!</German>
+		<German>Die Peitsche: Lasst sie die St&#228;rke unseres Reiches sp&#252;ren, kein Rebell gegen meine Herrschaft!</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>O chicote: Deixe-os sentir a força de nosso Império, ninguém se rebela contra meu domínio!</Portuguese>
+		<Portuguese>O chicote: Deixe-os sentir a for&#231;a de nosso Imp&#233;rio, ningu&#233;m se rebela contra meu dom&#237;nio!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_BRIBE</Tag>
 		<English>The price of loyalty: Bribe the local lords, with them on our side we will not have to bother with the peasants. Bribe: </English>
 		<French></French>
-		<German>Der loyale Prinz: Bestecht die örtlichen Fürsten, mit ihnen auf unserer Seite müssen wir uns um die Bauern keine Sorge machen. Bestechungsgeld: </German>
+		<German>Der loyale Prinz: Bestecht die &#246;rtlichen F&#252;rsten, mit ihnen auf unserer Seite m&#252;ssen wir uns um die Bauern keine Sorge machen. Bestechungsgeld: </German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>O príncipe da lealdade: Suborne os lordes locais, com eles do nosso lado não teremos de nos preocupar com camponeses. Suborno: </Portuguese>
+		<Portuguese>O pr&#237;ncipe da lealdade: Suborne os lordes locais, com eles do nosso lado n&#227;o teremos de nos preocupar com camponeses. Suborno: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_BOTH</Tag>
 		<English>Sticks and carrots: Do whatever it takes, but keep those cities loyal and subjugated.</English>
 		<French></French>
-		<German>Zuckerbrot und Peitsche: Unternehmt alles was möglich ist, aber haltet diese Städte loyal und unterworfen.</German>
+		<German>Zuckerbrot und Peitsche: Unternehmt alles was m&#246;glich ist, aber haltet diese St&#228;dte loyal und unterworfen.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>Cenoura na Vara: Faça tudo que se pode, mas mantenha estas cidades leais e subjugadas</Portuguese>
+		<Portuguese>Cenoura na Vara: Fa&#231;a tudo que se pode, mas mantenha estas cidades leais e subjugadas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SUPPRESSED_RESURRECTION</Tag>
@@ -210,7 +210,7 @@
 		<German>%s1:3 St&#228;dte haben ihre Unabh&#228;ngigkeit von uns erkl&#228;rt und unsere Garnisonen vertrieben. Sollen wir sie gew&#228;hren lassen?</German>
 		<Italian>Le citt&#224; %s1:4 hanno dichiarato la propria indipendenza, espellendo le nostre guarnigioni. Dobbiamo lasciarle libere?</Italian>
 		<Spanish>Las ciudades %s1:4 han declarado su independencia de nosotros y han expulsado a nuestras guarniciones. &#191;Debemos permitir su libertad?</Spanish>
-		<Portuguese>As cidades %s1:4 declararam sua independência de nós e expulsaram nossas guarnições. Devemos deixá-las livres?</Portuguese>
+		<Portuguese>As cidades %s1:4 declararam sua independ&#234;ncia de n&#243;s e expulsaram nossas guarni&#231;&#245;es. Devemos deix&#225;-las livres?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_MESSAGE</Tag>
@@ -219,7 +219,7 @@
 		<German>St&#228;dte haben ihre Unabh&#228;ngigkeit von uns erkl&#228;rt und unsere Garnisonen vertrieben. Sollen wir sie gew&#228;hren lassen?</German>
 		<Italian>citt&#224; hanno dichiarato la propria indipendenza, espellendo le nostre guarnigioni. Dobbiamo lasciarle libere?</Italian>
 		<Spanish>ciudades han declarado su independencia de nosotros y han expulsado a nuestras guarniciones. &#191;Debeos permitir su libertad?</Spanish>
-		<Portuguese>cidades declararam sua independência de nós e expulsaram nossas guarnições. Devemos deixá-las livres?</Portuguese>
+		<Portuguese>cidades declararam sua independ&#234;ncia de n&#243;s e expulsaram nossas guarni&#231;&#245;es. Devemos deix&#225;-las livres?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TITLE</Tag>
@@ -228,7 +228,7 @@
 		<German>Exil!</German>
 		<Italian>Esilio!</Italian>
 		<Spanish>&#161;Al exilio!</Spanish>
-		<Portuguese>Exílio!</Portuguese>
+		<Portuguese>Ex&#237;lio!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT</Tag>
@@ -237,7 +237,7 @@
 		<German>Ihr wurdet vom %s1:2 Volk gefangen genommen und seid ins Exil geschickt worden - in das unbedeutende %s2:3 Reich. Es bleibt Euch nur wenig Zeit, um Eure Hauptstadt zur&#252;ckzuerobern und Eure Position wiederzuerlangen.</German>
 		<Italian>Sei stato catturato dai %s1:3 ed esiliato nelle insignificanti terre di %s2. Hai un breve periodo di tempo per riprendere la tua capitale e riguadagnare la tua posizione.</Italian>
 		<Spanish>Hab&#233;is sido capturado por los %s1:3 y exiliado a las insignificantes tierras de %s2. Dispon&#233;is de un breve periodo de tiempo para recuperar vuestra capital y vuestra posici&#243;n.</Spanish>
-		<Portuguese>Você foi capturado pelos %s1:3 e exilado às terras desimportantes de %s2. Você tem um curto período de tempo para retomar sua capital e ganhar de volta sua posição.</Portuguese>
+		<Portuguese>Voc&#234; foi capturado pelos %s1:3 e exilado &#224;s terras desimportantes de %s2. Voc&#234; tem um curto per&#237;odo de tempo para retomar sua capital e ganhar de volta sua posi&#231;&#227;o.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT1</Tag>
@@ -255,7 +255,7 @@
 		<German>gefangen genommen und seid ins Exil geschickt worden - in das unbedeutende Land von</German>
 		<Italian>ed esiliato nelle insignificanti terre di</Italian>
 		<Spanish>os ha capturado y exiliado a las insignificantes tierras de</Spanish>
-		<Portuguese>e exilado às terras desimportantes de</Portuguese>
+		<Portuguese>e exilado &#224;s terras desimportantes de</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT3</Tag>
@@ -264,7 +264,7 @@
 		<German>. Es bleibt Euch nur wenig Zeit, um Eure Hauptstadt zur&#252;ckzuerobern und Eure Position wiederzuerlangen.</German>
 		<Italian>. Hai un breve periodo di tempo per riprendere la tua capitale e riguadagnare la tua posizione.</Italian>
 		<Spanish>. Dispon&#233;is de un breve periodo de tiempo para recuperar vuestra capital y vuestra posici&#243;n.</Spanish>
-		<Portuguese>. Tens um curto período de tempo para retomar sua capital e ganhar de volta sua posição.</Portuguese>
+		<Portuguese>. Tens um curto per&#237;odo de tempo para retomar sua capital e ganhar de volta sua posi&#231;&#227;o.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TITLE</Tag>
@@ -273,7 +273,7 @@
 		<German>Ihr seid entkommen!</German>
 		<Italian>Sei riuscito a fuggire!</Italian>
 		<Spanish>&#161;Hab&#233;is escapado!</Spanish>
-		<Portuguese>Você escapou!</Portuguese>
+		<Portuguese>Voc&#234; escapou!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TEXT</Tag>
@@ -282,7 +282,7 @@
 		<German>Ihr seid entkommen und habt die Kontrolle &#252;ber das %s1:3 Gebiet wiedererlangt. Nun sollten wir unseren Feinden eine Lektion erteilen!</German>
 		<Italian>Sei riuscito a fuggire e a riguadagnare il controllo del territorio %s1. Ora diamo una bella lezione ai nostri nemici!</Italian>
 		<Spanish>Hab&#233;is escapado y recuperado el control del territorio %s1:1. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
-		<Portuguese>Você escapou e reconquistou o controle do território %s1:1. Agora vamos ensinar nossos inimigos uma lição!</Portuguese>
+		<Portuguese>Voc&#234; escapou e reconquistou o controle do territ&#243;rio %s1:1. Agora vamos ensinar nossos inimigos uma li&#231;&#227;o!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TEXT1</Tag>
@@ -291,7 +291,7 @@
 		<German>Ihr seid entkommen und habt die Kontrolle &#252;ber das </German>
 		<Italian>Sei riuscito a fuggire e a riguadagnare il controllo del territorio</Italian>
 		<Spanish>Hab&#233;is escapado y recuperado el control del territorio</Spanish>
-		<Portuguese>Você escapou e reconquistou o controle do território</Portuguese>
+		<Portuguese>Voc&#234; escapou e reconquistou o controle do territ&#243;rio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TEXT2</Tag>
@@ -300,7 +300,7 @@
 		<German>Territorium wiedererlangt. Nun sollten wir unseren Feinden eine Lektion erteilen!</German>
 		<Italian>. Ora diamo una bella lezione ai nostri nemici!</Italian>
 		<Spanish>. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
-		<Portuguese>. Agora vamos ensinar nossos inimigos uma lição!</Portuguese>
+		<Portuguese>. Agora vamos ensinar nossos inimigos uma li&#231;&#227;o!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REDUCE_CITY_1</Tag>

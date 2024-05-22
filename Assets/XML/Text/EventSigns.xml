@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
   DAS: Text for landmark/sign captioning for random events
   - The tag names for the descriptions are based on the <type> of the events in CIV4EventInfos.xml
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_1</Tag>
 		<English>medicine</English>
-		<French>médicament</French>
+		<French>m&#233;dicament</French>
 		<German>Medizin</German>
 		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
@@ -52,7 +52,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_2</Tag>
 		<English>medicine</English>
-		<French>médicament</French>
+		<French>m&#233;dicament</French>
 		<German>Medizin</German>
 		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
@@ -109,7 +109,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_TRUFFLES_1</Tag>
 		<English>truffles</English>
 		<French>truffes</French>
-		<German>Trüffel</German>
+		<German>Tr&#252;ffel</German>
 		<Italian>tartufi</Italian>
 		<Spanish>Trufas</Spanish>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_SEA_TURTLES_1</Tag>
 		<English>sea turtles</English>
 		<French>tortues de mer</French>
-		<German>Meeresschildkröten</German>
+		<German>Meeresschildkr&#246;ten</German>
 		<Italian>testuggini</Italian>
 		<Spanish>Tortugas marinas</Spanish>
 	</TEXT>
@@ -133,7 +133,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_PRAIRIE_DOGS_1</Tag>
 		<English>prairie dogs</English>
 		<French>chiens de prairie</French>
-		<German>Präriehunde</German>
+		<German>Pr&#228;riehunde</German>
 		<Italian>cani della prateria</Italian>
 		<Spanish>perros de las praderas</Spanish>
 	</TEXT>
@@ -141,7 +141,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_APPLESEED_1</Tag>
 		<English>apple trees</English>
 		<French>pommiers</French>
-		<German>Apfelbäume</German>
+		<German>Apfelb&#228;ume</German>
 		<Italian>meli</Italian>
 		<Spanish>manzanos</Spanish>
 	</TEXT>
@@ -149,7 +149,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_FORTY_THIEVES_1</Tag>
 		<English>local legend</English>
 		<French>l&#233;gende locale</French>
-		<German>örtliche Legende</German>
+		<German>&#246;rtliche Legende</German>
 		<Italian>leggenda locale</Italian>
 		<Spanish>leyenda local</Spanish>
 	</TEXT>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -28,7 +28,7 @@
 		<English>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</English>
 		<French>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</French>
 		<German>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</German>
-		<Italian>"Non c'è malattia che Allah abbia creato, senza averne prima creata una cura." - Sunan Abu Dawud</Italian>
+		<Italian>"Non c'&#232; malattia che Allah abbia creato, senza averne prima creata una cura." - Sunan Abu Dawud</Italian>
 		<Spanish>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</Spanish>
 		<Portuguese>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</Portuguese>
 	</TEXT>
@@ -46,7 +46,7 @@
 		<English>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</English>
 		<French>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</French>
 		<German>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</German>
-		<Italian>"Non c'è niente che ferisce di più il cuore di un uomo nobile del solo pensiero che il suo onore possa essere colpito." -Moliere</Italian>
+		<Italian>"Non c'&#232; niente che ferisce di pi&#249; il cuore di un uomo nobile del solo pensiero che il suo onore possa essere colpito." -Moliere</Italian>
 		<Spanish>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</Spanish>
 		<Portuguese>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</Portuguese>
 	</TEXT>
@@ -55,7 +55,7 @@
 		<English>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</English>
 		<French>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</French>
 		<German>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</German>
-		<Italian>"Tutte le cose sono nell'Universo, e l'Universo è in tutte le cose; noi in lui e lui in noi; in questo modo ogni cosa è in perfetta simbiosi" - Giordano Bruno</Italian>
+		<Italian>"Tutte le cose sono nell'Universo, e l'Universo &#232; in tutte le cose; noi in lui e lui in noi; in questo modo ogni cosa &#232; in perfetta simbiosi" - Giordano Bruno</Italian>
 		<Spanish>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</Spanish>
 		<Portuguese>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</Portuguese>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>"In all things of Nature, there is something of the marvellous." - Aristotle</English>
 		<French>"In all things of Nature, there is something of the marvellous." - Aristotle</French>
 		<German>"In all things of Nature, there is something of the marvellous." - Aristotle</German>
-		<Italian>"In tutte le cose della Natura, c'è qualcosa di meraviglioso." - Aristotele</Italian>
+		<Italian>"In tutte le cose della Natura, c'&#232; qualcosa di meraviglioso." - Aristotele</Italian>
 		<Spanish>"In all things of Nature, there is something of the marvellous." - Aristotle</Spanish>
 		<Portuguese>"In all things of Nature, there is something of the marvellous." - Aristotle</Portuguese>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</English>
 		<French>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</French>
 		<German>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</German>
-		<Italian>"Per costruire bene ci vogliono tre cose; stabilità, comodità e diletto." - Vitruvio</Italian>
+		<Italian>"Per costruire bene ci vogliono tre cose; stabilit&#224;, comodit&#224; e diletto." - Vitruvio</Italian>
 		<Spanish>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</Spanish>
 		<Portuguese>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</Portuguese>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<English>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</English>
 		<French>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</French>
 		<German>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</German>
-		<Italian>"Lascia che gli stolti litighino per le forme di governo, la migliore è quella meglio amministrata." - Alexander Pope</Italian>
+		<Italian>"Lascia che gli stolti litighino per le forme di governo, la migliore &#232; quella meglio amministrata." - Alexander Pope</Italian>
 		<Spanish>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</Spanish>
 		<Portuguese>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</Portuguese>
 	</TEXT>
@@ -181,7 +181,7 @@
 		<English>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</English>
 		<French>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</French>
 		<German>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</German>
-		<Italian>"La giustizia è un contratto di convenienza, creato per impedire agli uomini di nuocere o di essere lesi." - Epicuro</Italian>
+		<Italian>"La giustizia &#232; un contratto di convenienza, creato per impedire agli uomini di nuocere o di essere lesi." - Epicuro</Italian>
 		<Spanish>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</Spanish>
 		<Portuguese>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</Portuguese>
 	</TEXT>
@@ -208,7 +208,7 @@
 		<English>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</English>
 		<French>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</French>
 		<German>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</German>
-		<Italian>"I Re c'erano prima di ogni Stato o classe sociale, prima che qualunque parlamento esistesse, o che qualunque legge fosse fatta e dopo essi distribuirono tutta la loro terra. Quindi sono i re a dettare legge, e questa non può imporsi su di essi. " - Giacomo I</Italian>
+		<Italian>"I Re c'erano prima di ogni Stato o classe sociale, prima che qualunque parlamento esistesse, o che qualunque legge fosse fatta e dopo essi distribuirono tutta la loro terra. Quindi sono i re a dettare legge, e questa non pu&#242; imporsi su di essi. " - Giacomo I</Italian>
 		<Spanish>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</Spanish>
 		<Portuguese>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</Portuguese>
 	</TEXT>
@@ -226,7 +226,7 @@
 		<English>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</English>
 		<French>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</French>
 		<German>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</German>
-		<Italian>"Più opportunità ci sono nella Società per alcune persone di vivere sul lavoro degli altri, meno questi altri apprezzeranno i frutti del loro lavoro." - Anders Chydenius</Italian>
+		<Italian>"Pi&#249; opportunit&#224; ci sono nella Societ&#224; per alcune persone di vivere sul lavoro degli altri, meno questi altri apprezzeranno i frutti del loro lavoro." - Anders Chydenius</Italian>
 		<Spanish>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</Spanish>
 		<Portuguese>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</Portuguese>
 	</TEXT>
@@ -486,7 +486,7 @@
 		<Tag>TXT_KEY_TECH_EU_PAPER_QUOTE</Tag>
 		<English>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</English>
 		<French>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</French>
-		<German>"Ihr Philosophen habt Glück. Ihr schreibt auf Papier. Und Papier ist geduldig. Ich bin eine Kaiserin. Und das Volk ist es nicht." - Katharina die Große</German>
+		<German>"Ihr Philosophen habt Gl&#252;ck. Ihr schreibt auf Papier. Und Papier ist geduldig. Ich bin eine Kaiserin. Und das Volk ist es nicht." - Katharina die Gro&#223;e</German>
 		<Italian>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</Italian>
 		<Spanish>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</Spanish>
 		<Portuguese>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</Portuguese>
@@ -540,7 +540,7 @@
 		<Tag>TXT_KEY_TECH_EU_PROFESSIONAL_ARMY_QUOTE</Tag>
 		<English>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</English>
 		<French>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</French>
-		<German>"Eine Armee hängt mehr von Ordnung und Disziplin ab als von reiner Grausamkeit." - Nicolo Machiavelli</German>
+		<German>"Eine Armee h&#228;ngt mehr von Ordnung und Disziplin ab als von reiner Grausamkeit." - Nicolo Machiavelli</German>
 		<Italian>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</Italian>
 		<Spanish>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</Spanish>
 		<Portuguese>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</Portuguese>
@@ -558,7 +558,7 @@
 		<Tag>TXT_KEY_TECH_EU_RELIGIOUS_ART_QUOTE</Tag>
 		<English>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</English>
 		<French>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</French>
-		<German>"Die wahre Arbeit der Kunst ist nur ein Schatten göttlicher Perfektion." - Michelangelo</German>
+		<German>"Die wahre Arbeit der Kunst ist nur ein Schatten g&#246;ttlicher Perfektion." - Michelangelo</German>
 		<Italian>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</Italian>
 		<Spanish>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</Spanish>
 		<Portuguese>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</Portuguese>
@@ -567,7 +567,7 @@
 		<Tag>TXT_KEY_TECH_EU_RENAISSANCE_ART_QUOTE</Tag>
 		<English>"I saw the angel in the marble and carved until I set him free." - Michelangelo</English>
 		<French>"I saw the angel in the marble and carved until I set him free." - Michelangelo</French>
-		<German>"Ich sah den Engel im Marmorblock und hämmerte bis er befreit war." - Michelangelo</German>
+		<German>"Ich sah den Engel im Marmorblock und h&#228;mmerte bis er befreit war." - Michelangelo</German>
 		<Italian>"I saw the angel in the marble and carved until I set him free." - Michelangelo</Italian>
 		<Spanish>"I saw the angel in the marble and carved until I set him free." - Michelangelo</Spanish>
 		<Portuguese>"I saw the angel in the marble and carved until I set him free." - Michelangelo</Portuguese>
@@ -585,7 +585,7 @@
 		<Tag>TXT_KEY_TECH_EU_RIGHTS_OF_MAN_QUOTE</Tag>
 		<English>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</English>
 		<French>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</French>
-		<German>"Der Mensch wird frei geboren, und überall ist er in Banden." - Jean Jacques Rousseau</German>
+		<German>"Der Mensch wird frei geboren, und &#252;berall ist er in Banden." - Jean Jacques Rousseau</German>
 		<Italian>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</Italian>
 		<Spanish>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</Spanish>
 		<Portuguese>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</Portuguese>
