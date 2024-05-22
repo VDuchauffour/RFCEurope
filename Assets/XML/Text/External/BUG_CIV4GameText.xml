@@ -168,7 +168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_ERA</Tag>
 		<English>%s1 Era</English>
-		<French>%s1 Era</French>
+		<French>%s1</French>
 		<German>%s1</German>
 		<Italian>Era %s1</Italian>
 		<Spanish>%s1 Era</Spanish>
