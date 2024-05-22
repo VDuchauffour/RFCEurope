@@ -191,7 +191,7 @@ class CvTechChooser:
         screen.setLabel(
             "TechTitle",
             "Background",
-            u"<font=4b>TECHNOLOGY ADVISOR</font>",
+            u"<font=4b>" + text("TXT_KEY_TECH_CHOOSER_TITLE").upper() + "</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_TITLE,
             self.Y_TITLE,
