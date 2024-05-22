@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED</Tag>
 		<English>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</English>
 		<French>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</French>
-		<German>.</German>
+		<German>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
@@ -68,7 +68,7 @@
 		<Tag>TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED</Tag>
 		<English>The %s1 revolt was successful, the city of %s2 has declared it's independence!</English>
 		<French>The %s1 revolt was successful, the city of %s2 has declared it's independence!</French>
-		<German>.</German>
+		<German>The %s1 revolt was successful, the city of %s2 has declared it's independence!</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
