@@ -76,7 +76,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_PERSECUTION</Tag>
 		<English>%D1: "We cannot forget the persecution of our brothers in faith!"</English>
-		<French>.</French>
+		<French>%D1: "We cannot forget the persecution of our brothers in faith!"</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
