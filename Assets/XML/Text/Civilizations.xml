@@ -2212,7 +2212,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_LITHUANIA_DESC</Tag>
 		<English>The Lithuanians</English>
-		<French>N/T</French>
+		<French>Les Lituaniens</French>
 		<German>
 			<Text>Litauer:Die Litauer:den Litauern</Text>
 			<Gender>Male:Male:Male</Gender>
@@ -2229,7 +2229,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_LITHUANIA_SHORT_DESC</Tag>
 		<English>Lithuania</English>
-		<French>N/T</French>
+		<French>Lituanie</French>
 		<German>Litauen</German>
 		<Italian>Lituano</Italian>
 		<Spanish>Lituania</Spanish>
@@ -2246,7 +2246,11 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</English>
-		<French>N/T</French>
+		<French>
+			<Text>lituanien:lituanienne:lituaniens:lituaniennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<German>
 			<Text>Litauisch:litauischen:litauische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>

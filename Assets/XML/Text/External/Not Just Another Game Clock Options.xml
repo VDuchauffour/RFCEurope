@@ -56,51 +56,51 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_ANCIENT_TEXT</Tag>
-		<English>Ancient Era</English>
-		<French>Antiquité</French>
-		<German>Antike</German>
-		<Italian>Era Antica</Italian>
-		<Spanish>Ancient Era</Spanish>
+		<English>Early Middle Ages</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_ANCIENT_HOVER</Tag>
-		<English>Color to use for the Ancient era.</English>
-		<French>Couleur pour l'Antiquité.</French>
-		<German>Bestimmt die Farbe, in der die Epoche "Antike" erscheint</German>
-		<Italian>Colore da utilizzare per l'Era Antica.</Italian>
-		<Spanish>Color to use for the Ancient era.</Spanish>
+		<English>Color to use for the Early Middle Ages era.</English>
+		<French>Couleur pour le Haut Moyen &#194;ge.</French>
+		<German>Bestimmt die Farbe, in der die Epoche "Frühes Mittelalter" erscheint</German>
+		<Italian>Colore da utilizzare per l'Era Alto Medioevo.</Italian>
+		<Spanish>Color to use for the Early Middle Ages era.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_CLASSICAL_TEXT</Tag>
-		<English>Classical Era</English>
-		<French>Ere Classique</French>
-		<German>Klassik</German>
-		<Italian>Era Classica</Italian>
-		<Spanish>Classical Era</Spanish>
+		<English>High Middle Ages</English>
+		<French>Moyen &#194;ge</French>
+		<German>Hochmittelalter</German>
+		<Italian>Pieno Medioevo</Italian>
+		<Spanish>Plenitud de la Edad Media</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_CLASSICAL_HOVER</Tag>
-		<English>Color to use for the Classical era.</English>
-		<French>Couleur pour l'Ere Classique.</French>
-		<German>Bestimmt die Farbe, in der die Epoche "Klassik" erscheint</German>
-		<Italian>Colore da utilizzare per l'Era Classica.</Italian>
-		<Spanish>Color to use for the Classical era.</Spanish>
+		<English>Color to use for the High Middle Ages era.</English>
+		<French>Couleur pour le Moyen &#194;ge.</French>
+		<German>Bestimmt die Farbe, in der die Epoche "Hochmittelalter" erscheint</German>
+		<Italian>Colore da utilizzare per l'Era Pieno Medioevo.</Italian>
+		<Spanish>Color to use for the High Middle Ages era.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_MEDIEVAL_TEXT</Tag>
-		<English>Medieval Era</English>
-		<French>Moyen Age</French>
-		<German>Mittelalter</German>
-		<Italian>Era Medioevale</Italian>
-		<Spanish>Medieval Era</Spanish>
+		<English>Late Middle Ages</English>
+		<French>Bas Moyen &#194;ge</French>
+		<German>Sp&#228;tmittelalter</German>
+		<Italian>Basso Medioevo</Italian>
+		<Spanish>Baja Edad Media</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_MEDIEVAL_HOVER</Tag>
-		<English>Color to use for the Medieval era.</English>
-		<French>Couleur pour le Moyen Age.</French>
-		<German>Bestimmt die Farbe, in der die Epoche "Mittelalter" erscheint</German>
-		<Italian>Colore da utilizzare per l'Era Medioevale.</Italian>
-		<Spanish>Color to use for the Medieval era.</Spanish>
+		<English>Color to use for the Late Middle Ages era.</English>
+		<French>Couleur pour le Bas Moyen &#194;ge.</French>
+		<German>Bestimmt die Farbe, in der die Epoche "Sp&#228;tmittelalter" erscheint</German>
+		<Italian>Colore da utilizzare per l'Era Basso Medioevo.</Italian>
+		<Spanish>Color to use for the Late Middle Ages era.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__COLOR_ERA_RENAISSANCE_TEXT</Tag>
