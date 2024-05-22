@@ -5603,7 +5603,7 @@ class CvMainInterface:
             if xResolution >= 1440:
                 szGreatGeneralBar = "GreatGeneralBar-w"
                 xCoord = 268 + (xResolution - 1440) / 2 + 84 / 2
-                yCoord = 5
+                yCoord = 8
             else:
                 szGreatGeneralBar = "GreatGeneralBar"
                 xCoord = 268 + (xResolution - 1024) / 2 + 100 / 2
