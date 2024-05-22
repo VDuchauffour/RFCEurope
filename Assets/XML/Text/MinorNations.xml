@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -18,7 +18,7 @@
 		<Tag>TXT_KEY_MINOR_REBELLION_DESC</Tag>
 		<English>%s1_CivName are trying to form their own country. What shall we do?</English>
 		<French>%s1_CivName are trying to form their own country. What shall we do?</French>
-		<German>%s1_CivName versuchen einen selbständigen Staat zu bilden. Was sollen wir tun?</German>
+		<German>%s1_CivName versuchen einen selbst&#228;ndigen Staat zu bilden. Was sollen wir tun?</German>
 		<Italian>%s1_CivName stanno provando a formare una loro nazione. Cosa dobbiamo fare?</Italian>
 		<Spanish>%s1_CivName are trying to form their own country. What shall we do?</Spanish>
 		<Portuguese>%s1_CivName are trying to form their own country. What shall we do?</Portuguese>
@@ -27,8 +27,8 @@
 		<Tag>TXT_KEY_MINOR_REBELLION_DO_NOTHING</Tag>
 		<English>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</English>
 		<French>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</French>
-		<German>Einfach ignorieren, niemand würde unser mächtiges Reich verlassen wollen. (setzt ausschließlich auf die Stabilität %d1_RawOdds % Chance die Rebellen aufzuhalten)</German>
-		<Italian>Ignorali, nessuno vorrà davvero abbandonare il nostro potente Impero. (dipende dalla stabilità, solo il %d1_RawOdds % di chance di fermare i rivoltosi)</Italian>
+		<German>Einfach ignorieren, niemand w&#252;rde unser m&#228;chtiges Reich verlassen wollen. (setzt ausschlie&#223;lich auf die Stabilit&#228;t %d1_RawOdds % Chance die Rebellen aufzuhalten)</German>
+		<Italian>Ignorali, nessuno vorr&#224; davvero abbandonare il nostro potente Impero. (dipende dalla stabilit&#224;, solo il %d1_RawOdds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</Spanish>
 		<Portuguese>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</Portuguese>
 	</TEXT>
@@ -36,8 +36,8 @@
 		<Tag>TXT_KEY_MINOR_REBELLION_CRACK</Tag>
 		<English>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</English>
 		<French>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</French>
-		<German>Formiere die Bekämpfung der Rebellion and bezwinge diese Rebellen. (setzt auf die Anzahl der Einheiten in den Städten, erzeugt Unzufriedenheit und verursacht 1 Runde Revolte, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
-		<Italian>Sopprimi la rivolta. (dipende dal numero di unità presenti nelle tue città, genera infelicità e causa un turno di rivolta, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
+		<German>Formiere die Bek&#228;mpfung der Rebellion and bezwinge diese Rebellen. (setzt auf die Anzahl der Einheiten in den St&#228;dten, erzeugt Unzufriedenheit und verursacht 1 Runde Revolte, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
+		<Italian>Sopprimi la rivolta. (dipende dal numero di unit&#224; presenti nelle tue citt&#224;, genera infelicit&#224; e causa un turno di rivolta, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</Spanish>
 		<Portuguese>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</Portuguese>
 	</TEXT>
@@ -45,8 +45,8 @@
 		<Tag>TXT_KEY_MINOR_REBELLION_BRIBE</Tag>
 		<English>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</English>
 		<French>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</French>
-		<German>Besteche die lokalen Fürsten, die Rebellen sind chancenlos ohne deren Unterstützung. (setzt auf die Regierungsgesellschaftsform, bezahle %d1_Gold, %d3_Odds % Chance die Rebellen aufzuhalten)</German>
-		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilità di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d3_Odds % di chance di fermare i rivoltosi)</Italian>
+		<German>Besteche die lokalen F&#252;rsten, die Rebellen sind chancenlos ohne deren Unterst&#252;tzung. (setzt auf die Regierungsgesellschaftsform, bezahle %d1_Gold, %d3_Odds % Chance die Rebellen aufzuhalten)</German>
+		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilit&#224; di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d3_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</Spanish>
 		<Portuguese>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</Portuguese>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<Tag>TXT_KEY_MINOR_REBELLION_ALL</Tag>
 		<English>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</English>
 		<French>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</French>
-		<German>Unternimm alles um sie zu behalten. (kombiniere alle oben erwähnten Möglichkeiten, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
+		<German>Unternimm alles um sie zu behalten. (kombiniere alle oben erw&#228;hnten M&#246;glichkeiten, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Fai qualunque cosa per fermarli. (combina tutte le opzioni di sopra, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</Spanish>
 		<Portuguese>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</Portuguese>
@@ -270,7 +270,7 @@
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS</Tag>
 		<English>Southern Slavs</English>
 		<French>Southern Slavs</French>
-		<German>Südslawen</German>
+		<German>S&#252;dslawen</German>
 		<Italian>Slavi Meridionali</Italian>
 		<Spanish>Southern Slavs</Spanish>
 		<Portuguese>Southern Slavs</Portuguese>
@@ -279,8 +279,8 @@
 		<Tag>TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES</Tag>
 		<English>Germanic Tribes</English>
 		<French>Germanic Tribes</French>
-		<German>Germanenstämme</German>
-		<Italian>Tribù Germaniche</Italian>
+		<German>Germanenst&#228;mme</German>
+		<Italian>Trib&#249; Germaniche</Italian>
 		<Spanish>Germanic Tribes</Spanish>
 		<Portuguese>Germanic Tribes</Portuguese>
 	</TEXT>
@@ -360,8 +360,8 @@
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BEDUINS</Tag>
 		<English>Beduin Tribes</English>
 		<French>Beduin Tribes</French>
-		<German>Beduinenstämme</German>
-		<Italian>Tribù Beduine</Italian>
+		<German>Beduinenst&#228;mme</German>
+		<Italian>Trib&#249; Beduine</Italian>
 		<Spanish>Beduin Tribes</Spanish>
 		<Portuguese>Beduin Tribes</Portuguese>
 	</TEXT>
@@ -441,7 +441,7 @@
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KALMYKS</Tag>
 		<English>Kalmyks</English>
 		<French>Kalmyks</French>
-		<German>Kalmücken</German>
+		<German>Kalm&#252;cken</German>
 		<Italian>Calmucchi</Italian>
 		<Spanish>Kalmyks</Spanish>
 		<Portuguese>Kalmyks</Portuguese>

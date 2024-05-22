@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -88,7 +88,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOM_BULGARIA_1200AD</Tag>
-		<English>The year is 1200 AD, and the Second Bulgarian Empire is at the height of its power under the rule of Tsar Kaloyan. The Bulgarians have recently defeated the Byzantines in several key battles, and their influence extends from the Black Sea to the Adriatic coast. To the north lies the Kingdom of Hungary, ruled by King Béla III, who seeks to expand his dominion over the Balkans and secure trade routes with the Western world. The Hungarian army is known for its heavy cavalry and skilled archers.[NEWLINE][NEWLINE]Your mission is to secure key trade routes and expand the Bulgarian Empire at the expense of your rivals.</English>
+		<English>The year is 1200 AD, and the Second Bulgarian Empire is at the height of its power under the rule of Tsar Kaloyan. The Bulgarians have recently defeated the Byzantines in several key battles, and their influence extends from the Black Sea to the Adriatic coast. To the north lies the Kingdom of Hungary, ruled by King B&#233;la III, who seeks to expand his dominion over the Balkans and secure trade routes with the Western world. The Hungarian army is known for its heavy cavalry and skilled archers.[NEWLINE][NEWLINE]Your mission is to secure key trade routes and expand the Bulgarian Empire at the expense of your rivals.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -252,7 +252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOM_SPAIN_1200AD</Tag>
-		<English>As Isabella, you rule over a kingdom that spans the Iberian Peninsula, from the snow-capped Pyrenees to the sun-baked lands of Andalusia. The mighty Kingdom of León to the north seeks to expand its borders at Castile's expense, while the Muslim taifas of Andalusia offer a tantalizing prize for any would-be conqueror. Meanwhile, the Crown of Aragon to the east plots its own expansion into the Mediterranean, its fleets and armies poised to strike.[NEWLINE]As you navigate the complex web of alliances and rivalries, you must also contend with the growing power of the nobility within your own kingdom. </English>
+		<English>As Isabella, you rule over a kingdom that spans the Iberian Peninsula, from the snow-capped Pyrenees to the sun-baked lands of Andalusia. The mighty Kingdom of Le&#243;n to the north seeks to expand its borders at Castile's expense, while the Muslim taifas of Andalusia offer a tantalizing prize for any would-be conqueror. Meanwhile, the Crown of Aragon to the east plots its own expansion into the Mediterranean, its fleets and armies poised to strike.[NEWLINE]As you navigate the complex web of alliances and rivalries, you must also contend with the growing power of the nobility within your own kingdom. </English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -369,7 +369,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOM_PORTUGAL</Tag>
-		<English>Your small county of Portugal has just decided to break its familial ties with the Kingdom of León and declare its independence, creating the Kingdom of Portugal. It is 1139 AD, and you, Afonso Henriques, are the king of this newly formed kingdom.[NEWLINE][NEWLINE]It is time to strengthen your position by advancing to the south and continuing the Reconquista, but you should also prepare for your ultimate goal: to expand beyond the Iberian Peninsula. Your position makes it ideal to claim the riches of North Africa and the Atlantic islands - and who knows, maybe even much further lands than those.</English>
+		<English>Your small county of Portugal has just decided to break its familial ties with the Kingdom of Le&#243;n and declare its independence, creating the Kingdom of Portugal. It is 1139 AD, and you, Afonso Henriques, are the king of this newly formed kingdom.[NEWLINE][NEWLINE]It is time to strengthen your position by advancing to the south and continuing the Reconquista, but you should also prepare for your ultimate goal: to expand beyond the Iberian Peninsula. Your position makes it ideal to claim the riches of North Africa and the Atlantic islands - and who knows, maybe even much further lands than those.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

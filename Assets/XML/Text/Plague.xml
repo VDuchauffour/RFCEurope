@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -39,7 +39,7 @@
 		<German>Die Pest fordert Opfer in</German>
 		<Italian>La peste sta uccidendo gente a</Italian>
 		<Spanish>La peste est&#225; matando gente en</Spanish>
-		<Portuguese>A praga está matando a população em</Portuguese>
+		<Portuguese>A praga est&#225; matando a popula&#231;&#227;o em</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_PROCESS_UNIT</Tag>

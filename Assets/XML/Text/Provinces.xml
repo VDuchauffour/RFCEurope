@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -142,39 +142,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_13</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake V&#228;ttern[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_14</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake V&#228;nern[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_15</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake M&#228;laren[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_16</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Storsj&#246;n[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_17</Tag>
@@ -232,12 +232,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_23</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake P&#228;ij&#228;nne[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_24</Tag>
@@ -286,12 +286,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_29</Tag>
-		<English>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</English>
-		<French>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</French>
-		<German>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</German>
-		<Italian>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Portuguese>
+		<English>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake N&#228;sij&#228;rvi[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAKE_NAME_30</Tag>
@@ -327,7 +327,7 @@
 		<German>Instabil</German>
 		<Italian>Instabile</Italian>
 		<Spanish>Inestable</Spanish>
-		<Portuguese>Instável</Portuguese>
+		<Portuguese>Inst&#225;vel</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_1</Tag>
@@ -345,7 +345,7 @@
 		<German>Solide</German>
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
-		<Portuguese>Sólida</Portuguese>
+		<Portuguese>S&#243;lida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_3</Tag>
@@ -354,7 +354,7 @@
 		<German>Solide</German>
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
-		<Portuguese>Sólida</Portuguese>
+		<Portuguese>S&#243;lida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_4</Tag>
@@ -363,7 +363,7 @@
 		<German>Solide</German>
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
-		<Portuguese>Sólida</Portuguese>
+		<Portuguese>S&#243;lida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
@@ -408,7 +408,7 @@
 		<German>Leon</German>
 		<Italian>Leon</Italian>
 		<Spanish>Leon</Spanish>
-		<Portuguese>Leão</Portuguese>
+		<Portuguese>Le&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_4</Tag>
@@ -417,7 +417,7 @@
 		<German>Lusitania</German>
 		<Italian>Lusitania</Italian>
 		<Spanish>Lusitania</Spanish>
-		<Portuguese>Lusitânia</Portuguese>
+		<Portuguese>Lusit&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_5</Tag>
@@ -444,7 +444,7 @@
 		<German>Aragonien</German>
 		<Italian>Aragona</Italian>
 		<Spanish>Aragon</Spanish>
-		<Portuguese>Aragão</Portuguese>
+		<Portuguese>Arag&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_8</Tag>
@@ -453,7 +453,7 @@
 		<German>Valencia</German>
 		<Italian>Valencia</Italian>
 		<Spanish>Valencia</Spanish>
-		<Portuguese>Valência</Portuguese>
+		<Portuguese>Val&#234;ncia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_9</Tag>
@@ -489,7 +489,7 @@
 		<German>Aquitanien</German>
 		<Italian>Aquitania</Italian>
 		<Spanish>Aquitania</Spanish>
-		<Portuguese>Aquitânia</Portuguese>
+		<Portuguese>Aquit&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_13</Tag>
@@ -498,7 +498,7 @@
 		<German>Ile-de-France</German>
 		<Italian>Ile-de-France</Italian>
 		<Spanish>Isla de Francia</Spanish>
-		<Portuguese>Ilha de França</Portuguese>
+		<Portuguese>Ilha de Fran&#231;a</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_14</Tag>
@@ -507,7 +507,7 @@
 		<German>Provence</German>
 		<Italian>Provenza</Italian>
 		<Spanish>Provenza</Spanish>
-		<Portuguese>Provença</Portuguese>
+		<Portuguese>Proven&#231;a</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_15</Tag>
@@ -588,7 +588,7 @@
 		<German>Schottland</German>
 		<Italian>Scozia</Italian>
 		<Spanish>Escocia</Spanish>
-		<Portuguese>Escócia</Portuguese>
+		<Portuguese>Esc&#243;cia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_24</Tag>
@@ -606,7 +606,7 @@
 		<German>Mercia</German>
 		<Italian>Mercia</Italian>
 		<Spanish>Mercia</Spanish>
-		<Portuguese>Mércia</Portuguese>
+		<Portuguese>M&#233;rcia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_26</Tag>
@@ -615,7 +615,7 @@
 		<German>Ostanglien</German>
 		<Italian>Anglia Orientale</Italian>
 		<Spanish>Anglia Oriental</Spanish>
-		<Portuguese>Ânglia Oriental</Portuguese>
+		<Portuguese>&#194;nglia Oriental</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_27</Tag>
@@ -624,7 +624,7 @@
 		<German>Northumbria</German>
 		<Italian>Northumbria</Italian>
 		<Spanish>Northumbria</Spanish>
-		<Portuguese>Nortúmbria</Portuguese>
+		<Portuguese>Nort&#250;mbria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_28</Tag>
@@ -648,19 +648,19 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_30</Tag>
 		<English>Denmark</English>
 		<French>Danemark</French>
-		<German>Dänemark</German>
+		<German>D&#228;nemark</German>
 		<Italian>Danimarca</Italian>
 		<Spanish>Dinamarca</Spanish>
 		<Portuguese>Dinamarca</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_31</Tag>
-		<English>Österland</English>
-		<French>Österland</French>
-		<German>Österland</German>
-		<Italian>Österland</Italian>
-		<Spanish>Österland</Spanish>
-		<Portuguese>Österland</Portuguese>
+		<English>&#214;sterland</English>
+		<French>&#214;sterland</French>
+		<German>&#214;sterland</German>
+		<Italian>&#214;sterland</Italian>
+		<Spanish>&#214;sterland</Spanish>
+		<Portuguese>&#214;sterland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_32</Tag>
@@ -682,12 +682,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_34</Tag>
-		<English>Götaland</English>
-		<French>Götaland</French>
-		<German>Götaland</German>
-		<Italian>Götaland</Italian>
-		<Spanish>Götaland</Spanish>
-		<Portuguese>Götaland</Portuguese>
+		<English>G&#246;taland</English>
+		<French>G&#246;taland</French>
+		<German>G&#246;taland</German>
+		<Italian>G&#246;taland</Italian>
+		<Spanish>G&#246;taland</Spanish>
+		<Portuguese>G&#246;taland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_35</Tag>
@@ -709,12 +709,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_37</Tag>
-		<English>Jämtland</English>
-		<French>Jämtland</French>
-		<German>Jämtland</German>
-		<Italian>Jämtland</Italian>
-		<Spanish>Jämtland</Spanish>
-		<Portuguese>Jämtland</Portuguese>
+		<English>J&#228;mtland</English>
+		<French>J&#228;mtland</French>
+		<German>J&#228;mtland</German>
+		<Italian>J&#228;mtland</Italian>
+		<Spanish>J&#228;mtland</Spanish>
+		<Portuguese>J&#228;mtland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_38</Tag>
@@ -741,7 +741,7 @@
 		<German>Schwaben</German>
 		<Italian>Svevia</Italian>
 		<Spanish>Suabia</Spanish>
-		<Portuguese>Suábia</Portuguese>
+		<Portuguese>Su&#225;bia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_41</Tag>
@@ -756,10 +756,10 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_42</Tag>
 		<English>Bohemia</English>
 		<French>Boheme</French>
-		<German>Böhmen</German>
+		<German>B&#246;hmen</German>
 		<Italian>Boemia</Italian>
 		<Spanish>Bohemia</Spanish>
-		<Portuguese>Boêmia</Portuguese>
+		<Portuguese>Bo&#234;mia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_43</Tag>
@@ -768,7 +768,7 @@
 		<German>Sachsen</German>
 		<Italian>Sassonia</Italian>
 		<Spanish>Sajonia</Spanish>
-		<Portuguese>Saxônia</Portuguese>
+		<Portuguese>Sax&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_44</Tag>
@@ -786,7 +786,7 @@
 		<German>Franken</German>
 		<Italian>Franconia</Italian>
 		<Spanish>Franconia</Spanish>
-		<Portuguese>Francônia</Portuguese>
+		<Portuguese>Franc&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_46</Tag>
@@ -831,7 +831,7 @@
 		<German>Pommern</German>
 		<Italian>Pomerania</Italian>
 		<Spanish>Pomerania</Spanish>
-		<Portuguese>Pomerânia</Portuguese>
+		<Portuguese>Pomer&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_51</Tag>
@@ -846,10 +846,10 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_52</Tag>
 		<English>Greater Poland</English>
 		<French>Grande Pologne</French>
-		<German>Großpolen</German>
+		<German>Gro&#223;polen</German>
 		<Italian>Grande Polonia</Italian>
 		<Spanish>Gran Polonia</Spanish>
-		<Portuguese>Grande Polônia</Portuguese>
+		<Portuguese>Grande Pol&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_53</Tag>
@@ -858,7 +858,7 @@
 		<German>Masowien</German>
 		<Italian>Masovia</Italian>
 		<Spanish>Mazovia</Spanish>
-		<Portuguese>Mazóvia</Portuguese>
+		<Portuguese>Maz&#243;via</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_54</Tag>
@@ -867,7 +867,7 @@
 		<German>Kleinpolen</German>
 		<Italian>Piccola Polonia</Italian>
 		<Spanish>Menor Polonia</Spanish>
-		<Portuguese>Pequena Polônia</Portuguese>
+		<Portuguese>Pequena Pol&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_55</Tag>
@@ -885,7 +885,7 @@
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
 		<Spanish>Lituania</Spanish>
-		<Portuguese>Lituânia</Portuguese>
+		<Portuguese>Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_57</Tag>
@@ -894,7 +894,7 @@
 		<German>Livland</German>
 		<Italian>Livonia</Italian>
 		<Spanish>Livonia</Spanish>
-		<Portuguese>Livônia</Portuguese>
+		<Portuguese>Liv&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_58</Tag>
@@ -903,7 +903,7 @@
 		<German>Estland</German>
 		<Italian>Estonia</Italian>
 		<Spanish>Estonia</Spanish>
-		<Portuguese>Estônia</Portuguese>
+		<Portuguese>Est&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_59</Tag>
@@ -918,19 +918,19 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_60</Tag>
 		<English>Carinthia</English>
 		<French>Carinthie</French>
-		<German>Kärnten</German>
+		<German>K&#228;rnten</German>
 		<Italian>Carinzia</Italian>
 		<Spanish>Carintia</Spanish>
-		<Portuguese>Caríntia</Portuguese>
+		<Portuguese>Car&#237;ntia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_61</Tag>
 		<English>Austria</English>
 		<French>Autriche</French>
-		<German>Österreich</German>
+		<German>&#214;sterreich</German>
 		<Italian>Austria</Italian>
 		<Spanish>Austria</Spanish>
-		<Portuguese>Áustria</Portuguese>
+		<Portuguese>&#193;ustria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_62</Tag>
@@ -939,7 +939,7 @@
 		<German>Slawonien</German>
 		<Italian>Slavonia</Italian>
 		<Spanish>Eslavonia</Spanish>
-		<Portuguese>Eslavônia</Portuguese>
+		<Portuguese>Eslav&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_63</Tag>
@@ -972,10 +972,10 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_64</Tag>
 		<English>Transylvania</English>
 		<French>Transylvanie</French>
-		<German>Siebenbürgen</German>
+		<German>Siebenb&#252;rgen</German>
 		<Italian>Transilvania</Italian>
 		<Spanish>Transilvania</Spanish>
-		<Portuguese>Transilvânia</Portuguese>
+		<Portuguese>Transilv&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_65</Tag>
@@ -990,10 +990,10 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_66</Tag>
 		<English>Moravia</English>
 		<French>Moravie</French>
-		<German>Mähren</German>
+		<German>M&#228;hren</German>
 		<Italian>Moravia</Italian>
 		<Spanish>Moravia</Spanish>
-		<Portuguese>Morávia</Portuguese>
+		<Portuguese>Mor&#225;via</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_67</Tag>
@@ -1002,7 +1002,7 @@
 		<German>Schlesien</German>
 		<Italian>Slesia</Italian>
 		<Spanish>Silesia</Spanish>
-		<Portuguese>Silésia</Portuguese>
+		<Portuguese>Sil&#233;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_68</Tag>
@@ -1011,7 +1011,7 @@
 		<German>Pannonien</German>
 		<Italian>Pannonia</Italian>
 		<Spanish>Panonia</Spanish>
-		<Portuguese>Panônia</Portuguese>
+		<Portuguese>Pan&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_69</Tag>
@@ -1056,7 +1056,7 @@
 		<German>Latium</German>
 		<Italian>Latium</Italian>
 		<Spanish>Latium</Spanish>
-		<Portuguese>Lácio</Portuguese>
+		<Portuguese>L&#225;cio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_74</Tag>
@@ -1065,7 +1065,7 @@
 		<German>Kalabrien</German>
 		<Italian>Calabria</Italian>
 		<Spanish>Calabria</Spanish>
-		<Portuguese>Calábria</Portuguese>
+		<Portuguese>Cal&#225;bria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_75</Tag>
@@ -1074,7 +1074,7 @@
 		<German>Apulien</German>
 		<Italian>Puglia</Italian>
 		<Spanish>Apulia</Spanish>
-		<Portuguese>Apúlia</Portuguese>
+		<Portuguese>Ap&#250;lia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_76</Tag>
@@ -1101,7 +1101,7 @@
 		<German>Dalmatien</German>
 		<Italian>Dalmazia</Italian>
 		<Spanish>Dalmacia</Spanish>
-		<Portuguese>Dalmácia</Portuguese>
+		<Portuguese>Dalm&#225;cia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_79</Tag>
@@ -1119,7 +1119,7 @@
 		<German>Moesia</German>
 		<Italian>Mesia</Italian>
 		<Spanish>Mesia</Spanish>
-		<Portuguese>Mésia</Portuguese>
+		<Portuguese>M&#233;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_81</Tag>
@@ -1137,7 +1137,7 @@
 		<German>Thrakien</German>
 		<Italian>Tracia</Italian>
 		<Spanish>Tracia</Spanish>
-		<Portuguese>Trácia</Portuguese>
+		<Portuguese>Tr&#225;cia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_83</Tag>
@@ -1146,7 +1146,7 @@
 		<German>Thessalien</German>
 		<Italian>Tessaglia</Italian>
 		<Spanish>Tesalia</Spanish>
-		<Portuguese>Tessália</Portuguese>
+		<Portuguese>Tess&#225;lia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_84</Tag>
@@ -1155,7 +1155,7 @@
 		<German>Makedonien</German>
 		<Italian>Macedonia</Italian>
 		<Spanish>Macedonia</Spanish>
-		<Portuguese>Macedônia</Portuguese>
+		<Portuguese>Maced&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_85</Tag>
@@ -1164,7 +1164,7 @@
 		<German>Serbien</German>
 		<Italian>Serbia</Italian>
 		<Spanish>Serbia</Spanish>
-		<Portuguese>Sérvia</Portuguese>
+		<Portuguese>S&#233;rvia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_86</Tag>
@@ -1173,7 +1173,7 @@
 		<German>Bosnien</German>
 		<Italian>Bosnia</Italian>
 		<Spanish>Bosnia</Spanish>
-		<Portuguese>Bósnia</Portuguese>
+		<Portuguese>B&#243;snia</Portuguese>
 	</TEXT>
 	<TEXT> <!-- Currently unused -->
 		<Tag>TXT_KEY_PROVINCE_NAME_86_2</Tag>
@@ -1182,7 +1182,7 @@
 		<German>Kroatien</German>
 		<Italian>Croazia</Italian>
 		<Spanish>Croacia</Spanish>
-		<Portuguese>Croácia</Portuguese>
+		<Portuguese>Cro&#225;cia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_87</Tag>
@@ -1191,7 +1191,7 @@
 		<German>Epirus</German>
 		<Italian>Epiro</Italian>
 		<Spanish>Epiro</Spanish>
-		<Portuguese>Épiro</Portuguese>
+		<Portuguese>&#201;piro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_88</Tag>
@@ -1209,7 +1209,7 @@
 		<German>Walachei</German>
 		<Italian>Vallachia</Italian>
 		<Spanish>Valaquia</Spanish>
-		<Portuguese>Valáquia</Portuguese>
+		<Portuguese>Val&#225;quia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_90</Tag>
@@ -1218,7 +1218,7 @@
 		<German>Jerusalem</German>
 		<Italian>Gerusalemme</Italian>
 		<Spanish>Jerusalen</Spanish>
-		<Portuguese>Jerusalém</Portuguese>
+		<Portuguese>Jerusal&#233;m</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_91</Tag>
@@ -1227,7 +1227,7 @@
 		<German>Paphlagonien</German>
 		<Italian>Paflagonia</Italian>
 		<Spanish>Paflagonia</Spanish>
-		<Portuguese>Paflagônia</Portuguese>
+		<Portuguese>Paflag&#244;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_92</Tag>
@@ -1254,7 +1254,7 @@
 		<German>Kilikien</German>
 		<Italian>Cilicia</Italian>
 		<Spanish>Cilicia</Spanish>
-		<Portuguese>Cilícia</Portuguese>
+		<Portuguese>Cil&#237;cia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_95</Tag>
@@ -1263,7 +1263,7 @@
 		<German>Anatolikon</German>
 		<Italian>Anatolikon</Italian>
 		<Spanish>Anatolikon</Spanish>
-		<Portuguese>Anatólico</Portuguese>
+		<Portuguese>Anat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_96</Tag>
@@ -1308,7 +1308,7 @@
 		<German>Syrien</German>
 		<Italian>Siria</Italian>
 		<Spanish>Siria</Spanish>
-		<Portuguese>Síria</Portuguese>
+		<Portuguese>S&#237;ria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_101</Tag>
@@ -1317,7 +1317,7 @@
 		<German>Libanon</German>
 		<Italian>Libano</Italian>
 		<Spanish>Libano</Spanish>
-		<Portuguese>Líbano</Portuguese>
+		<Portuguese>L&#237;bano</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_102</Tag>
@@ -1326,13 +1326,13 @@
 		<German>Arabien</German>
 		<Italian>Araba</Italian>
 		<Spanish>Arabia</Spanish>
-		<Portuguese>Arábia</Portuguese>
+		<Portuguese>Ar&#225;bia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_103</Tag>
 		<English>Egypt</English>
 		<French>Egypte</French>
-		<German>Ägypten</German>
+		<German>&#196;gypten</German>
 		<Italian>Egitto</Italian>
 		<Spanish>Egipto</Spanish>
 		<Portuguese>Egito</Portuguese>
@@ -1353,7 +1353,7 @@
 		<German>Tripolitanien</German>
 		<Italian>Tripolitania</Italian>
 		<Spanish>Tripolitania</Spanish>
-		<Portuguese>Tripolitânia</Portuguese>
+		<Portuguese>Tripolit&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_106</Tag>
@@ -1380,7 +1380,7 @@
 		<German>Tetouan</German>
 		<Italian>Tetouan</Italian>
 		<Spanish>Tetuan</Spanish>
-		<Portuguese>Tetuão</Portuguese>
+		<Portuguese>Tetu&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_109</Tag>
@@ -1389,7 +1389,7 @@
 		<German>Oran</German>
 		<Italian>Orano</Italian>
 		<Spanish>Oran</Spanish>
-		<Portuguese>Orã</Portuguese>
+		<Portuguese>Or&#227;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_110</Tag>
@@ -1398,7 +1398,7 @@
 		<German>Sizilien</German>
 		<Italian>Sicilia</Italian>
 		<Spanish>Sicilia</Spanish>
-		<Portuguese>Sicília</Portuguese>
+		<Portuguese>Sic&#237;lia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_111</Tag>
@@ -1434,7 +1434,7 @@
 		<German>Korsika</German>
 		<Italian>Corsica</Italian>
 		<Spanish>Corsega</Spanish>
-		<Portuguese>Córsega</Portuguese>
+		<Portuguese>C&#243;rsega</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_115</Tag>
@@ -1461,7 +1461,7 @@
 		<German>Kanaren</German>
 		<Italian>Canarie</Italian>
 		<Spanish>Canarias</Spanish>
-		<Portuguese>Canárias</Portuguese>
+		<Portuguese>Can&#225;rias</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_118</Tag>
@@ -1470,7 +1470,7 @@
 		<German>Azoren</German>
 		<Italian>Azzorre</Italian>
 		<Spanish>Azores</Spanish>
-		<Portuguese>Açores</Portuguese>
+		<Portuguese>A&#231;ores</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_119</Tag>
@@ -1488,7 +1488,7 @@
 		<German>Moldawien</German>
 		<Italian>Moldavia</Italian>
 		<Spanish>Moldavia</Spanish>
-		<Portuguese>Moldávia</Portuguese>
+		<Portuguese>Mold&#225;via</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_121</Tag>
@@ -1632,7 +1632,7 @@
 		<German>Podolien</German>
 		<Italian>Podolia</Italian>
 		<Spanish>Podolia</Spanish>
-		<Portuguese>Podólia</Portuguese>
+		<Portuguese>Pod&#243;lia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_137</Tag>
@@ -1668,7 +1668,7 @@
 		<German>Nischni Nowgorod</German>
 		<Italian>Niznij Novgorod</Italian>
 		<Spanish>Nizhni Novgorod</Spanish>
-		<Portuguese>Níjni Novgorod</Portuguese>
+		<Portuguese>N&#237;jni Novgorod</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_141</Tag>
@@ -1677,7 +1677,7 @@
 		<German>Karelien</German>
 		<Italian>Carelia</Italian>
 		<Spanish>Carelia</Spanish>
-		<Portuguese>Carélia</Portuguese>
+		<Portuguese>Car&#233;lia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_142</Tag>
@@ -1686,7 +1686,7 @@
 		<German>Wolhynien</German>
 		<Italian>Volinia</Italian>
 		<Spanish>Volinia</Spanish>
-		<Portuguese>Volínia</Portuguese>
+		<Portuguese>Vol&#237;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_143</Tag>

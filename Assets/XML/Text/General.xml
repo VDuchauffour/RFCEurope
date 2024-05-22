@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -119,7 +119,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>Português</Portuguese>
+		<Portuguese>Portugu&#234;s</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFEAT</Tag>
@@ -137,7 +137,7 @@
 		<German>Wir wurden besiegt!!!</German>
 		<Italian>Sei stato sconfitto!!!</Italian>
 		<Spanish>&#161;Os han derrotado!</Spanish>
-		<Portuguese>Você foi derrotado!!!</Portuguese>
+		<Portuguese>Voc&#234; foi derrotado!!!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADING_TIME</Tag>
@@ -164,7 +164,7 @@
 		<German>VERBLEIBENDE AUTOPLAY-RUNDEN:  %d1_Num</German>
 		<Italian>TURNI DI GIOCO AUTOMATICO RIMANENTI:  %d1_Num</Italian>
 		<Spanish>TURNOS AUTOM&#193;TICOS RESTANTES: %d1_Num</Spanish>
-		<Portuguese>TURNOS AUTOMÁTICOS RESTANTES:  %d1_Num</Portuguese>
+		<Portuguese>TURNOS AUTOM&#193;TICOS RESTANTES:  %d1_Num</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
@@ -182,7 +182,7 @@
 		<German>Startjahr</German>
 		<Italian>Anno di avvio</Italian>
 		<Spanish>A&#241;o de inicio</Spanish>
-		<Portuguese>Ano de início</Portuguese>
+		<Portuguese>Ano de in&#237;cio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BC</Tag>
@@ -206,10 +206,10 @@
 		<Tag>TXT_KEY_ERA_EARLY_MEDIEVAL</Tag>
 		<English>Early Middle Ages</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_HIGH_MEDIEVAL</Tag>
@@ -218,7 +218,7 @@
 		<German>Hochmittelalter</German>
 		<Italian>Pieno Medioevo</Italian>
 		<Spanish>Plenitud de la Edad Media</Spanish>
-		<Portuguese>Idade Média Plena</Portuguese>
+		<Portuguese>Idade M&#233;dia Plena</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_LATE_MEDIEVAL</Tag>
@@ -227,7 +227,7 @@
 		<German>Sp&#228;tmittelalter</German>
 		<Italian>Basso Medioevo</Italian>
 		<Spanish>Baja Edad Media</Spanish>
-		<Portuguese>Idade Média Tardia</Portuguese>
+		<Portuguese>Idade M&#233;dia Tardia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
@@ -245,7 +245,7 @@
 		<German>Sp&#228;tmittelalter</German>
 		<Italian>Basso Medioevo</Italian>
 		<Spanish>Baja Edad Media</Spanish>
-		<Portuguese>Idade Média Tardia</Portuguese>
+		<Portuguese>Idade M&#233;dia Tardia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
@@ -254,61 +254,61 @@
 		<German>Hochmittelalter</German>
 		<Italian>Pieno Medioevo</Italian>
 		<Spanish>Plenitud de la Edad Media</Spanish>
-		<Portuguese>Idade Média Plena</Portuguese>
+		<Portuguese>Idade M&#233;dia Plena</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Early Middle Ages</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_BEFORE_START</Tag>
 		<English>Good Ol' Days</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_BEFORE_ERA</Tag>
 		<English>Before our Age</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_BEFORE_500AD</Tag>
 		<English>Before 500 AD</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_BEFORE_1200AD</Tag>
 		<English>Before 1200 AD</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FOUNDED</Tag>
 		<English>Founded: %s1_DateStr</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Frühes Mittelalter</German>
+		<German>Fr&#252;hes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>Alta Idade Média</Portuguese>
+		<Portuguese>Alta Idade M&#233;dia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_UNKNOWN_CITY</Tag>
@@ -362,7 +362,7 @@
 		<German>[ICON_BULLET]Wissenschaft: </German>
 		<Italian>[ICON_BULLET]Scienza: </Italian>
 		<Spanish>[ICON_BULLET]Ciencia: </Spanish>
-		<Portuguese>[ICON_BULLET]Ciência:</Portuguese>
+		<Portuguese>[ICON_BULLET]Ci&#234;ncia:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_TRADE</Tag>
@@ -371,7 +371,7 @@
 		<German>[ICON_BULLET]Handel: </German>
 		<Italian>[ICON_BULLET]Commercio: </Italian>
 		<Spanish>[ICON_BULLET]Intercambio: </Spanish>
-		<Portuguese>[ICON_BULLET]Comércio:</Portuguese>
+		<Portuguese>[ICON_BULLET]Com&#233;rcio:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_PRODUCTION</Tag>
@@ -380,7 +380,7 @@
 		<German>[ICON_BULLET]Produktion: </German>
 		<Italian>[ICON_BULLET]Produzione: </Italian>
 		<Spanish>[ICON_BULLET]Producci&#243;n: </Spanish>
-		<Portuguese>[ICON_BULLET]Produção:</Portuguese>
+		<Portuguese>[ICON_BULLET]Produ&#231;&#227;o:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_CULTURE</Tag>
@@ -407,7 +407,7 @@
 		<German>[ICON_BULLET]Startsituation: </German>
 		<Italian>[ICON_BULLET]Situazione di avvio: </Italian>
 		<Spanish>[ICON_BULLET]Situaci&#243;n de inicio: </Spanish>
-		<Portuguese>[ICON_BULLET]Situação de início:</Portuguese>
+		<Portuguese>[ICON_BULLET]Situa&#231;&#227;o de in&#237;cio:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_5STARS</Tag>
@@ -461,7 +461,7 @@
 		<German>Bewertung</German>
 		<Italian>Valutazione</Italian>
 		<Spanish>&#205;ndice</Spanish>
-		<Portuguese>Índice</Portuguese>
+		<Portuguese>&#205;ndice</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_BONUS</Tag>
@@ -470,7 +470,7 @@
 		<German>Milit&#228;rbonus</German>
 		<Italian>Bonus Militare</Italian>
 		<Spanish>Bonificaci&#243;n militar</Spanish>
-		<Portuguese>Bônus Militar</Portuguese>
+		<Portuguese>B&#244;nus Militar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FREE_PROMOTION</Tag>
@@ -479,7 +479,7 @@
 		<German>Freie Bef&#246;rderung: (%s1)</German>
 		<Italian>Promozione gratuita: (%s1)</Italian>
 		<Spanish>Ascenso gratis: (%s1)</Spanish>
-		<Portuguese>Promoção grátis: (%s1)</Portuguese>
+		<Portuguese>Promo&#231;&#227;o gr&#225;tis: (%s1)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_DEFENSIVE_PACT</Tag>
@@ -488,7 +488,7 @@
 		<German>Ein Verteidigungsb&#252;ndnis - Beide Parteien stimmen zu, den Angreifern der anderen Partei automatisch den Krieg zu erkl&#228;ren.</German>
 		<Italian>Un patto di protezione reciproca: ogni civilt&#224; accetta di dichiarare automaticamente guerra se la civilt&#224; alleata viene attaccata.</Italian>
 		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra.</Spanish>
-		<Portuguese>Um Pacto de Proteção Mútua - Cada Parte Aceita Declarar Guerra Automaticamente se a Outra Parte é Atacada.</Portuguese>
+		<Portuguese>Um Pacto de Prote&#231;&#227;o M&#250;tua - Cada Parte Aceita Declarar Guerra Automaticamente se a Outra Parte &#233; Atacada.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CHECKF2</Tag>
@@ -506,7 +506,7 @@
 		<German>Einzelheiten in den Siegbedingungen (F8)</German>
 		<Italian>Per ulteriori dettagli consulta le Condizioni di vittoria (F8)</Italian>
 		<Spanish>Revisa las condiciones para la victoria [F8] para obtener m&#225;s detalles.</Spanish>
-		<Portuguese>Consulte as Condições de Vitória (F8) para maiores detalhes</Portuguese>
+		<Portuguese>Consulte as Condi&#231;&#245;es de Vit&#243;ria (F8) para maiores detalhes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS</Tag>
@@ -515,7 +515,7 @@
 		<German>F&#252;r das %s1:3_PlyrAdject Reich beginnt ein Goldenes Zeitalter</German>
 		<Italian>L'Et&#224; dell'oro %s1_PlyrAdject inizia</Italian>
 		<Spanish>Empieza la edad de oro de %s1_PlyrAdject.</Spanish>
-		<Portuguese>A Era de Ouro %s1:2_PlyrAdject começa</Portuguese>
+		<Portuguese>A Era de Ouro %s1:2_PlyrAdject come&#231;a</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN</Tag>
@@ -524,7 +524,7 @@
 		<German>F&#252;r das %s1:3_PlyrAdject Reich hat das Goldene Zeitalter begonnen!!!</German>
 		<Italian>L'Et&#224; dell'oro %s1_PlyrAdject &#232; iniziata!!!</Italian>
 		<Spanish>&#161;Ha empezado la edad de oro %s1_PlyrAdject!</Spanish>
-		<Portuguese>A Era de Ouro %s1:2_PlyrAdject começou!!!</Portuguese>
+		<Portuguese>A Era de Ouro %s1:2_PlyrAdject come&#231;ou!!!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED</Tag>
@@ -542,7 +542,7 @@
 		<German>Opfern Sie eine oder mehrere Gro&#223;e Pers&#246;nlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zus&#228;tzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begr&#252;nden.</German>
 		<Italian>Con questo ordine si consumano uno o pi&#249; Grandi Personaggi (di tipi differenti) e si avvia un'Et&#224; dell'Oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Italian>
 		<Spanish>Esta orden consume uno o m&#225;s grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Spanish>
-		<Portuguese>Esta ordem consumirá uma ou mais Grandes Personalidade (de diferentes tipos) e iniciará uma Era de Ouro ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] extra).</Portuguese>
+		<Portuguese>Esta ordem consumir&#225; uma ou mais Grandes Personalidade (de diferentes tipos) e iniciar&#225; uma Era de Ouro ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] extra).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Tag>
@@ -550,7 +550,7 @@
 		<French>Cavalerie L&#233;g&#232;re</French>
 		<German>Leichte Kavallerie</German>
 		<Italian>Cavalleria Leggera</Italian>
-		<Spanish>Caballería ligera</Spanish>
+		<Spanish>Caballer&#237;a ligera</Spanish>
 		<Portuguese>Cavalaria Leve</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -559,7 +559,7 @@
 		<French>Cavalerie Lourde</French>
 		<German>Schwere Kavallerie</German>
 		<Italian>Cavalleria Pesante</Italian>
-		<Spanish>Caballería pesada</Spanish>
+		<Spanish>Caballer&#237;a pesada</Spanish>
 		<Portuguese>Cavalaria Pesada</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -568,7 +568,7 @@
 		<French>Arme d'hast</French>
 		<German>Stangenwaffeninfanterie</German>
 		<Italian>Armi ad Asta</Italian>
-		<Spanish>Infantería de brazo de asta</Spanish>
+		<Spanish>Infanter&#237;a de brazo de asta</Spanish>
 		<Portuguese>Arma de Haste</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -577,7 +577,7 @@
 		<French>Infantrie Lourde</French>
 		<German>Schwere Infanterie</German>
 		<Italian>Fanteria Pesante</Italian>
-		<Spanish>Infantería pesada</Spanish>
+		<Spanish>Infanter&#237;a pesada</Spanish>
 		<Portuguese>Infantaria Pesada</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -692,18 +692,18 @@
 		<Tag>TXT_KEY_FEAT_UNIT_PRIVATEER</Tag>
 		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! The nationality of this unit is invisible to your rivals, so you may use it to attack their ships without having to declare war. You may also blockade and plunder rival trade routes without having to be at war.</English>
 		<French>F&#233;licitations ! Vous avez entra&#238;n&#233; votre premi&#232;re unit&#233; de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! La nationalit&#233; de cette unit&#233; est invisible &#224; vos rivaux, ce qui vous permet de l'utiliser pour attaquer leurs navires sans avoir &#224; d&#233;clarer la guerre. Vous pouvez aussi bloquer et piller les routes commerciales rivales sans avoir &#224; entrer en guerre.</French>
-		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Die Nationalität dieser Einheit ist für Ihre Gegner unsichtbar, Sie können mit dieser Einheit also gegnerische Schiffe angreifen, ohne ihnen den Krieg zu erklären. Sie können auch gegnerische Handelswege blockieren und plündern, ohne Krieg zu führen.</German>
-		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! La nazionalità di questa unità non sarà visibile ai nemici, il che significa che potrai usarla per attaccare le loro navi senza bisogno di dichiarare guerra. Allo stesso modo, potrai anche stringere d'assedio e saccheggiare le rotte commerciali nemiche senza necessità di essere in guerra.</Italian>
-		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, por lo que podéis usarlas para atacar a sus barcos sin declarar la guerra. También podéis bloquear y saquear las rutas comerciales rivales sin tener que estar en guerra.</Spanish>
+		<German>Gl&#252;ckwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Die Nationalit&#228;t dieser Einheit ist f&#252;r Ihre Gegner unsichtbar, Sie k&#246;nnen mit dieser Einheit also gegnerische Schiffe angreifen, ohne ihnen den Krieg zu erkl&#228;ren. Sie k&#246;nnen auch gegnerische Handelswege blockieren und pl&#252;ndern, ohne Krieg zu f&#252;hren.</German>
+		<Italian>Congratulazioni, hai addestrato la tua prima unit&#224; [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! La nazionalit&#224; di questa unit&#224; non sar&#224; visibile ai nemici, il che significa che potrai usarla per attaccare le loro navi senza bisogno di dichiarare guerra. Allo stesso modo, potrai anche stringere d'assedio e saccheggiare le rotte commerciali nemiche senza necessit&#224; di essere in guerra.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, por lo que pod&#233;is usarlas para atacar a sus barcos sin declarar la guerra. Tambi&#233;n pod&#233;is bloquear y saquear las rutas comerciales rivales sin tener que estar en guerra.</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNIT_SPY</Tag>
 		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! This unit is invisible to other players, which allows you to enter into their territory to gather intelligence and to perform Espionage Missions. Be aware, however, that even though it cannot be seen, this unit still has a chance to get caught when operating in rival territory, possibly revealing its identity and causing tension in your international relations.</English>
 		<French>F&#233;licitations ! Vous avez entra&#238;n&#233; votre premi&#232;re unit&#233; de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! Cette unit&#233; est invisible aux autres joueurs, ce qui vous permet de p&#233;n&#233;trer dans leur territoire pour r&#233;colter des informations et ex&#233;cuter des missions d'espionnage. Mais attention, m&#234;me si elle ne peut &#234;tre vue, cette unit&#233; risque n&#233;anmoins de se faire attraper lorsqu'elle op&#232;re en territoire ennemi, risquant alors de r&#233;v&#233;ler son identit&#233; et de causer des tensions dans vos relations internationales.</French>
-		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Da diese Einheit für die anderen Spieler unsichtbar ist, können Sie mit ihr in gegnerische Gebiete vordringen, um Geheiminformationen zu sammeln und Spionagemissionen auszuführen. Vergessen Sie jedoch nicht, dass diese Einheiten zwar nicht sichtbar sind, aber dennoch bei Einsätzen in gegnerischen Gebieten gefasst werden können und dann möglicherweise ihre Identität preisgeben, was zu Spannungen in Ihren internationalen Beziehungen führen würde.</German>
-		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! Questa unità non è visibile agli altri giocatori, il che ti permetterà di entrare nel loro territorio per raccogliere informazioni e svolgere missioni di spionaggio. Stai attento, tuttavia, perché anche se non può essere vista, quest'unità può essere catturata quando opera in territorio nemico, con il rischio che riveli la sua identità e causi quindi tensione nelle relazioni diplomatiche.</Italian>
-		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, cosa que os permite entrar en su territorio para recoger información y realizar misiones de espionaje. Sin embargo, id con cuidado: aunque no se la pueda detectar, esta unidad todavía puede ser apresada mientras opera en territorio rival, con el riesgo de que revele su identidad y la consecuente tensión que crearía en vuestras relaciones internacionales.</Spanish>
+		<German>Gl&#252;ckwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Da diese Einheit f&#252;r die anderen Spieler unsichtbar ist, k&#246;nnen Sie mit ihr in gegnerische Gebiete vordringen, um Geheiminformationen zu sammeln und Spionagemissionen auszuf&#252;hren. Vergessen Sie jedoch nicht, dass diese Einheiten zwar nicht sichtbar sind, aber dennoch bei Eins&#228;tzen in gegnerischen Gebieten gefasst werden k&#246;nnen und dann m&#246;glicherweise ihre Identit&#228;t preisgeben, was zu Spannungen in Ihren internationalen Beziehungen f&#252;hren w&#252;rde.</German>
+		<Italian>Congratulazioni, hai addestrato la tua prima unit&#224; [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! Questa unit&#224; non &#232; visibile agli altri giocatori, il che ti permetter&#224; di entrare nel loro territorio per raccogliere informazioni e svolgere missioni di spionaggio. Stai attento, tuttavia, perch&#233; anche se non pu&#242; essere vista, quest'unit&#224; pu&#242; essere catturata quando opera in territorio nemico, con il rischio che riveli la sua identit&#224; e causi quindi tensione nelle relazioni diplomatiche.</Italian>
+		<Spanish>&#161;Felicidades! Hab&#233;is entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, cosa que os permite entrar en su territorio para recoger informaci&#243;n y realizar misiones de espionaje. Sin embargo, id con cuidado: aunque no se la pueda detectar, esta unidad todav&#237;a puede ser apresada mientras opera en territorio rival, con el riesgo de que revele su identidad y la consecuente tensi&#243;n que crear&#237;a en vuestras relaciones internacionales.</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
@@ -773,9 +773,9 @@
 		<Tag>TXT_KEY_FEAT_CORPORATION_ENABLED</Tag>
 		<English>Congratulations! You now possess the knowledge required to found [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. You may use a [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] to build the Headquarters in any city with access to [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</English>
 		<French>F&#233;licitations ! Vous poss&#233;dez maintenant le savoir n&#233;cessaire pour fonder la soci&#233;t&#233; commerciale [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Vous pouvez utiliser une unit&#233; de [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] pour construire son si&#232;ge social dans n'importe quelle ville ayant acc&#232;s &#224; la ressource [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</French>
-		<German>Glückwunsch! Sie verfügen jetzt über das Wissen, um die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] zu gründen. Sie können eine Einheit [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] einsetzen, um den Unternehmenssitz in einer Stadt zu errichten, die Zugang zum Bonusgut [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT] hat.</German>
-		<Italian>Congratulazioni! Ora sei in possesso della conoscenza richiesta per fondare [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Puoi usare un'unità [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] per costruire i quartieri generali in qualunque città con accesso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Italian>
-		<Spanish>¡Felicidades! Ya tenéis el conocimiento necesario para fundar la [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Podéis usar [NUM2:un:una:unos:unas] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] para construir la sede en cualquier ciudad con acceso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Spanish>
+		<German>Gl&#252;ckwunsch! Sie verf&#252;gen jetzt &#252;ber das Wissen, um die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] zu gr&#252;nden. Sie k&#246;nnen eine Einheit [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] einsetzen, um den Unternehmenssitz in einer Stadt zu errichten, die Zugang zum Bonusgut [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT] hat.</German>
+		<Italian>Congratulazioni! Ora sei in possesso della conoscenza richiesta per fondare [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Puoi usare un'unit&#224; [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] per costruire i quartieri generali in qualunque citt&#224; con accesso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Italian>
+		<Spanish>&#161;Felicidades! Ya ten&#233;is el conocimiento necesario para fundar la [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Pod&#233;is usar [NUM2:un:una:unos:unas] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] para construir la sede en cualquier ciudad con acceso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1073,7 +1073,7 @@
 		<German>Nicht-staatliche Religion entfernen</German>
 		<Italian>Rimuovi la religione non-ufficiale</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Remove religião estrangeira</Portuguese>
+		<Portuguese>Remove religi&#227;o estrangeira</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_SHOW_CORPORATION_SCREEN</Tag>

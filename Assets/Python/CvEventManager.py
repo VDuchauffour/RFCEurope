@@ -2265,7 +2265,7 @@ class CvEventManager:
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:
-                szName = unicode(szName, "latin-1")  # type: ignore
+                szName = unicode(szName)
                 popup.createEditBox(szName)
         # Absinthe: end
         popup.setEditBoxMaxCharCount(15)
@@ -2352,7 +2352,7 @@ class CvEventManager:
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:
-                szName = unicode(szName, "latin-1")  # type: ignore
+                szName = unicode(szName)
                 popup.createEditBox(szName)
         # Absinthe: end
         popup.setEditBoxMaxCharCount(15)

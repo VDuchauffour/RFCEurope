@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_WB_DESC</Tag>
 		<English>Large Map of Europe</English>
 		<French>Grande Carte d'Europe</French>
-		<German>Große Karte von Europa</German>
+		<German>Gro&#223;e Karte von Europa</German>
 		<Italian>Grande Mappa d'Europa</Italian>
 		<Spanish>El Mapa grande de Europa</Spanish>
 		<Portuguese>Mapa Largo da Europa</Portuguese>
@@ -20,7 +20,7 @@
 		<French>Terre Maure</French>
 		<German>Moor</German>
 		<Italian>Brughiera</Italian>
-		<Spanish>Páramo</Spanish>
+		<Spanish>P&#225;ramo</Spanish>
 		<Portuguese>Moor</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SALTLAKE</Tag>
 		<English>Salt Lake</English>
-		<French>Lac salé</French>
+		<French>Lac sal&#233;</French>
 		<German>Salzsee</German>
 		<Italian>Lago salato</Italian>
 		<Spanish>Lago salado</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHLAKE</Tag>
 		<English>Freshwater Lake</English>
-		<French>Lac salé</French>
+		<French>Lac sal&#233;</French>
 		<German>Salzsee</German>
 		<Italian>Lago salato</Italian>
 		<Spanish>Lago salado</Spanish>
@@ -57,7 +57,7 @@
 		<German>Feuchtgebiet</German>
 		<Italian>Zone Umide</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Zona Úmida</Portuguese>
+		<Portuguese>Zona &#218;mida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SNOW</Tag>
@@ -224,7 +224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
 		<English>Marsh</English>
-		<French>Marécage</French>
+		<French>Mar&#233;cage</French>
 		<German>Sumpf</German>
 		<Italian>Palude</Italian>
 		<Spanish>Ci&#233;naga</Spanish>
@@ -233,7 +233,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MARSH_PEDIA</Tag>
 		<English>[TAB]In low-lying terrain, where water is plentiful and the water table lies close to the surface, it is common for the land to be muddy and heavily overgrown with vegetation. This type of terrain can be known as a swamp, bog, fen, marsh, or wetlands.[PARAGRAPH:1]Human interaction with swamps is complex. Swampy ground is difficult and dangerous to move through, often riddled with quicksand and bodies of water that make land vehicles useless, movement on foot difficult, and even small boat traffic a challenge. It is usually unsafe to build on wet ground, as heavy buildings will simply sink into the mud, never to be seen again. Construction on such unstable terrain requires the use of piles sunk deep into the swamp, and even then is often uneconomical for use on a large scale. Wetlands also serve as breeding grounds for insects that can carry diseases such as malaria.[PARAGRAPH:1]For all these reasons, many civilizations have attempted to drain the wetlands around them of water, so that the land can be used for other purposes. This often causes environmental damage and can destroy the livelihood of the inhabitants.</English>
-		<French>Marécage</French>
+		<French>Mar&#233;cage</French>
 		<German>Sumpf</German>
 		<Italian>Palude</Italian>
 		<Spanish>Ci&#233;naga</Spanish>
@@ -354,7 +354,7 @@
 		<German>Imkerei</German>
 		<Italian>Apiario</Italian>
 		<Spanish>Colmenar</Spanish>
-		<Portuguese>Apiário</Portuguese>
+		<Portuguese>Api&#225;rio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
@@ -372,7 +372,7 @@
 		<German>Weingut</German>
 		<Italian>Azienda vinicola</Italian>
 		<Spanish>Bodega</Spanish>
-		<Portuguese>Vinícola</Portuguese>
+		<Portuguese>Vin&#237;cola</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
@@ -381,7 +381,7 @@
 		<German>[LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[\LINK] errichten</German>
 		<Italian>Traccia [LINK=IMPROVEMENT_COLONIAL_TRADE]una Rotta Commerciale Coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
-		<Portuguese>Estabeleça uma [LINK=IMPROVEMENT_COLONIAL_TRADE]Rota Comercial Colonial[\LINK]</Portuguese>
+		<Portuguese>Estabele&#231;a uma [LINK=IMPROVEMENT_COLONIAL_TRADE]Rota Comercial Colonial[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINERY</Tag>
@@ -390,7 +390,7 @@
 		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
 		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
-		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vinícola[\LINK]</Portuguese>
+		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vin&#237;cola[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
@@ -399,7 +399,7 @@
 		<German>[LINK=IMPROVEMENT_APIARY]Imkerei[\LINK] bauen</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_APIARY]Colmenar[\LINK]</Spanish>
-		<Portuguese>Construir um [LINK=IMPROVEMENT_APIARY]Apiário[\LINK]</Portuguese>
+		<Portuguese>Construir um [LINK=IMPROVEMENT_APIARY]Api&#225;rio[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Tag>
@@ -422,10 +422,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_MARSH</Tag>
 		<English>Clear [LINK=FEATURE_MARSH]Marsh[\LINK]</English>
-		<French>Eclaircir de la [LINK=FEATURE_MARSH]Marécage[\LINK]</French>
+		<French>Eclaircir de la [LINK=FEATURE_MARSH]Mar&#233;cage[\LINK]</French>
 		<German>[LINK=FEATURE_MARSH]Sumpf[\LINK] entfernen</German>
 		<Italian>Bonificare la [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
-		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
+		<Spanish>Vac&#237;e [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
 		<Portuguese>Drenar [LINK=FEATURE_MARSH]Marisma[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>

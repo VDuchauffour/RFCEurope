@@ -3,7 +3,7 @@
 from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
-from CoreFunctions import get_civ_by_id
+from CoreFunctions import get_civ_by_id, text
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
 import CvScreenEnums
 from ProvinceMapData import PROVINCES_MAP
@@ -158,7 +158,7 @@ class RFCEMapManager:
         else:
             iProvince = iProvinceIdOrPlot
         if iProvince != provinceMapDefault:
-            return unicode(text(("TXT_KEY_PROVINCE_NAME_%i" % iProvince)))  # type: ignore
+            return unicode(text(("TXT_KEY_PROVINCE_NAME_%i" % iProvince)))
         return ""
 
     def getProvinceId(self, pPlot):

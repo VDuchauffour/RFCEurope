@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -24,7 +24,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Cartografía</Text>
+			<Text>Cartograf&#237;a</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -43,7 +43,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Steigbügel</Text>
+			<Text>Steigb&#252;gel</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -87,7 +87,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Astrolábio</Text>
+			<Text>Astrol&#225;bio</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -130,7 +130,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Religiöse Kunst</Text>
+			<Text>Religi&#246;se Kunst</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -188,7 +188,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mönchtum</Text>
+			<Text>M&#246;nchtum</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -227,12 +227,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Conocimiento clásico</Text>
+			<Text>Conocimiento cl&#225;sico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Conhecimento Clássico</Text>
+			<Text>Conhecimento Cl&#225;ssico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -246,7 +246,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gewölbebau</Text>
+			<Text>Gew&#246;lbebau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -304,7 +304,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Belagerungsgeräte</Text>
+			<Text>Belagerungsger&#228;te</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -333,7 +333,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Hochöfen</Text>
+			<Text>Hoch&#246;fen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -372,12 +372,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Arquitectura Gótico</Text>
+			<Text>Arquitectura G&#243;tico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Arquitectura Gótica</Text>
+			<Text>Arquitectura G&#243;tica</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -406,7 +406,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Edificação de Monumento</Text>
+			<Text>Edifica&#231;&#227;o de Monumento</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -507,7 +507,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Kräuterheilkunde</Text>
+			<Text>Kr&#228;uterheilkunde</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -531,7 +531,7 @@
 		<Tag>TXT_KEY_TECH_STEAM_ENGINES</Tag>
 		<English>Steam Engines</English>
 		<French>
-			<Text>Machines à vapeur</Text>
+			<Text>Machines &#224; vapeur</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -546,12 +546,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Máquinas de Vapor</Text>
+			<Text>M&#225;quinas de Vapor</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Máquinas a Vapor</Text>
+			<Text>M&#225;quinas a Vapor</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Portuguese>
@@ -575,12 +575,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Construcción naval</Text>
+			<Text>Construcci&#243;n naval</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Construção Naval</Text>
+			<Text>Constru&#231;&#227;o Naval</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -623,7 +623,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Städtebau</Text>
+			<Text>St&#228;dtebau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -633,12 +633,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Obra pública</Text>
+			<Text>Obra p&#250;blica</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Obras Públicas</Text>
+			<Text>Obras P&#250;blicas</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Portuguese>
@@ -652,7 +652,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Militärtaktiken</Text>
+			<Text>Milit&#228;rtaktiken</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -662,12 +662,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Tácticas militares</Text>
+			<Text>T&#225;cticas militares</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Táticas Militares</Text>
+			<Text>T&#225;ticas Militares</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Portuguese>
@@ -691,7 +691,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Comerciar las Compañías</Text>
+			<Text>Comerciar las Compa&#241;&#237;as</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -720,12 +720,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Conocimiento Árabe</Text>
+			<Text>Conocimiento &#193;rabe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Conhecimento Árabe</Text>
+			<Text>Conhecimento &#193;rabe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -749,12 +749,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Medicina Árabe</Text>
+			<Text>Medicina &#193;rabe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Medicina Árabe</Text>
+			<Text>Medicina &#193;rabe</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -812,7 +812,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Máquinas Ferramentas</Text>
+			<Text>M&#225;quinas Ferramentas</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Portuguese>
@@ -836,7 +836,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Ingeniería civil</Text>
+			<Text>Ingenier&#237;a civil</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -952,12 +952,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Revolución Industrial</Text>
+			<Text>Revoluci&#243;n Industrial</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Revolução Industrial</Text>
+			<Text>Revolu&#231;&#227;o Industrial</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -981,7 +981,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Señorío</Text>
+			<Text>Se&#241;or&#237;o</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1068,12 +1068,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Ejército profesional</Text>
+			<Text>Ej&#233;rcito profesional</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Exército Profissional</Text>
+			<Text>Ex&#233;rcito Profissional</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>
@@ -1189,7 +1189,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Portuguese>
-			<Text>Fundição de Bronze</Text>
+			<Text>Fundi&#231;&#227;o de Bronze</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Portuguese>

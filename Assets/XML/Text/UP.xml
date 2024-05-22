@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -12,7 +12,7 @@
 		<German>Einzigartige Macht</German>
 		<Italian>Potere unico</Italian>
 		<Spanish>Poder &#239;&#191;&#189;nico:</Spanish>
-		<Portuguese>Poder Único</Portuguese>
+		<Portuguese>Poder &#218;nico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ</Tag>
@@ -28,9 +28,9 @@
 		<English>The Imperialism civic is unlocked by default. The core of the Empire cannot collapse and cities in your core territories won't revolt against your rule, while you hold your historic capital.</English>
 		<French>Le coeur de l'Empire ne peut pas s'effondrer &#224; cause de l'instabilit&#233;</French>
 		<German>Der Kern des Reiches kann nicht wegen Instabilit&#228;t kollabieren</German>
-		<Italian>Il fulcro dell'Impero non può collassare per instabilità</Italian>
+		<Italian>Il fulcro dell'Impero non pu&#242; collassare per instabilit&#224;</Italian>
 		<Spanish>The Imperialism civic is unlocked by default. The core of the Empire cannot collapse and cities in your core territories won't revolt against your rule, if you manage to hold on to your historic capital.</Spanish>
-		<Portuguese>O centro do Império não pode colapsar por instabilidade</Portuguese>
+		<Portuguese>O centro do Imp&#233;rio n&#227;o pode colapsar por instabilidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUL</Tag>
@@ -45,17 +45,17 @@
 		<Tag>TXT_KEY_UP_BUL2</Tag>
 		<English>No resistance in conquered cities.</English>
 		<French>Pas de r&#233;sistance dans les villes conquites</French>
-		<German>Keine Anarchy durch Widerstand in eroberten Städten</German>
-		<Italian>Nessuna resistenza nelle città conquistate</Italian>
+		<German>Keine Anarchy durch Widerstand in eroberten St&#228;dten</German>
+		<Italian>Nessuna resistenza nelle citt&#224; conquistate</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Sem resistência em cidades conquistadas</Portuguese>
+		<Portuguese>Sem resist&#234;ncia em cidades conquistadas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRA</Tag>
 		<English>The Power of Stability:</English>
 		<French>Le Pouvoir de la Stabilit&#233;:</French>
 		<German>Die Macht der Stabilit&#228;t:</German>
-		<Italian>Il Potere della Stabilità:</Italian>
+		<Italian>Il Potere della Stabilit&#224;:</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>O Poder da Estabilidade:</Portuguese>
 	</TEXT>
@@ -63,8 +63,8 @@
 		<Tag>TXT_KEY_UP_FRA2</Tag>
 		<English>Reduced penalty for expanding into foreign land.</English>
 		<French>P&#233;nalit&#233; r&#233;duite pour l'expension lointaine</French>
-		<German>Reduzierter Expansionsmalus für Städte in fremden Ländern</German>
-		<Italian>Penalità ridotta per l'espansione nelle terre straniere</Italian>
+		<German>Reduzierter Expansionsmalus f&#252;r St&#228;dte in fremden L&#228;ndern</German>
+		<Italian>Penalit&#224; ridotta per l'espansione nelle terre straniere</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Penalidade reduzida por expandir-se para terras estrangeiras</Portuguese>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in every city.</English>
 		<French>+2[ICON_CULTURE] et +1[ICON_HAPPY] dans chaque ville</French>
 		<German>+2[ICON_CULTURE] und +1[ICON_HAPPY] in jeder Stadt</German>
-		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] in ogni città</Italian>
+		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] in ogni citt&#224;</Italian>
 		<Spanish>+2[ICON_CULTURE] and +1[ICON_HAPPY] in every city</Spanish>
 		<Portuguese>+2[ICON_CULTURE] e +1[ICON_HAPPY] em todas as cidades</Portuguese>
 	</TEXT>
@@ -93,16 +93,16 @@
 		<German>Die Macht des Glaubens:</German>
 		<Italian>Il Potere della Fede:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Fé:</Portuguese>
+		<Portuguese>O Poder da F&#233;:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
 		<English>If your State Religion is a major religion, it spreads to each newly acquired city and a free Temple is built there.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
-		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegründeten, eroberten oder übergelaufenen Stadt</German>
-		<Italian>La Religione Ufficiale si diffonde in ogni città aquisita, ed un tempio viene costruito automaticamente</Italian>
+		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegr&#252;ndeten, eroberten oder &#252;bergelaufenen Stadt</German>
+		<Italian>La Religione Ufficiale si diffonde in ogni citt&#224; aquisita, ed un tempio viene costruito automaticamente</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>A Religião Estatal espalha-se para toda cidade adquirida (fundada, conquistada, reclamada) e um Templo é feito imediatamente</Portuguese>
+		<Portuguese>A Religi&#227;o Estatal espalha-se para toda cidade adquirida (fundada, conquistada, reclamada) e um Templo &#233; feito imediatamente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR</Tag>
@@ -117,10 +117,10 @@
 		<Tag>TXT_KEY_UP_COR2</Tag>
 		<English>All units start with the Medic I promotion, excess health in your cities contribute to their growth (with a 2:1 health to food ratio).</English>
 		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
-		<German>Alle Einheiten starten mit der Beförderung Sanit&#228;ter I</German>
-		<Italian>Tutte le unità iniziano con la promozione Medico I</Italian>
+		<German>Alle Einheiten starten mit der Bef&#246;rderung Sanit&#228;ter I</German>
+		<Italian>Tutte le unit&#224; iniziano con la promozione Medico I</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Todas as unidades começam com a promoção Médico I</Portuguese>
+		<Portuguese>Todas as unidades come&#231;am com a promo&#231;&#227;o M&#233;dico I</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN</Tag>
@@ -129,16 +129,16 @@
 		<German>Die Macht der Inquisition:</German>
 		<Italian>Il potere dell'Inquisizione:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Inquisição:</Portuguese>
+		<Portuguese>O Poder da Inquisi&#231;&#227;o:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN2</Tag>
 		<English>Less stability penalty from Religious Persecution and +2 [ICON_ESPIONAGE] per city.</English>
 		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville</French>
-		<German>Kein Stabilitätsmalus durch Inquisition und +2[ICON_ESPIONAGE] pro Stadt</German>
-		<Italian>Nessuna penalità in punti stabilità per le Persecuzioni Religiose e +2XP in ogni città</Italian>
+		<German>Kein Stabilit&#228;tsmalus durch Inquisition und +2[ICON_ESPIONAGE] pro Stadt</German>
+		<Italian>Nessuna penalit&#224; in punti stabilit&#224; per le Persecuzioni Religiose e +2XP in ogni citt&#224;</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Sem penalidade na estabilidade por Perseguições Religiosas e +2 Pontos de Espionagem por cidade</Portuguese>
+		<Portuguese>Sem penalidade na estabilidade por Persegui&#231;&#245;es Religiosas e +2 Pontos de Espionagem por cidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR</Tag>
@@ -147,14 +147,14 @@
 		<German>Die Macht der Seefahrt:</German>
 		<Italian>Il Potere del Mare:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Maré:</Portuguese>
+		<Portuguese>O Poder da Mar&#233;:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR2</Tag>
 		<English>All naval units can enter ocean tiles, trade is possible through oceans by default, less stability penalty for razing cities.</English>
 		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an</French>
 		<German>Alle Marineeinheiten k&#246;nnen den Ozean befahren</German>
-		<Italian>Tutte le unità navali possono passare sulle caselle oceaniche</Italian>
+		<Italian>Tutte le unit&#224; navali possono passare sulle caselle oceaniche</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Todas as unidades navais podem entrar nas casas de oceano</Portuguese>
 	</TEXT>
@@ -165,16 +165,16 @@
 		<German>Die Macht der H&#228;ndler:</German>
 		<Italian>Il Potere del Commercio:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder do Comércio:</Portuguese>
+		<Portuguese>O Poder do Com&#233;rcio:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_VEN2</Tag>
 		<English>The Merchant Republic civic is unlocked by default, Merchant Republic's too many cities stability penalty is decreased.</English>
 		<French>Commence avec la Republique Marchande</French>
 		<German>Beginnt mit Handelsrepublik</German>
-		<Italian>All'avvio è abilitata Repubblica Mercantile</Italian>
+		<Italian>All'avvio &#232; abilitata Repubblica Mercantile</Italian>
 		<Spanish>Starts with Merchant Republic, less stability penalty for having too many cities in a Merchant Republic.</Spanish>
-		<Portuguese>Começa como República Mercante</Portuguese>
+		<Portuguese>Come&#231;a como Rep&#250;blica Mercante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KIE</Tag>
@@ -190,7 +190,7 @@
 		<English>Your cities yield +2[ICON_FOOD].</English>
 		<French>+2 [ICON_FOOD] par ville</French>
 		<German>+2 [ICON_FOOD] in jeder Stadt</German>
-		<Italian>+2 [ICON_FOOD] Extra per città</Italian>
+		<Italian>+2 [ICON_FOOD] Extra per citt&#224;</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>+2 [ICON_FOOD] por cidade</Portuguese>
 	</TEXT>
@@ -201,16 +201,16 @@
 		<German>Die Macht der Heiden:</German>
 		<Italian>Il Potere dei Pagani:</Italian>
 		<Spanish>The Power of the Pagans:</Spanish>
-		<Portuguese>O Poder dos Pagãos</Portuguese>
+		<Portuguese>O Poder dos Pag&#227;os</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_LIT2</Tag>
 		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in your cities, if you do not have a state religion.</English>
 		<French>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion</French>
 		<German>+2[ICON_CULTURE] und +1[ICON_HAPPY] in jeder Stadt ohne Staatsreligion</German>
-		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] per ogni città senza Religione Ufficiale</Italian>
+		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] per ogni citt&#224; senza Religione Ufficiale</Italian>
 		<Spanish>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion</Spanish>
-		<Portuguese>+2[ICON_CULTURE] e +1[ICON_HAPPY] em cidades sem religião estatal</Portuguese>
+		<Portuguese>+2[ICON_CULTURE] e +1[ICON_HAPPY] em cidades sem religi&#227;o estatal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN</Tag>
@@ -219,14 +219,14 @@
 		<German>Die Macht der Toleranz:</German>
 		<Italian>Il Potere della Tolleranza:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Tolerância:</Portuguese>
+		<Portuguese>O Poder da Toler&#226;ncia:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN2</Tag>
 		<English>No unhappiness or instability from foreign culture, and +1[ICON_HAPPY] in all cities.</English>
 		<French>Pas de m&#233;contentement ou d'instabilit&#233; pour une cuture &#233;trang&#232;re. +1[ICON_HAPPY] dans les villes</French>
-		<German>Keine Unzufriedenheit oder Instabilität durch fremde Kultur und +1[ICON_HAPPY] in allen Städten</German>
-		<Italian>Nessuna infelicità o instabilità dalla cultura straniera, e +1[ICON_HAPPY] in ogni città</Italian>
+		<German>Keine Unzufriedenheit oder Instabilit&#228;t durch fremde Kultur und +1[ICON_HAPPY] in allen St&#228;dten</German>
+		<Italian>Nessuna infelicit&#224; o instabilit&#224; dalla cultura straniera, e +1[ICON_HAPPY] in ogni citt&#224;</Italian>
 		<Spanish>No unhappiness or instability from foreign culture, and +1[ICON_HAPPY] in all cities</Spanish>
 		<Portuguese>Sem infelicidade ou instabilidade por cultura estrangeira, e +1[ICON_HAPPY] em todas as cidades</Portuguese>
 	</TEXT>
@@ -237,23 +237,23 @@
 		<German>Die Macht der Industrie:</German>
 		<Italian>Il potere delle Industrie:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Indústria:</Portuguese>
+		<Portuguese>O Poder da Ind&#250;stria:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GER2</Tag>
 		<English>25% faster unit production after the discovery of Gunpowder.</English>
 		<French>Production d'unit&#233;s 25%% plus rapide apr&#232;s la d&#233;couverte de la Poudre &#224; Canon</French>
 		<German>Steigert die Produktion von Einheiten um 25% nach der Erfindung des Schie&#223;pulvers</German>
-		<Italian>L'addestramento di unità è il 25% più veloce dopo la scoperta della Polvere da Sparo</Italian>
+		<Italian>L'addestramento di unit&#224; &#232; il 25% pi&#249; veloce dopo la scoperta della Polvere da Sparo</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Produção militar incrementada em 25% depois da descoberta da Pólvora</Portuguese>
+		<Portuguese>Produ&#231;&#227;o militar incrementada em 25% depois da descoberta da P&#243;lvora</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POL</Tag>
 		<English>The Power of Golden Liberty:</English>
 		<French>Le Pouvoir de la Libert&#233;:</French>
 		<German>Die Macht der goldenen Freiheit:</German>
-		<Italian>Il potere della Libertà Dorata:</Italian>
+		<Italian>Il potere della Libert&#224; Dorata:</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>O Poder da Liberdade Dourada:</Portuguese>
 	</TEXT>
@@ -261,10 +261,10 @@
 		<Tag>TXT_KEY_UP_POL2</Tag>
 		<English>No unhappiness or instability from non-state religions. Religions spread more easily to your cities.</English>
 		<French>No unhappiness or instability from non-state religions</French>
-		<German>Keine Unzufriedenheit oder Instabilität durch nicht-Staatsreligionen</German>
-		<Italian>Nessuna infelicità o instabilità dalle religioni non-ufficiali</Italian>
+		<German>Keine Unzufriedenheit oder Instabilit&#228;t durch nicht-Staatsreligionen</German>
+		<Italian>Nessuna infelicit&#224; o instabilit&#224; dalle religioni non-ufficiali</Italian>
 		<Spanish>No unhappiness or instability from non-state religions</Spanish>
-		<Portuguese>Sem infelicidade ou instabilidade por religião estrangeira</Portuguese>
+		<Portuguese>Sem infelicidade ou instabilidade por religi&#227;o estrangeira</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS</Tag>
@@ -278,11 +278,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
 		<English>50% decrease in all city maintenance costs from both number of cities and city distance, and also in all civic costs associated with cities.</English>
-		<French>-50% de coût de maintenance pour le nombre de villes</French>
-		<German>50% reduzierte Unterhaltskosten für die Anzahl an Städten</German>
-		<Italian>-50% costo di mantenimento per il numero delle città</Italian>
+		<French>-50% de co&#251;t de maintenance pour le nombre de villes</French>
+		<German>50% reduzierte Unterhaltskosten f&#252;r die Anzahl an St&#228;dten</German>
+		<Italian>-50% costo di mantenimento per il numero delle citt&#224;</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Redução de 50% em todo custo de manutenção associado com o número de cidades</Portuguese>
+		<Portuguese>Redu&#231;&#227;o de 50% em todo custo de manuten&#231;&#227;o associado com o n&#250;mero de cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN</Tag>
@@ -296,11 +296,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN2</Tag>
 		<English>All mercenary costs are halved, companies are more likely to spread to your cities.</English>
-		<French>Coût des Mercenaires divis&#233; par 2</French>
-		<German>Halbierte Söldernkosten</German>
+		<French>Co&#251;t des Mercenaires divis&#233; par 2</French>
+		<German>Halbierte S&#246;ldernkosten</German>
 		<Italian>Dimezza il costo dei Mercenari</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Os custos de Mercenários são cortados pela metade</Portuguese>
+		<Portuguese>Os custos de Mercen&#225;rios s&#227;o cortados pela metade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG</Tag>
@@ -315,10 +315,10 @@
 		<Tag>TXT_KEY_UP_ENG2</Tag>
 		<English>Cottages, Hamlets, Villages and Towns produce +1[ICON_PRODUCTION], Workshops produce +1[ICON_COMMERCE].</English>
 		<French>Atelier ont +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</French>
-		<German>Werkstätten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
+		<German>Werkst&#228;tten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
 		<Italian>Le Botteghe danno +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Italian>
 		<Spanish>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Spanish>
-		<Portuguese>Oficinas dão +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Portuguese>
+		<Portuguese>Oficinas d&#227;o +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR</Tag>
@@ -332,11 +332,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR2</Tag>
 		<English>Colonial Projects are 30% cheaper to build, free Feitoria in your newly founded cities after the discovery of Astronomy.</English>
-		<French>Les projets coloniaux coûte 30%% moins cher &#224; produire</French>
-		<German>30% reduzierte Kosten für Kolonien</German>
-		<Italian>I Progetti Coloniali vengono costruiti il 30% più velocemente</Italian>
+		<French>Les projets coloniaux co&#251;te 30%% moins cher &#224; produire</French>
+		<German>30% reduzierte Kosten f&#252;r Kolonien</German>
+		<Italian>I Progetti Coloniali vengono costruiti il 30% pi&#249; velocemente</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Projetos Coloniais são 30% mais baratos</Portuguese>
+		<Portuguese>Projetos Coloniais s&#227;o 30% mais baratos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS</Tag>
@@ -345,7 +345,7 @@
 		<German>Die Macht der Allianz:</German>
 		<Italian>Il Potere delle Alleanze:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder das Alianças:</Portuguese>
+		<Portuguese>O Poder das Alian&#231;as:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS2</Tag>
@@ -354,7 +354,7 @@
 		<German>Andere Zivilisationen sind im allgmeinen wohlgesinnter</German>
 		<Italian>Le nazioni straniere sono generalmente amichevoli</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Nações estrangeiras são geralmente mais amigáveis</Portuguese>
+		<Portuguese>Na&#231;&#245;es estrangeiras s&#227;o geralmente mais amig&#225;veis</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR</Tag>
@@ -363,16 +363,16 @@
 		<German>Die Macht der Janitscharen:</German>
 		<Italian>Il Potere dei Giannizzeri:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder dos Janízaros:</Portuguese>
+		<Portuguese>O Poder dos Jan&#237;zaros:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
 		<English>Less stability penalty from non-state religions. Janissary Units are recruited for your service for free, their generation rate is based on the infidel populace in your cities. Newly conquered cities highly contribute to the generation of the next Janissary.</English>
 		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</French>
-		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren Städten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
-		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue città, che ti forniscono dei Giannizzeri ogni tanto</Italian>
+		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren St&#228;dten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
+		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue citt&#224;, che ti forniscono dei Giannizzeri ogni tanto</Italian>
 		<Spanish>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</Spanish>
-		<Portuguese>Todo turno você gera pontos de Janízaro por religião estrangeira nas suas cidades, isso lhe dá unidades de graça periodicamente</Portuguese>
+		<Portuguese>Todo turno voc&#234; gera pontos de Jan&#237;zaro por religi&#227;o estrangeira nas suas cidades, isso lhe d&#225; unidades de gra&#231;a periodicamente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE</Tag>
@@ -381,16 +381,16 @@
 		<German>Die Macht der milit&#228;rischen Formation:</German>
 		<Italian>Il Potere della Formazione Militare:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder da Formação Militar:</Portuguese>
+		<Portuguese>O Poder da Forma&#231;&#227;o Militar:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE2</Tag>
 		<English>All units start with the Formation promotion.</English>
 		<French>Toute les unit&#233;s commence avec la promotion Formation</French>
-		<German>Alle Einheiten starten mit der Beförderung Formation</German>
-		<Italian>Tutte le unità cominciano con la promozione Formazione</Italian>
+		<German>Alle Einheiten starten mit der Bef&#246;rderung Formation</German>
+		<Italian>Tutte le unit&#224; cominciano con la promozione Formazione</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Todas as unidades começam com a promoção Formação</Portuguese>
+		<Portuguese>Todas as unidades come&#231;am com a promo&#231;&#227;o Forma&#231;&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DUT</Tag>
@@ -399,14 +399,14 @@
 		<German>Die Macht der Wirtschaft:</German>
 		<Italian>Il Potere del Commercio:</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Poder do Comércio:</Portuguese>
+		<Portuguese>O Poder do Com&#233;rcio:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DUT2</Tag>
 		<English>+2 Trade Routes in your cities.</English>
 		<French>+2 Routes Commerciale par ville</French>
 		<German>+2 Handelsverbindungen in jeder Stadt</German>
-		<Italian>+2 Rotte Commerciali per città</Italian>
+		<Italian>+2 Rotte Commerciali per citt&#224;</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>+2 Rotas Comerciais em cada cidade</Portuguese>
 	</TEXT>
@@ -523,7 +523,7 @@
 		<English>The Power of Infallibility</English>
 		<French>The Power of Infallibility</French>
 		<German>Die Macht der Unfehlbarkeit</German>
-		<Italian>Il Potere dell'Infallibilità</Italian>
+		<Italian>Il Potere dell'Infallibilit&#224;</Italian>
 		<Spanish>The Power of Infallibility</Spanish>
 		<Portuguese>O Poder da Infalibilidade</Portuguese>
 	</TEXT>
@@ -543,16 +543,16 @@
 		<German>Die Einwohner von</German>
 		<Italian>I cittadini di</Italian>
 		<Spanish>Los ciudadanos de</Spanish>
-		<Portuguese>Cidadãos de</Portuguese>
+		<Portuguese>Cidad&#227;os de</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TERROR2</Tag>
 		<English>fear the same fate of their neighbour inhabitants and surrender!</English>
 		<French>craignent de subir le m&#239;&#191;&#189;me sort que leurs voisins et se rendent!</French>
-		<German>befürchten dass sie dasselbe Schicksal ereilt wie ihre Nachbarn und kapitulieren!</German>
+		<German>bef&#252;rchten dass sie dasselbe Schicksal ereilt wie ihre Nachbarn und kapitulieren!</German>
 		<Italian>temono di subire lo stesso fato dei vicini e si arrendono!</Italian>
 		<Spanish>temen sufrir el mismo destino que sus vecinos y se rinden.</Spanish>
-		<Portuguese>temem o mesmo destino dos habitantes da vizinhança e se rendem!</Portuguese>
+		<Portuguese>temem o mesmo destino dos habitantes da vizinhan&#231;a e se rendem!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SOUND_TOLL</Tag>

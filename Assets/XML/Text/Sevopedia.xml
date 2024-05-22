@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
 <!-- Game Text - Unit Upgrades for Civilopedia -->
@@ -23,7 +23,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SCREEN_CONTENTS</Tag>
 		<English>Contents</English>
-		<French>Matières</French>
+		<French>Mati&#232;res</French>
 		<German>Inhalt</German>
 		<Italian>Contenuto</Italian>
 		<Spanish>Contenido</Spanish>
@@ -31,7 +31,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
 		<English>Unit Upgrades</English>
-		<French>Améliorations des Unités</French>
+		<French>Am&#233;liorations des Unit&#233;s</French>
 		<German>Modernisierungen</German>
 		<Italian>Avanzamenti</Italian>
 		<Spanish>Unit Upgrades</Spanish>
@@ -40,7 +40,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
 		<English>Promotion Tree</English>
 		<French>Arborescence des Promotions</French>
-		<German>Beförderungsbaum</German>
+		<German>Bef&#246;rderungsbaum</German>
 		<Italian>Albero Promoz.</Italian>
 		<Spanish>Promotion Tree</Spanish>
 	</TEXT>
@@ -71,15 +71,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIQUE_BUILDINGS</Tag>
 		<English>Unique Buildings</English>
-		<French>Bâtiments Uniques</French>
-		<German>Einzigartige Gebäude</German>
+		<French>B&#226;timents Uniques</French>
+		<German>Einzigartige Geb&#228;ude</German>
 		<Italian>Edifici Unici</Italian>
 		<Spanish>Unique Buildings</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FAV_CIVIC_AND_RELIGION</Tag>
 		<English>Favorite Civic and Religion</English>
-		<French>Doctrine et Religion Préférée</French>
+		<French>Doctrine et Religion Pr&#233;f&#233;r&#233;e</French>
 		<German>Bevorzugte Staatsform und Religion</German>
 		<Italian>Forme di governo e Religioni preferite</Italian>
 		<Spanish>Principio y religi&#243;n favoritos</Spanish>
