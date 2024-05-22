@@ -61,7 +61,7 @@
 		<French>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</French>
 		<German>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</German>
 		<Italian>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -70,7 +70,7 @@
 		<French>The %s1 revolt was successful, the city of %s2 has declared it's independence!</French>
 		<German>The %s1 revolt was successful, the city of %s2 has declared it's independence!</German>
 		<Italian>The %s1 revolt was successful, the city of %s2 has declared it's independence!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The %s1 revolt was successful, the city of %s2 has declared it's independence!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>

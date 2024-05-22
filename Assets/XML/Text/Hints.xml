@@ -403,7 +403,7 @@
 		<French>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</French>
 		<German>In RFC Europe ist die Landkarte in historische Provinzen eingeteilt, die KI Kriege, die Stabilit&#228;t und historische Siegbedingungen festlegen. Um den Namen der Provinz zu sehen, bewegt Ihr den Mauszeiger &#252;ber ein Feld der Landkarte.</German>
 		<Italian>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -412,7 +412,7 @@
 		<French>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</French>
 		<German>Wenn Ihr bei gedr&#252;ckter [Strg]-Taste &#252;ber die Landkarte gleitet, k&#246;nnt Ihr die Provinzgrenzen hervorheben.</German>
 		<Italian>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -421,7 +421,7 @@
 		<French>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</French>
 		<German>Um eine Provinz f&#252;r eine historische Siegbedingung zu "kontrollieren" m&#252;sst Ihr sicherstellen, dass alle St&#228;dte in dieser Provinz unter Eurer Kontrolle stehen oder Ihr besitzt alle Felder dieser Provinz durch kulturelle Expansion.</German>
 		<Italian>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -430,7 +430,7 @@
 		<French>Press the "Ctrl" key and hover over a tile to see which Province it is in.</French>
 		<German>Dr&#252;ckt die [Strg]-Taste und bewegt den Mauszeiger &#252;ber die einzelnen Felder um zu sehen um welche Provinz es sich handelt.</German>
 		<Italian>Press the "Ctrl" key and hover over a tile to see which Province it is in.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Press the "Ctrl" key and hover over a tile to see which Province it is in.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -439,7 +439,7 @@
 		<French>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</French>
 		<German>Ihr k&#246;nnt den Forschritt der einzigartigen historischen Siegbedingungen (UHV) leicht im Siegbildschirm (F10) mitverfolgen.</German>
 		<Italian>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -448,7 +448,7 @@
 		<French>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</French>
 		<German>Lasst nicht zu dass andere Zivilisationen St&#228;dte in Eurem Kerngebiet besitzen. Es wird Eure Stabilit&#228;t ernsthaft besch&#228;digen!</German>
 		<Italian>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -457,7 +457,7 @@
 		<French>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</French>
 		<German>Achtet auf Kleinzivilisationen. Ihre nationale Identit&#228;t ist sehr hoch, sodass Ihr Revolten erwarten k&#246;nnt wenn Ihr sie erobert!</German>
 		<Italian>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -466,7 +466,7 @@
 		<French>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</French>
 		<German>Goldene Zeitalter haben in RFC Europe (verglichen mit RFC) einen zus&#228;tzlichen Vorteil: Ihr k&#246;nnt die Gesellschaftsformen ohne Anarchie wechseln.</German>
 		<Italian>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -475,7 +475,7 @@
 		<French>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</French>
 		<German>Achtet auf den Wechsel der Gesellschaftsformen. Die Richtigen zu kombinieren hat enorme Vorteile, aber wechselt nicht zu oft. Jede Runde in Anarchie kann bis zu 3 Stabilit&#228;tspunkte permanent abziehen.</German>
 		<Italian>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -484,7 +484,7 @@
 		<French>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</French>
 		<German>Ihr k&#246;nnt im Heidentum keine Staatsreligion proklamieren. Ihr m&#252;sst zuerst die Gesellschaftsfrom &#228;ndern und dann die Staatsreligion deklarieren.</German>
 		<Italian>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -493,7 +493,7 @@
 		<French>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</French>
 		<German>Ihr k&#246;nnt keine Religion aus einer Stadt verbannen sofern diese Religion an ein oder mehrere Wunder/Schreine gebunden ist. Falls Ihr also mit Spanien spielt und durch UHV gewinnen wollt, habt keine Hemmungen St&#228;dte mit solchen Geb&#228;uden niederzurei&#223;en.</German>
 		<Italian>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -502,7 +502,7 @@
 		<French>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</French>
 		<German>Beobachtet den Fortschritt der Kolonien auf dem neuen Kolonieinformationsbildschirm. Ihr k&#246;nnt sehr einfach ersehen, welche Kolonien bereits erstellt wurden und welche Teile der Welt immer noch auf Euch warten. Der Bildschirm befindet sich im 5. Tab im Informationsbildschirm (F11).</German>
 		<Italian>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -511,7 +511,7 @@
 		<French>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</French>
 		<German>In RFC Europe k&#246;nnnen manche S&#246;ldner nur dann angeworben werden, wenn Ihr eine Stadt innerhalb oder in der N&#228;he ihrer Heimatprovinz besitzt.</German>
 		<Italian>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -520,7 +520,7 @@
 		<French>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</French>
 		<German>Stabilit&#228;t kann Ihre Partie bei &#220;berexpansion ruinieren. Achtet darauf in all Euren St&#228;dten so viele stabilit&#228;tssteigernde Geb&#228;ude (Herrenhaus, Gericht, Burg und Nachtwache) wie nur m&#246;glich zu errichten.</German>
 		<Italian>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -529,7 +529,7 @@
 		<French>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</French>
 		<German>Ihr k&#246;nnt keine Technologien handeln, die Ihr nicht selbst erforscht habt. Auch d&#252;rft Ihr gerade erforschte Technologien in den n&#228;chsten 10 Runden nicht handeln.</German>
 		<Italian>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -538,7 +538,7 @@
 		<French>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</French>
 		<German>Seid nicht &#252;berrascht wenn die KI kleiner Zivilisationen Technologien erstaunlich hoch bewerten: Einer der Faktoren, die die Technologiekosten beeinflussen ist die gr&#246;&#223;e Eures Reiches.</German>
 		<Italian>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -547,7 +547,7 @@
 		<French>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</French>
 		<German>In RFC Europe k&#246;nnt Ihr neugeborenen Zivilisationen 5 Runden lang keinen Krieg erkl&#228;ren.</German>
 		<Italian>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -556,7 +556,7 @@
 		<French>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</French>
 		<German>Ihr werdet keinen hohen Diplomatiebonus mit einer anderen Zivilisation erhalten nur weil Ihr dieselbe Religion habt. Daf&#252;r m&#252;sst Ihr Glaubenspunkte sammeln.</German>
 		<Italian>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -565,7 +565,7 @@
 		<French>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</French>
 		<German>Das Panoramabild im &#214;ffnungsbildschirm von RFC Europe ist der "Teppich von Bayeux" - nur falls Ihr euch wundert.</German>
 		<Italian>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>

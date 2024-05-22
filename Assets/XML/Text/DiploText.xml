@@ -8,7 +8,7 @@
 		<French>Hello! I am [OUR_NAME], ruler of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</French>
 		<German>Seid gegr&#252;&#223;t! Ich bin [OUR_NAME], Herrscher von [OUR_CIV_SHORT]! Ich erwarte viele Jahre gute Beziehungen zwischen [OUR_EMPIRE] und [CT_EMPIRE]!</German>
 		<Italian>Hello! I am [OUR_NAME], ruler of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Hello! I am [OUR_NAME], ruler of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -17,7 +17,7 @@
 		<French>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! Are you looking for peace or demand war?</French>
 		<German>Willkommen in [OUR_CIV_SHORT], [CT_NAME]. Ich bin [OUR_NAME]! Haltet ihr nach Frieden ausschau oder verlangt ihr Krieg?</German>
 		<Italian>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! Are you looking for peace or demand war?</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! Are you looking for peace or demand war?</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -26,7 +26,7 @@
 		<French>Welcome to this beautiful land, [CT_NAME]. Take a look around and see the might of the [OUR_EMPIRE]!</French>
 		<German>Willkommen in diesem wundersch&#246;nen Land, [CT_NAME]. Schaut euch um und erkennt die Macht von [OUR_EMPIRE]!</German>
 		<Italian>Welcome to this beautiful land, [CT_NAME]. Take a look around and see the might of the [OUR_EMPIRE]!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Welcome to this beautiful land, [CT_NAME]. Take a look around and see the might of the [OUR_EMPIRE]!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -35,7 +35,7 @@
 		<French>Hello, I am [OUR_NAME], ruler of the [OUR_EMPIRE]! I hope you come in peace... it would be so unfortunate if we had to destroy you!</French>
 		<German>Seid gegr&#252;&#223;t, ich bin [OUR_NAME], Herrscher von [OUR_EMPIRE]! Ich hoffe ihr kommt in Frieden... es w&#228;re bedauernswert wenn wir euch zerst&#246;ren m&#252;ssten!</German>
 		<Italian>Hello, I am [OUR_NAME], ruler of the [OUR_EMPIRE]! I hope you come in peace... it would be so unfortunate if we had to destroy you!</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Hello, I am [OUR_NAME], ruler of the [OUR_EMPIRE]! I hope you come in peace... it would be so unfortunate if we had to destroy you!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -44,7 +44,7 @@
 		<French>I am honored to meet you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_ADJ] people. We can be friends or enemies.</French>
 		<German>Ich f&#252;hle mich geehrt euch zu begegnen, [CT_NAME]. Ich bin [OUR_NAME] vom [OUR_CIV_ADJ] Volk. Wir k&#246;nnen Freund oder Feind sein.</German>
 		<Italian>I am honored to meet you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_ADJ] people. We can be friends or enemies.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>I am honored to meet you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_ADJ] people. We can be friends or enemies.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Leader specific first contact DiploTexts -->
