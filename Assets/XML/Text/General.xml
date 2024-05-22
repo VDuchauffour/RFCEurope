@@ -1104,7 +1104,7 @@
 		<German>S&#246;ldner-Unterhaltskosten</German>
 		<Italian>Costo mantenimento Mercenari</Italian>
 		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Mercenary Maintenance</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_MERCENARY_MAINTENANCE</Tag>
@@ -1176,7 +1176,7 @@
 		<German>Wealth (33%)</German>
 		<Italian>Wealth (33%)</Italian>
 		<Spanish>Wealth (33%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Wealth (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_2</Tag>
@@ -1185,7 +1185,7 @@
 		<German>Wealth (50%)</German>
 		<Italian>Wealth (50%)</Italian>
 		<Spanish>Wealth (50%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Wealth (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_3</Tag>
@@ -1194,7 +1194,7 @@
 		<German>Wealth (67%)</German>
 		<Italian>Wealth (67%)</Italian>
 		<Spanish>Wealth (67%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Wealth (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_EXTRA</Tag>
@@ -1203,7 +1203,7 @@
 		<German>Wealth (San Giorgio)</German>
 		<Italian>Wealth (San Giorgio)</Italian>
 		<Spanish>Wealth (San Giorgio)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Wealth (San Giorgio)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_STRATEGY</Tag>
@@ -1221,7 +1221,7 @@
 		<German>Research (33%)</German>
 		<Italian>Research (33%)</Italian>
 		<Spanish>Research (33%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Research (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_2</Tag>
@@ -1230,7 +1230,7 @@
 		<German>Research (50%)</German>
 		<Italian>Research (50%)</Italian>
 		<Spanish>Research (50%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Research (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_3</Tag>
@@ -1239,7 +1239,7 @@
 		<German>Research (67%)</German>
 		<Italian>Research (67%)</Italian>
 		<Spanish>Research (67%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Research (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Tag>
@@ -1257,7 +1257,7 @@
 		<German>Culture (33%)</German>
 		<Italian>Culture (33%)</Italian>
 		<Spanish>Culture (33%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Culture (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_2</Tag>
@@ -1266,7 +1266,7 @@
 		<German>Culture (50%)</German>
 		<Italian>Culture (50%)</Italian>
 		<Spanish>Culture (50%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Culture (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_3</Tag>
@@ -1275,7 +1275,7 @@
 		<German>Culture (67%)</German>
 		<Italian>Culture (67%)</Italian>
 		<Spanish>Culture (67%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Culture (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_STRATEGY</Tag>
@@ -1293,7 +1293,7 @@
 		<German>Espionage (33%)</German>
 		<Italian>Espionage (33%)</Italian>
 		<Spanish>Espionage (33%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Espionage (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_2</Tag>
@@ -1302,7 +1302,7 @@
 		<German>Espionage (50%)</German>
 		<Italian>Espionage (50%)</Italian>
 		<Spanish>Espionage (50%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Espionage (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_3</Tag>
@@ -1311,7 +1311,7 @@
 		<German>Espionage (67%)</German>
 		<Italian>Espionage (67%)</Italian>
 		<Spanish>Espionage (67%)</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Espionage (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_STRATEGY</Tag>
