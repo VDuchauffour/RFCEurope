@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Wonders -->
+<!-- RFCE Wonders -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-		<!-- Religious Shrines -->
+	<!-- Religious Shrines -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>
 		<English>St. Peter's Basilica</English>
@@ -96,8 +92,7 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Religious Shrines -->
-		<!-- World Wonders -->
+	<!-- World Wonders -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KAZIMIERZ</Tag>
 		<English>Kazimierz</English>
@@ -1619,8 +1614,7 @@
 		<Spanish> Not translated. </Spanish>
 		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
-		<!-- World Wonders -->
-		<!-- National Wonders -->
+	<!-- National Wonders -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE</Tag>
 		<English>Summer Palace</English>
@@ -1783,8 +1777,7 @@
 		<Spanish>[TAB]Un Arco de Triunfo es una enorme arcada monumental que se suele construir para celebrar una victoria en la guerra. El arco siempre es una estructura solitaria, separada de las puertas o muros de la ciudad. En su forma m&#225;s sencilla consiste en dos pilares conectados por un arco que a su vez est&#225; coronado por una estructura superior en la cual se suele colocar una estatua o una inscripci&#243;n conmemorativa. Los Arcos de Triunfo m&#225;s elaborados pueden tener un par de arcos secundarios en los laterales. Los m&#225;s famosos son el Arco de Tito en Roma y el Arco del Triunfo de Paris.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- National Wonders -->
-		<!-- Misc -->
+	<!-- Misc -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
 		<English>[ICON_BULLET]No unhappiness in your population from fighting against brothers in faith, but small diplomatic penalty with nations who share your state religion</English>
@@ -1893,5 +1886,4 @@
 		<Spanish>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Portuguese>
 	</TEXT>
-		<!-- Misc -->
 </Civ4GameText>

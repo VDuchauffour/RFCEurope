@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Dynamic Civ Names -->
+<!-- RFCE Dynamic Civ Names -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<!-- Arabia -->
 	<TEXT>
@@ -230,7 +227,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Califado Fat&#237;mida</Portuguese>
 	</TEXT>
-	<!-- Arabia -->
 	<!-- Austria -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS00</Tag>
@@ -484,7 +480,6 @@
 		<Spanish>Zhupa of Austria</Spanish>
 		<Portuguese>Zhupa of Austria</Portuguese>
 	</TEXT>
-	<!-- Austria -->
 	<!-- Bulgaria -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL00</Tag>
@@ -729,7 +724,6 @@
 		<Spanish>Voivodeship of Bulgaria</Spanish>
 		<Portuguese>Voivodeship of Bulgaria</Portuguese>
 	</TEXT>
-	<!-- Bulgaria -->
 	<!-- Burgundy -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR00</Tag>
@@ -992,7 +986,6 @@
 		<Spanish>Zhupa of Burgundy</Spanish>
 		<Portuguese>Zhupa of Burgundy</Portuguese>
 	</TEXT>
-	<!-- Burgundy -->
 	<!-- Byzantium -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ00</Tag>
@@ -1309,7 +1302,6 @@
 		<Spanish>Zhupa of Greece</Spanish>
 		<Portuguese>Zhupa of Greece</Portuguese>
 	</TEXT>
-	<!-- Byzantium -->
 	<!-- Cordoba -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR00</Tag>
@@ -1554,7 +1546,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Prov&#237;ncia da Andaluzia</Portuguese>
 	</TEXT>
-	<!-- Cordoba -->
 	<!-- Tunesia -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN00</Tag>
@@ -1772,7 +1763,6 @@
 		<Spanish>Zhupa of Tunisia</Spanish>
 		<Portuguese>Zhupa of Tunisia</Portuguese>
 	</TEXT>
-	<!-- Tunesia -->
 	<!-- Dutch -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
@@ -2044,7 +2034,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Dutch -->
 	<!-- England -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG00</Tag>
@@ -2316,7 +2305,6 @@
 		<Spanish>Jarldom of J&#243;rv&#237;k</Spanish>
 		<Portuguese>Jarldom of J&#243;rv&#237;k</Portuguese>
 	</TEXT>
-	<!-- England -->
 	<!-- France -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
@@ -2606,7 +2594,6 @@
 		<Spanish>Zhupa of France</Spanish>
 		<Portuguese>Zhupa of France</Portuguese>
 	</TEXT>
-	<!-- France -->
 	<!-- Genoa -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN00</Tag>
@@ -2806,7 +2793,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Prov&#237;ncia da Liguria</Portuguese>
 	</TEXT>
-	<!-- Genoa -->
 	<!-- Germany -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER00</Tag>
@@ -3078,7 +3064,6 @@
 		<Spanish>Zhupa of Germany</Spanish>
 		<Portuguese>Zhupa of Germany</Portuguese>
 	</TEXT>
-	<!-- Germany -->
 	<!-- Hungary -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN00</Tag>
@@ -3305,7 +3290,6 @@
 		<Spanish>Zhupa of Hungary</Spanish>
 		<Portuguese>Zhupa of Hungary</Portuguese>
 	</TEXT>
-	<!-- Hungary -->
 	<!-- Kievan Rus -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE00</Tag>
@@ -3568,7 +3552,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Kievan Rus -->
 	<!-- Lithuania -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT00</Tag>
@@ -3768,7 +3751,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>Prov&#237;ncia da Litu&#226;nia</Portuguese>
 	</TEXT>
-	<!-- Lithuania -->
 	<!-- Muscovy -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS00</Tag>
@@ -4004,144 +3986,6 @@
 		<Spanish>Zhupa of Muscovy</Spanish>
 		<Portuguese>Zhupa of Muscovy</Portuguese>
 	</TEXT>
-	<!-- Muscovy -->
-	<!-- Norse -->
-	<!--<TEXT>
-		<Tag>TXT_KEY_DN_NORSE00</Tag>
-		<English>Scandinavian Peoples</English>
-		<French>Peuplade Scandinave</French>
-		<German>Skandinavische V&#246;lker</German>
-		<Italian>Popoli Scandinavi</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Povos Escandinavos</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE06</Tag>
-		<English>Viking Kingdoms</English>
-		<French>.</French>
-		<German>K&#246;nigreich der Wikinger</German>
-		<Italian>Regni Vichinghi</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Reinos Vikings</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE07</Tag>
-		<English>Viking Republic</English>
-		<French>.</French>
-		<German>Wikingerrepublik</German>
-		<Italian>Regni Vichinghi</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Rep&#250;blica Viking</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE08</Tag>
-		<English>Islamic Nordic Sultanates</English>
-		<French>Sultanat Nordique</French>
-		<German>Islamisch-Nordische Sultanate</German>
-		<Italian>Sultanati Islamici del Nord</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Sultanatos Isl&#226;micos N&#243;rdicos</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE09</Tag>
-		<English>Nordic Islamic Republic</English>
-		<French>R&#233;publique Islamique Nordique</French>
-		<German>Nordisch-Islamische Republik</German>
-		<Italian>Repubblica Islamica del Nord</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Rep&#250;blica Isl&#226;mica N&#243;rdica</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE10</Tag>
-		<English>Exarchate of Scandinavia</English>
-		<French>Exarchat de Scandinavie</French>
-		<German>Exarchat Skandinavia</German>
-		<Italian>Esarcato di Scandinavia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Exarcado da Escandinavia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE12</Tag>
-		<English>Scandinavian Emirate</English>
-		<French>Emirat Scandinave</French>
-		<German>Skandinavisches Emirat</German>
-		<Italian>Emirato della Scandinavia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Emirado Escandinavo</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE13</Tag>
-		<English>Spanish Kingdom of Scandinavia</English>
-		<French>Royaume Espagnol de Scandinavie</French>
-		<German>Spanisches K&#246;nigreich Skandinavien</German>
-		<Italian>Regno Spagnolo di Scandinavia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Reino Espanhol da Escandinavia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE15</Tag>
-		<English>Venetian Scandinavia</English>
-		<French>Scandinavie V&#233;nitienne</French>
-		<German>Venezianisch-Skandinavien</German>
-		<Italian>Scandinavia Veneziana</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Escandinavia Veneziana</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE16</Tag>
-		<English>Russian Scandinavia</English>
-		<French>Scandinavie Russe</French>
-		<German>Russisch-Skandinavien</German>
-		<Italian>Scandinavia Russa</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Escandinavia Russa</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE17</Tag>
-		<English>German Scandinavia</English>
-		<French>Scandinavie Allemande</French>
-		<German>Deutsch-Skandinavien</German>
-		<Italian>Scandinavia Tedesca</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Escandinavia Alem&#227;</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE18</Tag>
-		<English>Counties of Scandinavia</English>
-		<French>Comt&#233;es de Scandinavie</French>
-		<German>Grafschaften Skandinaviens</German>
-		<Italian>Contee di Scandinavia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Condados da Escandinavia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE19</Tag>
-		<English>Habsburg Scandinavia</English>
-		<French>Scandinavie Habsbourg</French>
-		<German>Habsburger Skandinavien</German>
-		<Italian>Scandinavia Asburgica</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Escandinavia Habsburga</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE20</Tag>
-		<English>Principality of Iskandinavya</English>
-		<French>Principaut&#233; de Iskandinavya</French>
-		<German>F&#252;rstentum Iskandinavya</German>
-		<Italian>Principato di Iskandinavya</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Principado da Iskandinavya</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_NORSE21</Tag>
-		<English>Province of Scandinavia</English>
-		<French>Province de Scandinavie</French>
-		<German>Provinz Skandinavien</German>
-		<Italian>Provincia di Scandinavia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Prov&#237;ncia da Escandinavia</Portuguese>
-	</TEXT>-->
-	<!-- Norse -->
 	<!-- Poland -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL00</Tag>
@@ -4341,7 +4185,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Prov&#237;ncia da Pol&#244;nia</Portuguese>
 	</TEXT>
-	<!-- Poland -->
 	<!-- Portugal -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR00</Tag>
@@ -4586,7 +4429,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Zhupa de Portugal</Portuguese>
 	</TEXT>
-	<!-- Portugal -->
 	<!-- Spain -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN00</Tag>
@@ -4858,7 +4700,6 @@
 		<Spanish>Zhupa of Castile</Spanish>
 		<Portuguese>Zhupa of Castile</Portuguese>
 	</TEXT>
-	<!-- Spain -->
 	<!-- Sweden -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE00</Tag>
@@ -5139,7 +4980,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Sweden -->
 	<!-- Turkey -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR00</Tag>
@@ -5339,7 +5179,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Prov&#237;ncia da Turquia</Portuguese>
 	</TEXT>
-	<!-- Turkey -->
 	<!-- Venezia -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN00</Tag>
@@ -5539,7 +5378,6 @@
 		<Spanish></Spanish>
 		<Portuguese>Prov&#237;ncia de Veneto</Portuguese>
 	</TEXT>
-	<!-- Venezia -->
 	<!-- Norway -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR00</Tag>
@@ -5802,7 +5640,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Norway -->
 	<!-- Denmark -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN00</Tag>
@@ -6092,7 +5929,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Denmark -->
 	<!-- Prussia -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU00</Tag>
@@ -6409,7 +6245,6 @@
 		<Spanish>Zhupa of Prussia</Spanish>
 		<Portuguese>Zhupa of Prussia</Portuguese>
 	</TEXT>
-	<!-- Prussia -->
 	<!-- Aragon -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG00</Tag>
@@ -6654,7 +6489,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Aragon -->
 	<!-- Sicily -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SIC00</Tag>
@@ -6872,7 +6706,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Sicily -->
 	<!-- Morocco -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR00</Tag>
@@ -7117,7 +6950,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Morocco -->
 	<!-- Novgorod -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOV00</Tag>
@@ -7398,7 +7230,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Novgorod -->
 	<!-- Scotland -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SCO00</Tag>
@@ -7634,7 +7465,6 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
-	<!-- Scotland -->
 	<!-- Pope -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP00</Tag>
@@ -7645,5 +7475,4 @@
 		<Spanish></Spanish>
 		<Portuguese>Estados Pontif&#237;cios</Portuguese>
 	</TEXT>
-	<!-- Pope -->
 </Civ4GameText>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Units -->
+<!-- RFCE Units -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CATHOLIC_MISSIONARY</Tag>
@@ -710,7 +706,7 @@
 		<Spanish>[TAB]Mientras que los misioneros suelen concentrarse en cantar las glorias de sus respectivos dioses para difundir su fe, los inquisidores se dedican a poner de manifiesto las falacias de todas las dem&#225;s religiones. Ferviente convencido de que todas las dem&#225;s religiones se equivocan, El inquisidor vive para socavar las creencias de los dem&#225;s. Puedes gastar un inquisidor dentro de una ciudad para eliminar todas las religiones salvo la tuya.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Unique Units -->
+	<!-- Unique Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_GHAZI</Tag>
 		<English>Ghazi</English>
@@ -1233,8 +1229,7 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Unique Units -->
-		<!-- Company Units -->
+	<!-- Company Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
 		<English>Knight of St. John's</English>
@@ -1292,7 +1287,6 @@
 		<Spanish>Calatrava Knight</Spanish>
 		<Portuguese>Calatrava Knight</Portuguese>
 	</TEXT>
-	<!-- Company Units -->
 	<!-- Barbarian Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
@@ -1428,7 +1422,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-	<!-- Barbarian Units -->
 	<TEXT>
 		<Tag>TXT_KEY_BARBONLY_HELP</Tag>
 		<English>Barbarian only</English>

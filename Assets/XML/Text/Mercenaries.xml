@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Mercenaries -->
+<!-- RFCE Mercenaries -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_SCREEN_TITLE</Tag>
@@ -561,9 +557,7 @@
 		<Spanish>Generic</Spanish>
 		<Portuguese>Generic</Portuguese>
 	</TEXT>
-
 	<!-- Conditional Mercs -->
-
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_HELP</Tag>
 		<English>Only Available as a Mercenary</English>

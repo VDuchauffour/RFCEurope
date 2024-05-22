@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Civics -->
+<!-- RFCE Civics -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
@@ -204,7 +200,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre, Economia de Mercado, Menos de 5 cidades[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Lei Feudal, Mais de 5 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
-	<!-- Civic Category Government -->
 	<!-- Civic Category Legal -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_LEGAL</Tag>
@@ -386,7 +381,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Constiucional, Rep&#250;blica Mercante, Labor Livre[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Teocracia[COLOR_REVERT]</Portuguese>
 	</TEXT>
-	<!-- Civic Category Legal -->
 	<!-- Civic Category Labor -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_LABOR</Tag>
@@ -568,7 +562,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Constitucional, Rep&#250;blica Mercante, Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
-	<!-- Civic Category Labor -->
 	<!-- Civic Category Economy -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_ECONOMY</Tag>
@@ -759,7 +752,6 @@
 		<Spanish>[ICON_BULLET]Companies have less chance to spread</Spanish>
 		<Portuguese>[ICON_BULLET]Companies have less chance to spread</Portuguese>
 	</TEXT>
-	<!-- Civic Category Economy -->
 	<!-- Civic Category Religion -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_RELIGION</Tag>
@@ -950,7 +942,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>[ICON_BULLET]Inst&#225;vel com [COLOR_RED]Monarquia Divina, Legisla&#231;&#227;o Religiosa[COLOR_REVERT]</Portuguese>
 	</TEXT>
-	<!-- Civic Category Religion -->
 	<!-- Civic Category Expansion -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
@@ -1132,7 +1123,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>[ICON_BULLET]+1 estabilidade por cada col&#244;nia fundada</Portuguese>
 	</TEXT>
-	<!-- Civic Category Expansion -->
 	<!-- Used in the dll -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS</Tag>
@@ -1224,61 +1214,4 @@
 		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Portuguese>
 	</TEXT>
-	<!-- Used in the dll -->
-	<!-- Currently unused in RFCE
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS_VANILLA</Tag>
-		<English>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</English>
-		<French>[ICON_BULLET]+3 points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
-		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
-		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
-		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Portuguese>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSALAGE_VANILLA_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each civilization starting point controlled</English>
-		<French>Ajoute un bonus de points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
-		<German>Stabilit&#228;tspunktbonus f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
-		<Italian>Aggiunge un punto stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
-		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RESETTLEMENT_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each city founded at least 15 tiles from the capital</English>
-		<French>Ajoute un bonus de points de stabilit&#233; par ville fond&#233;e &#224; 15 cases ou plus de la capitale</French>
-		<German>Stabilit&#228;tspunktbonus f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
-		<Italian>Aggiunge un bonus di punti stabilit&#224; per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
-		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMONWEALTH_STRATEGY</Tag>
-		<English>No negative Stability Points for low amount of traded resources; no negative Stability Points for poor economy</English>
-		<French>Pas de points de stabilit&#233; n&#233;gatifs pour un faible niveau de ressources &#233;chang&#233;es ; pas de points de stabilit&#233; n&#233;gatifs pour une &#233;conomie pauvre</French>
-		<German>Keine Stabilit&#228;tspunktabz&#252;ge durch geringf&#252;gig gehandelte Ressourcen; keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
-		<Italian>Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse; nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
-		<Spanish>No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados; no hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
-		<English>Republic</English>
-		<French>R&#233;publique</French>
-		<German>Republik</German>
-		<Italian>Repubblica</Italian>
-		<Spanish>Rep&#250;blica</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Tag>
-		<English>[TAB]In a republic, the head of state is not a monarch and there are no legal privileges for the nobility. The exact form of government can vary widely, from absolute despotism to direct democracy, but the most important difference between a republic and any form of monarchy is the much-diminished role of family and lineage in government.[PARAGRAPH:2]Before the French Revolution, a republic in Europe was an aberration. The state enjoyed none of the external security provided by royal family ties. Internally, the succession was decided to some extent by merit, even if this often meant merely that the man with the best ability to take power would do so.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	-->
 </Civ4GameText>

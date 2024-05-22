@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - RFCE Diplomacy Texts -->
+<!-- RFCE Diplomacy Texts -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-
 		<!-- Generic first contact DiploTexts -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_1</Tag>
@@ -52,7 +47,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Generic first contact DiploTexts -->
 		<!-- Leader specific first contact DiploTexts -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAQUB_AL_MANSUR_1</Tag>
@@ -162,7 +156,6 @@
 		<Spanish>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Spanish>
 		<Portuguese>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Portuguese>
 	</TEXT>
-		<!-- Leader specific first contact DiploTexts -->
 		<!-- New DiploText by AbsintheRed -->
 		<!-- Spanish 2nd leader - Philip II -->
 	<TEXT>
@@ -266,7 +259,6 @@
 		<Spanish>[CT_NAME], it has been brought to my attention that you have something the [OUR_EMPIRE] needs. I am sure you are willing to help us here, or else I will send my armada - and mark my words, it will not fail this time!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Spanish 2nd leader - Philip II -->
 		<!-- French 2nd leader - Joan of Arc -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOAN_1</Tag>
@@ -349,7 +341,6 @@
 		<Spanish>Tuve una visin del [CT_EMPIRE] prendindose en llamas. Os importara asegurarme de que slo era una locura ma?</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- French 2nd leader - Joan of Arc -->
 		<!-- Polish 1st leader - Casimir III -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
@@ -432,7 +423,6 @@
 		<Spanish>Give us this or prepare for war with the [OUR_EMPIRE]!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Polish 1st leader - Casimir III -->
 		<!-- Polish 2nd leader - Jan III Sobieski -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
@@ -515,7 +505,6 @@
 		<Spanish>Do you really want me to start another crusade? My beloved Marysienka won't be happy.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Polish 2nd leader - Jan III Sobieski -->
 		<!-- Kievan 1st leader - Yaroslav the Wise -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAROSLAV_1</Tag>
@@ -598,7 +587,6 @@
 		<Spanish>I suggest you give us this if you don't want to spend the rest of your life imprisoned like my brother...</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Kievan 1st leader - Yaroslav the Wise -->
 		<!-- Moscow 1st leader - Ivan IV -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_1</Tag>
@@ -744,7 +732,6 @@
 		<Spanish>Pagad vuestras deudas, perro!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Moscow 1st leader - Ivan IV -->
 		<!-- Swedish 2nd leader - Gustav II Adolf -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAV_ADOLF_1</Tag>
@@ -827,7 +814,6 @@
 		<Spanish>[OUR_NAME] demands this! Do not test his patience!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Swedish 2nd leader - Gustav II Adolf -->
 		<!-- Hungarian 1st leader - Istv&#225;n I -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>
@@ -955,7 +941,6 @@
 		<Spanish>Begad, give us what we want or you will know the wrath of God!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Hungarian 1st leader - Istv&#225;n I -->
 		<!-- Hungarian 3rd leader - M&#225;ty&#225;s -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
@@ -1119,7 +1104,6 @@
 		<Spanish>If you won't give me this I'll use my army to get it, so what do you prefer?</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Hungarian 3rd leader - M&#225;ty&#225;s -->
 		<!-- German 1st leader - Barbarossa -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>
@@ -1202,7 +1186,6 @@
 		<Spanish>The [OUR_EMPIRE] demands the following! I suggest you give it to us unless you like eating donkey droppings!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- German 1st leader - Barbarossa -->
 		<!-- Arabia 1st leader - Abu Bakr -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABU_BAKR_1</Tag>
@@ -1312,7 +1295,6 @@
 		<Spanish>Mighty [OUR_CIV_SHORT] will crush your kingdom of evil if you don't obey her commands!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Arabia 1st leader - Abu Bakr -->
 		<!-- Portuguese 1st leader - Afonso Henriques -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AFONSO_1</Tag>
@@ -1467,7 +1449,6 @@
 		<Spanish>Recognizing me as king of the [OUR_EMPIRE] is not enough! I demand the following in tribute!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Portuguese 1st leader - Afonso Henriques -->
 		<!-- Norse 1st leader - Harald Hardrada -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_1</Tag>
@@ -1568,6 +1549,4 @@
 		<Spanish>Give me this or we will go berserk on your country, [CT_NAME]!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Norse 1st leader - Harald Hardrada -->
-		<!-- New DiploText by AbsintheRed -->
 </Civ4GameText>
