@@ -1550,7 +1550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN00</Tag>
 		<English>Tunisian Peoples</English>
-		<French>Tunisian Peoples</French>
+		<French>Peuplade Tunisienne</French>
 		<German>Tunisian Peoples</German>
 		<Italian>Tunisian Peoples</Italian>
 		<Spanish>Tunisian Peoples</Spanish>
@@ -1767,7 +1767,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
 		<English>Dutch Peoples</English>
-		<French>Dutch Peoples</French>
+		<French>Peuplade Hollandaise</French>
 		<German>Dutch Peoples</German>
 		<Italian>Dutch Peoples</Italian>
 		<Spanish>Dutch Peoples</Spanish>
@@ -2309,7 +2309,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
 		<English>Frankish Peoples</English>
-		<French>Peuplade Franques</French>
+		<French>Peuplade Francs</French>
 		<German>Fr&#228;nkische V&#246;lker</German>
 		<Italian>Popoli Franchi</Italian>
 		<Spanish>Pueblos Francos</Spanish>
@@ -3556,7 +3556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT00</Tag>
 		<English>Lithuanian People</English>
-		<French>Lithuanian People</French>
+		<French>Peuplade Lituanes</French>
 		<German>Lithauische V&#246;lker</German>
 		<Italian>Popoli Lituani</Italian>
 		<Spanish>Lithuanian People</Spanish>
@@ -5382,7 +5382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR00</Tag>
 		<English>Norwegian Peoples</English>
-		<French>Norwegian Peoples</French>
+		<French>Peuplade Norv&#232;giennes</French>
 		<German>Norwegian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -5644,7 +5644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN00</Tag>
 		<English>Danish Peoples</English>
-		<French>Danish Peoples</French>
+		<French>Peuplade Danoises</French>
 		<German>Danish Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6249,7 +6249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG00</Tag>
 		<English>Aragonese Peoples</English>
-		<French>Aragonese Peoples</French>
+		<French>Peuplade Aragon&#232;ses</French>
 		<German>Aragonese Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6493,7 +6493,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_SIC00</Tag>
 		<English>Sicilian Peoples</English>
-		<French>Sicilian Peoples</French>
+		<French>Peuplade Sicili&#232;nnes</French>
 		<German>Sicilian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6710,7 +6710,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR00</Tag>
 		<English>Maghrebi Peoples</English>
-		<French>Maghrebi Peoples</French>
+		<French>Peuplade Maghrebines</French>
 		<German>Maghrebi Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6954,7 +6954,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOV00</Tag>
 		<English>Novgorodian Peoples</English>
-		<French>Novgorodian Peoples</French>
+		<French>Peuplade Novorodiennes</French>
 		<German>Novgorodian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -7233,8 +7233,8 @@
 	<!-- Scotland -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SCO00</Tag>
-		<English>Scottish Peoples</English>
-		<French>Scottish Peoples</French>
+		<English>Picts Peoples</English>
+		<French>Peuplade Pictes</French>
 		<German>Scottish Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
