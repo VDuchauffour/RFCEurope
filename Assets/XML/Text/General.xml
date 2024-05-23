@@ -1067,7 +1067,7 @@
 		<French>Supprime religion non-officiel</French>
 		<German>Nicht-staatliche Religion entfernen</German>
 		<Italian>Rimuovi la religione non-ufficiale</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Remove non-state religion</Spanish>
 		<Portuguese>Remove religi&#227;o estrangeira</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1104,7 +1104,7 @@
 		<German>S&#246;ldner-Unterhaltskosten</German>
 		<Italian>Costo mantenimento Mercenari</Italian>
 		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Mercenary Maintenance</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_MERCENARY_MAINTENANCE</Tag>
@@ -1172,38 +1172,38 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH</Tag>
 		<English>Wealth (33%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Wealth (33%)</French>
+		<German>Wealth (33%)</German>
+		<Italian>Wealth (33%)</Italian>
+		<Spanish>Wealth (33%)</Spanish>
+		<Portuguese>Wealth (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_2</Tag>
 		<English>Wealth (50%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Wealth (50%)</French>
+		<German>Wealth (50%)</German>
+		<Italian>Wealth (50%)</Italian>
+		<Spanish>Wealth (50%)</Spanish>
+		<Portuguese>Wealth (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_3</Tag>
 		<English>Wealth (67%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Wealth (67%)</French>
+		<German>Wealth (67%)</German>
+		<Italian>Wealth (67%)</Italian>
+		<Spanish>Wealth (67%)</Spanish>
+		<Portuguese>Wealth (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_EXTRA</Tag>
 		<English>Wealth (San Giorgio)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Wealth (San Giorgio)</French>
+		<German>Wealth (San Giorgio)</German>
+		<Italian>Wealth (San Giorgio)</Italian>
+		<Spanish>Wealth (San Giorgio)</Spanish>
+		<Portuguese>Wealth (San Giorgio)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH_STRATEGY</Tag>
@@ -1217,29 +1217,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH</Tag>
 		<English>Research (33%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Research (33%)</French>
+		<German>Research (33%)</German>
+		<Italian>Research (33%)</Italian>
+		<Spanish>Research (33%)</Spanish>
+		<Portuguese>Research (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_2</Tag>
 		<English>Research (50%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Research (50%)</French>
+		<German>Research (50%)</German>
+		<Italian>Research (50%)</Italian>
+		<Spanish>Research (50%)</Spanish>
+		<Portuguese>Research (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_3</Tag>
 		<English>Research (67%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Research (67%)</French>
+		<German>Research (67%)</German>
+		<Italian>Research (67%)</Italian>
+		<Spanish>Research (67%)</Spanish>
+		<Portuguese>Research (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Tag>
@@ -1253,29 +1253,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE</Tag>
 		<English>Culture (33%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Culture (33%)</French>
+		<German>Culture (33%)</German>
+		<Italian>Culture (33%)</Italian>
+		<Spanish>Culture (33%)</Spanish>
+		<Portuguese>Culture (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_2</Tag>
 		<English>Culture (50%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Culture (50%)</French>
+		<German>Culture (50%)</German>
+		<Italian>Culture (50%)</Italian>
+		<Spanish>Culture (50%)</Spanish>
+		<Portuguese>Culture (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_3</Tag>
 		<English>Culture (67%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Culture (67%)</French>
+		<German>Culture (67%)</German>
+		<Italian>Culture (67%)</Italian>
+		<Spanish>Culture (67%)</Spanish>
+		<Portuguese>Culture (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CULTURE_STRATEGY</Tag>
@@ -1289,29 +1289,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE</Tag>
 		<English>Espionage (33%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Espionage (33%)</French>
+		<German>Espionage (33%)</German>
+		<Italian>Espionage (33%)</Italian>
+		<Spanish>Espionage (33%)</Spanish>
+		<Portuguese>Espionage (33%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_2</Tag>
 		<English>Espionage (50%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Espionage (50%)</French>
+		<German>Espionage (50%)</German>
+		<Italian>Espionage (50%)</Italian>
+		<Spanish>Espionage (50%)</Spanish>
+		<Portuguese>Espionage (50%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_3</Tag>
 		<English>Espionage (67%)</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>Espionage (67%)</French>
+		<German>Espionage (67%)</German>
+		<Italian>Espionage (67%)</Italian>
+		<Spanish>Espionage (67%)</Spanish>
+		<Portuguese>Espionage (67%)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_STRATEGY</Tag>

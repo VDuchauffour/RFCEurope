@@ -1550,7 +1550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN00</Tag>
 		<English>Tunisian Peoples</English>
-		<French>Tunisian Peoples</French>
+		<French>Peuplade Tunisienne</French>
 		<German>Tunisian Peoples</German>
 		<Italian>Tunisian Peoples</Italian>
 		<Spanish>Tunisian Peoples</Spanish>
@@ -1559,28 +1559,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN01</Tag>
 		<English>Duchy of Tunisia</English>
-		<French>.</French>
+		<French>Duchy of Tunisia</French>
 		<German>Herzogtum Tunesien</German>
 		<Italian>Ducato di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Duchy of Tunisia</Spanish>
 		<Portuguese>Ducado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN02</Tag>
 		<English>Hafsid Caliphate</English>
-		<French>.</French>
+		<French>Hafsid Caliphate</French>
 		<German>Hafsidenkalifat</German>
 		<Italian>Califfato degli Hafsidi</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Hafsid Caliphate</Spanish>
 		<Portuguese>Califado H&#225;fsida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN03</Tag>
 		<English>Kingdom of Africa</English>
-		<French>.</French>
+		<French>Kingdom of Africa</French>
 		<German>K&#246;nigreich der Hafsiden</German>
 		<Italian>Regno degli Hafsidi</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Kingdom of Africa</Spanish>
 		<Portuguese>Reino H&#225;fsida</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1631,82 +1631,82 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN10</Tag>
 		<English>Exarchate of Africa</English>
-		<French>.</French>
+		<French>Exarchate of Africa</French>
 		<German>Exarchat Tunisia</German>
 		<Italian>Esarcato di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Exarchate of Africa</Spanish>
 		<Portuguese>Exarcado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN11</Tag>
 		<English>Duchy of Tunisia</English>
-		<French>.</French>
+		<French>Duchy of Tunisia</French>
 		<German>Herzogtum Tunesien</German>
 		<Italian>Ducato di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Duchy of Tunisia</Spanish>
 		<Portuguese>Ducado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN12</Tag>
 		<English>Emirate of Ifriqiya</English>
-		<French>.</French>
+		<French>Emirate of Ifriqiya</French>
 		<German>Emirat Tunesien</German>
 		<Italian>Emirato di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Emirate of Ifriqiya</Spanish>
 		<Portuguese>Emirado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN13</Tag>
 		<English>Kingdom of Oran</English>
-		<French>.</French>
+		<French>Kingdom of Oran</French>
 		<German>Spanisches K&#246;nigreich Tunesien</German>
 		<Italian>Regno Spagnolo di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Kingdom of Oran</Spanish>
 		<Portuguese>Reino Espanhol da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN14</Tag>
 		<English>Jarldom of Tunisia</English>
-		<French>.</French>
+		<French>Jarldom of Tunisia</French>
 		<German>Nordisch-Tunesien</German>
 		<Italian>Tunisia Vichinga</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Jarldom of Tunisia</Spanish>
 		<Portuguese>Tun&#237;sia N&#243;rdica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN15</Tag>
 		<English>Colony of Tunisia</English>
-		<French>.</French>
+		<French>Colony of Tunisia</French>
 		<German>Venezianisch-Tunesien</German>
 		<Italian>Tunisia Veneziana</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Colony of Tunisia</Spanish>
 		<Portuguese>Tun&#237;sia Veneziana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN16</Tag>
 		<English>Guberniya of Tunisia</English>
-		<French>.</French>
+		<French>Guberniya of Tunisia</French>
 		<German>Russisch-Tunesien</German>
 		<Italian>Tunisia Russa</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Guberniya of Tunisia</Spanish>
 		<Portuguese>Tun&#237;sia Russa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN17</Tag>
 		<English>March of Tunisia</English>
-		<French>.</French>
+		<French>March of Tunisia</French>
 		<German>Deutsch-Tunesien</German>
 		<Italian>Tunisia Tedesca</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>March of Tunisia</Spanish>
 		<Portuguese>Tun&#237;sia Alem&#227;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN18</Tag>
 		<English>Protectorate of Tunisia</English>
-		<French>.</French>
+		<French>Protectorate of Tunisia</French>
 		<German>Grafschaft Tunesien</German>
 		<Italian>Contea di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Protectorate of Tunisia</Spanish>
 		<Portuguese>Condado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1721,28 +1721,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN19</Tag>
 		<English>Habsburg Tunisia</English>
-		<French>.</French>
+		<French>Habsburg Tunisia</French>
 		<German>Habsburger Tunesien</German>
 		<Italian>Tunisia Asburgica</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Habsburg Tunisia</Spanish>
 		<Portuguese>Tun&#237;sia Habsburga</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN20</Tag>
 		<English>Eyalet of Tunis</English>
-		<French>.</French>
+		<French>Eyalet of Tunis</French>
 		<German>F&#252;rstentum Tunesien</German>
 		<Italian>Principato di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Eyalet of Tunis</Spanish>
 		<Portuguese>Principado da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN21</Tag>
 		<English>Province of Tunisia</English>
-		<French>.</French>
+		<French>Province of Tunisia</French>
 		<German>Provinz Tunesien</German>
 		<Italian>Provincia di Tunisia</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Province of Tunisia</Spanish>
 		<Portuguese>Prov&#237;ncia da Tun&#237;sia</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1767,7 +1767,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
 		<English>Dutch Peoples</English>
-		<French>Dutch Peoples</French>
+		<French>Peuplade Hollandaise</French>
 		<German>Dutch Peoples</German>
 		<Italian>Dutch Peoples</Italian>
 		<Spanish>Dutch Peoples</Spanish>
@@ -2309,7 +2309,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
 		<English>Frankish Peoples</English>
-		<French>Peuplade Franques</French>
+		<French>Peuplade Francs</French>
 		<German>Fr&#228;nkische V&#246;lker</German>
 		<Italian>Popoli Franchi</Italian>
 		<Spanish>Pueblos Francos</Spanish>
@@ -3556,55 +3556,55 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT00</Tag>
 		<English>Lithuanian People</English>
-		<French>.</French>
+		<French>Peuplade Lituanes</French>
 		<German>Lithauische V&#246;lker</German>
 		<Italian>Popoli Lituani</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Lithuanian People</Spanish>
 		<Portuguese>Povos Lituanos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT01</Tag>
 		<English>Lithuania</English>
-		<French>.</French>
+		<French>Lithuania</French>
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Lithuania</Spanish>
 		<Portuguese>Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT02</Tag>
 		<English>Grand Duchy of Lithuania</English>
-		<French>.</French>
+		<French>Grand Duchy of Lithuania</French>
 		<German>Gro&#223;herzogtum Litauen</German>
 		<Italian>Granducato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Grand Duchy of Lithuania</Spanish>
 		<Portuguese>Gr&#227;o-Ducado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT03</Tag>
 		<English>Lithuania</English>
-		<French>.</French>
+		<French>Lithuania</French>
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Lithuania</Spanish>
 		<Portuguese>Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT04</Tag>
 		<English>Lithuania</English>
-		<French>.</French>
+		<French>Lithuania</French>
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Lithuania</Spanish>
 		<Portuguese>Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT05</Tag>
 		<English>Lithuanian Republic</English>
-		<French>.</French>
+		<French>Lithuanian Republic</French>
 		<German>Republik Litauen</German>
 		<Italian>Repubblica di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Lithuanian Republic</Spanish>
 		<Portuguese>Rep&#250;blica da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -3628,127 +3628,127 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT08</Tag>
 		<English>Sultanate of Lithuania</English>
-		<French>.</French>
+		<French>Sultanate of Lithuania</French>
 		<German>Sultanat Litauen</German>
 		<Italian>Sultanato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Sultanate of Lithuania</Spanish>
 		<Portuguese>Sultanato da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT09</Tag>
 		<English>Islamic Republic of Lithuania</English>
-		<French>.</French>
+		<French>Islamic Republic of Lithuania</French>
 		<German>Islamische Republik Litauen</German>
 		<Italian>Repubblica Islamica di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Islamic Republic of Lithuania</Spanish>
 		<Portuguese>Rep&#250;blica Isl&#226;mica da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT10</Tag>
 		<English>Exarchate of Lithuania</English>
-		<French>.</French>
+		<French>Exarchate of Lithuania</French>
 		<German>Exarchat Litauen</German>
 		<Italian>Esarcato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Exarchate of Lithuania</Spanish>
 		<Portuguese>Exarcado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT11</Tag>
 		<English>Duchy of Lithuania</English>
-		<French>.</French>
+		<French>Duchy of Lithuania</French>
 		<German>Herzogtum Litauen</German>
 		<Italian>Ducato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Duchy of Lithuania</Spanish>
 		<Portuguese>Ducado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT12</Tag>
 		<English>Emirate of Lithuania</English>
-		<French>.</French>
+		<French>Emirate of Lithuania</French>
 		<German>Emirat Litauen</German>
 		<Italian>Emirato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Emirate of Lithuania</Spanish>
 		<Portuguese>Emirado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT13</Tag>
 		<English>Spanish Baltics</English>
-		<French>.</French>
+		<French>Spanish Baltics</French>
 		<German>Spanisches Baltikum</German>
 		<Italian>Baltico Spagnolo</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Spanish Baltics</Spanish>
 		<Portuguese>B&#225;ltico Espanhol</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT14</Tag>
 		<English>Norse Baltics</English>
-		<French>.</French>
+		<French>Norse Baltics</French>
 		<German>Nordisches Baltikum</German>
 		<Italian>Baltico Vichingo</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Norse Baltics</Spanish>
 		<Portuguese>B&#225;ltico N&#243;rdico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT15</Tag>
 		<English>Venetian Lithuania</English>
-		<French>.</French>
+		<French>Venetian Lithuania</French>
 		<German>Venezianisch-Litauen</German>
 		<Italian>Lituania Veneziana</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Venetian Lithuania</Spanish>
 		<Portuguese>Litu&#226;nia Veneziana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT16</Tag>
 		<English>Russian Lithuania</English>
-		<French>.</French>
+		<French>Russian Lithuania</French>
 		<German>Russisch-Litauen</German>
 		<Italian>Lituania Russa</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Russian Lithuania</Spanish>
 		<Portuguese>Litu&#226;nia Russa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT17</Tag>
 		<English>German Baltics</English>
-		<French>.</French>
+		<French>German Baltics</French>
 		<German>Deutsches Baltikum</German>
 		<Italian>Baltico Tedesco</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>German Baltics</Spanish>
 		<Portuguese>B&#225;ltico Alem&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT18</Tag>
 		<English>County of Lithuania</English>
-		<French>.</French>
+		<French>County of Lithuania</French>
 		<German>Grafschaft Litauen</German>
 		<Italian>Contea di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>County of Lithuania</Spanish>
 		<Portuguese>Condado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT19</Tag>
 		<English>Habsburg Baltics</English>
-		<French>.</French>
+		<French>Habsburg Baltics</French>
 		<German>Habsburger Baltikum</German>
 		<Italian>Baltico Asburgico</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Habsburg Baltics</Spanish>
 		<Portuguese>B&#225;ltico Habsburgo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT20</Tag>
 		<English>Principality of Lithuania</English>
-		<French>.</French>
+		<French>Principality of Lithuania</French>
 		<German>F&#252;rstentum Litauen</German>
 		<Italian>Principato di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Principality of Lithuania</Spanish>
 		<Portuguese>Principado da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT21</Tag>
 		<English>Province of Lithuania</English>
-		<French>.</French>
+		<French>Province of Lithuania</French>
 		<German>Provinz Litauen</German>
 		<Italian>Provincia di Lituania</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Province of Lithuania</Spanish>
 		<Portuguese>Prov&#237;ncia da Litu&#226;nia</Portuguese>
 	</TEXT>
 	<!-- Muscovy -->
@@ -5382,7 +5382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR00</Tag>
 		<English>Norwegian Peoples</English>
-		<French>Norwegian Peoples</French>
+		<French>Peuplade Norv&#232;giennes</French>
 		<German>Norwegian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -5644,7 +5644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN00</Tag>
 		<English>Danish Peoples</English>
-		<French>Danish Peoples</French>
+		<French>Peuplade Danoises</French>
 		<German>Danish Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -5689,7 +5689,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN05</Tag>
 		<English>Danish Republic</English>
-		<French>.</French>
+		<French>Danish Republic</French>
 		<German>D&#228;nische Republik</German>
 		<Italian>Repubblica Danese</Italian>
 		<Spanish></Spanish>
@@ -6249,7 +6249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG00</Tag>
 		<English>Aragonese Peoples</English>
-		<French>Aragonese Peoples</French>
+		<French>Peuplade Aragon&#232;ses</French>
 		<German>Aragonese Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6493,7 +6493,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_SIC00</Tag>
 		<English>Sicilian Peoples</English>
-		<French>Sicilian Peoples</French>
+		<French>Peuplade Sicili&#232;nnes</French>
 		<German>Sicilian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6710,7 +6710,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR00</Tag>
 		<English>Maghrebi Peoples</English>
-		<French>Maghrebi Peoples</French>
+		<French>Peuplade Maghrebines</French>
 		<German>Maghrebi Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -6954,7 +6954,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOV00</Tag>
 		<English>Novgorodian Peoples</English>
-		<French>Novgorodian Peoples</French>
+		<French>Peuplade Novorodiennes</French>
 		<German>Novgorodian Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
@@ -7233,8 +7233,8 @@
 	<!-- Scotland -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_SCO00</Tag>
-		<English>Scottish Peoples</English>
-		<French>Scottish Peoples</French>
+		<English>Picts Peoples</English>
+		<French>Peuplade Pictes</French>
 		<German>Scottish Peoples</German>
 		<Italian></Italian>
 		<Spanish></Spanish>

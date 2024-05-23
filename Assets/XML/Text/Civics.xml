@@ -68,11 +68,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Tag>
 		<English>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</French>
+		<German>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</German>
+		<Italian>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</Italian>
+		<Spanish>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</Spanish>
+		<Portuguese>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
@@ -86,10 +86,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Feudal Law</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Feudal Law</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Feudal Law</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Lei Feudal[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -104,11 +104,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Tag>
 		<English>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</French>
+		<German>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</German>
+		<Italian>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</Italian>
+		<Spanish>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</Spanish>
+		<Portuguese>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
@@ -122,10 +122,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Theocracy, State Religion, Organized Religion, Religious Law[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Theocracy, State Religion, Organized Religion, Religious Law[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libert&#224; religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Theocracy, State Religion, Organized Religion, Religious Law[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Teocracia, Religi&#227;o de Estado, Religi&#227;o Organizada, Legisla&#231;&#227;o Religiosa[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -140,11 +140,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
 		<English>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</French>
+		<German>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</German>
+		<Italian>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</Italian>
+		<Spanish>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</Spanish>
+		<Portuguese>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
@@ -158,10 +158,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libert&#224; Lavorativa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -176,11 +176,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Tag>
 		<English>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</French>
+		<German>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</German>
+		<Italian>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</Italian>
+		<Spanish>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</Spanish>
+		<Portuguese>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
@@ -194,10 +194,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor, Trade Economy[NEWLINE][ICON_BULLET]Stable when controlling less than 5 cities[NEWLINE][ICON_BULLET]Unstable with Feudal Law, Imperialism, Mercantilism[NEWLINE][ICON_BULLET]Unstable when controlling more than 5 cities</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor, Trade Economy[NEWLINE][ICON_BULLET]Stable when controlling less than 5 cities[NEWLINE][ICON_BULLET]Unstable with Feudal Law, Imperialism, Mercantilism[NEWLINE][ICON_BULLET]Unstable when controlling more than 5 cities</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 St&#228;dten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 5 St&#228;dten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libert&#224; Lavorativa, Economia di Mercato, Meno di 5 citt&#224;[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, pi&#249; di 5 citt&#224;[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor, Trade Economy[NEWLINE][ICON_BULLET]Stable when controlling less than 5 cities[NEWLINE][ICON_BULLET]Unstable with Feudal Law, Imperialism, Mercantilism[NEWLINE][ICON_BULLET]Unstable when controlling more than 5 cities</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre, Economia de Mercado, Menos de 5 cidades[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Lei Feudal, Mais de 5 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Legal -->
@@ -222,19 +222,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_PEDIA</Tag>
 		<English>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</French>
+		<German>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</German>
+		<Italian>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</Italian>
+		<Spanish>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</Spanish>
+		<Portuguese>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_STRATEGY</Tag>
 		<English>The most primitive Legal civic</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<French>The most primitive Legal civic</French>
+		<German>The most primitive Legal civic</German>
+		<Italian>The most primitive Legal civic</Italian>
+		<Spanish>The most primitive Legal civic</Spanish>
 		<Portuguese>A mais primitiva forma de Lei</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -249,11 +249,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_PEDIA</Tag>
 		<English>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</French>
+		<German>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</German>
+		<Italian>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</Italian>
+		<Spanish>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</Spanish>
+		<Portuguese>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
@@ -267,10 +267,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Feudal Monarchy, Serfdom, Manorialism, Vassalage[NEWLINE][ICON_BULLET]Unstable with Merchant Republic, Free Peasantry</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Feudal Monarchy, Serfdom, Manorialism, Vassalage[NEWLINE][ICON_BULLET]Unstable with Merchant Republic, Free Peasantry</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servit&#249;, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Feudal Monarchy, Serfdom, Manorialism, Vassalage[NEWLINE][ICON_BULLET]Unstable with Merchant Republic, Free Peasantry</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Feudal, Servid&#227;o, Senhorialismo[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Rep&#250;blica Mercante, Campesinato Livre[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -289,7 +289,7 @@
 		<German>[TAB]In einer B&#252;rokratie lenken Beamte im Namen eines Herrschers die Geschicke der Regierung. Sie erheben Steuern, bauen Stra&#223;en und setzen die Vorstellungen des Herrschers in die Tat um. Der chinesische Mandarin ist ebenso ein typischer Vertreter einer B&#252;rokratie, wie das Verkehrsamt einer Kommunalregierung. [PARAGRAPH:2]Eine B&#252;rokratie garantiert die Stabilit&#228;t und Kontinuit&#228;t einer Regierung und erm&#246;glicht auch nach deren Absetzung eine Fortsetzung der Regierungsgesch&#228;fte. Wird der b&#252;rokratische Apparat eines Landes zu gro&#223;, kann dies im Extremfall die v&#246;llige Handlungsunf&#228;higkeit des Staatsoberhauptes nach sich ziehen.</German>
 		<Italian>[TAB]La burocrazia &#232; una forma di gestione politica nella quale una classe di professionisti gestisce le operazioni quotidiane di un governo: si possono costruire strade, riscuotere le tasse, realizzare i desideri del proprio governante. I Mandarini Cinesi sono uno dei primi esempi di burocrazia; la motorizzazione civile delle nostre nazioni &#232; l'esempio della burocrazia odierna. [PARAGRAPH:2]Le burocrazie garantiscono la stabilit&#224; e la competenza di un governo, assicurandone il funzionamento efficiente persino nella successione tra un vecchio leader in favore di uno nuovo totalmente inesperto. Nel corso del tempo, la burocrazia pu&#242; trasformarsi in una "trincea": con l'espansione della burocrazia, infatti, aumenta di conseguenza l'inefficienza del sistema al punto che, per un leader, diventa impossibile compiere qualsiasi azione, nel bene e nel male.</Italian>
 		<Spanish>[TAB]La burocracia es una forma de gobierno en la que una clase profesional administra las tareas cotidianas del gobierno. Recauda los impuestos. Construye las carreteras. Convierte los deseos del gobernante en realidad. Los mandarines chinos representan un ejemplo antiguo de burocracia; el departamento de tr&#225;fico de cualquier municipio es un ejemplo m&#225;s moderno. [PARAGRAPH:2]La burocracia proporciona ciertas dosis de estabilidad y competencia a los gobiernos, y garantiza que contin&#250;en funcionando con eficacia aun cuando el gobernante es expulsado y reemplazado por alguien totalmente inexperto en las tareas de gobierno. Con el tiempo, tiende a "atrincherarse", esto es, a crecer y atrofiarse, hasta el punto de que los gobernantes acaban por tener dificultades para implantar cualquier medida, sea buena o mala.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Bureaucracy is a form of government in which a professional class manages the day to day operations of the government. They collect the taxes. They build the roads. They turn the ruler's wishes into actuality. The Chinese mandarins are an early example of a bureaucracy; the motor vehicle agency of your local government is a later example. [PARAGRAPH:2]Bureaucracies provide a certain amount of stability and competence to a government, ensuring that the government will continue to operate efficiently even if the old ruler is thrown out and a new and totally inexperienced ruler takes his or her place. Over time, though, a bureaucracy may become "entrenched" - growing in size and inefficiency to the point where it is extremely difficult for a leader to accomplish anything - good or ill.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_STRATEGY</Tag>
@@ -303,10 +303,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable when controlling less than 6 cities[NEWLINE][ICON_BULLET]Unstable when controlling more than 6 cities</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable when controlling less than 6 cities[NEWLINE][ICON_BULLET]Unstable when controlling more than 6 cities</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 St&#228;dten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 6 St&#228;dten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 citt&#224;[COLOR_REVERT], instabile con [COLOR_RED]pi&#249; di 6 citt&#224;[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable when controlling less than 6 cities[NEWLINE][ICON_BULLET]Unstable when controlling more than 6 cities</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Menos de 6 cidades[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Mais de 6 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -321,11 +321,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Tag>
 		<English>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</French>
+		<German>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</German>
+		<Italian>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</Italian>
+		<Spanish>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</Spanish>
+		<Portuguese>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
@@ -339,10 +339,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Doubles the reduction rate of persecution points (thus shortens the duration of religious instability)[NEWLINE][ICON_BULLET]Stable with Divine Monarchy, Theocracy[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Doubles the reduction rate of persecution points (thus shortens the duration of religious instability)[NEWLINE][ICON_BULLET]Stable with Divine Monarchy, Theocracy[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]G&#246;ttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libert&#224; Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Doubles the reduction rate of persecution points (thus shortens the duration of religious instability)[NEWLINE][ICON_BULLET]Stable with Divine Monarchy, Theocracy[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Divina, Teocracia[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -357,11 +357,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Tag>
 		<English>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</French>
+		<German>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</German>
+		<Italian>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</Italian>
+		<Spanish>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</Spanish>
+		<Portuguese>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
@@ -375,10 +375,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Free Labor[NEWLINE][ICON_BULLET]Unstable with Serfdom, Theocracy</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Free Labor[NEWLINE][ICON_BULLET]Unstable with Serfdom, Theocracy</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libert&#224; Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Free Labor[NEWLINE][ICON_BULLET]Unstable with Serfdom, Theocracy</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Constiucional, Rep&#250;blica Mercante, Labor Livre[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Teocracia[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Labor -->
@@ -434,24 +434,24 @@
 		<German>[TAB]Die Leibeigenschaft ist eine Form der Sklaverei. Allerdings hat der Meister keine absolute Macht &#252;ber den Leibeigenen, zumal diesem gewisse Rechte zugestanden werden. Die Rechte und Verpflichtungen von Meister und Leibeigenem sind im Allgemeinen sehr verschieden. In einigen L&#228;ndern kontrolliert der Meister jeden Aspekt im Leben seines Leibeigenen. Lediglich dessen grundlose Ermordung ist dem Meister untersagt. In anderen L&#228;ndern darf der Leibeigene heiraten, ist erbberechtigt und in vielerlei Hinsicht sein eigener Herr. Allerdings darf er das Land ohne die Zustimmung seines Herrn nicht verlassen. [PARAGRAPH:2]Die Voraussetzung der Leibeigenschaft ist eine Gesellschaftsschicht, die das politische bzw. gottgegebene Recht hat, &#252;ber das Schicksal einer untergeordneten Schicht zu bestimmen. Daher ist die Leibeigenschaft nur praktikabel, wenn &#252;ber die herrschenden Machtverh&#228;ltnisse Klarheit besteht.</German>
 		<Italian>[TAB]La servit&#249; &#232; una forma di schiavit&#249; pi&#249; "illuminata": il potere del padrone non &#232; assoluto e al servo vengono accordati un certo numero di diritti. Obblighi e rapporti tra padrone e servo sono mutati nel corso del tempo, a seconda delle epoche e delle necessit&#224;. In alcune societ&#224;, il padrone aveva il diritto di controllare qualsiasi aspetto della vita di un servo, tranne per il fatto che non poteva ucciderlo senza una giusta causa; da altre parti invece, i servi potevano sposarsi e tentare di prosperare, senza per&#242; poter abbandonare la terra, se non con il permesso del padrone. [PARAGRAPH:2]Secondo i principi della servit&#249;, un gruppo &#232; superiore a un altro poich&#233; ha il diritto divino di controllare il destino degli altri. Questo principio &#232; valido solo se un gruppo acconsente di essere inferiore a un altro attualmente in potere.</Italian>
 		<Spanish>[TAB]La servidumbre es una forma "m&#225;s humanitaria" de esclavitud, en la que el poder del amo no es tan absoluto y los siervos conservan determinados derechos. Los derechos y obligaciones de amos y siervos variaban significativamente en funci&#243;n del tiempo y el lugar. En algunas sociedades, el amo ten&#237;a derecho a controlar todos los aspectos de la vida de sus siervos (aunque no pod&#237;a quitarles la vida sin una causa justificada), mientras que en otras los siervos ten&#237;an derecho a contraer matrimonio y heredar, y pose&#237;an un cierto grado de autogobierno, si bien no pod&#237;an abandonar la tierra sin el permiso de su amo. [PARAGRAPH:2]La premisa b&#225;sica que sustenta el sistema de servidumbre es que un grupo es superior a otro y por tanto le asiste el derecho, tanto pol&#237;tico como divino, a controlar el destino de &#233;ste. Por consiguiente, la servidumbre solo tiene sentido en caso de que todos est&#233;n de acuerdo en qui&#233;n es superior a qui&#233;n. </Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Serfdom is a more "enlightened" form of slavery in that the power of the master is not absolute and the serfs are accorded a certain number of rights. The specific rights and obligations of masters and serfs vary significantly over time and from place to place. In some societies, the master had the right to control every aspect of a serf's life except that he couldn't kill the serf without just cause; in others, the serfs had the rights to marry and to inherit wealth and to a certain amount of self-government, but they could not leave the land without their lord's permission. [PARAGRAPH:2]The basic premise of serfdom is that one group of people are superior to another, and that they have the political and god-given right to control the other group's destiny. Thus serfdom only makes sense if one agrees with the group currently in power about who is superior to whom. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 [ICON_PRODUCTION] from farms, slower growth for cottages and great people</English>
-		<French>.</French>
+		<French>+1 [ICON_PRODUCTION] from farms, slower growth for cottages and great people</French>
 		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Geh&#246;ften und gro&#223;en Pers&#246;nlichkeiten</German>
 		<Italian>+1 produzione da fattorie, crescit&#224; pi&#249; lenta per villete e grandi personaggi</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>+1 [ICON_PRODUCTION] from farms, slower growth for cottages and great people</Spanish>
 		<Portuguese>+1 [ICON_PRODUCTION] por fazenda, reduz a taxa de Grandes Personalidades e de crescimento de cabanas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Feudal Law, Manorialism[NEWLINE][ICON_BULLET]Unstable with Common Law, Trade Economy</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Feudal Law, Manorialism[NEWLINE][ICON_BULLET]Unstable with Common Law, Trade Economy</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Feudal Law, Manorialism[NEWLINE][ICON_BULLET]Unstable with Common Law, Trade Economy</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Lei Feudal, Senhorialismo[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -466,17 +466,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Tag>
 		<English>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</French>
+		<German>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</German>
+		<Italian>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</Italian>
+		<Spanish>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</Spanish>
+		<Portuguese>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
 		<English>+100% growth to cottages, hamlets, and villages; workers complete improvements faster</English>
 		<French>+100%% de croissance des cottages, hameaux et villages.</French>
-		<German>.</German>
+		<German>+100% growth to cottages, hamlets, and villages; workers complete improvements faster</German>
 		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
 		<Spanish></Spanish>
 		<Portuguese>+100% na taxa de crescimento de cabanas, aldeias, e vilarejos; trabalhadores acabam melhorias mais r&#225;pido</Portuguese>
@@ -484,10 +484,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Feudal Law</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Feudal Law</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Feudal Law</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Constitucional, Rep&#250;blica Mercante[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Lei Feudal[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -502,17 +502,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
 		<English>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</French>
+		<German>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</German>
+		<Italian>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</Italian>
+		<Spanish>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</Spanish>
+		<Portuguese>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
 		<English>Unlimited artists, scholars, and merchants; workshops, windmills and watermills give extra production</English>
 		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
-		<German>.</German>
+		<German>Unlimited artists, scholars, and merchants; workshops, windmills and watermills give extra production</German>
 		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Artistas, mercadores e intelectuais ilimitados; oficinas, moinhos de vento e moinhos d'&#225;gua fornecem produ&#231;&#227;o extra</Portuguese>
@@ -520,10 +520,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Guilds</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Guilds</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Guilds</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Corpora&#231;&#245;es de Of&#237;cio[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -538,17 +538,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Tag>
 		<English>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</French>
+		<German>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</German>
+		<Italian>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</Italian>
+		<Spanish>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</Spanish>
+		<Portuguese>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
 		<English>+2 free specialists in your cities</English>
 		<French>Amelioration du commerce et de la production depuis les villes</French>
-		<German>.</German>
+		<German>+2 free specialists in your cities</German>
 		<Italian>Pi&#249; commercio e produzione dalle citt&#224;; penalit&#224; per le civilt&#224; che non la adottano</Italian>
 		<Spanish></Spanish>
 		<Portuguese>+2 especialistas livres nas suas cidades</Portuguese>
@@ -556,10 +556,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Common Law</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Common Law</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Constitutional Monarchy, Merchant Republic, Common Law</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Constitucional, Rep&#250;blica Mercante, Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Economy -->
@@ -611,17 +611,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
 		<English>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</French>
+		<German>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</German>
+		<Italian>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</Italian>
+		<Spanish>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</Spanish>
+		<Portuguese>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
 		<English>-1 trade route in your cities, gold from farms, small income from manor houses</English>
 		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
-		<German>.</German>
+		<German>-1 trade route in your cities, gold from farms, small income from manor houses</German>
 		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
 		<Spanish></Spanish>
 		<Portuguese>-1 rota comercial nas suas cidades, com&#233;rcio por fazendas, pequena renda por solares</Portuguese>
@@ -629,10 +629,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Feudal Law, Serfdom</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Feudal Law, Serfdom</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servit&#249;[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Feudal Law, Serfdom</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Lei Feudal, Servid&#227;o[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -647,28 +647,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
 		<English>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</French>
+		<German>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</German>
+		<Italian>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</Italian>
+		<Spanish>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</Spanish>
+		<Portuguese>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_STRATEGY</Tag>
 		<English>An additional trade route in all your cities</English>
-		<French>.</French>
+		<French>An additional trade route in all your cities</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>An additional trade route in all your cities</Spanish>
 		<Portuguese>Uma rota comercial adicional em todas as suas cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Serfdom</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Serfdom</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Serfdom</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Rep&#250;blica Mercante[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -687,15 +687,15 @@
 		<German>[TAB]Die Gilde ist ein Zusammenschluss von Menschen, die dasselbe Handwerk aus&#252;ben. Ziel der Gilde ist die Sicherung des Einkommen ihrer Mitglieder, die Wahrung von Qualit&#228;tsstandards und die Ausbildung junger Handwerker. Gilden haben nicht selten Krankenh&#228;user, Waisenh&#228;user und Schulen errichtet, um ihre Mitglieder zu unterst&#252;tzen. Aufgrund ihrer Monopolstellung k&#246;nnen Gilden die L&#246;hne ihrer Mitglieder kontrollieren. [PARAGRAPH:2]Viele Gilden, wie die r&#246;mischen Berufsorganisationen, hatten eine starke religi&#246;se Komponente. Eine der ersten bekannten muslimischen Gilden wurde im 9. Jahrhundert von Schreibern und Druckern gegr&#252;ndet, die die Qualit&#228;t ihrer Werke sichern und die Herstellung von Kopien verhindern wollten. [PARAGRAPH:2]Die ersten europ&#228;ischen Gilden entstanden etwa 1000 nach Christus. Innerhalb der Gilden herrschte eine strikte Hierarchie (Lehrling, Geselle, Meister und (gelegentlich) Gro&#223;meister). Je h&#246;her ein Handwerker innerhalb der Hierarchie stand, desto mehr Lohn durfte er verlangen. Aufgrund dieser Struktur wuchs die Mitgliederzahl der Gilden stetig an, da diese die Voraussetzung f&#252;r den sozialen und wirtschaftlichen Aufstieg eines Handwerkers bildeten.</German>
 		<Italian>[TAB]Una corporazione &#232; un gruppo di individui che pratica lo stesso commercio. Le corporazioni cercano di proteggere i guadagni dei propri membri, mantenendo standard di qualit&#224; e addestrando nuovi lavoratori al commercio. Le corporazioni hanno spesso costruito ospedali, orfanatrofi e scuole per servire i propri membri; cercano di espandere l'associazione a tutti coloro che operano nello stesso settore. Questo &#34;monopolio&#34; permette alle corporazioni di ottenere un maggiore controllo sui prezzi imposti dai membri per i propri servizi. [PARAGRAPH:2]Molte delle prime corporazioni, come le organizzazioni professionali Romane, avevano forti connotati religiosi. Una delle prime corporazioni Musulmane venne formata dai &#34;warraqeen&#34; altrimenti noti come &#34;coloro che lavorano con la conoscenza&#34;. Nel IX secolo, scrittori e stampatori professionisti lavorarono assieme per assicurarsi la qualit&#224; del materiale pubblicato e per impedire ad altri stampatori di produrre copie illegali del materiale. [PARAGRAPH:2]Le corporazioni Europee nacquero intorno al 1000 d. C.: erano formate da una rigida gerarchia di abili lavoratori, come apprendisti, artigiani, lavoratori qualificati, maestri e, a volte, gran maestri. Pi&#249; alto era il ruolo occupato nella scala gerarchica, maggiori erano i pagamenti che potevano richiedere. Questa struttura aument&#242; notevolmente le adesioni alle corporazioni, poich&#233; non era possibile raggiungere un ceto migliore senza appartenere a una corporazione.</Italian>
 		<Spanish>[TAB]Un gremio es una asociaci&#243;n de gente que ejerce la misma profesi&#243;n. Su finalidad es proteger los ingresos de sus miembros, mantener los niveles de calidad y ofrecer instrucci&#243;n a los nuevos trabajadores. Muchas veces, erigen hospitales, orfanatos y escuelas para uso de sus miembros. Los gremios procuran englobar a todos aqu&#233;llos que practican su profesi&#243;n. Estos monopolios permiten ejercer un mayor control sobre las tarifas que sus miembros pueden cobrar por sus servicios. [PARAGRAPH:2]Muchos de los gremios m&#225;s antiguos &#151;las organizaciones profesionales romanas, por ejemplo&#151; pose&#237;an un fuerte componente religioso. Uno de los primeros gremios musulmanes del que se tiene noticia era el formado por los "warraqeen," o "aqu&#233;llos que trabajan con el saber". En el siglo IX, estos escritores y editores profesionales se encargaban de garantizar la calidad del material publicado e impedir que otros editores hicieran copias ilegales de su material. [PARAGRAPH:2]Los gremios europeos nacieron alrededor del a&#241;o 1000 d. C. Empleaban una r&#237;gida jerarqu&#237;a de trabajadores cualificados: aprendiz, artesano, oficial, maestro y, en ocasiones, gran maestro. Cuanto m&#225;s elevada era la posici&#243;n ocupada por un miembro, mayores precios pod&#237;a cobrar. Esta estructura contribuy&#243; en gran medida al crecimiento de los gremios, puesto que nadie pod&#237;a alcanzar los niveles m&#225;s elevados de la profesi&#243;n sin pertenecer a uno.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]A guild is an association of people who practice the same trade. The guilds seek to protect their members' incomes, maintain standards of performance, and train new workers in the trade. Guilds have often built hospitals, orphanages and schools to serve their members. Guilds seek to expand their membership to include all who practice their profession. Such monopolies allow guilds greater control over the fees their members can charge for their services. [PARAGRAPH:2]Many of the earliest guilds - Roman professional organizations, for instance - had strong religious components. One of the earliest known Muslim guilds were formed by the "warraqeen," or "those who work with knowledge." In the ninth century these professional writers and printers worked together to ensure the quality of published material and to stop other printers from making illegal copies of the material. [PARAGRAPH:2]The European guilds came into being around 1000 AD. They included a rigid hierarchy of skilled workers - apprentice, craftsman, journeyman, master and sometimes grandmaster. The higher in the hierarchy a member was, the more the payment he could demand. This structure greatly increased the guilds' memberships, since one could not attain the higher statuses without belonging to a guild.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
 		<English>All your specialists contribute more to your scientific advancement</English>
-		<French>.</French>
+		<French>All your specialists contribute more to your scientific advancement</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>All your specialists contribute more to your scientific advancement</Spanish>
 		<Portuguese>Todos os seus especialistas contribuem mais para seu desenvolvimento cient&#237;fico</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -710,10 +710,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Apprenticeship</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Apprenticeship</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Apprenticeship</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Aprendizagem[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -737,10 +737,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM_STRATEGY</Tag>
 		<English>With disallowing foreign trade and discouraging independent Companies, your local markets and towns can thrive. Mercantilism can be very strong when your relations are not good enough with your neighbours.</English>
-		<French>.</French>
+		<French>With disallowing foreign trade and discouraging independent Companies, your local markets and towns can thrive. Mercantilism can be very strong when your relations are not good enough with your neighbours.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>With disallowing foreign trade and discouraging independent Companies, your local markets and towns can thrive. Mercantilism can be very strong when your relations are not good enough with your neighbours.</Spanish>
 		<Portuguese>Desabilitando o com&#233;rcio estrangeiro e as corpora&#231;&#245;es, seus mercados locais e distritos podem prosperar. Mercantilismo pode ser muito fortalecedor quando suas rela&#231;&#245;es com seus vizinhos n&#227;o s&#227;o muito boas</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -783,10 +783,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_STRATEGY</Tag>
 		<English>You cannot have a state religion under Paganism, but you get a happiness bonus for Pagan Shrines</English>
-		<French>.</French>
+		<French>You cannot have a state religion under Paganism, but you get a happiness bonus for Pagan Shrines</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>You cannot have a state religion under Paganism, but you get a happiness bonus for Pagan Shrines</Spanish>
 		<Portuguese>Voc&#234; n&#227;o pode ter uma religi&#227;o estatal sob Paganismo, mas voc&#234; ganha um b&#244;nus de felicidade por Santu&#225;rios Pag&#227;os</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -810,28 +810,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Tag>
 		<English>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</French>
+		<German>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</German>
+		<Italian>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</Italian>
+		<Spanish>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</Spanish>
+		<Portuguese>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
 		<English>Improved production for buildings in cities where your state religion is present</English>
-		<French>.</French>
-		<German>.</German>
+		<French>Improved production for buildings in cities where your state religion is present</French>
+		<German>Improved production for buildings in cities where your state religion is present</German>
 		<Italian>Le citt&#224; con Religione Ufficiale addestrano pi&#249; velocemente le unit&#224;</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Improved production for buildings in cities where your state religion is present</Spanish>
 		<Portuguese>Aumenta a taxa de produ&#231;&#227;o de constru&#231;&#245;es em todas suas cidades que possuam sua religi&#227;o estatal.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Divine Monarchy</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Divine Monarchy</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]G&#246;ttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Divine Monarchy</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -850,24 +850,24 @@
 		<German>[TAB]Die Theokratie ist eine Regierungsform, bei der Priester und heilige M&#228;nner die Regierungsgesch&#228;fte leiten. Die Regierung wird so gef&#252;hrt, dass das Volk davon profitiert, aber in erster Linie bestimmen die W&#252;nsche des Allm&#228;chtigen, die von den heiligen M&#228;nnern und Priestern ausgelegt werden, die Regierungspolitik. Laut dieser Theorie ist es Gottes Wille, dass diese M&#228;nner die Regierung leiten, und eine andere politische Meinung ist eine S&#252;nde und Starrk&#246;pfigkeit, wenn nicht sogar Ketzerei. [PARAGRAPH:2]In der modernen Welt sind Theokratien meist r&#252;ckw&#228;rts gerichtete Gesellschaften, die ihr Land zur&#252;ck in den &#252;blicherweise mystischen Zustand der Vergangenheit und fort von der b&#246;sen und korrupten modernen Welt bringen wollen. Die Diplomatie gestaltet sich f&#252;r diese L&#228;nder meist ausgesprochen schwierig, da die L&#228;nder, die gegen ihre Interessen handeln, dies ihrer Meinung nach tun, weil sie sich vom B&#246;sen leiten lassen und nicht, weil diese anderen L&#228;nder eigene Ansichten und Ziele haben. Wie kann ein heiliger Anf&#252;hrer auch einen Kompromiss mit einem Schergen des Satans eingehen?</German>
 		<Italian>[TAB]La teocrazia &#232; una forma di governo dominata da sacerdoti e uomini santi. Il governo lavora in funzione del popolo, ma soprattutto in linea con i desideri dell'Onnipotente, i cui segni vengono interpretati dai sacerdoti. In teoria, questi uomini sono gli unici portavoce del volere di Dio, il dissenso politico &#232; un peccato e pu&#242; essere considerato addirittura eresia. [PARAGRAPH:2]Nel mondo moderno, le teocrazie tendono a guardare indietro, nel tentativo di riportare la propria nazione in qualche mitico stato di grazia appartenente al passato, lontano dal male e dalla corruzione. Per alcune nazioni, la diplomazia tende ad essere molto difficoltosa: se un paese agisce contro gli interessi di una teocrazia viene visto come un gesto del diavolo, piuttosto che una necessit&#224; e un differente punto di vista. Come pu&#242; un leader santo scendere a patti con un servo di Satana?</Italian>
 		<Spanish>[TAB]La teocracia es la forma de gobierno en la que la autoridad secular est&#225; en manos de sacerdotes u hombres santos. &#201;stos gobiernan en beneficio de la comunidad, pero sobre todo de acuerdo a los deseos del todopoderoso, interpretados por el sacerdocio. En teor&#237;a, es voluntad de Dios que el gobierno est&#233; en sus manos, y el disenso pol&#237;tico es pecaminoso y moralmente condenable, cuando no directamente her&#233;tico. [PARAGRAPH:2]En nuestros tiempos, las teocracias son sistemas caracterizados por una noci&#243;n nost&#225;lgica de la historia, que aspiran a devolver la tierra a un pasado de gracia (normalmente m&#237;tico) y apartarla de la maldad y corrupci&#243;n del mundo moderno. Los pa&#237;ses que la practican tienen grandes dificultades diplom&#225;ticas, puesto que consideran que los estados que se les oponen act&#250;an impulsados por una voluntad diab&#243;lica en lugar de por sus propios puntos de vista e intereses. &#191;C&#243;mo va a llegar a un acuerdo un l&#237;der santo con un siervo de Sat&#225;n?</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]A theocracy is a form of government where priests or holy men are in charge of the government. The government is run to benefit the people, but, more importantly, in accord with the wishes of the almighty, as interpreted by the holy men and priests. According to the theory, it is the will of God that such men be in charge of running things, and political dissent is sinful and wrong-headed, if not outright heresy. [PARAGRAPH:2]In the modern world, theocracies tend to be backward-looking, seeking to return their country to some usually mythical past state of grace and away from the evil and corrupt modern world. Diplomacy tends to be extremely difficult for such countries, since countries who act against their interests are doing so at the urging of the devil, rather than because the other countries have their own points of view and objectives. How can a holy leader compromise with an imp of Satan?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Tag>
 		<English>Improved production and free XP for units in cities where your state religion is present</English>
-		<French>.</French>
+		<French>Improved production and free XP for units in cities where your state religion is present</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Improved production and free XP for units in cities where your state religion is present</Spanish>
 		<Portuguese>Aumenta a taxa de produ&#231;&#227;o de unidades e lhes d&#225; XP de gra&#231;a em todas suas cidades que possuam a sua religi&#227;o estatal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Unstable with Common Law</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Unstable with Common Law</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]G&#246;ttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Unstable with Common Law</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Divina, Legisla&#231;&#227;o Religiosa[COLOR_REVERT], Inst&#225;vel com [COLOR_RED]Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -886,24 +886,24 @@
 		<German>[TAB]Eine organisierte Religion hat eine zentrale Autorit&#228;t, die f&#252;r die Interpretation der Theologie, die Liturgie, die Priesterweihe und Heiligsprechungen verantwortlich ist. Diese zentrale Autorit&#228;t ist nicht selten eine einflussreiche Beh&#246;rde mit betr&#228;chtlicher geistlicher und weltlicher Macht. [PARAGRAPH:2]Organisierte Religionen konnten sehr m&#228;chtig werden, m&#228;chtiger noch als K&#246;nige oder Despoten. Oft h&#228;uften ihre Gl&#228;ubigen gro&#223;e Reicht&#252;mer an und errichteten zu Ehren ihres Gottes pr&#228;chtige Geb&#228;ude. Heute ist der politische und religi&#246;se Einfluss organisierter Religionen allerdings eher gering.</German>
 		<Italian>[TAB]In una organizzazione religiosa esiste un'autorit&#224; centrale che interpreta o determina la teologia, che decide quando e quali cerimonie devono essere eseguite, che nomina i sacerdoti o gli uomini santi per mantenere i fedeli sulla retta via. L'autorit&#224; centrale pu&#242; essere una gerarchia potente e rigida di grandi religioni e potere secolare, oppure pu&#242; essere rappresentata da un gruppo di anziani che si incontrano periodicamente per discutere questioni importanti. [PARAGRAPH:2]Una organizzazione religiosa pu&#242; rappresentare un grande potere, pi&#249; di quello di un re o un despota: i seguaci possono fornire ricchezze e finanziare la realizzazione di grandi edifici in onore degli dei. Tuttavia, le organizzazioni religiose sono meno potenti e devono vivere in una difficile armonia con i governi locali laici.</Italian>
 		<Spanish>[TAB]Una religi&#243;n organizada es una en la que existe una autoridad central que interpreta o establece la teolog&#237;a, decide qu&#233; ceremonias se llevan a cabo y nombra a los sacerdotes u hombres santos encargados de mantener al reba&#241;o en el recto camino. La autoridad central puede ser una jerarqu&#237;a r&#237;gida y poderosa dotada de gran poder religioso y secular o puede estar formada por un consejo de ancianos que se re&#250;ne peri&#243;dicamente para debatir todos los asuntos concernientes a sus fieles.[PARAGRAPH:2]Las religiones organizadas pueden ser muy poderosas, m&#225;s incluso que los reyes o los d&#233;spotas. Sus seguidores pueden proporcionarle enormes riquezas y erigir impresionantes edificios en honor a sus dioses. Sin embargo, lo normal es que no sean tan poderosas y se vean obligadas a convivir en un estado de complicada armon&#237;a con los poderes seculares.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]An organized religion is one in which there is a central authority which interprets or determines theology, which decides which ceremonies are to be performed at which times, and which appoints priests or holy men to keep worshipers on the correct path. The central authority may be a rigid and powerful hierarchy with great religious and secular power, or it may be a group of elders who meet periodically to discuss matters of importance to their members. [PARAGRAPH:2]An organized religion can be a mighty thing, more powerful than kings or despots. Its followers may provide it with great wealth, and may construct mighty edifices in their gods' honor. Usually, however, organized religions are less powerful than that and must live in uneasy harmony with the local secular governments.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_STRATEGY</Tag>
 		<English>Unlimited priests and huge bonus to Great Person birth rate in cities where your state religion is present</English>
-		<French>.</French>
+		<French>Unlimited priests and huge bonus to Great Person birth rate in cities where your state religion is present</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Unlimited priests and huge bonus to Great Person birth rate in cities where your state religion is present</Spanish>
 		<Portuguese>Sacerdotes ilimitados e um grande b&#244;nus para a taxa de nascimento de Grandes Personalidades onde sua religi&#227;o estatal est&#225; presente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Divine Monarchy</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Stable with Divine Monarchy</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]G&#246;ttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Stable with Divine Monarchy</Spanish>
 		<Portuguese>[ICON_BULLET]Est&#225;vel com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -918,28 +918,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_PEDIA</Tag>
 		<English>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</French>
+		<German>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</German>
+		<Italian>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</Italian>
+		<Spanish>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</Spanish>
+		<Portuguese>[TAB]Religious Tolerance refers to a society in which there is still a dominant religion - what is maintained as "state religion" - but people are free to worship or not worship as they please.[PARAGRAPH:2]Such states allow all to express their religious beliefs. This encourages immigration by people whose religions are suppressed elsewhere, and the general society benefits from the multitude of experiences and beliefs of its members. However, such freedom and tolerance of religions may weaken a nation's people's beliefs in any religion, which could cause the people to become morally lax and decadent. Further, members of the more militant and expansionist religions may seek to destroy the competition, causing a good deal of stress and conflict within a country. A good deal of maturity is required on the part of a government and its people to successfully sustain free religion.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_STRATEGY</Tag>
 		<English>Bonus happiness in cities where your state religion is present; allows construction of non-state religion buildings; +10% science</English>
-		<French>.</French>
+		<French>Bonus happiness in cities where your state religion is present; allows construction of non-state religion buildings; +10% science</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Bonus happiness in cities where your state religion is present; allows construction of non-state religion buildings; +10% science</Spanish>
 		<Portuguese>B&#244;nus de felicidade nas cidades onde sua religi&#227;o estatal est&#225; presente; permite a constru&#231;&#227;o de constru&#231;&#245;es religiosas de outras religi&#245;es; +10% ci&#234;ncia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law</English>
-		<French>.</French>
+		<French>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law</French>
 		<German>[ICON_BULLET]Instabil mit [COLOR_RED]G&#246;ttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law</Spanish>
 		<Portuguese>[ICON_BULLET]Inst&#225;vel com [COLOR_RED]Monarquia Divina, Legisla&#231;&#227;o Religiosa[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Expansion -->
@@ -973,20 +973,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Tag>
 		<English>The most primitive Expansion civic</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<French>The most primitive Expansion civic</French>
+		<German>The most primitive Expansion civic</German>
+		<Italian>The most primitive Expansion civic</Italian>
+		<Spanish>The most primitive Expansion civic</Spanish>
 		<Portuguese>A forma mais primitiva de expans&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBJUGATION_HELP</Tag>
 		<English>[ICON_BULLET]Less instability from foreign culture</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[ICON_BULLET]Less instability from foreign culture</French>
+		<German>[ICON_BULLET]Less instability from foreign culture</German>
+		<Italian>[ICON_BULLET]Less instability from foreign culture</Italian>
+		<Spanish>[ICON_BULLET]Less instability from foreign culture</Spanish>
+		<Portuguese>[ICON_BULLET]Less instability from foreign culture</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE</Tag>
@@ -1018,11 +1018,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE_HELP</Tag>
 		<English>[ICON_BULLET]Stable with Feudal Law</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[ICON_BULLET]Stable with Feudal Law</French>
+		<German>[ICON_BULLET]Stable with Feudal Law</German>
+		<Italian>[ICON_BULLET]Stable with Feudal Law</Italian>
+		<Spanish>[ICON_BULLET]Stable with Feudal Law</Spanish>
+		<Portuguese>[ICON_BULLET]Stable with Feudal Law</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM</Tag>
@@ -1036,29 +1036,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Tag>
 		<English>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</French>
+		<German>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</German>
+		<Italian>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</Italian>
+		<Spanish>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</Spanish>
+		<Portuguese>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Grants you extra stability for each city outside the core area</English>
-		<French>.</French>
+		<French>Grants you extra stability for each city outside the core area</French>
 		<German>Addiert Stabilit&#228;t f&#252;r jede Stadt au&#223;erhalb des Kerngebietes</German>
 		<Italian>Aument&#224; la stabilit&#224; per ogni citt&#224; fuori dal centro dell'impero</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Grants you extra stability for each city outside the core area</Spanish>
 		<Portuguese>Fornece estabilidade extra por cada cidade fora da sua &#225;rea central</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with Merchant Republic</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[ICON_BULLET]Unstable with Merchant Republic</French>
+		<German>[ICON_BULLET]Unstable with Merchant Republic</German>
+		<Italian>[ICON_BULLET]Unstable with Merchant Republic</Italian>
+		<Spanish>[ICON_BULLET]Unstable with Merchant Republic</Spanish>
+		<Portuguese>[ICON_BULLET]Unstable with Merchant Republic</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION</Tag>
@@ -1099,28 +1099,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Tag>
 		<English>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<French>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</French>
+		<German>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</German>
+		<Italian>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</Italian>
+		<Spanish>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</Spanish>
+		<Portuguese>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
 		<English>Grants you extra stability for each colony founded</English>
-		<French>.</French>
+		<French>Grants you extra stability for each colony founded</French>
 		<German>Stabilit&#228;tspunkte f&#252;r jede errichtete Kolonie</German>
 		<Italian>Aument&#224; la stabilit&#224; per ogni colonia fondata</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Grants you extra stability for each colony founded</Spanish>
 		<Portuguese>Fornece estabilidade extra por cada col&#244;nia fundada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
 		<English>[ICON_BULLET]+1 stability for each colony founded.</English>
-		<French>.</French>
+		<French>[ICON_BULLET]+1 stability for each colony founded.</French>
 		<German>[ICON_BULLET]+1 Stabilit&#228;t f&#252;r jede gegr&#252;ndete Kolonie</German>
 		<Italian>[ICON_BULLET]+1 Stabilit&#224; per ogni colonia fondata.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[ICON_BULLET]+1 stability for each colony founded.</Spanish>
 		<Portuguese>[ICON_BULLET]+1 estabilidade por cada col&#244;nia fundada</Portuguese>
 	</TEXT>
 	<!-- Used in the dll -->

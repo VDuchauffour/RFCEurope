@@ -16,7 +16,7 @@
 		<French>Le Pouvoir de l'Empereur:</French>
 		<German>Die Macht des Kaisers:</German>
 		<Italian>Il Potere dell'Imperatore:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of the Emperor:</Spanish>
 		<Portuguese>O Poder do Imperador:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -34,7 +34,7 @@
 		<French>Le Pouvoir du Khan:</French>
 		<German>Die Macht des Khans:</German>
 		<Italian>Il Potere del Khan:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of the Khan:</Spanish>
 		<Portuguese>O Poder do Khan:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -43,7 +43,7 @@
 		<French>Pas de r&#233;sistance dans les villes conquites</French>
 		<German>Keine Anarchy durch Widerstand in eroberten St&#228;dten</German>
 		<Italian>Nessuna resistenza nelle citt&#224; conquistate</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>No resistance in conquered cities.</Spanish>
 		<Portuguese>Sem resist&#234;ncia em cidades conquistadas</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -52,7 +52,7 @@
 		<French>Le Pouvoir de la Stabilit&#233;:</French>
 		<German>Die Macht der Stabilit&#228;t:</German>
 		<Italian>Il Potere della Stabilit&#224;:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Stability:</Spanish>
 		<Portuguese>O Poder da Estabilidade:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -61,7 +61,7 @@
 		<French>P&#233;nalit&#233; r&#233;duite pour l'expension lointaine</French>
 		<German>Reduzierter Expansionsmalus f&#252;r St&#228;dte in fremden L&#228;ndern</German>
 		<Italian>Penalit&#224; ridotta per l'espansione nelle terre straniere</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Reduced penalty for expanding into foreign land.</Spanish>
 		<Portuguese>Penalidade reduzida por expandir-se para terras estrangeiras</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -70,7 +70,7 @@
 		<French>Le Pouvoir de la Culture:</French>
 		<German>Die Macht der Kultur:</German>
 		<Italian>Il potere della Cultura:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Culture:</Spanish>
 		<Portuguese>O Poder da Cultura:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -88,7 +88,7 @@
 		<French>Le Pouvoir de la Foi:</French>
 		<German>Die Macht des Glaubens:</German>
 		<Italian>Il Potere della Fede:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Faith:</Spanish>
 		<Portuguese>O Poder da F&#233;:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -97,7 +97,7 @@
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegr&#252;ndeten, eroberten oder &#252;bergelaufenen Stadt</German>
 		<Italian>La Religione Ufficiale si diffonde in ogni citt&#224; aquisita, ed un tempio viene costruito automaticamente</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>If your State Religion is a major religion, it spreads to each newly acquired city and a free Temple is built there.</Spanish>
 		<Portuguese>A Religi&#227;o Estatal espalha-se para toda cidade adquirida (fundada, conquistada, reclamada) e um Templo &#233; feito imediatamente</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -106,7 +106,7 @@
 		<French>Le Pouvoir de ma M&#233;decine:</French>
 		<German>Die Macht der Medizin:</German>
 		<Italian>Il Potere della Medicina:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Medicine:</Spanish>
 		<Portuguese>O Poder da Medicina:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -115,7 +115,7 @@
 		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
 		<German>Alle Einheiten starten mit der Bef&#246;rderung Sanit&#228;ter I</German>
 		<Italian>Tutte le unit&#224; iniziano con la promozione Medico I</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>All units start with the Medic I promotion, excess health in your cities contribute to their growth (with a 2:1 health to food ratio).</Spanish>
 		<Portuguese>Todas as unidades come&#231;am com a promo&#231;&#227;o M&#233;dico I</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -124,7 +124,7 @@
 		<French>Le Pouvoir de l'Inquisition:</French>
 		<German>Die Macht der Inquisition:</German>
 		<Italian>Il potere dell'Inquisizione:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of the Inquisition:</Spanish>
 		<Portuguese>O Poder da Inquisi&#231;&#227;o:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -133,7 +133,7 @@
 		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville</French>
 		<German>Kein Stabilit&#228;tsmalus durch Inquisition und +2[ICON_ESPIONAGE] pro Stadt</German>
 		<Italian>Nessuna penalit&#224; in punti stabilit&#224; per le Persecuzioni Religiose e +2XP in ogni citt&#224;</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Less stability penalty from Religious Persecution and +2 [ICON_ESPIONAGE] per city.</Spanish>
 		<Portuguese>Sem penalidade na estabilidade por Persegui&#231;&#245;es Religiosas e +2 Pontos de Espionagem por cidade</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -142,7 +142,7 @@
 		<French>Le Pouvoir de la Mer:</French>
 		<German>Die Macht der Seefahrt:</German>
 		<Italian>Il Potere del Mare:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of the Vikings:</Spanish>
 		<Portuguese>O Poder da Mar&#233;:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -151,7 +151,7 @@
 		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an</French>
 		<German>Alle Marineeinheiten k&#246;nnen den Ozean befahren</German>
 		<Italian>Tutte le unit&#224; navali possono passare sulle caselle oceaniche</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>All naval units can enter ocean tiles, trade is possible through oceans by default, less stability penalty for razing cities.</Spanish>
 		<Portuguese>Todas as unidades navais podem entrar nas casas de oceano</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -160,7 +160,7 @@
 		<French>Le Pouvoir des &#233;changes:</French>
 		<German>Die Macht der H&#228;ndler:</German>
 		<Italian>Il Potere del Commercio:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Trade:</Spanish>
 		<Portuguese>O Poder do Com&#233;rcio:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -178,7 +178,7 @@
 		<French>Le Pouvoir de la Croissance:</French>
 		<German>Die Macht des Wachstums:</German>
 		<Italian>Il Potere della Crescita:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Growth:</Spanish>
 		<Portuguese>O Poder do Crescimento:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -187,7 +187,7 @@
 		<French>+2 [ICON_FOOD] par ville</French>
 		<German>+2 [ICON_FOOD] in jeder Stadt</German>
 		<Italian>+2 [ICON_FOOD] Extra per citt&#224;</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Your cities yield +2[ICON_FOOD].</Spanish>
 		<Portuguese>+2 [ICON_FOOD] por cidade</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -214,7 +214,7 @@
 		<French>Le Pouvoir de la Tol&#233;rance:</French>
 		<German>Die Macht der Toleranz:</German>
 		<Italian>Il Potere della Tolleranza:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Tolerance:</Spanish>
 		<Portuguese>O Poder da Toler&#226;ncia:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -232,7 +232,7 @@
 		<French>Le Pouvoir de l'Industrie:</French>
 		<German>Die Macht der Industrie:</German>
 		<Italian>Il potere delle Industrie:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Industry:</Spanish>
 		<Portuguese>O Poder da Ind&#250;stria:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -241,7 +241,7 @@
 		<French>Production d'unit&#233;s 25%% plus rapide apr&#232;s la d&#233;couverte de la Poudre &#224; Canon</French>
 		<German>Steigert die Produktion von Einheiten um 25% nach der Erfindung des Schie&#223;pulvers</German>
 		<Italian>L'addestramento di unit&#224; &#232; il 25% pi&#249; veloce dopo la scoperta della Polvere da Sparo</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>25% faster unit production after the discovery of Gunpowder.</Spanish>
 		<Portuguese>Produ&#231;&#227;o militar incrementada em 25% depois da descoberta da P&#243;lvora</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -250,7 +250,7 @@
 		<French>Le Pouvoir de la Libert&#233;:</French>
 		<German>Die Macht der goldenen Freiheit:</German>
 		<Italian>Il potere della Libert&#224; Dorata:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Golden Liberty:</Spanish>
 		<Portuguese>O Poder da Liberdade Dourada:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -268,7 +268,7 @@
 		<French>Le Pouvoir de l'Expension:</French>
 		<German>Die Macht des endlosen Landes:</German>
 		<Italian>Il Potere delle Terre Infinite:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of the Endless Land:</Spanish>
 		<Portuguese>O Poder da Terra Infinita:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -277,7 +277,7 @@
 		<French>-50% de co&#251;t de maintenance pour le nombre de villes</French>
 		<German>50% reduzierte Unterhaltskosten f&#252;r die Anzahl an St&#228;dten</German>
 		<Italian>-50% costo di mantenimento per il numero delle citt&#224;</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>50% decrease in all city maintenance costs from both number of cities and city distance, and also in all civic costs associated with cities.</Spanish>
 		<Portuguese>Redu&#231;&#227;o de 50% em todo custo de manuten&#231;&#227;o associado com o n&#250;mero de cidades</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -286,7 +286,7 @@
 		<French>Le Pouvoir des Banques:</French>
 		<German>Die Macht des Bankwesens:</German>
 		<Italian>Il Potere delle Banche:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Banking:</Spanish>
 		<Portuguese>O Poder dos Bancos:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -295,7 +295,7 @@
 		<French>Co&#251;t des Mercenaires divis&#233; par 2</French>
 		<German>Halbierte S&#246;ldernkosten</German>
 		<Italian>Dimezza il costo dei Mercenari</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>All mercenary costs are halved, companies are more likely to spread to your cities.</Spanish>
 		<Portuguese>Os custos de Mercen&#225;rios s&#227;o cortados pela metade</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -304,7 +304,7 @@
 		<French>Le Pouvoir des Cottages:</French>
 		<German>Die Macht der Bewirtschaftung:</German>
 		<Italian>Il Potere dell'Economia dei Cottage:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Cottage Economy:</Spanish>
 		<Portuguese>O Poder da Economia das Cabanas</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -322,7 +322,7 @@
 		<French>Le Pouvoir de la d&#233;couverte:</French>
 		<German>Die Macht der Erkundung:</German>
 		<Italian>Il Potere delle Scoperte:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Discovery:</Spanish>
 		<Portuguese>O Poder da Descoberta:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -331,7 +331,7 @@
 		<French>Les projets coloniaux co&#251;te 30%% moins cher &#224; produire</French>
 		<German>30% reduzierte Kosten f&#252;r Kolonien</German>
 		<Italian>I Progetti Coloniali vengono costruiti il 30% pi&#249; velocemente</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Colonial Projects are 30% cheaper to build, free Feitoria in your newly founded cities after the discovery of Astronomy.</Spanish>
 		<Portuguese>Projetos Coloniais s&#227;o 30% mais baratos</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -340,7 +340,7 @@
 		<French>Le Pouvoir des Alliances:</French>
 		<German>Die Macht der Allianz:</German>
 		<Italian>Il Potere delle Alleanze:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Alliances:</Spanish>
 		<Portuguese>O Poder das Alian&#231;as:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -349,7 +349,7 @@
 		<French>Les nations lointaines sont plus amicale</French>
 		<German>Andere Zivilisationen sind im allgmeinen wohlgesinnter</German>
 		<Italian>Le nazioni straniere sono generalmente amichevoli</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Foreign nations are generally friendlier.</Spanish>
 		<Portuguese>Na&#231;&#245;es estrangeiras s&#227;o geralmente mais amig&#225;veis</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -358,7 +358,7 @@
 		<French>Le Pouvoir des Janissaires:</French>
 		<German>Die Macht der Janitscharen:</German>
 		<Italian>Il Potere dei Giannizzeri:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Janissaries:</Spanish>
 		<Portuguese>O Poder dos Jan&#237;zaros:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -376,7 +376,7 @@
 		<French>Le Pouvoir de la Formation Militaire:</French>
 		<German>Die Macht der milit&#228;rischen Formation:</German>
 		<Italian>Il Potere della Formazione Militare:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Military Formation:</Spanish>
 		<Portuguese>O Poder da Forma&#231;&#227;o Militar:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -385,7 +385,7 @@
 		<French>Toute les unit&#233;s commence avec la promotion Formation</French>
 		<German>Alle Einheiten starten mit der Bef&#246;rderung Formation</German>
 		<Italian>Tutte le unit&#224; cominciano con la promozione Formazione</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>All units start with the Formation promotion.</Spanish>
 		<Portuguese>Todas as unidades come&#231;am com a promo&#231;&#227;o Forma&#231;&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -394,7 +394,7 @@
 		<French>Le Pouvoir du Commerce:</French>
 		<German>Die Macht der Wirtschaft:</German>
 		<Italian>Il Potere del Commercio:</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Power of Commerce:</Spanish>
 		<Portuguese>O Poder do Com&#233;rcio:</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -403,7 +403,7 @@
 		<French>+2 Routes Commerciale par ville</French>
 		<German>+2 Handelsverbindungen in jeder Stadt</German>
 		<Italian>+2 Rotte Commerciali per citt&#224;</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>+2 Trade Routes in your cities.</Spanish>
 		<Portuguese>+2 Rotas Comerciais em cada cidade</Portuguese>
 	</TEXT>
 	<TEXT>

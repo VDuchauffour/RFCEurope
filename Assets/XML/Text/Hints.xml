@@ -8,7 +8,7 @@
 		<German>Um einen S&#246;ldner anzuheuern, klickt auf das Axt-Symbol in der oberen linken Ecke des Bildschirms.</German>
 		<Italian>Per assoldare dei mercenari clicca sull'icona a forma di "ascia" in alto a sinistra, sullo schermo.</Italian>
 		<Spanish>Para contratar a un mercenario, haz clic en el icono del hacha que hay en la parte superior izquierda de la pantalla.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>To hire a mercenary, click on the "axe" icon in the upper left hand side of the screen.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_2</Tag>
@@ -17,7 +17,7 @@
 		<German>Falls ihr des Franz&#246;sischen, Deutschen, Italienischen, Spanischen oder Russischen m&#228;chtig seid, k&#246;nnt ihr uns helfen diese Mod in die entsprechende Sprache zu &#252;bersetzen</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you can read any of French, German, Italian, Spanish or Portuguese, you could help us translate this mod into that language.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_3</Tag>
@@ -26,7 +26,7 @@
 		<German>Die Kombination von gewaltsamen mit liberalen Gesellschaftsformen f&#252;hrt zu Stabilit&#228;tsverlusten.</German>
 		<Italian>Passare da una forma di governo autoritaria alla democrazia causer&#224; un periodo di instabilit&#224;.</Italian>
 		<Spanish>Al cambiar de un principio autoritario a la Democracia se producir&#225; un periodo de inestabilidad.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Combining more oppressive civics with more liberal ones will result in a stability penalty.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_4</Tag>
@@ -35,7 +35,7 @@
 		<German>Im Finanzberater k&#246;nnt Ihr die f&#252;r eure Stabilit&#228;t entscheidenden Parameter &#252;berpr&#252;fen</German>
 		<Italian>Puoi controllare i parametri che influenzano la tua stabilit&#224; nella schermata del consigliere economico.</Italian>
 		<Spanish>Puedes comprobar los par&#225;metros que afectan a tu estabilidad en el consejero financiero.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can check the parameters influencing your stability in the Financial Advisor.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_5</Tag>
@@ -44,7 +44,7 @@
 		<German>RFC Europe basiert auf Rhye's and Fall of Civilization</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RFC Europe is based on Rhye's and Fall of Civilization. You can visit the official site for the original mod at http://rhye.civfanatics.net</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_6</Tag>
@@ -53,7 +53,7 @@
 		<German>In RFC Europe sch&#252;tzt euch nichts vor der Pest</German>
 		<Italian>Scoprendo la medicina sarai al sicuro dalla peste.</Italian>
 		<Spanish>Cuando descubras la Medicina estar&#225;s a salvo de la peste.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In RFC Europe plagues are often fatal, and nothing can keep you safe from them.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_7</Tag>
@@ -62,7 +62,7 @@
 		<German>Zum Diskutieren von RFC Europe besucht die offizielle "Rhye's and Fall"-Website unter http://rhye.civfanatics.net und wechselt ins modmod Forum.</German>
 		<Italian>Visita il sito ufficiale di "Rhye's and Fall" all'indirizzo http://rhye.civfanatics.net</Italian>
 		<Spanish>Visita el sitio web oficial de "Rhye's and Fall" en http://rhye.civfanatics.net</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>For RFC Europe discussions and lots of additional information about RFCE visit the mod forum at Civfanatics: http://forums.civfanatics.com/forumdisplay.php?f=386</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_8</Tag>
@@ -71,7 +71,7 @@
 		<German>In RFC Europe sind Kontakte permanent und all katholischen Zivilisationen stellen bei der Konvertierung den Kontakt zum Papst her</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In RFC Europe contacts are permanent and all nations establish contact with the Pope when Catholicism first spread to their cities.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_9</Tag>
@@ -80,7 +80,7 @@
 		<German>Botschaften wurden aus RFC Europe entfernt.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Embassies have been removed from RFC Europe, all contacts are permanent in the mod.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_10</Tag>
@@ -89,7 +89,7 @@
 		<German>Hin und wieder ruft der Papst die katholischen Nationen zum Kreuzzug auf. Das kann f&#252;r euch eine Gefahr aber auch eine g&#252;nstige Gelegenheit sein.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Every now and then the Pope would call upon the Catholic nations to go on a Crusade. This may provide either danger or opportunity for you.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_11</Tag>
@@ -98,7 +98,7 @@
 		<German>Ungarische Vegvars sind exzellente Verteidigungsgeb&#228;ude, durch die feindliche Einheiten in einem 2x2 Quadrat um die Stadt besch&#228;digt werden.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>The Hungarian V&#233;gv&#225;r is an excellent defensive building, damaging all enemy units within 2 tiles of the city.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_12</Tag>
@@ -107,7 +107,7 @@
 		<German>Janitscharen waren die Elitegardisten des Osmanischen Sultans und wurden aus der eroberten christlichen Bev&#246;lkerung rekrutiert</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Janissaries were the elite guards of the Ottoman Sultans and were drafted from the conquered Christian population in the Empire.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_13</Tag>
@@ -116,7 +116,7 @@
 		<German>Der einzige Zugang zum Schwarzen Meer ist &#252;ber den Bosporus nahe Konstantinopel (Istanbul)</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>The only way in and out of the Black Sea is via the Bosporus near Constantinople (Istanbul).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_14</Tag>
@@ -125,7 +125,7 @@
 		<German>Wenn ein Totenkopf &#252;ber Euren St&#228;dten erscheint, ist dort die Pest ausgebrochen! Die Bev&#246;lkerung und die Einheiten in der betroffenen Stadt und der n&#228;heren Umgebung werden aller Voraussicht nach dramatisch abnehmen. Um die Auswirkungen und Dauer der Pest zu reduzieren, solltet Ihr den Gesundheitswert in den St&#228;dten m&#246;glichst hoch halten.</German>
 		<Italian>Se vedi un teschio sulle tue citt&#224; significa che c'&#232; la peste! Popolazione e unit&#224; in citt&#224; e nella zona circostante diminuiranno drasticamente. Per ridurre effetti e durata della peste mantieni in salute le tue citt&#224;.</Italian>
 		<Spanish>Si aparece una calavera sobre tus ciudades... &#233;es por que tienen la peste! La poblaci&#243;n y las unidades de la ciudad y su regi&#243;n circundante probablemente comiencen a decrecer dram&#225;ticamente. Para reducir los efectos y la duraci&#243;n de la peste, mant&#233;n elevada la salud de tus ciudades.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you get a skull over your cities, it means they have the plague! The population and units in the city and in the surrounding region will probably decrease dramatically. To reduce the effects and the duration of plague, keep your cities healthy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_15</Tag>
@@ -134,7 +134,7 @@
 		<German>Die Pest kann sich auf viele Arten ausbreiten - &#252;ber Handelswege, Stra&#223;en und zwischen benachbarten St&#228;dten.</German>
 		<Italian>La peste si pu&#242; diffondere in molti modi: attraverso rotte commerciali, lungo le strade e tra citt&#224; confinanti.</Italian>
 		<Spanish>La peste se puede propagar de muchas maneras, a trav&#233;s de las rutas comerciales, por los caminos o entre ciudades vecinas.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Plague can spread in many ways - through trade routes, along roads and between neighbouring cities.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_16</Tag>
@@ -143,7 +143,7 @@
 		<German>Neben dem eingestellten Schwierigkeitsgrad wirkt sich auch die Wahl der Zivilisation auf das Schwierigkeitsniveau dieser Partie aus. Achtet deshalb darauf, eine Zivilisation zu w&#228;hlen, die Eurem Spielstil und Eurem Erfahrungsstand entspricht.</German>
 		<Italian>La civilt&#224; che scegli influenza la difficolt&#224; tanto quanto il livello di difficolt&#224; che hai scelto. Assicurati di selezionare una civilt&#224; che sia adatta al tuo stile di gioco e al tuo livello di esperienza.</Italian>
 		<Spanish>La civilizaci&#243;n que elijas afecta a la dificultad tanto como el nivel de dificultad que elijas. Elige una civilizaci&#243;n que se acomode a tu estilo de juego y tu nivel de experiencia.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>The civilization you choose to play affects your difficulty every bit as much as the difficulty level you choose. Make sure to pick a civ that suits your playing style and your level of expertise.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_17</Tag>
@@ -152,7 +152,7 @@
 		<German>Jede Zivilisation verf&#252;gt &#252;ber verborgene Modifikatoren, die ihr Wachstum beeinflussen. Auf diese Weise werden auch moderne Zivilisationen trotz ihres sp&#228;teren Spielstarts nicht benachteiligt.</German>
 		<Italian>Ogni civilt&#224; ha dei modificatori nascosti che ne influenzano la crescita. In questo modo le civilt&#224; moderne non sono svantaggiate dall'avvio in ritardo.</Italian>
 		<Spanish>Todas las civilizaciones tienen modificadores ocultos que afectan a su crecimiento. De este modo, el inicio tard&#237;o de las civilizaciones modernas no constituye una desventaja.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Every civ has hidden modifiers that influence their growth. This way, modern civs are not disadvantaged by their late start.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_18</Tag>
@@ -161,7 +161,7 @@
 		<German>Ihr k&#246;nnt unabh&#228;ngigen Staaten und unbedeutenderen Zivilisationen nur dadurch den Krieg erkl&#228;ren, dass Ihr Einheiten in ihr Territorium einmarschieren l&#228;sst.</German>
 		<Italian>Puoi dichiarare guerra agli stati indipendenti e alle civilt&#224; minori solo facendo entrare le tue unit&#224; nel loro territorio.</Italian>
 		<Spanish>Puedes declarar la guerra a estados independientes y civilizaciones menores si mueves tus unidades a su territorio.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can declare war on independent states and minor civs simply by moving your units into their territory.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_19</Tag>
@@ -170,7 +170,7 @@
 		<German>Ihr k&#246;nnt Kolonialmacht werden indem ihr Kolonialprojekte erstellt und Monopole &#252;ber exotische Waren aufbaut.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can become a colonial power by building colonial projects and establishing monopoly over exotic goods.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_20</Tag>
@@ -179,7 +179,7 @@
 		<German>Die Handelsrepublik ist f&#252;r friedfertige kommerzielle Reiche eine gro&#223;artige Gesellchaftsform.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Merchant Republic is a great Civic, for a peaceful commercial Empire.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_21</Tag>
@@ -188,7 +188,7 @@
 		<German>Die Kombination bestimmter Staatsformen kann die Stabilit&#228;t Eurer Zivilisation verbessern oder auch beeintr&#228;chtigen.</German>
 		<Italian>Combinare alcune forme di governo pu&#242; migliorare o peggiorare la stabilit&#224; del tuo impero.</Italian>
 		<Spanish>Al combinar algunos principios mejorar&#225;s o perjudicar&#225;s la estabilidad de tu imperio.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Combining certain civics will improve or harm the stability of your empire.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_22</Tag>
@@ -197,7 +197,7 @@
 		<German>Behaltet das aktuelle Jahr im Auge, diese Mod erstreckt sich von 500 n.Chr. bis 1800 n.Chr. in 500 Runden.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Keep track of the current year, this mod spans from 500 AD to 1800 AD in 500 turns.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_23</Tag>
@@ -206,7 +206,7 @@
 		<German>Beachtet, dass Ihr jederzeit eine neu entstandene Zivilisation &#252;bernehmen k&#246;nnt, wenn Ihr mit der Zivilisation, die Ihr zuerst gew&#228;hlt habt, nicht zufrieden seid. Ihr k&#246;nen diese M&#246;glichkeit auch nutzen, um bereits ab dem Jahr 500 n.Chr. zu spielen, obwohl Ihr eigentlich eine Zivilisation ausgesucht habt, die erst sp&#228;ter im Spiel startet.</German>
 		<Italian>Ricorda che puoi sempre assumere il controllo di una civilt&#224; appena sorta, se non ti piace quella con cui hai iniziato. Inoltre puoi usare questa caratteristica per cominciare a giocare dal 3000 a.C. anche se vuoi scegliere una civilt&#224; che comincia pi&#233; tardi.</Italian>
 		<Spanish>Recuerda que siempre puedes asumir el control de una civilizaci&#243;n reciente si no te gusta la civilizaci&#243;n con la que has empezado. Tambi&#233;n puedes aprovechar esta opci&#243;n para jugar desde el a&#241;o 3000 a. C. si deseas jugar con una civilizaci&#243;n que empiece m&#225;s tarde.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Remember that you can always take control of a newborn civ if you don't like the civilization you started with. You can also use this feature to play from 500AD even when you want to pick a civ that starts later on.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_24</Tag>
@@ -215,7 +215,7 @@
 		<German>Die Kombination von Kirchenrecht und Religionsfreiheit ist keine gute Idee.</German>
 		<Italian>Combinare lo stato di polizia con la libert&#224; di parola non &#232; una buona idea.</Italian>
 		<Spanish>Combinar Estado policial y Libertad de expresi&#243;n no es una buena idea.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Combining Religious Law and Religious Tolerance is not a good idea.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_25</Tag>
@@ -224,7 +224,7 @@
 		<German>In Rhye's and Fall of Civilization und RFC Europe k&#246;nnen Vasallenstaaten Kriegserkl&#228;rungen ausgeben.</German>
 		<Italian>In Rhye's and Fall i vassalli possono dichiarare guerra.</Italian>
 		<Spanish>Los vasallos pueden declarar una guerra en Rhye's and Fall of Civilization.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In Rhye's and Fall of Civilization and RFC Europe, vassals can declare war.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_26</Tag>
@@ -233,7 +233,7 @@
 		<German>In Rhye's and Fall of Civilization und RFC Europe kostet die Fortbewegung auf Ozean-Gel&#228;ndefeldern &#189; Fortbewegungspunkt.</German>
 		<Italian>In Rhye's and Fall il movimento nelle caselle oceaniche costa &#233; punto movimento.</Italian>
 		<Spanish>En Rhye's and Fall of Civilization el movimiento a trav&#233;s de casillas de oc&#233;ano cuesta medio punto de movimiento.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In Rhye's and Fall of Civilization and RFC Europe, movement through ocean tiles costs 1/2 movement point.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_27</Tag>
@@ -242,7 +242,7 @@
 		<German>In Rhye's and Fall of Civilization und RFC Europe betr&#228;gt das maximale Einkommen durch Schreine 20 Gold pro Runde.</German>
 		<Italian>In Rhye's and Fall l'entrata massima da un santuario &#232; di 20 oro per turno.</Italian>
 		<Spanish>En Rhye's and Fall of Civilization los ingresos m&#225;ximos de un santuario o corporaci&#243;n son de 20 monedas por turno.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In Rhye's and Fall of Civilization and RFC Europe, the max income from a shrine is 20 gold per turn.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_28</Tag>
@@ -251,7 +251,7 @@
 		<German>RFC Europe f&#252;hrt viele zetigen&#246;ssischen Wunder und Zivilisationen ein, die im normalen Civilization nicht vorhanden sind</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RFC Europe introduces many wonders which correspond to the time period and the nations not included in standard Civilization.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_29</Tag>
@@ -260,7 +260,7 @@
 		<German>In RFC Europe werden Vasallenstaaten durch die Entdeckung von Vasallentum freigeschaltet.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In RFC Europe, vassal states are enabled by the discovery of the Vassalage tech.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_30</Tag>
@@ -269,7 +269,7 @@
 		<German>Ihr k&#246;nnt eine Eurer Einheiten als S&#246;ldner verdingen, indem Ihr den Button mit dem Hand-Symbol im Einheitenaktionsmen&#252; anklickt. Anschlie&#223;end kann sie von anderen Zivilisationen angeheuert werden.</German>
 		<Italian>Puoi affittare una delle tue unit&#224; come mercenari cliccando sul pulsante con il simbolo della mano, nell'interfaccia delle azioni delle unit&#224;. Potrebbe essere ingaggiata da un'altra civilt&#224;.</Italian>
 		<Spanish>Puedes alquilar los servicios de una de tus unidades como mercenaria si haces clic en el s&#237;mbolo de la mano de la interfaz de acciones de la unidad. Otra civilizaci&#243;n podr&#237;a contratarla.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>While in RFC you can hire out one of your units as a Mercenary and another civ may hire it, this feature is disabled in RFCE. In our mod all potential mercenaries come from a global mercenary pool instead.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_31</Tag>
@@ -278,7 +278,7 @@
 		<German>Wenn Ihr die Mod m&#246;gt und Verbesserungsvorschl&#228;ge habt oder einen Bug melden wollt, besucht das Entwicklerforum unter CivFanatics.com.</German>
 		<Italian>Se ti piace questo mod e hai delle idee per migliorarlo, o anche se devi semplicemente segnalare un problema, assicurati di controllare il forum di sviluppo su CivFanatics.com.</Italian>
 		<Spanish>Si te gusta el mod y tienes ideas para mejorarlo o has encontrado alg&#233;n error del que informar, visita el foro de dise&#241;o en CivFanatics.com.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you have have a bug to report, have any ideas how to improve the mod, or just simply like RFCE, make sure to check out the development forum at CivFanatics.com.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_32</Tag>
@@ -287,7 +287,7 @@
 		<German>Wenn es schon eine Weile her ist, seit Ihr das letzte Mod-Update installiert habt, besucht CivFanatics.com, um eine neuere Version herunterzuladen. Bei diesem Mod handelt es sich um ein aktives Entwicklungsprojekt und dementsprechend h&#228;ufig werden neue Updates bereitgestellt, von denen jedes zahlreiche Fixes und neue Features enth&#228;lt.</German>
 		<Italian>Se &#232; passato un po' di tempo dall'ultima volta che hai scaricato una versione aggiornata del mod, assicurati di controllare su CivFanatics.com se ce n'&#232; una nuova. Il mod &#232; in continuo sviluppo e spesso vengono caricati degli aggiornamenti, ognuno dei quali &#232; pieno di novit&#224; e risolve i problemi di quelli precedenti.</Italian>
 		<Spanish>Si ya hace tiempo que conseguiste tu &#233;ltima versi&#243;n actualizada del mod, visita CivFanatics.com para ver si hay alguna nueva. El mod est&#225; en continuo desarrollo, por lo que las actualizaciones son frecuentes. Todas las actualizaciones incluyen nuevas caracter&#237;sticas y soluciones de errores.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If it's been a while since the last time you got an updated version of the mod, make sure to check CivFanatics.com for a new version. The mod is in active development, and updates are uploaded often. Every update is full of fixes and new features.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_33</Tag>
@@ -296,7 +296,7 @@
 		<German>Es mag verlockend erscheinen, ein riesiges Imperium aufzubauen, dennoch sollten Ihr darauf achten, dass Eure Expansionsbestrebung nicht zu einer Destabilisierung Eurer Zivilisation f&#252;hrt! Expansiv orientierte Staatsformen k&#246;nnen dabei sicherlich hilfreich sein.</German>
 		<Italian>Potr&#224; anche sembrare una buona idea, creare un impero enorme, ma devi stare attento a non lasciare che la tua espansione destabilizzi l'impero! La forma di governo espansione ti pu&#242; aiutare.</Italian>
 		<Spanish>Crear un imperio enorme puede ser tentador, pero debes tener cuidado para que tu expansi&#243;n no lo desestabilice. Los principios de expansi&#243;n te ayudar&#225;n a conseguirlo.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Creating an enormous empire may seem tempting, but you have to be very careful not to let your expansion destabilize your empire! The Expansion Civics can help with that.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_34</Tag>
@@ -305,7 +305,7 @@
 		<German>Schaut euch die Dateien im Reference Verzeichnis an um Details und Eigenschaften von RFC Europe zu erhalten</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Check the files in the Reference folder for details on some of the new features in RFCE.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_35</Tag>
@@ -314,7 +314,7 @@
 		<German>In Rhye's and Fall of Civilization und RFC Europe ist die Schnelltaste f&#252;r den Kameraflugmodus [STRG + F]</German>
 		<Italian>In Rhye's and Fall la combinazione di tasti per la selezione rapida della visuale dall'alto &#232; diventata [CTRL + F]</Italian>
 		<Spanish>En Rhye's and Fall of Civilization se ha cambiado el atajo de teclado para la c&#225;mara a&#233;rea a [CTRL + F].</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In Rhye's and Fall of Civilization and RFC Europe, camera flying mode hotkey has changed to [CTRL + F].</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_36</Tag>
@@ -323,7 +323,7 @@
 		<German>RFC Europe beinhaltet viele neuen Landschaftstypen und Resourcen</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RFC Europe has many new terrain types and resources, to be able to better represent medieval Europe in the mod.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_37</Tag>
@@ -332,7 +332,7 @@
 		<German>RFC Europe besitzt einen vollst&#228;ndig &#252;berarbeiteten Technologiebaum</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RFC Europe has a completely reworked mod-specific technology tree, with lots of new techs from the Middle Ages.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_38</Tag>
@@ -341,7 +341,7 @@
 		<German>Wenn Ihr versucht, das Wachstum neu entstandener Zivilisationen zu behindern, werden einige Eurer Einheiten die Seiten wechseln.</German>
 		<Italian>Se provi a fermare la crescita delle civilt&#224; appena nate, alcune delle tue unit&#224; passeranno dalla loro parte.</Italian>
 		<Spanish>Si intentas frenar el crecimiento de civilizaciones recientes, algunas de tus unidades se unir&#225;n a ellas.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you attempt to stop the growth of newborn civs, some of your units will flip to their side.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_39</Tag>
@@ -350,7 +350,7 @@
 		<German>RFC Europe enth&#228;lt mehrere neue Einheitentypen die die Kampfmechanik ver&#228;ndern.</German>
 		<Italian>In Rhye's and Fall sono stati cambiati gli effetti di molte Grandi Meraviglie.</Italian>
 		<Spanish>En Rhye's and Fall of Civilization se han cambiado los efectos de muchas maravillas.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RFC Europe has several new unit types which significantly change the combat mechanics.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_40</Tag>
@@ -359,7 +359,7 @@
 		<German>Ihr k&#246;nnt relig&#246;se Verfolgungen mit einem Inquisitor durchf&#252;hren</German>
 		<Italian>Le unit&#224; militari azteche possono schiavizzare le unit&#224; nemiche sconfitte.</Italian>
 		<Spanish>Las unidades militares aztecas pueden esclavizar a las unidades enemigas derrotadas.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can do religious persecutions with the Prosecutor unit. Having many foreign religions in your cities will hurt your stability severely, so use them!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_41</Tag>
@@ -368,7 +368,7 @@
 		<German>Das Moor ist eine neue Gel&#228;ndeform mit begrenzter Bearbeitungsm&#246;glichkeit.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Moorland is a new type of terrain in RFC Europe, with limited ability to be worked on.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_42</Tag>
@@ -377,7 +377,7 @@
 		<German>Leichte Kavalerie ist schnell und besitze eine hohe R&#252;ckzugsm&#246;glichkeit; benutzt sie um Land zu pl&#252;ndern und den Feind zu schikanieren.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Light cavalry are fast and have high withdrawal rates; use them to pillage land and to harass the enemy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_43</Tag>
@@ -386,7 +386,7 @@
 		<German>Falls Ihr zu m&#252;de seid um weiterzuspielen, es gibt immer Kaffee...</German>
 		<Italian>Se siete stanchi di continuare a giocare, c'&#232; sempre il caff&#232;...</Italian>
 		<Spanish>Si usted est&#225; cansado de seguir jugando, siempre hay caf&#233;...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you feel you are too tired to keep playing, there's always coffee...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_44</Tag>
@@ -395,178 +395,178 @@
 		<German>Snacks in Ma&#223;en schaden nicht!</German>
 		<Italian>Gli spuntini sono buoni con moderazione.</Italian>
 		<Spanish>Las meriendas son buenas en la moderaci&#243;n.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Keep in mind that snacks are only good in moderation!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_45</Tag>
 		<English>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</English>
-		<French>.</French>
+		<French>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</French>
 		<German>In RFC Europe ist die Landkarte in historische Provinzen eingeteilt, die KI Kriege, die Stabilit&#228;t und historische Siegbedingungen festlegen. Um den Namen der Provinz zu sehen, bewegt Ihr den Mauszeiger &#252;ber ein Feld der Landkarte.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</Italian>
+		<Spanish>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</Spanish>
+		<Portuguese>In RFC Europe, the map is divided into historical provinces, which determine AI wars, your stability and historical goals. To see the name of a province, just hover your pointer over a map tile.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_46</Tag>
 		<English>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</English>
-		<French>.</French>
+		<French>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</French>
 		<German>Wenn Ihr bei gedr&#252;ckter [Strg]-Taste &#252;ber die Landkarte gleitet, k&#246;nnt Ihr die Provinzgrenzen hervorheben.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</Italian>
+		<Spanish>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</Spanish>
+		<Portuguese>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_47</Tag>
 		<English>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</English>
-		<French>.</French>
+		<French>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</French>
 		<German>Um eine Provinz f&#252;r eine historische Siegbedingung zu "kontrollieren" m&#252;sst Ihr sicherstellen, dass alle St&#228;dte in dieser Provinz unter Eurer Kontrolle stehen oder Ihr besitzt alle Felder dieser Provinz durch kulturelle Expansion.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</Italian>
+		<Spanish>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</Spanish>
+		<Portuguese>In order to qualify for "controlling" a province for your historical goals, you need to make sure that all cities in the province are yours, or you own all tiles (by cultural expansion) in the province.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_48</Tag>
 		<English>Press the "Ctrl" key and hover over a tile to see which Province it is in.</English>
-		<French>.</French>
+		<French>Press the "Ctrl" key and hover over a tile to see which Province it is in.</French>
 		<German>Dr&#252;ckt die [Strg]-Taste und bewegt den Mauszeiger &#252;ber die einzelnen Felder um zu sehen um welche Provinz es sich handelt.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Press the "Ctrl" key and hover over a tile to see which Province it is in.</Italian>
+		<Spanish>Press the "Ctrl" key and hover over a tile to see which Province it is in.</Spanish>
+		<Portuguese>Press the "Ctrl" key and hover over a tile to see which Province it is in.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_49</Tag>
 		<English>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</English>
-		<French>.</French>
+		<French>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</French>
 		<German>Ihr k&#246;nnt den Forschritt der einzigartigen historischen Siegbedingungen (UHV) leicht im Siegbildschirm (F10) mitverfolgen.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</Italian>
+		<Spanish>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</Spanish>
+		<Portuguese>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_50</Tag>
 		<English>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</English>
-		<French>.</French>
+		<French>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</French>
 		<German>Lasst nicht zu dass andere Zivilisationen St&#228;dte in Eurem Kerngebiet besitzen. Es wird Eure Stabilit&#228;t ernsthaft besch&#228;digen!</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</Italian>
+		<Spanish>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</Spanish>
+		<Portuguese>Don't let another civilization keep cities in your core territory. It will seriously hurt your stability!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_51</Tag>
 		<English>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</English>
-		<French>.</French>
+		<French>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</French>
 		<German>Achtet auf Kleinzivilisationen. Ihre nationale Identit&#228;t ist sehr hoch, sodass Ihr Revolten erwarten k&#246;nnt wenn Ihr sie erobert!</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</Italian>
+		<Spanish>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</Spanish>
+		<Portuguese>Watch out for minor civs. Their national identity is very high, so you can expect revolts if conquering them!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_52</Tag>
 		<English>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</English>
-		<French>.</French>
+		<French>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</French>
 		<German>Goldene Zeitalter haben in RFC Europe (verglichen mit RFC) einen zus&#228;tzlichen Vorteil: Ihr k&#246;nnt die Gesellschaftsformen ohne Anarchie wechseln.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</Italian>
+		<Spanish>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</Spanish>
+		<Portuguese>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_53</Tag>
 		<English>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</English>
-		<French>.</French>
+		<French>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</French>
 		<German>Achtet auf den Wechsel der Gesellschaftsformen. Die Richtigen zu kombinieren hat enorme Vorteile, aber wechselt nicht zu oft. Jede Runde in Anarchie kann bis zu 3 Stabilit&#228;tspunkte permanent abziehen.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</Italian>
+		<Spanish>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</Spanish>
+		<Portuguese>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_54</Tag>
 		<English>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</English>
-		<French>.</French>
+		<French>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</French>
 		<German>Ihr k&#246;nnt im Heidentum keine Staatsreligion proklamieren. Ihr m&#252;sst zuerst die Gesellschaftsfrom &#228;ndern und dann die Staatsreligion deklarieren.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</Italian>
+		<Spanish>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</Spanish>
+		<Portuguese>You cannot proclaim a state religion while you are at Paganism. You have to change your civics first, then declare your state religion.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_55</Tag>
 		<English>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</English>
-		<French>.</French>
+		<French>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</French>
 		<German>Ihr k&#246;nnt keine Religion aus einer Stadt verbannen sofern diese Religion an ein oder mehrere Wunder/Schreine gebunden ist. Falls Ihr also mit Spanien spielt und durch UHV gewinnen wollt, habt keine Hemmungen St&#228;dte mit solchen Geb&#228;uden niederzurei&#223;en.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</Italian>
+		<Spanish>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</Spanish>
+		<Portuguese>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_56</Tag>
 		<English>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</English>
-		<French>.</French>
+		<French>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</French>
 		<German>Beobachtet den Fortschritt der Kolonien auf dem neuen Kolonieinformationsbildschirm. Ihr k&#246;nnt sehr einfach ersehen, welche Kolonien bereits erstellt wurden und welche Teile der Welt immer noch auf Euch warten. Der Bildschirm befindet sich im 5. Tab im Informationsbildschirm (F11).</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</Italian>
+		<Spanish>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</Spanish>
+		<Portuguese>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_57</Tag>
 		<English>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</English>
-		<French>.</French>
+		<French>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</French>
 		<German>In RFC Europe k&#246;nnnen manche S&#246;ldner nur dann angeworben werden, wenn Ihr eine Stadt innerhalb oder in der N&#228;he ihrer Heimatprovinz besitzt.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</Italian>
+		<Spanish>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</Spanish>
+		<Portuguese>In RFC Europe, some unique mercenaries can only be hired if you have a city in or near their native province.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_58</Tag>
 		<English>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</English>
-		<French>.</French>
+		<French>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</French>
 		<German>Stabilit&#228;t kann Ihre Partie bei &#220;berexpansion ruinieren. Achtet darauf in all Euren St&#228;dten so viele stabilit&#228;tssteigernde Geb&#228;ude (Herrenhaus, Gericht, Burg und Nachtwache) wie nur m&#246;glich zu errichten.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</Italian>
+		<Spanish>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</Spanish>
+		<Portuguese>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_59</Tag>
 		<English>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</English>
-		<French>.</French>
+		<French>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</French>
 		<German>Ihr k&#246;nnt keine Technologien handeln, die Ihr nicht selbst erforscht habt. Auch d&#252;rft Ihr gerade erforschte Technologien in den n&#228;chsten 10 Runden nicht handeln.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</Italian>
+		<Spanish>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</Spanish>
+		<Portuguese>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_60</Tag>
 		<English>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</English>
-		<French>.</French>
+		<French>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</French>
 		<German>Seid nicht &#252;berrascht wenn die KI kleiner Zivilisationen Technologien erstaunlich hoch bewerten: Einer der Faktoren, die die Technologiekosten beeinflussen ist die gr&#246;&#223;e Eures Reiches.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</Italian>
+		<Spanish>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</Spanish>
+		<Portuguese>Don't be surprised if the AI of small civs value techs surprisingly high: One of the factors modifying your tech costs is the size of your empire.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_61</Tag>
 		<English>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</English>
-		<French>.</French>
+		<French>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</French>
 		<German>In RFC Europe k&#246;nnt Ihr neugeborenen Zivilisationen 5 Runden lang keinen Krieg erkl&#228;ren.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</Italian>
+		<Spanish>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</Spanish>
+		<Portuguese>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_62</Tag>
 		<English>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</English>
-		<French>.</French>
+		<French>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</French>
 		<German>Ihr werdet keinen hohen Diplomatiebonus mit einer anderen Zivilisation erhalten nur weil Ihr dieselbe Religion habt. Daf&#252;r m&#252;sst Ihr Glaubenspunkte sammeln.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</Italian>
+		<Spanish>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</Spanish>
+		<Portuguese>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_63</Tag>
 		<English>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</English>
-		<French>.</French>
+		<French>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</French>
 		<German>Das Panoramabild im &#214;ffnungsbildschirm von RFC Europe ist der "Teppich von Bayeux" - nur falls Ihr euch wundert.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Italian>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</Italian>
+		<Spanish>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</Spanish>
+		<Portuguese>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_64</Tag>
@@ -575,7 +575,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Be sure to check out the Colony Screen - you can find it in the Info Screen (F11) - and follow the progress of European dominance throughout the World!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_65</Tag>
@@ -584,7 +584,7 @@
 		<German>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</German>
 		<Italian>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</Italian>
 		<Spanish>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_66</Tag>
@@ -593,7 +593,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In RFCE the following straits are passable by both naval and land units: Oresund, Bosporus, Dardanelles</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_67</Tag>
@@ -602,7 +602,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>In RFCE diagonally connected land tiles are passable for naval units too. The narrow straits of Bosporus, Dardanelles, Oresund are represented this way, also this makes naval movement more realistic between small groups of islands.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_68</Tag>
@@ -611,7 +611,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Naval units can pass foreign territory without signing open borders with the owner or declaring war on them!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_69</Tag>
@@ -620,7 +620,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Sleep is for the weak! RFCE is for the bold!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_70</Tag>
@@ -629,7 +629,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Yeah, I can get behind this. Just load back your game, it's not that late. You will get some sleep tomorrow. Or next week.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_71</Tag>
@@ -638,7 +638,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Your nation needs you more than ever, don't you dare to leave your people alone until you reach that UHV!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_72</Tag>
@@ -647,7 +647,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You know you shouldn't continue playing... Yeah, I'm talking to you! No more "just one more turn".[NEWLINE][NEWLINE]Seriously, stop... you have more important things to do!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_73</Tag>
@@ -656,7 +656,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>RNG can be a b*tch... Get over it quickly, it will come back. Theoretically...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_74</Tag>
@@ -665,7 +665,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>The opening image of the mod is depicting the fall of Acre in 1291: "Guillaume de Clermont defending the walls at the Siege of Acre, 1291", by Dominique Papety.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_75</Tag>
@@ -674,7 +674,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Under most religious civics your nation's stability highly depends on your religious unity. So try not to keep multiple religions in your cities unless you run Religious Tolerance; use those Prosecutors!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_76</Tag>
@@ -683,7 +683,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you hold down the "Shift" key while hovering over the map, you can check all civilizations' spawn zones. Same with the "Alt" key and respawn zones. Take a look before you decide where to expand!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_77</Tag>
@@ -692,7 +692,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"To eat your fill but not apply your mind to anything all day is a problem. Are there no games to play? Even that would be smarter than doing nothing." - Confucius</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_78</Tag>
@@ -701,7 +701,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"The essence of strategy is choosing what not to do." - Michael Porter</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_79</Tag>
@@ -710,7 +710,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"Never interrupt your enemy when he is making a mistake." - Napoleon Bonaparte</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_80</Tag>
@@ -719,7 +719,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"I speak Spanish to God, Italian to women, French to men, and German to my horse." - Charles V</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_81</Tag>
@@ -728,7 +728,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"All men can see these tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved." - Sun Tzu</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_82</Tag>
@@ -737,7 +737,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>"Onward, Christian soldiers, marching as to war, with the cross of Jesus going on before. Christ, the royal Master, leads against the foe; forward into battle see His banners go!" - Sabine Baring-Gould</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_1</Tag>
@@ -746,7 +746,7 @@
 		<German>Dreht das Mausrad zum zoomen.</German>
 		<Italian>Usa la rotellina del mouse per zoomare...</Italian>
 		<Spanish>Usad la rueda del rat&#243;n para hacer zoom.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Use your mouse wheel to zoom.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_2</Tag>
@@ -755,7 +755,7 @@
 		<German>Dr&#252;ckt [STRG + I], wenn Ihr mit minimiertem Men&#252; spielen m&#246;chtet. Mit [ALT-I] k&#246;nnt Ihr das Men&#252; ganz ausblenden.</German>
 		<Italian>Premi [CTRL + I] per giocare con l'interfaccia minimizzata. Premi [ALT-I] per giocare senza interfaccia...</Italian>
 		<Spanish>Pulsar [CTRL + I] para jugar con una interfaz minimizada. Pulsar [ALT + I] para jugar sin interfaz.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + I] to play with a minimized interface. Press [ALT-I] to play with no interface.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_3</Tag>
@@ -764,7 +764,7 @@
 		<German>Dreht das Mausrad oder dr&#252;ckt [BILD AUF]/[BILD AB], um den Zoomfaktor der Kamera zu &#228;ndern.</German>
 		<Italian>Puoi usare i tasti [PAG SU] e [PAG GI&#217;] per zoomare la visuale avanti e indietro...</Italian>
 		<Spanish>Se puede usar la rueda del rat&#243;n o [RE P&#193;G] y [AV P&#193;G] para acercar y alejar la c&#225;mara...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can use the mouse wheel or [PAGE UP] and [PAGE DOWN] to zoom the camera in and out...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_4</Tag>
@@ -773,7 +773,7 @@
 		<German>Dr&#252;ckt [STRG + S], um die Partie zu speichern. Mit [STRG + L] k&#246;nnt Ihr eine gespeicherte Partie laden.</German>
 		<Italian>Premi [CTRL + S] per salvare la partita e [CTRL + L] per caricare una partita salvata...</Italian>
 		<Spanish>Pulsar [CTRL + S] para guardar la partida y [CTRL + L] para cargar una guardada...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + S] to Save the Game and [CTRL + L] to Load a saved game...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_5</Tag>
@@ -782,7 +782,7 @@
 		<German>Dr&#252;ckt [STRG + PFEIL LINKS] oder [STRG + RECHTS], um die Kamera in 45-Grad-Schritten zu drehen.</German>
 		<Italian>Premi [CTRL + (FRECCIA SINISTRA)] o [CTRL + (FRECCIA DESTRA)] per ruotare la visuale e impostarla a 45 gradi...</Italian>
 		<Spanish>Pulsar [CTRL + (FLECHA IZQ.)] o [CTRL + (FLECHA DER.)] para girar la c&#225;mara 45 grados...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + (LEFT ARROW)] or [CTRL + (RIGHT ARROW)] to rotate and set the camera by 45 degrees...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_6</Tag>
@@ -791,7 +791,7 @@
 		<German>Doppelklickt auf mehrere Einheiten, um diese zu gruppieren.</German>
 		<Italian>Doppio clic su un gruppo di unit&#224; per unirle...</Italian>
 		<Spanish>Hacer doble clic en un apilamiento de unidades las agrupar&#225;...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Double clicking on a stack of units will group them together...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_7</Tag>
@@ -800,7 +800,7 @@
 		<German>Haltet ALT gedr&#252;ckt und klickt auf einen Stapel, um alle Einheiten auszuw&#228;hlen.</German>
 		<Italian>Tieni premuto ALT e clicca su una pila per selezionare tutte le unit&#224;...</Italian>
 		<Spanish>Mantener pulsado ALT y hacer clic en un apilamiento selecciona a todas las unidades...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down ALT and click on a stack to select all units...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_8</Tag>
@@ -809,7 +809,7 @@
 		<German>Haltet STRG gedr&#252;ckt und klickt auf einen Stapel, um alle Einheiten eines Typs auszuw&#228;hlen.</German>
 		<Italian>Tieni premuto CTRL e clicca su una pila per selezionare tutte le unit&#224; dello stesso tipo...</Italian>
 		<Spanish>Mantener pulsado CTRL y hacer clic en un apilamiento selecciona a todas las unidades del mismo tipo...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down CTRL and click on a stack to select all units of the same type...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_9</Tag>
@@ -818,7 +818,7 @@
 		<German>Habt Ihr mehrere Einheiten ausgew&#228;hlt, k&#246;nnen Ihr der gesamten Gruppe Befehle erteilen.</German>
 		<Italian>Quando pi&#249; unit&#224; sono selezionate, puoi impartire ordini a tutto il gruppo...</Italian>
 		<Spanish>Con varias unidades seleccionadas, se pueden dar &#243;rdenes de grupo que &#233;stas llevar&#225;n a cabo a la vez.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>With multiple units selected, you can give the group orders that they will conduct together.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_10</Tag>
@@ -827,7 +827,7 @@
 		<German>Nach einem Rechtsklick auf ein Transportschiff gehen die Einheiten automatisch an Bord.</German>
 		<Italian>Clicca con il pulsante destro su un mezzo di trasporto per caricare automaticamente le unit&#224; a bordo...</Italian>
 		<Spanish>Hacer clic derecho en un transporte embarcar&#225; directamente las unidades en &#233;l...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Right clicking on a transport will automatically load the units onto it...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_11</Tag>
@@ -836,7 +836,7 @@
 		<German>Habt Ihr ein Transportschiff ausgew&#228;hlt, gehen alle Einheiten nach einem Rechtsklick auf ein angrenzendes Gel&#228;ndefeld automatisch von Bord.</German>
 		<Italian>Quando hai selezionato un mezzo di trasporto, clicca con il pulsante destro del mouse su una casella adiacente per sbarcare automaticamente le unit&#224; a bordo...</Italian>
 		<Spanish>Con un transporte seleccionado, hacer clic derecho en una casilla de tierra adyacente desembarcar&#225; autom&#225;ticamente a las unidades...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>With a transport selected, right clicking on an adjacent land square will automatically unload the units...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_12</Tag>
@@ -845,7 +845,7 @@
 		<German>Dr&#252;ckt [F12], wenn Ihr die Zivilop&#228;die &#246;ffnen m&#246;chtet.</German>
 		<Italian>Premi [F12] per accedere alla Civilopedia...</Italian>
 		<Spanish>Pulsar [F12] para acceder a la Civilopedia...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [F12] to access the Civilopedia...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_13</Tag>
@@ -854,7 +854,7 @@
 		<German>Dr&#252;ckt [DRUCK], um einen Screenshot zu machen und unter "Civ4\Screenshots" zu speichern.</German>
 		<Italian>Premi [STAMP] per scattare una foto che verr&#224; salvata nella directory Civ4\Screenshots...</Italian>
 		<Spanish>Pulsar [IMPR PANT] para hacer una captura de pantalla (se guardar&#225; en la carpeta Civ4\Screenshots)...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [PRINT SCREEN] to take a screenshot (It will be saved in your Civ4\Screenshots folder)...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_14</Tag>
@@ -863,7 +863,7 @@
 		<German>Dr&#252;ckt [ESC], um das Pausemen&#252; zu &#246;ffnen.</German>
 		<Italian>Premi [ESC] per richiamare il menu di opzioni mentre stai giocando...</Italian>
 		<Spanish>Pulsar [ESC] para que aparezca el men&#250; Opciones durante la partida...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [ESC] to bring up the in-game Options Menu...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_15</Tag>
@@ -872,7 +872,7 @@
 		<German>Dr&#252;ckt [STRG + O], um das Optionen-Men&#252; zu &#246;ffnen.</German>
 		<Italian>Premi [CTRL + O] per richiamare il menu di opzioni...</Italian>
 		<Spanish>Pulsar [CTRL + O] para que aparezca el men&#250; Opciones...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + O] to bring up the Options Menu...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_16</Tag>
@@ -881,7 +881,7 @@
 		<German>Dr&#252;ckt die mittlere Maustaste, um die Kamera &#252;ber der aktiven Einheit zu zentrieren.</German>
 		<Italian>Premi il pulsante centrale del mouse per centrare la visuale sull'unit&#224; attiva...</Italian>
 		<Spanish>Pulsar el bot&#243;n central del rat&#243;n para centrar la c&#225;mara en la unidad activa...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press the middle mouse button to center the camera on the active unit...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_17</Tag>
@@ -890,7 +890,7 @@
 		<German>Dr&#252;ckt (nur im Einzelspieler-Modus) [UMSCHALTEN + F5], um das Spiel schnell zu speichern.</German>
 		<Italian>Premi [MAIUSC + F5] (solo Giocatore Singolo) per effettuare un salvataggio rapido...</Italian>
 		<Spanish>Pulsar [MAY&#218;S + F5] (solo en partidas de un jugador) para hacer un guardado r&#225;pido...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [SHIFT + F5] (Single Player Only) to Quick Save...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_18</Tag>
@@ -899,7 +899,7 @@
 		<German>Dr&#252;ckt (nur im Einzelspieler-Modus) [UMSCHALTEN + F8], um ein Spiel schnell zu laden.</German>
 		<Italian>Premi [MAIUSC + F8] (solo Giocatore Singolo) per effettuare un caricamento rapido...</Italian>
 		<Spanish>Pulsar [MAY&#218;S + F8] (solo en partidas de un jugador) para hacer una carga r&#225;pida...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [SHIFT + F8] (Single Player Only) to Quick Load...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_20</Tag>
@@ -908,7 +908,7 @@
 		<German>Dr&#252;ckt [STRG + Zahl], um der gew&#228;hlten Einheit diese Zahl zuzuweisen. Beispiel: Dr&#252;ckt Ihr [STRG + 3] wird die entsprechende Einheit ausgew&#228;hlt, sobald Sie die 3 dr&#252;cken.</German>
 		<Italian>Premi [CTRL + #] per assegnare l'unit&#224; selezionata al tasto #. Per esempio, premendo [CTRL + 3], ogni volta che si premer&#224; il tasto 3 quell'unit&#224; verr&#224; automaticamente selezionata...</Italian>
 		<Spanish>Pulsar [CTRL + n&#250;mero] para vincular la unidad seleccionada a ese n&#250;mero. Por ejemplo: [CTRL + 3] har&#225; que la unidad quede seleccionada autom&#225;ticamente cada vez que se pulse el 3...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + # key] to bind the selected unit to that # key. For example: [CTRL + 3] would make it so anytime 3 is pressed, that unit is automatically selected...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_21</Tag>
@@ -917,7 +917,7 @@
 		<German>Dr&#252;ckt im Stadt-Bildschirm [STRG + Zahl], um die aktuelle Produktionsliste zu speichern. Dr&#252;ckt Ihr in einer anderen Stadt diese Zifferntaste, wird dort die gespeicherte Produktionsliste geladen.</German>
 		<Italian>Mentre ti trovi nella schermata cittadina, [CTRL + #] per salvare la coda di produzione. Questa coda pu&#242; essere caricata in qualsiasi altra citt&#224; premendo il tasto #...</Italian>
 		<Spanish>Pulsar [CTRL + n&#250;mero] en la pantalla de la ciudad para guardar la cola de producci&#243;n. Se podr&#225; cargar esa cola en cualquier otra ciudad pulsando dicho n&#250;mero...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>While in the city screen, press [CTRL + # key] to save the production queue. This queue can be loaded in any other city by pressing the # key...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_22</Tag>
@@ -926,7 +926,7 @@
 		<German>Dr&#252;ckt [F11], um zur Welt-Ansicht zu wechseln.</German>
 		<Italian>Premi [F11] per attivare/disattivare la visuale globale...</Italian>
 		<Spanish>Pulsar [F11] para entrar y salir de la Vista global...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [F11] to quickly switch in and out of Globe View...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_23</Tag>
@@ -935,7 +935,7 @@
 		<German>Im Stadt-Bildschirm k&#246;nnt Ihr mit [PFEIL LINKS] und [PFEIL RECHTS] durch Eure St&#228;dte schalten.</German>
 		<Italian>Quando sei nella schermata cittadina, puoi usare la [FRECCIA SINISTRA] e la [FRECCIA DESTRA] per scorrere le citt&#224;...</Italian>
 		<Spanish>En la pantalla de la ciudad se pueden usar la [FLECHA IZQUIERDA] y la [FLECHA DERECHA] para pasar de una ciudad a otra...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>While in the city screen, you can use [LEFT ARROW] and [RIGHT ARROW] to cycle between cities...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_24</Tag>
@@ -944,7 +944,7 @@
 		<German>Dr&#252;ckt [STRG + B], um die Kartenansicht zu aktivieren.</German>
 		<Italian>Premi [CTRL + B] per attivare/disattivare la visuale mappa semplificata...</Italian>
 		<Spanish>Pulsar [CTRL + B] para activar la vista del mapa limpio...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + B] to toggle Bare Map view...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_25</Tag>
@@ -953,7 +953,7 @@
 		<German>Dr&#252;ckt [STRG + R], um in die Ressourcen-Ansicht zu wechseln.</German>
 		<Italian>Premi [CTRL + R] per visualizzare/nascondere la segnalazione risorse...</Italian>
 		<Spanish>Pulsar [CTRL + R] para activar las marcas de recursos...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + R] to toggle Flag Resources view...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_26</Tag>
@@ -962,7 +962,7 @@
 		<German>Dr&#252;ckt [STRG + Y], um in die Ertrags-Ansicht zu wechseln.</German>
 		<Italian>Premi [CTRL + Y] per visualizzare/nascondere la produzione...</Italian>
 		<Spanish>Pulsar [CTRL + Y] para activar la vista Mostrar rendimientos...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + Y] to toggle Show Yields view...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_27</Tag>
@@ -971,7 +971,7 @@
 		<German>Dr&#252;ckt [STRG + A], um alle Einheiten mit austehenden Befehlen zu bewegen.</German>
 		<Italian>Premi [CTRL + A] per forzare il movimento di tutte le unit&#224; con ordini in coda...</Italian>
 		<Spanish>Pulsar [CTRL + A] para obligar a moverse a todas las unidades con &#243;rdenes en cola...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + A] to force all units with queued orders to move...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_28</Tag>
@@ -980,7 +980,7 @@
 		<German>Blendet das Gel&#228;nderaster mit [STRG + T] ein/aus.</German>
 		<Italian>Premi [CTRL + T] per attivare la griglia delle caselle...</Italian>
 		<Spanish>Pulsar [CTRL + T] para activar la cuadr&#237;cula.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + T] to toggle the Tile Grid.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_29</Tag>
@@ -989,7 +989,7 @@
 		<German>Dr&#252;ckt [ALT + Q], um die Partie zu verlassen. Im Multiplayer-Modus &#252;bernimmt nun die KI die Kontrolle &#252;ber Eure Zivilisation.</German>
 		<Italian>Premi [ALT + Q] per ritirarti dalla partita. Nel multigiocatore, il controllo della tua civilt&#224; viene automaticamente assegnato alla I.A....</Italian>
 		<Spanish>Pulsar [ALT + Q] para retirarse de la partida. En el modo para varios jugadores esto le dar&#225; el control de la civilizaci&#243;n a la IA...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [ALT + Q] to retire from the game...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_33</Tag>
@@ -998,7 +998,7 @@
 		<German>Ruft mit [CTRL + W] den Weltenbauer auf.</German>
 		<Italian>Premi [CTRL + W] per accedere all'editor...</Italian>
 		<Spanish>Pulsar [CTRL + W] para acceder al creador de mundos...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + W] to access the Worldbuilder...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_34</Tag>
@@ -1007,7 +1007,7 @@
 		<German>Dr&#252;ckt [W] oder [EINGABETASTE] um durch Eure aktiven Einheiten zu schalten.</German>
 		<Italian>Premi [W] o [INVIO] per scorrere le unit&#224; attive...</Italian>
 		<Spanish>Pulsar [W] o [INTRO] para pasar de una unidad activa a otra...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [W] or [ENTER] to cycle through your active units...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_35</Tag>
@@ -1016,7 +1016,7 @@
 		<German>Dr&#252;ckt [/] um durch Eure aktiven Bautrupps zu schalten.</German>
 		<Italian>Premi [/] per scorrere tra i lavoratori...</Italian>
 		<Spanish>Pulsar [-] (gui&#243;n) para desplazarse por los trabajadores activos...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [/] to scroll through active workers...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_36</Tag>
@@ -1025,7 +1025,7 @@
 		<German>Dr&#252;ckt [KOMMA] und [PUNKT], um durch die Einheiten auf einem Gel&#228;ndefeld zu schalten.</German>
 		<Italian>Premi [,] e [.] per scorrere tra le unit&#224; che si trovano nella stessa casella...</Italian>
 		<Spanish>Pulsar [,] (coma) y [.] (punto) para desplazarse por las unidades que est&#233;n en la misma casilla...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [COMMA] and [PERIOD] to scroll through units on the same square...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_37</Tag>
@@ -1034,7 +1034,7 @@
 		<German>Dr&#252;ckt [UMSCHALTEN + EINGABETASTE], um die aktuelle Runde zu beenden.</German>
 		<Italian>Premi [MAIUSC + INVIO] per forzare la fine del turno...</Italian>
 		<Spanish>Pulsar [MAY&#218;S + INTRO] para forzar el final del turno...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [SHIFT + ENTER] to force the turn to end...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_38</Tag>
@@ -1043,7 +1043,7 @@
 		<German>Haltet [ALT] gedr&#252;ckt und bewegt die Maus &#252;ber eine Position, um Eure Chancen im Falle eines Angriffs zu betrachten.</German>
 		<Italian>Tieni premuto [ALT] e punta con il mouse una casella per visualizzare le probabilit&#224; di vittoria in caso di attacco...</Italian>
 		<Spanish>Mantener pulsada la tecla ALT mientras se se&#241;ala una casilla con el cursor para ver las probabilidades de un ataque...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down the ALT key while mousing-over a plot to view the combat odds for an attack...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_39</Tag>
@@ -1052,7 +1052,7 @@
 		<German>M&#246;chtet Ihr Eure Kampfchancen betrachten, haltet die rechte Maustaste &#252;ber dem gew&#252;nschten Gel&#228;ndefeld gedr&#252;ckt.</German>
 		<Italian>Per visualizzare le probabilit&#224; di vittoria di uno scontro, tieni premuto il pulsante destro del mouse su una casella bersaglio...</Italian>
 		<Spanish>Mantener el cursor encima de la casilla objetivo para ver las probabilidades del combate...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>To view combat odds, hold down the right mouse button on the target tile...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_40</Tag>
@@ -1061,7 +1061,7 @@
 		<German>Dr&#252;ckt [POS1] und [ENDE] wenn Ihr durch Eure St&#228;dte schalten m&#246;chtet.</German>
 		<Italian>Premi [HOME] e [FINE] per scorrere le tue citt&#224;...</Italian>
 		<Spanish>Pulsar [INICIO] y [FIN] para pasar de una ciudad a otra...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [HOME] and [END] to cycle through your cities...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_41</Tag>
@@ -1070,7 +1070,7 @@
 		<German>Dr&#252;ckt [EINFG] um einen Blick auf die n&#228;chstgelegene verb&#252;ndete Stadt zu werfen.</German>
 		<Italian>Premi [INS] per aprire la schermata della citt&#224; alleata pi&#249; vicina...</Italian>
 		<Spanish>Pulsar [INSERT] para abrir la ciudad amistosa m&#225;s cercana...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [INSERT] to open up the nearest friendly city...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_42</Tag>
@@ -1079,7 +1079,7 @@
 		<German>Haltet [UMSCHALTEN] gedr&#252;ckt, um am Ende der Bauliste Eurer Stadt weitere Objekte hinzuzuf&#252;gen.</German>
 		<Italian>Tieni premuto [MAIUSC] per aggiungere degli oggetti in fondo alla coda di costruzione della tua citt&#224;...</Italian>
 		<Spanish>Mantener pulsada la tecla [MAY&#218;S] para a&#241;adir elementos al final de la cola de construcci&#243;n de la ciudad...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down the [SHIFT] key to add items to the end of your city's build queue...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_43</Tag>
@@ -1088,7 +1088,7 @@
 		<German>Haltet [STRG] gedr&#252;ckt, um am Anfang der Bauliste Eurer Stadt weitere Objekte hinzuzuf&#252;gen.</German>
 		<Italian>Tieni premuto [CTRL] per aggiungere degli oggetti all'inizio della coda di costruzione della tua citt&#224;...</Italian>
 		<Spanish>Mantener pulsada la tecla [CTRL] para insertar elementos al principio de la cola de construcci&#243;n de la ciudad...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down the [CTRL] key to insert items at the beginning of your city's build queue...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_44</Tag>
@@ -1097,7 +1097,7 @@
 		<German>Haltet [ALT] gedr&#252;ckt, um das gew&#252;nschte Objekt unbegrenzt zu bauen.</German>
 		<Italian>Tieni premuto [ALT] per fare in modo che una citt&#224; costruisca un oggetto all'infinito...</Italian>
 		<Spanish>Mantener pulsada la tecla [ALT] para hacer que la ciudad construya un elemento indefinidamente...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down the [ALT] key to have a city build an item indefinitely...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_45</Tag>
@@ -1106,7 +1106,7 @@
 		<German>Dr&#252;ckt die Vorw&#228;rts-/R&#252;ckw&#228;rts-Tasten Eurer Maus, um durch alle Einheiten auf einem Gel&#228;ndefeld zu schalten.</German>
 		<Italian>Premi i pulsanti su e gi&#249; sul mouse per scorrere le unit&#224; sulla stessa casella...</Italian>
 		<Spanish>Pulsad los botones de adelante y atr&#225;s del rat&#243;n para pasar de una unidad a otra en la misma casilla...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press the forward and back buttons on your mouse to cycle through units on the same plot...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_46</Tag>
@@ -1115,7 +1115,7 @@
 		<German>Haltet [STRG] gedr&#252;ckt und schaltet mit dem Mausrad durch alle Einheiten auf dem gew&#252;nschten Gel&#228;ndefeld.</German>
 		<Italian>Tieni premuto il tasto [CTRL] e usa la rotellina del mouse per scorrere tra le unit&#224; sulla stessa casella...</Italian>
 		<Spanish>Mantener pulsada la tecla [CTRL] y girar la rueda del rat&#243;n para pasar de una unidad a otra en la misma casilla...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down the [CTRL] key and spin the mouse-wheel to cycle through units on the same plot...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_47</Tag>
@@ -1124,7 +1124,7 @@
 		<German>Dr&#252;ckt [STRG + M] um die Musik ein- oder auszuschalten.</German>
 		<Italian>Premi [CTRL + M] attivare e disattivare la musica...</Italian>
 		<Spanish>Pulsar [CTRL + M] para encender o apagar la m&#250;sica...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + M] to toggle the music on and off...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_48</Tag>
@@ -1133,7 +1133,7 @@
 		<German>Per Rechtsklick schickt Ihr Eure Einheiten auf das gew&#252;nschte Gel&#228;ndefeld.</German>
 		<Italian>Muovi le unit&#224; su una casella lontana cliccandoci sopra con il pulsante destro...</Italian>
 		<Spanish>Se pueden mover unidades a una casilla lejana haciendo clic derecho en ella...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Move units to a distant tile by right-clicking on it...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_49</Tag>
@@ -1142,7 +1142,7 @@
 		<German>Mit [STRG + RECHTSKLICK] schickt Ihr alle Einheiten eines Typs zum gew&#252;nschten Gel&#228;ndefeld.</German>
 		<Italian>Puoi muovere un gruppo di unit&#224; dello stesso tipo con [CTRL + PULSANTE DESTRO] sulla destinazione...</Italian>
 		<Spanish>Se pueden mover en grupo todas las unidades del mismo tipo pulsando [CTRL + CLIC DERECHO] en el lugar de destino...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can group move all units of the same type by a [CTRL + RIGHT-CLICK] on the destination...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_50</Tag>
@@ -1151,7 +1151,7 @@
 		<German>Ihr k&#246;nnt alle Einheiten eines Feldes mit [ALT + RECHTSKLICK] auf die gew&#252;nschte Position bewegen.</German>
 		<Italian>Puoi muovere un gruppo di unit&#224; sulla stessa casella con [ALT + PULSANTE DESTRO] sulla destinazione...</Italian>
 		<Spanish>Se pueden mover en grupo todas las unidades de la misma casilla pulsando [ALT + CLIC DERECHO] en el lugar de destino...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can group move all units on the same tile by a [ALT + RIGHT-CLICK] on the destination...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_51</Tag>
@@ -1160,7 +1160,7 @@
 		<German>Dr&#252;ckt [G] um den "Gehe zu"-Modus zu aktivieren.</German>
 		<Italian>Passa alla modalit&#224; "Vai a" premendo [G]...</Italian>
 		<Spanish>Pulsar [G] para entrar en el modo "Ir a"...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Enter "Go-To" Mode by pressing [G]...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_52</Tag>
@@ -1169,7 +1169,7 @@
 		<German>Dr&#252;ckt [STRG + G] um den "Gehe zu"-Modus f&#252;r alle Einheiten eines Typs zu aktivieren.</German>
 		<Italian>Passa alla modalit&#224; "Vai a (unit&#224; dello stesso tipo)" premendo [CTRL + G]...</Italian>
 		<Spanish>Pulsar [CTRL + G] para entrar en el modo "Ir a (mismo tipo de unidad)"...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Enter "Go-To (Same Unit Type)" Mode by pressing [CTRL + G]...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_53</Tag>
@@ -1178,7 +1178,7 @@
 		<German>Dr&#252;ckt [ALT + G] um den "Gehe zu"-Modus f&#252;r alle Einheiten zu aktivieren.</German>
 		<Italian>Passa alla modalit&#224; "Vai a (tutte le unit&#224;)" premendo [ALT + G]...</Italian>
 		<Spanish>Pulsar [ALT + G] para entrar en el modo "Ir a (todas las unidades)" ...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Enter "Go-To (All Units)" Mode by pressing [ALT + G]...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_54</Tag>
@@ -1187,7 +1187,7 @@
 		<German>Dr&#252;ckt [C] um die Kamera auf die aktive Einheit zu zentrieren.</German>
 		<Italian>Premi [C] per centrare la visuale sull'unit&#224; attiva...</Italian>
 		<Spanish>Pulsar [C] para centrar la c&#225;mara en la unidad activa...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [C] to center the camera on the active unit...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_55</Tag>
@@ -1196,7 +1196,7 @@
 		<German>Dr&#252;ckt [STRG + C] um alle Einheiten desselben Typs der aktiven Einheit zu w&#228;hlen.</German>
 		<Italian>Premi [CTRL + C] per selezionare tutte le unit&#224; dello stesso tipo di quella attiva...</Italian>
 		<Spanish>Pulsar [CTRL + C] para seleccionar todas las unidades del mismo tipo que la unidad activa...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + C] to select all units of the same type as the active unit...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_56</Tag>
@@ -1205,7 +1205,7 @@
 		<German>Dr&#252;cken [ALT + C] um die aktive Einheit und alle Einheiten auf demselben Feld auszuw&#228;hlen.</German>
 		<Italian>Premi [ALT + C] per selezionare tutte le unit&#224; sulla stessa casella di quella attiva...</Italian>
 		<Spanish>Pulsar [ALT + C] para seleccionar todas las unidades de la misma casilla que la unidad activa...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [ALT + C] to select all units on the same tile as the active unit...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_57</Tag>
@@ -1214,7 +1214,7 @@
 		<German>Haltet [UMSCHALTEN] gedr&#252;ckt und klickt auf die Stadt-Leiste, wenn Ihr mehrere St&#228;dte ausw&#228;hlen m&#246;chtet, um die Produktion in mehreren St&#228;dten gleichzeitig zu &#228;ndern. Mit [UMSCHALTEN + RECHTSKLICK] k&#246;nnt Ihr Sammelpunkte bestimmen.</German>
 		<Italian>Se tieni premuto il tasto [MAIUSC] mentre clicchi sulla barra della citt&#224;, puoi "selezionare" pi&#249; citt&#224; e in questo modo controllare produzioni multiple. Puoi anche usare [MAIUSC + PULSANTE DESTRO] per impostare un punto di raduno...</Italian>
 		<Spanish>Si se mantiene pulsada la tecla [MAY&#218;S] mientras se hace clic en la barra de la ciudad, se pueden "seleccionar" varias ciudades, lo que permite cambiar la producci&#243;n en varias de ellas. Tambi&#233;n se puede usar [MAY&#218;S + CLIC DERECHO] para establecer un punto de concentraci&#243;n.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you hold down the [SHIFT] key while clicking on the city bar, you can "select" multiple cities - allowing you to change production in multiple cities. You can also [SHIFT + RIGHT-CLICK] to set a rally point.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_58</Tag>
@@ -1223,7 +1223,7 @@
 		<German>Haltet [STRG] gedr&#252;ckt und klickt auf die Stadt-Leiste, wenn Ihr alle Eure St&#228;dte des Kontinents ausw&#228;hlen m&#246;chtet.</German>
 		<Italian>Se tieni premuto il tasto [CTRL] mentre clicchi sulla barra della citt&#224;, puoi "selezionare" tutte le citt&#224; di quel continente...</Italian>
 		<Spanish>Si se mantiene pulsada la tecla [CTRL] mientras se hace clic en la barra de la ciudad, se "seleccionan" todas las ciudades propias en ese continente.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you hold down the [CTRL] key while clicking on the city bar, you will "select" all of your cities on that continent.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_59</Tag>
@@ -1232,7 +1232,7 @@
 		<German>Haltet [ALT] gedr&#252;ckt und klickt auf die Stadt-Leiste, wenn Ihr alle Eure St&#228;dte weltweit ausw&#228;hlen m&#246;chtet.</German>
 		<Italian>Se tieni premuto il tasto [ALT] mentre clicchi sulla barra della citt&#224;, puoi "selezionare" tutte le tue citt&#224; nel mondo...</Italian>
 		<Spanish>Si se mantiene pulsada la tecla [ALT] mientras se hace clic en la barra de la ciudad, se "seleccionan" todas las ciudades propias en el mundo.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>If you hold down the [ALT] key while clicking on the city bar, you will "select" all of your cities in the world.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_60</Tag>
@@ -1241,7 +1241,7 @@
 		<German>Dr&#252;ckt die mittlere Maustaste, um den Stadt-Bildschirm zu verlassen ...</German>
 		<Italian>Premi il pulsante centrale del mouse per uscire dalla schermata cittadina...</Italian>
 		<Spanish>Pulsar el bot&#243;n central del rat&#243;n para salir de la pantalla de la ciudad...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press the middle mouse button to exit the city screen...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_61</Tag>
@@ -1250,7 +1250,7 @@
 		<German>Dr&#252;ckt die UMSCHALT-Taste, um einer Einheit aufeinander folgende Befehle zu erteilen. So k&#246;nnt Ihr beispielsweise einem Bautrupp befehlen, zun&#228;chst eine Stra&#223;e und anschlie&#223;end eine Mine zu bauen, indem Sie bei gedr&#252;ckter UMSCHALT-Taste beide Buttons anklicken ...</German>
 		<Italian>Puoi assegnare ordini consecutivi a un'unit&#224; premendo il tasto MAIUSC. Per esempio, puoi dire a un lavoratore di costruire una strada e poi una miniera cliccando su entrambi i pulsanti e tenendo premuto il tasto MAIUSC...</Italian>
 		<Spanish>Es posible darle &#243;rdenes consecutivas a una unidad si se pulsa la tecla MAY&#218;S. Por ejemplo, se le puede decir a un trabajador que construya primero una carretera y luego una mina haciendo clic en esos dos botones mientras se mantiene pulsada la tecla MAY&#218;S...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>You can give a unit consecutive orders by pressing the SHIFT key. For example, you could tell a worker to build a road and then a mine by clicking on both buttons while holding down SHIFT...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_62</Tag>
@@ -1259,7 +1259,7 @@
 		<German>Haltet die UMSCHALT-Taste gedr&#252;ckt und klickt auf ein Gel&#228;ndefeld, um ein Kontextmen&#252; zu &#246;ffnen ...</German>
 		<Italian>Tieni premuto il tasto MAIUSC e clicca su una casella per aprire un menu contestuale...</Italian>
 		<Spanish>Mantener pulsada la tecla MAY&#218;S y hacer clic en una casilla para abrir un men&#250; contextual...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Hold down SHIFT and click on a tile to open a context menu...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_63</Tag>
@@ -1268,7 +1268,7 @@
 		<German>Nutzt die Pfeiltasten im ZIFFERNBLOCK, um bei ge&#246;ffnetem Stadt-Bildschirm zwischen den einzelnen St&#228;dten zu wechseln ...</German>
 		<Italian>Le frecce direzionali del TASTIERINO NUMERICO possono essere utilizzate per passare da una citt&#224; all'altra nella schermata cittadina...</Italian>
 		<Spanish>Las flechas del TECLADO NUM&#201;RICO se pueden usar para pasar de una ciudad a otra en la pantalla de la ciudad...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>The NUMPAD arrow keys can be used to jump between cities when the city screen is up...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_64</Tag>
@@ -1277,7 +1277,7 @@
 		<German>Dr&#252;ckt [#] um zur letzten gew&#228;hlten Einheit zu springen ...</German>
 		<Italian>Premi [\] per tornare all'ultima unit&#224; selezionata...</Italian>
 		<Spanish>Pulsar [\] para volver a la anterior unidad seleccionada...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [\] to jump back to the last selected unit...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_65</Tag>
@@ -1286,7 +1286,7 @@
 		<German>Dr&#252;ckt [STRG + TAB] um das Rundenereignis-Log aufzurufen ...</German>
 		<Italian>Premi [CTRL + TAB] per vedere il registro degli eventi...</Italian>
 		<Spanish>Pulsar [CTRL + TAB] para ver el historial de sucesos del turno...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + TAB] to view the turn event log...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_66</Tag>
@@ -1295,7 +1295,7 @@
 		<German>Dr&#252;ckt [ALT + S] um ein Zeichen auf der Karte zu platzieren, das nur Ihr und Eure Teammitglieder sehen k&#246;nnt.</German>
 		<Italian>Premi [ALT + S] per aggiungere sulla mappa un segnale visibile soltanto a te e ai tuoi alleati.</Italian>
 		<Spanish>Pulsa [ALT + S] para a&#241;adir al mapa un letrero que pod&#225;is ver tus compa&#241;eros y t&#250;...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [ALT + S] to add a sign to the map...</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_67</Tag>
@@ -1304,6 +1304,6 @@
 		<German>Dr&#252;ckt [STRG + H] um alle verwundeten Einheiten auf einem Gel&#228;ndefeld zu markieren.</German>
 		<Italian>Premi [CTRL + H] per selezionare tutte le unit&#224; ferite sulla casella.</Italian>
 		<Spanish>Pulsa [CTRL + H] para seleccionar todas las unidades heridas en una casilla.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Press [CTRL + H] to select all wounded units in a tile.</Portuguese>
 	</TEXT>
 </Civ4GameText>
