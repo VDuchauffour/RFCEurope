@@ -704,7 +704,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NORWAY_DESC</Tag>
 		<English>The Norwegians</English>
-		<French>The Norwegians</French>
+		<French>Les Norv&#233;giens</French>
 		<German>The Norwegians</German>
 		<Italian>The Norwegians</Italian>
 		<Spanish>The Norwegians</Spanish>
@@ -713,7 +713,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NORWAY_SHORT_DESC</Tag>
 		<English>Norway</English>
-		<French>Norway</French>
+		<French>Norv&#232;ge</French>
 		<German>Norway</German>
 		<Italian>Norway</Italian>
 		<Spanish>Norway</Spanish>
@@ -745,7 +745,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DENMARK_DESC</Tag>
 		<English>The Danish</English>
-		<French>The Danish</French>
+		<French>Les Danois</French>
 		<German>The Danish</German>
 		<Italian>The Danish</Italian>
 		<Spanish>The Danish</Spanish>
@@ -2156,7 +2156,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SCOTLAND_DESC</Tag>
 		<English>The Scottish</English>
-		<French>The Scottish</French>
+		<French>Les &#201;cossais</French>
 		<German>The Scottish</German>
 		<Italian>The Scottish</Italian>
 		<Spanish>The Scottish</Spanish>
@@ -2165,7 +2165,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SCOTLAND_SHORT_DESC</Tag>
 		<English>Scotland</English>
-		<French>Scotland</French>
+		<French>Ecosse</French>
 		<German>Scotland</German>
 		<Italian>Scotland</Italian>
 		<Spanish>Scotland</Spanish>
@@ -2193,7 +2193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NOVGOROD_DESC</Tag>
 		<English>The Novgorodians</English>
-		<French>The Novgorodians</French>
+		<French>Les Novgorodiens</French>
 		<German>The Novgorodians</German>
 		<Italian>The Novgorodians</Italian>
 		<Spanish>The Novgorodians</Spanish>
@@ -2234,7 +2234,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PRUSSIA_DESC</Tag>
 		<English>The Prussians</English>
-		<French>The Prussians</French>
+		<French>Les Prussiens</French>
 		<German>The Prussians</German>
 		<Italian>The Prussians</Italian>
 		<Spanish>The Prussians</Spanish>
@@ -2243,7 +2243,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PRUSSIA_SHORT_DESC</Tag>
 		<English>Prussia</English>
-		<French>Prussia</French>
+		<French>Prusse</French>
 		<German>Prussia</German>
 		<Italian>Prussia</Italian>
 		<Spanish>Prussia</Spanish>
@@ -2275,7 +2275,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ARAGON_DESC</Tag>
 		<English>The Aragonese</English>
-		<French>The Aragonese</French>
+		<French>Les Aragon&#233;ens</French>
 		<German>The Aragonese</German>
 		<Italian>The Aragonese</Italian>
 		<Spanish>The Aragonese</Spanish>
@@ -2312,7 +2312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOROCCO_DESC</Tag>
 		<English>The Moroccans</English>
-		<French>The Moroccans</French>
+		<French>Les Marocains</French>
 		<German>The Moroccans</German>
 		<Italian>The Moroccans</Italian>
 		<Spanish>The Moroccans</Spanish>
@@ -2321,7 +2321,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOROCCO_SHORT_DESC</Tag>
 		<English>Morocco</English>
-		<French>Morocco</French>
+		<French>Maroc</French>
 		<German>Morocco</German>
 		<Italian>Morocco</Italian>
 		<Spanish>Morocco</Spanish>
