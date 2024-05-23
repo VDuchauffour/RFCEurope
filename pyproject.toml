@@ -82,4 +82,7 @@ exclude = [
   "Assets/Python/screens/CvWorldBuilderScreen.py",
   "Assets/Python/pyWB/CvWBDesc.py",
   "Assets/Python/PyHelpers.py",
+  "Assets/Python/BUFFY/",
+  "Assets/Python/BUG/",
+  "Assets/Python/Contrib/",
 ]
