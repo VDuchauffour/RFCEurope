@@ -5388,7 +5388,6 @@ class CvInfoScreen:
     def getTurnDate(self, turn):
         year = CyGame().getTurnYear(turn)
 
-        # Absinthe: based on the knowledge of map making and the corresponding era
         if has_date_revealed():
             return text("TXT_KEY_TIME_AD", year)
         elif year >= 1500:
