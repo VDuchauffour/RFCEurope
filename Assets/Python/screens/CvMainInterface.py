@@ -5224,7 +5224,7 @@ class CvMainInterface:
                             + font_symbol(FontSymbols.RELIGION_CHAR),
                             font_text(pPlayer.getProsecutionCount())
                             + " "
-                            + font_symbol(FontSymbols.OCCUPATION_CHAR),
+                            + font_symbol(FontSymbols.PROSECUTOR_CHAR),
                         )
                     )
                     screen.setLabel(
