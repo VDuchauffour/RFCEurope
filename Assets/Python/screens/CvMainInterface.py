@@ -9112,9 +9112,14 @@ class CvMainInterface:
                                                             scores.setWHEOOH()
                                                 # BUG - WHEOOH - end
                                                 # Rhye - start stability
-                                                _, _, stability_symbol = stability(ePlayer)
+                                                stability_value, _, stability_symbol = stability(
+                                                    ePlayer
+                                                )
                                                 if bAlignIcons:
-                                                    scores.setStability(stability_symbol)
+                                                    scores.setStabilityLevel(stability_symbol)
+                                                if ScoreOpt.isShowStabilityValue():
+                                                    if bAlignIcons:
+                                                        scores.setStabilityValue(stability_value)
                                                 # Rhye - end stability
                                                 # BUG - Num Cities - start
                                                 if ScoreOpt.isShowCountCities():

@@ -3,10 +3,9 @@
 from CvPythonExtensions import *
 from CoreFunctions import font_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
-import PyHelpers
 import CvUtil
 from RFCUtils import get_stability_category_value, stability
-import ScreenInput
+import ScreenInput  # noqa: F401
 import CvScreenEnums
 import BugDll
 import BugUtil
@@ -1668,7 +1667,7 @@ class BugFinanceAdvisor:
         return 0
 
     def update(self, fDelta):
-        if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT) is True:
             CyInterface().setDirty(InterfaceDirtyBits.Financial_Screen_DIRTY_BIT, False)
             self.drawContents()
         return
