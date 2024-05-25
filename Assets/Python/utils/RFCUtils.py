@@ -1558,26 +1558,26 @@ def get_stability_category_value(iPlayer, stability_category):
 
 
 def stability(civ):
-    level = player(civ).getStability()
-    if level < -15:
+    value = player(civ).getStability()
+    if value < -15:
         _text = text("TXT_KEY_STABILITY_COLLAPSING")
         _symbol = symbol(FontSymbols.COLLAPSING_CHAR)
-    elif -15 <= level < -5:
+    elif -15 <= value < -5:
         _text = text("TXT_KEY_STABILITY_UNSTABLE")
         _symbol = symbol(FontSymbols.UNSTABLE_CHAR)
-    elif -5 <= level < 5:
+    elif -5 <= value < 5:
         _text = text("TXT_KEY_STABILITY_SHAKY")
         _symbol = symbol(FontSymbols.SHAKY_CHAR)
-    elif 5 <= level < 15:
+    elif 5 <= value < 15:
         _text = text("TXT_KEY_STABILITY_STABLE")
         _symbol = symbol(FontSymbols.STABLE_CHAR)
-    elif level >= 15:
+    elif value >= 15:
         _text = text("TXT_KEY_STABILITY_SOLID")
         _symbol = symbol(FontSymbols.SOLID_CHAR)
-    elif level >= 25:
+    elif value >= 25:
         _text = text("TXT_KEY_STABILITY_VERYSOLID")
         _symbol = symbol(FontSymbols.SOLID_CHAR)
-    return level, _text, _symbol
+    return value, _text, _symbol
 
 
 def calculate_gold_rate(identifier):

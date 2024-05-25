@@ -28,7 +28,7 @@ gc = CyGlobalContext()
 Z_DEPTH = -0.3
 
 # Columns IDs
-NUM_PARTS = 27
+NUM_PARTS = 28
 (
     ALIVE,
     WAR,
@@ -56,7 +56,8 @@ NUM_PARTS = 27
     NET_STATS,
     OOS,
     PLAGUE,
-    STABILITY,
+    STABILITY_LEVEL,
+    STABILITY_VALUE,
 ) = range(NUM_PARTS)
 
 # Types
@@ -113,12 +114,13 @@ def init():
     columns.append(Column("D", PACT, FIXED, smallSymbol(FontSymbols.DEFENSIVE_PACT_CHAR)))
     columns.append(Column("R", RELIGION, DYNAMIC))
     columns.append(Column("A", ATTITUDE, DYNAMIC))
-    columns.append(Column('@', PLAGUE, FIXED, smallSymbol(FontSymbols.PLAGUE_CHAR)))
-    columns.append(Column('^', STABILITY, DYNAMIC))
+    columns.append(Column("@", PLAGUE, FIXED, smallSymbol(FontSymbols.PLAGUE_CHAR)))
     columns.append(Column("F", WONT_TALK, FIXED, smallText("!")))
     columns.append(Column("H", WORST_ENEMY, FIXED, smallSymbol(FontSymbols.ANGRY_POP_CHAR)))
     columns.append(Column("M", WHEOOH, FIXED, smallSymbol(FontSymbols.OCCUPATION_CHAR)))
     columns.append(Column("Q", CITIES, DYNAMIC))
+    columns.append(Column("^", STABILITY_LEVEL, DYNAMIC))
+    columns.append(Column("+", STABILITY_VALUE, DYNAMIC))
     columns.append(Column("*", WAITING, FIXED, smallText("*")))
     columns.append(Column("L", NET_STATS, DYNAMIC))
     columns.append(Column("O", OOS, DYNAMIC))
@@ -284,8 +286,14 @@ class Scoreboard:
     def setAttitude(self, value):
         self._set(ATTITUDE, smallText(value))
 
-    def setStability(self, value):
-        self._set(STABILITY, smallText(value))
+    def setStabilityLevel(self, value):
+        self._set(STABILITY_LEVEL, smallText(value))
+
+    def setStabilityValue(self, value):
+        _level = str(value)
+        if value > 0:
+            _level = "+" + _level
+        self._set(STABILITY_VALUE, smallText(" (%s)" % _level))
 
     def setWontTalk(self):
         self._set(WONT_TALK)
@@ -295,6 +303,7 @@ class Scoreboard:
 
     def setPlague(self):
         self._set(PLAGUE)
+
     def setWaiting(self):
         self._set(WAITING)
 
@@ -344,7 +353,7 @@ class Scoreboard:
     def sort(self):
         """Sorts the list by pulling any vassals up below their masters."""
         if ScoreOpt.isGroupVassals():
-            self._playerScores.sort(lambda x, y: cmp(x.sortKey(), y.sortKey()))
+            self._playerScores.sort(lambda x, y: cmp(x.sortKey(), y.sortKey()))  # type: ignore
             self._playerScores.reverse()
         maxPlayers = ScoreOpt.getMaxPlayers()
         if maxPlayers > 0 and len(self._playerScores) > maxPlayers:
