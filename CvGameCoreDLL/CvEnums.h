@@ -951,6 +951,7 @@ enum FontSymbols // Exposed to Python
   SUCCESS_CHAR,
   FAILURE_CHAR,
   SCALES_CHAR,
+  PROSECUTOR_CHAR,
 
 #ifdef _USRDLL
   MAX_NUM_SYMBOLS

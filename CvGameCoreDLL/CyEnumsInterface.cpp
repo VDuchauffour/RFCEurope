@@ -613,6 +613,7 @@ void CyEnumsPythonInterface()
       .value("SUCCESS_CHAR", SUCCESS_CHAR)
       .value("FAILURE_CHAR", FAILURE_CHAR)
       .value("SCALES_CHAR", SCALES_CHAR)
+      .value("PROSECUTOR_CHAR", PROSECUTOR_CHAR)
       .value("MAX_NUM_SYMBOLS", MAX_NUM_SYMBOLS);
 
   python::enum_<HandicapTypes>("HandicapTypes").value("NO_HANDICAP", NO_HANDICAP);
