@@ -9071,7 +9071,7 @@ class CvMainInterface:
                                                     )
                                                     szBuffer += cPlague
                                                     if bAlignIcons:
-                                                        scores.setPlague(cPlague)
+                                                        scores.setPlague()
                                                 # Leoreth - Plague Icon - end
                                                 # BUG - Refuses to Talk - start
                                                 if not DiplomacyUtil.isWillingToTalk(
