@@ -40,6 +40,9 @@
 			<option id="StabilityValue" key="Stability Value"
 					type="boolean" default="True"
 					get="isShowStabilityValue" set="setShowStabilityValue" dirtyBit="Score"/>
+			<option id="UHV" key="UHV"
+					type="boolean" default="True"
+					get="isShowUHV" set="setShowUHV" dirtyBit="Score"/>
 
 			<list   id="DisplayName" key="Display Name"
 					type="int" default="2" listType="string"

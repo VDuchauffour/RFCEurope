@@ -28,7 +28,7 @@ gc = CyGlobalContext()
 Z_DEPTH = -0.3
 
 # Columns IDs
-NUM_PARTS = 28
+NUM_PARTS = 29
 (
     ALIVE,
     WAR,
@@ -56,6 +56,7 @@ NUM_PARTS = 28
     NET_STATS,
     OOS,
     PLAGUE,
+    UHV,
     STABILITY_LEVEL,
     STABILITY_VALUE,
 ) = range(NUM_PARTS)
@@ -119,6 +120,7 @@ def init():
     columns.append(Column("H", WORST_ENEMY, FIXED, smallSymbol(FontSymbols.ANGRY_POP_CHAR)))
     columns.append(Column("M", WHEOOH, FIXED, smallSymbol(FontSymbols.OCCUPATION_CHAR)))
     columns.append(Column("Q", CITIES, DYNAMIC))
+    columns.append(Column("$", UHV, DYNAMIC))
     columns.append(Column("^", STABILITY_LEVEL, DYNAMIC))
     columns.append(Column("+", STABILITY_VALUE, DYNAMIC))
     columns.append(Column("*", WAITING, FIXED, smallText("*")))
@@ -286,6 +288,9 @@ class Scoreboard:
     def setAttitude(self, value):
         self._set(ATTITUDE, smallText(value))
 
+    def setUHV(self, count, color):
+        text = u"<color=%s>%d/3</color>" % (color, count)
+        self._set(UHV, smallText(text)) # type: ignore
     def setStabilityLevel(self, value):
         self._set(STABILITY_LEVEL, smallText(value))
 
@@ -293,7 +298,7 @@ class Scoreboard:
         _level = str(value)
         if value > 0:
             _level = "+" + _level
-        self._set(STABILITY_VALUE, smallText(" (%s)" % _level))
+        self._set(STABILITY_VALUE, smallText(" (%s)" % _level)) # type: ignore
 
     def setWontTalk(self):
         self._set(WONT_TALK)
