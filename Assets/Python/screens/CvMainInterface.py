@@ -9114,7 +9114,7 @@ class CvMainInterface:
                                                             scores.setWHEOOH()
                                                 # BUG - WHEOOH - end
                                                 # Rhye - start victory
-                                                if bAlignIcons:
+                                                if bAlignIcons and ScoreOpt.isShowUHV():
                                                     count = countAchievedGoals(ePlayer)
                                                     color = getGoalsColor(ePlayer)
                                                     scores.setUHV(count, color)
@@ -9125,8 +9125,7 @@ class CvMainInterface:
                                                 )
                                                 if bAlignIcons:
                                                     scores.setStabilityLevel(stability_symbol)
-                                                if ScoreOpt.isShowStabilityValue():
-                                                    if bAlignIcons:
+                                                    if ScoreOpt.isShowStabilityValue():
                                                         scores.setStabilityValue(stability_value)
                                                 # Rhye - end stability
                                                 # BUG - Num Cities - start
