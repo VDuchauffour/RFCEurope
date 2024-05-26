@@ -4,7 +4,7 @@ from copy import copy, deepcopy
 from CoreFunctions import sort
 import CoreTypes
 
-from Enum import Enum
+from Enum import Enum, IntEnum
 from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
 from PyUtils import (
     all,
@@ -136,6 +136,12 @@ class EnumDataMapper(DataMapper):
         for m in obj.BASE_CLASS._member_names_:
             obj[obj.BASE_CLASS[m]] = obj[obj.BASE_CLASS[m]]
         return obj
+
+
+class IntEnumDataMapper(EnumDataMapper):
+    """Class to map data to Enum."""
+
+    BASE_CLASS = (IntEnum, int)
 
 
 class Attributes(dict):

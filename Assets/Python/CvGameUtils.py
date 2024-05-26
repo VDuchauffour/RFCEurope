@@ -4,7 +4,7 @@ from CoreStructures import turn
 from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
-from MiscData import RELIGION_PERSECUTION_ORDER
+from ReligionData import RELIGION_PERSECUTION_ORDER
 import PyHelpers
 from PyUtils import rand  # Absinthe
 from RFCUtils import prosecute
