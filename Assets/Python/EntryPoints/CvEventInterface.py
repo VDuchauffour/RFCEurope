@@ -9,11 +9,9 @@
 #
 # No other modules should import this
 #
-import CvRFCEventManager
 import BugEventManager
 from CvPythonExtensions import *
 
-normalEventManager = CvRFCEventManager.CvRFCEventManager()
 eventManager = BugEventManager.BugEventManager()
 
 import Handlers  # noqa: E402, F401
