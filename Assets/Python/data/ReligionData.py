@@ -1,8 +1,8 @@
-from BaseStructures import EnumDataMapper
+from BaseStructures import IntEnumDataMapper
 from CoreTypes import Building, Religion, Wonder
 
 
-RELIGION_PERSECUTION_ORDER = EnumDataMapper(
+RELIGION_PERSECUTION_ORDER = IntEnumDataMapper(
     {
         Religion.PROTESTANTISM: [
             Religion.CATHOLICISM,
@@ -36,7 +36,7 @@ RELIGION_PERSECUTION_ORDER = EnumDataMapper(
         ],
     }
 )
-RELIGIOUS_BUILDINGS = EnumDataMapper(
+RELIGIOUS_BUILDINGS = IntEnumDataMapper(
     {
         Religion.PROTESTANTISM: [
             Building.PROTESTANT_TEMPLE,
