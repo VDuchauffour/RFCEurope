@@ -720,7 +720,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup *pPopup, PopupReturn *pPopupReturn, C
     break;
 
   case BUTTONPOPUP_FREE_COLONY:
-    if (pPopupReturn->getButtonClicked() > 0)
+    if (pPopupReturn->getButtonClicked() >= 0)
     {
       CvMessageControl::getInstance().sendEmpireSplit(GC.getGameINLINE().getActivePlayer(),
                                                       pPopupReturn->getButtonClicked());
