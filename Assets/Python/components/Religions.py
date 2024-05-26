@@ -494,51 +494,19 @@ class Religions:
         pPlayer = gc.getPlayer(iPlayer)
         iStateReligion = pPlayer.getStateReligion()
         if iStateReligion != -1:
-            if (
-                iStateReligion == Religion.CATHOLICISM
-                and iBuilding in RELIGIOUS_BUILDINGS[Religion.CATHOLICISM]
-            ):
+            if iBuilding in RELIGIOUS_BUILDINGS[iStateReligion]:
                 pPlayer.changeFaith(1)
-                if iBuilding == Building.CATHOLIC_CATHEDRAL.value:
+                if iBuilding in [
+                    Building.CATHOLIC_CATHEDRAL,
+                    Building.ORTHODOX_CATHEDRAL,
+                    Building.ISLAMIC_CATHEDRAL,
+                    Building.PROTESTANT_CATHEDRAL,
+                    Wonder.KAZIMIERZ,
+                ]:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES) > 0:
                     pPlayer.changeFaith(1)
-            elif (
-                iStateReligion == Religion.ORTHODOXY
-                and iBuilding in RELIGIOUS_BUILDINGS[Religion.ORTHODOXY]
-            ):
-                pPlayer.changeFaith(1)
-                if iBuilding == Building.ORTHODOX_CATHEDRAL.value:
-                    pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
-                    pPlayer.changeFaith(1)
-            elif (
-                iStateReligion == Religion.ISLAM
-                and iBuilding in RELIGIOUS_BUILDINGS[Religion.ISLAM]
-            ):
-                pPlayer.changeFaith(1)
-                if iBuilding == Building.ISLAMIC_CATHEDRAL.value:
-                    pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
-                    pPlayer.changeFaith(1)
-            elif (
-                iStateReligion == Religion.PROTESTANTISM
-                and iBuilding in RELIGIOUS_BUILDINGS[Religion.PROTESTANTISM]
-            ):
-                pPlayer.changeFaith(1)
-                if iBuilding == Building.PROTESTANT_CATHEDRAL.value:
-                    pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
-                    pPlayer.changeFaith(1)
-            elif iStateReligion == Religion.JUDAISM.value and iBuilding in [
-                Building.JEWISH_QUARTER.value,
-                Wonder.KAZIMIERZ.value,
-            ]:
-                pPlayer.changeFaith(1)
-                if iBuilding == Wonder.KAZIMIERZ.value:
-                    pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
-                    pPlayer.changeFaith(1)
+
             # Absinthe: Wonders: Mont Saint-Michel wonder effect
             if getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
                 if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
