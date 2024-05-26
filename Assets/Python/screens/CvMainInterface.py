@@ -13,6 +13,8 @@ import CvGameInterface
 from RFCUtils import (
     StabilityOverlayCiv,
     calculate_gold_rate,
+    countAchievedGoals,
+    getGoalsColor,
     prosecute,
     saint,
     showPersecutionPopup,
@@ -9111,6 +9113,12 @@ class CvMainInterface:
                                                         if bAlignIcons:
                                                             scores.setWHEOOH()
                                                 # BUG - WHEOOH - end
+                                                # Rhye - start victory
+                                                if bAlignIcons:
+                                                    count = countAchievedGoals(ePlayer)
+                                                    color = getGoalsColor(ePlayer)
+                                                    scores.setUHV(count, color)
+                                                # Rhye - end victory
                                                 # Rhye - start stability
                                                 stability_value, _, stability_symbol = stability(
                                                     ePlayer
