@@ -25,10 +25,11 @@ from LocationsData import CITIES
 import Popup
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import getBaseBuilding, prosecute
+from ReligionData import RELIGIOUS_BUILDINGS
 from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
 
-from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
+from ReligionData import RELIGIOUS_WONDERS
 
 gc = CyGlobalContext()
 
