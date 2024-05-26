@@ -3508,7 +3508,7 @@ class Barbs:
                     )
         else:
             # revolt succeeded
-            iNewCiv = choice(INDEPENDENT_CIVS).value
+            iNewCiv = choice(INDEPENDENT_CIVS)
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
