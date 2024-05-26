@@ -24,7 +24,7 @@ class BugScoreOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addLabel(screen, left, "Scores_General", "General:")
         self.addTextDropdown(screen, left, left, "Scores__DisplayName")
         self.addCheckbox(screen, left, "Scores__UsePlayerName")
-        self.addCheckbox(screen, left, "Scores__ShowMinor")
+        # self.addCheckbox(screen, left, "Scores__ShowMinor")
 
         self.addLabel(screen, left, "Scores_Dead_Civs", "Dead Civilizations:")
         self.addCheckbox(screen, left, "Scores__ShowDead")
