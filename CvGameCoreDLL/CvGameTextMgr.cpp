@@ -15084,14 +15084,13 @@ void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer &szString, PlayerTyp
         if (::atWar((TeamTypes)iTeam, kThisPlayer.getTeam()))
         {
           szString.append(NEWLINE);
-          //szString.append(gDLL->getText(L"TXT_KEY_AT_WAR_WITH", kTeam.getName().GetCString())); //Rhye
           szString.append(gDLL->getText(L"TXT_KEY_AT_WAR_WITH", kPlayer.getCivilizationShortDescription())); //Rhye
         }
 
         if (!kTeam.isHuman() && kTeam.AI_getWorstEnemy() == kThisPlayer.getTeam())
         {
           szString.append(NEWLINE);
-          szString.append(gDLL->getText(L"TXT_KEY_WORST_ENEMY_OF", kTeam.getName().GetCString()));
+          szString.append(gDLL->getText(L"TXT_KEY_WORST_ENEMY_OF", kPlayer.getCivilizationShortDescription()));
         }
       }
     }

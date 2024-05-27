@@ -87,7 +87,7 @@ def doUpdate():
                 and (not pPlayer.isBarbarian())
                 and (not pPlayer.isMinorCiv())
             ):
-                BugUtil.debug("Updating Info for Player %d (%s)" % (iPlayer, pPlayer.getName()))
+                BugUtil.debug("Updating Info for Player %d (%s)" % (iPlayer, pPlayer.getCivilizationShortDescription(0)))
                 iTeam = pPlayer.getTeam()
                 pTeam = gc.getTeam(iTeam)
                 # Team assumed valid, living, etc. since the player was.
@@ -121,7 +121,7 @@ def doUpdate():
                         ):
                             BugUtil.debug(
                                 " -- Testing against Player %d (%s)"
-                                % (iOtherPlayer, pOtherPlayer.getName())
+                                % (iOtherPlayer, pOtherPlayer.getCivilizationShortDescription(0))
                             )
                             iOtherTeam = pOtherPlayer.getTeam()
                             if (not pActiveTeam.isHasMet(iOtherTeam)) or (
@@ -144,7 +144,7 @@ def doUpdate():
                                             % (
                                                 eCivic,
                                                 gc.getCivicInfo(eCivic).getText(),
-                                                pPlayer.getName(),
+                                                pPlayer.getCivilizationShortDescription(0),
                                             )
                                         )
                                         BugUtil.debug(
@@ -163,7 +163,7 @@ def doUpdate():
                                             % (
                                                 eCivic,
                                                 gc.getCivicInfo(eCivic).getText(),
-                                                pPlayer.getName(),
+                                                pPlayer.getCivilizationShortDescription(0),
                                             )
                                         )
                                         BugUtil.debug(
@@ -177,7 +177,7 @@ def doUpdate():
                                             % (
                                                 eCivic,
                                                 gc.getCivicInfo(eCivic).getText(),
-                                                pPlayer.getName(),
+                                                pPlayer.getCivilizationShortDescription(0),
                                             )
                                         )
                                         BugUtil.debug(
@@ -195,14 +195,14 @@ def doUpdate():
                                             % (
                                                 eCivic,
                                                 gc.getCivicInfo(eCivic).getText(),
-                                                pPlayer.getName(),
+                                                pPlayer.getCivilizationShortDescription(0),
                                             )
                                         )
                                         BugUtil.debug(
                                             "         -- This doesn't tell us anything new."
                                         )
                 BugUtil.debug(
-                    " -- Finished update for %s: %s" % (pPlayer.getName(), str(favorite))
+                    " -- Finished update for %s: %s" % (pPlayer.getCivilizationShortDescription(0), str(favorite))
                 )
         # dump()
 

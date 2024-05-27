@@ -163,7 +163,7 @@ class CvFinanceAdvisor:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getName(), j, j, False
+                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
                     )
 
         # Absinthe: update all stability values for the active player

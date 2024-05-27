@@ -778,7 +778,7 @@ class CvInfoScreen:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getName(), j, j, False
+                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
                     )
 
         self.iActivePlayer = CyGame().getActivePlayer()
@@ -2109,7 +2109,7 @@ class CvInfoScreen:
 
     def getPlayerName(self, ePlayer):
         if ScoreOpt.isUsePlayerName():
-            szPlayerName = gc.getPlayer(ePlayer).getName()
+            szPlayerName = gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
         else:
             szPlayerName = gc.getLeaderHeadInfo(
                 gc.getPlayer(ePlayer).getLeaderType()
@@ -4961,7 +4961,7 @@ class CvInfoScreen:
 
         # Leader Name
         self.szLeaderNameWidget = self.getNextWidgetName()
-        szText = u"<font=4b>" + gc.getPlayer(self.iActivePlayer).getName() + u"</font>"
+        szText = u"<font=4b>" + gc.getPlayer(self.iActivePlayer).getCivilizationShortDescription(0) + u"</font>"
         screen.setText(
             self.szLeaderNameWidget,
             "",

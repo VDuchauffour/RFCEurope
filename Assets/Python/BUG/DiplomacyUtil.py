@@ -329,8 +329,8 @@ def onDealOffered(argsList):
     eOfferPlayer, eTargetPlayer, pTrade = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s offers trade to %s: %r",
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         pTrade,
     )
 
@@ -340,8 +340,8 @@ def onCityOffered(argsList):
     eOfferPlayer, eTargetPlayer, pTrade = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s offers city to %s: %r",
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         pTrade,
     )
 
@@ -351,8 +351,8 @@ def onHelpOffered(argsList):
     eOfferPlayer, eTargetPlayer, pTrade = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s offers help to %s: %r",
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         pTrade,
     )
 
@@ -362,8 +362,8 @@ def onPeaceOffered(argsList):
     eOfferPlayer, eTargetPlayer = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s offers peace to %s",
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -372,8 +372,8 @@ def onVassalOffered(argsList):
     eOfferPlayer, eTargetPlayer = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s offers vassalage to %s",
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -383,8 +383,8 @@ def onDealCanceled(argsList):
     if eOfferPlayer != -1 and eTargetPlayer != -1 and pTrade is not None:
         BugUtil.debug(
             "DiplomacyUtil - %s cancels deal with %s: %r",
-            PlayerUtil.getPlayer(eOfferPlayer).getName(),
-            PlayerUtil.getPlayer(eTargetPlayer).getName(),
+            PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
+            PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
             pTrade,
         )
 
@@ -394,8 +394,8 @@ def onDealAccepted(argsList):
     eTargetPlayer, eOfferPlayer, pTrade = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s accepts trade offered by %s: %r",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
         pTrade,
     )
 
@@ -405,8 +405,8 @@ def onDealRejected(argsList):
     eTargetPlayer, eOfferPlayer, pTrade = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s accepts trade offered by %s: %r",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eOfferPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eOfferPlayer).getCivilizationShortDescription(0),
         pTrade,
     )
 
@@ -419,9 +419,9 @@ def onHelpDemanded(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s requests help (%s) from %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -433,9 +433,9 @@ def onHelpAccepted(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s agrees to give help (%s) to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -447,9 +447,9 @@ def onHelpRejected(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s refuses to give help (%s) to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -461,9 +461,9 @@ def onTributeDemanded(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s demands a tribute (%s) from %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -475,9 +475,9 @@ def onTributeAccepted(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s agrees to give tribute (%s) to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -489,9 +489,9 @@ def onTributeRejected(argsList):
         szItems = szItems + TradeUtil.format(eTargetPlayer, pTrade.getTrade(i))
     BugUtil.debug(
         "DiplomacyUtil - %s refuses to give tribute (%s) to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         szItems,
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
     )
 
 
@@ -500,8 +500,8 @@ def onReligionDemanded(argsList):
     eDemandPlayer, eTargetPlayer, eReligion = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s asks %s to convert to %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         gc.getReligionInfo(eReligion).getDescription(),
     )
 
@@ -511,8 +511,8 @@ def onReligionAccepted(argsList):
     eTargetPlayer, eDemandPlayer, eReligion = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s accepts demand from %s to convert to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         gc.getReligionInfo(eReligion).getDescription(),
     )
 
@@ -522,8 +522,8 @@ def onReligionRejected(argsList):
     eTargetPlayer, eDemandPlayer, eReligion = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s rejects demand from %s to convert to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         gc.getReligionInfo(eReligion).getDescription(),
     )
 
@@ -533,8 +533,8 @@ def onCivicDemanded(argsList):
     eDemandPlayer, eTargetPlayer, eCivic = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s asks %s to switch to %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
         gc.getCivicInfo(eCivic).getDescription(),
     )
 
@@ -544,8 +544,8 @@ def onCivicAccepted(argsList):
     eTargetPlayer, eDemandPlayer, eCivic = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s accepts demand from %s to switch to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         gc.getCivicInfo(eCivic).getDescription(),
     )
 
@@ -555,8 +555,8 @@ def onCivicRejected(argsList):
     eTargetPlayer, eDemandPlayer, eCivic = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s rejects demand from %s to switch to %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
         gc.getCivicInfo(eCivic).getDescription(),
     )
 
@@ -566,9 +566,9 @@ def onWarDemanded(argsList):
     eDemandPlayer, eTargetPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s asks %s to declare war on %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 
@@ -577,9 +577,9 @@ def onWarAccepted(argsList):
     eTargetPlayer, eDemandPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s agrees to demand from %s to declare war on %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 
@@ -588,9 +588,9 @@ def onWarRejected(argsList):
     eTargetPlayer, eDemandPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s rejects demand from %s to declare war on %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 
@@ -599,9 +599,9 @@ def onEmbargoDemanded(argsList):
     eDemandPlayer, eTargetPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s asks %s to stop trading with %s",
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 
@@ -610,9 +610,9 @@ def onEmbargoAccepted(argsList):
     eTargetPlayer, eDemandPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s agrees to demand from %s to stop trading with %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 
@@ -621,9 +621,9 @@ def onEmbargoRejected(argsList):
     eTargetPlayer, eDemandPlayer, eVictim = argsList
     BugUtil.debug(
         "DiplomacyUtil - %s rejects demand from %s to stop trading with %s",
-        PlayerUtil.getPlayer(eTargetPlayer).getName(),
-        PlayerUtil.getPlayer(eDemandPlayer).getName(),
-        PlayerUtil.getPlayer(eVictim).getName(),
+        PlayerUtil.getPlayer(eTargetPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eDemandPlayer).getCivilizationShortDescription(0),
+        PlayerUtil.getPlayer(eVictim).getCivilizationShortDescription(0),
     )
 
 

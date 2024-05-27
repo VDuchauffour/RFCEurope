@@ -200,7 +200,7 @@ class CvCivicsScreen:
             for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 if gc.getPlayer(iPlayer).isAlive():
                     screen.addPullDownString(
-                        "DebugMenu", gc.getPlayer(iPlayer).getName(), iPlayer, iPlayer, False
+                        "DebugMenu", gc.getPlayer(iPlayer).getCivilizationShortDescription(0), iPlayer, iPlayer, False
                     )
 
         self.placeContents()
