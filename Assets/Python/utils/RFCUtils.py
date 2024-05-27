@@ -1451,11 +1451,14 @@ def StabilityOverlayCiv(iChoice):
     # apply the highlight
     for plot in plots().all().land().entities():
         if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-            szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
-            engine.fillAreaBorderPlotAlt(
+            if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
+                szColor = "COLOR_GREY"
+            else:
+                szColor = colors[getProvinceStabilityLevel(iChoice, plot.getProvince())]
+            engine.addColoredPlotAlt(
                 plot.getX(),
                 plot.getY(),
-                int(PlotStyles.PLOT_STYLE_TARGET),
+                int(PlotStyles.PLOT_STYLE_BOX_FILL),
                 int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER),
                 szColor,
                 0.2,
