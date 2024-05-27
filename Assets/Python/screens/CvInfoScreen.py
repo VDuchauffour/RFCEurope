@@ -778,7 +778,11 @@ class CvInfoScreen:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
+                        self.szDropdownName,
+                        gc.getPlayer(j).getCivilizationShortDescription(0),
+                        j,
+                        j,
+                        False,
                     )
 
         self.iActivePlayer = CyGame().getActivePlayer()
@@ -1176,7 +1180,6 @@ class CvInfoScreen:
             self.szGraphSmoothingDropdownWidget_1in1 = self.getNextWidgetName()
             self.szGraphSmoothingDropdownWidget_7in1 = self.getNextWidgetName()
 
-            #        screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget, iX_ZOOM_DROPDOWN - self.W_DEMO_DROPDOWN - 60, iY_ZOOM_DROPDOWN, self.W_DEMO_DROPDOWN + 50, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
             screen.addDropDownBoxGFC(
                 self.szGraphSmoothingDropdownWidget_1in1,
                 10,
@@ -1322,19 +1325,19 @@ class CvInfoScreen:
                 -1,
             )
 
-        screen.setLabel(
-            self.getNextWidgetName(),
-            "",
-            self.BUG_GRAPH_HELP,
-            CvUtil.FONT_CENTER_JUSTIFY,
-            self.X_TITLE,
-            self.Y_EXIT - 40,
-            0,
-            FontTypes.TITLE_FONT,
-            WidgetTypes.WIDGET_GENERAL,
-            -1,
-            -1,
-        )
+            screen.setLabel(
+                self.getNextWidgetName(),
+                "",
+                self.BUG_GRAPH_HELP,
+                CvUtil.FONT_CENTER_JUSTIFY,
+                self.X_TITLE,
+                self.Y_EXIT - 40,
+                0,
+                FontTypes.TITLE_FONT,
+                WidgetTypes.WIDGET_GENERAL,
+                -1,
+                -1,
+            )
 
         self.iNumPreDemoChartWidgets = self.nWidgetCount
 
@@ -1377,7 +1380,7 @@ class CvInfoScreen:
         # Compute the scores
         self.scoreCache[scoreType] = []
         for p in range(maxPlayer + 1):
-            if p not in self.aiPlayersMet:
+            if (p not in self.aiPlayersMet) and not CyGame().isDebugMode():
                 # Don't compute score for people we haven't met
                 self.scoreCache[scoreType].append(None)
             else:
@@ -1806,44 +1809,44 @@ class CvInfoScreen:
 
         # BUG: Change Graphs - start
         # draw the chart text
-        if AdvisorOpt.isGraphs():
-            if self.Graph_Status_Current == self.Graph_Status_1in1:
-                iY_GRAPH_TITLE = iY_GRAPH + 10
-            else:
-                iY_GRAPH_TITLE = iY_GRAPH + 5
+        # if AdvisorOpt.isGraphs():
+        #     if self.Graph_Status_Current == self.Graph_Status_1in1:
+        #         iY_GRAPH_TITLE = iY_GRAPH + 10
+        #     else:
+        #         iY_GRAPH_TITLE = iY_GRAPH + 5
 
-            if self.Graph_Status_Current == self.Graph_Status_3in1:
-                screen.show(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
-                screen.moveToFront(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
-            else:
-                screen.addPanel(
-                    self.sGraphPanelWidget[vGraphID_Locn],
-                    "",
-                    "",
-                    True,
-                    True,
-                    iX_GRAPH + 5,
-                    iY_GRAPH_TITLE,
-                    self.W_LEGEND,
-                    25,
-                    PanelStyles.PANEL_STYLE_IN,
-                )
-                zsText = self.sGraphText[0][
-                    iGraphID
-                ]  # u"<font=3>" + localText.getColorText("TXT_KEY_INFO_GRAPH", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
-                screen.setText(
-                    self.sGraphTextHeadingWidget[iGraphID],
-                    "",
-                    zsText,
-                    CvUtil.FONT_LEFT_JUSTIFY,
-                    iX_GRAPH + 10,
-                    iY_GRAPH_TITLE,
-                    0,
-                    FontTypes.TITLE_FONT,
-                    WidgetTypes.WIDGET_GENERAL,
-                    -1,
-                    -1,
-                )
+        #     if self.Graph_Status_Current == self.Graph_Status_3in1:
+        #         screen.show(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
+        #         screen.moveToFront(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
+        #     else:
+        #         screen.addPanel(
+        #             self.sGraphPanelWidget[vGraphID_Locn],
+        #             "",
+        #             "",
+        #             True,
+        #             True,
+        #             iX_GRAPH + 5,
+        #             iY_GRAPH_TITLE,
+        #             self.W_LEGEND,
+        #             25,
+        #             PanelStyles.PANEL_STYLE_IN,
+        #         )
+        #         zsText = self.sGraphText[0][
+        #             iGraphID
+        #         ]
+        #         screen.setText(
+        #             self.sGraphTextHeadingWidget[iGraphID],
+        #             "",
+        #             zsText,
+        #             CvUtil.FONT_LEFT_JUSTIFY,
+        #             iX_GRAPH + 10,
+        #             iY_GRAPH_TITLE,
+        #             0,
+        #             FontTypes.TITLE_FONT,
+        #             WidgetTypes.WIDGET_GENERAL,
+        #             -1,
+        #             -1,
+        #         )
         # BUG: Change Graphs - start
 
         self.timer.log("single graph done")
@@ -1899,7 +1902,7 @@ class CvInfoScreen:
 
             self.X_LEGEND = self.X_MARGIN + 5
             if self.Graph_Status_Current == self.Graph_Status_1in1:
-                self.Y_LEGEND = self.Y_MARGIN + 40
+                self.Y_LEGEND = self.Y_MARGIN + 10
             else:
                 self.Y_LEGEND = self.Y_GRAPH + self.H_GRAPH - self.H_LEGEND
         # BUG: Change Graphs - start
@@ -1918,7 +1921,6 @@ class CvInfoScreen:
             PanelStyles.PANEL_STYLE_IN,
         )
 
-        #        self.LEGEND_CANVAS_ID = self.getNextWidgetName()
         sLEGEND_CANVAS_ID = self.getNextWidgetName()
         screen.addDrawControl(
             sLEGEND_CANVAS_ID,
@@ -4961,7 +4963,11 @@ class CvInfoScreen:
 
         # Leader Name
         self.szLeaderNameWidget = self.getNextWidgetName()
-        szText = u"<font=4b>" + gc.getPlayer(self.iActivePlayer).getCivilizationShortDescription(0) + u"</font>"
+        szText = (
+            u"<font=4b>"
+            + gc.getPlayer(self.iActivePlayer).getCivilizationShortDescription(0)
+            + u"</font>"
+        )
         screen.setText(
             self.szLeaderNameWidget,
             "",
