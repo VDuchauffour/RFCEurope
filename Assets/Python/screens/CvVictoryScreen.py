@@ -475,7 +475,6 @@ class CvVictoryScreen:
                     szName = text("TXT_KEY_TOPCIVS_UNKNOWN")
                 else:
                     # Rhye - start
-                    # szName = gc.getTeam(iUNTeam).getName()
                     szName = gc.getPlayer(iUNTeam).getCivilizationShortDescription(0)
                     # Rhye - end
                 screen.setTableText(
@@ -522,7 +521,7 @@ class CvVictoryScreen:
                     szTable,
                     1,
                     iRow,
-                    gc.getTeam(gc.getGame().getSecretaryGeneral(i)).getName(),
+                    gc.getPlayer(gc.getGame().getSecretaryGeneral(i)).getCivilizationShortDescription(0),
                     "",
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -659,7 +658,6 @@ class CvVictoryScreen:
                     if gc.getPlayer(j).isAlive() and gc.getTeam(iActiveTeam).isHasMet(
                         gc.getPlayer(j).getTeam()
                     ):
-                        # szPlayerText = gc.getPlayer(j).getName() #Rhye
                         szPlayerText = gc.getPlayer(j).getCivilizationShortDescription(0)  # Rhye
                         if -1 != iSecretaryGeneralVote:
                             szPlayerText += text(
@@ -1392,7 +1390,6 @@ class CvVictoryScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
                     # Rhye - start
-                    # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                     screen.setTableText(
                         szTable,
                         2,
@@ -1419,7 +1416,6 @@ class CvVictoryScreen:
 
                     if iBestScoreTeam != -1:
                         # Rhye - start
-                        # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestScoreTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             4,
@@ -1468,7 +1464,6 @@ class CvVictoryScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
                     # Rhye - start
-                    # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                     screen.setTableText(
                         szTable,
                         2,
@@ -1495,7 +1490,6 @@ class CvVictoryScreen:
 
                     if iBestScoreTeam != -1:
                         # Rhye - start
-                        # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestScoreTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             4,
@@ -1576,7 +1570,6 @@ class CvVictoryScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
                     # Rhye - start
-                    # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                     screen.setTableText(
                         szTable,
                         2,
@@ -1602,7 +1595,6 @@ class CvVictoryScreen:
                     )
                     if iBestPopTeam != -1:
                         # Rhye - start
-                        # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestPopTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             4,
@@ -1645,7 +1637,6 @@ class CvVictoryScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
                     # Rhye - start
-                    # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                     screen.setTableText(
                         szTable,
                         2,
@@ -1671,7 +1662,6 @@ class CvVictoryScreen:
                     )
                     if iBestLandTeam != -1:
                         # Rhye - start
-                        # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestLandTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             4,
@@ -1737,7 +1727,6 @@ class CvVictoryScreen:
                         )
                     else:
                         # Rhye - start
-                        # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             2,
@@ -1803,7 +1792,6 @@ class CvVictoryScreen:
                         CvUtil.FONT_LEFT_JUSTIFY,
                     )
                     # Rhye - start
-                    # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                     screen.setTableText(
                         szTable,
                         2,
@@ -1829,7 +1817,6 @@ class CvVictoryScreen:
                     )
                     if iBestLandTeam != -1:
                         # Rhye - start
-                        # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestCultureTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             4,
@@ -1896,7 +1883,6 @@ class CvVictoryScreen:
                             CvUtil.FONT_LEFT_JUSTIFY,
                         )
                         # Rhye - start
-                        # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             2,
@@ -1922,7 +1908,6 @@ class CvVictoryScreen:
                         )
                         if iBestBuildingTeam != -1:
                             # Rhye - start
-                            # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestBuildingTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                             screen.setTableText(
                                 szTable,
                                 4,
@@ -1998,7 +1983,6 @@ class CvVictoryScreen:
                             CvUtil.FONT_LEFT_JUSTIFY,
                         )
                         # Rhye - start
-                        # screen.setTableText(szTable, 2, iRow, activePlayer.getTeam().getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                         screen.setTableText(
                             szTable,
                             2,
@@ -2030,7 +2014,6 @@ class CvVictoryScreen:
 
                         if iBestProjectTeam != -1:
                             # Rhye - start
-                            # screen.setTableText(szTable, 4, iRow, gc.getTeam(iBestProjectTeam).getName() + ":", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                             screen.setTableText(
                                 szTable,
                                 4,
@@ -2148,7 +2131,6 @@ class CvVictoryScreen:
                                 szName = text("TXT_KEY_TOPCIVS_UNKNOWN")
                             else:
                                 # Rhye - start
-                                # szName = gc.getTeam(iUNTeam).getName()
                                 szName = gc.getPlayer(iUNTeam).getCivilizationShortDescription(0)
                                 # Rhye - end
                             screen.setTableText(
@@ -2328,7 +2310,7 @@ class CvVictoryScreen:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getName(), j, j, False
+                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
                     )
 
         self.drawTabs()
@@ -3323,7 +3305,7 @@ class CvVictoryScreen:
                 + " "
                 + text("TXT_KEY_CITY_NAME_CONSTANTINOPLE")
                 + ": "
-                + self.determineColor(bColor, gc.getPlayer(iConstantinopleOwner).getName())
+                + self.determineColor(bColor, gc.getPlayer(iConstantinopleOwner).getCivilizationShortDescription(0))
             )
         else:
             sText3 += self.checkCity(
@@ -3651,7 +3633,7 @@ class CvVictoryScreen:
                 + " "
                 + cityName
                 + ": "
-                + self.determineColor(iOwner == iCiv, gc.getPlayer(iOwner).getName())
+                + self.determineColor(iOwner == iCiv, gc.getPlayer(iOwner).getCivilizationShortDescription(0))
             )
         return -1
 
@@ -3786,7 +3768,7 @@ class CvVictoryScreen:
             )
         if iEnemy != -1:
             pEnemyPlayer = gc.getPlayer(iEnemy)
-            sString += ", " + pEnemyPlayer.getName()
+            sString += ", " + pEnemyPlayer.getCivilizationShortDescription(0)
         return sString
 
     def getLandCompetition(self, fLand, fLandEnemy, iEnemy, sText):
@@ -3809,7 +3791,7 @@ class CvVictoryScreen:
         )
         if iEnemy != -1:
             pEnemyPlayer = gc.getPlayer(iEnemy)
-            sString += ", " + pEnemyPlayer.getName()
+            sString += ", " + pEnemyPlayer.getCivilizationShortDescription(0)
         return sString
 
     def getEmptyTexts(self):

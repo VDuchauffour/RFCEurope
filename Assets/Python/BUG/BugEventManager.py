@@ -554,10 +554,10 @@ class BugEventManager(CvEventManager.CvEventManager):
         eOwner, eUnitType, pNewUnit = argsList
         BugUtil.debug(
             "%s %s captured as %s by %s",
-            gc.getPlayer(eOwner).getName(),
+            gc.getPlayer(eOwner).getCivilizationShortDescription(0),
             gc.getUnitInfo(eUnitType).getDescription(),
             pNewUnit.getName(),
-            gc.getPlayer(pNewUnit.getOwner()).getName(),
+            gc.getPlayer(pNewUnit.getOwner()).getCivilizationShortDescription(0),
         )
 
     def onCombatWithdrawal(self, argsList):
@@ -590,7 +590,7 @@ class BugEventManager(CvEventManager.CvEventManager):
                 civics.append(gc.getCivicInfo(eNewCivic).getDescription())
         BugUtil.debug(
             "Revolution for %s, %d turns: %s",
-            gc.getPlayer(ePlayer).getName(),
+            gc.getPlayer(ePlayer).getCivilizationShortDescription(0),
             iAnarchyTurns,
             ", ".join(civics),
         )

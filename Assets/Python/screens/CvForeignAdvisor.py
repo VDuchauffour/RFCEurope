@@ -174,7 +174,7 @@ class CvForeignAdvisor:
             )
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
-                    # screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getName(), j, j, False ) #Rhye
+                    # screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False ) #Rhye
                     screen.addPullDownString(
                         self.szDropdownName,
                         gc.getPlayer(j).getCivilizationShortDescription(0),
@@ -417,7 +417,7 @@ class CvForeignAdvisor:
             screen.attachPanel(
                 mainPanelName,
                 playerPanelName,
-                gc.getPlayer(iLoopPlayer).getName(),
+                gc.getPlayer(iLoopPlayer).getCivilizationShortDescription(0),
                 "",
                 False,
                 True,
@@ -501,7 +501,7 @@ class CvForeignAdvisor:
 
         # Active player panel
         activePlayerPanelName = self.getNextWidgetName()
-        szPlayerName = playerActive.getName()
+        szPlayerName = playerActive.getCivilizationShortDescription(0)
 
         if (
             gc.getTeam(playerActive.getTeam()).isGoldTrading()
