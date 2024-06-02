@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CityMapData import CITIES_MAP
 from CoreFunctions import get_data_from_upside_down_map, location, plot
-from CoreStructures import is_major_civ, player
+from CoreStructures import is_major_civ, name, player
 from CoreFunctions import city as _city
 import CvUtil
 import CvScreenEnums
@@ -627,7 +627,7 @@ class CvWorldBuilderScreen:
         if self.iPlayerAddMode == "EraseAll":
             self.m_pCurrentPlot.erase()
             CyEngine().removeLandmark(self.m_pCurrentPlot)
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
                 CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
         elif self.iPlayerAddMode == "AddLandMark":
             iIndex = -1
@@ -922,7 +922,7 @@ class CvWorldBuilderScreen:
         if self.iPlayerAddMode == "EraseAll":
             self.m_pCurrentPlot.erase()
             CyEngine().removeLandmark(self.m_pCurrentPlot)
-            for iPlayerX in xrange(gc.getMAX_PLAYERS()):  # type: ignore
+            for iPlayerX in xrange(gc.getMAX_PLAYERS()):
                 CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
         elif self.iPlayerAddMode == "Ownership":
             self.m_pCurrentPlot.setOwner(-1)
@@ -1862,7 +1862,7 @@ class CvWorldBuilderScreen:
                 )
                 for iPlayer in xrange(gc.getMAX_PLAYERS()):
                     if gc.getPlayer(iPlayer).isEverAlive():
-                        sName = gc.getPlayer(iPlayer).getName()
+                        sName = name(iPlayer)
                         if not gc.getPlayer(iPlayer).isAlive():
                             sName = "*" + sName
                         if gc.getPlayer(iPlayer).isTurnActive():
@@ -2086,7 +2086,7 @@ class CvWorldBuilderScreen:
                     if iPlayer == gc.getBARBARIAN_PLAYER():
                         continue
                     if gc.getPlayer(iPlayer).isEverAlive():
-                        sName = gc.getPlayer(iPlayer).getName()
+                        sName = name(iPlayer)
                         if not gc.getPlayer(iPlayer).isAlive():
                             sName = "*" + sName
                         if gc.getPlayer(iPlayer).isTurnActive():
@@ -2306,7 +2306,7 @@ class CvWorldBuilderScreen:
                 )
                 for iPlayer in xrange(gc.getMAX_PLAYERS()):
                     if gc.getPlayer(iPlayer).isEverAlive():
-                        sName = gc.getPlayer(iPlayer).getName()
+                        sName = name(iPlayer)
                         if not gc.getPlayer(iPlayer).isAlive():
                             sName = "*" + sName
                         if gc.getPlayer(iPlayer).isTurnActive():
