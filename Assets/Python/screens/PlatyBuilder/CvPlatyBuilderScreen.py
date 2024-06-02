@@ -1,4 +1,8 @@
 from CvPythonExtensions import *
+from CityMapData import CITIES_MAP
+from CoreFunctions import get_data_from_upside_down_map, location, plot
+from CoreStructures import is_major_civ, player
+from CoreFunctions import city as _city
 import CvUtil
 import CvScreenEnums
 import WBPlotScreen
@@ -677,9 +681,14 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "City":
             if self.m_pCurrentPlot.isCity():
                 return
-            pCity = gc.getPlayer(self.m_iCurrentPlayer).initCity(
-                self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY()
-            )
+            pCity = player(self.m_iCurrentPlayer).initCity(*location(self.m_pCurrentPlot))
+            if is_major_civ(self.m_iCurrentPlayer):
+                cityName = get_data_from_upside_down_map(
+                    CITIES_MAP, self.m_iCurrentPlayer, self.m_pCurrentPlot
+                )
+                if cityName is not None:
+                    city = _city(self.m_pCurrentPlot)
+                    city.setName(unicode(cityName), False)
             if bPython:
                 CvEventManager.CvEventManager().onCityBuilt([pCity])
         ## Python Effects ##
@@ -1724,7 +1733,7 @@ class CvWorldBuilderScreen:
         iButtonWidth = 32
         iAdjust = iButtonWidth + 3
         iScreenWidth = 16 + iAdjust * 6
-        iScreenHeight = 16 + iAdjust * 4
+        iScreenHeight = 22 + iAdjust * 4
 
         if CyInterface().isInAdvancedStart():
             iX = 50
@@ -1804,11 +1813,10 @@ class CvWorldBuilderScreen:
             screen.deleteWidget("BrushHeight")
             screen.deleteWidget("SensibilityCheck")
             ## Panel Screen ##
-            nRows = 1
-            if self.iPlayerAddMode in self.PlayerMode or self.iPlayerAddMode in self.RevealMode:
+            if self.iPlayerAddMode in self.PlayerMode + self.RevealMode + self.MapMode:
                 nRows = 3
-            elif self.iPlayerAddMode in self.MapMode:
-                nRows = 4
+            else:
+                nRows = 1
             iHeight = 16 + iAdjust * nRows
             iXStart = screen.getXResolution() - iScreenWidth
             screen.addPanel(
@@ -3328,7 +3336,7 @@ class CvWorldBuilderScreen:
 
     def leftMouseDown(self, argsList):
         bShift, bCtrl, bAlt = argsList
-        pPlayer = gc.getPlayer(self.m_iCurrentPlayer)
+
         if CyInterface().isInAdvancedStart():
             self.placeObject()
         elif bAlt or self.iPlayerAddMode == "EditUnit":
@@ -3362,7 +3370,7 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "Events":
             WBEventScreen.WBEventScreen().interfaceScreen(self.m_pCurrentPlot)
         elif self.iPlayerAddMode == "StartingPlot":
-            pPlayer.setStartingPlot(self.m_pCurrentPlot, True)
+            player(self.m_iCurrentPlayer).setStartingPlot(self.m_pCurrentPlot, True)
             self.refreshStartingPlots()
         elif self.iPlayerAddMode == "TargetPlot":
             self.iTargetPlotX = self.m_pCurrentPlot.getX()
@@ -3390,9 +3398,11 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "MoveCity" or self.iPlayerAddMode == "MoveCityPlus":
             if self.m_pCurrentPlot.isCity():
                 return
-            pOldCity = pPlayer.getCity(self.iMoveCity)
+            pOldCity = player(self.m_iCurrentPlayer).getCity(self.iMoveCity)
             if pOldCity:
-                pNewCity = pPlayer.initCity(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
+                pNewCity = player(self.m_iCurrentPlayer).initCity(
+                    self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY()
+                )
                 sName = pOldCity.getName()
                 pOldCity.setName("ToBeRazed", False)
                 pNewCity.setName(sName, True)
@@ -3418,16 +3428,26 @@ class CvWorldBuilderScreen:
         elif self.iPlayerAddMode == "DuplicateCity" or self.iPlayerAddMode == "DuplicateCityPlus":
             if self.m_pCurrentPlot.isCity():
                 return
-            pOldCity = pPlayer.getCity(self.iMoveCity)
+            pOldCity = player(self.m_iCurrentPlayer).getCity(self.iMoveCity)
             if pOldCity:
-                pNewCity = pPlayer.initCity(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
+                pNewCity = player(self.m_iCurrentPlayer).initCity(
+                    self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY()
+                )
+                if is_major_civ(self.m_iCurrentPlayer):
+                    cityName = get_data_from_upside_down_map(
+                        CITIES_MAP, self.m_iCurrentPlayer, plot(pNewCity)
+                    )
+                    if cityName is not None:
+                        city = _city(self.m_pCurrentPlot)
+                        city.setName(unicode(cityName), False)
+
                 self.copyCityStats(pOldCity, pNewCity, False)
                 if self.iPlayerAddMode == "DuplicateCityPlus":
                     for item in self.lMoveUnit:
                         loopUnit = gc.getPlayer(item[0]).getUnit(item[1])
                         if loopUnit.isNone():
                             continue
-                        pNewUnit = pPlayer.initUnit(
+                        pNewUnit = player(self.m_iCurrentPlayer).initUnit(
                             loopUnit.getUnitType(),
                             self.m_pCurrentPlot.getX(),
                             self.m_pCurrentPlot.getY(),
