@@ -478,7 +478,7 @@ class CvPediaUnit:
             screen.attachImageButton(
                 panelName,
                 "",
-                gc.getPromotionInfo(Promotion.MERC.value).getButton(),
+                gc.getPromotionInfo(Promotion.MERC).getButton(),
                 GenericButtonSizes.BUTTON_SIZE_CUSTOM,
                 WidgetTypes.WIDGET_GENERAL,
                 1919,
@@ -491,7 +491,7 @@ class CvPediaUnit:
             screen.attachImageButton(
                 panelName,
                 "",
-                gc.getCivilizationInfo(Civ.BARBARIAN.value).getButton(),
+                gc.getCivilizationInfo(Civ.BARBARIAN).getButton(),
                 GenericButtonSizes.BUTTON_SIZE_CUSTOM,
                 WidgetTypes.WIDGET_GENERAL,
                 1920,

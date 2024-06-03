@@ -123,7 +123,7 @@ def set_tech_preference_modifier(civ):
     ai_modifier = civ.ai.modifiers.get(Modifier.TECH_PREFERENCE)
     if ai_modifier is not None:
         for tech, value in ai_modifier:
-            gc.setTechPreferenceAI(civ.id, tech.value, value)
+            gc.setTechPreferenceAI(civ.id, tech, value)
 
 
 def set_diplomacy_modifier():
@@ -131,7 +131,7 @@ def set_diplomacy_modifier():
     # + means they will like each other - they will hate each other.
     # from Civ1 towards Civ2 (make them symmetric)
     for civ1, civ2, value in DIPLOMACY_MODIFIERS:
-        gc.setDiplomacyModifiers(civ1.value, civ2.value, value)
+        gc.setDiplomacyModifiers(civ1, civ2, value)
 
 
 def set_starting_workers_modifier():
@@ -150,7 +150,7 @@ def set_tech_timeline_modifier():
 
 def set_tech_timeline_date():
     for tech, turn in TIMELINE_TECH_MODIFIER:
-        gc.setTimelineTechDateForTech(tech.value, year(turn))
+        gc.setTimelineTechDateForTech(tech, year(turn))
 
 
 def set_initial_building():
@@ -160,7 +160,7 @@ def set_initial_building():
         buildings = civ.initial.get("buildings")
         if buildings is not None:
             for building in buildings:
-                gc.setInitialBuilding(civ.id, building.value, True)
+                gc.setInitialBuilding(civ.id, building, True)
 
 
 def set_building_preferences():
@@ -169,27 +169,27 @@ def set_building_preferences():
     # the getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
     # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
     for civ in civilizations().majors():
-        gc.setBuildingPref(civ.id, Building.WALLS.value, 5)
-        gc.setBuildingPref(civ.id, Building.CASTLE.value, 7)
-        gc.setBuildingPref(civ.id, Building.MANOR_HOUSE.value, 5)
-        gc.setBuildingPref(civ.id, Building.COURTHOUSE.value, 5)
-        gc.setBuildingPref(civ.id, Building.NIGHT_WATCH.value, 3)
-        gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH.value, 5)
-        gc.setBuildingPref(civ.id, Building.MOSCOW_KREMLIN.value, 7)
-        gc.setBuildingPref(civ.id, Building.HUNGARIAN_STRONGHOLD.value, 7)
-        gc.setBuildingPref(civ.id, Building.SPANISH_CITADEL.value, 7)
-        gc.setBuildingPref(civ.id, Building.FRENCH_CHATEAU.value, 5)
-        gc.setBuildingPref(civ.id, Building.VENICE_NAVAL_BASE.value, 5)
-        gc.setBuildingPref(civ.id, Building.KIEV_VECHE.value, 5)
-        gc.setBuildingPref(civ.id, Building.HOLY_ROMAN_RATHAUS.value, 5)
-        gc.setBuildingPref(civ.id, Building.LITHUANIAN_VOIVODESHIP.value, 5)
-        gc.setBuildingPref(civ.id, Building.SWEDISH_TENNANT.value, 3)
+        gc.setBuildingPref(civ.id, Building.WALLS, 5)
+        gc.setBuildingPref(civ.id, Building.CASTLE, 7)
+        gc.setBuildingPref(civ.id, Building.MANOR_HOUSE, 5)
+        gc.setBuildingPref(civ.id, Building.COURTHOUSE, 5)
+        gc.setBuildingPref(civ.id, Building.NIGHT_WATCH, 3)
+        gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH, 5)
+        gc.setBuildingPref(civ.id, Building.MOSCOW_KREMLIN, 7)
+        gc.setBuildingPref(civ.id, Building.HUNGARIAN_STRONGHOLD, 7)
+        gc.setBuildingPref(civ.id, Building.SPANISH_CITADEL, 7)
+        gc.setBuildingPref(civ.id, Building.FRENCH_CHATEAU, 5)
+        gc.setBuildingPref(civ.id, Building.VENICE_NAVAL_BASE, 5)
+        gc.setBuildingPref(civ.id, Building.KIEV_VECHE, 5)
+        gc.setBuildingPref(civ.id, Building.HOLY_ROMAN_RATHAUS, 5)
+        gc.setBuildingPref(civ.id, Building.LITHUANIAN_VOIVODESHIP, 5)
+        gc.setBuildingPref(civ.id, Building.SWEDISH_TENNANT, 3)
 
     for civ in civilizations():
         ai_modifier = civ.ai.modifiers.get(Modifier.BUILDING_PREFERENCE)
         if ai_modifier is not None:
             for building, value in ai_modifier:
-                gc.setBuildingPref(civ.id, building.value, value)
+                gc.setBuildingPref(civ.id, building, value)
 
 
 def set_unique_powers():
@@ -218,152 +218,152 @@ def set_unique_powers():
     # iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
     # iUP_CityTileYield, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
 
-    gc.setUP(Civ.BURGUNDY.value, UniquePower.HAPPINESS_BONUS.value, 1)
-    gc.setUP(Civ.BURGUNDY.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
+    gc.setUP(Civ.BURGUNDY, UniquePower.HAPPINESS_BONUS, 1)
+    gc.setUP(Civ.BURGUNDY, UniquePower.PER_CITY_COMMERCE_BONUS, 200)
 
-    gc.setUP(Civ.BYZANTIUM.value, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)
-    gc.setUP(Civ.BYZANTIUM.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.IMPERIALISM.value)
+    gc.setUP(Civ.BYZANTIUM, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS, 1)
+    gc.setUP(Civ.BYZANTIUM, UniquePower.PRE_ACCESS_CIVICS, Civic.IMPERIALISM)
 
-    gc.setUP(Civ.FRANCE.value, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value, 1)
+    gc.setUP(Civ.FRANCE, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND, 1)
 
-    gc.setUP(Civ.ARABIA.value, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value, 1)
+    gc.setUP(Civ.ARABIA, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES, 1)
 
-    gc.setUP(Civ.BULGARIA.value, UniquePower.NO_RESISTANCE.value, 0)
+    gc.setUP(Civ.BULGARIA, UniquePower.NO_RESISTANCE, 0)
 
     gc.setUP(
-        Civ.CORDOBA.value, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, Promotion.MEDIC.value
+        Civ.CORDOBA, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS, Promotion.MEDIC
     )
-    gc.setUP(Civ.CORDOBA.value, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS.value, 50)
+    gc.setUP(Civ.CORDOBA, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS, 50)
 
     gc.setUP(
-        Civ.MOROCCO.value,
-        UniquePower.TERRAIN_BONUS.value,
-        1 * 100000 + Terrain.DESERT.value * 1000 + 10 + 1,
+        Civ.MOROCCO,
+        UniquePower.TERRAIN_BONUS,
+        1 * 100000 + Terrain.DESERT * 1000 + 10 + 1,
     )
     gc.setUP(
-        Civ.MOROCCO.value,
-        UniquePower.FEATURE_BONUS.value,
-        1 * 100000 + Feature.OASIS.value * 1000 + 100 + 1,
+        Civ.MOROCCO,
+        UniquePower.FEATURE_BONUS,
+        1 * 100000 + Feature.OASIS * 1000 + 100 + 1,
     )
 
-    gc.setUP(Civ.CASTILE.value, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value, 1)
-    gc.setUP(Civ.CASTILE.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
+    gc.setUP(Civ.CASTILE, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION, 1)
+    gc.setUP(Civ.CASTILE, UniquePower.PER_CITY_COMMERCE_BONUS, 2)
 
-    gc.setUP(Civ.NORWAY.value, UniquePower.CAN_ENTER_TERRAIN.value, Terrain.OCEAN.value)
+    gc.setUP(Civ.NORWAY, UniquePower.CAN_ENTER_TERRAIN, Terrain.OCEAN)
     gc.setUP(
-        Civ.NORWAY.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
+        Civ.NORWAY, UniquePower.STABILITY_BONUS_FOUNDING, 1
     )  # "hidden" part of the UP
 
-    gc.setUP(Civ.VENECIA.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.MERCHANT_REPUBLIC.value)
+    gc.setUP(Civ.VENECIA, UniquePower.PRE_ACCESS_CIVICS, Civic.MERCHANT_REPUBLIC)
 
-    gc.setUP(Civ.KIEV.value, UniquePower.CITY_TILE_YIELD_BONUS.value, 1 * 1000 + 100 * 2)
+    gc.setUP(Civ.KIEV, UniquePower.CITY_TILE_YIELD_BONUS, 1 * 1000 + 100 * 2)
 
-    gc.setUP(Civ.HUNGARY.value, UniquePower.HAPPINESS_BONUS.value, 1)
-    gc.setUP(Civ.HUNGARY.value, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value, 0)
+    gc.setUP(Civ.HUNGARY, UniquePower.HAPPINESS_BONUS, 1)
+    gc.setUP(Civ.HUNGARY, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE, 0)
 
     gc.setUP(
-        Civ.GERMANY.value,
-        UniquePower.FASTER_UNIT_PRODUCTION.value,
-        Technology.GUNPOWDER.value * 100 + 75,
+        Civ.GERMANY,
+        UniquePower.FASTER_UNIT_PRODUCTION,
+        Technology.GUNPOWDER * 100 + 75,
     )
 
-    gc.setUP(Civ.POLAND.value, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value, 0)
+    gc.setUP(Civ.POLAND, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION, 0)
 
-    gc.setUP(Civ.LITHUANIA.value, UniquePower.CULTURE_BONUS_WITH_NO_STATE_RELIGION.value, 200)
-    gc.setUP(Civ.LITHUANIA.value, UniquePower.HAPPINESS_BONUS_WITH_NO_STATE_RELIGION.value, 1)
+    gc.setUP(Civ.LITHUANIA, UniquePower.CULTURE_BONUS_WITH_NO_STATE_RELIGION, 200)
+    gc.setUP(Civ.LITHUANIA, UniquePower.HAPPINESS_BONUS_WITH_NO_STATE_RELIGION, 1)
 
-    gc.setSupportModifiersAI(Civ.MOSCOW.value, 10, 100, 20, 10, 100)  # sync with preset values
-    gc.setSupportModifiersHu(Civ.MOSCOW.value, 10, 100, 20, 10, 100)  # sync with preset values
-    gc.setUP(Civ.MOSCOW.value, UniquePower.LOWER_CITY_MAINTENANCE_COST.value, 50)
+    gc.setSupportModifiersAI(Civ.MOSCOW, 10, 100, 20, 10, 100)  # sync with preset values
+    gc.setSupportModifiersHu(Civ.MOSCOW, 10, 100, 20, 10, 100)  # sync with preset values
+    gc.setUP(Civ.MOSCOW, UniquePower.LOWER_CITY_MAINTENANCE_COST, 50)
 
     gc.setUP(
-        Civ.GENOA.value, UniquePower.HALVE_COST_OF_MERCENARIES.value, 1
+        Civ.GENOA, UniquePower.HALVE_COST_OF_MERCENARIES, 1
     )  # Absinthe: this actually has no effect, it is implemented in Mercenaries.py entirely
 
     gc.setUP(
-        Civ.SCOTLAND.value,
-        UniquePower.IMPROVEMENT_BONUS.value,
-        1 * 100000 + Improvement.FORT.value * 1000 + 2,
+        Civ.SCOTLAND,
+        UniquePower.IMPROVEMENT_BONUS,
+        1 * 100000 + Improvement.FORT * 1000 + 2,
     )
 
     gc.setUP(
-        Civ.ENGLAND.value,
-        UniquePower.IMPROVEMENT_BONUS.value,
-        1 * 100000 + Improvement.WORKSHOP.value * 1000 + 1,
+        Civ.ENGLAND,
+        UniquePower.IMPROVEMENT_BONUS,
+        1 * 100000 + Improvement.WORKSHOP * 1000 + 1,
     )
     gc.setUP(
-        Civ.ENGLAND.value,
-        UniquePower.IMPROVEMENT_BONUS_2.value,
-        1 * 100000 + Improvement.COTTAGE.value * 1000 + 10,
+        Civ.ENGLAND,
+        UniquePower.IMPROVEMENT_BONUS_2,
+        1 * 100000 + Improvement.COTTAGE * 1000 + 10,
     )
     gc.setUP(
-        Civ.ENGLAND.value,
-        UniquePower.IMPROVEMENT_BONUS_3.value,
-        1 * 100000 + Improvement.HAMLET.value * 1000 + 10,
+        Civ.ENGLAND,
+        UniquePower.IMPROVEMENT_BONUS_3,
+        1 * 100000 + Improvement.HAMLET * 1000 + 10,
     )
     gc.setUP(
-        Civ.ENGLAND.value,
-        UniquePower.IMPROVEMENT_BONUS_4.value,
-        1 * 100000 + Improvement.VILLAGE.value * 1000 + 10,
+        Civ.ENGLAND,
+        UniquePower.IMPROVEMENT_BONUS_4,
+        1 * 100000 + Improvement.VILLAGE * 1000 + 10,
     )
     gc.setUP(
-        Civ.ENGLAND.value,
-        UniquePower.IMPROVEMENT_BONUS_5.value,
-        1 * 100000 + Improvement.TOWN.value * 1000 + 10,
+        Civ.ENGLAND,
+        UniquePower.IMPROVEMENT_BONUS_5,
+        1 * 100000 + Improvement.TOWN * 1000 + 10,
     )
 
     # Speed up East/West India Trading Companies and all Colonies
     gc.setUP(
-        Civ.PORTUGAL.value,
-        UniquePower.LOWER_COST_FOR_PROJECTS.value,
+        Civ.PORTUGAL,
+        UniquePower.LOWER_COST_FOR_PROJECTS,
         (len(Project) - 2) * 1000000 + max(Colony) * 1000 + 30,
     )
     gc.setUP(
-        Civ.PORTUGAL.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
+        Civ.PORTUGAL, UniquePower.STABILITY_BONUS_FOUNDING, 1
     )  # "hidden" part of the UP
 
     for i in civilizations().drop(Civ.BARBARIAN).ids():
-        if not i == Civ.AUSTRIA.value:
-            gc.setDiplomacyModifiers(i, Civ.AUSTRIA.value, +4)
-    gc.setUP(Civ.AUSTRIA.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
+        if not i == Civ.AUSTRIA:
+            gc.setDiplomacyModifiers(i, Civ.AUSTRIA, +4)
+    gc.setUP(Civ.AUSTRIA, UniquePower.PER_CITY_COMMERCE_BONUS, 200)
 
-    gc.setUP(Civ.OTTOMAN.value, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value, 1)
+    gc.setUP(Civ.OTTOMAN, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS, 1)
 
     gc.setUP(
-        Civ.SWEDEN.value,
-        UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value,
-        Promotion.FORMATION.value,
+        Civ.SWEDEN,
+        UniquePower.PROMOTION_FOR_ALL_VALID_UNITS,
+        Promotion.FORMATION,
     )
 
-    gc.setUP(Civ.NOVGOROD.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.BUREAUCRACY.value)
+    gc.setUP(Civ.NOVGOROD, UniquePower.PRE_ACCESS_CIVICS, Civic.BUREAUCRACY)
 
-    gc.setUP(Civ.PRUSSIA.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.THEOCRACY.value)
+    gc.setUP(Civ.PRUSSIA, UniquePower.PRE_ACCESS_CIVICS, Civic.THEOCRACY)
     # Absinthe: handled in python currently
-    # gc.setUP( iPrussia, UniquePower.NO_INSTABILITY_WITH_CIVIC_AND_STATE_RELIGION_CHANGE.value, 1 )
-
-    # Absinthe: handled in python currently
-    # gc.setUP( iAragon, UniquePower.EXTRA_COMMERCE_BONUS.value, 0 )
+    # gc.setUP( iPrussia, UniquePower.NO_INSTABILITY_WITH_CIVIC_AND_STATE_RELIGION_CHANGE, 1 )
 
     # Absinthe: handled in python currently
-    # gc.setUP( iScotland, UniquePower.EXTRA_UNITS_WHEN_LOSING_CITY.value, 1 )
+    # gc.setUP( iAragon, UniquePower.EXTRA_COMMERCE_BONUS, 0 )
 
-    gc.setUP(Civ.DUTCH.value, UniquePower.EXTRA_TRADE_ROUTES.value, 2)
+    # Absinthe: handled in python currently
+    # gc.setUP( iScotland, UniquePower.EXTRA_UNITS_WHEN_LOSING_CITY, 1 )
+
+    gc.setUP(Civ.DUTCH, UniquePower.EXTRA_TRADE_ROUTES, 2)
     gc.setUP(
-        Civ.DUTCH.value, UniquePower.IMPROVE_GAIN_FAITH_POINTS.value, 2
+        Civ.DUTCH, UniquePower.IMPROVE_GAIN_FAITH_POINTS, 2
     )  # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enough cities)
     gc.setUP(
-        Civ.DUTCH.value,
-        UniquePower.LOWER_COST_FOR_PROJECTS.value,
+        Civ.DUTCH,
+        UniquePower.LOWER_COST_FOR_PROJECTS,
         (len(Project) - 2) * 1000000 + max(Colony) * 1000 + 30,
     )  # "hidden" part of the UP
 
-    gc.setUP(Civ.POPE.value, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)
+    gc.setUP(Civ.POPE, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS, 1)
 
 
 def set_religion_spread_factor():
     for civ in civilizations():
         for religion, threshold in civ.religion.spreading_threshold.items():
-            gc.setReligionSpread(civ.id, religion.value, threshold)
+            gc.setReligionSpread(civ.id, religion, threshold)
 
 
 def set_religion_benefit():
@@ -391,37 +391,37 @@ def set_religion_benefit():
     # 		i.e. 1 Faith Point = iParameter percent of an attitude point
 
     gc.setReligionBenefit(
-        Religion.ORTHODOXY.value, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100
+        Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_STABILITY, 10, 100
     )
     gc.setReligionBenefit(
-        Religion.ORTHODOXY.value, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100
-    )
-
-    gc.setReligionBenefit(
-        Religion.ISLAM.value, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100
-    )
-    gc.setReligionBenefit(
-        Religion.ISLAM.value, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100
+        Religion.ORTHODOXY, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP, 50, 100
     )
 
     gc.setReligionBenefit(
-        Religion.PROTESTANTISM.value, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100
+        Religion.ISLAM, FaithPointBonusCategory.FASTER_POPULATION_GROWTH, 50, 100
     )
     gc.setReligionBenefit(
-        Religion.PROTESTANTISM.value, FaithPointBonusCategory.REDUCING_WONDER_COST.value, 30, 100
+        Religion.ISLAM, FaithPointBonusCategory.REDUCING_COST_UNITS, 50, 100
     )
 
     gc.setReligionBenefit(
-        Religion.CATHOLICISM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100
+        Religion.PROTESTANTISM, FaithPointBonusCategory.REDUCING_TECH_COST, 30, 100
     )
     gc.setReligionBenefit(
-        Religion.ISLAM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 5, 100
+        Religion.PROTESTANTISM, FaithPointBonusCategory.REDUCING_WONDER_COST, 30, 100
+    )
+
+    gc.setReligionBenefit(
+        Religion.CATHOLICISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 6, 100
     )
     gc.setReligionBenefit(
-        Religion.PROTESTANTISM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100
+        Religion.ISLAM, FaithPointBonusCategory.BOOST_DIPLOMACY, 5, 100
     )
     gc.setReligionBenefit(
-        Religion.ORTHODOXY.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100
+        Religion.PROTESTANTISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 4, 100
+    )
+    gc.setReligionBenefit(
+        Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_DIPLOMACY, 3, 100
     )
 
 
@@ -433,52 +433,52 @@ def set_historical_enemies():
     # 	(where the AI has clear advantage in a battle, yet it still won't attack)
     # 	so this should be a "last resort" solution, other methods are always preferable
     for civ1, civ2, value in HISTORICAL_ENEMIES:
-        gc.setHistoricalEnemyAICheat(civ1.value, civ2.value, value)
+        gc.setHistoricalEnemyAICheat(civ1, civ2, value)
 
 
 def set_other_parameters():
     gc.setGlobalWarming(False)
 
     # Set FastTerrain (i.e. double movement over ocean)
-    gc.setFastTerrain(Terrain.OCEAN.value)
+    gc.setFastTerrain(Terrain.OCEAN)
 
     # set the religions and year of the great schism
-    gc.setSchism(Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, DateTurn.i1053AD)
+    gc.setSchism(Religion.CATHOLICISM, Religion.ORTHODOXY, DateTurn.i1053AD)
     gc.setHoliestCity(*CITIES[City.JERUSALEM])
 
     # 3Miro: set the Jews as the minor Religion
-    gc.setMinorReligion(Religion.JUDAISM.value)
+    gc.setMinorReligion(Religion.JUDAISM)
     gc.setMinorReligionRefugies(0)
 
     # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
     # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-    gc.setPsychoAICheat(Civ.OTTOMAN.value, *civilization(Civ.BYZANTIUM).location.capital)
+    gc.setPsychoAICheat(Civ.OTTOMAN, *civilization(Civ.BYZANTIUM).location.capital)
 
     # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
     # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
     # 	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
     # 	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
-    gc.setVassalagaeCondition(Civ.CORDOBA.value, Civ.ARABIA.value, 1, ProvinceType.CONTESTED.value)
-    gc.setVassalagaeCondition(Civ.ARABIA.value, Civ.CORDOBA.value, 1, ProvinceType.CONTESTED.value)
+    gc.setVassalagaeCondition(Civ.CORDOBA, Civ.ARABIA, 1, ProvinceType.CONTESTED)
+    gc.setVassalagaeCondition(Civ.ARABIA, Civ.CORDOBA, 1, ProvinceType.CONTESTED)
 
     # block foundation of Protestantism except by a Catholic player
-    gc.setParentSchismReligions(Religion.CATHOLICISM.value, Religion.PROTESTANTISM.value)
+    gc.setParentSchismReligions(Religion.CATHOLICISM, Religion.PROTESTANTISM)
 
     # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
     gc.setPaceTurnsAfterSpawn(5)
 
-    gc.setProsecutorReligions(Unit.PROSECUTOR.value, PROSECUTOR_UNITCLASS)
+    gc.setProsecutorReligions(Unit.PROSECUTOR, PROSECUTOR_UNITCLASS)
     gc.setSaintParameters(
-        Unit.GREAT_PROPHET.value, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
+        Unit.GREAT_PROPHET, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
     )  # try to amass at least 20 and don't bother above 40 points
     gc.setIndependnets(
         min(civilizations().independents().ids()),
         max(civilizations().independents().ids()),
-        Civ.BARBARIAN.value,
+        Civ.BARBARIAN,
     )
-    gc.setPapalPlayer(Civ.POPE.value, Religion.CATHOLICISM.value)
+    gc.setPapalPlayer(Civ.POPE, Religion.CATHOLICISM)
 
-    gc.setAutorunHack(Unit.CATAPULT.value, 32, 0)  # Autorun hack, sync with RNF module
+    gc.setAutorunHack(Unit.CATAPULT, 32, 0)  # Autorun hack, sync with RNF module
 
     # 3MiroMercs: set the merc promotion
-    gc.setMercPromotion(Promotion.MERC.value)
+    gc.setMercPromotion(Promotion.MERC)

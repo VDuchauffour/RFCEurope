@@ -651,7 +651,7 @@ class CvPediaBuilding:
                 and not gc.getBuildingInfo(iBuilding).isGraphicalOnly()
             ):
                 # 3Miro: Plague not appear as building
-                if iBuilding != PlagueType.PLAGUE.value:
+                if iBuilding != PlagueType.PLAGUE:
                     listBuildings.append(iBuilding)
                     iCount += 1
 

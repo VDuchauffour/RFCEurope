@@ -31,13 +31,13 @@ class UniquePowers:
                 pFaithful.changeFaith(1)
 
             if iStateReligion == 0:
-                iTemple = Building.PROTESTANT_TEMPLE.value
+                iTemple = Building.PROTESTANT_TEMPLE
             elif iStateReligion == 1:
-                iTemple = Building.ISLAMIC_TEMPLE.value
+                iTemple = Building.ISLAMIC_TEMPLE
             elif iStateReligion == 2:
-                iTemple = Building.CATHOLIC_TEMPLE.value
+                iTemple = Building.CATHOLIC_TEMPLE
             elif iStateReligion == 3:
-                iTemple = Building.ORTHODOX_TEMPLE.value
+                iTemple = Building.ORTHODOX_TEMPLE
             if not city.hasBuilding(iTemple):
                 city.setHasRealBuilding(iTemple, True)
                 pFaithful.changeFaith(1)
@@ -54,7 +54,7 @@ class UniquePowers:
                     iNewPoints += city.getPopulation()
                     break
 
-        iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
+        iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS)
 
         iNextJanissary = 200
         if pPlayer.isHuman():
@@ -72,13 +72,13 @@ class UniquePowers:
                         iPlayer,
                         text_string,
                         sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                        button=gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
+                        button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
                         color=MessageData.GREEN,
                         location=pCity,
                     )
                 iTotalPoints -= iNextJanissary
 
-        pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value, iTotalPoints)
+        pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS, iTotalPoints)
 
     def janissaryNewCityUP(self, iPlayer, city, bConquest):
         pPlayer = gc.getPlayer(iPlayer)
@@ -92,10 +92,10 @@ class UniquePowers:
                 else:
                     iJanissaryPoint = iCityPopulation * 4
                 iOldPoints = pPlayer.getPicklefreeParameter(
-                    SpecialParameter.JANISSARY_POINTS.value
+                    SpecialParameter.JANISSARY_POINTS
                 )
                 pPlayer.setPicklefreeParameter(
-                    SpecialParameter.JANISSARY_POINTS.value, iOldPoints + iJanissaryPoint
+                    SpecialParameter.JANISSARY_POINTS, iOldPoints + iJanissaryPoint
                 )
                 break
 
@@ -109,7 +109,7 @@ class UniquePowers:
                     iPlayer,
                     text_string,
                     sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                    button=gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
+                    button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
                     color=MessageData.GREEN,
                     location=city,
                 )
@@ -206,14 +206,14 @@ class UniquePowers:
     def defianceUP(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         # One ranged/gun class
-        RangedClass = getUniqueUnit(iPlayer, Unit.ARCHER.value)
+        RangedClass = getUniqueUnit(iPlayer, Unit.ARCHER)
         lRangedList = [
-            Unit.LINE_INFANTRY.value,
-            Unit.MUSKETMAN.value,
-            Unit.LONGBOWMAN.value,
-            Unit.ARBALEST.value,
-            Unit.CROSSBOWMAN.value,
-            Unit.ARCHER.value,
+            Unit.LINE_INFANTRY,
+            Unit.MUSKETMAN,
+            Unit.LONGBOWMAN,
+            Unit.ARBALEST,
+            Unit.CROSSBOWMAN,
+            Unit.ARCHER,
         ]
         for iUnit in lRangedList:
             if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
@@ -221,8 +221,8 @@ class UniquePowers:
                 break
 
         # One polearm class
-        PolearmClass = getUniqueUnit(iPlayer, Unit.SPEARMAN.value)
-        lPolearmList = [Unit.LINE_INFANTRY.value, Unit.PIKEMAN.value, Unit.GUISARME.value]
+        PolearmClass = getUniqueUnit(iPlayer, Unit.SPEARMAN)
+        lPolearmList = [Unit.LINE_INFANTRY, Unit.PIKEMAN, Unit.GUISARME]
         for iUnit in lPolearmList:
             if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
                 PolearmClass = getUniqueUnit(iPlayer, iUnit)

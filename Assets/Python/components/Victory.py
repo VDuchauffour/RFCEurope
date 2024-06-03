@@ -37,428 +37,428 @@ gc = CyGlobalContext()
 
 
 tByzantiumControl = [
-    Province.CALABRIA.value,
-    Province.APULIA.value,
-    Province.DALMATIA.value,
-    Province.VERONA.value,
-    Province.LOMBARDY.value,
-    Province.LIGURIA.value,
-    Province.TUSCANY.value,
-    Province.LATIUM.value,
-    Province.CORSICA.value,
-    Province.SARDINIA.value,
-    Province.SICILY.value,
-    Province.TRIPOLITANIA.value,
-    Province.IFRIQIYA.value,
+    Province.CALABRIA,
+    Province.APULIA,
+    Province.DALMATIA,
+    Province.VERONA,
+    Province.LOMBARDY,
+    Province.LIGURIA,
+    Province.TUSCANY,
+    Province.LATIUM,
+    Province.CORSICA,
+    Province.SARDINIA,
+    Province.SICILY,
+    Province.TRIPOLITANIA,
+    Province.IFRIQIYA,
 ]
 tByzantiumControlII = [
-    Province.COLONEA.value,
-    Province.ANTIOCHIA.value,
-    Province.CHARSIANON.value,
-    Province.CILICIA.value,
-    Province.ARMENIAKON.value,
-    Province.ANATOLIKON.value,
-    Province.PAPHLAGONIA.value,
-    Province.THRAKESION.value,
-    Province.OPSIKION.value,
-    Province.CONSTANTINOPLE.value,
-    Province.THRACE.value,
-    Province.THESSALONIKI.value,
-    Province.MOESIA.value,
-    Province.MACEDONIA.value,
-    Province.SERBIA.value,
-    Province.ARBERIA.value,
-    Province.EPIRUS.value,
-    Province.THESSALY.value,
-    Province.MOREA.value,
+    Province.COLONEA,
+    Province.ANTIOCHIA,
+    Province.CHARSIANON,
+    Province.CILICIA,
+    Province.ARMENIAKON,
+    Province.ANATOLIKON,
+    Province.PAPHLAGONIA,
+    Province.THRAKESION,
+    Province.OPSIKION,
+    Province.CONSTANTINOPLE,
+    Province.THRACE,
+    Province.THESSALONIKI,
+    Province.MOESIA,
+    Province.MACEDONIA,
+    Province.SERBIA,
+    Province.ARBERIA,
+    Province.EPIRUS,
+    Province.THESSALY,
+    Province.MOREA,
 ]
 tFrankControl = [
-    Province.SWABIA.value,
-    Province.SAXONY.value,
-    Province.LORRAINE.value,
-    Province.ILE_DE_FRANCE.value,
-    Province.NORMANDY.value,
-    Province.PICARDY.value,
-    Province.AQUITAINE.value,
-    Province.PROVENCE.value,
-    Province.BURGUNDY.value,
-    Province.ORLEANS.value,
-    Province.CHAMPAGNE.value,
-    Province.CATALONIA.value,
-    Province.LOMBARDY.value,
-    Province.TUSCANY.value,
+    Province.SWABIA,
+    Province.SAXONY,
+    Province.LORRAINE,
+    Province.ILE_DE_FRANCE,
+    Province.NORMANDY,
+    Province.PICARDY,
+    Province.AQUITAINE,
+    Province.PROVENCE,
+    Province.BURGUNDY,
+    Province.ORLEANS,
+    Province.CHAMPAGNE,
+    Province.CATALONIA,
+    Province.LOMBARDY,
+    Province.TUSCANY,
 ]
 tArabiaControlI = [
-    Province.ARABIA.value,
-    Province.JERUSALEM.value,
-    Province.SYRIA.value,
-    Province.LEBANON.value,
-    Province.ANTIOCHIA.value,
-    Province.EGYPT.value,
-    Province.CYRENAICA.value,
-    Province.TRIPOLITANIA.value,
-    Province.IFRIQIYA.value,
-    Province.SICILY.value,
-    Province.CRETE.value,
-    Province.CYPRUS.value,
+    Province.ARABIA,
+    Province.JERUSALEM,
+    Province.SYRIA,
+    Province.LEBANON,
+    Province.ANTIOCHIA,
+    Province.EGYPT,
+    Province.CYRENAICA,
+    Province.TRIPOLITANIA,
+    Province.IFRIQIYA,
+    Province.SICILY,
+    Province.CRETE,
+    Province.CYPRUS,
 ]
 tArabiaControlII = [
-    Province.ARABIA.value,
-    Province.JERUSALEM.value,
-    Province.SYRIA.value,
-    Province.LEBANON.value,
-    Province.ANTIOCHIA.value,
-    Province.EGYPT.value,
+    Province.ARABIA,
+    Province.JERUSALEM,
+    Province.SYRIA,
+    Province.LEBANON,
+    Province.ANTIOCHIA,
+    Province.EGYPT,
 ]
 tBulgariaControl = [
-    Province.CONSTANTINOPLE.value,
-    Province.THESSALONIKI.value,
-    Province.SERBIA.value,
-    Province.THRACE.value,
-    Province.MACEDONIA.value,
-    Province.MOESIA.value,
-    Province.ARBERIA.value,
+    Province.CONSTANTINOPLE,
+    Province.THESSALONIKI,
+    Province.SERBIA,
+    Province.THRACE,
+    Province.MACEDONIA,
+    Province.MOESIA,
+    Province.ARBERIA,
 ]
 tCordobaWonders = [
-    Wonder.ALHAMBRA.value,
-    Wonder.LA_MEZQUITA.value,
-    Wonder.GARDENS_AL_ANDALUS.value,
+    Wonder.ALHAMBRA,
+    Wonder.LA_MEZQUITA,
+    Wonder.GARDENS_AL_ANDALUS,
 ]
 tCordobaIslamize = [
-    Province.GALICIA.value,
-    Province.CASTILE.value,
-    Province.LEON.value,
-    Province.LUSITANIA.value,
-    Province.CATALONIA.value,
-    Province.ARAGON.value,
-    Province.NAVARRE.value,
-    Province.VALENCIA.value,
-    Province.LA_MANCHA.value,
-    Province.ANDALUSIA.value,
+    Province.GALICIA,
+    Province.CASTILE,
+    Province.LEON,
+    Province.LUSITANIA,
+    Province.CATALONIA,
+    Province.ARAGON,
+    Province.NAVARRE,
+    Province.VALENCIA,
+    Province.LA_MANCHA,
+    Province.ANDALUSIA,
 ]
 tNorwayControl = [
-    Province.THE_ISLES.value,
-    Province.IRELAND.value,
-    Province.SCOTLAND.value,
-    Province.NORMANDY.value,
-    Province.SICILY.value,
-    Province.APULIA.value,
-    Province.CALABRIA.value,
-    Province.ICELAND.value,
+    Province.THE_ISLES,
+    Province.IRELAND,
+    Province.SCOTLAND,
+    Province.NORMANDY,
+    Province.SICILY,
+    Province.APULIA,
+    Province.CALABRIA,
+    Province.ICELAND,
 ]
 tNorwayOutrank = [
-    Civ.SWEDEN.value,
-    Civ.DENMARK.value,
-    Civ.SCOTLAND.value,
-    Civ.ENGLAND.value,
-    Civ.GERMANY.value,
-    Civ.FRANCE.value,
+    Civ.SWEDEN,
+    Civ.DENMARK,
+    Civ.SCOTLAND,
+    Civ.ENGLAND,
+    Civ.GERMANY,
+    Civ.FRANCE,
 ]
-# tNorseControl = [ Province.SICILY.value, Province.ICELAND.value, Province.NORTHUMBRIA.value, Province.SCOTLAND.value, Province.NORMANDY.value, Province.IRELAND.value, Province.NOVGOROD.value ]
+# tNorseControl = [ Province.SICILY, Province.ICELAND, Province.NORTHUMBRIA, Province.SCOTLAND, Province.NORMANDY, Province.IRELAND, Province.NOVGOROD ]
 tVenetianControl = [
-    Province.EPIRUS.value,
-    Province.DALMATIA.value,
-    Province.VERONA.value,
-    Province.ARBERIA.value,
+    Province.EPIRUS,
+    Province.DALMATIA,
+    Province.VERONA,
+    Province.ARBERIA,
 ]
 tVenetianControlII = [
-    Province.THESSALY.value,
-    Province.MOREA.value,
-    Province.CRETE.value,
-    Province.CYPRUS.value,
+    Province.THESSALY,
+    Province.MOREA,
+    Province.CRETE,
+    Province.CYPRUS,
 ]
 tBurgundyControl = [
-    Province.FLANDERS.value,
-    Province.PICARDY.value,
-    Province.PROVENCE.value,
-    Province.BURGUNDY.value,
-    Province.CHAMPAGNE.value,
-    Province.LORRAINE.value,
+    Province.FLANDERS,
+    Province.PICARDY,
+    Province.PROVENCE,
+    Province.BURGUNDY,
+    Province.CHAMPAGNE,
+    Province.LORRAINE,
 ]
-tBurgundyOutrank = [Civ.FRANCE.value, Civ.ENGLAND.value, Civ.GERMANY.value]
+tBurgundyOutrank = [Civ.FRANCE, Civ.ENGLAND, Civ.GERMANY]
 tGermanyControl = [
-    Province.TUSCANY.value,
-    Province.LIGURIA.value,
-    Province.LOMBARDY.value,
-    Province.LORRAINE.value,
-    Province.SWABIA.value,
-    Province.SAXONY.value,
-    Province.BAVARIA.value,
-    Province.FRANCONIA.value,
-    Province.BRANDENBURG.value,
-    Province.HOLSTEIN.value,
+    Province.TUSCANY,
+    Province.LIGURIA,
+    Province.LOMBARDY,
+    Province.LORRAINE,
+    Province.SWABIA,
+    Province.SAXONY,
+    Province.BAVARIA,
+    Province.FRANCONIA,
+    Province.BRANDENBURG,
+    Province.HOLSTEIN,
 ]
 tGermanyControlII = [
-    Province.AUSTRIA.value,
-    Province.FLANDERS.value,
-    Province.POMERANIA.value,
-    Province.SILESIA.value,
-    Province.BOHEMIA.value,
-    Province.MORAVIA.value,
-    Province.SWABIA.value,
-    Province.SAXONY.value,
-    Province.BAVARIA.value,
-    Province.FRANCONIA.value,
-    Province.BRANDENBURG.value,
-    Province.HOLSTEIN.value,
+    Province.AUSTRIA,
+    Province.FLANDERS,
+    Province.POMERANIA,
+    Province.SILESIA,
+    Province.BOHEMIA,
+    Province.MORAVIA,
+    Province.SWABIA,
+    Province.SAXONY,
+    Province.BAVARIA,
+    Province.FRANCONIA,
+    Province.BRANDENBURG,
+    Province.HOLSTEIN,
 ]
 tKievControl = [
-    Province.KIEV.value,
-    Province.PODOLIA.value,
-    Province.PEREYASLAVL.value,
-    Province.SLOBODA.value,
-    Province.CHERNIGOV.value,
-    Province.VOLHYNIA.value,
-    Province.MINSK.value,
-    Province.POLOTSK.value,
-    Province.SMOLENSK.value,
-    Province.MOSCOW.value,
-    Province.MUROM.value,
-    Province.ROSTOV.value,
-    Province.NOVGOROD.value,
-    Province.VOLOGDA.value,
+    Province.KIEV,
+    Province.PODOLIA,
+    Province.PEREYASLAVL,
+    Province.SLOBODA,
+    Province.CHERNIGOV,
+    Province.VOLHYNIA,
+    Province.MINSK,
+    Province.POLOTSK,
+    Province.SMOLENSK,
+    Province.MOSCOW,
+    Province.MUROM,
+    Province.ROSTOV,
+    Province.NOVGOROD,
+    Province.VOLOGDA,
 ]
 tHungaryControl = [
-    Province.AUSTRIA.value,
-    Province.CARINTHIA.value,
-    Province.MORAVIA.value,
-    Province.SILESIA.value,
-    Province.BOHEMIA.value,
-    Province.DALMATIA.value,
-    Province.BOSNIA.value,
-    Province.BANAT.value,
-    Province.WALLACHIA.value,
-    Province.MOLDOVA.value,
+    Province.AUSTRIA,
+    Province.CARINTHIA,
+    Province.MORAVIA,
+    Province.SILESIA,
+    Province.BOHEMIA,
+    Province.DALMATIA,
+    Province.BOSNIA,
+    Province.BANAT,
+    Province.WALLACHIA,
+    Province.MOLDOVA,
 ]
 tHungaryControlII = [
-    Province.THRACE.value,
-    Province.MOESIA.value,
-    Province.MACEDONIA.value,
-    Province.THESSALONIKI.value,
-    Province.WALLACHIA.value,
-    Province.THESSALY.value,
-    Province.MOREA.value,
-    Province.EPIRUS.value,
-    Province.ARBERIA.value,
-    Province.SERBIA.value,
-    Province.BANAT.value,
-    Province.BOSNIA.value,
-    Province.DALMATIA.value,
-    Province.SLAVONIA.value,
+    Province.THRACE,
+    Province.MOESIA,
+    Province.MACEDONIA,
+    Province.THESSALONIKI,
+    Province.WALLACHIA,
+    Province.THESSALY,
+    Province.MOREA,
+    Province.EPIRUS,
+    Province.ARBERIA,
+    Province.SERBIA,
+    Province.BANAT,
+    Province.BOSNIA,
+    Province.DALMATIA,
+    Province.SLAVONIA,
 ]
 tSpainConvert = [
-    Province.GALICIA.value,
-    Province.CASTILE.value,
-    Province.LEON.value,
-    Province.LUSITANIA.value,
-    Province.CATALONIA.value,
-    Province.ARAGON.value,
-    Province.NAVARRE.value,
-    Province.VALENCIA.value,
-    Province.LA_MANCHA.value,
-    Province.ANDALUSIA.value,
+    Province.GALICIA,
+    Province.CASTILE,
+    Province.LEON,
+    Province.LUSITANIA,
+    Province.CATALONIA,
+    Province.ARAGON,
+    Province.NAVARRE,
+    Province.VALENCIA,
+    Province.LA_MANCHA,
+    Province.ANDALUSIA,
 ]
 tPolishControl = [
-    Province.BOHEMIA.value,
-    Province.MORAVIA.value,
-    Province.UPPER_HUNGARY.value,
-    Province.PRUSSIA.value,
-    Province.LITHUANIA.value,
-    Province.LIVONIA.value,
-    Province.POLOTSK.value,
-    Province.MINSK.value,
-    Province.VOLHYNIA.value,
-    Province.PODOLIA.value,
-    Province.MOLDOVA.value,
-    Province.KIEV.value,
+    Province.BOHEMIA,
+    Province.MORAVIA,
+    Province.UPPER_HUNGARY,
+    Province.PRUSSIA,
+    Province.LITHUANIA,
+    Province.LIVONIA,
+    Province.POLOTSK,
+    Province.MINSK,
+    Province.VOLHYNIA,
+    Province.PODOLIA,
+    Province.MOLDOVA,
+    Province.KIEV,
 ]
 tGenoaControl = [
-    Province.CORSICA.value,
-    Province.SARDINIA.value,
-    Province.CRETE.value,
-    Province.RHODES.value,
-    Province.THRAKESION.value,
-    Province.CYPRUS.value,
-    Province.CRIMEA.value,
+    Province.CORSICA,
+    Province.SARDINIA,
+    Province.CRETE,
+    Province.RHODES,
+    Province.THRAKESION,
+    Province.CYPRUS,
+    Province.CRIMEA,
 ]
 tEnglandControl = [
-    Province.AQUITAINE.value,
-    Province.LONDON.value,
-    Province.WALES.value,
-    Province.WESSEX.value,
-    Province.SCOTLAND.value,
-    Province.EAST_ANGLIA.value,
-    Province.MERCIA.value,
-    Province.NORTHUMBRIA.value,
-    Province.IRELAND.value,
-    Province.NORMANDY.value,
-    Province.BRETAGNE.value,
-    Province.ILE_DE_FRANCE.value,
-    Province.ORLEANS.value,
-    Province.PICARDY.value,
+    Province.AQUITAINE,
+    Province.LONDON,
+    Province.WALES,
+    Province.WESSEX,
+    Province.SCOTLAND,
+    Province.EAST_ANGLIA,
+    Province.MERCIA,
+    Province.NORTHUMBRIA,
+    Province.IRELAND,
+    Province.NORMANDY,
+    Province.BRETAGNE,
+    Province.ILE_DE_FRANCE,
+    Province.ORLEANS,
+    Province.PICARDY,
 ]
-tPortugalControlI = [Province.AZORES.value, Province.CANARIES.value, Province.MADEIRA.value]
-tPortugalControlII = [Province.MOROCCO.value, Province.TETOUAN.value, Province.ORAN.value]
+tPortugalControlI = [Province.AZORES, Province.CANARIES, Province.MADEIRA]
+tPortugalControlII = [Province.MOROCCO, Province.TETOUAN, Province.ORAN]
 tAustriaControl = [
-    Province.HUNGARY.value,
-    Province.UPPER_HUNGARY.value,
-    Province.AUSTRIA.value,
-    Province.CARINTHIA.value,
-    Province.BAVARIA.value,
-    Province.TRANSYLVANIA.value,
-    Province.PANNONIA.value,
-    Province.MORAVIA.value,
-    Province.SILESIA.value,
-    Province.BOHEMIA.value,
+    Province.HUNGARY,
+    Province.UPPER_HUNGARY,
+    Province.AUSTRIA,
+    Province.CARINTHIA,
+    Province.BAVARIA,
+    Province.TRANSYLVANIA,
+    Province.PANNONIA,
+    Province.MORAVIA,
+    Province.SILESIA,
+    Province.BOHEMIA,
 ]
 tOttomanControlI = [
-    Province.SERBIA.value,
-    Province.BOSNIA.value,
-    Province.BANAT.value,
-    Province.MACEDONIA.value,
-    Province.THRACE.value,
-    Province.MOESIA.value,
-    Province.CONSTANTINOPLE.value,
-    Province.ARBERIA.value,
-    Province.EPIRUS.value,
-    Province.THESSALONIKI.value,
-    Province.THESSALY.value,
-    Province.MOREA.value,
-    Province.COLONEA.value,
-    Province.ANTIOCHIA.value,
-    Province.CHARSIANON.value,
-    Province.CILICIA.value,
-    Province.ARMENIAKON.value,
-    Province.ANATOLIKON.value,
-    Province.PAPHLAGONIA.value,
-    Province.THRAKESION.value,
-    Province.OPSIKION.value,
-    Province.SYRIA.value,
-    Province.LEBANON.value,
-    Province.JERUSALEM.value,
-    Province.EGYPT.value,
+    Province.SERBIA,
+    Province.BOSNIA,
+    Province.BANAT,
+    Province.MACEDONIA,
+    Province.THRACE,
+    Province.MOESIA,
+    Province.CONSTANTINOPLE,
+    Province.ARBERIA,
+    Province.EPIRUS,
+    Province.THESSALONIKI,
+    Province.THESSALY,
+    Province.MOREA,
+    Province.COLONEA,
+    Province.ANTIOCHIA,
+    Province.CHARSIANON,
+    Province.CILICIA,
+    Province.ARMENIAKON,
+    Province.ANATOLIKON,
+    Province.PAPHLAGONIA,
+    Province.THRAKESION,
+    Province.OPSIKION,
+    Province.SYRIA,
+    Province.LEBANON,
+    Province.JERUSALEM,
+    Province.EGYPT,
 ]
 tOttomanWonders = [
-    Wonder.TOPKAPI_PALACE.value,
-    Wonder.BLUE_MOSQUE.value,
-    Wonder.SELIMIYE_MOSQUE.value,
-    Wonder.TOMB_AL_WALID.value,
+    Wonder.TOPKAPI_PALACE,
+    Wonder.BLUE_MOSQUE,
+    Wonder.SELIMIYE_MOSQUE,
+    Wonder.TOMB_AL_WALID,
 ]
-tOttomanControlII = [Province.AUSTRIA.value, Province.PANNONIA.value, Province.LESSER_POLAND.value]
+tOttomanControlII = [Province.AUSTRIA, Province.PANNONIA, Province.LESSER_POLAND]
 tMoscowControl = [
-    Province.DONETS.value,
-    Province.KUBAN.value,
-    Province.ZAPORIZHIA.value,
-    Province.SLOBODA.value,
-    Province.KIEV.value,
-    Province.MOLDOVA.value,
-    Province.CRIMEA.value,
-    Province.PEREYASLAVL.value,
-    Province.CHERNIGOV.value,
-    Province.SIMBIRSK.value,
-    Province.NIZHNYNOVGOROD.value,
-    Province.VOLOGDA.value,
-    Province.ROSTOV.value,
-    Province.NOVGOROD.value,
-    Province.KARELIA.value,
-    Province.SMOLENSK.value,
-    Province.POLOTSK.value,
-    Province.MINSK.value,
-    Province.VOLHYNIA.value,
-    Province.PODOLIA.value,
-    Province.MOSCOW.value,
-    Province.MUROM.value,
+    Province.DONETS,
+    Province.KUBAN,
+    Province.ZAPORIZHIA,
+    Province.SLOBODA,
+    Province.KIEV,
+    Province.MOLDOVA,
+    Province.CRIMEA,
+    Province.PEREYASLAVL,
+    Province.CHERNIGOV,
+    Province.SIMBIRSK,
+    Province.NIZHNYNOVGOROD,
+    Province.VOLOGDA,
+    Province.ROSTOV,
+    Province.NOVGOROD,
+    Province.KARELIA,
+    Province.SMOLENSK,
+    Province.POLOTSK,
+    Province.MINSK,
+    Province.VOLHYNIA,
+    Province.PODOLIA,
+    Province.MOSCOW,
+    Province.MUROM,
 ]
-# tSwedenControlI = [ Province.GOTALAND.value, Province.SVEALAND.value, Province.NORRLAND.value, Province.SKANELAND.value, Province.GOTLAND.value, Province.OSTERLAND.value ]
-# tSwedenControlII = [ Province.SAXONY.value, Province.BRANDENBURG.value, Province.HOLSTEIN.value, Province.POMERANIA.value, Province.PRUSSIA.value, Province.GREATER_POLAND.value, Province.MASOVIA.value, Province.SUVALKIJA.value, Province.LITHUANIA.value, Province.LIVONIA.value, Province.ESTONIA.value, Province.SMOLENSK.value, Province.POLOTSK.value, Province.MINSK.value, Province.MUROM.value, Province.CHERNIGOV.value, Province.MOSCOW.value, Province.NOVGOROD.value, Province.ROSTOV.value ]
-tSwedenControl = [Province.NORRLAND.value, Province.OSTERLAND.value, Province.KARELIA.value]
+# tSwedenControlI = [ Province.GOTALAND, Province.SVEALAND, Province.NORRLAND, Province.SKANELAND, Province.GOTLAND, Province.OSTERLAND ]
+# tSwedenControlII = [ Province.SAXONY, Province.BRANDENBURG, Province.HOLSTEIN, Province.POMERANIA, Province.PRUSSIA, Province.GREATER_POLAND, Province.MASOVIA, Province.SUVALKIJA, Province.LITHUANIA, Province.LIVONIA, Province.ESTONIA, Province.SMOLENSK, Province.POLOTSK, Province.MINSK, Province.MUROM, Province.CHERNIGOV, Province.MOSCOW, Province.NOVGOROD, Province.ROSTOV ]
+tSwedenControl = [Province.NORRLAND, Province.OSTERLAND, Province.KARELIA]
 tNovgorodControl = [
-    Province.NOVGOROD.value,
-    Province.KARELIA.value,
-    Province.ESTONIA.value,
-    Province.LIVONIA.value,
-    Province.ROSTOV.value,
-    Province.VOLOGDA.value,
-    Province.OSTERLAND.value,
+    Province.NOVGOROD,
+    Province.KARELIA,
+    Province.ESTONIA,
+    Province.LIVONIA,
+    Province.ROSTOV,
+    Province.VOLOGDA,
+    Province.OSTERLAND,
 ]
-# tNovgorodControlII = [ Province.KARELIA.value, Province.VOLOGDA.value ]
+# tNovgorodControlII = [ Province.KARELIA, Province.VOLOGDA ]
 tMoroccoControl = [
-    Province.MOROCCO.value,
-    Province.MARRAKESH.value,
-    Province.FEZ.value,
-    Province.TETOUAN.value,
-    Province.ORAN.value,
-    Province.ALGIERS.value,
-    Province.IFRIQIYA.value,
-    Province.ANDALUSIA.value,
-    Province.VALENCIA.value,
-    Province.BALEARS.value,
+    Province.MOROCCO,
+    Province.MARRAKESH,
+    Province.FEZ,
+    Province.TETOUAN,
+    Province.ORAN,
+    Province.ALGIERS,
+    Province.IFRIQIYA,
+    Province.ANDALUSIA,
+    Province.VALENCIA,
+    Province.BALEARS,
 ]
 tAragonControlI = [
-    Province.CATALONIA.value,
-    Province.VALENCIA.value,
-    Province.BALEARS.value,
-    Province.SICILY.value,
+    Province.CATALONIA,
+    Province.VALENCIA,
+    Province.BALEARS,
+    Province.SICILY,
 ]
 tAragonControlII = [
-    Province.CATALONIA.value,
-    Province.VALENCIA.value,
-    Province.ARAGON.value,
-    Province.BALEARS.value,
-    Province.CORSICA.value,
-    Province.SARDINIA.value,
-    Province.SICILY.value,
-    Province.CALABRIA.value,
-    Province.APULIA.value,
-    Province.PROVENCE.value,
-    Province.THESSALY.value,
+    Province.CATALONIA,
+    Province.VALENCIA,
+    Province.ARAGON,
+    Province.BALEARS,
+    Province.CORSICA,
+    Province.SARDINIA,
+    Province.SICILY,
+    Province.CALABRIA,
+    Province.APULIA,
+    Province.PROVENCE,
+    Province.THESSALY,
 ]
 tPrussiaControlI = [
-    Province.LITHUANIA.value,
-    Province.SUVALKIJA.value,
-    Province.LIVONIA.value,
-    Province.ESTONIA.value,
-    Province.POMERANIA.value,
-    Province.PRUSSIA.value,
+    Province.LITHUANIA,
+    Province.SUVALKIJA,
+    Province.LIVONIA,
+    Province.ESTONIA,
+    Province.POMERANIA,
+    Province.PRUSSIA,
 ]
 tPrussiaDefeat = [
-    Civ.AUSTRIA.value,
-    Civ.MOSCOW.value,
-    Civ.GERMANY.value,
-    Civ.SWEDEN.value,
-    Civ.FRANCE.value,
-    Civ.CASTILE.value,
+    Civ.AUSTRIA,
+    Civ.MOSCOW,
+    Civ.GERMANY,
+    Civ.SWEDEN,
+    Civ.FRANCE,
+    Civ.CASTILE,
 ]
 tScotlandControl = [
-    Province.SCOTLAND.value,
-    Province.THE_ISLES.value,
-    Province.IRELAND.value,
-    Province.WALES.value,
-    Province.BRETAGNE.value,
+    Province.SCOTLAND,
+    Province.THE_ISLES,
+    Province.IRELAND,
+    Province.WALES,
+    Province.BRETAGNE,
 ]
 tDenmarkControlI = [
-    Province.DENMARK.value,
-    Province.SKANELAND.value,
-    Province.GOTALAND.value,
-    Province.SVEALAND.value,
-    Province.MERCIA.value,
-    Province.LONDON.value,
-    Province.EAST_ANGLIA.value,
-    Province.NORTHUMBRIA.value,
+    Province.DENMARK,
+    Province.SKANELAND,
+    Province.GOTALAND,
+    Province.SVEALAND,
+    Province.MERCIA,
+    Province.LONDON,
+    Province.EAST_ANGLIA,
+    Province.NORTHUMBRIA,
 ]
-# tDenmarkControlII = [ Province.BRANDENBURG.value, Province.POMERANIA.value, Province.ESTONIA.value ]
+# tDenmarkControlII = [ Province.BRANDENBURG, Province.POMERANIA, Province.ESTONIA ]
 tDenmarkControlIII = [
-    Province.DENMARK.value,
-    Province.NORWAY.value,
-    Province.VESTFOLD.value,
-    Province.SKANELAND.value,
-    Province.GOTALAND.value,
-    Province.SVEALAND.value,
-    Province.NORRLAND.value,
-    Province.GOTLAND.value,
-    Province.OSTERLAND.value,
-    Province.ESTONIA.value,
-    Province.ICELAND.value,
+    Province.DENMARK,
+    Province.NORWAY,
+    Province.VESTFOLD,
+    Province.SKANELAND,
+    Province.GOTALAND,
+    Province.SVEALAND,
+    Province.NORRLAND,
+    Province.GOTLAND,
+    Province.OSTERLAND,
+    Province.ESTONIA,
+    Province.ICELAND,
 ]
 
 # tHugeHungaryControl = ( 0, 23, 99, 72 )
@@ -468,34 +468,34 @@ totalLand = gc.getMap().getLandPlots()
 class Victory:
     def __init__(self):
         self.switchConditionsPerCiv = {
-            Civ.BYZANTIUM.value: self.checkByzantium,
-            Civ.FRANCE.value: self.checkFrankia,
-            Civ.ARABIA.value: self.checkArabia,
-            Civ.BULGARIA.value: self.checkBulgaria,
-            Civ.CORDOBA.value: self.checkCordoba,
-            Civ.VENECIA.value: self.checkVenecia,
-            Civ.BURGUNDY.value: self.checkBurgundy,
-            Civ.GERMANY.value: self.checkGermany,
-            Civ.NOVGOROD.value: self.checkNovgorod,
-            Civ.NORWAY.value: self.checkNorway,
-            Civ.KIEV.value: self.checkKiev,
-            Civ.HUNGARY.value: self.checkHungary,
-            Civ.CASTILE.value: self.checkSpain,
-            Civ.DENMARK.value: self.checkDenmark,
-            Civ.SCOTLAND.value: self.checkScotland,
-            Civ.POLAND.value: self.checkPoland,
-            Civ.GENOA.value: self.checkGenoa,
-            Civ.MOROCCO.value: self.checkMorocco,
-            Civ.ENGLAND.value: self.checkEngland,
-            Civ.PORTUGAL.value: self.checkPortugal,
-            Civ.ARAGON.value: self.checkAragon,
-            Civ.SWEDEN.value: self.checkSweden,
-            Civ.PRUSSIA.value: self.checkPrussia,
-            Civ.LITHUANIA.value: self.checkLithuania,
-            Civ.AUSTRIA.value: self.checkAustria,
-            Civ.OTTOMAN.value: self.checkTurkey,
-            Civ.MOSCOW.value: self.checkMoscow,
-            Civ.DUTCH.value: self.checkDutch,
+            Civ.BYZANTIUM: self.checkByzantium,
+            Civ.FRANCE: self.checkFrankia,
+            Civ.ARABIA: self.checkArabia,
+            Civ.BULGARIA: self.checkBulgaria,
+            Civ.CORDOBA: self.checkCordoba,
+            Civ.VENECIA: self.checkVenecia,
+            Civ.BURGUNDY: self.checkBurgundy,
+            Civ.GERMANY: self.checkGermany,
+            Civ.NOVGOROD: self.checkNovgorod,
+            Civ.NORWAY: self.checkNorway,
+            Civ.KIEV: self.checkKiev,
+            Civ.HUNGARY: self.checkHungary,
+            Civ.CASTILE: self.checkSpain,
+            Civ.DENMARK: self.checkDenmark,
+            Civ.SCOTLAND: self.checkScotland,
+            Civ.POLAND: self.checkPoland,
+            Civ.GENOA: self.checkGenoa,
+            Civ.MOROCCO: self.checkMorocco,
+            Civ.ENGLAND: self.checkEngland,
+            Civ.PORTUGAL: self.checkPortugal,
+            Civ.ARAGON: self.checkAragon,
+            Civ.SWEDEN: self.checkSweden,
+            Civ.PRUSSIA: self.checkPrussia,
+            Civ.LITHUANIA: self.checkLithuania,
+            Civ.AUSTRIA: self.checkAustria,
+            Civ.OTTOMAN: self.checkTurkey,
+            Civ.MOSCOW: self.checkMoscow,
+            Civ.DUTCH: self.checkDutch,
         }
 
     ##################################################
@@ -548,7 +548,7 @@ class Victory:
                 if pPlayer.getNumCities() > 0:  # this check is needed, otherwise game crashes
                     capital = pPlayer.getCapitalCity()
                     # 3Miro: Golden Age after 2/3 victories
-                    capital.setHasRealBuilding(Building.TRIUMPHAL_ARCH.value, True)
+                    capital.setHasRealBuilding(Building.TRIUMPHAL_ARCH, True)
                     if pPlayer.isHuman():
                         message(
                             iPlayer, text("TXT_KEY_VICTORY_INTERMEDIATE"), color=MessageData.PURPLE
@@ -629,7 +629,7 @@ class Victory:
 
     def onCityBuilt(self, city, iPlayer):  # see onCityBuilt in CvRFCEventHandler
         # Portugal UHV 1: Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran
-        if iPlayer == Civ.PORTUGAL.value:
+        if iPlayer == Civ.PORTUGAL:
             if self.isPossibleUHV(iPlayer, 0, False):
                 iProv = city.getProvince()
                 if iProv in tPortugalControlI or iProv in tPortugalControlII:
@@ -641,16 +641,16 @@ class Victory:
                     else:
                         iAfrica += 1
                     if iIslands >= 3 and iAfrica >= 2:
-                        self.wonUHV(Civ.PORTUGAL.value, 0)
+                        self.wonUHV(Civ.PORTUGAL, 0)
                     player(Civ.PORTUGAL).setUHVCounter(0, iAfrica * 100 + iIslands)
 
     def onReligionFounded(self, iReligion, iFounder):
         # Germany UHV 2: Start the Reformation (Found Protestantism)
-        if iReligion == Religion.PROTESTANTISM.value:
-            if iFounder == Civ.GERMANY.value:
-                self.wonUHV(Civ.GERMANY.value, 1)
+        if iReligion == Religion.PROTESTANTISM:
+            if iFounder == Civ.GERMANY:
+                self.wonUHV(Civ.GERMANY, 1)
             else:
-                self.lostUHV(Civ.GERMANY.value, 1)
+                self.lostUHV(Civ.GERMANY, 1)
 
     def onCityAcquired(self, owner, iNewOwner, city, bConquest, bTrade):
         if not gc.getGame().isVictoryValid(7):  # Victory 7 == historical
@@ -660,33 +660,33 @@ class Victory:
         iGameTurn = turn()
 
         # Bulgaria UHV 3: Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396
-        if iPlayer == Civ.BULGARIA.value:
+        if iPlayer == Civ.BULGARIA:
             if self.isPossibleUHV(iPlayer, 2, False):
                 if iGameTurn <= year(1396):
-                    if iNewOwner in [Civ.BARBARIAN.value, Civ.BYZANTIUM.value, Civ.OTTOMAN.value]:
+                    if iNewOwner in [Civ.BARBARIAN, Civ.BYZANTIUM, Civ.OTTOMAN]:
                         # conquered and flipped cities always count
                         # for traded cities, there should be a distinction between traded in peace (gift) and traded in ending a war (peace negotiations)
                         # instead of that, we check if the civ is at peace when the trade happens
                         # TODO#BUG# unfortunately the trade deal just ending a war is taken into account as a peace deal - maybe check if there was a war in this turn, or the last couple turns?
                         if not bTrade:
-                            self.lostUHV(Civ.BULGARIA.value, 2)
+                            self.lostUHV(Civ.BULGARIA, 2)
                         else:
                             bIsAtWar = False
                             for civ in civilizations().take(Civ.BYZANTIUM, Civ.OTTOMAN).alive():
                                 if civilization(Civ.BULGARIA).at_war(civ):
                                     bIsAtWar = True
                             if bIsAtWar:
-                                self.lostUHV(Civ.BULGARIA.value, 2)
+                                self.lostUHV(Civ.BULGARIA, 2)
 
         # Portugal UHV 2: Do not lose a city before 1640
-        elif iPlayer == Civ.PORTUGAL.value:
+        elif iPlayer == Civ.PORTUGAL:
             if self.isPossibleUHV(iPlayer, 1, False):
                 # conquered and flipped cities always count
                 # for traded cities, there should be a distinction between traded in peace (gift) and traded in ending a war (peace negotiations)
                 # instead of that, we check if the civ is at peace when the trade happens
                 # TODO#BUG# unfortunately the trade deal just ending a war is taken into account as a peace deal - maybe check if there was a war in this turn, or the last couple turns?
                 if not bTrade:
-                    self.lostUHV(Civ.PORTUGAL.value, 1)
+                    self.lostUHV(Civ.PORTUGAL, 1)
                 else:
                     bIsAtWar = False
                     for civ in civilizations().majors().alive():
@@ -694,10 +694,10 @@ class Victory:
                             bIsAtWar = True
                             break
                     if bIsAtWar:
-                        self.lostUHV(Civ.PORTUGAL.value, 1)
+                        self.lostUHV(Civ.PORTUGAL, 1)
 
         # Norway UHV 1: Going Viking
-        elif iNewOwner == Civ.NORWAY.value and iGameTurn < year(1066) + 2:
+        elif iNewOwner == Civ.NORWAY and iGameTurn < year(1066) + 2:
             # Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
             if bConquest:
                 if city.getPopulation() > 1:
@@ -710,10 +710,10 @@ class Victory:
                     )
 
         # Poland UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
-        elif iNewOwner == Civ.POLAND.value:
+        elif iNewOwner == Civ.POLAND:
             if self.isPossibleUHV(iNewOwner, 2, False):
                 if city.hasBuilding(
-                    Wonder.KAZIMIERZ.value
+                    Wonder.KAZIMIERZ
                 ):  # you cannot acquire religious buildings on conquest, only wonders
                     iCounter = player(Civ.POLAND).getUHVCounter(2)
                     iCathCath = (iCounter / 10000) % 10
@@ -723,10 +723,10 @@ class Victory:
                     iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
                     player(Civ.POLAND).setUHVCounter(2, iCounter)
                     if iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2:
-                        self.wonUHV(Civ.POLAND.value, 2)
+                        self.wonUHV(Civ.POLAND, 2)
 
         # Prussia UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
-        elif iNewOwner == Civ.PRUSSIA.value:
+        elif iNewOwner == Civ.PRUSSIA:
             if self.isPossibleUHV(iNewOwner, 1, False):
                 if owner in tPrussiaDefeat and year(1650) <= iGameTurn <= year(1763):
                     lNumConq = []
@@ -743,7 +743,7 @@ class Victory:
                             bConq = False
 
                     if bConq:
-                        self.wonUHV(Civ.PRUSSIA.value, 1)
+                        self.wonUHV(Civ.PRUSSIA, 1)
 
                     iConqRaw = 0
                     for iI in range(len(tPrussiaDefeat)):
@@ -752,20 +752,20 @@ class Victory:
 
     def onCityRazed(self, iPlayer, city):
         # Sweden UHV 2: Raze 5 Catholic cities while being Protestant by 1660
-        if iPlayer == Civ.SWEDEN.value:
+        if iPlayer == Civ.SWEDEN:
             if self.isPossibleUHV(iPlayer, 1, False):
                 if civilization(Civ.SWEDEN).has_state_religion(
                     Religion.PROTESTANTISM
-                ) and city.isHasReligion(Religion.CATHOLICISM.value):
+                ) and city.isHasReligion(Religion.CATHOLICISM):
                     iRazed = player(Civ.SWEDEN).getUHVCounter(1) + 1
                     player(Civ.SWEDEN).setUHVCounter(1, iRazed)
                     if iRazed >= 5:
-                        self.wonUHV(Civ.SWEDEN.value, 1)
+                        self.wonUHV(Civ.SWEDEN, 1)
 
     def onPillageImprovement(self, iPillager, iVictim, iImprovement, iRoute, iX, iY):
         # Norway UHV 1: Going Viking
-        if iPillager == Civ.NORWAY.value and iRoute == -1 and turn() < year(1066) + 2:
-            if gc.getMap().plot(iX, iY).getOwner() != Civ.NORWAY.value:
+        if iPillager == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + 2:
+            if gc.getMap().plot(iX, iY).getOwner() != Civ.NORWAY:
                 player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
     def onCombatResult(self, argsList):
@@ -773,10 +773,10 @@ class Victory:
         cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
 
         # Norway UHV 1: Going Viking
-        if pWinningUnit.getOwner() == Civ.NORWAY.value and turn() < year(1066) + 2:
+        if pWinningUnit.getOwner() == Civ.NORWAY and turn() < year(1066) + 2:
             if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
                 # Absinthe: only 1 Viking point for Work Boats
-                if pLosingUnit.getUnitType() != Unit.WORKBOAT.value:
+                if pLosingUnit.getUnitType() != Unit.WORKBOAT:
                     player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)
                 else:
                     player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
@@ -786,12 +786,12 @@ class Victory:
             return
 
         # England UHV 3: Be the first to enter the Industrial age
-        if iTech == Technology.INDUSTRIAL_TECH.value:
-            if self.isPossibleUHV(Civ.ENGLAND.value, 2, False):
-                if iPlayer == Civ.ENGLAND.value:
-                    self.wonUHV(Civ.ENGLAND.value, 2)
+        if iTech == Technology.INDUSTRIAL_TECH:
+            if self.isPossibleUHV(Civ.ENGLAND, 2, False):
+                if iPlayer == Civ.ENGLAND:
+                    self.wonUHV(Civ.ENGLAND, 2)
                 else:
-                    self.lostUHV(Civ.ENGLAND.value, 2)
+                    self.lostUHV(Civ.ENGLAND, 2)
 
     def onBuildingBuilt(self, iPlayer, iBuilding):
         if not gc.getGame().isVictoryValid(7):  # 7 == historical
@@ -800,33 +800,33 @@ class Victory:
         iGameTurn = turn()
 
         # Kiev UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
-        if iPlayer == Civ.KIEV.value:
+        if iPlayer == Civ.KIEV:
             if self.isPossibleUHV(iPlayer, 0, False):
                 if iBuilding in [
-                    Building.ORTHODOX_MONASTERY.value,
-                    Building.ORTHODOX_CATHEDRAL.value,
+                    Building.ORTHODOX_MONASTERY,
+                    Building.ORTHODOX_CATHEDRAL,
                 ]:
                     iBuildSoFar = player(Civ.KIEV).getUHVCounter(0)
                     iCathedralCounter = iBuildSoFar % 100
                     iMonasteryCounter = iBuildSoFar / 100
-                    if iBuilding == Building.ORTHODOX_MONASTERY.value:
+                    if iBuilding == Building.ORTHODOX_MONASTERY:
                         iMonasteryCounter += 1
                     else:
                         iCathedralCounter += 1
                     if iCathedralCounter >= 2 and iMonasteryCounter >= 8:
-                        self.wonUHV(Civ.KIEV.value, 0)
+                        self.wonUHV(Civ.KIEV, 0)
                     player(Civ.KIEV).setUHVCounter(0, 100 * iMonasteryCounter + iCathedralCounter)
 
         # Poland UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
         # HHG: Polish UHV3 now uses Wonder Kazimierz with maximum value 99, and all other buildings have boundary checks
-        elif iPlayer == Civ.POLAND.value:
+        elif iPlayer == Civ.POLAND:
             if self.isPossibleUHV(iPlayer, 2, False):
                 lBuildingList = [
-                    Building.CATHOLIC_CATHEDRAL.value,
-                    Building.ORTHODOX_CATHEDRAL.value,
-                    Building.PROTESTANT_CATHEDRAL.value,
-                    Building.JEWISH_QUARTER.value,
-                    Wonder.KAZIMIERZ.value,
+                    Building.CATHOLIC_CATHEDRAL,
+                    Building.ORTHODOX_CATHEDRAL,
+                    Building.PROTESTANT_CATHEDRAL,
+                    Building.JEWISH_QUARTER,
+                    Wonder.KAZIMIERZ,
                 ]
                 if iBuilding in lBuildingList:
                     iCounter = player(Civ.POLAND).getUHVCounter(2)
@@ -834,42 +834,42 @@ class Victory:
                     iOrthCath = (iCounter / 1000) % 10
                     iProtCath = (iCounter / 100) % 10
                     iJewishQu = iCounter % 100
-                    if iBuilding == Building.CATHOLIC_CATHEDRAL.value and iCathCath < 9:
+                    if iBuilding == Building.CATHOLIC_CATHEDRAL and iCathCath < 9:
                         iCathCath += 1
-                    elif iBuilding == Building.ORTHODOX_CATHEDRAL.value and iOrthCath < 9:
+                    elif iBuilding == Building.ORTHODOX_CATHEDRAL and iOrthCath < 9:
                         iOrthCath += 1
-                    elif iBuilding == Building.PROTESTANT_CATHEDRAL.value and iProtCath < 9:
+                    elif iBuilding == Building.PROTESTANT_CATHEDRAL and iProtCath < 9:
                         iProtCath += 1
-                    elif iBuilding == Wonder.KAZIMIERZ.value:
+                    elif iBuilding == Wonder.KAZIMIERZ:
                         iJewishQu = 99
-                    elif iBuilding == Building.JEWISH_QUARTER.value and iJewishQu < 99:
+                    elif iBuilding == Building.JEWISH_QUARTER and iJewishQu < 99:
                         iJewishQu += 1
                     if iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2:
-                        self.wonUHV(Civ.POLAND.value, 2)
+                        self.wonUHV(Civ.POLAND, 2)
                     iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
                     player(Civ.POLAND).setUHVCounter(2, iCounter)
 
         # Cordoba UHV 2: Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309
         if iBuilding in tCordobaWonders:
-            if self.isPossibleUHV(Civ.CORDOBA.value, 1, False):
-                if iPlayer == Civ.CORDOBA.value:
+            if self.isPossibleUHV(Civ.CORDOBA, 1, False):
+                if iPlayer == Civ.CORDOBA:
                     iWondersBuilt = player(Civ.CORDOBA).getUHVCounter(1)
                     player(Civ.CORDOBA).setUHVCounter(1, iWondersBuilt + 1)
                     if iWondersBuilt == 2:  # so we already had 2 wonders, and this is the 3rd one
-                        self.wonUHV(Civ.CORDOBA.value, 1)
+                        self.wonUHV(Civ.CORDOBA, 1)
                 else:
-                    self.lostUHV(Civ.CORDOBA.value, 1)
+                    self.lostUHV(Civ.CORDOBA, 1)
 
         # Ottoman UHV 2: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616
         if iBuilding in tOttomanWonders:
-            if self.isPossibleUHV(Civ.OTTOMAN.value, 1, False):
-                if iPlayer == Civ.OTTOMAN.value:
+            if self.isPossibleUHV(Civ.OTTOMAN, 1, False):
+                if iPlayer == Civ.OTTOMAN:
                     iWondersBuilt = player(Civ.OTTOMAN).getUHVCounter(1)
                     player(Civ.OTTOMAN).setUHVCounter(1, iWondersBuilt + 1)
                     if iWondersBuilt == 3:  # so we already had 3 wonders, and this is the 4th one
-                        self.wonUHV(Civ.OTTOMAN.value, 1)
+                        self.wonUHV(Civ.OTTOMAN, 1)
                 else:
-                    self.lostUHV(Civ.OTTOMAN.value, 1)
+                    self.lostUHV(Civ.OTTOMAN, 1)
 
     def onProjectBuilt(self, iPlayer, iProject):
         bColony = self.isProjectAColony(iProject)
@@ -877,99 +877,99 @@ class Victory:
         # 			way more straightforward, and also faster to use the UHVCounters for the UHV checks
 
         # Venice UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
-        if self.isPossibleUHV(Civ.VENECIA.value, 2, False):
-            if iProject != Colony.VINLAND.value:
+        if self.isPossibleUHV(Civ.VENECIA, 2, False):
+            if iProject != Colony.VINLAND:
                 if bColony:
-                    if iPlayer == Civ.VENECIA.value:
-                        self.wonUHV(Civ.VENECIA.value, 2)
+                    if iPlayer == Civ.VENECIA:
+                        self.wonUHV(Civ.VENECIA, 2)
                     else:
-                        self.lostUHV(Civ.VENECIA.value, 2)
+                        self.lostUHV(Civ.VENECIA, 2)
 
         # France UHV 3: Build 5 Colonies
-        if iPlayer == Civ.FRANCE.value:
+        if iPlayer == Civ.FRANCE:
             if self.isPossibleUHV(iPlayer, 2, False):
                 if bColony:
                     player(Civ.FRANCE).setUHVCounter(2, player(Civ.FRANCE).getUHVCounter(2) + 1)
                     if player(Civ.FRANCE).getUHVCounter(2) >= 5:
-                        self.wonUHV(Civ.FRANCE.value, 2)
+                        self.wonUHV(Civ.FRANCE, 2)
 
         # England UHV 2: Build 7 Colonies
-        elif iPlayer == Civ.ENGLAND.value:
+        elif iPlayer == Civ.ENGLAND:
             if self.isPossibleUHV(iPlayer, 1, False):
                 if bColony:
                     player(Civ.ENGLAND).setUHVCounter(1, player(Civ.ENGLAND).getUHVCounter(1) + 1)
                     if player(Civ.ENGLAND).getUHVCounter(1) >= 7:
-                        self.wonUHV(Civ.ENGLAND.value, 1)
+                        self.wonUHV(Civ.ENGLAND, 1)
 
         # Spain UHV 2: Have more Colonies than any other nation in 1588 (while having at least 3)
         # this is only for the Main Screen counter
-        elif iPlayer == Civ.CASTILE.value:
+        elif iPlayer == Civ.CASTILE:
             player(Civ.CASTILE).setUHVCounter(1, player(Civ.CASTILE).getUHVCounter(1) + 1)
 
         # Portugal UHV 3: Build 5 Colonies
-        elif iPlayer == Civ.PORTUGAL.value:
+        elif iPlayer == Civ.PORTUGAL:
             if self.isPossibleUHV(iPlayer, 2, False):
                 if bColony:
                     player(Civ.PORTUGAL).setUHVCounter(
                         2, player(Civ.PORTUGAL).getUHVCounter(2) + 1
                     )
                     if player(Civ.PORTUGAL).getUHVCounter(2) >= 5:
-                        self.wonUHV(Civ.PORTUGAL.value, 2)
+                        self.wonUHV(Civ.PORTUGAL, 2)
 
         # Dutch UHV 2: Build 3 Colonies and complete both Trading Companies
-        elif iPlayer == Civ.DUTCH.value:
+        elif iPlayer == Civ.DUTCH:
             if self.isPossibleUHV(iPlayer, 1, False):
                 if bColony:
                     player(Civ.DUTCH).setUHVCounter(1, player(Civ.DUTCH).getUHVCounter(1) + 1)
                 if player(Civ.DUTCH).getUHVCounter(1) >= 3:
                     iWestCompany = team(Civ.DUTCH).getProjectCount(
-                        Project.WEST_INDIA_COMPANY.value
+                        Project.WEST_INDIA_COMPANY
                     )
                     iEastCompany = team(Civ.DUTCH).getProjectCount(
-                        Project.EAST_INDIA_COMPANY.value
+                        Project.EAST_INDIA_COMPANY
                     )
                     # if the companies are already built previously, or currently being built (one of them is the current project)
-                    if iProject == Project.WEST_INDIA_COMPANY.value or iWestCompany >= 1:
-                        if iProject == Project.EAST_INDIA_COMPANY.value or iEastCompany >= 1:
-                            self.wonUHV(Civ.DUTCH.value, 1)
+                    if iProject == Project.WEST_INDIA_COMPANY or iWestCompany >= 1:
+                        if iProject == Project.EAST_INDIA_COMPANY or iEastCompany >= 1:
+                            self.wonUHV(Civ.DUTCH, 1)
 
         # Denmark UHV 3: Build 3 Colonies and complete both Trading Companies
-        elif iPlayer == Civ.DENMARK.value:
+        elif iPlayer == Civ.DENMARK:
             if self.isPossibleUHV(iPlayer, 2, False):
                 if bColony:
                     player(Civ.DENMARK).setUHVCounter(2, player(Civ.DENMARK).getUHVCounter(2) + 1)
                 if player(Civ.DENMARK).getUHVCounter(2) >= 3:
                     iWestCompany = team(Civ.DENMARK).getProjectCount(
-                        Project.WEST_INDIA_COMPANY.value
+                        Project.WEST_INDIA_COMPANY
                     )
                     iEastCompany = team(Civ.DENMARK).getProjectCount(
-                        Project.EAST_INDIA_COMPANY.value
+                        Project.EAST_INDIA_COMPANY
                     )
                     # if the companies are already built previously, or currently being built (one of them is the current project)
-                    if iProject == Project.WEST_INDIA_COMPANY.value or iWestCompany == 1:
-                        if iProject == Project.EAST_INDIA_COMPANY.value or iEastCompany == 1:
-                            self.wonUHV(Civ.DENMARK.value, 2)
+                    if iProject == Project.WEST_INDIA_COMPANY or iWestCompany == 1:
+                        if iProject == Project.EAST_INDIA_COMPANY or iEastCompany == 1:
+                            self.wonUHV(Civ.DENMARK, 2)
 
     def getOwnedLuxes(self, pPlayer):
         lBonus = [
-            Bonus.SHEEP.value,
-            Bonus.DYE.value,
-            Bonus.FUR.value,
-            Bonus.GEMS.value,
-            Bonus.GOLD.value,
-            Bonus.INCENSE.value,
-            Bonus.IVORY.value,
-            Bonus.SILK.value,
-            Bonus.SILVER.value,
-            Bonus.SPICES.value,
-            Bonus.WINE.value,
-            Bonus.HONEY.value,
-            Bonus.WHALE.value,
-            Bonus.AMBER.value,
-            Bonus.COTTON.value,
-            Bonus.COFFEE.value,
-            Bonus.TEA.value,
-            Bonus.TOBACCO.value,
+            Bonus.SHEEP,
+            Bonus.DYE,
+            Bonus.FUR,
+            Bonus.GEMS,
+            Bonus.GOLD,
+            Bonus.INCENSE,
+            Bonus.IVORY,
+            Bonus.SILK,
+            Bonus.SILVER,
+            Bonus.SPICES,
+            Bonus.WINE,
+            Bonus.HONEY,
+            Bonus.WHALE,
+            Bonus.AMBER,
+            Bonus.COTTON,
+            Bonus.COFFEE,
+            Bonus.TEA,
+            Bonus.TOBACCO,
         ]
         iCount = 0
         for iBonus in lBonus:
@@ -978,8 +978,8 @@ class Victory:
 
     def getOwnedGrain(self, pPlayer):
         iCount = 0
-        iCount += pPlayer.countOwnedBonuses(Bonus.WHEAT.value)
-        iCount += pPlayer.countOwnedBonuses(Bonus.BARLEY.value)
+        iCount += pPlayer.countOwnedBonuses(Bonus.WHEAT)
+        iCount += pPlayer.countOwnedBonuses(Bonus.BARLEY)
         return iCount
 
     def isProjectAColony(self, iProject):
@@ -993,7 +993,7 @@ class Victory:
         tPlayer = gc.getTeam(pPlayer.getTeam())
         iCount = 0
         for col in Colony:
-            if tPlayer.getProjectCount(col.value) > 0:
+            if tPlayer.getProjectCount(col) > 0:
                 iCount += 1
         return iCount
 
@@ -1012,64 +1012,64 @@ class Victory:
 
         # UHV 1: Own at least 6 cities in Calabria, Apulia, Dalmatia, Verona, Lombardy, Liguria, Tuscany, Latium, Corsica, Sardinia, Sicily, Tripolitania and Ifriqiya provinces in 632
         if iGameTurn == year(632):
-            if self.isPossibleUHV(Civ.BYZANTIUM.value, 0, True):
+            if self.isPossibleUHV(Civ.BYZANTIUM, 0, True):
                 iNumCities = 0
                 for iProv in tByzantiumControl:
                     iNumCities += player(Civ.BYZANTIUM).getProvinceCityCount(iProv)
                 if iNumCities >= 6:
-                    self.wonUHV(Civ.BYZANTIUM.value, 0)
+                    self.wonUHV(Civ.BYZANTIUM, 0)
                 else:
-                    self.lostUHV(Civ.BYZANTIUM.value, 0)
+                    self.lostUHV(Civ.BYZANTIUM, 0)
 
         # UHV 2: Control Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282
         elif iGameTurn == year(1282):
-            if self.isPossibleUHV(Civ.BYZANTIUM.value, 1, True):
-                if self.checkProvincesStates(Civ.BYZANTIUM.value, tByzantiumControlII):
-                    self.wonUHV(Civ.BYZANTIUM.value, 1)
+            if self.isPossibleUHV(Civ.BYZANTIUM, 1, True):
+                if self.checkProvincesStates(Civ.BYZANTIUM, tByzantiumControlII):
+                    self.wonUHV(Civ.BYZANTIUM, 1)
                 else:
-                    self.lostUHV(Civ.BYZANTIUM.value, 1)
+                    self.lostUHV(Civ.BYZANTIUM, 1)
 
         # UHV 3: Make Constantinople the largest and most cultured city while being the richest empire in the world in 1453
         elif iGameTurn == year(1453):
-            if self.isPossibleUHV(Civ.BYZANTIUM.value, 2, True):
+            if self.isPossibleUHV(Civ.BYZANTIUM, 2, True):
                 x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]
                 iGold = player(Civ.BYZANTIUM).getGold()
                 bMost = True
                 for iCiv in civilizations().majors().ids():
-                    if iCiv != Civ.BYZANTIUM.value and gc.getPlayer(iCiv).isAlive():
+                    if iCiv != Civ.BYZANTIUM and gc.getPlayer(iCiv).isAlive():
                         if gc.getPlayer(iCiv).getGold() > iGold:
                             bMost = False
                             break
                 if (
                     gc.isLargestCity(x, y)
                     and gc.isTopCultureCity(x, y)
-                    and gc.getMap().plot(x, y).getPlotCity().getOwner() == Civ.BYZANTIUM.value
+                    and gc.getMap().plot(x, y).getPlotCity().getOwner() == Civ.BYZANTIUM
                     and bMost
                 ):
-                    self.wonUHV(Civ.BYZANTIUM.value, 2)
+                    self.wonUHV(Civ.BYZANTIUM, 2)
                 else:
-                    self.lostUHV(Civ.BYZANTIUM.value, 2)
+                    self.lostUHV(Civ.BYZANTIUM, 2)
 
     def checkFrankia(self, iGameTurn):
 
         # UHV 1: Achieve Charlemagne's Empire by 840
-        if self.isPossibleUHV(Civ.FRANCE.value, 0, True):
-            if self.checkProvincesStates(Civ.FRANCE.value, tFrankControl):
-                self.wonUHV(Civ.FRANCE.value, 0)
+        if self.isPossibleUHV(Civ.FRANCE, 0, True):
+            if self.checkProvincesStates(Civ.FRANCE, tFrankControl):
+                self.wonUHV(Civ.FRANCE, 0)
         if iGameTurn == year(840):
-            self.expireUHV(Civ.FRANCE.value, 0)
+            self.expireUHV(Civ.FRANCE, 0)
 
         # UHV 2: Control Jerusalem in 1291
         elif iGameTurn == year(1291):
-            if self.isPossibleUHV(Civ.FRANCE.value, 1, True):
+            if self.isPossibleUHV(Civ.FRANCE, 1, True):
                 pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
                 if pJPlot.isCity():
-                    if pJPlot.getPlotCity().getOwner() == Civ.FRANCE.value:
-                        self.wonUHV(Civ.FRANCE.value, 1)
+                    if pJPlot.getPlotCity().getOwner() == Civ.FRANCE:
+                        self.wonUHV(Civ.FRANCE, 1)
                     else:
-                        self.lostUHV(Civ.FRANCE.value, 1)
+                        self.lostUHV(Civ.FRANCE, 1)
                 else:
-                    self.lostUHV(Civ.FRANCE.value, 1)
+                    self.lostUHV(Civ.FRANCE, 1)
 
         # UHV 3: Build 5 Colonies
         # handled in the onProjectBuilt function
@@ -1078,148 +1078,148 @@ class Victory:
 
         # UHV 1: Control all territories from Tunisia to Asia Minor in 850
         if iGameTurn == year(850):
-            if self.isPossibleUHV(Civ.ARABIA.value, 0, True):
-                if self.checkProvincesStates(Civ.ARABIA.value, tArabiaControlI):
-                    self.wonUHV(Civ.ARABIA.value, 0)
+            if self.isPossibleUHV(Civ.ARABIA, 0, True):
+                if self.checkProvincesStates(Civ.ARABIA, tArabiaControlI):
+                    self.wonUHV(Civ.ARABIA, 0)
                 else:
-                    self.lostUHV(Civ.ARABIA.value, 0)
+                    self.lostUHV(Civ.ARABIA, 0)
 
         # UHV 2: Control the Levant and Egypt in 1291AD while being the most advanced civilization
         elif iGameTurn == year(1291):
-            if self.isPossibleUHV(Civ.ARABIA.value, 1, True):
+            if self.isPossibleUHV(Civ.ARABIA, 1, True):
                 iMostAdvancedCiv = getMostAdvancedCiv()
                 if (
-                    self.checkProvincesStates(Civ.ARABIA.value, tArabiaControlII)
-                    and iMostAdvancedCiv == Civ.ARABIA.value
+                    self.checkProvincesStates(Civ.ARABIA, tArabiaControlII)
+                    and iMostAdvancedCiv == Civ.ARABIA
                 ):
-                    self.wonUHV(Civ.ARABIA.value, 1)
+                    self.wonUHV(Civ.ARABIA, 1)
                 else:
-                    self.lostUHV(Civ.ARABIA.value, 1)
+                    self.lostUHV(Civ.ARABIA, 1)
 
         # UHV 3: Spread Islam to at least 35% of the population of Europe
-        if self.isPossibleUHV(Civ.ARABIA.value, 2, True):
-            iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
+        if self.isPossibleUHV(Civ.ARABIA, 2, True):
+            iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM)
             if iPerc >= 35:
-                self.wonUHV(Civ.ARABIA.value, 2)
+                self.wonUHV(Civ.ARABIA, 2)
 
     def checkBulgaria(self, iGameTurn):
 
         # UHV 1: Conquer Moesia, Thrace, Macedonia, Serbia, Arberia, Thessaloniki and Constantinople by 917
-        if self.isPossibleUHV(Civ.BULGARIA.value, 0, True):
-            if self.checkProvincesStates(Civ.BULGARIA.value, tBulgariaControl):
-                self.wonUHV(Civ.BULGARIA.value, 0)
+        if self.isPossibleUHV(Civ.BULGARIA, 0, True):
+            if self.checkProvincesStates(Civ.BULGARIA, tBulgariaControl):
+                self.wonUHV(Civ.BULGARIA, 0)
         if iGameTurn == year(917):
-            self.expireUHV(Civ.BULGARIA.value, 0)
+            self.expireUHV(Civ.BULGARIA, 0)
 
         # UHV 2: Accumulate at least 100 Orthodox Faith Points by 1259
-        if self.isPossibleUHV(Civ.BULGARIA.value, 1, True):
+        if self.isPossibleUHV(Civ.BULGARIA, 1, True):
             if (
                 civilization(Civ.BULGARIA).has_state_religion(Religion.ORTHODOXY)
                 and player(Civ.BULGARIA).getFaith() >= 100
             ):
-                self.wonUHV(Civ.BULGARIA.value, 1)
+                self.wonUHV(Civ.BULGARIA, 1)
         if iGameTurn == year(1259):
-            self.expireUHV(Civ.BULGARIA.value, 1)
+            self.expireUHV(Civ.BULGARIA, 1)
 
         # UHV 3: Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396
         # Controlled in the onCityAcquired function
         elif iGameTurn == year(1396):
-            if self.isPossibleUHV(Civ.BULGARIA.value, 2, True):
-                self.wonUHV(Civ.BULGARIA.value, 2)
+            if self.isPossibleUHV(Civ.BULGARIA, 2, True):
+                self.wonUHV(Civ.BULGARIA, 2)
 
     def checkCordoba(self, iGameTurn):
 
         # UHV 1: Make Cordoba the largest city in the world in 961
         if iGameTurn == year(961):
-            if self.isPossibleUHV(Civ.CORDOBA.value, 0, True):
+            if self.isPossibleUHV(Civ.CORDOBA, 0, True):
                 x, y = CIV_CAPITAL_LOCATIONS[Civ.CORDOBA]
                 if (
                     gc.isLargestCity(x, y)
-                    and gc.getMap().plot(x, y).getPlotCity().getOwner() == Civ.CORDOBA.value
+                    and gc.getMap().plot(x, y).getPlotCity().getOwner() == Civ.CORDOBA
                 ):
-                    self.wonUHV(Civ.CORDOBA.value, 0)
+                    self.wonUHV(Civ.CORDOBA, 0)
                 else:
-                    self.lostUHV(Civ.CORDOBA.value, 0)
+                    self.lostUHV(Civ.CORDOBA, 0)
 
         # UHV 2: Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309
         # Controlled in the onBuildingBuilt function
         elif iGameTurn == year(1309):
-            self.expireUHV(Civ.CORDOBA.value, 1)
+            self.expireUHV(Civ.CORDOBA, 1)
 
         # UHV 3: Make sure Islam is present in every city in the Iberian peninsula in 1492
         elif iGameTurn == year(1492):
-            if self.isPossibleUHV(Civ.CORDOBA.value, 2, True):
+            if self.isPossibleUHV(Civ.CORDOBA, 2, True):
                 bIslamized = True
                 for iProv in tCordobaIslamize:
                     if not player(Civ.CORDOBA).provinceIsSpreadReligion(
-                        iProv, Religion.ISLAM.value
+                        iProv, Religion.ISLAM
                     ):
                         bIslamized = False
                         break
                 if bIslamized:
-                    self.wonUHV(Civ.CORDOBA.value, 2)
+                    self.wonUHV(Civ.CORDOBA, 2)
                 else:
-                    self.lostUHV(Civ.CORDOBA.value, 2)
+                    self.lostUHV(Civ.CORDOBA, 2)
 
     def checkNorway(self, iGameTurn):
 
         # Old UHV1: explore all water tiles
         # if ( iGameTurn == year(1009) and pNorway.getUHV( 0 ) == -1 ):
-        # 	if ( gc.canSeeAllTerrain( iNorway, Terrain.OCEAN.value ) ):
+        # 	if ( gc.canSeeAllTerrain( iNorway, Terrain.OCEAN ) ):
         # 		self.wonUHV( iNorway, 0 )
         # 	else:
         # 		self.lostUHV( iNorway, 0 )
 
         # UHV 1: Gain 100 Viking Points and build Vinland by 1066
         # Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
-        if self.isPossibleUHV(Civ.NORWAY.value, 0, True):
+        if self.isPossibleUHV(Civ.NORWAY, 0, True):
             if (
                 player(Civ.NORWAY).getUHVCounter(0) >= 100
-                and team(Civ.NORWAY).getProjectCount(Colony.VINLAND.value) >= 1
+                and team(Civ.NORWAY).getProjectCount(Colony.VINLAND) >= 1
             ):
-                self.wonUHV(Civ.NORWAY.value, 0)
+                self.wonUHV(Civ.NORWAY, 0)
         if iGameTurn == year(1066):
-            self.expireUHV(Civ.NORWAY.value, 0)
+            self.expireUHV(Civ.NORWAY, 0)
 
         # UHV 2: Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194
         if iGameTurn <= year(1194):
-            if self.isPossibleUHV(Civ.NORWAY.value, 1, True):
-                if self.checkProvincesStates(Civ.NORWAY.value, tNorwayControl):
-                    self.wonUHV(Civ.NORWAY.value, 1)
+            if self.isPossibleUHV(Civ.NORWAY, 1, True):
+                if self.checkProvincesStates(Civ.NORWAY, tNorwayControl):
+                    self.wonUHV(Civ.NORWAY, 1)
         if iGameTurn == year(1194):
-            self.expireUHV(Civ.NORWAY.value, 1)
+            self.expireUHV(Civ.NORWAY, 1)
 
         # UHV 3: Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
         elif iGameTurn == year(1320):
-            if self.isPossibleUHV(Civ.NORWAY.value, 2, True):
-                iNorwayRank = gc.getGame().getTeamRank(Civ.NORWAY.value)
+            if self.isPossibleUHV(Civ.NORWAY, 2, True):
+                iNorwayRank = gc.getGame().getTeamRank(Civ.NORWAY)
                 bIsOnTop = True
                 for iTestPlayer in tNorwayOutrank:
                     if gc.getGame().getTeamRank(iTestPlayer) < iNorwayRank:
                         bIsOnTop = False
                         break
                 if bIsOnTop:
-                    self.wonUHV(Civ.NORWAY.value, 2)
+                    self.wonUHV(Civ.NORWAY, 2)
                 else:
-                    self.lostUHV(Civ.NORWAY.value, 2)
+                    self.lostUHV(Civ.NORWAY, 2)
 
     def checkDenmark(self, iGameTurn):
 
         # UHV 1: Control Denmark, Skaneland, G�taland, Svealand, Mercia, London, Northumbria and East Anglia in 1050
         if iGameTurn == year(1050):
-            if self.isPossibleUHV(Civ.DENMARK.value, 0, True):
-                if self.checkProvincesStates(Civ.DENMARK.value, tDenmarkControlI):
-                    self.wonUHV(Civ.DENMARK.value, 0)
+            if self.isPossibleUHV(Civ.DENMARK, 0, True):
+                if self.checkProvincesStates(Civ.DENMARK, tDenmarkControlI):
+                    self.wonUHV(Civ.DENMARK, 0)
                 else:
-                    self.lostUHV(Civ.DENMARK.value, 0)
+                    self.lostUHV(Civ.DENMARK, 0)
 
         # UHV 2: Control Denmark, Norway, Vestfold, Skaneland, G�taland, Svealand, Norrland, Gotland, �sterland, Estonia and Iceland in 1523
         elif iGameTurn == year(1523):
-            if self.isPossibleUHV(Civ.DENMARK.value, 1, True):
-                if self.checkProvincesStates(Civ.DENMARK.value, tDenmarkControlIII):
-                    self.wonUHV(Civ.DENMARK.value, 1)
+            if self.isPossibleUHV(Civ.DENMARK, 1, True):
+                if self.checkProvincesStates(Civ.DENMARK, tDenmarkControlIII):
+                    self.wonUHV(Civ.DENMARK, 1)
                 else:
-                    self.lostUHV(Civ.DENMARK.value, 1)
+                    self.lostUHV(Civ.DENMARK, 1)
 
         # UHV 3: Build 3 Colonies and complete both Trading Companies
         # handled in the onProjectBuilt function
@@ -1227,22 +1227,22 @@ class Victory:
     def checkVenecia(self, iGameTurn):
 
         # UHV 1: Conquer the Adriatic by 1004
-        if self.isPossibleUHV(Civ.VENECIA.value, 0, True):
-            if self.checkProvincesStates(Civ.VENECIA.value, tVenetianControl):
-                self.wonUHV(Civ.VENECIA.value, 0)
+        if self.isPossibleUHV(Civ.VENECIA, 0, True):
+            if self.checkProvincesStates(Civ.VENECIA, tVenetianControl):
+                self.wonUHV(Civ.VENECIA, 0)
         if iGameTurn == year(1004):
-            self.expireUHV(Civ.VENECIA.value, 0)
+            self.expireUHV(Civ.VENECIA, 0)
 
         # UHV 2: Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204
-        if self.isPossibleUHV(Civ.VENECIA.value, 1, True):
+        if self.isPossibleUHV(Civ.VENECIA, 1, True):
             if (
-                player(Civ.VENECIA).getProvinceCurrentState(Province.CONSTANTINOPLE.value)
-                >= ProvinceStatus.CONQUER.value
+                player(Civ.VENECIA).getProvinceCurrentState(Province.CONSTANTINOPLE)
+                >= ProvinceStatus.CONQUER
             ):
-                if self.checkProvincesStates(Civ.VENECIA.value, tVenetianControlII):
-                    self.wonUHV(Civ.VENECIA.value, 1)
+                if self.checkProvincesStates(Civ.VENECIA, tVenetianControlII):
+                    self.wonUHV(Civ.VENECIA, 1)
         if iGameTurn == year(1204):
-            self.expireUHV(Civ.VENECIA.value, 1)
+            self.expireUHV(Civ.VENECIA, 1)
 
         # UHV 3: Be the first to build a Colony from the Age of Discovery
         # UHV 3: Vinland is from the Viking Age, all other Colonies are from the Age of Discovery
@@ -1257,33 +1257,33 @@ class Victory:
                 player(Civ.BURGUNDY).getUHVCounter(0) + player(Civ.BURGUNDY).countCultureProduced()
             )
             player(Civ.BURGUNDY).setUHVCounter(0, iCulture)
-            if self.isPossibleUHV(Civ.BURGUNDY.value, 0, True):
+            if self.isPossibleUHV(Civ.BURGUNDY, 0, True):
                 if iCulture >= 12000:
-                    self.wonUHV(Civ.BURGUNDY.value, 0)
+                    self.wonUHV(Civ.BURGUNDY, 0)
         if iGameTurn == year(1336):
-            self.expireUHV(Civ.BURGUNDY.value, 0)
+            self.expireUHV(Civ.BURGUNDY, 0)
 
         # UHV 2: Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376
         elif iGameTurn == year(1376):
-            if self.isPossibleUHV(Civ.BURGUNDY.value, 1, True):
-                if self.checkProvincesStates(Civ.BURGUNDY.value, tBurgundyControl):
-                    self.wonUHV(Civ.BURGUNDY.value, 1)
+            if self.isPossibleUHV(Civ.BURGUNDY, 1, True):
+                if self.checkProvincesStates(Civ.BURGUNDY, tBurgundyControl):
+                    self.wonUHV(Civ.BURGUNDY, 1)
                 else:
-                    self.lostUHV(Civ.BURGUNDY.value, 1)
+                    self.lostUHV(Civ.BURGUNDY, 1)
 
         # UHV 3: Have a higher score than France, England and Germany in 1473
         elif iGameTurn == year(1473):
-            if self.isPossibleUHV(Civ.BURGUNDY.value, 2, True):
-                iBurgundyRank = gc.getGame().getTeamRank(Civ.BURGUNDY.value)
+            if self.isPossibleUHV(Civ.BURGUNDY, 2, True):
+                iBurgundyRank = gc.getGame().getTeamRank(Civ.BURGUNDY)
                 bIsOnTop = True
                 for iTestPlayer in tBurgundyOutrank:
                     if gc.getGame().getTeamRank(iTestPlayer) < iBurgundyRank:
                         bIsOnTop = False
                         break
                 if bIsOnTop:
-                    self.wonUHV(Civ.BURGUNDY.value, 2)
+                    self.wonUHV(Civ.BURGUNDY, 2)
                 else:
-                    self.lostUHV(Civ.BURGUNDY.value, 2)
+                    self.lostUHV(Civ.BURGUNDY, 2)
 
     def checkGermany(self, iGameTurn):
 
@@ -1292,76 +1292,76 @@ class Victory:
 
         # UHV 1: Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy, Liguria and Tuscany in 1167
         if iGameTurn == year(1167):
-            if self.isPossibleUHV(Civ.GERMANY.value, 0, True):
-                if self.checkProvincesStates(Civ.GERMANY.value, tGermanyControl):
-                    self.wonUHV(Civ.GERMANY.value, 0)
+            if self.isPossibleUHV(Civ.GERMANY, 0, True):
+                if self.checkProvincesStates(Civ.GERMANY, tGermanyControl):
+                    self.wonUHV(Civ.GERMANY, 0)
                 else:
-                    self.lostUHV(Civ.GERMANY.value, 0)
+                    self.lostUHV(Civ.GERMANY, 0)
 
         # UHV 2: Start the Reformation (Found Protestantism)
         # Controlled in the onReligionFounded function
 
         # UHV 3: Control Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648
         elif iGameTurn == year(1648):
-            if self.isPossibleUHV(Civ.GERMANY.value, 2, True):
-                if self.checkProvincesStates(Civ.GERMANY.value, tGermanyControlII):
-                    self.wonUHV(Civ.GERMANY.value, 2)
+            if self.isPossibleUHV(Civ.GERMANY, 2, True):
+                if self.checkProvincesStates(Civ.GERMANY, tGermanyControlII):
+                    self.wonUHV(Civ.GERMANY, 2)
                 else:
-                    self.lostUHV(Civ.GERMANY.value, 2)
+                    self.lostUHV(Civ.GERMANY, 2)
 
     def checkNovgorod(self, iGameTurn):
 
         # UHV 1: Control Novgorod, Karelia, Estonia, Livonia, Rostov, Vologda and Osterland in 1284
         if iGameTurn == year(1284):
-            if self.isPossibleUHV(Civ.NOVGOROD.value, 0, True):
-                if self.checkProvincesStates(Civ.NOVGOROD.value, tNovgorodControl):
-                    self.wonUHV(Civ.NOVGOROD.value, 0)
+            if self.isPossibleUHV(Civ.NOVGOROD, 0, True):
+                if self.checkProvincesStates(Civ.NOVGOROD, tNovgorodControl):
+                    self.wonUHV(Civ.NOVGOROD, 0)
                 else:
-                    self.lostUHV(Civ.NOVGOROD.value, 0)
+                    self.lostUHV(Civ.NOVGOROD, 0)
 
         # UHV 2: Control eleven sources of fur by 1397
-        if self.isPossibleUHV(Civ.NOVGOROD.value, 1, True):
-            if player(Civ.NOVGOROD).countCultBorderBonuses(Bonus.FUR.value) >= 11:
-                self.wonUHV(Civ.NOVGOROD.value, 1)
+        if self.isPossibleUHV(Civ.NOVGOROD, 1, True):
+            if player(Civ.NOVGOROD).countCultBorderBonuses(Bonus.FUR) >= 11:
+                self.wonUHV(Civ.NOVGOROD, 1)
         if iGameTurn == year(1397):
-            self.expireUHV(Civ.NOVGOROD.value, 1)
+            self.expireUHV(Civ.NOVGOROD, 1)
 
         # UHV 3: Control the province of Moscow or have Muscovy as a vassal in 1478
         if iGameTurn == year(1478):
-            if self.isPossibleUHV(Civ.NOVGOROD.value, 2, True):
+            if self.isPossibleUHV(Civ.NOVGOROD, 2, True):
                 if (
-                    player(Civ.NOVGOROD).getProvinceCurrentState(Province.MOSCOW.value)
-                    >= ProvinceStatus.CONQUER.value
+                    player(Civ.NOVGOROD).getProvinceCurrentState(Province.MOSCOW)
+                    >= ProvinceStatus.CONQUER
                 ):
-                    self.wonUHV(Civ.NOVGOROD.value, 2)
+                    self.wonUHV(Civ.NOVGOROD, 2)
                 elif civilization(Civ.MOSCOW).is_alive() and civilization(Civ.MOSCOW).is_vassal(
                     Civ.NOVGOROD
                 ):
-                    self.wonUHV(Civ.NOVGOROD.value, 2)
+                    self.wonUHV(Civ.NOVGOROD, 2)
                 else:
-                    self.lostUHV(Civ.NOVGOROD.value, 2)
+                    self.lostUHV(Civ.NOVGOROD, 2)
 
     def checkKiev(self, iGameTurn):
 
         # UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
         # Controlled in the onBuildingBuilt function
         if iGameTurn == year(1250) + 1:
-            self.expireUHV(Civ.KIEV.value, 0)
+            self.expireUHV(Civ.KIEV, 0)
 
         # UHV 2: Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288
         elif iGameTurn == year(1288):
-            if self.isPossibleUHV(Civ.KIEV.value, 1, True):
+            if self.isPossibleUHV(Civ.KIEV, 1, True):
                 iConq = 0
                 for iProv in tKievControl:
                     if (
                         player(Civ.KIEV).getProvinceCurrentState(iProv)
-                        >= ProvinceStatus.CONQUER.value
+                        >= ProvinceStatus.CONQUER
                     ):
                         iConq += 1
                 if iConq >= 10:
-                    self.wonUHV(Civ.KIEV.value, 1)
+                    self.wonUHV(Civ.KIEV, 1)
                 else:
-                    self.lostUHV(Civ.KIEV.value, 1)
+                    self.lostUHV(Civ.KIEV, 1)
 
         # UHV 3: Produce 25000 food by 1300
         # The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
@@ -1370,25 +1370,25 @@ class Victory:
                 YieldTypes.YIELD_FOOD
             )
             player(Civ.KIEV).setUHVCounter(2, iFood)
-            if self.isPossibleUHV(Civ.KIEV.value, 2, True):
+            if self.isPossibleUHV(Civ.KIEV, 2, True):
                 if iFood > 25000:
-                    self.wonUHV(Civ.KIEV.value, 2)
+                    self.wonUHV(Civ.KIEV, 2)
         if iGameTurn == year(1300):
-            self.expireUHV(Civ.KIEV.value, 2)
+            self.expireUHV(Civ.KIEV, 2)
 
     def checkHungary(self, iGameTurn):
 
         # UHV 1: Control Austria, Carinthia, Moravia, Silesia, Bohemia, Dalmatia, Bosnia, Banat, Wallachia and Moldova in 1490
         if iGameTurn == year(1490):
-            if self.isPossibleUHV(Civ.HUNGARY.value, 0, True):
-                if self.checkProvincesStates(Civ.HUNGARY.value, tHungaryControl):
-                    self.wonUHV(Civ.HUNGARY.value, 0)
+            if self.isPossibleUHV(Civ.HUNGARY, 0, True):
+                if self.checkProvincesStates(Civ.HUNGARY, tHungaryControl):
+                    self.wonUHV(Civ.HUNGARY, 0)
                 else:
-                    self.lostUHV(Civ.HUNGARY.value, 0)
+                    self.lostUHV(Civ.HUNGARY, 0)
 
         # UHV 2: Allow no Ottoman cities in Europe in 1541
         elif iGameTurn == year(1541):
-            if self.isPossibleUHV(Civ.HUNGARY.value, 1, True):
+            if self.isPossibleUHV(Civ.HUNGARY, 1, True):
                 bClean = True
                 if civilization(Civ.OTTOMAN).is_alive():
                     for iProv in tHungaryControlII:
@@ -1396,45 +1396,45 @@ class Victory:
                             bClean = False
                             break
                 if bClean:
-                    self.wonUHV(Civ.HUNGARY.value, 1)
+                    self.wonUHV(Civ.HUNGARY, 1)
                 else:
-                    self.lostUHV(Civ.HUNGARY.value, 1)
+                    self.lostUHV(Civ.HUNGARY, 1)
 
         # UHV 3: Be the first to adopt Free Religion
-        if self.isPossibleUHV(Civ.HUNGARY.value, 2, True):
+        if self.isPossibleUHV(Civ.HUNGARY, 2, True):
             iReligiousCivic = player(Civ.HUNGARY).getCivics(4)
-            if iReligiousCivic == Civic.FREE_RELIGION.value:
-                self.wonUHV(Civ.HUNGARY.value, 2)
+            if iReligiousCivic == Civic.FREE_RELIGION:
+                self.wonUHV(Civ.HUNGARY, 2)
             else:
                 for iPlayer in civilizations().majors().ids():
                     pPlayer = gc.getPlayer(iPlayer)
-                    if pPlayer.isAlive() and pPlayer.getCivics(4) == Civic.FREE_RELIGION.value:
-                        self.lostUHV(Civ.HUNGARY.value, 2)
+                    if pPlayer.isAlive() and pPlayer.getCivics(4) == Civic.FREE_RELIGION:
+                        self.lostUHV(Civ.HUNGARY, 2)
 
     def checkSpain(self, iGameTurn):
 
         # UHV 1: Reconquista (make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492)
         if iGameTurn == year(1492):
-            if self.isPossibleUHV(Civ.CASTILE.value, 0, True):
+            if self.isPossibleUHV(Civ.CASTILE, 0, True):
                 bConverted = True
                 for iProv in tSpainConvert:
                     if not player(Civ.CASTILE).provinceIsConvertReligion(
-                        iProv, Religion.CATHOLICISM.value
+                        iProv, Religion.CATHOLICISM
                     ):
                         bConverted = False
                         break
                 if bConverted:
-                    self.wonUHV(Civ.CASTILE.value, 0)
+                    self.wonUHV(Civ.CASTILE, 0)
                 else:
-                    self.lostUHV(Civ.CASTILE.value, 0)
+                    self.lostUHV(Civ.CASTILE, 0)
 
         # UHV 2: Have more Colonies than any other nation in 1588, while having at least 3
         elif iGameTurn == year(1588):
-            if self.isPossibleUHV(Civ.CASTILE.value, 1, True):
+            if self.isPossibleUHV(Civ.CASTILE, 1, True):
                 bMost = True
-                iSpainColonies = self.getNumRealColonies(Civ.CASTILE.value)
+                iSpainColonies = self.getNumRealColonies(Civ.CASTILE)
                 for iPlayer in civilizations().majors().ids():
-                    if iPlayer != Civ.CASTILE.value:
+                    if iPlayer != Civ.CASTILE:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (
                             pPlayer.isAlive()
@@ -1442,15 +1442,15 @@ class Victory:
                         ):
                             bMost = False
                 if bMost and iSpainColonies >= 3:
-                    self.wonUHV(Civ.CASTILE.value, 1)
+                    self.wonUHV(Civ.CASTILE, 1)
                 else:
-                    self.lostUHV(Civ.CASTILE.value, 1)
+                    self.lostUHV(Civ.CASTILE, 1)
 
         # UHV 3: Ensure that Catholic nations have more population and more land than any other religion in 1648
         elif iGameTurn == year(1648):
-            if self.isPossibleUHV(Civ.CASTILE.value, 2, True):
-                if player(Civ.CASTILE).getStateReligion() != Religion.CATHOLICISM.value:
-                    self.lostUHV(Civ.CASTILE.value, 2)
+            if self.isPossibleUHV(Civ.CASTILE, 2, True):
+                if player(Civ.CASTILE).getStateReligion() != Religion.CATHOLICISM:
+                    self.lostUHV(Civ.CASTILE, 2)
                 else:
                     lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
                     lPop = [0, 0, 0, 0, 0, 0]
@@ -1467,10 +1467,10 @@ class Victory:
                     lLand[5] += civilizations().barbarian().unwrap().player.getTotalLand()
                     lPop[5] += civilizations().barbarian().unwrap().player.getTotalPopulation()
                     for iIndyCiv in [
-                        Civ.INDEPENDENT.value,
-                        Civ.INDEPENDENT_2.value,
-                        Civ.INDEPENDENT_3.value,
-                        Civ.INDEPENDENT_4.value,
+                        Civ.INDEPENDENT,
+                        Civ.INDEPENDENT_2,
+                        Civ.INDEPENDENT_3,
+                        Civ.INDEPENDENT_4,
                     ]:
                         for pCity in cities().owner(iIndyCiv).entities():
                             pIndyCiv = gc.getPlayer(iIndyCiv)
@@ -1488,12 +1488,12 @@ class Victory:
                                             pCity.getPopulation() / pCity.getReligionCount()
                                         )
 
-                    iCathLand = lLand[Religion.CATHOLICISM.value]
-                    iCathPop = lPop[Religion.CATHOLICISM.value]
+                    iCathLand = lLand[Religion.CATHOLICISM]
+                    iCathPop = lPop[Religion.CATHOLICISM]
 
                     bWon = True
                     for iReligion in range(len(Religion) + 1):
-                        if iReligion != Religion.CATHOLICISM.value:
+                        if iReligion != Religion.CATHOLICISM:
                             if lLand[iReligion] >= iCathLand:
                                 bWon = False
                                 break
@@ -1502,43 +1502,43 @@ class Victory:
                                 break
 
                     if bWon:
-                        self.wonUHV(Civ.CASTILE.value, 2)
+                        self.wonUHV(Civ.CASTILE, 2)
                     else:
-                        self.lostUHV(Civ.CASTILE.value, 2)
+                        self.lostUHV(Civ.CASTILE, 2)
 
     def checkScotland(self, iGameTurn):
 
         # UHV 1: Have 10 Forts and 4 Castles by 1296
-        if self.isPossibleUHV(Civ.SCOTLAND.value, 0, True):
-            iForts = player(Civ.SCOTLAND).getImprovementCount(Improvement.FORT.value)
-            iCastles = player(Civ.SCOTLAND).countNumBuildings(Building.CASTLE.value)
+        if self.isPossibleUHV(Civ.SCOTLAND, 0, True):
+            iForts = player(Civ.SCOTLAND).getImprovementCount(Improvement.FORT)
+            iCastles = player(Civ.SCOTLAND).countNumBuildings(Building.CASTLE)
             if iForts >= 10 and iCastles >= 4:
-                self.wonUHV(Civ.SCOTLAND.value, 0)
+                self.wonUHV(Civ.SCOTLAND, 0)
         if iGameTurn == year(1296):
-            self.expireUHV(Civ.SCOTLAND.value, 0)
+            self.expireUHV(Civ.SCOTLAND, 0)
 
         # UHV 2: Have 1500 Attitude Points with France by 1560 (Attitude Points are added every turn depending on your relations)
-        if self.isPossibleUHV(Civ.SCOTLAND.value, 1, True):
+        if self.isPossibleUHV(Civ.SCOTLAND, 1, True):
             if civilization(Civ.FRANCE).is_alive():
                 # Being at war with France gives a big penalty (and ignores most bonuses!)
                 if civilization(Civ.SCOTLAND).at_war(Civ.FRANCE):
                     iScore = -10
                 else:
                     # -1 for Furious 0 for Annoyed 1 for Cautious 2 for Pleased 3 for Friendly
-                    iScore = player(Civ.FRANCE).AI_getAttitude(Civ.SCOTLAND.value) - 1
+                    iScore = player(Civ.FRANCE).AI_getAttitude(Civ.SCOTLAND) - 1
                     # Agreements
-                    if team(Civ.FRANCE).isOpenBorders(Civ.SCOTLAND.value):
+                    if team(Civ.FRANCE).isOpenBorders(Civ.SCOTLAND):
                         iScore += 1
-                    if team(Civ.FRANCE).isDefensivePact(Civ.SCOTLAND.value):
+                    if team(Civ.FRANCE).isDefensivePact(Civ.SCOTLAND):
                         iScore += 2
                     # Imports/Exports
                     iTrades = 0
-                    iTrades += player(Civ.SCOTLAND).getNumTradeBonusImports(Civ.FRANCE.value)
-                    iTrades += player(Civ.FRANCE).getNumTradeBonusImports(Civ.SCOTLAND.value)
+                    iTrades += player(Civ.SCOTLAND).getNumTradeBonusImports(Civ.FRANCE)
+                    iTrades += player(Civ.FRANCE).getNumTradeBonusImports(Civ.SCOTLAND)
                     iScore += iTrades / 2
                     # Common Wars
                     for iEnemy in civilizations().majors().ids():
-                        if iEnemy in [Civ.SCOTLAND.value, Civ.FRANCE.value]:
+                        if iEnemy in [Civ.SCOTLAND, Civ.FRANCE]:
                             continue
                         if team(Civ.FRANCE).isAtWar(iEnemy) and team(Civ.SCOTLAND).isAtWar(iEnemy):
                             iScore += 2
@@ -1561,17 +1561,17 @@ class Victory:
                 iNewScore = iOldScore + iScore
                 player(Civ.SCOTLAND).setUHVCounter(1, iNewScore)
                 if iNewScore >= 1500:
-                    self.wonUHV(Civ.SCOTLAND.value, 1)
+                    self.wonUHV(Civ.SCOTLAND, 1)
         if iGameTurn == year(1560):
-            self.expireUHV(Civ.SCOTLAND.value, 1)
+            self.expireUHV(Civ.SCOTLAND, 1)
 
         # UHV 3: Control Scotland, The Isles, Ireland, Wales, Brittany and Galicia in 1700
         elif iGameTurn == year(1700):
-            if self.isPossibleUHV(Civ.SCOTLAND.value, 2, True):
-                if self.checkProvincesStates(Civ.SCOTLAND.value, tScotlandControl):
-                    self.wonUHV(Civ.SCOTLAND.value, 2)
+            if self.isPossibleUHV(Civ.SCOTLAND, 2, True):
+                if self.checkProvincesStates(Civ.SCOTLAND, tScotlandControl):
+                    self.wonUHV(Civ.SCOTLAND, 2)
                 else:
-                    self.lostUHV(Civ.SCOTLAND.value, 2)
+                    self.lostUHV(Civ.SCOTLAND, 2)
 
     def checkPoland(self, iGameTurn):
 
@@ -1580,7 +1580,7 @@ class Victory:
 
         # UHV 1: Food production between 1500 and 1520
         if year(1500) <= iGameTurn <= year(1520):
-            if self.isPossibleUHV(Civ.POLAND.value, 0, True):
+            if self.isPossibleUHV(Civ.POLAND, 0, True):
                 iAgriculturePolish = player(Civ.POLAND).calculateTotalYield(YieldTypes.YIELD_FOOD)
                 bFood = True
                 for iPlayer in civilizations().majors().ids():
@@ -1591,20 +1591,20 @@ class Victory:
                         bFood = False
                         break
                 if bFood:
-                    self.wonUHV(Civ.POLAND.value, 0)
+                    self.wonUHV(Civ.POLAND, 0)
         if iGameTurn == year(1520) + 1:
-            self.expireUHV(Civ.POLAND.value, 0)
+            self.expireUHV(Civ.POLAND, 0)
 
         # UHV 2: Own at least 12 cities in the given provinces in 1569
         elif iGameTurn == year(1569):
-            if self.isPossibleUHV(Civ.POLAND.value, 1, True):
+            if self.isPossibleUHV(Civ.POLAND, 1, True):
                 iNumCities = 0
                 for iProv in tPolishControl:
                     iNumCities += player(Civ.POLAND).getProvinceCityCount(iProv)
                 if iNumCities >= 12:
-                    self.wonUHV(Civ.POLAND.value, 1)
+                    self.wonUHV(Civ.POLAND, 1)
                 else:
-                    self.lostUHV(Civ.POLAND.value, 1)
+                    self.lostUHV(Civ.POLAND, 1)
 
         # UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
         # Controlled in the onBuildingBuilt and onCityAcquired functions
@@ -1613,22 +1613,22 @@ class Victory:
 
         # UHV 1: Control Corsica, Sardinia, Crete, Rhodes, Thrakesion, Cyprus and Crimea in 1400
         if iGameTurn == year(1400):
-            if self.isPossibleUHV(Civ.GENOA.value, 0, True):
-                if self.checkProvincesStates(Civ.GENOA.value, tGenoaControl):
-                    self.wonUHV(Civ.GENOA.value, 0)
+            if self.isPossibleUHV(Civ.GENOA, 0, True):
+                if self.checkProvincesStates(Civ.GENOA, tGenoaControl):
+                    self.wonUHV(Civ.GENOA, 0)
                 else:
-                    self.lostUHV(Civ.GENOA.value, 0)
+                    self.lostUHV(Civ.GENOA, 0)
 
         # UHV 2: Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1566
         # UHV 2: Export is based on your cities' trade routes with foreign cities, import is based on foreign cities' trade routes with your cities
         elif iGameTurn == year(1566):
-            if self.isPossibleUHV(Civ.GENOA.value, 1, True):
+            if self.isPossibleUHV(Civ.GENOA, 1, True):
                 iGenoaTrade = player(Civ.GENOA).calculateTotalImports(
                     YieldTypes.YIELD_COMMERCE
                 ) + player(Civ.GENOA).calculateTotalExports(YieldTypes.YIELD_COMMERCE)
                 bLargest = True
                 for iPlayer in civilizations().majors().ids():
-                    if iPlayer != Civ.GENOA.value:
+                    if iPlayer != Civ.GENOA:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (
                             pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE)
@@ -1638,52 +1638,52 @@ class Victory:
                             bLargest = False
                             break
                 if bLargest:
-                    self.wonUHV(Civ.GENOA.value, 1)
+                    self.wonUHV(Civ.GENOA, 1)
                 else:
-                    self.lostUHV(Civ.GENOA.value, 1)
+                    self.lostUHV(Civ.GENOA, 1)
 
         # UHV 3: Have 8 Banks and own all Bank of St. George cities in 1625
         elif iGameTurn == year(1625):
-            if self.isPossibleUHV(Civ.GENOA.value, 2, True):
+            if self.isPossibleUHV(Civ.GENOA, 2, True):
                 iBanks = 0
                 for city in cities().owner(Civ.GENOA).entities():
                     if (
-                        city.getNumRealBuilding(Building.BANK.value) > 0
-                        or city.getNumRealBuilding(Building.GENOA_BANK.value) > 0
-                        or city.getNumRealBuilding(Building.ENGLISH_ROYAL_EXCHANGE.value) > 0
+                        city.getNumRealBuilding(Building.BANK) > 0
+                        or city.getNumRealBuilding(Building.GENOA_BANK) > 0
+                        or city.getNumRealBuilding(Building.ENGLISH_ROYAL_EXCHANGE) > 0
                     ):
                         iBanks += 1
-                iCompanyCities = player(Civ.GENOA).countCorporations(Company.ST_GEORGE.value)
+                iCompanyCities = player(Civ.GENOA).countCorporations(Company.ST_GEORGE)
                 if iBanks >= 8 and iCompanyCities == COMPANIES[Company.ST_GEORGE].limit:
-                    self.wonUHV(Civ.GENOA.value, 2)
+                    self.wonUHV(Civ.GENOA, 2)
                 else:
-                    self.lostUHV(Civ.GENOA.value, 2)
+                    self.lostUHV(Civ.GENOA, 2)
 
     def checkMorocco(self, iGameTurn):
 
         # UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1248
         if iGameTurn == year(1248):
-            if self.isPossibleUHV(Civ.MOROCCO.value, 0, True):
-                if self.checkProvincesStates(Civ.MOROCCO.value, tMoroccoControl):
-                    self.wonUHV(Civ.MOROCCO.value, 0)
+            if self.isPossibleUHV(Civ.MOROCCO, 0, True):
+                if self.checkProvincesStates(Civ.MOROCCO, tMoroccoControl):
+                    self.wonUHV(Civ.MOROCCO, 0)
                 else:
-                    self.lostUHV(Civ.MOROCCO.value, 0)
+                    self.lostUHV(Civ.MOROCCO, 0)
 
         # UHV 2: Have 5000 culture in each of three cities in 1465
         elif iGameTurn == year(1465):
-            if self.isPossibleUHV(Civ.MOROCCO.value, 1, True):
+            if self.isPossibleUHV(Civ.MOROCCO, 1, True):
                 iGoodCities = 0
                 for city in cities().owner(Civ.MOROCCO).entities():
-                    if city.getCulture(Civ.MOROCCO.value) >= 5000:
+                    if city.getCulture(Civ.MOROCCO) >= 5000:
                         iGoodCities += 1
                 if iGoodCities >= 3:
-                    self.wonUHV(Civ.MOROCCO.value, 1)
+                    self.wonUHV(Civ.MOROCCO, 1)
                 else:
-                    self.lostUHV(Civ.MOROCCO.value, 1)
+                    self.lostUHV(Civ.MOROCCO, 1)
 
         # UHV 3: Destroy or vassalize Portugal, Spain, and Aragon by 1578
         if year(1164) <= iGameTurn <= year(1578):
-            if self.isPossibleUHV(Civ.MOROCCO.value, 2, True):
+            if self.isPossibleUHV(Civ.MOROCCO, 2, True):
                 bConq = True
                 if (
                     (
@@ -1702,19 +1702,19 @@ class Victory:
                     bConq = False
 
                 if bConq:
-                    self.wonUHV(Civ.MOROCCO.value, 2)
+                    self.wonUHV(Civ.MOROCCO, 2)
         if iGameTurn == year(1578) + 1:
-            self.expireUHV(Civ.MOROCCO.value, 2)
+            self.expireUHV(Civ.MOROCCO, 2)
 
     def checkEngland(self, iGameTurn):
 
         # UHV 1: Control London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452
         if iGameTurn == year(1452):
-            if self.isPossibleUHV(Civ.ENGLAND.value, 0, True):
-                if self.checkProvincesStates(Civ.ENGLAND.value, tEnglandControl):
-                    self.wonUHV(Civ.ENGLAND.value, 0)
+            if self.isPossibleUHV(Civ.ENGLAND, 0, True):
+                if self.checkProvincesStates(Civ.ENGLAND, tEnglandControl):
+                    self.wonUHV(Civ.ENGLAND, 0)
                 else:
-                    self.lostUHV(Civ.ENGLAND.value, 0)
+                    self.lostUHV(Civ.ENGLAND, 0)
 
         # UHV 2: Build 7 Colonies
         # Controlled in the onProjectBuilt function
@@ -1730,8 +1730,8 @@ class Victory:
         # UHV 2: Do not lose a city before 1640
         # Controlled in the onCityAcquired function
         if iGameTurn == year(1640):
-            if self.isPossibleUHV(Civ.PORTUGAL.value, 1, True):
-                self.wonUHV(Civ.PORTUGAL.value, 1)
+            if self.isPossibleUHV(Civ.PORTUGAL, 1, True):
+                self.wonUHV(Civ.PORTUGAL, 1)
 
         # UHV 3: Build 5 Colonies
         # Controlled in the onProjectBuilt function
@@ -1740,49 +1740,49 @@ class Victory:
 
         # UHV 1: Control Catalonia, Valencia, Balears and Sicily in 1282
         if iGameTurn == year(1282):
-            if self.isPossibleUHV(Civ.ARAGON.value, 0, True):
-                if self.checkProvincesStates(Civ.ARAGON.value, tAragonControlI):
-                    self.wonUHV(Civ.ARAGON.value, 0)
+            if self.isPossibleUHV(Civ.ARAGON, 0, True):
+                if self.checkProvincesStates(Civ.ARAGON, tAragonControlI):
+                    self.wonUHV(Civ.ARAGON, 0)
                 else:
-                    self.lostUHV(Civ.ARAGON.value, 0)
+                    self.lostUHV(Civ.ARAGON, 0)
 
         # UHV 2: Have 12 Consulates of the Sea and 30 Trade Ships in 1444
         # UHV 2: Ships with at least one cargo space count as Trade Ships
         elif iGameTurn == year(1444):
-            if self.isPossibleUHV(Civ.ARAGON.value, 1, True):
-                iPorts = player(Civ.ARAGON).countNumBuildings(Building.ARAGON_SEAPORT.value)
-                iCargoShips = getNumberCargoShips(Civ.ARAGON.value)
+            if self.isPossibleUHV(Civ.ARAGON, 1, True):
+                iPorts = player(Civ.ARAGON).countNumBuildings(Building.ARAGON_SEAPORT)
+                iCargoShips = getNumberCargoShips(Civ.ARAGON)
                 if iPorts >= 12 and iCargoShips >= 30:
-                    self.wonUHV(Civ.ARAGON.value, 1)
+                    self.wonUHV(Civ.ARAGON, 1)
                 else:
-                    self.lostUHV(Civ.ARAGON.value, 1)
+                    self.lostUHV(Civ.ARAGON, 1)
 
         # UHV 3: Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474
         elif iGameTurn == year(1474):
-            if self.isPossibleUHV(Civ.ARAGON.value, 2, True):
-                if self.checkProvincesStates(Civ.ARAGON.value, tAragonControlII):
-                    self.wonUHV(Civ.ARAGON.value, 2)
+            if self.isPossibleUHV(Civ.ARAGON, 2, True):
+                if self.checkProvincesStates(Civ.ARAGON, tAragonControlII):
+                    self.wonUHV(Civ.ARAGON, 2)
                 else:
-                    self.lostUHV(Civ.ARAGON.value, 2)
+                    self.lostUHV(Civ.ARAGON, 2)
 
     def checkPrussia(self, iGameTurn):
 
         # UHV 1: Control Prussia, Suvalkija, Lithuania, Livonia, Estonia, and Pomerania in 1410
         if iGameTurn == year(1410):
-            if self.isPossibleUHV(Civ.PRUSSIA.value, 0, True):
-                if self.checkProvincesStates(Civ.PRUSSIA.value, tPrussiaControlI):
-                    self.wonUHV(Civ.PRUSSIA.value, 0)
+            if self.isPossibleUHV(Civ.PRUSSIA, 0, True):
+                if self.checkProvincesStates(Civ.PRUSSIA, tPrussiaControlI):
+                    self.wonUHV(Civ.PRUSSIA, 0)
                 else:
-                    self.lostUHV(Civ.PRUSSIA.value, 0)
+                    self.lostUHV(Civ.PRUSSIA, 0)
 
         # UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
         # Controlled in the onCityAcquired function
         if iGameTurn == year(1763) + 1:
-            self.expireUHV(Civ.PRUSSIA.value, 1)
+            self.expireUHV(Civ.PRUSSIA, 1)
 
         # UHV 3: Settle a total of 15 Great People in your capital
         # UHV 3: Great People can be settled in any combination, Great Generals included
-        if self.isPossibleUHV(Civ.PRUSSIA.value, 2, True):
+        if self.isPossibleUHV(Civ.PRUSSIA, 2, True):
             pCapital = player(Civ.PRUSSIA).getCapitalCity()
             iGPStart = gc.getInfoTypeForString("SPECIALIST_GREAT_PRIEST")
             iGPEnd = gc.getInfoTypeForString("SPECIALIST_GREAT_SPY")
@@ -1790,7 +1790,7 @@ class Victory:
             for iType in range(iGPStart, iGPEnd + 1):
                 iGPeople += pCapital.getFreeSpecialistCount(iType)
             if iGPeople >= 15:
-                self.wonUHV(Civ.PRUSSIA.value, 2)
+                self.wonUHV(Civ.PRUSSIA, 2)
 
     def checkLithuania(self, iGameTurn):
 
@@ -1802,24 +1802,24 @@ class Victory:
                 + player(Civ.LITHUANIA).countCultureProduced()
             )
             player(Civ.LITHUANIA).setUHVCounter(0, iCulture)
-            if self.isPossibleUHV(Civ.LITHUANIA.value, 0, True):
+            if self.isPossibleUHV(Civ.LITHUANIA, 0, True):
                 if civilization(Civ.LITHUANIA).has_a_state_religion():
-                    self.lostUHV(Civ.LITHUANIA.value, 0)
+                    self.lostUHV(Civ.LITHUANIA, 0)
                 else:
                     if iCulture >= 2500:
-                        self.wonUHV(Civ.LITHUANIA.value, 0)
+                        self.wonUHV(Civ.LITHUANIA, 0)
         if iGameTurn == year(1386):
-            self.expireUHV(Civ.LITHUANIA.value, 0)
+            self.expireUHV(Civ.LITHUANIA, 0)
 
         # UHV 2: Control the most territory in Europe in 1430
         elif iGameTurn == year(1430):
-            if self.isPossibleUHV(Civ.LITHUANIA.value, 1, True):
+            if self.isPossibleUHV(Civ.LITHUANIA, 1, True):
                 bMost = True
-                iCount = self.getTerritoryPercentEurope(Civ.LITHUANIA.value)
+                iCount = self.getTerritoryPercentEurope(Civ.LITHUANIA)
                 for iOtherPlayer in civilizations().majors().ids():
                     if (
                         not gc.getPlayer(iOtherPlayer).isAlive()
-                        or iOtherPlayer == Civ.LITHUANIA.value
+                        or iOtherPlayer == Civ.LITHUANIA
                     ):
                         continue
                     iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
@@ -1827,13 +1827,13 @@ class Victory:
                         bMost = False
                         break
                 if bMost:
-                    self.wonUHV(Civ.LITHUANIA.value, 1)
+                    self.wonUHV(Civ.LITHUANIA, 1)
                 else:
-                    self.lostUHV(Civ.LITHUANIA.value, 1)
+                    self.lostUHV(Civ.LITHUANIA, 1)
 
         # UHV 3: Destroy or Vassalize Muscovy, Novgorod and Prussia by 1795
         if year(1380) <= iGameTurn <= year(1795):
-            if self.isPossibleUHV(Civ.LITHUANIA.value, 2, True):
+            if self.isPossibleUHV(Civ.LITHUANIA, 2, True):
                 bConq = True
                 if (
                     (
@@ -1852,83 +1852,83 @@ class Victory:
                     bConq = False
 
                 if bConq:
-                    self.wonUHV(Civ.LITHUANIA.value, 2)
+                    self.wonUHV(Civ.LITHUANIA, 2)
         if iGameTurn == year(1795) + 1:
-            self.expireUHV(Civ.LITHUANIA.value, 2)
+            self.expireUHV(Civ.LITHUANIA, 2)
 
     def checkAustria(self, iGameTurn):
 
         # UHV 1: Control all of medieval Austria, Hungary and Bohemia in 1617
         if iGameTurn == year(1617):
-            if self.isPossibleUHV(Civ.AUSTRIA.value, 0, True):
-                if self.checkProvincesStates(Civ.AUSTRIA.value, tAustriaControl):
-                    self.wonUHV(Civ.AUSTRIA.value, 0)
+            if self.isPossibleUHV(Civ.AUSTRIA, 0, True):
+                if self.checkProvincesStates(Civ.AUSTRIA, tAustriaControl):
+                    self.wonUHV(Civ.AUSTRIA, 0)
                 else:
-                    self.lostUHV(Civ.AUSTRIA.value, 0)
+                    self.lostUHV(Civ.AUSTRIA, 0)
 
         # UHV 2: Have 3 vassals in 1700
         elif iGameTurn == year(1700):
-            if self.isPossibleUHV(Civ.AUSTRIA.value, 1, True):
+            if self.isPossibleUHV(Civ.AUSTRIA, 1, True):
                 iCount = 0
                 for iPlayer in civilizations().majors().ids():
-                    if iPlayer == Civ.AUSTRIA.value:
+                    if iPlayer == Civ.AUSTRIA:
                         continue
                     pPlayer = gc.getPlayer(iPlayer)
                     if pPlayer.isAlive():
                         if gc.getTeam(pPlayer.getTeam()).isVassal(team(Civ.AUSTRIA).getID()):
                             iCount += 1
                 if iCount >= 3:
-                    self.wonUHV(Civ.AUSTRIA.value, 1)
+                    self.wonUHV(Civ.AUSTRIA, 1)
                 else:
-                    self.lostUHV(Civ.AUSTRIA.value, 1)
+                    self.lostUHV(Civ.AUSTRIA, 1)
 
         # UHV 3: Have the highest score in 1780
         elif iGameTurn == year(1780):
-            if self.isPossibleUHV(Civ.AUSTRIA.value, 2, True):
-                if gc.getGame().getTeamRank(Civ.AUSTRIA.value) == 0:
-                    self.wonUHV(Civ.AUSTRIA.value, 2)
+            if self.isPossibleUHV(Civ.AUSTRIA, 2, True):
+                if gc.getGame().getTeamRank(Civ.AUSTRIA) == 0:
+                    self.wonUHV(Civ.AUSTRIA, 2)
                 else:
-                    self.lostUHV(Civ.AUSTRIA.value, 2)
+                    self.lostUHV(Civ.AUSTRIA, 2)
 
     def checkTurkey(self, iGameTurn):
 
         # UHV 1: Control Constantinople, the Balkans, Anatolia, the Levant and Egypt in 1517
         if iGameTurn == year(1517):
-            if self.isPossibleUHV(Civ.OTTOMAN.value, 0, True):
-                if self.checkProvincesStates(Civ.OTTOMAN.value, tOttomanControlI):
-                    self.wonUHV(Civ.OTTOMAN.value, 0)
+            if self.isPossibleUHV(Civ.OTTOMAN, 0, True):
+                if self.checkProvincesStates(Civ.OTTOMAN, tOttomanControlI):
+                    self.wonUHV(Civ.OTTOMAN, 0)
                 else:
-                    self.lostUHV(Civ.OTTOMAN.value, 0)
+                    self.lostUHV(Civ.OTTOMAN, 0)
 
         # UHV 2: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616
         # Controlled in the onBuildingBuilt function
         elif iGameTurn == year(1616):
-            self.expireUHV(Civ.OTTOMAN.value, 1)
+            self.expireUHV(Civ.OTTOMAN, 1)
 
         # UHV 3: Conquer Austria, Pannonia and Lesser Poland by 1683
-        if self.isPossibleUHV(Civ.OTTOMAN.value, 2, True):
-            if self.checkProvincesStates(Civ.OTTOMAN.value, tOttomanControlII):
-                self.wonUHV(Civ.OTTOMAN.value, 2)
+        if self.isPossibleUHV(Civ.OTTOMAN, 2, True):
+            if self.checkProvincesStates(Civ.OTTOMAN, tOttomanControlII):
+                self.wonUHV(Civ.OTTOMAN, 2)
         if iGameTurn == year(1683):
-            self.expireUHV(Civ.OTTOMAN.value, 2)
+            self.expireUHV(Civ.OTTOMAN, 2)
 
     def checkMoscow(self, iGameTurn):
 
         # UHV 1: Free Eastern Europe from the Mongols (Make sure there are no Mongol (or any other Barbarian) cities in Russia and Ukraine in 1482)
         if iGameTurn == year(1482):
-            if self.isPossibleUHV(Civ.MOSCOW.value, 0, True):
+            if self.isPossibleUHV(Civ.MOSCOW, 0, True):
                 bClean = True
                 for iProv in tMoscowControl:
                     if civilizations().barbarian().unwrap().player.getProvinceCityCount(iProv) > 0:
                         bClean = False
                         break
                 if bClean:
-                    self.wonUHV(Civ.MOSCOW.value, 0)
+                    self.wonUHV(Civ.MOSCOW, 0)
                 else:
-                    self.lostUHV(Civ.MOSCOW.value, 0)
+                    self.lostUHV(Civ.MOSCOW, 0)
 
         # UHV 2: Control at least 25% of Europe
-        if self.isPossibleUHV(Civ.MOSCOW.value, 1, True):
+        if self.isPossibleUHV(Civ.MOSCOW, 1, True):
             totalLand = gc.getMap().getLandPlots()
             RussianLand = player(Civ.MOSCOW).getTotalLand()
             if totalLand > 0:
@@ -1936,17 +1936,17 @@ class Victory:
             else:
                 landPercent = 0.0
             if landPercent >= 25:
-                self.wonUHV(Civ.MOSCOW.value, 1)
+                self.wonUHV(Civ.MOSCOW, 1)
 
         # UHV 3: Get into warm waters (Conquer Constantinople or control an Atlantic Access resource)
-        if self.isPossibleUHV(Civ.MOSCOW.value, 2, True):
-            if player(Civ.MOSCOW).countCultBorderBonuses(Bonus.ACCESS.value) > 0:
-                self.wonUHV(Civ.MOSCOW.value, 2)
+        if self.isPossibleUHV(Civ.MOSCOW, 2, True):
+            if player(Civ.MOSCOW).countCultBorderBonuses(Bonus.ACCESS) > 0:
+                self.wonUHV(Civ.MOSCOW, 2)
             elif (
                 gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]).getPlotCity().getOwner()
-                == Civ.MOSCOW.value
+                == Civ.MOSCOW
             ):
-                self.wonUHV(Civ.MOSCOW.value, 2)
+                self.wonUHV(Civ.MOSCOW, 2)
 
     def checkSweden(self, iGameTurn):
 
@@ -1956,52 +1956,52 @@ class Victory:
 
         # UHV 1: Have six cities in Norrland, Osterland and Karelia in 1323
         if iGameTurn == year(1323):
-            if self.isPossibleUHV(Civ.SWEDEN.value, 0, True):
+            if self.isPossibleUHV(Civ.SWEDEN, 0, True):
                 iNumCities = 0
                 for iProv in tSwedenControl:
                     iNumCities += player(Civ.SWEDEN).getProvinceCityCount(iProv)
                 if iNumCities >= 6:
-                    self.wonUHV(Civ.SWEDEN.value, 0)
+                    self.wonUHV(Civ.SWEDEN, 0)
                 else:
-                    self.lostUHV(Civ.SWEDEN.value, 0)
+                    self.lostUHV(Civ.SWEDEN, 0)
 
         # UHV 2: Raze 5 Catholic cities while being Protestant by 1660
         # Controlled in the onCityRazed function
         elif iGameTurn == year(1660):
-            self.expireUHV(Civ.SWEDEN.value, 1)
+            self.expireUHV(Civ.SWEDEN, 1)
 
         # UHV 3: Control every coastal city on the Baltic Sea in 1750
         elif iGameTurn == year(1750):
-            if self.isPossibleUHV(Civ.SWEDEN.value, 2, True):
-                if up.getNumForeignCitiesOnBaltic(Civ.SWEDEN.value, True) > 0:
-                    self.lostUHV(Civ.SWEDEN.value, 2)
+            if self.isPossibleUHV(Civ.SWEDEN, 2, True):
+                if up.getNumForeignCitiesOnBaltic(Civ.SWEDEN, True) > 0:
+                    self.lostUHV(Civ.SWEDEN, 2)
                 else:
-                    self.wonUHV(Civ.SWEDEN.value, 2)
+                    self.wonUHV(Civ.SWEDEN, 2)
 
     def checkDutch(self, iGameTurn):
 
         # UHV 1: Settle 5 Great Merchants in Amsterdam by 1750
-        if self.isPossibleUHV(Civ.DUTCH.value, 0, True):
+        if self.isPossibleUHV(Civ.DUTCH, 0, True):
             pPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.DUTCH])
             if pPlot.isCity():
                 city = pPlot.getPlotCity()
                 if (
-                    city.getFreeSpecialistCount(Specialist.GREAT_MERCHANT.value) >= 5
-                    and city.getOwner() == Civ.DUTCH.value
+                    city.getFreeSpecialistCount(Specialist.GREAT_MERCHANT) >= 5
+                    and city.getOwner() == Civ.DUTCH
                 ):
-                    self.wonUHV(Civ.DUTCH.value, 0)
+                    self.wonUHV(Civ.DUTCH, 0)
         if iGameTurn == year(1750):
-            self.expireUHV(Civ.DUTCH.value, 0)
+            self.expireUHV(Civ.DUTCH, 0)
 
         # UHV 2: Build 3 Colonies and complete both Trading Companies
         # Controlled in the onProjectBuilt function
 
         # UHV 3: Become the richest country in Europe
-        if self.isPossibleUHV(Civ.DUTCH.value, 2, True):
+        if self.isPossibleUHV(Civ.DUTCH, 2, True):
             iGold = player(Civ.DUTCH).getGold()
             bMost = True
             for iCiv in civilizations().majors().ids():
-                if iCiv == Civ.DUTCH.value:
+                if iCiv == Civ.DUTCH:
                     continue
                 pPlayer = gc.getPlayer(iCiv)
                 if pPlayer.isAlive():
@@ -2009,19 +2009,19 @@ class Victory:
                         bMost = False
                         break
             if bMost:
-                self.wonUHV(Civ.DUTCH.value, 2)
+                self.wonUHV(Civ.DUTCH, 2)
 
     def checkProvincesStates(self, iPlayer, tProvinces):
         pPlayer = gc.getPlayer(iPlayer)
         for iProv in tProvinces:
-            if pPlayer.getProvinceCurrentState(iProv) < ProvinceStatus.CONQUER.value:
+            if pPlayer.getProvinceCurrentState(iProv) < ProvinceStatus.CONQUER:
                 return False
         return True
 
     def wonUHV(self, iCiv, iUHV):
         pCiv = gc.getPlayer(iCiv)
         pCiv.setUHV(iUHV, 1)
-        pCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 3)
+        pCiv.changeStabilityBase(StabilityCategory.EXPANSION, 3)
         if human() == iCiv:
             if iUHV == 0:
                 sText = "first"
@@ -2078,21 +2078,21 @@ class Victory:
             self.lostUHV(iCiv, iUHV)
 
     def set1200UHVDone(self, iCiv):
-        if iCiv == Civ.BYZANTIUM.value:
+        if iCiv == Civ.BYZANTIUM:
             player(Civ.BYZANTIUM).setUHV(0, 1)
-        elif iCiv == Civ.FRANCE.value:
+        elif iCiv == Civ.FRANCE:
             player(Civ.FRANCE).setUHV(0, 1)
-        elif iCiv == Civ.ARABIA.value:
+        elif iCiv == Civ.ARABIA:
             player(Civ.ARABIA).setUHV(0, 1)
-        elif iCiv == Civ.BULGARIA.value:
+        elif iCiv == Civ.BULGARIA:
             player(Civ.BULGARIA).setUHV(0, 1)
-        elif iCiv == Civ.VENECIA.value:  # Venice gets conquerors near Constantinople for 2nd UHV
+        elif iCiv == Civ.VENECIA:  # Venice gets conquerors near Constantinople for 2nd UHV
             player(Civ.VENECIA).setUHV(0, 1)
-        elif iCiv == Civ.GERMANY.value:
+        elif iCiv == Civ.GERMANY:
             player(Civ.GERMANY).setUHV(0, 1)
-        elif iCiv == Civ.NORWAY.value:
+        elif iCiv == Civ.NORWAY:
             player(Civ.NORWAY).setUHV(0, 1)
-        elif iCiv == Civ.DENMARK.value:
+        elif iCiv == Civ.DENMARK:
             player(Civ.DENMARK).setUHV(0, 1)
-        elif iCiv == Civ.SCOTLAND.value:
+        elif iCiv == Civ.SCOTLAND:
             player(Civ.SCOTLAND).setUHVCounter(1, 100)

@@ -38,7 +38,7 @@ def init_player_variables():
         civilizations().majors().len(),
         civilizations().drop(Civ.BARBARIAN).len(),
         len(Technology),
-        PlagueType.BUILDING_PLAGUE.value,
+        PlagueType.BUILDING_PLAGUE,
         len(Religion),
     )
     # set the Number of Provinces, call this before you set any AI or culture modifiers
@@ -64,11 +64,11 @@ def init_provinces():
 
 def set_province_type_parameters():
     # How much culture should we get into a province of this type, ignore the war and settler values (0,0)
-    gc.setProvinceTypeParams(ProvinceType.NONE.value, 0, 0, 1, 3)  # 1/3 culture
-    gc.setProvinceTypeParams(ProvinceType.CONTESTED.value, 0, 0, 1, 1)  # no change to culture
-    gc.setProvinceTypeParams(ProvinceType.POTENTIAL.value, 0, 0, 1, 1)  # same as outer culture
-    gc.setProvinceTypeParams(ProvinceType.HISTORICAL.value, 0, 0, 2, 1)  # double-culture
-    gc.setProvinceTypeParams(ProvinceType.CORE.value, 0, 0, 3, 1)  # triple-culture
+    gc.setProvinceTypeParams(ProvinceType.NONE, 0, 0, 1, 3)  # 1/3 culture
+    gc.setProvinceTypeParams(ProvinceType.CONTESTED, 0, 0, 1, 1)  # no change to culture
+    gc.setProvinceTypeParams(ProvinceType.POTENTIAL, 0, 0, 1, 1)  # same as outer culture
+    gc.setProvinceTypeParams(ProvinceType.HISTORICAL, 0, 0, 2, 1)  # double-culture
+    gc.setProvinceTypeParams(ProvinceType.CORE, 0, 0, 3, 1)  # triple-culture
 
 
 def update_province_id():
@@ -87,7 +87,7 @@ def update_lake_id():
     for plot in plots().all().entities():
         for name, locations in LAKE_LOCATIONS.items():
             if _location(plot) in locations:
-                value = name.value
+                value = name
             else:
                 value = -1
             plot.setLakeNameID(value)

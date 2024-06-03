@@ -107,7 +107,7 @@ class Plague:
         # Absinthe: specific plagues
         # Plague of Constantinople (that started at Alexandria)
         if iPlagueCount == iConstantinople:
-            iWorstCiv = Civ.BYZANTIUM.value
+            iWorstCiv = Civ.BYZANTIUM
             self.setFirstPlague(True)
             self.setBadPlague(False)
         # Black Death in the 14th century
@@ -172,7 +172,7 @@ class Plague:
 
     def spreadPlague(self, iPlayer, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if iPlayer in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
+        if iPlayer in [Civ.FRANCE, Civ.POPE] and turn() <= year(632):
             return
 
         # Absinthe: message about the spread
@@ -190,7 +190,7 @@ class Plague:
                     + ")!",
                     force=True,
                     sound="AS2D_PLAGUE",
-                    button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                    button=gc.getBuildingInfo(PlagueType.PLAGUE).getButton(),
                     color=MessageData.LIME,
                     location=city,
                 )
@@ -226,17 +226,17 @@ class Plague:
 
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
+        if city.getOwner() in [Civ.FRANCE, Civ.POPE] and turn() <= year(632):
             return
 
-        city.setHasRealBuilding(PlagueType.PLAGUE.value, True)
+        city.setHasRealBuilding(PlagueType.PLAGUE, True)
         if player(city).isHuman():
             message(
                 city.getOwner(),
                 text("TXT_KEY_PLAGUE_SPREAD_CITY") + " " + city.getName() + "!",
                 force=True,
                 sound="AS2D_PLAGUE",
-                button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                button=gc.getBuildingInfo(PlagueType.PLAGUE).getButton(),
                 color=MessageData.LIME,
                 location=location(city),
             )
@@ -244,19 +244,19 @@ class Plague:
         for plot in plots().surrounding(city, radius=2).entities():
             iImprovement = plot.getImprovementType()
             # Absinthe: chance for reducing the improvement vs. only resetting the process towards the next level to 0
-            if iImprovement == Improvement.TOWN.value:  # 100% chance to reduce towns
-                plot.setImprovementType(Improvement.VILLAGE.value)
-            elif iImprovement == Improvement.VILLAGE.value:
+            if iImprovement == Improvement.TOWN:  # 100% chance to reduce towns
+                plot.setImprovementType(Improvement.VILLAGE)
+            elif iImprovement == Improvement.VILLAGE:
                 if percentage_chance(75, strict=True):
-                    plot.setImprovementType(Improvement.HAMLET.value)
+                    plot.setImprovementType(Improvement.HAMLET)
                 else:
                     plot.setUpgradeProgress(0)
-            elif iImprovement == Improvement.HAMLET.value:
+            elif iImprovement == Improvement.HAMLET:
                 if percentage_chance(50, strict=True):
-                    plot.setImprovementType(Improvement.COTTAGE.value)
+                    plot.setImprovementType(Improvement.COTTAGE)
                 else:
                     plot.setUpgradeProgress(0)
-            elif iImprovement == Improvement.COTTAGE.value:
+            elif iImprovement == Improvement.COTTAGE:
                 if percentage_chance(25, strict=True):
                     plot.setImprovementType(-1)
                 else:
@@ -315,7 +315,7 @@ class Plague:
                                     - 3 * unit.baseCombatStr() / 7,
                                 ),
                             ),
-                            Civ.BARBARIAN.value,
+                            Civ.BARBARIAN,
                         )
                     else:
                         if unit.baseCombatStr() > 0:
@@ -345,7 +345,7 @@ class Plague:
                             iUnitDamage = max(iUnitDamage, unit.getDamage() + iCivilDamage)
                         # kill the unit if necessary
                         if iUnitDamage >= 100:
-                            unit.kill(False, Civ.BARBARIAN.value)
+                            unit.kill(False, Civ.BARBARIAN)
                             if unit.getOwner() == iHuman:
                                 message(
                                     iHuman,
@@ -355,12 +355,12 @@ class Plague:
                                     + "!",
                                     force=False,
                                     sound="AS2D_PLAGUE",
-                                    button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                                    button=gc.getBuildingInfo(PlagueType.PLAGUE).getButton(),
                                     color=MessageData.LIME,
                                     location=plot,
                                 )
                         else:
-                            unit.setDamage(iUnitDamage, Civ.BARBARIAN.value)
+                            unit.setDamage(iUnitDamage, Civ.BARBARIAN)
                         # if we have many units in the same plot, decrease the damage for every other unit
                         iDamage *= 7
                         iDamage /= 8
@@ -406,7 +406,7 @@ class Plague:
                             + "!",
                             force=False,
                             sound="AS2D_PLAGUE",
-                            button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                            button=gc.getBuildingInfo(PlagueType.PLAGUE).getButton(),
                             color=MessageData.LIME,
                             location=city,
                         )
@@ -438,7 +438,7 @@ class Plague:
                     if (
                         owner(plot, iPlayer)
                         and plot.isCity()
-                        and not _city(plot).isHasRealBuilding(PlagueType.PLAGUE.value)
+                        and not _city(plot).isHasRealBuilding(PlagueType.PLAGUE)
                     ):
                         self.infectCity(_city(plot))
                     else:
@@ -605,7 +605,7 @@ class Plague:
                     if getPlagueCountdown(iNewOwner) == 0:
                         self.spreadPlague(iNewOwner, -1)
                         for cityNear in cities().owner(iNewOwner).entities():
-                            if not cityNear.isHasRealBuilding(PlagueType.PLAGUE.value):
+                            if not cityNear.isHasRealBuilding(PlagueType.PLAGUE):
                                 if (
                                     calculateDistance(
                                         city.getX(), city.getY(), cityNear.getX(), cityNear.getY()
@@ -615,9 +615,9 @@ class Plague:
                                     if percentage_chance(50, strict=True):
                                         self.infectCity(cityNear)
                     elif getPlagueCountdown(iNewOwner) < 0:
-                        city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+                        city.setHasRealBuilding(PlagueType.PLAGUE, False)
             else:
-                city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
+                city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
     def onCityRazed(self, city, iNewOwner):
         pass

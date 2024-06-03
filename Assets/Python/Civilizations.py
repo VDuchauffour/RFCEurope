@@ -122,8 +122,8 @@ def set_starting_techs_1200AD(iCiv):
 
 
 def set_starting_diplomacy_1200AD():
-    change_attitude_extra_between_civ(Civ.BYZANTIUM.value, Civ.ARABIA.value, -2)
-    change_attitude_extra_between_civ(Civ.SCOTLAND.value, Civ.FRANCE.value, 4)
+    change_attitude_extra_between_civ(Civ.BYZANTIUM, Civ.ARABIA, -2)
+    change_attitude_extra_between_civ(Civ.SCOTLAND, Civ.FRANCE, 4)
 
 
 def set_initial_contacts(iCiv, bMeet=True):

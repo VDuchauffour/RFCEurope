@@ -93,7 +93,7 @@ def revoltCity(iPlayer, bForce):
                     iProvType = pPlayer.getProvinceType(city.getProvince())
                     # Absinthe: if forced revolt, all cities go into the list by default (apart from the Byzantine UP and the special ones above)
                     if bForce:
-                        if iProvType >= ProvinceType.POTENTIAL.value:
+                        if iProvType >= ProvinceType.POTENTIAL:
                             if not bCollapseImmune:
                                 cityListInCore.append(city)
                         else:
@@ -102,7 +102,7 @@ def revoltCity(iPlayer, bForce):
                     # 			if the city is in a contested province, the city is added a couple more times by default, if in a foreign province, a lot more times
                     # Absinthe: bigger chance to choose the city if unhappy
                     if city.angryPopulation(0) > 0:
-                        if iProvType >= ProvinceType.POTENTIAL.value:
+                        if iProvType >= ProvinceType.POTENTIAL:
                             if not bCollapseImmune:
                                 for i in range(2):
                                     cityListInCore.append(city)
@@ -112,25 +112,25 @@ def revoltCity(iPlayer, bForce):
                     # Absinthe: health issues do not cause city secession in core provinces for anyone
                     # 			also less chance from unhealth for cities in contested and foreign provinces
                     if city.goodHealth() - city.badHealth(False) < -1:
-                        if iProvType < ProvinceType.POTENTIAL.value:
+                        if iProvType < ProvinceType.POTENTIAL:
                             cityListInNotCore.append(city)
                     # Absinthe: also not a cause for secession in core provinces, no need to punish the player this much (and especially the AI) for using the civic
                     if city.getReligionBadHappiness() < 0:
-                        if iProvType < ProvinceType.POTENTIAL.value:
+                        if iProvType < ProvinceType.POTENTIAL:
                             for i in range(2):
                                 cityListInNotCore.append(city)
                     # Absinthe: no defensive units in the city increase chance
                     if city.getNoMilitaryPercentAnger() > 0:
-                        if iProvType >= ProvinceType.POTENTIAL.value:
+                        if iProvType >= ProvinceType.POTENTIAL:
                             if not bCollapseImmune:
                                 cityListInCore.append(city)
                         else:
                             for i in range(2):
                                 cityListInNotCore.append(city)
                     # Absinthe: also add core cities if they have less than 40% own culture (and the civ doesn't have the Cultural Tolerance UP)
-                    if iProvType >= ProvinceType.POTENTIAL.value:
+                    if iProvType >= ProvinceType.POTENTIAL:
                         if not bCollapseImmune and not gc.hasUP(
-                            iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value
+                            iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE
                         ):
                             if (
                                 city.countTotalCultureTimes100() > 0
@@ -154,7 +154,7 @@ def revoltCity(iPlayer, bForce):
                                 for i in range(2):
                                     cityListInCore.append(city)
                     # Absinthe: cities in outer and unstable provinces have chance by default, the number of times they are added is modified by the civ's own culture in the city
-                    elif iProvType == ProvinceType.CONTESTED.value:
+                    elif iProvType == ProvinceType.CONTESTED:
                         if (
                             city.countTotalCultureTimes100() > 0
                             and (
@@ -184,7 +184,7 @@ def revoltCity(iPlayer, bForce):
                         else:
                             for i in range(4):
                                 cityListInNotCore.append(city)
-                    elif iProvType == ProvinceType.NONE.value:
+                    elif iProvType == ProvinceType.NONE:
                         if (
                             city.countTotalCultureTimes100() > 0
                             and (
@@ -248,7 +248,7 @@ def revoltCity(iPlayer, bForce):
         flipUnitsInCityAfter(tCity, iIndy)
 
         # Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         # Absinthe: AI declares war on the indy city right away
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         iTeamIndy = gc.getPlayer(iIndy).getTeam()

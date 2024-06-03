@@ -24,7 +24,7 @@ def collapseByBarbs(iGameTurn):
                 and not collapseImmune(iCiv)
             ):
                 iNumCities = pCiv.getNumCities()
-                iLostCities = gc.countCitiesLostTo(iCiv, Civ.BARBARIAN.value)
+                iLostCities = gc.countCitiesLostTo(iCiv, Civ.BARBARIAN)
                 # Absinthe: if the civ is respawned, it's harder to collapse them by barbs
                 if pCiv.getRespawnedAlive():
                     iLostCities = max(iLostCities - (iNumCities / 4), 0)
@@ -108,7 +108,7 @@ def collapseMotherland(iGameTurn):
                 and not collapseImmune(iCiv)
             ):
                 # Absinthe: respawned Cordoba or Aragon shouldn't collapse because not holding the original core area
-                if iCiv in [Civ.CORDOBA.value, Civ.ARAGON.value] and pCiv.getRespawnedAlive():
+                if iCiv in [Civ.CORDOBA, Civ.ARAGON] and pCiv.getRespawnedAlive():
                     continue
                 if not gc.safeMotherland(iCiv):
                     iHuman = human()

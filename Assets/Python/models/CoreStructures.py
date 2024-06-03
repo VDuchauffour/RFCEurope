@@ -386,7 +386,7 @@ def player(identifier=None):
         return gc.getPlayer(identifier)
 
     if isinstance(identifier, CoreTypes.Civ):
-        return player(identifier.value)
+        return player(identifier)
 
     if isinstance(identifier, Civilization):
         return identifier.player
@@ -419,7 +419,7 @@ def team(identifier=None):
         return gc.getTeam(teamtype(identifier))
 
     if isinstance(identifier, CoreTypes.Civ):
-        return team(identifier.value)
+        return team(identifier)
 
     if isinstance(identifier, Civilization):
         return identifier.team

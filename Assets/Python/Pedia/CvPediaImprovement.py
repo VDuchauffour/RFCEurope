@@ -445,8 +445,8 @@ class CvPediaImprovement:
         for iImprovement in range(gc.getNumImprovementInfos()):
             # Absinthe: Unused improvements do not appear in the Civilopedia.
             if (
-                iImprovement != Improvement.GOODY_HUT.value
-                and iImprovement != Improvement.FOREST_PRESERVE.value
+                iImprovement != Improvement.GOODY_HUT
+                and iImprovement != Improvement.FOREST_PRESERVE
             ):
                 improvementList.append(iImprovement)
                 iCount += 1

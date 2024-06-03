@@ -34,140 +34,140 @@ cnm = CityNameManager.CityNameManager()
 tDefensiveCrusadeMap = [
     [],  # Byzantium
     [
-        Province.ILE_DE_FRANCE.value,
-        Province.AQUITAINE.value,
-        Province.ORLEANS.value,
-        Province.CHAMPAGNE.value,
-        Province.BRETAGNE.value,
-        Province.NORMANDY.value,
-        Province.PROVENCE.value,
-        Province.FLANDERS.value,
-        Province.BURGUNDY.value,
-        Province.PICARDY.value,
+        Province.ILE_DE_FRANCE,
+        Province.AQUITAINE,
+        Province.ORLEANS,
+        Province.CHAMPAGNE,
+        Province.BRETAGNE,
+        Province.NORMANDY,
+        Province.PROVENCE,
+        Province.FLANDERS,
+        Province.BURGUNDY,
+        Province.PICARDY,
     ],  # France
     [],  # Arabia
     [],  # Bulgaria
     [
-        Province.LEON.value,
-        Province.GALICIA.value,
-        Province.LUSITANIA.value,
-        Province.ARAGON.value,
-        Province.CATALONIA.value,
-        Province.NAVARRE.value,
-        Province.CASTILE.value,
-        Province.ANDALUSIA.value,
-        Province.LA_MANCHA.value,
-        Province.VALENCIA.value,
+        Province.LEON,
+        Province.GALICIA,
+        Province.LUSITANIA,
+        Province.ARAGON,
+        Province.CATALONIA,
+        Province.NAVARRE,
+        Province.CASTILE,
+        Province.ANDALUSIA,
+        Province.LA_MANCHA,
+        Province.VALENCIA,
     ],  # Cordoba (for consistency)
     [
-        Province.VERONA.value,
-        Province.TUSCANY.value,
-        Province.ARBERIA.value,
-        Province.DALMATIA.value,
+        Province.VERONA,
+        Province.TUSCANY,
+        Province.ARBERIA,
+        Province.DALMATIA,
     ],  # Venecia
     [
-        Province.FLANDERS.value,
-        Province.PROVENCE.value,
-        Province.BURGUNDY.value,
-        Province.CHAMPAGNE.value,
-        Province.LORRAINE.value,
-        Province.PICARDY.value,
+        Province.FLANDERS,
+        Province.PROVENCE,
+        Province.BURGUNDY,
+        Province.CHAMPAGNE,
+        Province.LORRAINE,
+        Province.PICARDY,
     ],  # Burgundy
     [
-        Province.LORRAINE.value,
-        Province.SWABIA.value,
-        Province.BAVARIA.value,
-        Province.SAXONY.value,
-        Province.FRANCONIA.value,
-        Province.FLANDERS.value,
-        Province.BRANDENBURG.value,
-        Province.HOLSTEIN.value,
-        Province.BOHEMIA.value,
+        Province.LORRAINE,
+        Province.SWABIA,
+        Province.BAVARIA,
+        Province.SAXONY,
+        Province.FRANCONIA,
+        Province.FLANDERS,
+        Province.BRANDENBURG,
+        Province.HOLSTEIN,
+        Province.BOHEMIA,
     ],  # Germany
     [],  # Novgorod
     [],  # Norway
     [],  # Kiev
     [
-        Province.HUNGARY.value,
-        Province.TRANSYLVANIA.value,
-        Province.UPPER_HUNGARY.value,
-        Province.WALLACHIA.value,
-        Province.SLAVONIA.value,
-        Province.PANNONIA.value,
-        Province.AUSTRIA.value,
-        Province.CARINTHIA.value,
-        Province.SERBIA.value,
-        Province.MOESIA.value,
-        Province.BANAT.value,
-        Province.BOSNIA.value,
-        Province.DALMATIA.value,
+        Province.HUNGARY,
+        Province.TRANSYLVANIA,
+        Province.UPPER_HUNGARY,
+        Province.WALLACHIA,
+        Province.SLAVONIA,
+        Province.PANNONIA,
+        Province.AUSTRIA,
+        Province.CARINTHIA,
+        Province.SERBIA,
+        Province.MOESIA,
+        Province.BANAT,
+        Province.BOSNIA,
+        Province.DALMATIA,
     ],  # Hungary
     [
-        Province.LEON.value,
-        Province.GALICIA.value,
-        Province.LUSITANIA.value,
-        Province.ARAGON.value,
-        Province.CATALONIA.value,
-        Province.NAVARRE.value,
-        Province.CASTILE.value,
-        Province.ANDALUSIA.value,
-        Province.LA_MANCHA.value,
-        Province.VALENCIA.value,
+        Province.LEON,
+        Province.GALICIA,
+        Province.LUSITANIA,
+        Province.ARAGON,
+        Province.CATALONIA,
+        Province.NAVARRE,
+        Province.CASTILE,
+        Province.ANDALUSIA,
+        Province.LA_MANCHA,
+        Province.VALENCIA,
     ],  # Spain
-    [Province.ESTONIA.value],  # Denmark
+    [Province.ESTONIA],  # Denmark
     [],  # Scotland
     [
-        Province.GREATER_POLAND.value,
-        Province.LESSER_POLAND.value,
-        Province.SILESIA.value,
-        Province.POMERANIA.value,
-        Province.MASOVIA.value,
-        Province.GALICJA.value,
-        Province.BREST.value,
+        Province.GREATER_POLAND,
+        Province.LESSER_POLAND,
+        Province.SILESIA,
+        Province.POMERANIA,
+        Province.MASOVIA,
+        Province.GALICJA,
+        Province.BREST,
     ],  # Poland
     [
-        Province.LIGURIA.value,
-        Province.LOMBARDY.value,
-        Province.CORSICA.value,
-        Province.SARDINIA.value,
-        Province.TUSCANY.value,
+        Province.LIGURIA,
+        Province.LOMBARDY,
+        Province.CORSICA,
+        Province.SARDINIA,
+        Province.TUSCANY,
     ],  # Genoa
     [],  # Morocco
     [],  # England
     [
-        Province.LEON.value,
-        Province.GALICIA.value,
-        Province.LUSITANIA.value,
-        Province.ARAGON.value,
-        Province.CATALONIA.value,
-        Province.NAVARRE.value,
-        Province.CASTILE.value,
-        Province.ANDALUSIA.value,
-        Province.LA_MANCHA.value,
-        Province.VALENCIA.value,
+        Province.LEON,
+        Province.GALICIA,
+        Province.LUSITANIA,
+        Province.ARAGON,
+        Province.CATALONIA,
+        Province.NAVARRE,
+        Province.CASTILE,
+        Province.ANDALUSIA,
+        Province.LA_MANCHA,
+        Province.VALENCIA,
     ],  # Portugal
     [
-        Province.VALENCIA.value,
-        Province.BALEARS.value,
-        Province.SICILY.value,
-        Province.APULIA.value,
-        Province.CALABRIA.value,
+        Province.VALENCIA,
+        Province.BALEARS,
+        Province.SICILY,
+        Province.APULIA,
+        Province.CALABRIA,
     ],  # Aragon
-    [Province.OSTERLAND.value],  # Sweden
+    [Province.OSTERLAND],  # Sweden
     [
-        Province.LIVONIA.value,
-        Province.ESTONIA.value,
-        Province.LITHUANIA.value,
-        Province.PRUSSIA.value,
+        Province.LIVONIA,
+        Province.ESTONIA,
+        Province.LITHUANIA,
+        Province.PRUSSIA,
     ],  # Prussia
     [],  # Lithuania
     [
-        Province.AUSTRIA.value,
-        Province.CARINTHIA.value,
-        Province.BAVARIA.value,
-        Province.BOHEMIA.value,
-        Province.MORAVIA.value,
-        Province.SILESIA.value,
+        Province.AUSTRIA,
+        Province.CARINTHIA,
+        Province.BAVARIA,
+        Province.BOHEMIA,
+        Province.MORAVIA,
+        Province.SILESIA,
     ],  # Austria
     [],  # Turkey
     [],  # Moscow
@@ -398,8 +398,8 @@ class Crusades:
         for iPlayer in civilizations().majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if (
-                iPlayer == Civ.POPE.value
-                or pPlayer.getStateReligion() == Religion.CATHOLICISM.value
+                iPlayer == Civ.POPE
+                or pPlayer.getStateReligion() == Religion.CATHOLICISM
                 or not pPlayer.isAlive()
             ):
                 self.setIsTarget(iPlayer, False)
@@ -481,7 +481,7 @@ class Crusades:
 
         # End of Defensive Crusades: no more defensive crusades after Protestantism is founded
         if self.isDefensiveCrusadeEnabled():
-            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
+            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
                 self.setDefensiveCrusadeEnabled(False)
 
         if self.isDefensiveCrusadeEnabled():
@@ -571,16 +571,16 @@ class Crusades:
             message(
                 iHuman, text("TXT_KEY_CRUSADE_DENY_FAITH"), force=True, color=MessageData.LIGHT_RED
             )
-            gc.getPlayer(Civ.POPE.value).AI_changeMemoryCount(
+            gc.getPlayer(Civ.POPE).AI_changeMemoryCount(
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2
             )
             # Absinthe: some units from Chivalric Orders might leave you nevertheless
             for pUnit in units().owner(iHuman).entities():
                 iUnitType = pUnit.getUnitType()
                 if iUnitType in [
-                    Unit.KNIGHT_OF_ST_JOHNS.value,
-                    Unit.TEMPLAR.value,
-                    Unit.TEUTONIC.value,
+                    Unit.KNIGHT_OF_ST_JOHNS,
+                    Unit.TEMPLAR,
+                    Unit.TEUTONIC,
                 ]:
                     pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
                     random_value = percentage()
@@ -625,12 +625,12 @@ class Crusades:
             self.setParticipate(False)
             pPlayer = gc.getPlayer(iHuman)
             pPlayer.setIsCrusader(False)
-            pPope = gc.getPlayer(Civ.POPE.value)
+            pPope = gc.getPlayer(Civ.POPE)
             iActiveCrusade = self.getActiveCrusade(turn())
             iBribe = 200 + 50 * iActiveCrusade
             pPope.changeGold(iBribe)
             pPlayer.changeGold(-iBribe)
-            gc.getPlayer(Civ.POPE.value).AI_changeMemoryCount(
+            gc.getPlayer(Civ.POPE).AI_changeMemoryCount(
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1
             )
 
@@ -675,7 +675,7 @@ class Crusades:
         iHuman = human()
         if civilization(iHuman).date.birth < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
-            if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
+            if pHuman.getStateReligion() != Religion.CATHOLICISM:
                 self.setParticipate(False)
                 message(
                     iHuman, text("TXT_KEY_CRUSADE_CALLED"), force=True, color=MessageData.LIGHT_RED
@@ -692,12 +692,12 @@ class Crusades:
         for i in civilizations().main().ids():
             if self.getVotingPower(i) > 0:
                 if bFound:
-                    iNFavor = gc.getRelationTowards(Civ.POPE.value, i)
+                    iNFavor = gc.getRelationTowards(Civ.POPE, i)
                     if iNFavor > iFavor:
                         iNFavor = iFavor
                         iFavorite = i
                 else:
-                    iFavor = gc.getRelationTowards(Civ.POPE.value, i)
+                    iFavor = gc.getRelationTowards(Civ.POPE, i)
                     iFavorite = i
                     bFound = True
         self.setFavorite(iFavorite)
@@ -726,21 +726,21 @@ class Crusades:
             if (
                 civilization(iPlayer).date.birth > iGameTurn
                 or not pPlayer.isAlive()
-                or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
+                or pPlayer.getStateReligion() != Religion.CATHOLICISM
                 or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
             ):
                 self.setVotingPower(iPlayer, 0)
             else:
                 # We use the (similarly named) getVotingPower from CvPlayer.cpp to determine a vote value for a given State Religion, but it's kinda strange
                 # Will leave it this way for now, but might be a good idea to improve it at some point
-                self.setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM.value))
+                self.setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM))
 
         # No votes from the human player if he/she won't participate (AI civs will always participate)
         if not self.getParticipate():
             self.setVotingPower(human(), 0)
 
         # The Pope has more votes (Rome is small anyway)
-        self.setVotingPower(Civ.POPE.value, self.getVotingPower(Civ.POPE.value) * (5 / 4))
+        self.setVotingPower(Civ.POPE, self.getVotingPower(Civ.POPE) * (5 / 4))
 
         iPower = 0
         for iPlayer in civilizations().majors().ids():
@@ -775,8 +775,8 @@ class Crusades:
                 # Absinthe: check only for combat units and ignore naval units
                 if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != DomainTypes.DOMAIN_SEA:
                     # Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-                    if not pUnit.isHasPromotion(Promotion.MERC.value) and not pUnit.isHasPromotion(
-                        Promotion.LEADER.value
+                    if not pUnit.isHasPromotion(Promotion.MERC) and not pUnit.isHasPromotion(
+                        Promotion.LEADER
                     ):
                         iCrusadeCategory = self.unitCrusadeCategory(pUnit.getUnitType())
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
@@ -833,8 +833,8 @@ class Crusades:
                 # Absinthe: check only for combat units and ignore naval units
                 if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0:
                     # Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-                    if not pUnit.isHasPromotion(Promotion.MERC.value) and not pUnit.isHasPromotion(
-                        Promotion.LEADER.value
+                    if not pUnit.isHasPromotion(Promotion.MERC) and not pUnit.isHasPromotion(
+                        Promotion.LEADER
                     ):
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
                         if pPlot.isCity():
@@ -890,75 +890,75 @@ class Crusades:
 
     def unitProbability(self, iUnitType):
         if iUnitType in [
-            Unit.ARCHER.value,
-            Unit.CROSSBOWMAN.value,
-            Unit.ARBALEST.value,
-            Unit.GENOA_BALESTRIERI.value,
-            Unit.LONGBOWMAN.value,
-            Unit.ENGLISH_LONGBOWMAN.value,
-            Unit.PORTUGAL_FOOT_KNIGHT.value,
+            Unit.ARCHER,
+            Unit.CROSSBOWMAN,
+            Unit.ARBALEST,
+            Unit.GENOA_BALESTRIERI,
+            Unit.LONGBOWMAN,
+            Unit.ENGLISH_LONGBOWMAN,
+            Unit.PORTUGAL_FOOT_KNIGHT,
         ]:
             return 10
         if iUnitType in [
-            Unit.LANCER.value,
-            Unit.BULGARIAN_KONNIK.value,
-            Unit.CORDOBAN_BERBER.value,
-            Unit.HEAVY_LANCER.value,
-            Unit.HUNGARIAN_HUSZAR.value,
-            Unit.ARABIA_GHAZI.value,
-            Unit.BYZANTINE_CATAPHRACT.value,
-            Unit.KIEV_DRUZHINA.value,
-            Unit.KNIGHT.value,
-            Unit.MOSCOW_BOYAR.value,
-            Unit.BURGUNDIAN_PALADIN.value,
+            Unit.LANCER,
+            Unit.BULGARIAN_KONNIK,
+            Unit.CORDOBAN_BERBER,
+            Unit.HEAVY_LANCER,
+            Unit.HUNGARIAN_HUSZAR,
+            Unit.ARABIA_GHAZI,
+            Unit.BYZANTINE_CATAPHRACT,
+            Unit.KIEV_DRUZHINA,
+            Unit.KNIGHT,
+            Unit.MOSCOW_BOYAR,
+            Unit.BURGUNDIAN_PALADIN,
         ]:
             return 70
         if iUnitType in [
-            Unit.TEMPLAR.value,
-            Unit.TEUTONIC.value,
-            Unit.KNIGHT_OF_ST_JOHNS.value,
-            Unit.CALATRAVA_KNIGHT.value,
-            Unit.DRAGON_KNIGHT.value,
+            Unit.TEMPLAR,
+            Unit.TEUTONIC,
+            Unit.KNIGHT_OF_ST_JOHNS,
+            Unit.CALATRAVA_KNIGHT,
+            Unit.DRAGON_KNIGHT,
         ]:
             return 90
         if (
-            iUnitType <= Unit.ISLAMIC_MISSIONARY.value or iUnitType >= Unit.WORKBOAT.value
+            iUnitType <= Unit.ISLAMIC_MISSIONARY or iUnitType >= Unit.WORKBOAT
         ):  # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
             return -1
         return 50
 
     def unitCrusadeCategory(self, iUnitType):
-        if iUnitType == Unit.TEMPLAR.value:
+        if iUnitType == Unit.TEMPLAR:
             return 0
-        if iUnitType == Unit.TEUTONIC.value:
+        if iUnitType == Unit.TEUTONIC:
             return 1
         if iUnitType in [
-            Unit.KNIGHT_OF_ST_JOHNS.value,
-            Unit.CALATRAVA_KNIGHT.value,
-            Unit.DRAGON_KNIGHT.value,
+            Unit.KNIGHT_OF_ST_JOHNS,
+            Unit.CALATRAVA_KNIGHT,
+            Unit.DRAGON_KNIGHT,
         ]:
             return 2
         if iUnitType in [
-            Unit.KNIGHT.value,
-            Unit.MOSCOW_BOYAR.value,
-            Unit.BURGUNDIAN_PALADIN.value,
+            Unit.KNIGHT,
+            Unit.MOSCOW_BOYAR,
+            Unit.BURGUNDIAN_PALADIN,
         ]:
             return 3
         if iUnitType in [
-            Unit.HEAVY_LANCER.value,
-            Unit.HUNGARIAN_HUSZAR.value,
-            Unit.ARABIA_GHAZI.value,
-            Unit.BYZANTINE_CATAPHRACT.value,
-            Unit.KIEV_DRUZHINA.value,
+            Unit.HEAVY_LANCER,
+            Unit.HUNGARIAN_HUSZAR,
+            Unit.ARABIA_GHAZI,
+            Unit.BYZANTINE_CATAPHRACT,
+            Unit.KIEV_DRUZHINA,
         ]:
             return 4
         if iUnitType in [
-            Unit.LANCER.value,
-            Unit.BULGARIAN_KONNIK.value,
-            Unit.CORDOBAN_BERBER.value,
+            Unit.LANCER,
+            Unit.BULGARIAN_KONNIK,
+            Unit.CORDOBAN_BERBER,
         ]:
             return 5
-        if iUnitType in [Unit.CATAPULT.value, Unit.TREBUCHET.value]:
+        if iUnitType in [Unit.CATAPULT, Unit.TREBUCHET]:
             return 6
         return 7
 
@@ -1036,7 +1036,7 @@ class Crusades:
 
         iRichest = -1
         iMoney = 0
-        # iPopeMoney = gc.getPlayer( Civ.POPE.value ).getGold()
+        # iPopeMoney = gc.getPlayer( Civ.POPE ).getGold()
         for i in civilizations().main().ids():
             if self.getVotingPower(i) > 0:
                 pPlayer = gc.getPlayer(i)
@@ -1046,7 +1046,7 @@ class Crusades:
                     iRichest = i
                     iMoney = iPlayerMoney
 
-        if iRichest != Civ.POPE.value:
+        if iRichest != Civ.POPE:
             self.setRichestCatholic(iRichest)
         else:
             self.setRichestCatholic(-1)
@@ -1057,8 +1057,8 @@ class Crusades:
     def decideDeviateAI(self):
         iRichest = self.getRichestCatholic()
         bStolen = False
-        if iRichest in [Civ.VENECIA.value, Civ.GENOA.value]:
-            pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
+        if iRichest in [Civ.VENECIA, Civ.GENOA]:
+            pByzantium = gc.getPlayer(Civ.BYZANTIUM)
             if pByzantium.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamByzantium = pByzantium.getTeam()
@@ -1072,12 +1072,12 @@ class Crusades:
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
                     # should check if Constantinople is their capital city to be fully correct, but we can assume that's the case
-                    bIsNotAVassal = not isAVassal(Civ.BYZANTIUM.value)
-                    if iConstantinopleOwner == Civ.BYZANTIUM.value and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Civ.BYZANTIUM.value)
+                    bIsNotAVassal = not isAVassal(Civ.BYZANTIUM)
+                    if iConstantinopleOwner == Civ.BYZANTIUM and bIsNotAVassal:
+                        self.crusadeStolenAI(iRichest, Civ.BYZANTIUM)
                         bStolen = True
-        elif iRichest in [Civ.CASTILE.value, Civ.PORTUGAL.value, Civ.ARAGON.value]:
-            pCordoba = gc.getPlayer(Civ.CORDOBA.value)
+        elif iRichest in [Civ.CASTILE, Civ.PORTUGAL, Civ.ARAGON]:
+            pCordoba = gc.getPlayer(Civ.CORDOBA)
             if pCordoba.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamCordoba = pCordoba.getTeam()
@@ -1085,12 +1085,12 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamCordoba):
                     # Only if Cordoba is Muslim and not a vassal
-                    bIsNotAVassal = not isAVassal(Civ.CORDOBA.value)
-                    if pCordoba.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Civ.CORDOBA.value)
+                    bIsNotAVassal = not isAVassal(Civ.CORDOBA)
+                    if pCordoba.getStateReligion() == Religion.ISLAM and bIsNotAVassal:
+                        self.crusadeStolenAI(iRichest, Civ.CORDOBA)
                         bStolen = True
-        elif iRichest in [Civ.HUNGARY.value, Civ.POLAND.value, Civ.AUSTRIA.value]:
-            pTurkey = gc.getPlayer(Civ.OTTOMAN.value)
+        elif iRichest in [Civ.HUNGARY, Civ.POLAND, Civ.AUSTRIA]:
+            pTurkey = gc.getPlayer(Civ.OTTOMAN)
             if pTurkey.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamTurkey = pTurkey.getTeam()
@@ -1098,9 +1098,9 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamTurkey):
                     # Only if the Ottomans are Muslim and not a vassal
-                    bIsNotAVassal = not isAVassal(Civ.OTTOMAN.value)
-                    if pTurkey.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Civ.OTTOMAN.value)
+                    bIsNotAVassal = not isAVassal(Civ.OTTOMAN)
+                    if pTurkey.getStateReligion() == Religion.ISLAM and bIsNotAVassal:
+                        self.crusadeStolenAI(iRichest, Civ.OTTOMAN)
                         bStolen = True
 
         if not bStolen:
@@ -1117,8 +1117,8 @@ class Crusades:
                 pLeader.getName() + text("TXT_KEY_CRUSADE_DEVIATED"),
                 color=MessageData.LIGHT_RED,
             )
-        # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Civ.POPE.value ).getGold() / 3 )
-        # pLeader.setGold( gc.getPlayer( Civ.POPE.value ).getGold() / 4 )
+        # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Civ.POPE ).getGold() / 3 )
+        # pLeader.setGold( gc.getPlayer( Civ.POPE ).getGold() / 4 )
         pLeader.setGold(2 * pLeader.getGold() / 3)
         pTarget = gc.getPlayer(iNewTarget).getCapitalCity()
         self.setTarget(pTarget.getX(), pTarget.getY())
@@ -1135,7 +1135,7 @@ class Crusades:
             self.returnCrusaders()
             return
         # Target city can change ownership during the voting
-        if gc.getPlayer(iTargetPlayer).getStateReligion() == Religion.CATHOLICISM.value:
+        if gc.getPlayer(iTargetPlayer).getStateReligion() == Religion.CATHOLICISM:
             self.returnCrusaders()
             return
         # Absinthe: do not Crusade against themselves
@@ -1145,7 +1145,7 @@ class Crusades:
         if iTargetPlayer == iHuman:
             self.underCrusadeAttackPopup(pTargetCity.getName(), iLeader)
         elif player().isExisting():
-            sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
+            sCityName = cnm.lookupName(pTargetCity, Civ.POPE)
             if sCityName == "Unknown":
                 sCityName = cnm.lookupName(pTargetCity, iLeader)
             sText = text(
@@ -1194,7 +1194,7 @@ class Crusades:
                 iVictim = pPlot.getPlotCity().getOwner()
                 if iVictim < civilizations().majors().len():
                     iReligion = gc.getPlayer(iVictim).getStateReligion()
-                    if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
+                    if iReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
                         return
 
         # if not at war with the owner of the city, declare war
@@ -1203,7 +1203,7 @@ class Crusades:
             iVictim = pPlot.getPlotCity().getOwner()
             if (
                 iVictim != iLeader
-                and gc.getPlayer(iVictim).getStateReligion() != Religion.CATHOLICISM.value
+                and gc.getPlayer(iVictim).getStateReligion() != Religion.CATHOLICISM
             ):
                 teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
                 iTeamVictim = gc.getPlayer(iVictim).getTeam()
@@ -1254,14 +1254,14 @@ class Crusades:
                         iChosenY = tLandPlot[1]
             pPlot = gc.getMap().plot(iChosenX, iChosenY)
             for i in range(pPlot.getNumUnits()):
-                pPlot.getUnit(0).kill(False, Civ.BARBARIAN.value)
+                pPlot.getUnit(0).kill(False, Civ.BARBARIAN)
 
         # Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
         if (iChosenX, iChosenY) != (-1, -1):
             self.crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
             if human() == iLeader:
                 pTargetCity = gc.getMap().plot(iTX, iTY).getPlotCity()
-                sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
+                sCityName = cnm.lookupName(pTargetCity, Civ.POPE)
                 if sCityName == "Unknown":
                     sCityName = cnm.lookupName(pTargetCity, iLeader)
                 message(
@@ -1284,7 +1284,7 @@ class Crusades:
             iHuman = human()
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
             iVictim = pPlot.getPlotCity().getOwner()
-            if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
+            if teamLeader.isHasTech(Technology.CHIVALRY) or iVictim == iHuman:
                 make_crusade_unit(iLeader, Unit.BURGUNDIAN_PALADIN, tPlot, iActiveCrusade)
                 make_crusade_unit(iLeader, Unit.TEMPLAR, tPlot, iActiveCrusade)
                 make_crusade_unit(iLeader, Unit.TEUTONIC, tPlot, iActiveCrusade)
@@ -1306,7 +1306,7 @@ class Crusades:
         # if the Crusade was derailed
         else:
             iRougeModifier = 200
-            if teamLeader.isHasTech(Technology.CHIVALRY.value):
+            if teamLeader.isHasTech(Technology.CHIVALRY):
                 make_crusade_unit(iLeader, Unit.KNIGHT, tPlot, iActiveCrusade)
                 make_crusade_unit(iLeader, Unit.TEUTONIC, tPlot, iActiveCrusade)
                 make_crusade_unit(iLeader, Unit.LONG_SWORDSMAN, tPlot, iActiveCrusade)
@@ -1384,7 +1384,7 @@ class Crusades:
             )
         if self.getSelectedUnit(3) > 0:
             iKnightNumber = self.getSelectedUnit(3) * 100 / iRougeModifier
-            if iLeader == Civ.BURGUNDY.value:
+            if iLeader == Civ.BURGUNDY:
                 for i in range(0, iKnightNumber):
                     if percentage_chance(50, strict=True):
                         make_crusade_unit(iLeader, Unit.BURGUNDIAN_PALADIN, tPlot, iActiveCrusade)
@@ -1398,7 +1398,7 @@ class Crusades:
                         make_crusade_unit(iLeader, Unit.KNIGHT, tPlot, iActiveCrusade)
         if self.getSelectedUnit(4) > 0:
             iLightCavNumber = self.getSelectedUnit(4) * 100 / iRougeModifier
-            if iLeader == Civ.HUNGARY.value:
+            if iLeader == Civ.HUNGARY:
                 for i in range(0, iLightCavNumber):
                     if percentage_chance(50, strict=True):
                         make_crusade_unit(iLeader, Unit.HUNGARIAN_HUSZAR, tPlot, iActiveCrusade)
@@ -1475,7 +1475,7 @@ class Crusades:
         # benefits for the other participants on Crusade return - Faith points, GG points, Relics
         for iCiv in civilizations().main().ids():
             pCiv = gc.getPlayer(iCiv)
-            if pCiv.getStateReligion() == Religion.CATHOLICISM.value and pCiv.isAlive():
+            if pCiv.getStateReligion() == Religion.CATHOLICISM and pCiv.isAlive():
                 iUnitNumber = self.getNumUnitsSent(iCiv)
                 if iUnitNumber > 0:
                     # the leader already got exp points through the Crusade itself
@@ -1483,14 +1483,14 @@ class Crusades:
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
-                        if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
+                        if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                             pCiv.changeFaith(1 * iUnitNumber)
                             # add relics in the capital
                             capital = pCiv.getCapitalCity()
                             iCapitalX = capital.getX()
                             iCapitalY = capital.getY()
                             pCiv.initUnit(
-                                Unit.HOLY_RELIC.value,
+                                Unit.HOLY_RELIC,
                                 iCapitalX,
                                 iCapitalY,
                                 UnitAITypes.NO_UNITAI,
@@ -1501,13 +1501,13 @@ class Crusades:
                                     iHuman,
                                     text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                     sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                    button=gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
+                                    button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                                     color=MessageData.GREEN,
                                     location=(iCapitalX, iCapitalY),
                                 )
                             if iUnitNumber > 3 and percentage_chance(80, strict=True):
                                 pCiv.initUnit(
-                                    Unit.HOLY_RELIC.value,
+                                    Unit.HOLY_RELIC,
                                     iCapitalX,
                                     iCapitalY,
                                     UnitAITypes.NO_UNITAI,
@@ -1515,7 +1515,7 @@ class Crusades:
                                 )
                             if iUnitNumber > 9 and percentage_chance(80, strict=True):
                                 pCiv.initUnit(
-                                    Unit.HOLY_RELIC.value,
+                                    Unit.HOLY_RELIC,
                                     iCapitalX,
                                     iCapitalY,
                                     UnitAITypes.NO_UNITAI,
@@ -1533,7 +1533,7 @@ class Crusades:
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
-                        if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
+                        if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                             pCiv.changeFaith(1 * iUnitNumber)
                             # add relics in the capital
                             capital = pCiv.getCapitalCity()
@@ -1543,7 +1543,7 @@ class Crusades:
                             if capital.getName():
                                 if percentage_chance(80, strict=True):
                                     pCiv.initUnit(
-                                        Unit.HOLY_RELIC.value,
+                                        Unit.HOLY_RELIC,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1555,14 +1555,14 @@ class Crusades:
                                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                             sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                             button=gc.getUnitInfo(
-                                                Unit.HOLY_RELIC.value
+                                                Unit.HOLY_RELIC
                                             ).getButton(),
                                             color=MessageData.GREEN,
                                             location=(iCapitalX, iCapitalY),
                                         )
                                 if iUnitNumber > 3 and percentage_chance(60, strict=True):
                                     pCiv.initUnit(
-                                        Unit.HOLY_RELIC.value,
+                                        Unit.HOLY_RELIC,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1570,7 +1570,7 @@ class Crusades:
                                     )
                                 if iUnitNumber > 9 and percentage_chance(60, strict=True):
                                     pCiv.initUnit(
-                                        Unit.HOLY_RELIC.value,
+                                        Unit.HOLY_RELIC,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1592,7 +1592,7 @@ class Crusades:
             pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
             if pCity.getOwner() == iPlayer:
                 pPlayer = gc.getPlayer(iPlayer)
-                if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
+                if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                     # possible population gain, chance based on the current size
                     iRandom = rand(10)
                     if (
@@ -1607,8 +1607,8 @@ class Crusades:
                                 location=pCity,
                             )
                         # spread Catholicism if not present
-                        if not pCity.isHasReligion(Religion.CATHOLICISM.value):
-                            pCity.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
+                        if not pCity.isHasReligion(Religion.CATHOLICISM):
+                            pCity.setHasReligion(Religion.CATHOLICISM, True, True, False)
 
     def doDefensiveCrusade(self, iGameTurn):
         if (
@@ -1625,7 +1625,7 @@ class Crusades:
             if self.canDefensiveCrusade(iPlayer, iGameTurn)
         ]
         if lPotentials:
-            pPope = gc.getPlayer(Civ.POPE.value)
+            pPope = gc.getPlayer(Civ.POPE)
             weights = []
             for iPlayer in lPotentials:
                 iCatholicFaith = 0
@@ -1652,11 +1652,11 @@ class Crusades:
         if (
             (iGameTurn < civilization(iPlayer).date.birth + 5)
             or not pPlayer.isAlive()
-            or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
+            or pPlayer.getStateReligion() != Religion.CATHOLICISM
         ):
             return False
         # need to have open borders with the Pope
-        if not teamPlayer.isOpenBorders(gc.getPlayer(Civ.POPE.value).getTeam()):
+        if not teamPlayer.isOpenBorders(gc.getPlayer(Civ.POPE).getTeam()):
             return False
 
         tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
@@ -1689,7 +1689,7 @@ class Crusades:
         if player().isExisting():
             if (
                 team().canContact(teamtype(iPlayer))
-                or player().getStateReligion() == Religion.CATHOLICISM.value
+                or player().getStateReligion() == Religion.CATHOLICISM
             ):  # as you have contact with the Pope by default
                 sText = (
                     text("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE") + " " + player(iPlayer).getName()
@@ -1742,10 +1742,10 @@ class Crusades:
 
         # smaller Empires need a bit more help
         if pPlayer.getNumCities() < 6:
-            if iBestCavalry == Unit.KNIGHT.value:
+            if iBestCavalry == Unit.KNIGHT:
                 if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
-                        Unit.BURGUNDIAN_PALADIN.value,
+                        Unit.BURGUNDIAN_PALADIN,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -1769,10 +1769,10 @@ class Crusades:
                 iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )
         if iFaith > 11:
-            if iBestCavalry == Unit.KNIGHT.value:
+            if iBestCavalry == Unit.KNIGHT:
                 if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
-                        Unit.BURGUNDIAN_PALADIN.value,
+                        Unit.BURGUNDIAN_PALADIN,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -1807,10 +1807,10 @@ class Crusades:
             pPlayer.initUnit(
                 iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )
-            if iBestCavalry == Unit.KNIGHT.value:
+            if iBestCavalry == Unit.KNIGHT:
                 if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
-                        Unit.BURGUNDIAN_PALADIN.value,
+                        Unit.BURGUNDIAN_PALADIN,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -1832,28 +1832,28 @@ class Crusades:
     def getDefensiveCrusadeBestInfantry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         lUnits = [
-            Unit.GRENADIER.value,
-            Unit.MACEMAN.value,
-            Unit.LONG_SWORDSMAN.value,
-            Unit.SWORDSMAN.value,
+            Unit.GRENADIER,
+            Unit.MACEMAN,
+            Unit.LONG_SWORDSMAN,
+            Unit.SWORDSMAN,
         ]
         for iUnit in lUnits:
             if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
                 return getUniqueUnit(iPlayer, iUnit)
-        return getUniqueUnit(iPlayer, Unit.AXEMAN.value)
+        return getUniqueUnit(iPlayer, Unit.AXEMAN)
 
     def getDefensiveCrusadeBestCavalry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         lUnits = [
-            Unit.CUIRASSIER.value,
-            Unit.KNIGHT.value,
-            Unit.HEAVY_LANCER.value,
-            Unit.LANCER.value,
+            Unit.CUIRASSIER,
+            Unit.KNIGHT,
+            Unit.HEAVY_LANCER,
+            Unit.LANCER,
         ]
         for iUnit in lUnits:
             if pPlayer.canTrain(getUniqueUnit(iPlayer, iUnit), False, False):
                 return getUniqueUnit(iPlayer, iUnit)
-        return getUniqueUnit(iPlayer, Unit.SCOUT.value)
+        return getUniqueUnit(iPlayer, Unit.SCOUT)
 
     def do1200ADCrusades(self):
         self.setCrusadeInit(0, year(1096))
@@ -1863,11 +1863,11 @@ class Crusades:
     def isOrMasterChristian(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iReligion = pPlayer.getStateReligion()
-        if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
+        if iReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
             return True
         iMaster = getMaster(iPlayer)
         if iMaster != -1:
             iMasterReligion = gc.getPlayer(iMaster).getStateReligion()
-            if iMasterReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
+            if iMasterReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
                 return True
         return False

@@ -71,15 +71,15 @@ COMPANY_LIMIT = CompanyDataMapper(
 )
 
 COMPANY_BUILDINGS = [
-    Building.CORPORATION.value,
-    Building.CORPORATION_2.value,
-    Building.CORPORATION_3.value,
-    Building.CORPORATION_4.value,
-    Building.CORPORATION_5.value,
-    Building.CORPORATION_6.value,
-    Building.CORPORATION_7.value,
-    Building.CORPORATION_8.value,
-    Building.CORPORATION_9.value,
+    Building.CORPORATION,
+    Building.CORPORATION_2,
+    Building.CORPORATION_3,
+    Building.CORPORATION_4,
+    Building.CORPORATION_5,
+    Building.CORPORATION_6,
+    Building.CORPORATION_7,
+    Building.CORPORATION_8,
+    Building.CORPORATION_9,
 ]
 
 DIPLOMACY_MODIFIERS = [

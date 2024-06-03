@@ -2152,18 +2152,18 @@ def canTriggerGreatMediator(argsList):
 
     # Rhye - start
     if player.getID() in [
-        Civ.INDEPENDENT.value,
-        Civ.INDEPENDENT_2.value,
-        Civ.INDEPENDENT_3.value,
-        Civ.INDEPENDENT_4.value,
+        Civ.INDEPENDENT,
+        Civ.INDEPENDENT_2,
+        Civ.INDEPENDENT_3,
+        Civ.INDEPENDENT_4,
     ]:
         return False
 
     if destPlayer.getID() in [
-        Civ.INDEPENDENT.value,
-        Civ.INDEPENDENT_2.value,
-        Civ.INDEPENDENT_3.value,
-        Civ.INDEPENDENT_4.value,
+        Civ.INDEPENDENT,
+        Civ.INDEPENDENT_2,
+        Civ.INDEPENDENT_3,
+        Civ.INDEPENDENT_4,
     ]:
         return False
     # Rhye - end

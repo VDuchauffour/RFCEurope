@@ -52,12 +52,12 @@ class Companies:
         elif iGameTurn > year(COMPANIES[iCompany].deathdate) + rand(COMPANIES.len()):
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
-            if iCompany == Company.TEMPLARS.value:
+            if iCompany == Company.TEMPLARS:
                 plot = gc.getMap().plot(*CITIES[City.JERUSALEM])
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
-                        == Religion.CATHOLICISM.value
+                        == Religion.CATHOLICISM
                     ):
                         iMaxCompanies = COMPANIES[iCompany].limit
 
@@ -67,34 +67,34 @@ class Companies:
 
         # modified limit for Hospitallers and Teutons after the Crusades
         if iGameTurn > year(COMPANIES[Company.TEMPLARS].deathdate):
-            if iCompany == Company.HOSPITALLERS.value and iGameTurn < year(
+            if iCompany == Company.HOSPITALLERS and iGameTurn < year(
                 COMPANIES[iCompany].deathdate
             ):
                 iMaxCompanies -= 1
-            elif iCompany == Company.TEUTONS.value and iGameTurn < year(
+            elif iCompany == Company.TEUTONS and iGameTurn < year(
                 COMPANIES[iCompany].deathdate
             ):
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
-        if iCompany == Company.HANSA.value:
+        if iCompany == Company.HANSA:
             if year(1356) < iGameTurn < year(COMPANIES[iCompany].deathdate):
                 iMaxCompanies += 3
 
         # Templars are Teutons are gone after the Protestant reformation
-        if iCompany in [Company.TEMPLARS.value, Company.TEUTONS.value]:
-            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
+        if iCompany in [Company.TEMPLARS, Company.TEUTONS]:
+            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
                 iMaxCompanies = 0
         # Order of Calatrava is only active if Cordoba or Morocco is alive
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
-        if iCompany == Company.CALATRAVA.value:
+        if iCompany == Company.CALATRAVA:
             if not (
-                gc.getPlayer(Civ.CORDOBA.value).isAlive()
-                or gc.getPlayer(Civ.MOROCCO.value).isAlive()
+                gc.getPlayer(Civ.CORDOBA).isAlive()
+                or gc.getPlayer(Civ.MOROCCO).isAlive()
             ):
                 iMaxCompanies = 0
         # Order of the Dragon is only active if the Ottomans are alive
-        if iCompany == Company.DRAGON.value:
-            if not gc.getPlayer(Civ.OTTOMAN.value).isAlive():
+        if iCompany == Company.DRAGON:
+            if not gc.getPlayer(Civ.OTTOMAN).isAlive():
                 iMaxCompanies = 0
 
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
@@ -143,13 +143,13 @@ class Companies:
             self.announceHuman(iCompany, city)
             # spread the religion if it wasn't present before
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
-                Company.CALATRAVA.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
+                Company.CALATRAVA,
             ]:
-                if not city.isHasReligion(Religion.CATHOLICISM.value):
-                    city.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
+                if not city.isHasReligion(Religion.CATHOLICISM):
+                    city.setHasReligion(Religion.CATHOLICISM, True, True, False)
             # one change at a time, only add the highest ranked city (which didn't have the company before)
             break
 
@@ -182,8 +182,8 @@ class Companies:
 
         # Galata Tower ownership
         pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == Wonder.GALATA_TOWER.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
+        if iBuilding == Wonder.GALATA_TOWER:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
@@ -199,18 +199,18 @@ class Companies:
         # Galata Tower ownership
         pOldOwner = gc.getPlayer(iOldOwner)
         pNewOwner = gc.getPlayer(iNewOwner)
-        if city.isHasBuilding(Wonder.GALATA_TOWER.value):
-            pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
-            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
+        if city.isHasBuilding(Wonder.GALATA_TOWER):
+            pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
+            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
 
     def onCityRazed(self, iOldOwner, iPlayer, city):
 
         # Galata Tower ownership
         pOldOwner = gc.getPlayer(iOldOwner)
         pPlayer = gc.getPlayer(iPlayer)
-        if city.isHasBuilding(Wonder.GALATA_TOWER.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
-            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
+        if city.isHasBuilding(Wonder.GALATA_TOWER):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
 
     def announceHuman(self, iCompany, city, bRemove=False):
         iHuman = human()
@@ -249,42 +249,42 @@ class Companies:
         ownerTeam = gc.getTeam(owner.getTeam())
 
         # spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
-        if iCompany == Company.TEUTONS.value:
-            if iOwner == Civ.PRUSSIA.value:
+        if iCompany == Company.TEUTONS:
+            if iOwner == Civ.PRUSSIA:
                 iValue += 5
-            elif ownerTeam.isAtWar(Civ.PRUSSIA.value):
+            elif ownerTeam.isAtWar(Civ.PRUSSIA):
                 return -1
 
         # Genoese UP
-        if iOwner == Civ.GENOA.value:
+        if iOwner == Civ.GENOA:
             iValue += 1
             # extra bonus for banking companies
-            if iCompany in [Company.MEDICI.value, Company.AUGSBURG.value, Company.ST_GEORGE.value]:
+            if iCompany in [Company.MEDICI, Company.AUGSBURG, Company.ST_GEORGE]:
                 iValue += 1
 
         # state religion requirements
         iStateReligion = owner.getStateReligion()
-        if iCompany in [Company.HOSPITALLERS.value, Company.TEMPLARS.value, Company.TEUTONS.value]:
-            if iStateReligion == Religion.CATHOLICISM.value:
+        if iCompany in [Company.HOSPITALLERS, Company.TEMPLARS, Company.TEUTONS]:
+            if iStateReligion == Religion.CATHOLICISM:
                 iValue += 3
-            elif iStateReligion in [Religion.PROTESTANTISM.value, Religion.ORTHODOXY.value]:
+            elif iStateReligion in [Religion.PROTESTANTISM, Religion.ORTHODOXY]:
                 iValue -= 2
             else:
                 return -1
-        elif iCompany == Company.DRAGON.value:
-            if iStateReligion == Religion.CATHOLICISM.value:
+        elif iCompany == Company.DRAGON:
+            if iStateReligion == Religion.CATHOLICISM:
                 iValue += 2
-            elif iStateReligion == Religion.ORTHODOXY.value:
+            elif iStateReligion == Religion.ORTHODOXY:
                 iValue += 1
-            elif iStateReligion == Religion.ISLAM.value:
+            elif iStateReligion == Religion.ISLAM:
                 return -1
-        elif iCompany == Company.CALATRAVA.value:
-            if iStateReligion == Religion.CATHOLICISM.value:
+        elif iCompany == Company.CALATRAVA:
+            if iStateReligion == Religion.CATHOLICISM:
                 iValue += 2
             else:
                 return -1
         else:
-            if iStateReligion == Religion.ISLAM.value:
+            if iStateReligion == Religion.ISLAM:
                 return -1
 
         # geographical requirements
@@ -294,112 +294,112 @@ class Companies:
             and get_enum_by_id(Province, iProvince) not in COMPANIES[iCompany].region
         ):
             return -1
-        if iCompany == Company.MEDICI.value:
-            if iProvince == Province.TUSCANY.value:
+        if iCompany == Company.MEDICI:
+            if iProvince == Province.TUSCANY:
                 iValue += 4
-        elif iCompany == Company.AUGSBURG.value:
-            if iProvince == Province.BAVARIA.value:
+        elif iCompany == Company.AUGSBURG:
+            if iProvince == Province.BAVARIA:
                 iValue += 3
-            elif iProvince == Province.SWABIA.value:
+            elif iProvince == Province.SWABIA:
                 iValue += 2
-        elif iCompany == Company.ST_GEORGE.value:
-            if iProvince == Province.LIGURIA.value:
+        elif iCompany == Company.ST_GEORGE:
+            if iProvince == Province.LIGURIA:
                 iValue += 3
-        elif iCompany == Company.HANSA.value:
-            if iProvince == Province.HOLSTEIN.value:
+        elif iCompany == Company.HANSA:
+            if iProvince == Province.HOLSTEIN:
                 iValue += 5
-            if iProvince in [Province.BRANDENBURG.value, Province.SAXONY.value]:
+            if iProvince in [Province.BRANDENBURG, Province.SAXONY]:
                 iValue += 2
 
         # geographical requirement changes after the Crusades
         iGameTurn = turn()
         if iGameTurn < year(COMPANIES[Company.TEMPLARS].deathdate):
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
             ]:
-                if iStateReligion == Religion.CATHOLICISM.value:
+                if iStateReligion == Religion.CATHOLICISM:
                     if iProvince in [
-                        Province.ANTIOCHIA.value,
-                        Province.LEBANON.value,
-                        Province.JERUSALEM.value,
+                        Province.ANTIOCHIA,
+                        Province.LEBANON,
+                        Province.JERUSALEM,
                     ]:
                         iValue += 5
-                    elif iProvince in [Province.CYPRUS.value, Province.EGYPT.value]:
+                    elif iProvince in [Province.CYPRUS, Province.EGYPT]:
                         iValue += 3
         else:
-            if iCompany == Company.HOSPITALLERS.value:
-                if iProvince in [Province.RHODES.value, Province.MALTA.value]:
+            if iCompany == Company.HOSPITALLERS:
+                if iProvince in [Province.RHODES, Province.MALTA]:
                     iValue += 4
-            elif iCompany == Company.TEUTONS.value:
-                if iProvince == Province.TRANSYLVANIA.value:
+            elif iCompany == Company.TEUTONS:
+                if iProvince == Province.TRANSYLVANIA:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
         if iOwner < civilizations().majors().len():
             if crus.getNumUnitsSent(iOwner) > 0:
                 if iCompany in [
-                    Company.HOSPITALLERS.value,
-                    Company.TEMPLARS.value,
-                    Company.TEUTONS.value,
+                    Company.HOSPITALLERS,
+                    Company.TEMPLARS,
+                    Company.TEUTONS,
                 ]:
                     iValue += 2
 
         # additional bonus for the city of Jerusalem
         if (city.getX(), city.getY()) == CITIES[City.JERUSALEM]:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
             ]:
                 iValue += 3
 
         # coastal and riverside check
-        if iCompany == Company.HANSA.value:
+        if iCompany == Company.HANSA:
             if not city.isCoastal(20):  # water body with at least 20 tiles
                 if not city.plot().isRiverSide():
                     return -1
-        elif iCompany == Company.HOSPITALLERS.value:
+        elif iCompany == Company.HOSPITALLERS:
             if city.isCoastal(20):
                 iValue += 2
 
         # bonus for religions in the city
         if iCompany in [
-            Company.HANSA.value,
-            Company.MEDICI.value,
-            Company.AUGSBURG.value,
-            Company.ST_GEORGE.value,
+            Company.HANSA,
+            Company.MEDICI,
+            Company.AUGSBURG,
+            Company.ST_GEORGE,
         ]:
             if city.isHasReligion(
-                Religion.JUDAISM.value
+                Religion.JUDAISM
             ):  # not necessarily historic, but has great gameplay synergies
                 iValue += 1
         elif iCompany in [
-            Company.HOSPITALLERS.value,
-            Company.TEMPLARS.value,
-            Company.TEUTONS.value,
-            Company.CALATRAVA.value,
+            Company.HOSPITALLERS,
+            Company.TEMPLARS,
+            Company.TEUTONS,
+            Company.CALATRAVA,
         ]:
             # they have a harder time to choose a city without Catholicism, but they spread the religion there
-            if not city.isHasReligion(Religion.CATHOLICISM.value):
+            if not city.isHasReligion(Religion.CATHOLICISM):
                 iValue -= 1
-            if city.isHasReligion(Religion.ISLAM.value):
+            if city.isHasReligion(Religion.ISLAM):
                 iValue -= 1
-        elif iCompany == Company.DRAGON.value:
-            if city.isHasReligion(Religion.CATHOLICISM.value) or city.isHasReligion(
-                Religion.ORTHODOXY.value
+        elif iCompany == Company.DRAGON:
+            if city.isHasReligion(Religion.CATHOLICISM) or city.isHasReligion(
+                Religion.ORTHODOXY
             ):
                 iValue += 1
-            if city.isHasReligion(Religion.ISLAM.value):
+            if city.isHasReligion(Religion.ISLAM):
                 iValue -= 1
 
         # faith points of the population
         if iCompany in [
-            Company.HOSPITALLERS.value,
-            Company.TEMPLARS.value,
-            Company.TEUTONS.value,
-            Company.CALATRAVA.value,
+            Company.HOSPITALLERS,
+            Company.TEMPLARS,
+            Company.TEUTONS,
+            Company.CALATRAVA,
         ]:
             if owner.getFaith() >= 50:
                 iValue += 3
@@ -410,11 +410,11 @@ class Companies:
 
         # city size
         if iCompany in [
-            Company.HANSA.value,
-            Company.DRAGON.value,
-            Company.MEDICI.value,
-            Company.AUGSBURG.value,
-            Company.ST_GEORGE.value,
+            Company.HANSA,
+            Company.DRAGON,
+            Company.MEDICI,
+            Company.AUGSBURG,
+            Company.ST_GEORGE,
         ]:
             if city.getPopulation() > 9:
                 iValue += 3
@@ -424,280 +424,280 @@ class Companies:
                 iValue += 1
 
         # Galata Tower bonus: 2 for all cities, additional 2 for the wonder's city
-        if owner.getPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value) == 1:
+        if owner.getPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER) == 1:
             iValue += 2
-            if city.isHasBuilding(Wonder.GALATA_TOWER.value):
+            if city.isHasBuilding(Wonder.GALATA_TOWER):
                 iValue += 2
 
         # various building bonuses, trade route bonus
         iBuildCounter = 0  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-        if iCompany in [Company.HOSPITALLERS.value, Company.TEMPLARS.value, Company.TEUTONS.value]:
+        if iCompany in [Company.HOSPITALLERS, Company.TEMPLARS, Company.TEUTONS]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE))
                 > 0
             ):
                 iBuildCounter += 1
             if (
                 city.getNumRealBuilding(
-                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
+                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)
                 )
                 > 0
             ):
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL)) > 0:
                 iBuildCounter += 1
             iValue += (4 * iBuildCounter) / iMaxPossible  # maximum is 4, with all buildings built
             # wonders should be handled separately
-            if city.getNumRealBuilding(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
-                if iCompany == Company.HOSPITALLERS.value:
+            if city.getNumRealBuilding(Wonder.KRAK_DES_CHEVALIERS) > 0:
+                if iCompany == Company.HOSPITALLERS:
                     iValue += 5
                 else:
                     iValue += 2
-            if city.getNumRealBuilding(Wonder.DOME_ROCK.value) > 0:
-                if iCompany == Company.TEMPLARS.value:
+            if city.getNumRealBuilding(Wonder.DOME_ROCK) > 0:
+                if iCompany == Company.TEMPLARS:
                     iValue += 5
                 else:
                     iValue += 2
-        elif iCompany == Company.CALATRAVA.value:
+        elif iCompany == Company.CALATRAVA:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE))
                 > 0
             ):
                 iBuildCounter += 1
             if (
                 city.getNumRealBuilding(
-                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY.value)
+                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)
                 )
                 > 0
             ):
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT)) > 0:
                 iBuildCounter += 1
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
-        elif iCompany == Company.DRAGON.value:
+        elif iCompany == Company.DRAGON:
             iMaxPossible = 9  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WALLS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CASTLE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BARRACKS)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
             if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE.value))
+                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
                 > 0
             ):
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT)) > 0:
                 iBuildCounter += 2
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
-        elif iCompany in [Company.MEDICI.value, Company.AUGSBURG.value, Company.ST_GEORGE.value]:
+        elif iCompany in [Company.MEDICI, Company.AUGSBURG, Company.ST_GEORGE]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BANK.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BANK)) > 0:
                 iBuildCounter += 3
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.JEWELER.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.JEWELER)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LUXURY_STORE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LUXURY_STORE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.COURTHOUSE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.COURTHOUSE)) > 0:
                 iBuildCounter += 2
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
             # wonders should be handled separately
-            if city.getNumRealBuilding(Building.PALACE.value) > 0:
+            if city.getNumRealBuilding(Building.PALACE) > 0:
                 iValue += 1
-            if city.getNumRealBuilding(Building.SUMMER_PALACE.value) > 0:
+            if city.getNumRealBuilding(Building.SUMMER_PALACE) > 0:
                 iValue += 1
             # bonus from trade routes
             iValue += max(0, city.getTradeRoutes() - 1)
-        elif iCompany == Company.HANSA.value:
+        elif iCompany == Company.HANSA:
             iMaxPossible = 16  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.HARBOR.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.HARBOR)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LIGHTHOUSE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.LIGHTHOUSE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WHARF.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WHARF)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CUSTOM_HOUSE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CUSTOM_HOUSE)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.MARKET)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BREWERY.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.BREWERY)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WEAVER.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WEAVER)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WAREHOUSE.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.WAREHOUSE)) > 0:
                 iBuildCounter += 2
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TANNERY.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TANNERY)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TEXTILE_MILL.value)) > 0:
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.TEXTILE_MILL)) > 0:
                 iBuildCounter += 1
             iValue += (6 * iBuildCounter) / iMaxPossible  # maximum is 6, with all buildings built
             # bonus from trade routes
             iValue += city.getTradeRoutes()
 
         # civic bonuses
-        if owner.getCivics(0) == Civic.MERCHANT_REPUBLIC.value:
+        if owner.getCivics(0) == Civic.MERCHANT_REPUBLIC:
             if iCompany in [
-                Company.MEDICI.value,
-                Company.ST_GEORGE.value,
-                Company.HOSPITALLERS.value,
+                Company.MEDICI,
+                Company.ST_GEORGE,
+                Company.HOSPITALLERS,
             ]:
                 iValue += 1
-            elif iCompany == Company.HANSA.value:
+            elif iCompany == Company.HANSA:
                 iValue += 2
-        if owner.getCivics(1) == Civic.FEUDAL_LAW.value:
+        if owner.getCivics(1) == Civic.FEUDAL_LAW:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
-                Company.DRAGON.value,
-                Company.CALATRAVA.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
+                Company.DRAGON,
+                Company.CALATRAVA,
             ]:
                 iValue += 2
-        elif owner.getCivics(1) == Civic.RELIGIOUS_LAW.value:
+        elif owner.getCivics(1) == Civic.RELIGIOUS_LAW:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
-                Company.CALATRAVA.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
+                Company.CALATRAVA,
             ]:
                 iValue += 1
-        if owner.getCivics(2) == Civic.APPRENTICESHIP.value:
-            if iCompany == Company.HANSA.value:
+        if owner.getCivics(2) == Civic.APPRENTICESHIP:
+            if iCompany == Company.HANSA:
                 iValue += 1
-        if owner.getCivics(3) == Civic.TRADE_ECONOMY.value:
-            if iCompany in [Company.MEDICI.value, Company.AUGSBURG.value, Company.ST_GEORGE.value]:
+        if owner.getCivics(3) == Civic.TRADE_ECONOMY:
+            if iCompany in [Company.MEDICI, Company.AUGSBURG, Company.ST_GEORGE]:
                 iValue += 1
-            elif iCompany == Company.HANSA.value:
+            elif iCompany == Company.HANSA:
                 iValue += 2
-        elif owner.getCivics(3) == Civic.GUILDS.value:
+        elif owner.getCivics(3) == Civic.GUILDS:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
-                Company.MEDICI.value,
-                Company.AUGSBURG.value,
-                Company.ST_GEORGE.value,
-                Company.DRAGON.value,
-                Company.CALATRAVA.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
+                Company.MEDICI,
+                Company.AUGSBURG,
+                Company.ST_GEORGE,
+                Company.DRAGON,
+                Company.CALATRAVA,
             ]:
                 iValue += 1
-            elif iCompany == Company.HANSA.value:
+            elif iCompany == Company.HANSA:
                 iValue += 2
-        elif owner.getCivics(3) == Civic.MERCANTILISM.value:
-            if iCompany == Company.HANSA.value:
+        elif owner.getCivics(3) == Civic.MERCANTILISM:
+            if iCompany == Company.HANSA:
                 return -1
             elif iCompany in [
-                Company.MEDICI.value,
-                Company.AUGSBURG.value,
-                Company.ST_GEORGE.value,
+                Company.MEDICI,
+                Company.AUGSBURG,
+                Company.ST_GEORGE,
             ]:
                 iValue -= 2
-        if owner.getCivics(4) == Civic.THEOCRACY.value:
-            if iCompany in [Company.HOSPITALLERS.value, Company.TEMPLARS.value]:
+        if owner.getCivics(4) == Civic.THEOCRACY:
+            if iCompany in [Company.HOSPITALLERS, Company.TEMPLARS]:
                 iValue += 1
-            elif iCompany == Company.TEUTONS.value:
+            elif iCompany == Company.TEUTONS:
                 iValue += 2
-        elif owner.getCivics(4) == Civic.FREE_RELIGION.value:
+        elif owner.getCivics(4) == Civic.FREE_RELIGION:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
-                Company.TEUTONS.value,
-                Company.DRAGON.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
+                Company.TEUTONS,
+                Company.DRAGON,
             ]:
                 iValue -= 1
-            elif iCompany == Company.CALATRAVA.value:
+            elif iCompany == Company.CALATRAVA:
                 iValue -= 2
-        if owner.getCivics(5) == Civic.OCCUPATION.value:
+        if owner.getCivics(5) == Civic.OCCUPATION:
             if iCompany in [
-                Company.HOSPITALLERS.value,
-                Company.TEMPLARS.value,
+                Company.HOSPITALLERS,
+                Company.TEMPLARS,
                 iCompany,
-                iCompany == Company.CALATRAVA.value,
+                iCompany == Company.CALATRAVA,
             ]:
                 iValue += 1
 
         # bonus for techs
         if iCompany in [
-            Company.HOSPITALLERS.value,
-            Company.TEMPLARS.value,
-            Company.TEUTONS.value,
-            Company.DRAGON.value,
-            Company.CALATRAVA.value,
+            Company.HOSPITALLERS,
+            Company.TEMPLARS,
+            Company.TEUTONS,
+            Company.DRAGON,
+            Company.CALATRAVA,
         ]:
             for iTech in [
-                Technology.CHIVALRY.value,
-                Technology.PLATE_ARMOR.value,
-                Technology.GUILDS.value,
-                Technology.MILITARY_TRADITION.value,
+                Technology.CHIVALRY,
+                Technology.PLATE_ARMOR,
+                Technology.GUILDS,
+                Technology.MILITARY_TRADITION,
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany == Company.HANSA.value:
+        elif iCompany == Company.HANSA:
             for iTech in [
-                Technology.GUILDS.value,
-                Technology.CLOCKMAKING.value,
-                Technology.OPTICS.value,
-                Technology.SHIP_BUILDING.value,
+                Technology.GUILDS,
+                Technology.CLOCKMAKING,
+                Technology.OPTICS,
+                Technology.SHIP_BUILDING,
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany in [Company.MEDICI.value, Company.ST_GEORGE.value]:
+        elif iCompany in [Company.MEDICI, Company.ST_GEORGE]:
             for iTech in [
-                Technology.BANKING.value,
-                Technology.PAPER.value,
-                Technology.CLOCKMAKING.value,
-                Technology.OPTICS.value,
-                Technology.SHIP_BUILDING.value,
+                Technology.BANKING,
+                Technology.PAPER,
+                Technology.CLOCKMAKING,
+                Technology.OPTICS,
+                Technology.SHIP_BUILDING,
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany == Company.AUGSBURG.value:
+        elif iCompany == Company.AUGSBURG:
             for iTech in [
-                Technology.BANKING.value,
-                Technology.PAPER.value,
-                Technology.CHEMISTRY.value,
+                Technology.BANKING,
+                Technology.PAPER,
+                Technology.CHEMISTRY,
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
@@ -711,11 +711,11 @@ class Companies:
                 if city.getNumBonuses(iBonus) > 0:
                     bFound = True
                     if iCompany in [
-                        Company.HOSPITALLERS.value,
-                        Company.TEMPLARS.value,
-                        Company.TEUTONS.value,
-                        Company.DRAGON.value,
-                        Company.CALATRAVA.value,
+                        Company.HOSPITALLERS,
+                        Company.TEMPLARS,
+                        Company.TEUTONS,
+                        Company.DRAGON,
+                        Company.CALATRAVA,
                     ]:
                         iTempValue += (
                             city.getNumBonuses(iBonus) + 2
@@ -727,10 +727,10 @@ class Companies:
         if (
             iCompany
             in [
-                Company.HANSA.value,
-                Company.MEDICI.value,
-                Company.AUGSBURG.value,
-                Company.ST_GEORGE.value,
+                Company.HANSA,
+                Company.MEDICI,
+                Company.AUGSBURG,
+                Company.ST_GEORGE,
             ]
             and not bFound
         ):
@@ -741,40 +741,40 @@ class Companies:
         # bonus for resources in the fat cross of a city?
 
         # competition
-        if iCompany == Company.HOSPITALLERS.value:
-            if city.isHasCorporation(Company.TEMPLARS.value):
+        if iCompany == Company.HOSPITALLERS:
+            if city.isHasCorporation(Company.TEMPLARS):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(Company.TEUTONS.value):
+            if city.isHasCorporation(Company.TEUTONS):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == Company.TEMPLARS.value:
-            if city.isHasCorporation(Company.HOSPITALLERS.value):
+        elif iCompany == Company.TEMPLARS:
+            if city.isHasCorporation(Company.HOSPITALLERS):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(Company.TEUTONS.value):
+            if city.isHasCorporation(Company.TEUTONS):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == Company.TEUTONS.value:
-            if city.isHasCorporation(Company.TEMPLARS.value):
+        elif iCompany == Company.TEUTONS:
+            if city.isHasCorporation(Company.TEMPLARS):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(Company.HOSPITALLERS.value):
+            if city.isHasCorporation(Company.HOSPITALLERS):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == Company.MEDICI.value:
-            if city.isHasCorporation(Company.ST_GEORGE.value) or city.isHasCorporation(
-                Company.AUGSBURG.value
+        elif iCompany == Company.MEDICI:
+            if city.isHasCorporation(Company.ST_GEORGE) or city.isHasCorporation(
+                Company.AUGSBURG
             ):
                 iValue /= 2
-        elif iCompany == Company.ST_GEORGE.value:
-            if city.isHasCorporation(Company.MEDICI.value) or city.isHasCorporation(
-                Company.AUGSBURG.value
+        elif iCompany == Company.ST_GEORGE:
+            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(
+                Company.AUGSBURG
             ):
                 iValue /= 2
-        elif iCompany == Company.AUGSBURG.value:
-            if city.isHasCorporation(Company.MEDICI.value) or city.isHasCorporation(
-                Company.ST_GEORGE.value
+        elif iCompany == Company.AUGSBURG:
+            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(
+                Company.ST_GEORGE
             ):
                 iValue /= 2
 

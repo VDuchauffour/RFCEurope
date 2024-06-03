@@ -4338,7 +4338,7 @@ class CvMainInterface:
                                             iCount = iCount + 1
                                             break
                             # Unit owner is the Pope        ??? Added because of 3Miro's previous version of the code, but is this really needed here? The Pope is unplayable... does the AI need the actual button?
-                            elif pUnit.getOwner() == Civ.POPE.value:
+                            elif pUnit.getOwner() == Civ.POPE:
                                 pPlayer = gc.getPlayer(pCity.getOwner())
                                 # Make sure city has a religion which isn't this player's state religion
                                 for iReligionLoop in range(gc.getNumReligionInfos()):

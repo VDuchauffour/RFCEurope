@@ -765,7 +765,7 @@ class CvMercenaryManager:
         strCost = u"%s %c: %1.2f" % (
             "Mercenary Maintenance",
             gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),
-            0.01 * pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value),
+            0.01 * pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN),
         )
 
         # Get the players current gold text
@@ -1266,8 +1266,8 @@ class CvMercenaryManager:
                     if lGlobalMercPool[iI][0] == iMerc:
                         lMerc = lGlobalMercPool[iI]
 
-                if Promotion.MERC.value not in lMerc[1]:
-                    lMerc[1].append(Promotion.MERC.value)
+                if Promotion.MERC not in lMerc[1]:
+                    lMerc[1].append(Promotion.MERC)
 
                 self.calculateScreenWidgetData(screen)
 
@@ -1300,8 +1300,8 @@ class CvMercenaryManager:
                     if pMerc.isHasPromotion(iPromotion):
                         lPromotionList.append(iPromotion)
 
-                if Promotion.MERC.value not in lPromotionList:
-                    lPromotionList.append(Promotion.MERC.value)
+                if Promotion.MERC not in lPromotionList:
+                    lPromotionList.append(Promotion.MERC)
 
                 lMerc = [iMerc, lPromotionList, 0, iUpkeepCost, -1]
 
