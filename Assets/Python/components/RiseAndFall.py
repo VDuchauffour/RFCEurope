@@ -431,25 +431,25 @@ class RiseAndFall:
         # 			Venice (56, 35), Augsburg (55, 41), Porto (23, 31), Prague (60, 44), Riga (74, 58), Perekop (87, 36)
         # 			London (41, 52), Novgorod (80, 62) currently has preplaced fort on the map instead
         if tCity in [(56, 35), (55, 41), (23, 31), (60, 44), (74, 58), (87, 36)]:
-            pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS.value), True)
+            pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
         elif tCity == (75, 53):  # Vilnius - important for AI Lithuania against Prussia
-            if not gc.getPlayer(Civ.LITHUANIA.value).isHuman():
-                pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS.value), True)
+            if not gc.getPlayer(Civ.LITHUANIA).isHuman():
+                pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
         self.pm.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
         # Constantinople -> Istanbul
-        if iPlayer == Civ.OTTOMAN.value:
+        if iPlayer == Civ.OTTOMAN:
             cityList = cities().owner(iPlayer).entities()
             if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]:
                 for loopCity in cityList:
                     if loopCity != city:
-                        loopCity.setHasRealBuilding((Building.PALACE.value), False)
-                city.setHasRealBuilding(Building.PALACE.value, True)
+                        loopCity.setHasRealBuilding((Building.PALACE), False)
+                city.setHasRealBuilding(Building.PALACE, True)
                 if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
-                    city.setHasReligion(Religion.ISLAM.value, True, True, False)
+                    city.setHasReligion(Religion.ISLAM, True, True, False)
                 # some stability boost and flavour message
-                player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
+                player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
                 if human() == iPlayer:
                     message(
                         iPlayer,
@@ -468,11 +468,11 @@ class RiseAndFall:
                             bHasIstanbul = True
                     if not bHasIstanbul:
                         gc.getPlayer(iPlayer).getCapitalCity().setHasRealBuilding(
-                            Building.PALACE.value, False
+                            Building.PALACE, False
                         )
-                        city.setHasRealBuilding(Building.PALACE.value, True)
+                        city.setHasRealBuilding(Building.PALACE, True)
                     if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
-                        city.setHasReligion(Religion.ISLAM.value, True, True, False)
+                        city.setHasReligion(Religion.ISLAM, True, True, False)
 
         # Absinthe: Message for the human player, if the last city of a known civ is conquered
         iOriginalOwner = owner
@@ -506,7 +506,7 @@ class RiseAndFall:
         for civ in civilizations().majors().ai():
             if civ.leaders.early != civ.leaders.primary:
                 leader = civ.leaders.early
-                civ.player.setLeader(leader.value)
+                civ.player.setLeader(leader)
 
     def setWarOnSpawn(self):
         for civ in civilizations():
@@ -532,7 +532,7 @@ class RiseAndFall:
 
         if iGameTurn % 20 == 0:
             for civ in civilizations().independents().alive():
-                updateMinorTechs(civ.id, Civ.BARBARIAN.value)
+                updateMinorTechs(civ.id, Civ.BARBARIAN)
 
         # Absinthe: checking the spawn dates
         for iLoopCiv in civilizations().majors().ids():
@@ -628,7 +628,7 @@ class RiseAndFall:
 
             pPlot.eraseCityDevelopment()
             pPlot.setImprovementType(
-                Improvement.TOWN.value
+                Improvement.TOWN
             )  # Improvement Town instead of the city
             pPlot.setRouteType(0)  # Also adding a road there
 
@@ -652,23 +652,23 @@ class RiseAndFall:
             tDublin = (32, 58)
             pPlot = gc.getMap().plot(tDublin[0], tDublin[1])
             if pPlot.isCity():
-                if pPlot.getPlotCity().getOwner() == Civ.BARBARIAN.value:
+                if pPlot.getPlotCity().getOwner() == Civ.BARBARIAN:
                     pDublin = pPlot.getPlotCity()
                     cultureManager(
-                        tDublin, 50, Civ.ENGLAND.value, Civ.BARBARIAN.value, False, True, True
+                        tDublin, 50, Civ.ENGLAND, Civ.BARBARIAN, False, True, True
                     )
-                    flipUnitsInCityBefore(tDublin, Civ.ENGLAND.value, Civ.BARBARIAN.value)
+                    flipUnitsInCityBefore(tDublin, Civ.ENGLAND, Civ.BARBARIAN)
                     self.setTempFlippingCity(tDublin)
                     flipCity(
-                        tDublin, 0, 0, Civ.ENGLAND.value, [Civ.BARBARIAN.value]
+                        tDublin, 0, 0, Civ.ENGLAND, [Civ.BARBARIAN]
                     )  # by trade because by conquest may raze the city
-                    flipUnitsInCityAfter(tDublin, Civ.ENGLAND.value)
+                    flipUnitsInCityAfter(tDublin, Civ.ENGLAND)
 
         # Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
         if (
             iGameTurn == year(1066) + 3
-            and human() != Civ.ENGLAND.value
-            and iPlayer == Civ.ENGLAND.value
+            and human() != Civ.ENGLAND
+            and iPlayer == Civ.ENGLAND
             and player(Civ.ENGLAND).isAlive()
         ):
             for city in (
@@ -676,8 +676,8 @@ class RiseAndFall:
             ):
                 make_unit(Civ.ENGLAND, Unit.GUISARME, city)
                 make_unit(Civ.ENGLAND, Unit.ARBALEST, city)
-                city.setHasRealBuilding(Building.WALLS.value, True)
-                city.setHasRealBuilding(Building.CASTLE.value, True)
+                city.setHasRealBuilding(Building.WALLS, True)
+                city.setHasRealBuilding(Building.CASTLE, True)
 
     def switchLateLeaders(self, iPlayer, tLeader):
         iLeader, iDate, iThreshold, iEra = tLeader
@@ -691,7 +691,7 @@ class RiseAndFall:
             or player(iPlayer).getStability() <= -10
             or percentage_chance(iThreshold, strict=True)
         ):
-            gc.getPlayer(iPlayer).setLeader(iLeader.value)
+            gc.getPlayer(iPlayer).setLeader(iLeader)
 
             # Absinthe: message about the leader switch for the human player
             iHuman = human()
@@ -774,12 +774,12 @@ class RiseAndFall:
                         )
                         if iDivideCounter % 4 in [0, 1]:
                             cultureManager(
-                                tCity, 50, iNewCiv, Civ.BARBARIAN.value, False, True, True
+                                tCity, 50, iNewCiv, Civ.BARBARIAN, False, True, True
                             )
-                            flipUnitsInCityBefore(tCity, iNewCiv, Civ.BARBARIAN.value)
+                            flipUnitsInCityBefore(tCity, iNewCiv, Civ.BARBARIAN)
                             self.setTempFlippingCity(tCity)
                             flipCity(
-                                tCity, 0, 0, iNewCiv, [Civ.BARBARIAN.value]
+                                tCity, 0, 0, iNewCiv, [Civ.BARBARIAN]
                             )  # by trade because by conquest may raze the city
                             flipUnitsInCityAfter(tCity, iNewCiv)
                             iDivideCounter += 1
@@ -804,7 +804,7 @@ class RiseAndFall:
                         for i in range(iNumUnitsInAPlot):
                             unit = killPlot.getUnit(iSkippedUnit)
                             if unit.getOwner() != iCiv:
-                                unit.kill(False, Civ.BARBARIAN.value)
+                                unit.kill(False, Civ.BARBARIAN)
                             else:
                                 iSkippedUnit += 1
 
@@ -923,9 +923,9 @@ class RiseAndFall:
                         lPlotBarbFlip.append(tPlot)
                 # remaining barbs in the region: killed for the human player, flipped for the AI
                 if iCiv == human():
-                    killUnitsInPlots(lPlotBarbFlip, Civ.BARBARIAN.value)
+                    killUnitsInPlots(lPlotBarbFlip, Civ.BARBARIAN)
                 else:
-                    flipUnitsInPlots(lPlotBarbFlip, iCiv, Civ.BARBARIAN.value, True, True)
+                    flipUnitsInPlots(lPlotBarbFlip, iCiv, Civ.BARBARIAN, True, True)
                 for iIndyCiv in civilizations().independents().ids():
                     # remaining independents in the region: killed for the human player, flipped for the AI
                     if iCiv == human():
@@ -944,12 +944,12 @@ class RiseAndFall:
             self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
             if iCiv != human():
                 flipUnitsInArea(
-                    tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN.value, False, True
+                    tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, False, True
                 )  # remaining barbs in the region now belong to the new civ
                 flipUnitsInPlots(
                     civilization(iCiv).location.area.core.additional_tiles,
                     iCiv,
-                    Civ.BARBARIAN.value,
+                    Civ.BARBARIAN,
                     False,
                     True,
                 )  # remaining barbs in the region now belong to the new civ
@@ -1014,12 +1014,12 @@ class RiseAndFall:
                 setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 clearPlague(iCiv)
             flipUnitsInArea(
-                tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN.value, False, True
+                tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, False, True
             )  # remaining barbs in the region now belong to the new civ
             flipUnitsInPlots(
                 civilization(iCiv).location.area.core.additional_tiles,
                 iCiv,
-                Civ.BARBARIAN.value,
+                Civ.BARBARIAN,
                 False,
                 True,
             )  # remaining barbs in the region now belong to the new civ
@@ -1045,11 +1045,11 @@ class RiseAndFall:
                 if (plot.isHills() or plot.isFlatlands()) and not plot.isImpassable():
                     if not plot.isUnit():
                         if plot.getTerrainType() not in [
-                            Terrain.DESERT.value,
-                            Terrain.TUNDRA.value,
+                            Terrain.DESERT,
+                            Terrain.TUNDRA,
                         ] and plot.getFeatureType() not in [
-                            Feature.MARSH.value,
-                            Feature.JUNGLE.value,
+                            Feature.MARSH,
+                            Feature.JUNGLE,
                         ]:
                             if plot.countTotalCulture() == 0:
                                 plotList.append(plot)
@@ -1075,12 +1075,12 @@ class RiseAndFall:
                     setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     clearPlague(iCiv)
             flipUnitsInArea(
-                tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN.value, True, True
+                tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, True, True
             )  # remaining barbs in the region now belong to the new civ
             flipUnitsInPlots(
                 civilization(iCiv).location.area.core.additional_tiles,
                 iCiv,
-                Civ.BARBARIAN.value,
+                Civ.BARBARIAN,
                 True,
                 True,
             )  # remaining barbs in the region now belong to the new civ
@@ -1200,75 +1200,75 @@ class RiseAndFall:
     def getSpecialRespawn(
         self, iGameTurn
     ):  # Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here
-        if self.canSpecialRespawn(Civ.FRANCE.value, iGameTurn, 12):
+        if self.canSpecialRespawn(Civ.FRANCE, iGameTurn, 12):
             # France united in it's modern borders, start of the Bourbon royal line
             if year(1588) < iGameTurn < year(1700) and iGameTurn % 5 == 3:
-                return Civ.FRANCE.value
-        if self.canSpecialRespawn(Civ.ARABIA.value, iGameTurn):
+                return Civ.FRANCE
+        if self.canSpecialRespawn(Civ.ARABIA, iGameTurn):
             # Saladin, Ayyubid Dynasty
             if year(1080) < iGameTurn < year(1291) and iGameTurn % 7 == 3:
-                return Civ.ARABIA.value
-        if self.canSpecialRespawn(Civ.BULGARIA.value, iGameTurn):
+                return Civ.ARABIA
+        if self.canSpecialRespawn(Civ.BULGARIA, iGameTurn):
             # second Bulgarian Empire
             if year(1080) < iGameTurn < year(1299) and iGameTurn % 5 == 1:
-                return Civ.BULGARIA.value
-        if self.canSpecialRespawn(Civ.CORDOBA.value, iGameTurn):
+                return Civ.BULGARIA
+        if self.canSpecialRespawn(Civ.CORDOBA, iGameTurn):
             # special respawn as the Hafsid dynasty in North Africa
             if year(1229) < iGameTurn < year(1540) and iGameTurn % 5 == 3:
-                return Civ.CORDOBA.value
-        if self.canSpecialRespawn(Civ.BURGUNDY.value, iGameTurn, 20):
+                return Civ.CORDOBA
+        if self.canSpecialRespawn(Civ.BURGUNDY, iGameTurn, 20):
             # Burgundy in the 100 years war
             if year(1336) < iGameTurn < year(1453) and iGameTurn % 8 == 1:
-                return Civ.BURGUNDY.value
-        if self.canSpecialRespawn(Civ.PRUSSIA.value, iGameTurn):
+                return Civ.BURGUNDY
+        if self.canSpecialRespawn(Civ.PRUSSIA, iGameTurn):
             # respawn as the unified Prussia
             if iGameTurn > year(1618) and iGameTurn % 3 == 1:
-                return Civ.PRUSSIA.value
-        if self.canSpecialRespawn(Civ.HUNGARY.value, iGameTurn):
+                return Civ.PRUSSIA
+        if self.canSpecialRespawn(Civ.HUNGARY, iGameTurn):
             # reconquest of Buda from the Ottomans
             if iGameTurn > year(1680) and iGameTurn % 6 == 2:
-                return Civ.HUNGARY.value
-        if self.canSpecialRespawn(Civ.CASTILE.value, iGameTurn, 25):
+                return Civ.HUNGARY
+        if self.canSpecialRespawn(Civ.CASTILE, iGameTurn, 25):
             # respawn as the Castile/Aragon Union
             if year(1470) < iGameTurn < year(1580) and iGameTurn % 5 == 0:
-                return Civ.CASTILE.value
-        if self.canSpecialRespawn(Civ.ENGLAND.value, iGameTurn, 12):
+                return Civ.CASTILE
+        if self.canSpecialRespawn(Civ.ENGLAND, iGameTurn, 12):
             # restoration of monarchy
             if iGameTurn > year(1660) and iGameTurn % 6 == 2:
-                return Civ.ENGLAND.value
-        if self.canSpecialRespawn(Civ.SCOTLAND.value, iGameTurn, 30):
+                return Civ.ENGLAND
+        if self.canSpecialRespawn(Civ.SCOTLAND, iGameTurn, 30):
             if iGameTurn <= year(1600) and iGameTurn % 6 == 3:
-                return Civ.SCOTLAND.value
-        if self.canSpecialRespawn(Civ.PORTUGAL.value, iGameTurn):
+                return Civ.SCOTLAND
+        if self.canSpecialRespawn(Civ.PORTUGAL, iGameTurn):
             # respawn to be around for colonies
             if year(1431) < iGameTurn < year(1580) and iGameTurn % 5 == 3:
-                return Civ.PORTUGAL.value
-        if self.canSpecialRespawn(Civ.AUSTRIA.value, iGameTurn):
+                return Civ.PORTUGAL
+        if self.canSpecialRespawn(Civ.AUSTRIA, iGameTurn):
             # increasing Habsburg influence in Hungary
             if year(1526) < iGameTurn < year(1690) and iGameTurn % 8 == 3:
-                return Civ.AUSTRIA.value
-        if self.canSpecialRespawn(Civ.KIEV.value, iGameTurn):
+                return Civ.AUSTRIA
+        if self.canSpecialRespawn(Civ.KIEV, iGameTurn):
             # Cossack Hetmanate
             if year(1620) < iGameTurn < year(1750) and iGameTurn % 5 == 3:
-                return Civ.KIEV.value
-        if self.canSpecialRespawn(Civ.MOROCCO.value, iGameTurn):
+                return Civ.KIEV
+        if self.canSpecialRespawn(Civ.MOROCCO, iGameTurn):
             # Alaouite Dynasty
             if iGameTurn > year(1631) and iGameTurn % 8 == 7:
-                return Civ.MOROCCO.value
-        if self.canSpecialRespawn(Civ.ARAGON.value, iGameTurn):
+                return Civ.MOROCCO
+        if self.canSpecialRespawn(Civ.ARAGON, iGameTurn):
             # Kingdom of Sicily
             if iGameTurn > year(1700) and iGameTurn % 8 == 7:
-                return Civ.ARAGON.value
-        if self.canSpecialRespawn(Civ.VENECIA.value, iGameTurn):
+                return Civ.ARAGON
+        if self.canSpecialRespawn(Civ.VENECIA, iGameTurn):
             if year(1401) < iGameTurn < year(1571) and iGameTurn % 8 == 7:
-                return Civ.VENECIA.value
-        if self.canSpecialRespawn(Civ.POLAND.value, iGameTurn):
+                return Civ.VENECIA
+        if self.canSpecialRespawn(Civ.POLAND, iGameTurn):
             if year(1410) < iGameTurn < year(1570) and iGameTurn % 8 == 7:
-                return Civ.POLAND.value
-        if self.canSpecialRespawn(Civ.OTTOMAN.value, iGameTurn):
+                return Civ.POLAND
+        if self.canSpecialRespawn(Civ.OTTOMAN, iGameTurn):
             # Mehmed II's conquests
             if year(1453) < iGameTurn < year(1514) and iGameTurn % 6 == 3:
-                return Civ.OTTOMAN.value
+                return Civ.OTTOMAN
         return -1
 
     def canSpecialRespawn(self, iPlayer, iGameTurn, iLastAliveInterval=10):
@@ -1377,7 +1377,7 @@ class RiseAndFall:
                 for unit, number in units.get(PlayerType.HUMAN, {}).items():
                     make_units(iCiv, unit, tPlot, number)
 
-        if iCiv == Civ.VENECIA.value:
+        if iCiv == Civ.VENECIA:
             tSeaPlot = self.findSeaPlots((57, 35), 2)
             if tSeaPlot:
                 make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
@@ -1388,7 +1388,7 @@ class RiseAndFall:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.SPEARMAN, tSeaPlot)
-        elif iCiv == Civ.NORWAY.value:
+        elif iCiv == Civ.NORWAY:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
@@ -1396,7 +1396,7 @@ class RiseAndFall:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.ARCHER, tSeaPlot)
-        elif iCiv == Civ.DENMARK.value:
+        elif iCiv == Civ.DENMARK:
             tSeaPlot = self.findSeaPlots((60, 57), 2)
             if tSeaPlot:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
@@ -1406,7 +1406,7 @@ class RiseAndFall:
                 make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
-        elif iCiv == Civ.GENOA.value:
+        elif iCiv == Civ.GENOA:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
@@ -1414,12 +1414,12 @@ class RiseAndFall:
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
                 make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
-        elif iCiv == Civ.ENGLAND.value:
+        elif iCiv == Civ.ENGLAND:
             tSeaPlot = self.findSeaPlots((43, 53), 1)
             if tSeaPlot:
                 make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
                 make_unit(iCiv, Unit.WAR_GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
-        elif iCiv == Civ.ARAGON.value:
+        elif iCiv == Civ.ARAGON:
             tSeaPlot = self.findSeaPlots((42, 29), 1)
             if tSeaPlot:
                 make_units(iCiv, Unit.WAR_GALLEY, tSeaPlot, 2, UnitAITypes.UNITAI_ESCORT_SEA)
@@ -1427,7 +1427,7 @@ class RiseAndFall:
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
                 make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
-        elif iCiv == Civ.SWEDEN.value:
+        elif iCiv == Civ.SWEDEN:
             tSeaPlot = self.findSeaPlots((69, 65), 2)
             if tSeaPlot:
                 make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
@@ -1435,7 +1435,7 @@ class RiseAndFall:
                 make_units(iCiv, Unit.COGGE, tSeaPlot, 2, UnitAITypes.UNITAI_SETTLER_SEA)
                 make_unit(iCiv, Unit.SETTLER, tSeaPlot)
                 make_unit(iCiv, Unit.ARBALEST, tSeaPlot)
-        elif iCiv == Civ.DUTCH.value:
+        elif iCiv == Civ.DUTCH:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
                 make_units(iCiv, Unit.WORKBOAT, tSeaPlot, 2)

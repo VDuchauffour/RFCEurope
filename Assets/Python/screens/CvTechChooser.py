@@ -390,8 +390,8 @@ class CvTechChooser:
                     #     screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
                     #     fX += X_INCREMENT
                     if (
-                        eLoopBuilding < PlagueType.BUILDING_PLAGUE.value
-                        or eLoopBuilding == PlagueType.BUILDING_PLAGUE.value + self.iCivSelected
+                        eLoopBuilding < PlagueType.BUILDING_PLAGUE
+                        or eLoopBuilding == PlagueType.BUILDING_PLAGUE + self.iCivSelected
                     ):
                         if gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i:
                             szBuildingButton = "Building" + str(j)

@@ -213,7 +213,7 @@ class BugFinanceAdvisor:
 
         # Mercenary Upkeep
         totalMercenaryMaintenanceCost = (
-            player.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+            player.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN) + 99
         ) / 100
 
         szTreasuryPanel = self.getNextWidgetName()

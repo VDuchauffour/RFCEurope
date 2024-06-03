@@ -36,125 +36,125 @@ gc = CyGlobalContext()
 
 ### Regions to spread religion ###
 tSpain = [
-    Province.LEON.value,
-    Province.GALICIA.value,
-    Province.ARAGON.value,
-    Province.CATALONIA.value,
-    Province.CASTILE.value,
-    Province.LA_MANCHA.value,
-    Province.ANDALUSIA.value,
-    Province.VALENCIA.value,
+    Province.LEON,
+    Province.GALICIA,
+    Province.ARAGON,
+    Province.CATALONIA,
+    Province.CASTILE,
+    Province.LA_MANCHA,
+    Province.ANDALUSIA,
+    Province.VALENCIA,
 ]
 tPoland = [
-    Province.GREATER_POLAND.value,
-    Province.LESSER_POLAND.value,
-    Province.MASOVIA.value,
-    Province.SILESIA.value,
-    Province.SUVALKIJA.value,
-    Province.BREST.value,
-    Province.POMERANIA.value,
-    Province.GALICJA.value,
+    Province.GREATER_POLAND,
+    Province.LESSER_POLAND,
+    Province.MASOVIA,
+    Province.SILESIA,
+    Province.SUVALKIJA,
+    Province.BREST,
+    Province.POMERANIA,
+    Province.GALICJA,
 ]
 tGermany = [
-    Province.LORRAINE.value,
-    Province.FRANCONIA.value,
-    Province.BAVARIA.value,
-    Province.SWABIA.value,
+    Province.LORRAINE,
+    Province.FRANCONIA,
+    Province.BAVARIA,
+    Province.SWABIA,
 ]
 tWestAfrica = [
-    Province.TETOUAN.value,
-    Province.MOROCCO.value,
-    Province.MARRAKESH.value,
-    Province.FEZ.value,
-    Province.ORAN.value,
+    Province.TETOUAN,
+    Province.MOROCCO,
+    Province.MARRAKESH,
+    Province.FEZ,
+    Province.ORAN,
 ]
 tNorthAfrica = [
-    Province.ALGIERS.value,
-    Province.IFRIQIYA.value,
-    Province.TRIPOLITANIA.value,
-    Province.CYRENAICA.value,
+    Province.ALGIERS,
+    Province.IFRIQIYA,
+    Province.TRIPOLITANIA,
+    Province.CYRENAICA,
 ]
 tBalkansAndAnatolia = [
-    Province.CONSTANTINOPLE.value,
-    Province.THRACE.value,
-    Province.OPSIKION.value,
-    Province.PAPHLAGONIA.value,
-    Province.THRAKESION.value,
-    Province.CILICIA.value,
-    Province.ANATOLIKON.value,
-    Province.ARMENIAKON.value,
-    Province.CHARSIANON.value,
+    Province.CONSTANTINOPLE,
+    Province.THRACE,
+    Province.OPSIKION,
+    Province.PAPHLAGONIA,
+    Province.THRAKESION,
+    Province.CILICIA,
+    Province.ANATOLIKON,
+    Province.ARMENIAKON,
+    Province.CHARSIANON,
 ]
 tCentralEurope = [
-    Province.GREATER_POLAND.value,
-    Province.LESSER_POLAND.value,
-    Province.MASOVIA.value,
-    Province.GALICJA.value,
-    Province.BREST.value,
-    Province.SUVALKIJA.value,
-    Province.LITHUANIA.value,
-    Province.PRUSSIA.value,
-    Province.POMERANIA.value,
-    Province.SAXONY.value,
-    Province.BRANDENBURG.value,
-    Province.HOLSTEIN.value,
-    Province.DENMARK.value,
-    Province.BAVARIA.value,
-    Province.SWABIA.value,
-    Province.BOHEMIA.value,
-    Province.MORAVIA.value,
-    Province.SILESIA.value,
-    Province.HUNGARY.value,
-    Province.TRANSYLVANIA.value,
-    Province.UPPER_HUNGARY.value,
-    Province.PANNONIA.value,
-    Province.SLAVONIA.value,
-    Province.CARINTHIA.value,
-    Province.AUSTRIA.value,
+    Province.GREATER_POLAND,
+    Province.LESSER_POLAND,
+    Province.MASOVIA,
+    Province.GALICJA,
+    Province.BREST,
+    Province.SUVALKIJA,
+    Province.LITHUANIA,
+    Province.PRUSSIA,
+    Province.POMERANIA,
+    Province.SAXONY,
+    Province.BRANDENBURG,
+    Province.HOLSTEIN,
+    Province.DENMARK,
+    Province.BAVARIA,
+    Province.SWABIA,
+    Province.BOHEMIA,
+    Province.MORAVIA,
+    Province.SILESIA,
+    Province.HUNGARY,
+    Province.TRANSYLVANIA,
+    Province.UPPER_HUNGARY,
+    Province.PANNONIA,
+    Province.SLAVONIA,
+    Province.CARINTHIA,
+    Province.AUSTRIA,
 ]
 tMaghrebAndalusia = [
-    Province.TETOUAN.value,
-    Province.MOROCCO.value,
-    Province.MARRAKESH.value,
-    Province.FEZ.value,
-    Province.ORAN.value,
-    Province.ALGIERS.value,
-    Province.IFRIQIYA.value,
-    Province.TRIPOLITANIA.value,
-    Province.CYRENAICA.value,
-    Province.LA_MANCHA.value,
-    Province.ANDALUSIA.value,
-    Province.VALENCIA.value,
+    Province.TETOUAN,
+    Province.MOROCCO,
+    Province.MARRAKESH,
+    Province.FEZ,
+    Province.ORAN,
+    Province.ALGIERS,
+    Province.IFRIQIYA,
+    Province.TRIPOLITANIA,
+    Province.CYRENAICA,
+    Province.LA_MANCHA,
+    Province.ANDALUSIA,
+    Province.VALENCIA,
 ]
 tBulgariaBalkans = [
-    Province.MOESIA.value,
-    Province.MACEDONIA.value,
-    Province.SERBIA.value,
-    Province.WALLACHIA.value,
+    Province.MOESIA,
+    Province.MACEDONIA,
+    Province.SERBIA,
+    Province.WALLACHIA,
 ]
 tOldRus = [
-    Province.NOVGOROD.value,
-    Province.ROSTOV.value,
-    Province.POLOTSK.value,
-    Province.SMOLENSK.value,
-    Province.MINSK.value,
-    Province.CHERNIGOV.value,
-    Province.KIEV.value,
-    Province.PEREYASLAVL.value,
-    Province.SLOBODA.value,
+    Province.NOVGOROD,
+    Province.ROSTOV,
+    Province.POLOTSK,
+    Province.SMOLENSK,
+    Province.MINSK,
+    Province.CHERNIGOV,
+    Province.KIEV,
+    Province.PEREYASLAVL,
+    Province.SLOBODA,
 ]
 tSouthScandinavia = [
-    Province.DENMARK.value,
-    Province.GOTALAND.value,
-    Province.SKANELAND.value,
-    Province.VESTFOLD.value,
-    Province.NORWAY.value,
+    Province.DENMARK,
+    Province.GOTALAND,
+    Province.SKANELAND,
+    Province.VESTFOLD,
+    Province.NORWAY,
 ]
 tHungary = [
-    Province.HUNGARY.value,
-    Province.TRANSYLVANIA.value,
-    Province.UPPER_HUNGARY.value,
-    Province.PANNONIA.value,
+    Province.HUNGARY,
+    Province.TRANSYLVANIA,
+    Province.UPPER_HUNGARY,
+    Province.PANNONIA,
 ]
 
 
@@ -190,60 +190,60 @@ class Religions:
     #####################################
 
     def setup(self):
-        gc.getPlayer(Civ.BYZANTIUM.value).changeFaith(10)
-        gc.getPlayer(Civ.OTTOMAN.value).changeFaith(20)
+        gc.getPlayer(Civ.BYZANTIUM).changeFaith(10)
+        gc.getPlayer(Civ.OTTOMAN).changeFaith(20)
 
     def checkTurn(self, iGameTurn):
         # Absinthe: Spreading religion in a couple preset dates
         if iGameTurn == year(700) - 2:
             # Spread Judaism to Toledo
-            self.spreadReligion(CITIES[City.TOLEDO], Religion.JUDAISM.value)
+            self.spreadReligion(CITIES[City.TOLEDO], Religion.JUDAISM)
             # Spread Islam to a random city in Africa
-            tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM.value)
+            tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM)
             if tCity:
-                self.spreadReligion(tCity, Religion.ISLAM.value)
+                self.spreadReligion(tCity, Religion.ISLAM)
         elif iGameTurn == year(700) + 2:
             # Spread Judaism and Islam to a random city in Africa
-            tCity = self.selectRandomCityRegion(tWestAfrica, Religion.ISLAM.value)
+            tCity = self.selectRandomCityRegion(tWestAfrica, Religion.ISLAM)
             if tCity:
-                self.spreadReligion(tCity, Religion.ISLAM.value)
-            tCity = self.selectRandomCityRegion(tWestAfrica, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.ISLAM)
+            tCity = self.selectRandomCityRegion(tWestAfrica, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
         elif iGameTurn == year(900):
             # Spread Judaism to another city in Spain
-            tCity = self.selectRandomCityRegion(tSpain, Religion.JUDAISM.value)
+            tCity = self.selectRandomCityRegion(tSpain, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
         elif iGameTurn == year(1000):
             # Spread Judaism to a city in France/Germany
-            tCity = self.selectRandomCityRegion(tGermany, Religion.JUDAISM.value)
+            tCity = self.selectRandomCityRegion(tGermany, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
             # Spread Islam to another city in Africa
-            tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM.value)
+            tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM)
             if tCity:
-                self.spreadReligion(tCity, Religion.ISLAM.value)
+                self.spreadReligion(tCity, Religion.ISLAM)
         elif iGameTurn == year(1101):
             # Spread Judaism to a couple towns in Poland
-            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM.value)
+            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
         elif iGameTurn == year(1200):
             # Spread Judaism to a couple towns in Poland
-            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM.value)
+            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
         elif year(1299) < iGameTurn < year(1350) and iGameTurn % 3 == 0:
             # Spread Islam to a couple cities in Anatolia before the Ottoman spawn
-            tCity = self.selectRandomCityRegion(tBalkansAndAnatolia, Religion.ISLAM.value)
+            tCity = self.selectRandomCityRegion(tBalkansAndAnatolia, Religion.ISLAM)
             if tCity:
-                self.spreadReligion(tCity, Religion.ISLAM.value)
+                self.spreadReligion(tCity, Religion.ISLAM)
         elif iGameTurn == year(1401):
             # Spread Judaism to a couple towns in Poland
-            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM.value)
+            tCity = self.selectRandomCityRegion(tPoland, Religion.JUDAISM)
             if tCity:
-                self.spreadReligion(tCity, Religion.JUDAISM.value)
+                self.spreadReligion(tCity, Religion.JUDAISM)
 
         # Absinthe: Spreading Judaism in random dates
         # General 6% chance to spread Jews to a random city in every third turn
@@ -251,75 +251,75 @@ class Religions:
             if percentage_chance(6, strict=True):
                 tCity = cities().all().random_entry()
                 if tCity is not None:
-                    self.spreadReligion(tCity, Religion.JUDAISM.value)
+                    self.spreadReligion(tCity, Religion.JUDAISM)
 
         # Additional 11% chance to spread Jews to a random Central European city in every third turn
         if year(1000) < iGameTurn < year(1500) and iGameTurn % 3 == 1:
             if percentage_chance(11, strict=True):
-                tCity = self.selectRandomCityRegion(tCentralEurope, Religion.JUDAISM.value)
+                tCity = self.selectRandomCityRegion(tCentralEurope, Religion.JUDAISM)
                 if tCity:
-                    self.spreadReligion(tCity, Religion.JUDAISM.value)
+                    self.spreadReligion(tCity, Religion.JUDAISM)
 
         # Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
         # Maghreb and Cordoba:
         if year(700) < iGameTurn < year(800) and iGameTurn % 2 == 1:
             if percentage_chance(32, strict=True):
-                tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM.value, True)
+                tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM, True)
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ISLAM.value)
+                    self.spreadReligion(tCity, Religion.ISLAM)
         if year(800) < iGameTurn < year(1200) and iGameTurn % 3 == 2:
             if percentage_chance(28, strict=True):
-                tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM.value, True)
+                tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM, True)
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ISLAM.value)
+                    self.spreadReligion(tCity, Religion.ISLAM)
 
         # Bulgaria and Balkans:
         if year(700) < iGameTurn < year(800) and iGameTurn % 3 == 1:
             if percentage_chance(25, strict=True):
                 tCity = self.selectRandomCityRegion(
-                    tBulgariaBalkans, Religion.ORTHODOXY.value, True
+                    tBulgariaBalkans, Religion.ORTHODOXY, True
                 )
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ORTHODOXY.value)
+                    self.spreadReligion(tCity, Religion.ORTHODOXY)
         if year(800) < iGameTurn < year(1000) and iGameTurn % 4 == 1:
             if percentage_chance(15, strict=True):
                 tCity = self.selectRandomCityRegion(
-                    tBulgariaBalkans, Religion.ORTHODOXY.value, True
+                    tBulgariaBalkans, Religion.ORTHODOXY, True
                 )
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ORTHODOXY.value)
+                    self.spreadReligion(tCity, Religion.ORTHODOXY)
         # Old Rus territories:
         if year(852) < iGameTurn < year(1300) and iGameTurn % 4 == 3:
             if percentage_chance(25, strict=True):
-                tCity = self.selectRandomCityRegion(tOldRus, Religion.ORTHODOXY.value, True)
+                tCity = self.selectRandomCityRegion(tOldRus, Religion.ORTHODOXY, True)
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ORTHODOXY.value)
+                    self.spreadReligion(tCity, Religion.ORTHODOXY)
 
         # Extra chance for early Orthodoxy spread in Novgorod:
         if year(852) < iGameTurn < year(960) and iGameTurn % 5 == 2:
             if percentage_chance(34, strict=True):
                 tCity = self.selectRandomCityRegion(
-                    [Province.NOVGOROD.value, Province.POLOTSK.value, Province.SMOLENSK.value],
-                    Religion.ORTHODOXY.value,
+                    [Province.NOVGOROD, Province.POLOTSK, Province.SMOLENSK],
+                    Religion.ORTHODOXY,
                     True,
                 )
                 if tCity:
-                    self.spreadReligion(tCity, Religion.ORTHODOXY.value)
+                    self.spreadReligion(tCity, Religion.ORTHODOXY)
         # Hungary:
         if year(960) < iGameTurn < year(1200) and iGameTurn % 4 == 2:
             if percentage_chance(21, strict=True):
-                tCity = self.selectRandomCityRegion(tHungary, Religion.CATHOLICISM.value, True)
+                tCity = self.selectRandomCityRegion(tHungary, Religion.CATHOLICISM, True)
                 if tCity:
-                    self.spreadReligion(tCity, Religion.CATHOLICISM.value)
+                    self.spreadReligion(tCity, Religion.CATHOLICISM)
 
         # Scandinavia:
         if year(1000) < iGameTurn < year(1300) and iGameTurn % 4 == 0:
             if percentage_chance(24, strict=True):
                 tCity = self.selectRandomCityRegion(
-                    tSouthScandinavia, Religion.CATHOLICISM.value, True
+                    tSouthScandinavia, Religion.CATHOLICISM, True
                 )
                 if tCity:
-                    self.spreadReligion(tCity, Religion.CATHOLICISM.value)
+                    self.spreadReligion(tCity, Religion.CATHOLICISM)
 
         # Absinthe: Persecution cooldown
         for i in civilizations().majors().ids():
@@ -327,7 +327,7 @@ class Religions:
             if pPlayer.getProsecutionCount() > 0:
                 pPlayer.changeProsecutionCount(-1)
             # Religious Law means a bigger decrease in persecution points
-            if pPlayer.getCivics(1) == Civic.RELIGIOUS_LAW.value:
+            if pPlayer.getCivics(1) == Civic.RELIGIOUS_LAW:
                 if pPlayer.getProsecutionCount() > 0:
                     pPlayer.changeProsecutionCount(-1)
 
@@ -409,14 +409,14 @@ class Religions:
 
                 if catholic_civs:
                     iChosenPlayer = choice(catholic_civs, weights)
-                    iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
+                    iCatholicBuilding = Building.CATHOLIC_TEMPLE
                     # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
                     if not iChosenPlayer.has_tech(
                         Technology.SCIENTIFIC_METHOD
                     ) and percentage_chance(50):
-                        iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
+                        iCatholicBuilding = Building.CATHOLIC_MONASTERY
                     self.buildInRandomCity(
-                        iChosenPlayer.id, iCatholicBuilding, Religion.CATHOLICISM.value
+                        iChosenPlayer.id, iCatholicBuilding, Religion.CATHOLICISM
                     )
         # Free technology
         if iGameTurn > year(843):  # Treaty of Verdun, the Carolingian Empire divided into 3 parts
@@ -508,14 +508,14 @@ class Religions:
                     pPlayer.changeFaith(1)
 
             # Absinthe: Wonders: Mont Saint-Michel wonder effect
-            if getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
-                if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
+            if getBaseBuilding(iBuilding) in [Building.WALLS, Building.CASTLE]:
+                if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL) > 0:
                     pPlayer.changeFaith(1)
         if iBuilding in RELIGIOUS_WONDERS:
             pPlayer.changeFaith(4)
-            if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES) > 0:
                 pPlayer.changeFaith(1)
-        if iStateReligion != Religion.JUDAISM.value and iBuilding == Wonder.KAZIMIERZ.value:
+        if iStateReligion != Religion.JUDAISM and iBuilding == Wonder.KAZIMIERZ:
             pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
             # Kazimierz tries to spread Judaism to a couple new cities
             cityList = cities().owner(iPlayer).entities()
@@ -523,12 +523,12 @@ class Religions:
             # number of tries are based on number of cities, but at least 3
             for i in range(iJewCityNum):
                 city = choice(cityList)
-                if not city.isHasReligion(Religion.JUDAISM.value):
-                    city.setHasReligion(Religion.JUDAISM.value, True, True, False)
+                if not city.isHasReligion(Religion.JUDAISM):
+                    city.setHasReligion(Religion.JUDAISM, True, True, False)
             # Adds Jewish Quarter to all cities which already has Judaism (including the ones where it just spread)
             for city in cityList:
-                if city.isHasReligion(Religion.JUDAISM.value):
-                    city.setHasRealBuilding(Building.JEWISH_QUARTER.value, True)
+                if city.isHasReligion(Religion.JUDAISM):
+                    city.setHasRealBuilding(Building.JEWISH_QUARTER, True)
 
     def selectRandomCityRegion(self, tProvinces, iReligionToSpread, bNoSpreadWithReligion=False):
         cityList = []
@@ -593,11 +593,11 @@ class Religions:
     # Absinthe: free religious revolution
     def onPlayerChangeAllCivics(self, iPlayer, lNewCivics, lOldCivics):
         # free religion change when switching away from Paganism
-        if lOldCivics[4] == Civic.PAGANISM.value:
+        if lOldCivics[4] == Civic.PAGANISM:
             if lNewCivics[4] in [
-                Civic.STATE_RELIGION.value,
-                Civic.THEOCRACY.value,
-                Civic.ORGANIZED_RELIGION.value,
+                Civic.STATE_RELIGION,
+                Civic.THEOCRACY,
+                Civic.ORGANIZED_RELIGION,
             ]:
                 if iPlayer == human():
                     # check the available religions
@@ -621,7 +621,7 @@ class Religions:
                         self.showFreeRevolutionPopup(iPlayer, religionList)
                 elif iPlayer < civilizations().main().len():
                     iBestReligionPoint = 0
-                    iBestReligion = Religion.CATHOLICISM.value
+                    iBestReligion = Religion.CATHOLICISM
                     # loop through all religions
                     for iReligion in range(gc.getNumReligionInfos()):
                         iReligionPoint = 0
@@ -678,29 +678,29 @@ class Religions:
             self.reformationno(iHuman)
 
     def onTechAcquired(self, iTech, iPlayer):
-        if iTech == Technology.PRINTING_PRESS.value:
-            if gc.getPlayer(iPlayer).getStateReligion() == Religion.CATHOLICISM.value:
-                if not gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
+        if iTech == Technology.PRINTING_PRESS:
+            if gc.getPlayer(iPlayer).getStateReligion() == Religion.CATHOLICISM:
+                if not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
                     gc.getPlayer(iPlayer).foundReligion(
-                        Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
+                        Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
                     )
-                    gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
-                        Building.PROTESTANT_SHRINE.value, 1
+                    gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
+                        Building.PROTESTANT_SHRINE, 1
                     )
                     self.setReformationActive(True)
                     self.reformationchoice(iPlayer)
-                    self.reformationOther(Civ.INDEPENDENT.value)
-                    self.reformationOther(Civ.INDEPENDENT_2.value)
-                    self.reformationOther(Civ.INDEPENDENT_3.value)
-                    self.reformationOther(Civ.INDEPENDENT_4.value)
-                    self.reformationOther(Civ.BARBARIAN.value)
+                    self.reformationOther(Civ.INDEPENDENT)
+                    self.reformationOther(Civ.INDEPENDENT_2)
+                    self.reformationOther(Civ.INDEPENDENT_3)
+                    self.reformationOther(Civ.INDEPENDENT_4)
+                    self.reformationOther(Civ.BARBARIAN)
                     self.setReformationHitMatrix(iPlayer, 2)
                     self.spread_reform_to_neighbour(iPlayer)
 
     def spread_reform_to_neighbour(self, player_id):
         for neighbour in civilization(player_id).location.reformation_neighbours:
-            if self.getReformationHitMatrix(neighbour.value) == 0:
-                self.setReformationHitMatrix(neighbour.value, 1)
+            if self.getReformationHitMatrix(neighbour) == 0:
+                self.setReformationHitMatrix(neighbour, 1)
 
     def reformationArrayChoice(self):
         civ = (
@@ -723,7 +723,7 @@ class Religions:
                 self.setCounterReformationActive(True)
 
     def reformationchoice(self, iCiv):
-        if iCiv == Civ.POPE.value:
+        if iCiv == Civ.POPE:
             return  # Absinthe: totally exclude the Pope from the Reformation
 
         if civilization(iCiv).has_state_religion(Religion.PROTESTANTISM) or percentage_chance(
@@ -743,20 +743,20 @@ class Religions:
     def reformationyes(self, iCiv):
         iFaith = 0
         for city in cities().owner(iCiv).entities():
-            if city.isHasReligion(Religion.CATHOLICISM.value):
+            if city.isHasReligion(Religion.CATHOLICISM):
                 iFaith += self.reformationReformCity(city, iCiv)
 
         # disband catholic missionaries of the AI civs on reformation
         if iCiv != human():
             for pUnit in units().owner(iCiv).entities():
                 iUnitType = pUnit.getUnitType()
-                if iUnitType == Unit.CATHOLIC_MISSIONARY.value:
+                if iUnitType == Unit.CATHOLIC_MISSIONARY:
                     pUnit.kill(0, -1)
 
         pPlayer = gc.getPlayer(iCiv)
         # iStateReligion = pPlayer.getStateReligion()
-        # if (pPlayer.getStateReligion() == Religion.CATHOLICISM.value):
-        pPlayer.setLastStateReligion(Religion.PROTESTANTISM.value)
+        # if (pPlayer.getStateReligion() == Religion.CATHOLICISM):
+        pPlayer.setLastStateReligion(Religion.PROTESTANTISM)
         pPlayer.setConversionTimer(10)
         pPlayer.setFaith(iFaith)
 
@@ -764,12 +764,12 @@ class Religions:
         iLostFaith = 0
         pPlayer = gc.getPlayer(iCiv)
         for city in cities().owner(iCiv).entities():
-            if city.isHasReligion(Religion.CATHOLICISM.value) and not city.isHasReligion(
-                Religion.PROTESTANTISM.value
+            if city.isHasReligion(Religion.CATHOLICISM) and not city.isHasReligion(
+                Religion.PROTESTANTISM
             ):
                 if percentage_chance(25 + civilization(iCiv).ai.reformation_threshold / 2):
                     city.setHasReligion(
-                        Religion.PROTESTANTISM.value, True, False, False
+                        Religion.PROTESTANTISM, True, False, False
                     )  # no announcement in this case
                     if pPlayer.isHuman():
                         CityName = city.getNameKey()
@@ -784,7 +784,7 @@ class Religions:
 
     def reformationOther(self, iCiv):
         for city in cities().owner(iCiv).entities():
-            if city.isHasReligion(Religion.CATHOLICISM.value):
+            if city.isHasReligion(Religion.CATHOLICISM):
                 self.reformationOtherCity(city, iCiv)
 
     def reformationReformCity(self, pCity, iCiv):
@@ -810,32 +810,32 @@ class Religions:
         # spread the religion: range goes from 48-68% (Catholicism-lovers) to 72-92% (Protestantism-lovers), based on lReformationMatrix
         # 						+10% extra bonus for the AI
         if percentage_chance(45 + iCivRef + iPopBonus + iAIBonus, strict=True):
-            pCity.setHasReligion(Religion.PROTESTANTISM.value, True, True, False)
+            pCity.setHasReligion(Religion.PROTESTANTISM, True, True, False)
             iFaith += 1
             iChance = 55 + iCivRef
             # if protestantism has spread, chance for replacing the buildings: between 58% and 82%, based on lReformationMatrix
-            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value) and percentage_chance(
+            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
-            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value) and percentage_chance(
+                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL, True)
+            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE, True)
                 iFaith += 1
-            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value) and percentage_chance(
+            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY, True)
                 iFaith += 1
-            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value) and percentage_chance(
+            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL, True)
                 iFaith += 2
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
@@ -845,15 +845,15 @@ class Religions:
                 strict=True,
             ):
                 lCathlist = [
-                    Building.CATHOLIC_TEMPLE.value,
-                    Building.CATHOLIC_CHAPEL.value,
-                    Building.CATHOLIC_MONASTERY.value,
-                    Building.CATHOLIC_CATHEDRAL.value,
-                    Wonder.MONASTERY_OF_CLUNY.value,
-                    Wonder.KRAK_DES_CHEVALIERS.value,
-                    Wonder.PALAIS_DES_PAPES.value,
-                    Wonder.NOTRE_DAME.value,
-                    Wonder.WESTMINSTER.value,
+                    Building.CATHOLIC_TEMPLE,
+                    Building.CATHOLIC_CHAPEL,
+                    Building.CATHOLIC_MONASTERY,
+                    Building.CATHOLIC_CATHEDRAL,
+                    Wonder.MONASTERY_OF_CLUNY,
+                    Wonder.KRAK_DES_CHEVALIERS,
+                    Wonder.PALAIS_DES_PAPES,
+                    Wonder.NOTRE_DAME,
+                    Wonder.WESTMINSTER,
                 ]
                 bCathBuildings = False
                 for iBuilding in lCathlist:
@@ -861,7 +861,7 @@ class Religions:
                         bCathBuildings = True
                         break
                 if not bCathBuildings:
-                    pCity.setHasReligion(Religion.CATHOLICISM.value, False, False, False)
+                    pCity.setHasReligion(Religion.CATHOLICISM, False, False, False)
                     if pPlayer.isHuman():
                         CityName = pCity.getNameKey()
                         message(
@@ -888,29 +888,29 @@ class Religions:
 
         # spread the religion: range goes from 23-53% (Catholicism-lovers) to 47-77% (Protestantism-lovers), based on lReformationMatrix
         if percentage_chance(20 + iCivRef + iPopBonus, strict=True):
-            pCity.setHasReligion(Religion.PROTESTANTISM.value, True, True, False)
+            pCity.setHasReligion(Religion.PROTESTANTISM, True, True, False)
             # if protestantism has spread, chance for replacing the buildings: between 31% and 79%, based on lReformationMatrix
             iChance = 25 + 2 * iCivRef
-            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value) and percentage_chance(
+            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
-            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value) and percentage_chance(
+                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL, True)
+            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
-            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value) and percentage_chance(
+                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE, True)
+            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
-            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value) and percentage_chance(
+                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY, True)
+            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL) and percentage_chance(
                 iChance, strict=True
             ):
-                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
-                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL, True)
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
             # range goes from 39-54% to 71-86%, based on lReformationMatrix
@@ -919,15 +919,15 @@ class Religions:
                 strict=True,
             ):
                 lCathlist = [
-                    Building.CATHOLIC_TEMPLE.value,
-                    Building.CATHOLIC_CHAPEL.value,
-                    Building.CATHOLIC_MONASTERY.value,
-                    Building.CATHOLIC_CATHEDRAL.value,
-                    Wonder.MONASTERY_OF_CLUNY.value,
-                    Wonder.KRAK_DES_CHEVALIERS.value,
-                    Wonder.PALAIS_DES_PAPES.value,
-                    Wonder.NOTRE_DAME.value,
-                    Wonder.WESTMINSTER.value,
+                    Building.CATHOLIC_TEMPLE,
+                    Building.CATHOLIC_CHAPEL,
+                    Building.CATHOLIC_MONASTERY,
+                    Building.CATHOLIC_CATHEDRAL,
+                    Wonder.MONASTERY_OF_CLUNY,
+                    Wonder.KRAK_DES_CHEVALIERS,
+                    Wonder.PALAIS_DES_PAPES,
+                    Wonder.NOTRE_DAME,
+                    Wonder.WESTMINSTER,
                 ]
                 bCathBuildings = False
                 for iBuilding in lCathlist:
@@ -935,10 +935,10 @@ class Religions:
                         bCathBuildings = True
                         break
                 if not bCathBuildings:
-                    pCity.setHasReligion(Religion.CATHOLICISM.value, False, False, False)
+                    pCity.setHasReligion(Religion.CATHOLICISM, False, False, False)
                     if pPlayer.isHuman():  # message for the human player
                         CityName = pCity.getNameKey()
-                        if pPlayer.getStateReligion() == Religion.ISLAM.value:
+                        if pPlayer.getStateReligion() == Religion.ISLAM:
                             message(
                                 human(),
                                 text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", CityName),
@@ -954,9 +954,9 @@ class Religions:
                             )
 
     def doCounterReformation(self):
-        for iPlayer in range(Civ.POPE.value - 1):
+        for iPlayer in range(Civ.POPE - 1):
             pPlayer = gc.getPlayer(iPlayer)
-            if pPlayer.isAlive() and pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
+            if pPlayer.isAlive() and pPlayer.getStateReligion() == Religion.CATHOLICISM:
                 if pPlayer.isHuman():
                     self.doCounterReformationHuman(iPlayer)
                 elif percentage_chance(
@@ -1022,7 +1022,7 @@ class Religions:
         iNumProsecutors = max(1, pPlayer.getNumCities() / 3)
         for i in range(iNumProsecutors):
             pPlayer.initUnit(
-                Unit.PROSECUTOR.value,
+                Unit.PROSECUTOR,
                 iX,
                 iY,
                 UnitAITypes.UNITAI_MISSIONARY,
@@ -1038,7 +1038,7 @@ class Religions:
                     return
 
                 civ.player.initUnit(
-                    Unit.PROSECUTOR.value,
+                    Unit.PROSECUTOR,
                     capital.getX(),
                     capital.getY(),
                     UnitAITypes.UNITAI_MISSIONARY,
@@ -1048,7 +1048,7 @@ class Religions:
     def doCounterReformationNo(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         pPlayer.changeStabilityBase(
-            StabilityCategory.CITIES.value, max(1, pPlayer.getNumCities() / 3)
+            StabilityCategory.CITIES, max(1, pPlayer.getNumCities() / 3)
         )
 
     ### End Reformation ###
@@ -1058,7 +1058,7 @@ class Religions:
         for iPlayer in civilizations().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
-                if iPlayer < Civ.POPE.value:
+                if iPlayer < Civ.POPE:
                     # add a random element
                     intolerance[iPlayer] += percentage()
                     intolerance[iPlayer] += 10 * pPlayer.getProsecutionCount()
@@ -1067,11 +1067,11 @@ class Religions:
                             0, intolerance[iPlayer] - 30
                         )  # if this player doesn't prosecute, decrease intolerance
                     iRCivic = pPlayer.getCivics(4)
-                    if iRCivic == Civic.THEOCRACY.value:
+                    if iRCivic == Civic.THEOCRACY:
                         intolerance[iPlayer] += 50
-                    elif iRCivic == Civic.FREE_RELIGION.value:
+                    elif iRCivic == Civic.FREE_RELIGION:
                         intolerance[iPlayer] = max(0, intolerance[iPlayer] - 30)
-                if iPlayer > Civ.POPE.value:
+                if iPlayer > Civ.POPE:
                     intolerance[iPlayer] += percentage()
         # once we have the list of potential nations
         iCandidate1 = 0
@@ -1100,23 +1100,23 @@ class Religions:
         lCityList = [
             city
             for city in cities().owner(iPlayer).entities()
-            if not city.isHasReligion(Religion.JUDAISM.value)
+            if not city.isHasReligion(Religion.JUDAISM)
         ]
 
         if lCityList:
             city = choice(lCityList)
-            city.setHasReligion(Religion.JUDAISM.value, True, True, False)
+            city.setHasReligion(Religion.JUDAISM, True, True, False)
 
     def spread1200ADJews(self):
         # Spread Judaism to a random city in Africa
-        tCity = self.selectRandomCityRegion(tWestAfrica, Religion.JUDAISM.value)
+        tCity = self.selectRandomCityRegion(tWestAfrica, Religion.JUDAISM)
         if tCity:
-            self.spreadReligion(tCity, Religion.JUDAISM.value)
+            self.spreadReligion(tCity, Religion.JUDAISM)
         # Spread Judaism to another city in Spain
-        tCity = self.selectRandomCityRegion(tSpain, Religion.JUDAISM.value)
+        tCity = self.selectRandomCityRegion(tSpain, Religion.JUDAISM)
         if tCity:
-            self.spreadReligion(tCity, Religion.JUDAISM.value)
+            self.spreadReligion(tCity, Religion.JUDAISM)
         # Spread Judaism to a city in France/Germany
-        tCity = self.selectRandomCityRegion(tGermany, Religion.JUDAISM.value)
+        tCity = self.selectRandomCityRegion(tGermany, Religion.JUDAISM)
         if tCity:
-            self.spreadReligion(tCity, Religion.JUDAISM.value)
+            self.spreadReligion(tCity, Religion.JUDAISM)

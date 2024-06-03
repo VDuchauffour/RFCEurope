@@ -49,9 +49,9 @@ class Stability:
         # Absinthe: bonus stability for the human player based on difficulty level
         iHandicap = gc.getGame().getHandicapType()
         if iHandicap == 0:
-            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
+            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 6)
         elif iHandicap == 1:
-            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION.value, 2)
+            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 2)
 
         # Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
         for iPlayer in civilizations().majors().ids():
@@ -65,54 +65,54 @@ class Stability:
                 # Province stability
                 iProv = PROVINCES_MAP[pCity.getY()][pCity.getX()]
                 iProvinceType = pPlayer.getProvinceType(iProv)
-                if iProvinceType == ProvinceType.CORE.value:
-                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+                if iProvinceType == ProvinceType.CORE:
+                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
                 elif not gc.hasUP(
-                    iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
+                    iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
                 ):  # no instability with the Settler UP
-                    if iProvinceType == ProvinceType.CONTESTED.value:
-                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -1)
-                    elif iProvinceType == ProvinceType.NONE.value:
-                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
+                    if iProvinceType == ProvinceType.CONTESTED:
+                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
+                    elif iProvinceType == ProvinceType.NONE:
+                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
 
                 # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
                 if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value)
+                    getUniqueBuilding(iPlayer, Building.MANOR_HOUSE)
                 ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
+                    pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
                 if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.CASTLE.value)
+                    getUniqueBuilding(iPlayer, Building.CASTLE)
                 ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
                 if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value)
+                    getUniqueBuilding(iPlayer, Building.NIGHT_WATCH)
                 ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
+                    pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
                 if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.COURTHOUSE.value)
+                    getUniqueBuilding(iPlayer, Building.COURTHOUSE)
                 ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
+                    pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
 
             # Small boost for small civs
             if iCounter < 6:  # instead of the additional boost for the first few cities
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION.value, (6 - iCounter) / 2 + 1
+                    StabilityCategory.EXPANSION, (6 - iCounter) / 2 + 1
                 )
 
             # Known techs which otherwise give instability should also give the penalty here
             for iTech in [
-                Technology.FEUDALISM.value,
-                Technology.GUILDS.value,
-                Technology.GUNPOWDER.value,
-                Technology.PROFESSIONAL_ARMY.value,
-                Technology.NATIONALISM.value,
-                Technology.CIVIL_SERVICE.value,
-                Technology.ECONOMICS.value,
-                Technology.MACHINERY.value,
-                Technology.ARISTOCRACY.value,
+                Technology.FEUDALISM,
+                Technology.GUILDS,
+                Technology.GUNPOWDER,
+                Technology.PROFESSIONAL_ARMY,
+                Technology.NATIONALISM,
+                Technology.CIVIL_SERVICE,
+                Technology.ECONOMICS,
+                Technology.MACHINERY,
+                Technology.ARISTOCRACY,
             ]:
                 if teamPlayer.isHasTech(iTech):
-                    gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY.value, -1)
+                    gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
 
             # Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
             if pPlayer.isAlive():
@@ -124,16 +124,16 @@ class Stability:
             pPlayer = gc.getPlayer(iPlayer)
             if iPlayer != human():
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION.value, civilization(iPlayer).ai.stability_bonus
+                    StabilityCategory.EXPANSION, civilization(iPlayer).ai.stability_bonus
                 )
 
         # Absinthe: update Byzantine stability on the start of the game
         if get_scenario() == Scenario.i500AD:
             # small stability boost for the human player for the first UHV
-            if Civ.BYZANTIUM.value == human():
-                pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
-                pByzantium.changeStabilityBase(StabilityCategory.EXPANSION.value, 4)
-            self.recalcEpansion(Civ.BYZANTIUM.value)
+            if Civ.BYZANTIUM == human():
+                pByzantium = gc.getPlayer(Civ.BYZANTIUM)
+                pByzantium.changeStabilityBase(StabilityCategory.EXPANSION, 4)
+            self.recalcEpansion(Civ.BYZANTIUM)
 
     def checkTurn(self, iGameTurn):
         # Absinthe: logging AI stability levels
@@ -178,11 +178,11 @@ class Stability:
             self.recalcEpansion(iPlayer)
             iNumCities = pPlayer.getNumCities()
 
-            if iPlayer != Civ.PRUSSIA.value:  # Absinthe: Prussian UP
+            if iPlayer != Civ.PRUSSIA:  # Absinthe: Prussian UP
                 if pPlayer.isHuman():
                     # Absinthe: anarchy base instability
                     pPlayer.changeStabilityBase(
-                        StabilityCategory.CIVICS.value, min(0, max(-2, (-iNumCities + 4) / 7))
+                        StabilityCategory.CIVICS, min(0, max(-2, (-iNumCities + 4) / 7))
                     )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
                     # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
@@ -200,7 +200,7 @@ class Stability:
                 else:
                     # Absinthe: anarchy base instability
                     pPlayer.changeStabilityBase(
-                        StabilityCategory.CIVICS.value, min(0, max(-1, (-iNumCities + 6) / 7))
+                        StabilityCategory.CIVICS, min(0, max(-1, (-iNumCities + 6) / 7))
                     )  # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
                     # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
@@ -219,7 +219,7 @@ class Stability:
             pPlayer.getWarPeaceChange() == -1
         ):  # Whenever your nation switches from peace to the state of war (with a major nation)
             gc.getPlayer(iPlayer).changeStabilityBase(
-                StabilityCategory.CITIES.value, -1
+                StabilityCategory.CITIES, -1
             )  # 1 permanent stability loss, since your people won't appreciate leaving the state of peace
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
 
@@ -236,7 +236,7 @@ class Stability:
         ):
             # Absinthe: -1 stability every 4 turns up to a total of -15 stability
             if iGameTurn % 4 == 0 and iGameTurn <= civilization(iPlayer).date.collapse + 60:
-                pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, -1)
+                pPlayer.changeStabilityBase(StabilityCategory.CITIES, -1)
 
     def refreshBaseStability(
         self, iPlayer
@@ -258,17 +258,17 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
         iProvinceType = pPlayer.getProvinceType(iProv)
-        if iProvinceType == ProvinceType.CORE.value:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        if iProvinceType == ProvinceType.CORE:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         elif not gc.hasUP(
-            iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
+            iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
         ):  # no instability with the Settler UP
-            if iProvinceType == ProvinceType.CONTESTED.value:
-                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -1)
-            elif iProvinceType == ProvinceType.NONE.value:
-                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
+            if iProvinceType == ProvinceType.CONTESTED:
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
+            elif iProvinceType == ProvinceType.NONE:
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
         if pPlayer.getNumCities() < 5:  # early boost to small civs
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         self.recalcEpansion(iPlayer)
         self.recalcCivicCombos(iPlayer)
 
@@ -276,21 +276,21 @@ class Stability:
         pOwner = gc.getPlayer(iOwner)
         pConq = gc.getPlayer(playerType)
 
-        if city.hasBuilding(Wonder.ESCORIAL.value):
-            pConq.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 1)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
-        if city.hasBuilding(Wonder.STEPHANSDOM.value):
-            pConq.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 1)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
-        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA.value):
-            pConq.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 1)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
-        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE.value):
-            pConq.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 1)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
-        if city.hasBuilding(Wonder.MAGNA_CARTA.value):
-            pConq.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 1)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
+        if city.hasBuilding(Wonder.ESCORIAL):
+            pConq.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
+        if city.hasBuilding(Wonder.STEPHANSDOM):
+            pConq.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
+        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA):
+            pConq.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
+        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE):
+            pConq.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
+        if city.hasBuilding(Wonder.MAGNA_CARTA):
+            pConq.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
 
         self.recalcCivicCombos(playerType)
         self.recalcCivicCombos(iOwner)
@@ -298,40 +298,40 @@ class Stability:
         iProvOwnerType = pOwner.getProvinceType(iProv)
         iProvConqType = pConq.getProvinceType(iProv)
 
-        if iProvOwnerType >= ProvinceType.HISTORICAL.value:
-            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
-                pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
+        if iProvOwnerType >= ProvinceType.HISTORICAL:
+            if iOwner == Civ.SCOTLAND:  # Scotland UP part 2
+                pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -2)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
             else:
-                pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -3)
+                pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -3)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 4)
-        elif iProvOwnerType < ProvinceType.HISTORICAL.value:
-            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
+        elif iProvOwnerType < ProvinceType.HISTORICAL:
+            if iOwner == Civ.SCOTLAND:  # Scotland UP part 2
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 1)
             else:
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
 
-        if iProvConqType >= ProvinceType.HISTORICAL.value:
-            pConq.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        if iProvConqType >= ProvinceType.HISTORICAL:
+            pConq.changeStabilityBase(StabilityCategory.EXPANSION, 1)
             pConq.setStabilitySwing(pConq.getStabilitySwing() + 3)
 
-        if pConq.getCivics(5) == Civic.OCCUPATION.value:
-            pConq.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        if pConq.getCivics(5) == Civic.OCCUPATION:
+            pConq.changeStabilityBase(StabilityCategory.EXPANSION, 1)
 
         if (
             iOwner < civilizations().majors().len()
             and (city.getX(), city.getY()) == civilization(iOwner).location.capital
         ):
-            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
-                pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -5)
+            if iOwner == Civ.SCOTLAND:  # Scotland UP part 2
+                pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -5)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 5)
             elif gc.hasUP(
-                iOwner, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value
+                iOwner, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS
             ):  # If Byzantium loses Constantinople, they should lose all non-core cities
-                pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -20)
+                pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -20)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 20)
             else:
-                pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -10)
+                pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -10)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 10)
         self.recalcEpansion(iOwner)
         self.recalcEpansion(playerType)
@@ -343,21 +343,21 @@ class Stability:
         # AbsintheRed: iPlayer is the one razing city, iOwner is the previous owner of the city (right before iPlayer)
         pPlayer = gc.getPlayer(iPlayer)
         pOwner = gc.getPlayer(iOwner)
-        if city.hasBuilding(Wonder.ESCORIAL.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
-        if city.hasBuilding(Wonder.STEPHANSDOM.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
-        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
-        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
-        if city.hasBuilding(Wonder.MAGNA_CARTA.value):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
-            pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
+        if city.hasBuilding(Wonder.ESCORIAL):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
+        if city.hasBuilding(Wonder.STEPHANSDOM):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
+        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
+        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
+        if city.hasBuilding(Wonder.MAGNA_CARTA):
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
+            pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
         self.recalcCivicCombos(iPlayer)
         self.recalcCivicCombos(iOwner)
 
@@ -372,12 +372,12 @@ class Stability:
         elif city.getPopulation() >= 2:
             iRazeStab = 1
         # Absinthe: Norwegian UP - one less stability penalty
-        if iPlayer == Civ.NORWAY.value:
+        if iPlayer == Civ.NORWAY:
             iRazeStab -= 1
         if iRazeStab > 0:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -iRazeStab)
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -iRazeStab)
         # temporary, 3 for everyone but Norway
-        if iPlayer != Civ.NORWAY.value:
+        if iPlayer != Civ.NORWAY:
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
         self.recalcEpansion(iPlayer)
 
@@ -387,49 +387,49 @@ class Stability:
 
     def onTechAcquired(self, iTech, iPlayer):
         if iTech in [
-            Technology.FEUDALISM.value,
-            Technology.GUILDS.value,
-            Technology.GUNPOWDER.value,
-            Technology.PROFESSIONAL_ARMY.value,
-            Technology.NATIONALISM.value,
-            Technology.CIVIL_SERVICE.value,
-            Technology.ECONOMICS.value,
-            Technology.MACHINERY.value,
-            Technology.ARISTOCRACY.value,
+            Technology.FEUDALISM,
+            Technology.GUILDS,
+            Technology.GUNPOWDER,
+            Technology.PROFESSIONAL_ARMY,
+            Technology.NATIONALISM,
+            Technology.CIVIL_SERVICE,
+            Technology.ECONOMICS,
+            Technology.MACHINERY,
+            Technology.ARISTOCRACY,
         ]:
-            gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY.value, -1)
+            gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
         pass
 
     def onBuildingBuilt(self, iPlayer, iBuilding):
         pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value):
-            pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
+        if iBuilding == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE):
+            pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
             self.recalcEconomy(iPlayer)
-        elif iBuilding == getUniqueBuilding(iPlayer, Building.CASTLE.value):
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.CASTLE):
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
             self.recalcEpansion(iPlayer)
-        elif iBuilding == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value):
-            pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
+            pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
             self.recalcCivicCombos(iPlayer)
-        elif iBuilding == getUniqueBuilding(iPlayer, Building.COURTHOUSE.value):
-            pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
+        elif iBuilding == getUniqueBuilding(iPlayer, Building.COURTHOUSE):
+            pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
             self.recalcCity(iPlayer)
-        elif iBuilding == Wonder.ESCORIAL.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 1)
-        elif iBuilding == Wonder.STEPHANSDOM.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 1)
-        elif iBuilding == Wonder.SHRINE_OF_UPPSALA.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 1)
-        elif iBuilding == Wonder.KOUTOUBIA_MOSQUE.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 1)
-        elif iBuilding == Wonder.MAGNA_CARTA.value:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 1)
-        elif iBuilding == Building.PALACE.value:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
+        elif iBuilding == Wonder.ESCORIAL:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
+        elif iBuilding == Wonder.STEPHANSDOM:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
+        elif iBuilding == Wonder.SHRINE_OF_UPPSALA:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
+        elif iBuilding == Wonder.KOUTOUBIA_MOSQUE:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
+        elif iBuilding == Wonder.MAGNA_CARTA:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
+        elif iBuilding == Building.PALACE:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
             self.recalcEpansion(iPlayer)
-        elif iBuilding == Building.RELIQUARY.value:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
+        elif iBuilding == Building.RELIQUARY:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
             self.recalcEpansion(iPlayer)
 
     def onProjectBuilt(self, iPlayer, iProject):
@@ -437,11 +437,11 @@ class Stability:
         iCivic5 = pPlayer.getCivics(5)
         if iProject >= len(Project):
             pPlayer.changeStabilityBase(
-                StabilityCategory.EXPANSION.value, -2
+                StabilityCategory.EXPANSION, -2
             )  # -2 stability for each colony
-            if iCivic5 == Civic.COLONIALISM.value:
+            if iCivic5 == Civic.COLONIALISM:
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION.value, 1
+                    StabilityCategory.EXPANSION, 1
                 )  # one less stability penalty if civ is in Colonialism
         self.recalcEpansion(iPlayer)
 
@@ -553,47 +553,47 @@ class Stability:
         print("                  Stability : ", pPlayer.getStability())
         print(
             "                  Cities    : ",
-            pPlayer.getStabilityBase(StabilityCategory.CITIES.value)
-            + pPlayer.getStabilityVary(StabilityCategory.CITIES.value),
+            pPlayer.getStabilityBase(StabilityCategory.CITIES)
+            + pPlayer.getStabilityVary(StabilityCategory.CITIES),
         )
         print(
             "                  Civics    : ",
-            pPlayer.getStabilityBase(StabilityCategory.CIVICS.value)
-            + pPlayer.getStabilityVary(StabilityCategory.CIVICS.value),
+            pPlayer.getStabilityBase(StabilityCategory.CIVICS)
+            + pPlayer.getStabilityVary(StabilityCategory.CIVICS),
         )
         print(
             "                  Economy   : ",
-            pPlayer.getStabilityBase(StabilityCategory.ECONOMY.value)
-            + pPlayer.getStabilityVary(StabilityCategory.ECONOMY.value),
+            pPlayer.getStabilityBase(StabilityCategory.ECONOMY)
+            + pPlayer.getStabilityVary(StabilityCategory.ECONOMY),
         )
         print(
             "                  Expansion : ",
-            pPlayer.getStabilityBase(StabilityCategory.EXPANSION.value)
-            + pPlayer.getStabilityVary(StabilityCategory.EXPANSION.value),
+            pPlayer.getStabilityBase(StabilityCategory.EXPANSION)
+            + pPlayer.getStabilityVary(StabilityCategory.EXPANSION),
         )
 
     def zeroStability(self, iPlayer):  # Called by Stability.CheckImplosion
         pPlayer = gc.getPlayer(iPlayer)
         pPlayer.changeStabilityBase(
-            StabilityCategory.CITIES.value,
-            -pPlayer.getStabilityBase(StabilityCategory.CITIES.value),
+            StabilityCategory.CITIES,
+            -pPlayer.getStabilityBase(StabilityCategory.CITIES),
         )
         pPlayer.changeStabilityBase(
-            StabilityCategory.CIVICS.value,
-            -pPlayer.getStabilityBase(StabilityCategory.CIVICS.value),
+            StabilityCategory.CIVICS,
+            -pPlayer.getStabilityBase(StabilityCategory.CIVICS),
         )
         pPlayer.changeStabilityBase(
-            StabilityCategory.ECONOMY.value,
-            -pPlayer.getStabilityBase(StabilityCategory.ECONOMY.value),
+            StabilityCategory.ECONOMY,
+            -pPlayer.getStabilityBase(StabilityCategory.ECONOMY),
         )
         pPlayer.changeStabilityBase(
-            StabilityCategory.EXPANSION.value,
-            -pPlayer.getStabilityBase(StabilityCategory.EXPANSION.value),
+            StabilityCategory.EXPANSION,
+            -pPlayer.getStabilityBase(StabilityCategory.EXPANSION),
         )
-        pPlayer.setStabilityVary(StabilityCategory.CITIES.value, 0)
-        pPlayer.setStabilityVary(StabilityCategory.CIVICS.value, 0)
-        pPlayer.setStabilityVary(StabilityCategory.ECONOMY.value, 0)
-        pPlayer.setStabilityVary(StabilityCategory.EXPANSION.value, 0)
+        pPlayer.setStabilityVary(StabilityCategory.CITIES, 0)
+        pPlayer.setStabilityVary(StabilityCategory.CIVICS, 0)
+        pPlayer.setStabilityVary(StabilityCategory.ECONOMY, 0)
+        pPlayer.setStabilityVary(StabilityCategory.EXPANSION, 0)
         pPlayer.setStabilitySwing(0)
 
     def recalcCity(self, iPlayer):
@@ -633,7 +633,7 @@ class Stability:
             # 			also it is a negative counter with the current civic setup, so getReligionBadHappiness() == -1 with one non-state religion in the city
             if pCity.getReligionBadHappiness() < 0:
                 if not gc.hasUP(
-                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value
+                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION
                 ):  # Polish UP
                     iCivicReligionInstability += 1
             if pCity.getHurryAngerModifier() > 0:
@@ -647,21 +647,21 @@ class Stability:
 
             bJewInstability = False
             if (
-                iCivic4 != Civic.FREE_RELIGION.value
+                iCivic4 != Civic.FREE_RELIGION
             ):  # Religious Tolerance negates stability penalties from non-state religions
                 if not gc.hasUP(
-                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value
+                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION
                 ):  # Polish UP
                     if pCity.getNumForeignReligions() > 0:
                         # only calculate if Judaism is not the State Religion
-                        if pPlayer.getStateReligion() != Religion.JUDAISM.value:
+                        if pPlayer.getStateReligion() != Religion.JUDAISM:
                             bJewInstability = True
-                        if iCivic4 == Civic.PAGANISM.value:  # Pagans are a bit more tolerant
+                        if iCivic4 == Civic.PAGANISM:  # Pagans are a bit more tolerant
                             iReligionStability -= 1
                         elif (
-                            iPlayer == Civ.OTTOMAN.value
+                            iPlayer == Civ.OTTOMAN
                         ):  # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
-                            # elif ( gc.hasUP( iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value )):
+                            # elif ( gc.hasUP( iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS )):
                             iReligionStability -= 1
                         else:
                             iReligionStability -= 2
@@ -673,8 +673,8 @@ class Stability:
             # Absinthe: Jewish Quarter reduces religion instability if Judaism is present in the city
             if (
                 bJewInstability
-                and pCity.hasBuilding(Building.JEWISH_QUARTER.value)
-                and pCity.isHasReligion(Religion.JUDAISM.value)
+                and pCity.hasBuilding(Building.JEWISH_QUARTER)
+                and pCity.isHasReligion(Religion.JUDAISM)
             ):  # only if there are some religious penalties present in the city
                 iReligionStability += 1
 
@@ -683,10 +683,10 @@ class Stability:
             if (
                 (iTotalCulture > 0)
                 and ((pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40)
-                and not gc.hasUP(iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value)
+                and not gc.hasUP(iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE)
             ):
                 # Absinthe: 1 less instability with the Vassalage Civic, so only -1 with less than 20%, 0 otherwise
-                if iCivic5 != Civic.SUBJUGATION.value:
+                if iCivic5 != Civic.SUBJUGATION:
                     iCultureStability -= 1
                 if (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 20:
                     iCultureStability -= 1
@@ -736,17 +736,17 @@ class Stability:
                 iMilitaryStability + iWarWStability / 3, -3
             )  # AI is also bad at handling war weariness
             iCityStability = min(max(iCityStability, -10), 8)
-        iCityStability += pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value)
+        iCityStability += pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY)
         if pPlayer.getGoldenAgeTurns() > 0:
             iCityStability += 8
         # Absinthe: Westminster Abbey faith-stability effect
-        if pPlayer.countNumBuildings(Wonder.WESTMINSTER.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.WESTMINSTER) > 0:
             # would be better, if the stability bonus was also only applied for Divine Monarchy?
-            # if pPlayer.getCivics(0) == Civic.DIVINE_MONARCHY.value:
+            # if pPlayer.getCivics(0) == Civic.DIVINE_MONARCHY:
             iFaith = pPlayer.getFaith()
             iCityStability += iFaith / 20
 
-        pPlayer.setStabilityVary(StabilityCategory.CITIES.value, iCityStability)
+        pPlayer.setStabilityVary(StabilityCategory.CITIES, iCityStability)
 
     def recalcCivicCombos(self, iPlayer):
         # Note: this is more or less the only place where Civics are referenced, yet referring them by number makes this hard to read
@@ -776,30 +776,30 @@ class Stability:
             iComboValue = self.getCivicCombinationStability(lCombination[0], lCombination[1])
             if (
                 iComboValue < 0
-                and pPlayer.getPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value) == 1
+                and pPlayer.getPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA) == 1
             ):
                 iComboValue = 0
             iCivicCombo += iComboValue
 
-        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value) == 1:
+        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM) == 1:
             if iCivicGovernment in [
-                Civic.FEUDAL_MONARCHY.value,
-                Civic.DIVINE_MONARCHY.value,
-                Civic.LIMITE_DMONARCHY.value,
+                Civic.FEUDAL_MONARCHY,
+                Civic.DIVINE_MONARCHY,
+                Civic.LIMITE_DMONARCHY,
             ]:
                 iCivicCombo += 2
 
-        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value) == 1:
-            if iCivicReligion == Civic.PAGANISM.value:
+        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE) == 1:
+            if iCivicReligion == Civic.PAGANISM:
                 iCivicCombo += 3
 
-        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value) == 1:
-            if iCivicLegal == Civic.RELIGIOUS_LAW.value:
+        if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE) == 1:
+            if iCivicLegal == Civic.RELIGIOUS_LAW:
                 iCivicCombo += 4
 
-        if iCivicLegal == Civic.BUREAUCRACY.value:  # Bureaucracy city cap
+        if iCivicLegal == Civic.BUREAUCRACY:  # Bureaucracy city cap
             if (
-                iPlayer == Civ.NOVGOROD.value and pPlayer.getNumCities() > 6
+                iPlayer == Civ.NOVGOROD and pPlayer.getNumCities() > 6
             ):  # the penalties are halved for Novgorod
                 iBureaucracyCap = (6 - pPlayer.getNumCities()) / 2
             else:
@@ -808,9 +808,9 @@ class Stability:
                 iBureaucracyCap = max(-5, iBureaucracyCap)
             iCivicCombo += iBureaucracyCap
 
-        if iCivicGovernment == Civic.MERCHANT_REPUBLIC.value:  # Merchant Republic city cap
+        if iCivicGovernment == Civic.MERCHANT_REPUBLIC:  # Merchant Republic city cap
             if (
-                iPlayer == Civ.VENECIA.value and pPlayer.getNumCities() > 5
+                iPlayer == Civ.VENECIA and pPlayer.getNumCities() > 5
             ):  # the penalties are halved for Venice
                 iMerchantRepublicCap = (5 - pPlayer.getNumCities()) / 2
             else:
@@ -819,93 +819,93 @@ class Stability:
                 iMerchantRepublicCap = max(-5, iMerchantRepublicCap)
             iCivicCombo += iMerchantRepublicCap
 
-        pPlayer.setStabilityVary(StabilityCategory.CIVICS.value, iCivicCombo)
+        pPlayer.setStabilityVary(StabilityCategory.CIVICS, iCivicCombo)
 
     def getCivicCombinationStability(self, iCivic0, iCivic1):
         lCivics = set([iCivic0, iCivic1])
 
-        if Civic.FEUDAL_MONARCHY.value in lCivics:
-            if Civic.FEUDAL_LAW.value in lCivics:
+        if Civic.FEUDAL_MONARCHY in lCivics:
+            if Civic.FEUDAL_LAW in lCivics:
                 return 3
 
         if (
-            Civic.DIVINE_MONARCHY.value in lCivics
+            Civic.DIVINE_MONARCHY in lCivics
         ):  # Divine Monarchy should have an appropriate religious civic
-            if Civic.RELIGIOUS_LAW.value in lCivics:
+            if Civic.RELIGIOUS_LAW in lCivics:
                 return 2
-            if Civic.PAGANISM.value in lCivics:
+            if Civic.PAGANISM in lCivics:
                 return -4
-            if Civic.STATE_RELIGION.value in lCivics:
+            if Civic.STATE_RELIGION in lCivics:
                 return 2
-            if Civic.THEOCRACY.value in lCivics:
+            if Civic.THEOCRACY in lCivics:
                 return 3
-            if Civic.ORGANIZED_RELIGION.value in lCivics:
+            if Civic.ORGANIZED_RELIGION in lCivics:
                 return 4
-            if Civic.FREE_RELIGION.value in lCivics:
+            if Civic.FREE_RELIGION in lCivics:
                 return -3
 
         if (
-            Civic.LIMITE_DMONARCHY.value in lCivics
+            Civic.LIMITE_DMONARCHY in lCivics
         ):  # Constitutional Monarchy and Republic both like enlightened civics
-            if Civic.COMMON_LAW.value in lCivics:
+            if Civic.COMMON_LAW in lCivics:
                 return 3
-            if Civic.FREE_PEASANTRY.value in lCivics:
+            if Civic.FREE_PEASANTRY in lCivics:
                 return 2
-            if Civic.FREE_LABOR.value in lCivics:
+            if Civic.FREE_LABOR in lCivics:
                 return 2
 
         if (
-            Civic.MERCHANT_REPUBLIC.value in lCivics
+            Civic.MERCHANT_REPUBLIC in lCivics
         ):  # Constitutional Monarchy and Republic both like enlightened civics
-            if Civic.FEUDAL_LAW.value in lCivics:
+            if Civic.FEUDAL_LAW in lCivics:
                 return -3
-            if Civic.COMMON_LAW.value in lCivics:
+            if Civic.COMMON_LAW in lCivics:
                 return 3
-            if Civic.FREE_PEASANTRY.value in lCivics:
+            if Civic.FREE_PEASANTRY in lCivics:
                 return 2
-            if Civic.FREE_LABOR.value in lCivics:
+            if Civic.FREE_LABOR in lCivics:
                 return 2
-            if Civic.TRADE_ECONOMY.value in lCivics:
+            if Civic.TRADE_ECONOMY in lCivics:
                 return 4
-            if Civic.MERCANTILISM.value in lCivics:
+            if Civic.MERCANTILISM in lCivics:
                 return -4
-            if Civic.IMPERIALISM.value in lCivics:
+            if Civic.IMPERIALISM in lCivics:
                 return -2
 
-        if Civic.FEUDAL_LAW.value in lCivics:
-            if Civic.SERFDOM.value in lCivics:
+        if Civic.FEUDAL_LAW in lCivics:
+            if Civic.SERFDOM in lCivics:
                 return 3
-            if Civic.FREE_PEASANTRY.value in lCivics:
+            if Civic.FREE_PEASANTRY in lCivics:
                 return -4
-            if Civic.MANORIALISM.value in lCivics:
+            if Civic.MANORIALISM in lCivics:
                 return 2
-            if Civic.VASSALAGE.value in lCivics:
+            if Civic.VASSALAGE in lCivics:
                 return 2
 
-        if Civic.RELIGIOUS_LAW.value in lCivics:
-            if Civic.PAGANISM.value in lCivics:
+        if Civic.RELIGIOUS_LAW in lCivics:
+            if Civic.PAGANISM in lCivics:
                 return -5
-            if Civic.THEOCRACY.value in lCivics:
+            if Civic.THEOCRACY in lCivics:
                 return 5
-            if Civic.FREE_RELIGION.value in lCivics:
+            if Civic.FREE_RELIGION in lCivics:
                 return -3
 
-        if Civic.COMMON_LAW.value in lCivics:
-            if Civic.SERFDOM.value in lCivics:
+        if Civic.COMMON_LAW in lCivics:
+            if Civic.SERFDOM in lCivics:
                 return -3
-            if Civic.FREE_LABOR.value in lCivics:
+            if Civic.FREE_LABOR in lCivics:
                 return 3
-            if Civic.THEOCRACY.value in lCivics:
+            if Civic.THEOCRACY in lCivics:
                 return -4
 
-        if Civic.SERFDOM.value in lCivics:
-            if Civic.MANORIALISM.value in lCivics:
+        if Civic.SERFDOM in lCivics:
+            if Civic.MANORIALISM in lCivics:
                 return 2
-            if Civic.TRADE_ECONOMY.value in lCivics:
+            if Civic.TRADE_ECONOMY in lCivics:
                 return -3
 
-        if Civic.APPRENTICESHIP.value in lCivics:
-            if Civic.GUILDS.value in lCivics:
+        if Civic.APPRENTICESHIP in lCivics:
+            if Civic.GUILDS in lCivics:
                 return 3
 
         return 0
@@ -916,7 +916,7 @@ class Stability:
         iImports = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE)
         iExports = pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
         # Absinthe: removed - why was Cordoba penalized in the first place?
-        # if iPlayer == Civ.CORDOBA.value:
+        # if iPlayer == Civ.CORDOBA:
         # 	iImports /= 2
         # 	iExports /= 2
 
@@ -924,7 +924,7 @@ class Stability:
         iInflation = pPlayer.calculateInflatedCosts()
         iProduction = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
         # Absinthe: removed - Venice no longer has that weak production
-        # if iPlayer == Civ.VENECIA.value:
+        # if iPlayer == Civ.VENECIA:
         # 	iProduction += iPopNum # offset their weak production
         iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 
@@ -933,7 +933,7 @@ class Stability:
             # Absinthe: production penalty removed - was a mistake to add a city-based modifier to the financial stability which is based on average per population
             # if pCity.isProductionUnit():
             # 	iUnit = pCity.getProductionUnit()
-            # 	if iUnit < Unit.WORKER.value or iUnit > Unit.ISLAMIC_MISSIONARY.value:
+            # 	if iUnit < Unit.WORKER or iUnit > Unit.ISLAMIC_MISSIONARY:
             # 		iProductionPenalty -= 1
             # elif pCity.isProductionBuilding():
             # 	iBuilding = pCity.getProductionBuilding()
@@ -954,7 +954,7 @@ class Stability:
                 max(2 * (2 * iAgriculture + iProduction) / iPopNum - 14, -3), 3
             )  # this is 0 if the average yield per population is a little more than 2 food and 2 production (with bonuses)
             if (
-                pPlayer.getPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value) == 1
+                pPlayer.getPicklefreeParameter(SpecialParameter.HAS_ESCORIAL) == 1
             ):  # El Escorial no economic instability effect
                 iIndustrialStability = max(iIndustrialStability, 0)
             iFinances = (
@@ -965,21 +965,21 @@ class Stability:
             )  # this is 0 if the average financial power per population is around 6
             # iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
             if (
-                pPlayer.getPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value) == 1
+                pPlayer.getPicklefreeParameter(SpecialParameter.HAS_ESCORIAL) == 1
             ):  # El Escorial no economic instability effect
                 iFinancialStability = max(iFinancialStability, 0)
             pPlayer.setStabilityVary(
-                StabilityCategory.ECONOMY.value, iFinancialStability + iIndustrialStability
+                StabilityCategory.ECONOMY, iFinancialStability + iIndustrialStability
             )
         else:
-            pPlayer.setStabilityVary(StabilityCategory.ECONOMY.value, 0)
+            pPlayer.setStabilityVary(StabilityCategory.ECONOMY, 0)
 
     def recalcEpansion(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iExpStability = 0
         iCivic5 = pPlayer.getCivics(5)
         bIsUPLandStability = gc.hasUP(
-            iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value
+            iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND
         )
         iCivicBonus = 0
         iUPBonus = 0
@@ -992,28 +992,28 @@ class Stability:
             )
 
             iExpStability += tStabilityPenalty[iProvType]
-            if iProvType <= ProvinceType.CONTESTED.value:
-                if iCivic5 == Civic.IMPERIALISM.value:  # Imperialism
+            if iProvType <= ProvinceType.CONTESTED:
+                if iCivic5 == Civic.IMPERIALISM:  # Imperialism
                     iCivicBonus += 1
                 if bIsUPLandStability:  # French UP
                     iUPBonus += 1
         iExpStability += iCivicBonus  # Imperialism
         iExpStability += iUPBonus  # French UP
-        if pPlayer.getCivics(5) != Civic.OCCUPATION.value:
+        if pPlayer.getCivics(5) != Civic.OCCUPATION:
             iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType(
-                ProvinceType.CORE.value
+                ProvinceType.CORE
             )  # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
             iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType(
-                ProvinceType.HISTORICAL.value
+                ProvinceType.HISTORICAL
             )  # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
         if pPlayer.getMaster() > -1:
             iExpStability += 8
-        if iCivic5 == Civic.VASSALAGE.value:
+        if iCivic5 == Civic.VASSALAGE:
             iExpStability += 3 * pPlayer.countVassals()
         else:
             iExpStability += pPlayer.countVassals()
         iNumCities = pPlayer.getNumCities()
-        if iPlayer in [Civ.OTTOMAN.value, Civ.MOSCOW.value]:  # five free cities for those two
+        if iPlayer in [Civ.OTTOMAN, Civ.MOSCOW]:  # five free cities for those two
             iNumCities = max(0, iNumCities - 5)
         iExpStability -= iNumCities * iNumCities / 40
-        pPlayer.setStabilityVary(StabilityCategory.EXPANSION.value, iExpStability)
+        pPlayer.setStabilityVary(StabilityCategory.EXPANSION, iExpStability)

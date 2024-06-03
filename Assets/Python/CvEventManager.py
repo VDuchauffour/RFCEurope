@@ -496,12 +496,11 @@ class CvEventManager:
             )
         # Absinthe: Gediminas Tower wonder effect: extra city defence on unit win in the city
         pPlayer = gc.getPlayer(pWinner.getOwner())
-        if pPlayer.countNumBuildings(Wonder.GEDIMINAS_TOWER.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.GEDIMINAS_TOWER) > 0:
             pPlot = pWinner.plot()
             if pPlot.isCity():
                 pCity = pPlot.getPlotCity()
-                # if pCity.isHasBuilding(Wonder.GEDIMINAS_TOWER.value):
-                if pCity.getNumActiveBuilding(Wonder.GEDIMINAS_TOWER.value):
+                if pCity.getNumActiveBuilding(Wonder.GEDIMINAS_TOWER):
                     pCity.changeDefenseDamage(-10)
         # Absinthe: Gediminas Tower end
 
@@ -582,14 +581,14 @@ class CvEventManager:
         "Improvement Built"
         iImprovement, iX, iY = argsList
         # Absinthe: Stephansdom start
-        if iImprovement == Improvement.COTTAGE.value:
+        if iImprovement == Improvement.COTTAGE:
             pPlot = CyMap().plot(iX, iY)
             iOwner = pPlot.getOwner()
             # if there is an owner
             if iOwner >= 0:
                 pOwner = gc.getPlayer(iOwner)
-                if pOwner.countNumBuildings(Wonder.STEPHANSDOM.value) > 0:
-                    pPlot.setImprovementType(Improvement.HAMLET.value)
+                if pOwner.countNumBuildings(Wonder.STEPHANSDOM) > 0:
+                    pPlot.setImprovementType(Improvement.HAMLET)
         # Absinthe: Stephansdom end
         if not self.__LOG_IMPROVEMENT:
             return
@@ -650,16 +649,16 @@ class CvEventManager:
         if pPlot.getBonusType(-1) != -1:  # only proceed if there is a bonus resource on the plot
             if (
                 iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST")
-                or iFeatureType == Feature.DENSEFOREST.value
-                or iFeatureType == Feature.PALMFOREST.value
+                or iFeatureType == Feature.DENSEFOREST
+                or iFeatureType == Feature.PALMFOREST
             ):
                 iBonusType = pPlot.getBonusType(-1)
-                if iBonusType in [Bonus.TIMBER.value, Bonus.DEER.value, Bonus.FUR.value]:
+                if iBonusType in [Bonus.TIMBER, Bonus.DEER, Bonus.FUR]:
                     pPlot.setBonusType(-1)
                     # also remove corresponding improvements
                     iImprovementType = pPlot.getImprovementType()
                     if (
-                        iImprovementType == Improvement.CAMP.value
+                        iImprovementType == Improvement.CAMP
                     ):  # camp is only buildable on resources, while lumbermills are removed by default on forest removal
                         pPlot.setImprovementType(-1)
                     # Absinthe: message for the human player if it was inside it's territory
@@ -699,10 +698,10 @@ class CvEventManager:
         pPlayer = gc.getPlayer(iPlayer)
 
         # Absinthe: Leaning Tower start
-        if iBuildingType == Wonder.LEANING_TOWER.value:
+        if iBuildingType == Wonder.LEANING_TOWER:
             iX = pCity.getX()
             iY = pCity.getY()
-            iUnit = Unit.GREAT_PROPHET.value + rand(7)
+            iUnit = Unit.GREAT_PROPHET + rand(7)
             pNewUnit = pPlayer.initUnit(
                 iUnit,
                 iX,
@@ -725,7 +724,7 @@ class CvEventManager:
         # Absinthe: Leaning Tower end
 
         # Absinthe: Bibliotheca Corviniana start
-        if iBuildingType == Wonder.BIBLIOTHECA_CORVINIANA.value:
+        if iBuildingType == Wonder.BIBLIOTHECA_CORVINIANA:
             # techs known by the owner civ
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
@@ -784,9 +783,9 @@ class CvEventManager:
         # Absinthe: Bibliotheca Corviniana end
 
         # Absinthe: Kalmar Castle start
-        if iBuildingType == Wonder.KALMAR_CASTLE.value:
+        if iBuildingType == Wonder.KALMAR_CASTLE:
             for neighbour in civilization(iPlayer).location.neighbours:
-                iNeighbour = neighbour.value
+                iNeighbour = neighbour
                 pNeighbour = gc.getPlayer(iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
                     pPlayer.AI_changeAttitudeExtra(iNeighbour, 3)
@@ -794,41 +793,41 @@ class CvEventManager:
         # Absinthe: Kalmar Castle end
 
         # Absinthe: Grand Arsenal start
-        if iBuildingType == Wonder.GRAND_ARSENAL.value:
+        if iBuildingType == Wonder.GRAND_ARSENAL:
             iX = pCity.getX()
             iY = pCity.getY()
             for i in range(3):
                 # should we have Galleass for all civs, or use the getUniqueUnit function in RFCUtils?
                 pNewUnit = pPlayer.initUnit(
-                    Unit.VENICE_GALLEAS.value,
+                    Unit.VENICE_GALLEAS,
                     iX,
                     iY,
-                    UnitAITypes(gc.getUnitInfo(Unit.VENICE_GALLEAS.value).getDefaultUnitAIType()),
+                    UnitAITypes(gc.getUnitInfo(Unit.VENICE_GALLEAS).getDefaultUnitAIType()),
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pNewUnit.setExperience(6, -1)
                 for iPromo in [
-                    Promotion.COMBAT.value,
-                    Promotion.LEADERSHIP.value,
-                    Promotion.NAVIGATION.value,
+                    Promotion.COMBAT,
+                    Promotion.LEADERSHIP,
+                    Promotion.NAVIGATION,
                 ]:
                     pNewUnit.setHasPromotion(iPromo, True)
         # Absinthe: Grand Arsenal end
 
         # Absinthe: Magellan's Voyage start
-        if iBuildingType == Wonder.MAGELLANS_VOYAGE.value:
+        if iBuildingType == Wonder.MAGELLANS_VOYAGE:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
             pTeam.changeExtraMoves(gc.getInfoTypeForString("DOMAIN_SEA"), 2)
         # Absinthe: Magellan's Voyage end
 
         # Absinthe: St. Catherine's Monastery start
-        if iBuildingType == Wonder.ST_CATHERINE_MONASTERY.value:
+        if iBuildingType == Wonder.ST_CATHERINE_MONASTERY:
             iX = pCity.getX()
             iY = pCity.getY()
             for i in range(2):
                 pPlayer.initUnit(
-                    Unit.HOLY_RELIC.value,
+                    Unit.HOLY_RELIC,
                     iX,
                     iY,
                     UnitAITypes.NO_UNITAI,
@@ -843,7 +842,7 @@ class CvEventManager:
         # Absinthe: St. Catherine's Monastery end
 
         # Absinthe: Al-Azhar University start
-        if iBuildingType == Wonder.ALAZHAR.value:
+        if iBuildingType == Wonder.ALAZHAR:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
             for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
@@ -862,13 +861,13 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if iBuildingType == Wonder.SISTINE_CHAPEL.value:
+        if iBuildingType == Wonder.SISTINE_CHAPEL:
             for city in cities().owner(iPlayer).entities():
                 if city.getNumWorldWonders() > 0:
                     city.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1)
         elif isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType()):
             # if the given civ already had the Sistine Chapel, and built another wonder in a new city
-            if pPlayer.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.SISTINE_CHAPEL) > 0:
                 if pCity.getNumWorldWonders() == 1:
                     pCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
@@ -876,7 +875,7 @@ class CvEventManager:
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if iBuildingType == Wonder.JASNA_GORA.value:
+        if iBuildingType == Wonder.JASNA_GORA:
             for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
@@ -901,7 +900,7 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if iBuildingType == Wonder.KIZIL_KULE.value:
+        if iBuildingType == Wonder.KIZIL_KULE:
             for city in cities().owner(iPlayer).entities():
                 city.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
@@ -909,7 +908,7 @@ class CvEventManager:
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if iBuildingType == Wonder.SAMOGITIAN_ALKAS.value:
+        if iBuildingType == Wonder.SAMOGITIAN_ALKAS:
             for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
@@ -919,7 +918,7 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if iBuildingType == Wonder.MAGNA_CARTA.value:
+        if iBuildingType == Wonder.MAGNA_CARTA:
             for city in cities().owner(iPlayer).entities():
                 city.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
@@ -993,7 +992,7 @@ class CvEventManager:
         # Absinthe: Torre del Oro start
         if iProjectType >= len(Project):
             pPlayer = gc.getPlayer(iPlayer)
-            if pPlayer.countNumBuildings(Wonder.TORRE_DEL_ORO.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.TORRE_DEL_ORO) > 0:
                 # 70% chance for a 3 turn Golden Age
                 if percentage_chance(70, strict=True):
                     pPlayer.changeGoldenAgeTurns(3)
@@ -1114,7 +1113,7 @@ class CvEventManager:
 
         # Absinthe: Brandenburg Gate start
         if unit.getUnitCombatType() != -1:
-            if pPlayer.countNumBuildings(Wonder.BRANDENBURG_GATE.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.BRANDENBURG_GATE) > 0:
                 unit.changeExperience(
                     (
                         2
@@ -1130,7 +1129,7 @@ class CvEventManager:
         # Absinthe: Brandenburg Gate end
 
         # Absinthe: Selimiye Mosque start
-        if pPlayer.countNumBuildings(Wonder.SELIMIYE_MOSQUE.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.SELIMIYE_MOSQUE) > 0:
             if pPlayer.isGoldenAge():
                 unit.changeExperience(unit.getExperience(), 999, False, False, False)
         # Absinthe: Selimiye Mosque end
@@ -1275,10 +1274,10 @@ class CvEventManager:
             return
         if not self.__LOG_GREATPERSON:
             # Absinthe: Louvre start
-            if pPlayer.countNumBuildings(Wonder.LOUVRE.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.LOUVRE) > 0:
                 for loopCity in cities().owner(iPlayer).entities():
                     # bigger boost for the GP city and the Louvre city
-                    if loopCity.getNumActiveBuilding(Wonder.LOUVRE.value) or pCity == loopCity:
+                    if loopCity.getNumActiveBuilding(Wonder.LOUVRE) or pCity == loopCity:
                         loopCity.changeCulture(
                             iPlayer, min(300, loopCity.getCultureThreshold() / 5), True
                         )
@@ -1289,7 +1288,7 @@ class CvEventManager:
             # Absinthe: Louvre end
 
             # Absinthe: Peterhof Palace start
-            if pPlayer.countNumBuildings(Wonder.PETERHOF_PALACE.value) > 0:
+            if pPlayer.countNumBuildings(Wonder.PETERHOF_PALACE) > 0:
                 if percentage_chance(70, strict=True):
                     if pUnit.getUnitType() == Unit.GREAT_SCIENTIST:
                         pCity.changeFreeSpecialistCount(
@@ -1599,7 +1598,7 @@ class CvEventManager:
         # Absinthe: end
 
         # Absinthe: Jasna Gora start
-        if pPlayer.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.JASNA_GORA) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1623,14 +1622,14 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if pPlayer.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.KIZIL_KULE) > 0:
             city.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
             )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if pPlayer.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.SAMOGITIAN_ALKAS) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
@@ -1639,7 +1638,7 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if pPlayer.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.MAGNA_CARTA) > 0:
             city.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1674,7 +1673,7 @@ class CvEventManager:
         )
 
         # Absinthe: Al-Azhar University start
-        if city.getNumActiveBuilding(Wonder.ALAZHAR.value):
+        if city.getNumActiveBuilding(Wonder.ALAZHAR):
             pPlayer = gc.getPlayer(iPlayer)
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
@@ -1694,7 +1693,7 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if city.getNumActiveBuilding(Wonder.SISTINE_CHAPEL.value):
+        if city.getNumActiveBuilding(Wonder.SISTINE_CHAPEL):
             for loopCity in cities().owner(iPlayer).entities():
                 if loopCity.getNumWorldWonders() > 0:
                     loopCity.changeFreeSpecialistCount(
@@ -1703,7 +1702,7 @@ class CvEventManager:
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if city.getNumActiveBuilding(Wonder.JASNA_GORA.value):
+        if city.getNumActiveBuilding(Wonder.JASNA_GORA):
             for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
@@ -1728,7 +1727,7 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if city.getNumActiveBuilding(Wonder.KIZIL_KULE.value):
+        if city.getNumActiveBuilding(Wonder.KIZIL_KULE):
             for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
@@ -1736,7 +1735,7 @@ class CvEventManager:
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if city.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS.value):
+        if city.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS):
             for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
@@ -1746,7 +1745,7 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if city.getNumActiveBuilding(Wonder.MAGNA_CARTA.value):
+        if city.getNumActiveBuilding(Wonder.MAGNA_CARTA):
             for loopCity in cities().owner(iPlayer).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
@@ -1768,12 +1767,12 @@ class CvEventManager:
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
                 # Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
-                lAllWonders = [w.value for w in Wonder]
+                lAllWonders = [w for w in Wonder]
                 for iWonder in [
-                    Building.CATHOLIC_SHRINE.value,
-                    Building.ORTHODOX_SHRINE.value,
-                    Building.ISLAMIC_SHRINE.value,
-                    Building.PROTESTANT_SHRINE.value,
+                    Building.CATHOLIC_SHRINE,
+                    Building.ORTHODOX_SHRINE,
+                    Building.ISLAMIC_SHRINE,
+                    Building.PROTESTANT_SHRINE,
                 ]:
                     lAllWonders.append(iWonder)
                 for iWonder in lAllWonders:
@@ -1833,7 +1832,7 @@ class CvEventManager:
         pNewOwner = gc.getPlayer(iNewOwner)
 
         # Absinthe: Al-Azhar University start
-        if pCity.getNumActiveBuilding(Wonder.ALAZHAR.value):
+        if pCity.getNumActiveBuilding(Wonder.ALAZHAR):
             iPreviousTeam = pPreviousOwner.getTeam()
             pPreviousTeam = gc.getTeam(iPreviousTeam)
             iNewTeam = pNewOwner.getTeam()
@@ -1862,7 +1861,7 @@ class CvEventManager:
         # Absinthe: Al-Azhar University end
 
         # Absinthe: Sistine Chapel start
-        if pCity.getNumActiveBuilding(Wonder.SISTINE_CHAPEL.value):
+        if pCity.getNumActiveBuilding(Wonder.SISTINE_CHAPEL):
             for loopCity in cities().owner(iPreviousOwner).entities():
                 if loopCity.getNumWorldWonders() > 0:
                     loopCity.changeFreeSpecialistCount(
@@ -1870,20 +1869,20 @@ class CvEventManager:
                     )
             for loopCity in cities().owner(iNewOwner).entities():
                 if loopCity.getNumWorldWonders() > 0 and not loopCity.getNumActiveBuilding(
-                    Wonder.SISTINE_CHAPEL.value
+                    Wonder.SISTINE_CHAPEL
                 ):
                     loopCity.changeFreeSpecialistCount(
                         gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
                     )
         elif pCity.getNumWorldWonders() > 0:
-            if pPreviousOwner.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
+            if pPreviousOwner.countNumBuildings(Wonder.SISTINE_CHAPEL) > 0:
                 pCity.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1)
-            elif pNewOwner.countNumBuildings(Wonder.SISTINE_CHAPEL.value) > 0:
+            elif pNewOwner.countNumBuildings(Wonder.SISTINE_CHAPEL) > 0:
                 pCity.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1)
         # Absinthe: Sistine Chapel end
 
         # Absinthe: Jasna Gora start
-        if pCity.getNumActiveBuilding(Wonder.JASNA_GORA.value):
+        if pCity.getNumActiveBuilding(Wonder.JASNA_GORA):
             for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
@@ -1926,7 +1925,7 @@ class CvEventManager:
                     CommerceTypes.COMMERCE_CULTURE,
                     1,
                 )
-        elif pPreviousOwner.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.JASNA_GORA) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1947,7 +1946,7 @@ class CvEventManager:
                 CommerceTypes.COMMERCE_CULTURE,
                 0,
             )
-        elif pNewOwner.countNumBuildings(Wonder.JASNA_GORA.value) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.JASNA_GORA) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -1971,7 +1970,7 @@ class CvEventManager:
         # Absinthe: Jasna Gora end
 
         # Absinthe: Kizil Kule start
-        if pCity.getNumActiveBuilding(Wonder.KIZIL_KULE.value):
+        if pCity.getNumActiveBuilding(Wonder.KIZIL_KULE):
             for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
@@ -1980,18 +1979,18 @@ class CvEventManager:
                 loopCity.setBuildingYieldChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
                 )
-        elif pPreviousOwner.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.KIZIL_KULE) > 0:
             pCity.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0
             )
-        elif pNewOwner.countNumBuildings(Wonder.KIZIL_KULE.value) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.KIZIL_KULE) > 0:
             pCity.setBuildingYieldChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2
             )
         # Absinthe: Kizil Kule end
 
         # Absinthe: Samogitian Alkas start
-        if pCity.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS.value):
+        if pCity.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS):
             for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
@@ -2004,13 +2003,13 @@ class CvEventManager:
                     CommerceTypes.COMMERCE_RESEARCH,
                     2,
                 )
-        elif pPreviousOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
                 0,
             )
-        elif pNewOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS.value) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"),
                 CommerceTypes.COMMERCE_RESEARCH,
@@ -2019,7 +2018,7 @@ class CvEventManager:
         # Absinthe: Samogitian Alkas end
 
         # Absinthe: Magna Carta start
-        if pCity.getNumActiveBuilding(Wonder.MAGNA_CARTA.value):
+        if pCity.getNumActiveBuilding(Wonder.MAGNA_CARTA):
             for loopCity in cities().owner(iPreviousOwner).entities():
                 loopCity.setBuildingCommerceChange(
                     gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
@@ -2032,13 +2031,13 @@ class CvEventManager:
                     CommerceTypes.COMMERCE_CULTURE,
                     2,
                 )
-        elif pPreviousOwner.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
+        elif pPreviousOwner.countNumBuildings(Wonder.MAGNA_CARTA) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
                 0,
             )
-        elif pNewOwner.countNumBuildings(Wonder.MAGNA_CARTA.value) > 0:
+        elif pNewOwner.countNumBuildings(Wonder.MAGNA_CARTA) > 0:
             pCity.setBuildingCommerceChange(
                 gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"),
                 CommerceTypes.COMMERCE_CULTURE,
@@ -2063,12 +2062,12 @@ class CvEventManager:
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
                 # Absinthe: collect all wonders, including shrines
-                lAllWonders = [w.value for w in Wonder]
+                lAllWonders = [w for w in Wonder]
                 for iWonder in [
-                    Building.CATHOLIC_SHRINE.value,
-                    Building.ORTHODOX_SHRINE.value,
-                    Building.ISLAMIC_SHRINE.value,
-                    Building.PROTESTANT_SHRINE.value,
+                    Building.CATHOLIC_SHRINE,
+                    Building.ORTHODOX_SHRINE,
+                    Building.ISLAMIC_SHRINE,
+                    Building.PROTESTANT_SHRINE,
                 ]:
                     lAllWonders.append(iWonder)
                 for iWonder in lAllWonders:
@@ -2201,7 +2200,7 @@ class CvEventManager:
                 pPlayer = gc.getPlayer(iPlayer)
                 if (
                     pPlayer.getTeam() == iMaster
-                    and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET.value) > 0
+                    and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET) > 0
                 ):
                     pPlayer.changeGoldenAgeTurns(3)
                     if human() == iPlayer:

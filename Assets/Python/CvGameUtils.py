@@ -237,7 +237,7 @@ class CvGameUtils:
             and not AIpPlayer.isHuman()
             and AIpPlayer.isAlive()
         ):
-            if pUnit.getUnitType() == Unit.PROSECUTOR.value:
+            if pUnit.getUnitType() == Unit.PROSECUTOR:
                 return self.doInquisitorCore_AI(pUnit)
         return False
 
@@ -274,14 +274,14 @@ class CvGameUtils:
             if bCanPurge:
                 for pCity in apCityList:
                     if pCity.GetCy().isHasReligion(
-                        iReligion.value
-                    ) and not pCity.GetCy().isHolyCityByType(iReligion.value):
+                        iReligion
+                    ) and not pCity.GetCy().isHolyCityByType(iReligion):
                         # do not purge religions with an associated wonder in the city
                         bWonder = False
                         for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore  # type: ignore
                             if pCity.GetCy().getNumRealBuilding(iBuilding):
                                 BuildingInfo = gc.getBuildingInfo(iBuilding)
-                                if BuildingInfo.getPrereqReligion() == iReligion.value:
+                                if BuildingInfo.getPrereqReligion() == iReligion:
                                     if isWorldWonderClass(
                                         BuildingInfo.getBuildingClassType()
                                     ) or isNationalWonderClass(
@@ -596,13 +596,13 @@ class CvGameUtils:
         iDiscount = 0
 
         # Absinthe: Borgund Stave Church start
-        if pPlayer.countNumBuildings(Wonder.BORGUND_STAVE_CHURCH.value) > 0:
-            if Building.PAGAN_SHRINE.value <= iBuilding <= Building.RELIQUARY.value:
+        if pPlayer.countNumBuildings(Wonder.BORGUND_STAVE_CHURCH) > 0:
+            if Building.PAGAN_SHRINE <= iBuilding <= Building.RELIQUARY:
                 iDiscount += 40
         # Absinthe: Borgund Stave Church end
 
         # Absinthe: Blue Mosque start
-        if pPlayer.countNumBuildings(Wonder.BLUE_MOSQUE.value) > 0:
+        if pPlayer.countNumBuildings(Wonder.BLUE_MOSQUE) > 0:
             if pPlayer.getCapitalCity().getNumActiveBuilding(iBuilding) and not pCity.isCapital():
                 iDiscount += 20
         # Absinthe: Blue Mosque end
@@ -1018,7 +1018,7 @@ class CvGameUtils:
         sta.recalcEpansion(iPlayer)
         iNumCities = pPlayer.getNumCities()
         # anarchy instability should appear right on revolution / converting, not one turn later
-        if iPlayer != Civ.PRUSSIA.value:  # Prussian UP
+        if iPlayer != Civ.PRUSSIA:  # Prussian UP
             if pPlayer.isHuman():
                 # anarchy swing instability
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 8)
@@ -1027,7 +1027,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.CIVICS.value, min(0, max(-2, (-iNumCities + 4) / 7))
+                    StabilityCategory.CIVICS, min(0, max(-2, (-iNumCities + 4) / 7))
                 )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
             else:
@@ -1038,7 +1038,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.CIVICS.value, min(0, max(-1, (-iNumCities + 6) / 7))
+                    StabilityCategory.CIVICS, min(0, max(-1, (-iNumCities + 6) / 7))
                 )  # reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
         lResult = 1

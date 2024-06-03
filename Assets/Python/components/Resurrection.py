@@ -217,9 +217,9 @@ def resurectCiv(iDeadCiv):
     if leaders:
         # no change if we are already at the last leader
         for leader in leaders[:-1]:
-            if pDeadCiv.getLeader() == leader[0].value:
+            if pDeadCiv.getLeader() == leader[0]:
                 if percentage_chance(60, strict=True):
-                    pDeadCiv.setLeader(leader[0].value)
+                    pDeadCiv.setLeader(leader[0])
                 break
 
     for iCiv in civilizations().majors().ids():
@@ -352,22 +352,22 @@ def resurectCiv(iDeadCiv):
 
     # Absinthe: the new civs start as slightly stable
     pDeadCiv.changeStabilityBase(
-        StabilityCategory.CITIES.value,
-        -pDeadCiv.getStabilityBase(StabilityCategory.CITIES.value),
+        StabilityCategory.CITIES,
+        -pDeadCiv.getStabilityBase(StabilityCategory.CITIES),
     )
     pDeadCiv.changeStabilityBase(
-        StabilityCategory.CIVICS.value,
-        -pDeadCiv.getStabilityBase(StabilityCategory.CIVICS.value),
+        StabilityCategory.CIVICS,
+        -pDeadCiv.getStabilityBase(StabilityCategory.CIVICS),
     )
     pDeadCiv.changeStabilityBase(
-        StabilityCategory.ECONOMY.value,
-        -pDeadCiv.getStabilityBase(StabilityCategory.ECONOMY.value),
+        StabilityCategory.ECONOMY,
+        -pDeadCiv.getStabilityBase(StabilityCategory.ECONOMY),
     )
     pDeadCiv.changeStabilityBase(
-        StabilityCategory.EXPANSION.value,
-        -pDeadCiv.getStabilityBase(StabilityCategory.EXPANSION.value),
+        StabilityCategory.EXPANSION,
+        -pDeadCiv.getStabilityBase(StabilityCategory.EXPANSION),
     )
-    pDeadCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 5)
+    pDeadCiv.changeStabilityBase(StabilityCategory.EXPANSION, 5)
 
     # Absinthe: refresh dynamic civ name for the new civ
     pDeadCiv.processCivNames()
@@ -392,10 +392,10 @@ def moveBackCapital(iCiv):
         if plot.isCity():
             newCapital = plot.getPlotCity()
             if newCapital.getOwner() == iCiv:
-                if not newCapital.hasBuilding(Building.PALACE.value):
+                if not newCapital.hasBuilding(Building.PALACE):
                     for city in cityList:
-                        city.setHasRealBuilding((Building.PALACE.value), False)
-                    newCapital.setHasRealBuilding((Building.PALACE.value), True)
+                        city.setHasRealBuilding((Building.PALACE), False)
+                    newCapital.setHasRealBuilding((Building.PALACE), True)
                     makeResurectionUnits(iCiv, newCapital.getX(), newCapital.getY())
     else:
         iMaxValue = 0
@@ -409,13 +409,13 @@ def moveBackCapital(iCiv):
         if bestCity is not None:
             for loopCity in cityList:
                 if loopCity != bestCity:
-                    loopCity.setHasRealBuilding((Building.PALACE.value), False)
-            bestCity.setHasRealBuilding((Building.PALACE.value), True)
+                    loopCity.setHasRealBuilding((Building.PALACE), False)
+            bestCity.setHasRealBuilding((Building.PALACE), True)
             makeResurectionUnits(iCiv, bestCity.getX(), bestCity.getY())
 
 
 def makeResurectionUnits(iPlayer, iX, iY):
-    if iPlayer == Civ.CORDOBA.value:
+    if iPlayer == Civ.CORDOBA:
         make_units(Civ.CORDOBA, Unit.SETTLER, (iX, iY), 2)
         make_units(Civ.CORDOBA, Unit.CROSSBOWMAN, (iX, iY), 2)
         make_unit(Civ.CORDOBA, Unit.ISLAMIC_MISSIONARY, (iX, iY))

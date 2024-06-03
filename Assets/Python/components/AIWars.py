@@ -52,7 +52,7 @@ class AIWars:
             }
             for civ, value in turn_peace_human_mapper.items():
                 if iGameTurn % 20 == value:
-                    restorePeaceHuman(civ.value)
+                    restorePeaceHuman(civ)
 
             turn_peace_ai_mapper = {
                 Civ.INDEPENDENT: 0,
@@ -62,7 +62,7 @@ class AIWars:
             }
             for civ, value in turn_peace_ai_mapper.items():
                 if iGameTurn % 36 == value:
-                    restorePeaceAI(civ.value, False)
+                    restorePeaceAI(civ, False)
 
             # Absinthe: automatically turn war on between independent cities and some AI major civs
             # runned on the 2nd turn after restorePeaceAI()
@@ -74,7 +74,7 @@ class AIWars:
             }
             for civ, value in turn_minor_wars_mapper.items():
                 if iGameTurn % 36 == value:
-                    minorWars(civ.value, iGameTurn)
+                    minorWars(civ, iGameTurn)
 
             # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
             # so the AI will declare war much sooner after an indy city appeared in it's core
@@ -86,11 +86,11 @@ class AIWars:
             }
             for civ, value in turn_minor_core_wars_mapper.items():
                 if iGameTurn % 12 == value:
-                    minorCoreWars(civ.value, iGameTurn)
+                    minorCoreWars(civ, iGameTurn)
 
         # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
         if iGameTurn % 9 == 2:
-            pVenice = gc.getPlayer(Civ.VENECIA.value)
+            pVenice = gc.getPlayer(Civ.VENECIA)
             if pVenice.isAlive() and not pVenice.isHuman():
                 pRagusaPlot = gc.getMap().plot(64, 28)
                 if pRagusaPlot.isCity():
@@ -103,7 +103,7 @@ class AIWars:
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
         if iGameTurn > year(1000) and iGameTurn % 7 == 3:
-            pHungary = gc.getPlayer(Civ.HUNGARY.value)
+            pHungary = gc.getPlayer(Civ.HUNGARY)
             if pHungary.isAlive() and not pHungary.isHuman():
                 pZagrebPlot = gc.getMap().plot(62, 34)
                 if pZagrebPlot.isCity():
@@ -121,7 +121,7 @@ class AIWars:
             # skip if already in a world war
             iCiv, iTargetCiv = self.pickCivs()
             if 0 <= iTargetCiv <= civilizations().drop(Civ.BARBARIAN).len():
-                if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
+                if iTargetCiv != Civ.POPE and iCiv != Civ.POPE and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
             data.iNextTurnAIWar = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)

@@ -136,11 +136,11 @@ def getGoalsColor(iPlayer):
 # Plague, UP
 def isMortalUnit(unit):
     # Absinthe: leader units, and great people won't be killed by the plague
-    if unit.isHasPromotion(Promotion.LEADER.value):
+    if unit.isHasPromotion(Promotion.LEADER):
         if not gc.getPlayer(unit.getOwner()).isHuman():
             return False
     iUnitType = unit.getUnitType()
-    if Unit.GREAT_PROPHET.value <= iUnitType <= Unit.GREAT_SPY.value:
+    if Unit.GREAT_PROPHET <= iUnitType <= Unit.GREAT_SPY:
         return False
     return True
 
@@ -209,7 +209,7 @@ def minorWars(iMinorCiv, iGameTurn):
             if (
                 gc.getPlayer(iActiveCiv).isAlive()
                 and not gc.getPlayer(iActiveCiv).isHuman()
-                and not iActiveCiv == Civ.POPE.value
+                and not iActiveCiv == Civ.POPE
             ):
                 if not teamMinor.isAtWar(iActiveCiv):
                     if iGameTurn > civilization(iActiveCiv).date.birth + 20:
@@ -238,7 +238,7 @@ def minorCoreWars(iMinorCiv, iGameTurn):
             if (
                 gc.getPlayer(iActiveCiv).isAlive()
                 and not gc.getPlayer(iActiveCiv).isHuman()
-                and not iActiveCiv == Civ.POPE.value
+                and not iActiveCiv == Civ.POPE
             ):
                 # Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
                 if iGameTurn > civilization(iActiveCiv).date.birth + 40:
@@ -275,13 +275,13 @@ def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
 
     # Absinthe: one free defender unit
     pPlayer = gc.getPlayer(iOldOwner)
-    iFreeDefender = Unit.ARCHER.value
+    iFreeDefender = Unit.ARCHER
     lUnits = [
-        Unit.LINE_INFANTRY.value,
-        Unit.MUSKETMAN.value,
-        Unit.LONGBOWMAN.value,
-        Unit.ARBALEST.value,
-        Unit.CROSSBOWMAN.value,
+        Unit.LINE_INFANTRY,
+        Unit.MUSKETMAN,
+        Unit.LONGBOWMAN,
+        Unit.ARBALEST,
+        Unit.CROSSBOWMAN,
     ]
     for iUnit in lUnits:
         if pPlayer.canTrain(getUniqueUnit(iNewOwner, iUnit), False, False):
@@ -296,14 +296,14 @@ def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
         if unit.getOwner() == iOldOwner:
             # Absinthe: # no civilian units will flip on city secession
             lNoFlip = [
-                Unit.SETTLER.value,
-                Unit.GREAT_PROPHET.value,
-                Unit.GREAT_ARTIST.value,
-                Unit.GREAT_SCIENTIST.value,
-                Unit.GREAT_MERCHANT.value,
-                Unit.GREAT_ENGINEER.value,
-                Unit.GREAT_GENERAL.value,
-                Unit.GREAT_SPY.value,
+                Unit.SETTLER,
+                Unit.GREAT_PROPHET,
+                Unit.GREAT_ARTIST,
+                Unit.GREAT_SCIENTIST,
+                Unit.GREAT_MERCHANT,
+                Unit.GREAT_ENGINEER,
+                Unit.GREAT_GENERAL,
+                Unit.GREAT_SPY,
             ]
             for i in range(0, len(lNoFlip)):
                 if lNoFlip[i] == unitType:
@@ -313,7 +313,7 @@ def flipUnitsInCitySecession(tCityPlot, iNewOwner, iOldOwner):
                 #             the first unit from the old owner should always defect though
                 k += 1
                 if k < 2 or percentage_chance(60, strict=True):
-                    unit.kill(False, Civ.BARBARIAN.value)
+                    unit.kill(False, Civ.BARBARIAN)
                     make_unit(iNewOwner, unitType, (28, 0))
                 # Absinthe: skip unit if it won't defect, so it will move out of the city territory
                 else:
@@ -337,9 +337,9 @@ def flipUnitsInCityBefore(tCityPlot, iNewOwner, iOldOwner):
         unit = plotCity.getUnit(j)
         unitType = unit.getUnitType()
         if unit.getOwner() == iOldOwner:
-            unit.kill(False, Civ.BARBARIAN.value)
+            unit.kill(False, Civ.BARBARIAN)
             if (
-                iNewOwner < civilizations().majors().len() or unitType > Unit.SETTLER.value
+                iNewOwner < civilizations().majors().len() or unitType > Unit.SETTLER
             ):  # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
                 make_unit(iNewOwner, unitType, (28, 0))
         # Absinthe: skip unit if from another player
@@ -368,14 +368,14 @@ def flipUnitsInCityAfter(tCityPlot, iCiv):
     cityPlot = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
     if cityPlot.getNumUnits() == 0:
         # The latest available ranged/gun class
-        RangedClass = getUniqueUnit(iCiv, Unit.ARCHER.value)
+        RangedClass = getUniqueUnit(iCiv, Unit.ARCHER)
         lRangedList = [
-            Unit.LINE_INFANTRY.value,
-            Unit.MUSKETMAN.value,
-            Unit.LONGBOWMAN.value,
-            Unit.ARBALEST.value,
-            Unit.CROSSBOWMAN.value,
-            Unit.ARCHER.value,
+            Unit.LINE_INFANTRY,
+            Unit.MUSKETMAN,
+            Unit.LONGBOWMAN,
+            Unit.ARBALEST,
+            Unit.CROSSBOWMAN,
+            Unit.ARCHER,
         ]
         for iUnit in lRangedList:
             if gc.getPlayer(iCiv).canTrain(getUniqueUnit(iCiv, iUnit), False, False):
@@ -390,7 +390,7 @@ def killAllUnitsInArea(tTopLeft, tBottomRight):
         if iNumUnitsInAPlot > 0:
             for i in range(iNumUnitsInAPlot):
                 unit = plot.getUnit(0)
-                unit.kill(False, Civ.BARBARIAN.value)
+                unit.kill(False, Civ.BARBARIAN)
 
 
 def killUnitsInPlots(lPlots, iCiv):
@@ -402,7 +402,7 @@ def killUnitsInPlots(lPlots, iCiv):
             for i in range(iNumUnitsInAPlot):
                 unit = killPlot.getUnit(iSkippedUnit)
                 if unit.getOwner() == iCiv:
-                    unit.kill(False, Civ.BARBARIAN.value)
+                    unit.kill(False, Civ.BARBARIAN)
                 else:
                     iSkippedUnit += 1
 
@@ -420,7 +420,7 @@ def flipUnitsInArea(tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity,
     if iNumUnitsInAPlot > 0:
         for i in range(iNumUnitsInAPlot):
             unit = killPlot.getUnit(0)
-            unit.kill(False, Civ.BARBARIAN.value)
+            unit.kill(False, Civ.BARBARIAN)
     for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
         iNumUnitsInAPlot = plot.getNumUnits()
         if iNumUnitsInAPlot > 0:
@@ -434,12 +434,12 @@ def flipUnitsInArea(tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity,
                 for i in range(iNumUnitsInAPlot):
                     unit = plot.getUnit(j)
                     if unit.getOwner() == iOldOwner:
-                        unit.kill(False, Civ.BARBARIAN.value)
+                        unit.kill(False, Civ.BARBARIAN)
                         if bKillSettlers:
-                            if unit.getUnitType() > Unit.SETTLER.value:
+                            if unit.getUnitType() > Unit.SETTLER:
                                 make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                         else:
-                            if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
+                            if unit.getUnitType() >= Unit.SETTLER:  # skip animals
                                 make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                     else:
                         j += 1
@@ -473,7 +473,7 @@ def flipUnitsInPlots(lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers)
     if iNumUnitsInAPlot > 0:
         for i in range(iNumUnitsInAPlot):
             unit = killPlot.getUnit(0)
-            unit.kill(False, Civ.BARBARIAN.value)
+            unit.kill(False, Civ.BARBARIAN)
     for (x, y) in lPlots:
         killPlot = gc.getMap().plot(x, y)
         iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -488,12 +488,12 @@ def flipUnitsInPlots(lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers)
                 for i in range(iNumUnitsInAPlot):
                     unit = killPlot.getUnit(j)
                     if unit.getOwner() == iOldOwner:
-                        unit.kill(False, Civ.BARBARIAN.value)
+                        unit.kill(False, Civ.BARBARIAN)
                         if bKillSettlers:
-                            if unit.getUnitType() > Unit.SETTLER.value:
+                            if unit.getUnitType() > Unit.SETTLER:
                                 make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                         else:
-                            if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
+                            if unit.getUnitType() >= Unit.SETTLER:  # skip animals
                                 make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                     else:
                         j += 1
@@ -583,8 +583,8 @@ def cultureManager(
     # city
     if pCity.isCity():
         iCurrentCityCulture = city.getCulture(iOldOwner)
-        if iNewOwner != Civ.BARBARIAN.value:
-            city.setCulture(Civ.BARBARIAN.value, 0, True)
+        if iNewOwner != Civ.BARBARIAN:
+            city.setCulture(Civ.BARBARIAN, 0, True)
 
         # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
         #             for the old civ some of the culture is lost when the city is conquered
@@ -731,14 +731,14 @@ def createGarrisons(tCityPlot, iNewOwner, iNumUnits):
     pPlayer = gc.getPlayer(iNewOwner)
 
     # Sedna17: makes garrison units based on new tech tree/units
-    iUnitType = Unit.ARCHER.value
+    iUnitType = Unit.ARCHER
     lUnits = [
-        Unit.LINE_INFANTRY.value,
-        Unit.MUSKETMAN.value,
-        Unit.ARQUEBUSIER.value,
-        Unit.ARBALEST.value,
-        Unit.ARBALEST.value,
-        Unit.CROSSBOWMAN.value,
+        Unit.LINE_INFANTRY,
+        Unit.MUSKETMAN,
+        Unit.ARQUEBUSIER,
+        Unit.ARBALEST,
+        Unit.ARBALEST,
+        Unit.CROSSBOWMAN,
     ]
     for iUnit in lUnits:
         if pPlayer.canTrain(getUniqueUnit(iNewOwner, iUnit), False, False):
@@ -781,16 +781,16 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
                         / (
                             pCurrent.getCulture(iLoopCiv)
                             + pCurrent.getCulture(iCiv)
-                            + pCurrent.getCulture(Civ.BARBARIAN.value)
-                            + pCurrent.getCulture(Civ.INDEPENDENT.value)
-                            + pCurrent.getCulture(Civ.INDEPENDENT_2.value)
+                            + pCurrent.getCulture(Civ.BARBARIAN)
+                            + pCurrent.getCulture(Civ.INDEPENDENT)
+                            + pCurrent.getCulture(Civ.INDEPENDENT_2)
                         )
                         >= 5
                     ):  # change in vanilla
                         flipUnitsInCityBefore(tCoords, iLoopCiv, iCiv)
                         setTempFlippingCity(tCoords)
                         flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
-                        # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
+                        # city.setHasRealBuilding(Plague.PLAGUE, False) #buggy
                         # Sedna17: Possibly buggy, used to flip units in 2 radius, which could take us outside the map.
                         flipUnitsInArea(
                             (iX - 1, iY - 1), (iX + 1, iY + 1), iLoopCiv, iCiv, False, True
@@ -811,7 +811,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
             setTempFlippingCity(tCoords)
             cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
             flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-            # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
+            # city.setHasRealBuilding(Plague.PLAGUE, False) #buggy
             flipUnitsInCityAfter(getTempFlippingCity(), iNewCiv)
             iCounter += 1
             flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
@@ -823,7 +823,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
                 + 2
             )
             if iNewCiv == max(civilizations().independents().ids()) + 1:
-                iNewCiv = Civ.BARBARIAN.value
+                iNewCiv = Civ.BARBARIAN
             flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
             setTempFlippingCity(tCoords)
             cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
@@ -834,7 +834,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
     if not bAssignOneCity:
         # flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
         for unit in units().owner(iCiv).entities():
-            unit.kill(False, Civ.BARBARIAN.value)
+            unit.kill(False, Civ.BARBARIAN)
         resetUHV(iCiv)
 
         setLastTurnAlive(iCiv, turn())
@@ -889,7 +889,7 @@ def outerInvasion(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
-        if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+        if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 if pCurrent.countTotalCulture() == 0:
                     return True
@@ -900,7 +900,7 @@ def forcedInvasion(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
-        if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+        if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 return True
     return False
@@ -909,7 +909,7 @@ def forcedInvasion(tCoords, argsList):
 def outerSeaSpawn(tCoords, argsList):
     """Plot is valid if it's water (coast), it isn't occupied by any unit and if it isn't a civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-    if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
+    if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST:
         if not pCurrent.isUnit():
             if pCurrent.countTotalCulture() == 0:
                 for plot in plots().surrounding(tCoords).entities():
@@ -922,7 +922,7 @@ def outerSeaSpawn(tCoords, argsList):
 def innerSeaSpawn(tCoords, argsList):
     """Plot is valid if it's water (coast) and it isn't occupied by any unit. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-    if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
+    if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST:
         if not pCurrent.isUnit():
             for plot in plots().surrounding(tCoords).entities():
                 if plot.isUnit():
@@ -935,7 +935,7 @@ def outerSpawn(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
-        if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+        if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 if pCurrent.countTotalCulture() == 0:
                     for plot in plots().surrounding(tCoords).entities():
@@ -949,7 +949,7 @@ def innerSpawn(tCoords, argsList):
     """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it's in a given civ's territory. Unit check extended to adjacent plots."""
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isHills() or pCurrent.isFlatlands():
-        if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
+        if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 if pCurrent.getOwner() in argsList:
                     for plot in plots().surrounding(tCoords).entities():
@@ -968,11 +968,11 @@ def goodPlots(tCoords, argsList):
                 if (
                     pCurrent.getTerrainType()
                     not in [
-                        Terrain.DESERT.value,
-                        Terrain.TUNDRA.value,
+                        Terrain.DESERT,
+                        Terrain.TUNDRA,
                     ]
                     and pCurrent.getFeatureType()
-                    not in [Feature.MARSH.value, Feature.JUNGLE.value]
+                    not in [Feature.MARSH, Feature.JUNGLE]
                 ):
                     if pCurrent.countTotalCulture() == 0:
                         return True
@@ -990,7 +990,7 @@ def ownedCityPlots(tCoords, argsList):
 
 def collapseImmune(iCiv):
     # 3MiroUP: Emperor
-    if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
+    if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS):
         plot = gc.getMap().plot(*civilization(iCiv).location.capital)
         if plot.isCity():
             if plot.getOwner() == iCiv:
@@ -1034,8 +1034,8 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
     # determine the target religion, if not supplied by the popup decision (for the AI)
     if iReligion == -1:
         for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
-            if not city.isHolyCityByType(iReligion.value):  # spare holy cities
-                if city.isHasReligion(iReligion.value):
+            if not city.isHolyCityByType(iReligion):  # spare holy cities
+                if city.isHasReligion(iReligion):
                     # so this will be the iReligion for further calculations
                     break
 
@@ -1166,7 +1166,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
 
         # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
         if gc.hasUP(
-            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value
+            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION
         ):  # Spanish UP
             pPlayer.changeProsecutionCount(4)
         else:
@@ -1191,7 +1191,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
 
         # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
         if gc.hasUP(
-            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value
+            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION
         ):  # Spanish UP
             pPlayer.changeProsecutionCount(2)
         else:
@@ -1214,7 +1214,7 @@ def saint(iOwner, iUnitID):
     # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
     pPlayer = gc.getPlayer(iOwner)
     # Absinthe: Wonders: Boyana Church wonder effect
-    if pPlayer.countNumBuildings(Wonder.BOYANA_CHURCH.value) > 0:
+    if pPlayer.countNumBuildings(Wonder.BOYANA_CHURCH) > 0:
         pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS * 3 / 2 + 2)
     else:
         pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS)
@@ -1470,13 +1470,13 @@ def getProvinceStabilityLevel(iCiv, iProvince):
 
     pPlayer = gc.getPlayer(iCiv)
     iProvType = pPlayer.getProvinceType(iProvince)
-    if iProvType == ProvinceType.CORE.value:
+    if iProvType == ProvinceType.CORE:
         return 4  # core
-    elif iProvType == ProvinceType.HISTORICAL.value:
+    elif iProvType == ProvinceType.HISTORICAL:
         return 3  # natural/historical
-    elif iProvType == ProvinceType.POTENTIAL.value:
+    elif iProvType == ProvinceType.POTENTIAL:
         return 2  # potential
-    elif iProvType == ProvinceType.CONTESTED.value:
+    elif iProvType == ProvinceType.CONTESTED:
         return 1  # border/contested
     else:
         return 0  # unstable
@@ -1535,7 +1535,7 @@ def getNumberCargoShips(iPlayer):
 
 
 def isWonder(iBuilding):
-    return iBuilding in [w.value for w in Wonder]
+    return iBuilding in [w for w in Wonder]
 
 
 def getDawnOfManText(iPlayer):
@@ -1596,7 +1596,7 @@ def calculate_gold_rate(identifier):
     totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
     totalInflatedCosts = pPlayer.calculateInflatedCosts()
     totalMercenaryCost = (
-        pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+        pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN) + 99
     ) / 100
 
     # Colony Upkeep

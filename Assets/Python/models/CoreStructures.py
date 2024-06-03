@@ -386,7 +386,7 @@ def player(identifier=None):
         return gc.getPlayer(identifier)
 
     if isinstance(identifier, CoreTypes.Civ):
-        return player(identifier.value)
+        return player(identifier)
 
     if isinstance(identifier, Civilization):
         return identifier.player
@@ -419,7 +419,7 @@ def team(identifier=None):
         return gc.getTeam(teamtype(identifier))
 
     if isinstance(identifier, CoreTypes.Civ):
-        return team(identifier.value)
+        return team(identifier)
 
     if isinstance(identifier, Civilization):
         return identifier.team
@@ -1164,7 +1164,7 @@ class Locations(EntitiesCollection):
         return self._closest(*args).result
 
     def closest_distance(self, *args):
-        return self._closest(*args).value
+        return self._closest(*args)
 
     def closest_pair(self, locations):
         if not isinstance(locations, Locations):
