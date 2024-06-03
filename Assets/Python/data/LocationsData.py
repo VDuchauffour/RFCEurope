@@ -18,12 +18,12 @@ from CoreTypes import (
 from BaseStructures import (
     CompanyDataMapper,
     DataMapper,
-    IntEnumDataMapper,
+    EnumDataMapper,
     ScenarioDataMapper,
     CivDataMapper,
 )
 
-CITIES = IntEnumDataMapper(
+CITIES = EnumDataMapper(
     {
         City.CONSTANTINOPLE: (81, 24),
         City.PARIS: (44, 46),
@@ -133,7 +133,7 @@ CITIES = IntEnumDataMapper(
     }
 )
 
-ALTERNATE_CITIES_LOCATION = IntEnumDataMapper(
+ALTERNATE_CITIES_LOCATION = EnumDataMapper(
     {
         City.TOULOUSE: [(40, 34)],
         City.INVERNESS: [(37, 65)],
@@ -145,7 +145,7 @@ ALTERNATE_CITIES_LOCATION = IntEnumDataMapper(
 
 INDY_CITIES_TO_BE_REDUCED = [City.INVERNESS, City.NORWICH, City.LEICESTER, City.UPPSALA]
 
-REGIONS = IntEnumDataMapper(
+REGIONS = EnumDataMapper(
     {
         Region.IBERIA: [
             Province.GALICIA,
@@ -498,7 +498,7 @@ COMPANY_REGION = CompanyDataMapper(
 )
 
 # Used for the Colony panel
-COLONY_LOCATIONS = IntEnumDataMapper(
+COLONY_LOCATIONS = EnumDataMapper(
     {
         Colony.VINLAND: (275, 150),
         Colony.GOLD_COAST: (480, 335),
@@ -525,7 +525,7 @@ COLONY_LOCATIONS = IntEnumDataMapper(
     }
 )
 
-LAKE_LOCATIONS = IntEnumDataMapper(
+LAKE_LOCATIONS = EnumDataMapper(
     {
         Lake.LOUGH_NEAGH: [(32, 61)],
         Lake.LAKE_BALATON: [(64, 36)],
@@ -1421,7 +1421,7 @@ CIV_AREAS = CivDataMapper(
 
 CIV_PROVINCES = CivDataMapper(
     {
-        Civ.BYZANTIUM: IntEnumDataMapper(
+        Civ.BYZANTIUM: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.CONSTANTINOPLE,
@@ -1479,7 +1479,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.FRANCE: IntEnumDataMapper(
+        Civ.FRANCE: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.ILE_DE_FRANCE, Province.ORLEANS, Province.CHAMPAGNE],
                 ProvinceType.HISTORICAL: [
@@ -1510,7 +1510,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.ARABIA: IntEnumDataMapper(
+        Civ.ARABIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.SYRIA,
@@ -1537,7 +1537,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.BULGARIA: IntEnumDataMapper(
+        Civ.BULGARIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.MOESIA],
                 ProvinceType.HISTORICAL: [Province.MACEDONIA, Province.WALLACHIA],
@@ -1552,7 +1552,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.CORDOBA: IntEnumDataMapper(
+        Civ.CORDOBA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.ANDALUSIA, Province.VALENCIA, Province.LA_MANCHA],
                 ProvinceType.HISTORICAL: [Province.TETOUAN],
@@ -1574,7 +1574,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.VENECIA: IntEnumDataMapper(
+        Civ.VENECIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.VERONA],
                 ProvinceType.HISTORICAL: [Province.DALMATIA],
@@ -1593,7 +1593,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.BURGUNDY: IntEnumDataMapper(
+        Civ.BURGUNDY: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.BURGUNDY],
                 ProvinceType.HISTORICAL: [Province.PROVENCE, Province.FLANDERS],
@@ -1615,7 +1615,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.GERMANY: IntEnumDataMapper(
+        Civ.GERMANY: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.FRANCONIA,
@@ -1649,7 +1649,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.NOVGOROD: IntEnumDataMapper(
+        Civ.NOVGOROD: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.NOVGOROD, Province.KARELIA],
                 ProvinceType.HISTORICAL: [Province.ROSTOV, Province.VOLOGDA],
@@ -1658,7 +1658,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.NORWAY: IntEnumDataMapper(
+        Civ.NORWAY: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.NORWAY, Province.VESTFOLD],
                 ProvinceType.HISTORICAL: [Province.ICELAND],
@@ -1678,7 +1678,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.KIEV: IntEnumDataMapper(
+        Civ.KIEV: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.KIEV,
@@ -1704,7 +1704,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.HUNGARY: IntEnumDataMapper(
+        Civ.HUNGARY: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.HUNGARY,
@@ -1731,7 +1731,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.CASTILE: IntEnumDataMapper(
+        Civ.CASTILE: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LEON, Province.GALICIA, Province.CASTILE],
                 ProvinceType.HISTORICAL: [],
@@ -1764,7 +1764,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.DENMARK: IntEnumDataMapper(
+        Civ.DENMARK: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.DENMARK, Province.SKANELAND],
                 ProvinceType.HISTORICAL: [],
@@ -1788,7 +1788,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.SCOTLAND: IntEnumDataMapper(
+        Civ.SCOTLAND: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.SCOTLAND],
                 ProvinceType.HISTORICAL: [Province.THE_ISLES],
@@ -1797,7 +1797,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.POLAND: IntEnumDataMapper(
+        Civ.POLAND: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.GREATER_POLAND,
@@ -1819,7 +1819,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.GENOA: IntEnumDataMapper(
+        Civ.GENOA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LIGURIA],
                 ProvinceType.HISTORICAL: [Province.CORSICA, Province.SARDINIA],
@@ -1843,7 +1843,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.MOROCCO: IntEnumDataMapper(
+        Civ.MOROCCO: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.MARRAKESH, Province.MOROCCO, Province.FEZ],
                 ProvinceType.HISTORICAL: [Province.TETOUAN],
@@ -1858,7 +1858,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.ENGLAND: IntEnumDataMapper(
+        Civ.ENGLAND: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.LONDON,
@@ -1884,7 +1884,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.PORTUGAL: IntEnumDataMapper(
+        Civ.PORTUGAL: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LUSITANIA],
                 ProvinceType.HISTORICAL: [Province.AZORES],
@@ -1898,7 +1898,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.ARAGON: IntEnumDataMapper(
+        Civ.ARAGON: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.ARAGON,
@@ -1926,7 +1926,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.SWEDEN: IntEnumDataMapper(
+        Civ.SWEDEN: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.NORRLAND, Province.SVEALAND],
                 ProvinceType.HISTORICAL: [Province.GOTALAND, Province.GOTLAND],
@@ -1947,7 +1947,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.PRUSSIA: IntEnumDataMapper(
+        Civ.PRUSSIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.PRUSSIA],
                 ProvinceType.HISTORICAL: [],
@@ -1962,7 +1962,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.LITHUANIA: IntEnumDataMapper(
+        Civ.LITHUANIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LITHUANIA],
                 ProvinceType.HISTORICAL: [Province.SUVALKIJA, Province.MINSK, Province.POLOTSK],
@@ -1988,7 +1988,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.AUSTRIA: IntEnumDataMapper(
+        Civ.AUSTRIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.AUSTRIA, Province.CARINTHIA],
                 ProvinceType.HISTORICAL: [Province.BOHEMIA, Province.MORAVIA],
@@ -2012,7 +2012,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.OTTOMAN: IntEnumDataMapper(
+        Civ.OTTOMAN: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.OPSIKION,
@@ -2064,7 +2064,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.MOSCOW: IntEnumDataMapper(
+        Civ.MOSCOW: EnumDataMapper(
             {
                 ProvinceType.CORE: [
                     Province.MOSCOW,
@@ -2107,7 +2107,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.DUTCH: IntEnumDataMapper(
+        Civ.DUTCH: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.NETHERLANDS],
                 ProvinceType.HISTORICAL: [Province.FLANDERS],
@@ -2121,7 +2121,7 @@ CIV_PROVINCES = CivDataMapper(
 
 CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
     {
-        Civ.ARABIA: IntEnumDataMapper(
+        Civ.ARABIA: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.CYRENAICA, ProvinceType.CONTESTED),
@@ -2140,7 +2140,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.BULGARIA: IntEnumDataMapper(
+        Civ.BULGARIA: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.SERBIA, ProvinceType.CONTESTED),
@@ -2150,7 +2150,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.CORDOBA: IntEnumDataMapper(
+        Civ.CORDOBA: EnumDataMapper(
             {
                 Event.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
                 + [
@@ -2165,7 +2165,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.VENECIA: IntEnumDataMapper(
+        Civ.VENECIA: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.DALMATIA, ProvinceType.NONE),
@@ -2182,7 +2182,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.BURGUNDY: IntEnumDataMapper(
+        Civ.BURGUNDY: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.PROVENCE, ProvinceType.POTENTIAL),
@@ -2191,7 +2191,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.GERMANY: IntEnumDataMapper(
+        Civ.GERMANY: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.LORRAINE, ProvinceType.CONTESTED),
@@ -2203,7 +2203,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.NORWAY: IntEnumDataMapper(
+        Civ.NORWAY: EnumDataMapper(
             {
                 Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
@@ -2218,7 +2218,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.HUNGARY: IntEnumDataMapper(
+        Civ.HUNGARY: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BULGARIA, Province.BANAT, ProvinceType.NONE),
@@ -2227,11 +2227,11 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.CASTILE: IntEnumDataMapper(
+        Civ.CASTILE: EnumDataMapper(
             {Event.ON_SPAWN: [(Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL)]},
             do_not_cast=True,
         ),
-        Civ.DENMARK: IntEnumDataMapper(
+        Civ.DENMARK: EnumDataMapper(
             {
                 Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
@@ -2246,7 +2246,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.MOROCCO: IntEnumDataMapper(
+        Civ.MOROCCO: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.CORDOBA, Province.MOROCCO, ProvinceType.NONE),
@@ -2257,7 +2257,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.ENGLAND: IntEnumDataMapper(
+        Civ.ENGLAND: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.NORMANDY, ProvinceType.POTENTIAL),
@@ -2271,7 +2271,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.ARAGON: IntEnumDataMapper(
+        Civ.ARAGON: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.APULIA, ProvinceType.CONTESTED),
@@ -2286,7 +2286,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.SWEDEN: IntEnumDataMapper(
+        Civ.SWEDEN: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.NORWAY, Province.SVEALAND, ProvinceType.NONE),
@@ -2297,7 +2297,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.PRUSSIA: IntEnumDataMapper(
+        Civ.PRUSSIA: EnumDataMapper(
             {
                 Event.ON_DATETURN: DataMapper(
                     {
@@ -2316,7 +2316,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.AUSTRIA: IntEnumDataMapper(
+        Civ.AUSTRIA: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.HUNGARY, Province.CARINTHIA, ProvinceType.CONTESTED),
@@ -2331,7 +2331,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.OTTOMAN: IntEnumDataMapper(
+        Civ.OTTOMAN: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.CONTESTED),
@@ -2351,7 +2351,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.MOSCOW: IntEnumDataMapper(
+        Civ.MOSCOW: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.NOVGOROD, Province.ROSTOV, ProvinceType.CONTESTED),
@@ -2360,7 +2360,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.DUTCH: IntEnumDataMapper(
+        Civ.DUTCH: EnumDataMapper(
             {
                 Event.ON_SPAWN: [
                     (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.NONE),
@@ -2372,7 +2372,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             do_not_cast=True,
         ),
     }
-).fill_missing_members(IntEnumDataMapper({}))
+).fill_missing_members(EnumDataMapper({}))
 
 CIV_VISIBLE_AREA_500AD = CivDataMapper(
     {
@@ -2619,7 +2619,7 @@ CIV_VISIBLE_AREA = ScenarioDataMapper(
 )
 
 # Used for Congresses and Victory
-CIV_GROUPS = IntEnumDataMapper(
+CIV_GROUPS = EnumDataMapper(
     {
         CivGroup.EASTERN: [
             Civ.BYZANTIUM,

@@ -109,7 +109,7 @@ class DataMapper(dict):
 class EnumDataMapper(DataMapper):
     """Class to map data to Enum."""
 
-    BASE_CLASS = Enum
+    BASE_CLASS = (IntEnum, int)
 
     def __init__(self, elements, default=None, do_not_cast=False):
         super(EnumDataMapper, self).__init__(elements, default)
@@ -136,12 +136,6 @@ class EnumDataMapper(DataMapper):
         for m in obj.BASE_CLASS._member_names_:
             obj[obj.BASE_CLASS[m]] = obj[obj.BASE_CLASS[m]]
         return obj
-
-
-class IntEnumDataMapper(EnumDataMapper):
-    """Class to map data to Enum."""
-
-    BASE_CLASS = (IntEnum, int)
 
 
 class Attributes(dict):
