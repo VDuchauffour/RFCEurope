@@ -36,7 +36,7 @@ PyInfo = PyHelpers.PyInfo
 
 # globals
 ###################################################
-class CvEventManager:
+class CvEventManager(object):
 
     global iImpBeforeCity
     iImpBeforeCity = 0
