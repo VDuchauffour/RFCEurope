@@ -239,7 +239,7 @@ class EnumMeta(type):
             # If another member with the same value was already defined, the
             # new member becomes an alias to the existing one.
             for name, canonical_member in enum_class._member_map_.items():
-                if canonical_member == enum_member._value_:
+                if canonical_member.value == enum_member._value_:
                     enum_member = canonical_member
                     break
             else:
@@ -638,7 +638,7 @@ def __new__(cls, value):
     # __call__ (i.e. Color(3) ), and by pickle
     if type(value) is cls:
         # For lookups like Color(Color.red)
-        value = value
+        value = value.value
         # return value
     # by-value search for a matching enum member
     # see if it's in the reverse mapping (for hashable values)
@@ -648,7 +648,7 @@ def __new__(cls, value):
     except TypeError:
         # not there, now do long search -- O(n) behavior
         for member in cls._member_map_.values():
-            if member == value:
+            if member.value == value:
                 return member
     raise ValueError("%s is not a valid %s" % (value, cls.__name__))
 
@@ -699,7 +699,7 @@ def __format__(self, format_spec):
     # mix-in branch
     else:
         cls = self._member_type_
-        val = self
+        val = self.value
     return cls.__format__(val, format_spec)
 
 
