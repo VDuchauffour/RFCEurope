@@ -1164,7 +1164,7 @@ class Locations(EntitiesCollection):
         return self._closest(*args).result
 
     def closest_distance(self, *args):
-        return self._closest(*args)
+        return self._closest(*args).value
 
     def closest_pair(self, locations):
         if not isinstance(locations, Locations):
