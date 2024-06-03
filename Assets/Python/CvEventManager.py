@@ -271,7 +271,10 @@ class CvEventManager:
     def reportEvent(self, entry, context, argsList):
         "Report an Event to Events.log"
         if gc.getGame().getActivePlayer() != -1:
-            message = "DEBUG Event: %s (%s)" % (entry[0], gc.getActivePlayer().getCivilizationShortDescription(0))
+            message = "DEBUG Event: %s (%s)" % (
+                entry[0],
+                gc.getActivePlayer().getCivilizationShortDescription(0),
+            )
             CyInterface().addImmediateMessage(message, "")
             CvUtil.pyPrint(message)
         return 0
@@ -2062,14 +2065,12 @@ class CvEventManager:
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
                 # Absinthe: collect all wonders, including shrines
-                lAllWonders = [w for w in Wonder]
-                for iWonder in [
+                lAllWonders = [w for w in Wonder] + [
                     Building.CATHOLIC_SHRINE,
                     Building.ORTHODOX_SHRINE,
                     Building.ISLAMIC_SHRINE,
                     Building.PROTESTANT_SHRINE,
-                ]:
-                    lAllWonders.append(iWonder)
+                ]
                 for iWonder in lAllWonders:
                     if pCity.getNumBuilding(iWonder) > 0:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
