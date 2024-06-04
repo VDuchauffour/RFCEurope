@@ -34,7 +34,7 @@ RELIGION_PERSECUTION_ORDER = EnumDataMapper(
             Religion.ORTHODOXY,
             Religion.CATHOLICISM,
         ],
-    }
+    },
 )
 RELIGIOUS_BUILDINGS = EnumDataMapper(
     {
@@ -62,7 +62,7 @@ RELIGIOUS_BUILDINGS = EnumDataMapper(
             Building.JEWISH_QUARTER,
             Wonder.KAZIMIERZ,
         ],
-    }
+    },
 )
 RELIGIOUS_WONDERS = [
     Wonder.MONASTERY_OF_CLUNY,

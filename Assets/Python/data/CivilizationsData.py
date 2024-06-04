@@ -498,7 +498,7 @@ CIV_INITIAL_WORKERS = CivDataMapper(
         Civ.MOSCOW: 4,
         Civ.DUTCH: 4,
         Civ.POPE: 0,
-    }
+    },
 )
 
 CIV_INITIAL_UNITS = CivDataMapper(
@@ -521,14 +521,12 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                 },
             },
-            do_not_cast=True,
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
                 PlayerType.ANY: {Unit.ARCHER: 4, Unit.SETTLER: 2, Unit.BULGARIAN_KONNIK: 5},
                 PlayerType.AI: {Unit.ARCHER: 1, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
             },
-            do_not_cast=True,
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
@@ -546,7 +544,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.HUMAN: {Unit.HORSE_ARCHER: 3},
             },
-            do_not_cast=True,
         ),
         Civ.VENECIA: EnumDataMapper(
             {
@@ -557,7 +554,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 1,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.BURGUNDY: EnumDataMapper(
             {
@@ -569,7 +565,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 1,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.GERMANY: EnumDataMapper(
             {
@@ -583,7 +578,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.ARCHER: 2, Unit.SETTLER: 1, Unit.CATHOLIC_MISSIONARY: 1},
             },
-            do_not_cast=True,
         ),
         Civ.NOVGOROD: EnumDataMapper(
             {
@@ -595,7 +589,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.ARCHER: 4, Unit.SETTLER: 1},
             },
-            do_not_cast=True,
         ),
         Civ.NORWAY: EnumDataMapper(
             {
@@ -606,7 +599,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SWORDSMAN: 1,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.KIEV: EnumDataMapper(
             {
@@ -618,7 +610,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.ARCHER: 3, Unit.SPEARMAN: 3, Unit.SETTLER: 2},
             },
-            do_not_cast=True,
         ),
         Civ.HUNGARY: EnumDataMapper(
             {
@@ -630,7 +621,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.ARCHER: 2, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
             },
-            do_not_cast=True,
         ),
         Civ.CASTILE: EnumDataMapper(
             {
@@ -644,11 +634,15 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.CROSSBOWMAN: 1, Unit.SWORDSMAN: 2, Unit.LANCER: 2},
             },
-            do_not_cast=True,
         ),
         Civ.DENMARK: EnumDataMapper(
-            {PlayerType.ANY: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 2, Unit.DENMARK_HUSKARL: 4}},
-            do_not_cast=True,
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.SETTLER: 2,
+                    Unit.DENMARK_HUSKARL: 4,
+                }
+            },
         ),
         Civ.SCOTLAND: EnumDataMapper(
             {
@@ -659,7 +653,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 2,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.POLAND: EnumDataMapper(
             {
@@ -672,7 +665,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.CROSSBOWMAN: 4, Unit.SETTLER: 1},
             },
-            do_not_cast=True,
         ),
         Civ.GENOA: EnumDataMapper(
             {
@@ -683,7 +675,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 1,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
@@ -696,7 +687,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 1, Unit.ISLAMIC_MISSIONARY: 2},
             },
-            do_not_cast=True,
         ),
         Civ.ENGLAND: EnumDataMapper(
             {
@@ -714,7 +704,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 1,
                 },
             },
-            do_not_cast=True,
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
@@ -727,7 +716,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 1,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.ARAGON: EnumDataMapper(
             {
@@ -738,7 +726,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 2,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
@@ -752,7 +739,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 2,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.PRUSSIA: EnumDataMapper(
             {
@@ -765,7 +751,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 3,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
@@ -776,7 +761,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.GUISARME: 3,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
@@ -790,7 +774,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CATHOLIC_MISSIONARY: 2,
                 }
             },
-            do_not_cast=True,
         ),
         Civ.OTTOMAN: EnumDataMapper(
             {
@@ -806,7 +789,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                 },
                 PlayerType.AI: {Unit.KNIGHT: 2, Unit.HORSE_ARCHER: 2, Unit.LONGBOWMAN: 3},
             },
-            do_not_cast=True,
         ),
         Civ.MOSCOW: EnumDataMapper(
             {
@@ -825,7 +807,6 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.ORTHODOX_MISSIONARY: 1,
                 },
             },
-            do_not_cast=True,
         ),
         Civ.DUTCH: EnumDataMapper(
             {
@@ -836,9 +817,8 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.PROTESTANT_MISSIONARY: 2,
                 }
             },
-            do_not_cast=True,
         ),
-    }
+    },
 )
 
 CIV_ADDITIONAL_UNITS = CivDataMapper(
@@ -846,122 +826,162 @@ CIV_ADDITIONAL_UNITS = CivDataMapper(
         Civ.BYZANTIUM: None,
         Civ.FRANCE: None,
         Civ.ARABIA: EnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+                PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+            },
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.BULGARIAN_KONNIK: 2},
                 PlayerType.HUMAN: {Unit.BULGARIAN_KONNIK: 1},
             },
-            do_not_cast=True,
         ),
         Civ.CORDOBA: EnumDataMapper(
-            {PlayerType.AI: {Unit.AXEMAN: 2}, PlayerType.HUMAN: {Unit.AXEMAN: 1}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.AXEMAN: 2},
+                PlayerType.HUMAN: {Unit.AXEMAN: 1},
+            }
         ),
         Civ.VENECIA: EnumDataMapper(
-            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.CROSSBOWMAN: 3},
+                PlayerType.HUMAN: {Unit.CROSSBOWMAN: 2},
+            },
         ),
         Civ.BURGUNDY: EnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.LANCER: 3},
+                PlayerType.HUMAN: {Unit.LANCER: 1},
+            }
         ),
         Civ.GERMANY: EnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.LANCER: 3},
+                PlayerType.HUMAN: {Unit.LANCER: 1},
+            }
         ),
         Civ.NOVGOROD: EnumDataMapper(
-            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.CROSSBOWMAN: 3},
+                PlayerType.HUMAN: {Unit.CROSSBOWMAN: 1},
+            },
         ),
         Civ.NORWAY: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.VIKING_BERSERKER: 3},
                 PlayerType.HUMAN: {Unit.VIKING_BERSERKER: 1},
             },
-            do_not_cast=True,
         ),
         Civ.KIEV: EnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+                PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+            },
         ),
         Civ.HUNGARY: EnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+                PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+            },
         ),
         Civ.CASTILE: EnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 4}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.LANCER: 4},
+                PlayerType.HUMAN: {Unit.LANCER: 1},
+            }
         ),
         Civ.DENMARK: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.DENMARK_HUSKARL: 3},
                 PlayerType.HUMAN: {Unit.DENMARK_HUSKARL: 1},
             },
-            do_not_cast=True,
         ),
         Civ.SCOTLAND: EnumDataMapper(
-            {PlayerType.AI: {Unit.AXEMAN: 4}, PlayerType.HUMAN: {Unit.AXEMAN: 2}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.AXEMAN: 4},
+                PlayerType.HUMAN: {Unit.AXEMAN: 2},
+            },
         ),
         Civ.POLAND: EnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
+            {
+                PlayerType.AI: {Unit.LANCER: 3},
+                PlayerType.HUMAN: {Unit.LANCER: 1},
+            },
         ),
         Civ.GENOA: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+            },
         ),
         Civ.MOROCCO: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 2}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 2},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+            },
         ),
         Civ.ENGLAND: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+            },
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.PORTUGAL_FOOT_KNIGHT: 4},
                 PlayerType.HUMAN: {Unit.PORTUGAL_FOOT_KNIGHT: 1},
             },
-            do_not_cast=True,
         ),
         Civ.ARAGON: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2},
+            },
         ),
         Civ.SWEDEN: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+            },
         ),
         Civ.PRUSSIA: EnumDataMapper(
-            {PlayerType.AI: {Unit.TEUTONIC: 3}, PlayerType.HUMAN: {Unit.TEUTONIC: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.TEUTONIC: 3},
+                PlayerType.HUMAN: {Unit.TEUTONIC: 1},
+            },
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.LITHUANIAN_BAJORAS: 3},
                 PlayerType.HUMAN: {Unit.LITHUANIAN_BAJORAS: 1},
             },
-            do_not_cast=True,
         ),
         Civ.AUSTRIA: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2},
+            },
         ),
         Civ.OTTOMAN: EnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+                PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+            },
         ),
         Civ.MOSCOW: EnumDataMapper(
-            {PlayerType.AI: {Unit.MOSCOW_BOYAR: 3}, PlayerType.HUMAN: {Unit.MOSCOW_BOYAR: 1}},
-            do_not_cast=True,
+            {
+                PlayerType.AI: {Unit.MOSCOW_BOYAR: 3},
+                PlayerType.HUMAN: {Unit.MOSCOW_BOYAR: 1},
+            },
         ),
         Civ.DUTCH: EnumDataMapper(
             {
                 PlayerType.AI: {Unit.NETHERLANDS_GRENADIER: 4},
                 PlayerType.HUMAN: {Unit.NETHERLANDS_GRENADIER: 2},
             },
-            do_not_cast=True,
         ),
-    }
+    },
 )
 
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
@@ -995,7 +1015,7 @@ CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
         Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
         Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
         Civ.POPE: {InitialCondition.GOLD: 50, InitialCondition.FAITH: 0},
-    }
+    },
 )
 
 CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
@@ -1029,17 +1049,16 @@ CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
         Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
         Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
         Civ.POPE: {InitialCondition.GOLD: 200, InitialCondition.FAITH: 0},
-    }
+    },
 )
 
 CIV_SCENARIO_CONDITION = ScenarioDataMapper(
     {
         Scenario.i500AD: CIV_SCENARIO_CONDITION_500AD,
         Scenario.i1200AD: CIV_SCENARIO_CONDITION_1200AD,
-    }
+    },
 )
 
-# Used by GameBalance
 CIV_INITIAL_BUILDINGS = CivDataMapper(
     {
         Civ.BYZANTIUM: None,
@@ -1081,10 +1100,9 @@ CIV_INITIAL_BUILDINGS = CivDataMapper(
             Building.SMOKEHOUSE,
         ],
         Civ.POPE: None,
-    }
+    },
 )
 
-# Used by GameBalance
 CIV_HUMAN_MODIFIERS = CivDataMapper(
     {
         Civ.BYZANTIUM: EnumDataMapper(
@@ -1093,7 +1111,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (200, 150, 200, 350),
                 Modifier.SUPPORT: (50, 150, 70, 50, 120),
             },
-            do_not_cast=True,
         ),
         Civ.FRANCE: EnumDataMapper(
             {
@@ -1101,7 +1118,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (150, 120, 125, 130),
                 Modifier.SUPPORT: (30, 120, 70, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ARABIA: EnumDataMapper(
             {
@@ -1109,7 +1125,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (150, 125, 150, 230),
                 Modifier.SUPPORT: (30, 150, 70, 40, 120),
             },
-            do_not_cast=True,
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
@@ -1117,7 +1132,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (150, 150, 125, 200),
                 Modifier.SUPPORT: (40, 150, 80, 50, 120),
             },
-            do_not_cast=True,
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
@@ -1125,7 +1139,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (200, 180, 140, 230),
                 Modifier.SUPPORT: (40, 150, 70, 40, 120),
             },
-            do_not_cast=True,
         ),
         Civ.VENECIA: EnumDataMapper(
             {
@@ -1133,7 +1146,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 130),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.BURGUNDY: EnumDataMapper(
             {
@@ -1141,7 +1153,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (150, 120, 120, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.GERMANY: EnumDataMapper(
             {
@@ -1149,7 +1160,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (140, 140, 125, 130),
                 Modifier.SUPPORT: (20, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.NOVGOROD: EnumDataMapper(
             {
@@ -1157,7 +1167,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 125, 125, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.NORWAY: EnumDataMapper(
             {
@@ -1165,7 +1174,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 125, 100, 140),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.KIEV: EnumDataMapper(
             {
@@ -1173,7 +1181,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 150, 125, 150),
                 Modifier.SUPPORT: (30, 120, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.HUNGARY: EnumDataMapper(
             {
@@ -1181,7 +1188,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 125, 100, 130),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.CASTILE: EnumDataMapper(
             {
@@ -1189,7 +1195,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 100, 100, 120),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.DENMARK: EnumDataMapper(
             {
@@ -1197,7 +1202,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 120),
                 Modifier.SUPPORT: (20, 100, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.SCOTLAND: EnumDataMapper(
             {
@@ -1205,7 +1209,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (110, 110, 110, 125),
                 Modifier.SUPPORT: (25, 100, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.POLAND: EnumDataMapper(
             {
@@ -1213,7 +1216,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 120, 130),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.GENOA: EnumDataMapper(
             {
@@ -1221,7 +1223,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 125),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
@@ -1229,7 +1230,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 120, 175),
                 Modifier.SUPPORT: (25, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ENGLAND: EnumDataMapper(
             {
@@ -1237,7 +1237,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 110),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
@@ -1245,7 +1244,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 90, 100, 100),
                 Modifier.SUPPORT: (20, 100, 70, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ARAGON: EnumDataMapper(
             {
@@ -1253,7 +1251,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 100, 100, 125),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
@@ -1261,7 +1258,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 80, 100, 100),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.PRUSSIA: EnumDataMapper(
             {
@@ -1269,7 +1265,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (75, 80, 120, 100),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
@@ -1277,7 +1272,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 100, 110, 100),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
@@ -1286,7 +1280,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 80, 100, 100),
                 Modifier.SUPPORT: (20, 80, 80, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.OTTOMAN: EnumDataMapper(
             {
@@ -1294,7 +1287,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (75, 75, 100, 110),
                 Modifier.SUPPORT: (30, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.MOSCOW: EnumDataMapper(
             {
@@ -1302,7 +1294,6 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (110, 110, 100, 120),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.DUTCH: EnumDataMapper(
             {
@@ -1310,12 +1301,10 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (90, 50, 60, 50),
                 Modifier.SUPPORT: (20, 70, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
-    }
+    },
 ).fill_missing_members(EnumDataMapper({}))
 
-# Used by GameBalance
 CIV_AI_MODIFIERS = CivDataMapper(
     {
         Civ.BYZANTIUM: EnumDataMapper(
@@ -1333,7 +1322,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (200, 200, 200, 350),
                 Modifier.SUPPORT: (50, 150, 70, 50, 120),
             },
-            do_not_cast=True,
         ),
         Civ.FRANCE: EnumDataMapper(
             {
@@ -1353,7 +1341,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (140, 120, 125, 150),
                 Modifier.SUPPORT: (30, 120, 70, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ARABIA: EnumDataMapper(
             {
@@ -1381,7 +1368,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (130, 125, 150, 280),
                 Modifier.SUPPORT: (30, 150, 70, 40, 120),
             },
-            do_not_cast=True,
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
@@ -1398,7 +1384,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (130, 125, 125, 250),
                 Modifier.SUPPORT: (40, 150, 80, 50, 120),
             },
-            do_not_cast=True,
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
@@ -1424,7 +1409,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (180, 170, 130, 250),
                 Modifier.SUPPORT: (40, 150, 70, 40, 120),
             },
-            do_not_cast=True,
         ),
         Civ.VENECIA: EnumDataMapper(
             {
@@ -1446,7 +1430,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 150),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.BURGUNDY: EnumDataMapper(
             {
@@ -1466,7 +1449,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (130, 120, 120, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.GERMANY: EnumDataMapper(
             {
@@ -1486,7 +1468,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 100, 140),
                 Modifier.SUPPORT: (20, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.NOVGOROD: EnumDataMapper(
             {
@@ -1505,7 +1486,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 120, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.NORWAY: EnumDataMapper(
             {
@@ -1523,7 +1503,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 125, 125, 130),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.KIEV: EnumDataMapper(
             {
@@ -1541,7 +1520,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 120, 100, 140),
                 Modifier.SUPPORT: (30, 120, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.HUNGARY: EnumDataMapper(
             {
@@ -1560,7 +1538,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 100, 150),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.CASTILE: EnumDataMapper(
             {
@@ -1577,7 +1554,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 130),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.DENMARK: EnumDataMapper(
             {
@@ -1595,7 +1571,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 110),
                 Modifier.SUPPORT: (20, 100, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.SCOTLAND: EnumDataMapper(
             {
@@ -1613,7 +1588,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 125),
                 Modifier.SUPPORT: (25, 100, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.POLAND: EnumDataMapper(
             {
@@ -1632,7 +1606,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 120, 120, 140),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.GENOA: EnumDataMapper(
             {
@@ -1654,7 +1627,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (100, 100, 100, 130),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
@@ -1680,7 +1652,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (120, 120, 120, 175),
                 Modifier.SUPPORT: (25, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ENGLAND: EnumDataMapper(
             {
@@ -1699,7 +1670,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 80, 100, 120),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
@@ -1716,7 +1686,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (70, 90, 100, 110),
                 Modifier.SUPPORT: (20, 100, 70, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.ARAGON: EnumDataMapper(
             {
@@ -1733,7 +1702,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (75, 90, 100, 125),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
@@ -1750,7 +1718,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 80, 100, 100),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.PRUSSIA: EnumDataMapper(
             {
@@ -1767,7 +1734,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (60, 80, 120, 90),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
@@ -1783,7 +1749,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (70, 100, 110, 110),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
@@ -1803,7 +1768,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (50, 80, 100, 80),
                 Modifier.SUPPORT: (20, 80, 80, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.OTTOMAN: EnumDataMapper(
             {
@@ -1822,7 +1786,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (60, 75, 100, 120),
                 Modifier.SUPPORT: (30, 100, 60, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.MOSCOW: EnumDataMapper(
             {
@@ -1838,7 +1801,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 80, 100, 120),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
-            do_not_cast=True,
         ),
         Civ.DUTCH: EnumDataMapper(
             {
@@ -1854,7 +1816,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (80, 50, 50, 50),
                 Modifier.SUPPORT: (20, 70, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.POPE: EnumDataMapper(
             {
@@ -1874,7 +1835,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (300, 200, 100, 350),
                 Modifier.SUPPORT: (20, 150, 80, 50, 100),
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT: EnumDataMapper(
             {
@@ -1886,7 +1846,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (170, 100, 400, 200),
                 Modifier.SUPPORT: (10, 100, 10, 20, 100),
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_2: EnumDataMapper(
             {
@@ -1898,7 +1857,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (170, 100, 400, 200),
                 Modifier.SUPPORT: (10, 100, 10, 20, 100),
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_3: EnumDataMapper(
             {
@@ -1910,7 +1868,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 100, 600, 300),
                 Modifier.SUPPORT: (10, 100, 10, 20, 100),
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_4: EnumDataMapper(
             {
@@ -1922,7 +1879,6 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 100, 600, 300),
                 Modifier.SUPPORT: (10, 100, 10, 20, 100),
             },
-            do_not_cast=True,
         ),
         Civ.BARBARIAN: EnumDataMapper(
             {
@@ -1933,9 +1889,8 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.PRODUCTION: (125, 100, 900, 350),
                 Modifier.SUPPORT: (10, 250, 10, 20, 100),
             },
-            do_not_cast=True,
         ),
-    }
+    },
 )
 
 CIV_STABILITY_AI_BONUS = CivDataMapper(
@@ -1968,7 +1923,7 @@ CIV_STABILITY_AI_BONUS = CivDataMapper(
         Civ.OTTOMAN: 8,
         Civ.MOSCOW: 0,
         Civ.DUTCH: 0,
-    }
+    },
 )
 
 CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
@@ -1999,7 +1954,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
         Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.ARABIA],
         Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.LITHUANIA],
         Civ.DUTCH: [Civ.ENGLAND, Civ.CASTILE, Civ.FRANCE, Civ.GERMANY, Civ.DENMARK, Civ.NORWAY],
-    }
+    },
 )
 
 CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
@@ -2065,29 +2020,48 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.NORWAY,
             Civ.SWEDEN,
         ],
-    }
+    },
 )
 
 CIV_INITIAL_CONTACTS = ScenarioDataMapper(
-    {Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD, Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD}
+    {
+        Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD,
+        Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD,
+    },
 )
 
 CIV_INITIAL_WARS_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: CivDataMapper(
-            {Civ.ARABIA: 90, Civ.BULGARIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
+            {Civ.ARABIA: 90, Civ.BULGARIA: 90, Civ.OTTOMAN: 90},
         ),
-        Civ.FRANCE: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.ARABIA: CivDataMapper({Civ.OTTOMAN: 60}, do_not_cast=True),
-        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
+        Civ.FRANCE: CivDataMapper(
+            {Civ.ENGLAND: 60},
+        ),
+        Civ.ARABIA: CivDataMapper(
+            {Civ.OTTOMAN: 60},
+        ),
+        Civ.BULGARIA: CivDataMapper(
+            {Civ.OTTOMAN: 70},
+        ),
         Civ.CORDOBA: CivDataMapper(
-            {Civ.CASTILE: 90, Civ.PORTUGAL: 90, Civ.ARAGON: 80}, do_not_cast=True
+            {Civ.CASTILE: 90, Civ.PORTUGAL: 90, Civ.ARAGON: 80},
         ),
-        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
-        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
-        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
-        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
+        Civ.NOVGOROD: CivDataMapper(
+            {Civ.PRUSSIA: 80},
+        ),
+        Civ.DENMARK: CivDataMapper(
+            {Civ.SWEDEN: 60},
+        ),
+        Civ.SCOTLAND: CivDataMapper(
+            {Civ.ENGLAND: 60},
+        ),
+        Civ.POLAND: CivDataMapper(
+            {Civ.PRUSSIA: 20},
+        ),
+        Civ.PRUSSIA: CivDataMapper(
+            {Civ.LITHUANIA: 80},
+        ),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -2095,17 +2069,23 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
             },
-            do_not_cast=True,
         ),
-    }
+    },
 ).fill_missing_members(CivDataMapper({}))
 
 CIV_INITIAL_WARS_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: CivDataMapper(
-            {Civ.ARABIA: 20, Civ.BULGARIA: 70, Civ.VENECIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
+            {
+                Civ.ARABIA: 20,
+                Civ.BULGARIA: 70,
+                Civ.VENECIA: 90,
+                Civ.OTTOMAN: 90,
+            },
         ),
-        Civ.FRANCE: CivDataMapper({Civ.ARABIA: 30, Civ.ENGLAND: 90}, do_not_cast=True),
+        Civ.FRANCE: CivDataMapper(
+            {Civ.ARABIA: 30, Civ.ENGLAND: 90},
+        ),
         Civ.ARABIA: CivDataMapper(
             {
                 Civ.GERMANY: 20,
@@ -2117,18 +2097,31 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.ARAGON: 10,
                 Civ.OTTOMAN: 60,
             },
-            do_not_cast=True,
         ),
-        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
-        Civ.CORDOBA: CivDataMapper({Civ.PORTUGAL: 90}, do_not_cast=True),
-        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
-        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
-        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
+        Civ.BULGARIA: CivDataMapper(
+            {Civ.OTTOMAN: 70},
+        ),
+        Civ.CORDOBA: CivDataMapper(
+            {Civ.PORTUGAL: 90},
+        ),
+        Civ.NOVGOROD: CivDataMapper(
+            {Civ.PRUSSIA: 80},
+        ),
+        Civ.DENMARK: CivDataMapper(
+            {Civ.SWEDEN: 60},
+        ),
+        Civ.SCOTLAND: CivDataMapper(
+            {Civ.ENGLAND: 60},
+        ),
+        Civ.POLAND: CivDataMapper(
+            {Civ.PRUSSIA: 20},
+        ),
         Civ.MOROCCO: CivDataMapper(
-            {Civ.CASTILE: 90, Civ.PORTUGAL: 80, Civ.ARAGON: 80}, do_not_cast=True
+            {Civ.CASTILE: 90, Civ.PORTUGAL: 80, Civ.ARAGON: 80},
         ),
-        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
+        Civ.PRUSSIA: CivDataMapper(
+            {Civ.LITHUANIA: 80},
+        ),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -2136,13 +2129,15 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
             },
-            do_not_cast=True,
         ),
-    }
+    },
 ).fill_missing_members(CivDataMapper({}))
 
 CIV_INITIAL_WARS = ScenarioDataMapper(
-    {Scenario.i500AD: CIV_INITIAL_WARS_500AD, Scenario.i1200AD: CIV_INITIAL_WARS_1200AD}
+    {
+        Scenario.i500AD: CIV_INITIAL_WARS_500AD,
+        Scenario.i1200AD: CIV_INITIAL_WARS_1200AD,
+    },
 )
 
 # Used for mercenaries (Higher number = less likely to hire)
@@ -2182,7 +2177,7 @@ CIV_HIRE_MERCENARY_THRESHOLD = CivDataMapper(
         Civ.INDEPENDENT_3: 50,
         Civ.INDEPENDENT_4: 50,
         Civ.BARBARIAN: 50,
-    }
+    },
 )
 
 # Used for war during rise and respawn of new civs (Higher number means less chance for war)
@@ -2217,7 +2212,7 @@ CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
         Civ.MOSCOW: 70,
         Civ.DUTCH: 80,
         Civ.POPE: 90,
-    }
+    },
 )
 
 # Matrix determines how likely the AI is to switch to Protestantism
@@ -2257,7 +2252,7 @@ CIV_AI_REFORMATION_THRESHOLD = CivDataMapper(
         Civ.INDEPENDENT_3: 40,
         Civ.INDEPENDENT_4: 40,
         Civ.BARBARIAN: 40,
-    }
+    },
 )
 
 # Used to tune frequency of resurrections.
@@ -2292,7 +2287,7 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
         Civ.MOSCOW: 80,
         Civ.DUTCH: 60,
         Civ.POPE: 90,
-    }
+    },
 )
 
 CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
@@ -2305,7 +2300,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 150,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.FRANCE: ReligionDataMapper(
             {
@@ -2315,7 +2309,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 70,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.ARABIA: ReligionDataMapper(
             {
@@ -2325,7 +2318,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 10,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.BULGARIA: ReligionDataMapper(
             {
@@ -2335,7 +2327,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 400,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.CORDOBA: ReligionDataMapper(
             {
@@ -2345,7 +2336,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.VENECIA: ReligionDataMapper(
             {
@@ -2355,7 +2345,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 30,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.BURGUNDY: ReligionDataMapper(
             {
@@ -2365,7 +2354,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 70,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.GERMANY: ReligionDataMapper(
             {
@@ -2375,7 +2363,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.NOVGOROD: ReligionDataMapper(
             {
@@ -2385,7 +2372,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 500,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.NORWAY: ReligionDataMapper(
             {
@@ -2395,7 +2381,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 80,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.KIEV: ReligionDataMapper(
             {
@@ -2405,7 +2390,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 400,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.HUNGARY: ReligionDataMapper(
             {
@@ -2415,7 +2399,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 80,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.CASTILE: ReligionDataMapper(
             {
@@ -2425,7 +2408,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.DENMARK: ReligionDataMapper(
             {
@@ -2435,7 +2417,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 80,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.SCOTLAND: ReligionDataMapper(
             {
@@ -2445,7 +2426,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.POLAND: ReligionDataMapper(
             {
@@ -2455,7 +2435,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 200,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.GENOA: ReligionDataMapper(
             {
@@ -2465,7 +2444,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 30,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.MOROCCO: ReligionDataMapper(
             {
@@ -2475,7 +2453,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.ENGLAND: ReligionDataMapper(
             {
@@ -2485,7 +2462,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.PORTUGAL: ReligionDataMapper(
             {
@@ -2495,7 +2471,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.ARAGON: ReligionDataMapper(
             {
@@ -2505,7 +2480,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.SWEDEN: ReligionDataMapper(
             {
@@ -2515,7 +2489,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 50,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.PRUSSIA: ReligionDataMapper(
             {
@@ -2525,7 +2498,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.LITHUANIA: ReligionDataMapper(
             {
@@ -2535,7 +2507,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 80,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.AUSTRIA: ReligionDataMapper(
             {
@@ -2545,7 +2516,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.OTTOMAN: ReligionDataMapper(
             {
@@ -2555,7 +2525,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 80,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.MOSCOW: ReligionDataMapper(
             {
@@ -2565,7 +2534,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 250,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.DUTCH: ReligionDataMapper(
             {
@@ -2575,7 +2543,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.POPE: ReligionDataMapper(
             {
@@ -2585,7 +2552,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 10,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT: ReligionDataMapper(
             {
@@ -2595,7 +2561,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 100,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_2: ReligionDataMapper(
             {
@@ -2605,7 +2570,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 100,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_3: ReligionDataMapper(
             {
@@ -2615,7 +2579,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 100,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.INDEPENDENT_4: ReligionDataMapper(
             {
@@ -2625,7 +2588,6 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 100,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
         Civ.BARBARIAN: ReligionDataMapper(
             {
@@ -2635,9 +2597,8 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
                 Religion.ORTHODOXY: 20,
                 Religion.JUDAISM: 10,
             },
-            do_not_cast=True,
         ),
-    }
+    },
 )
 
 # 100 and 80: don't purge any religions; 60: purge islam if christian, and all christian religions if muslim; 40: also judaism; 20: all but state religion
@@ -2677,7 +2638,7 @@ CIV_RELIGIOUS_TOLERANCE = CivDataMapper(
         Civ.INDEPENDENT_3: 100,
         Civ.INDEPENDENT_4: 100,
         Civ.BARBARIAN: 100,
-    }
+    },
 )
 
 # Late leader: (leader, starting date, threshold, era)
@@ -2842,5 +2803,5 @@ CIV_LEADERS = CivDataMapper(
             LeaderType.EARLY: Leader.THE_POPE,
             LeaderType.LATE: None,
         },
-    }
+    },
 )

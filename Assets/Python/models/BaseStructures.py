@@ -111,9 +111,9 @@ class EnumDataMapper(DataMapper):
 
     BASE_CLASS = (IntEnum, int)
 
-    def __init__(self, elements, default=None, do_not_cast=False):
+    def __init__(self, elements, default=None, do_cast=False):
         super(EnumDataMapper, self).__init__(elements, default)
-        self.do_not_cast = do_not_cast
+        self.do_cast = do_cast
 
     def _check_condition(self, key):
         return issubclass(type(key), self.BASE_CLASS)
@@ -136,35 +136,6 @@ class EnumDataMapper(DataMapper):
         for m in obj.BASE_CLASS._member_names_:
             obj[obj.BASE_CLASS[m]] = obj[obj.BASE_CLASS[m]]
         return obj
-
-
-class Attributes(dict):
-    """A class to handle attibutes from a DataMapper."""
-
-    def __init__(self, *args, **kwargs):
-        super(Attributes, self).__init__(*args, **kwargs)
-        self.__dict__ = self
-
-    @classmethod
-    def from_nested_dicts(cls, data):
-        """Construct nested Attributes from nested dictionaries."""
-        if isinstance(data, list):
-            return [cls.from_nested_dicts(d) for d in data]
-
-        if issubclass(data.__class__, EnumDataMapper):
-            if data.do_not_cast:
-                return data
-            data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
-            return cls(data)
-
-        if isinstance(data, dict):
-            if all(isinstance(member, Enum) for member in data.keys()):
-                data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
-            else:
-                data = dict((key, cls.from_nested_dicts(data[key])) for key in data)
-            return cls(data)
-
-        return data
 
 
 class Item(object):
@@ -468,7 +439,7 @@ class EnumCollection(Collection):
 
     def __init__(self, *items):
         for item in items:
-            if not isinstance(item, self.BASE_CLASS):
+            if not isinstance(item, self.BASE_CLASS):  # type: ignore
                 raise NotTypeExpectedError(self.BASE_CLASS, type(item))
             self.append(item)
 
@@ -483,6 +454,35 @@ class EnumCollection(Collection):
     def ids(self):
         """Return a list of identifiers."""
         return self.apply(lambda c: c.id)
+
+
+class Attributes(dict):
+    """A class to handle attibutes from a EnumDataMapper."""
+
+    def __init__(self, *args, **kwargs):
+        super(Attributes, self).__init__(*args, **kwargs)
+        self.__dict__ = self
+
+    @classmethod
+    def from_nested_dicts(cls, data):
+        """Construct nested Attributes from nested dictionaries."""
+        if isinstance(data, list):
+            return [cls.from_nested_dicts(d) for d in data]
+
+        if issubclass(data.__class__, EnumDataMapper):
+            if not data.do_cast:
+                return data
+            data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
+            return cls(data)
+
+        if isinstance(data, dict):
+            if all(isinstance(member, Enum) for member in data.keys()):
+                data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
+            else:
+                data = dict((key, cls.from_nested_dicts(data[key])) for key in data)
+            return cls(data)
+
+        return data
 
 
 class EnumCollectionFactory(object):
@@ -503,7 +503,7 @@ class EnumCollectionFactory(object):
         return self
 
     def attach(self, name, data, key=None):
-        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):
+        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):  # type: ignore
             if key is not None:
                 self._keys_attachments[key][name] = data
             else:
