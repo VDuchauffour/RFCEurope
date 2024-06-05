@@ -5,6 +5,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_civ_by_id, text
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
+from CoreTypes import Area, AreaType
 import CvScreenEnums
 from ProvinceMapData import PROVINCES_MAP
 from SettlerMapData import SETTLERS_MAP
@@ -87,19 +88,25 @@ class RFCEMapManager:
             self.settler_map = deepcopy(SETTLERS_MAP)
             self.city_map = deepcopy(CITIES_MAP)
             self.war_map = deepcopy(WARS_MAP)
-            self.core_tile_min = [c.location.area.core.tile_min for c in civilizations().majors()]
-            self.core_tile_max = [c.location.area.core.tile_max for c in civilizations().majors()]
+            self.core_tile_min = [
+                c.location.area[AreaType.CORE][Area.TILE_MIN] for c in civilizations().majors()
+            ]
+            self.core_tile_max = [
+                c.location.area[AreaType.CORE][Area.TILE_MAX] for c in civilizations().majors()
+            ]
             self.core_additional_tiles = [
-                c.location.area.core.additional_tiles for c in civilizations().majors()
+                c.location.area[AreaType.CORE][Area.ADDITIONAL_TILES]
+                for c in civilizations().majors()
             ]
             self.normal_tile_min = [
-                c.location.area.normal.tile_min for c in civilizations().majors()
+                c.location.area[AreaType.NORMAL][Area.TILE_MIN] for c in civilizations().majors()
             ]
             self.normal_tile_max = [
-                c.location.area.normal.tile_max for c in civilizations().majors()
+                c.location.area[AreaType.NORMAL][Area.TILE_MAX] for c in civilizations().majors()
             ]
             self.normal_exception_tiles = [
-                c.location.area.normal.exception_tiles for c in civilizations().majors()
+                c.location.area[AreaType.NORMAL][Area.EXCEPTION_TILES]
+                for c in civilizations().majors()
             ]
 
             self.mapsInitiated = True

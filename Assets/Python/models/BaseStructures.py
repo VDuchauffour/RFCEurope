@@ -476,10 +476,7 @@ class Attributes(dict):
             return cls(data)
 
         if isinstance(data, dict):
-            if all(isinstance(member, Enum) for member in data.keys()):
-                data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
-            else:
-                data = dict((key, cls.from_nested_dicts(data[key])) for key in data)
+            data = dict((key, cls.from_nested_dicts(data[key])) for key in data)
             return cls(data)
 
         return data
