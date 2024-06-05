@@ -533,18 +533,6 @@ class EnumCollectionFactory(object):
         return self.ITEM_COLLECTION_CLASS(*items)
 
 
-class ScenarioDataMapper(EnumDataMapper):
-    """Class to map data to Scenario enum."""
-
-    BASE_CLASS = CoreTypes.Scenario
-
-
-class ReligionDataMapper(EnumDataMapper):
-    """Class to map Religion to Company enum."""
-
-    BASE_CLASS = CoreTypes.Religion
-
-
 class CompanyDataMapper(EnumDataMapper):
     """Class to map data to Company enum."""
 
