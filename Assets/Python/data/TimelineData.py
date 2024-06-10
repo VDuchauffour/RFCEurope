@@ -335,7 +335,6 @@ COMPANY_DEATHDATE = CompanyDataMapper(
     }
 ).fill_missing_members(1800)
 
-# Used by GameBalance
 TIMELINE_TECH_MODIFIER = [
     (Technology.CALENDAR, 500),
     (Technology.ARCHITECTURE, 620),

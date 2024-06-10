@@ -62,8 +62,11 @@ import Crusades
 
 from MiscData import PLAGUE_IMMUNITY
 from CoreTypes import (
+    Area,
+    AreaType,
     Building,
     Civ,
+    LeaderType,
     PlayerType,
     Scenario,
     Religion,
@@ -231,7 +234,7 @@ class RiseAndFall:
         for city in (
             plots()
             .rectangle(tTopLeft, tBottomRight)
-            .add(civilization(iNewCiv).location.area.core.additional_tiles)
+            .add(civilization(iNewCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
             .cities()
             .filter(lambda c: c.getOwner() == iHuman and not c.isCapital())
             .entities()
@@ -261,7 +264,7 @@ class RiseAndFall:
         for city in (
             plots()
             .rectangle(tTopLeft, tBottomRight)
-            .add(civilization(iNewCivFlip).location.area.core.additional_tiles)
+            .add(civilization(iNewCivFlip).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
             .cities()
             .filter(lambda c: c.getOwner() == iHuman and not c.isCapital())
             .entities()
@@ -504,8 +507,8 @@ class RiseAndFall:
 
     def setEarlyLeaders(self):
         for civ in civilizations().majors().ai():
-            if civ.leaders.early != civ.leaders.primary:
-                leader = civ.leaders.early
+            if civ.leaders[LeaderType.EARLY] != civ.leaders[LeaderType.PRIMARY]:
+                leader = civ.leaders[LeaderType.EARLY]
                 civ.player.setLeader(leader)
 
     def setWarOnSpawn(self):
@@ -627,14 +630,12 @@ class RiseAndFall:
             )
 
             pPlot.eraseCityDevelopment()
-            pPlot.setImprovementType(
-                Improvement.TOWN
-            )  # Improvement Town instead of the city
+            pPlot.setImprovementType(Improvement.TOWN)  # Improvement Town instead of the city
             pPlot.setRouteType(0)  # Also adding a road there
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         # Absinthe & Merijn: leader switching with any number of leaders
-        late_leaders = civilization(iPlayer).leaders.late
+        late_leaders = civilization(iPlayer).leaders[LeaderType.LATE]
         if late_leaders:
             for tLeader in reversed(late_leaders):
                 if iGameTurn >= year(tLeader[1]):
@@ -654,9 +655,7 @@ class RiseAndFall:
             if pPlot.isCity():
                 if pPlot.getPlotCity().getOwner() == Civ.BARBARIAN:
                     pDublin = pPlot.getPlotCity()
-                    cultureManager(
-                        tDublin, 50, Civ.ENGLAND, Civ.BARBARIAN, False, True, True
-                    )
+                    cultureManager(tDublin, 50, Civ.ENGLAND, Civ.BARBARIAN, False, True, True)
                     flipUnitsInCityBefore(tDublin, Civ.ENGLAND, Civ.BARBARIAN)
                     self.setTempFlippingCity(tDublin)
                     flipCity(
@@ -756,8 +755,8 @@ class RiseAndFall:
                     for city in (
                         plots()
                         .rectangle(
-                            civilization(iDeadCiv).location.area.normal.tile_min,
-                            civilization(iDeadCiv).location.area.normal.tile_max,
+                            civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MIN],
+                            civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX],
                         )
                         .cities()
                         .owner(Civ.BARBARIAN)
@@ -773,9 +772,7 @@ class RiseAndFall:
                             + 1
                         )
                         if iDivideCounter % 4 in [0, 1]:
-                            cultureManager(
-                                tCity, 50, iNewCiv, Civ.BARBARIAN, False, True, True
-                            )
+                            cultureManager(tCity, 50, iNewCiv, Civ.BARBARIAN, False, True, True)
                             flipUnitsInCityBefore(tCity, iNewCiv, Civ.BARBARIAN)
                             self.setTempFlippingCity(tCity)
                             flipCity(
@@ -789,10 +786,10 @@ class RiseAndFall:
         iHuman = human()
         if iCurrentTurn == iBirthYear - 1 + self.getSpawnDelay(iCiv) + self.getFlipsDelay(iCiv):
             tCapital = civilization(iCiv).location.capital
-            core_tile_min = civilization(iCiv).location.area.core.tile_min
-            core_tile_max = civilization(iCiv).location.area.core.tile_max
-            broader_tile_min = civilization(iCiv).location.area.broader.tile_min
-            broader_tile_max = civilization(iCiv).location.area.broader.tile_max
+            core_tile_min = civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MIN]
+            core_tile_max = civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MAX]
+            broader_tile_min = civilization(iCiv).location.area[AreaType.BROADER][Area.TILE_MIN]
+            broader_tile_max = civilization(iCiv).location.area[AreaType.BROADER][Area.TILE_MAX]
             if self.getFlipsDelay(iCiv) == 0:  # city hasn't already been founded
 
                 # Absinthe: for the human player, kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
@@ -913,7 +910,7 @@ class RiseAndFall:
                 for tPlot in (
                     plots()
                     .rectangle(tTopLeft, tBottomRight)
-                    .add(civilization(iCiv).location.area.core.additional_tiles)
+                    .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
                     .apply(location)  # TODO  fix this with _keyify by default
                 ):
                     if tPlot in lSurroundingPlots2:
@@ -947,7 +944,7 @@ class RiseAndFall:
                     tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, False, True
                 )  # remaining barbs in the region now belong to the new civ
                 flipUnitsInPlots(
-                    civilization(iCiv).location.area.core.additional_tiles,
+                    civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                     iCiv,
                     Civ.BARBARIAN,
                     False,
@@ -959,7 +956,7 @@ class RiseAndFall:
                         tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False
                     )  # remaining independents in the region now belong to the new civ
                     flipUnitsInPlots(
-                        civilization(iCiv).location.area.core.additional_tiles,
+                        civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                         iCiv,
                         iIndyCiv,
                         False,
@@ -1000,7 +997,7 @@ class RiseAndFall:
             # 			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
             plotList = squareSearch(tTopLeft, tBottomRight, ownedCityPlots, iCiv)
             # Absinthe: add the exception plots
-            for plot in civilization(iCiv).location.area.core.additional_tiles:
+            for plot in civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES]:
                 plot = gc.getMap().plot(*plot)
                 if plot.getOwner() == iCiv:
                     if plot.isCity():
@@ -1017,7 +1014,7 @@ class RiseAndFall:
                 tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, False, True
             )  # remaining barbs in the region now belong to the new civ
             flipUnitsInPlots(
-                civilization(iCiv).location.area.core.additional_tiles,
+                civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                 iCiv,
                 Civ.BARBARIAN,
                 False,
@@ -1028,7 +1025,7 @@ class RiseAndFall:
                     tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False
                 )  # remaining independents in the region now belong to the new civ
                 flipUnitsInPlots(
-                    civilization(iCiv).location.area.core.additional_tiles,
+                    civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                     iCiv,
                     iIndyCiv,
                     False,
@@ -1040,7 +1037,7 @@ class RiseAndFall:
             # 			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
             plotList = squareSearch(tTopLeft, tBottomRight, goodPlots, [])
             # Absinthe: add the exception plots
-            for plot in civilization(iCiv).location.area.core.additional_tiles:
+            for plot in civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES]:
                 plot = gc.getMap().plot(*plot)
                 if (plot.isHills() or plot.isFlatlands()) and not plot.isImpassable():
                     if not plot.isUnit():
@@ -1078,7 +1075,7 @@ class RiseAndFall:
                 tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN, True, True
             )  # remaining barbs in the region now belong to the new civ
             flipUnitsInPlots(
-                civilization(iCiv).location.area.core.additional_tiles,
+                civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                 iCiv,
                 Civ.BARBARIAN,
                 True,
@@ -1089,7 +1086,7 @@ class RiseAndFall:
                     tTopLeft, tBottomRight, iCiv, iIndyCiv, True, False
                 )  # remaining independents in the region now belong to the new civ
                 flipUnitsInPlots(
-                    civilization(iCiv).location.area.core.additional_tiles,
+                    civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES],
                     iCiv,
                     iIndyCiv,
                     True,
@@ -1108,7 +1105,7 @@ class RiseAndFall:
         for city in (
             plots()
             .rectangle(tTopLeft, tBottomRight)
-            .add(civilization(iCiv).location.area.core.additional_tiles)
+            .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
             .cities()
             .not_owner(iCiv)
             .entities()
@@ -1165,7 +1162,7 @@ class RiseAndFall:
         for plot in (
             plots()
             .rectangle(tTopLeft, tBottomRight)
-            .add(civilization(iCiv).location.area.core.additional_tiles)
+            .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
             .filter(lambda p: not p.isCity())
             .entities()
         ):
@@ -1286,8 +1283,8 @@ class RiseAndFall:
     def initMinorBetrayal(self, iCiv):
         iHuman = human()
         plotList = squareSearch(
-            civilization(iCiv).location.area.core.tile_min,
-            civilization(iCiv).location.area.core.tile_max,
+            civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MIN],
+            civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MAX],
             outerInvasion,
             [],
         )
@@ -1297,8 +1294,8 @@ class RiseAndFall:
             self.unitsBetrayal(
                 iCiv,
                 iHuman,
-                civilization(iCiv).location.area.core.tile_min,
-                civilization(iCiv).location.area.core.tile_max,
+                civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MIN],
+                civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MAX],
                 tPlot,
             )
 

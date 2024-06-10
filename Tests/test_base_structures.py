@@ -251,7 +251,8 @@ class TestEnumDataMapper(unittest.TestCase):
         self.assertRaises(OutputTypeError, _wrong_applymap)
         self.assertRaises(NotACallableError, _wrong_callable)
         self.assertEqual(
-            self.data_multiple.applymap(lambda x: int(x)), EnumDataMapper({_TestEnum.A: [0, 1]})
+            self.data_multiple.applymap(lambda x: int(x)),
+            EnumDataMapper({_TestEnum.A: [0, 1]}),
         )
 
     def test_filter(self):

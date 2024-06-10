@@ -5,7 +5,7 @@ from CoreFunctions import plot as _plot
 from CoreFunctions import location as _location
 from CoreData import civilizations
 from CoreStructures import plots
-from CoreTypes import Civ, PlagueType, ProvinceType, Religion, Technology
+from CoreTypes import Area, AreaType, Civ, PlagueType, ProvinceType, Religion, Technology
 from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
 from ProvinceMapData import PROVINCES_MAP
@@ -95,12 +95,12 @@ def update_lake_id():
 
 def update_core():
     for civ in civilizations().majors():
-        core_tile_min = civ.location.area.core.tile_min
-        core_tile_max = civ.location.area.core.tile_max
-        core_additional_tiles = civ.location.area.core.additional_tiles
-        normal_tile_min = civ.location.area.normal.tile_min
-        normal_tile_max = civ.location.area.normal.tile_max
-        normal_exception_tiles = civ.location.area.normal.exception_tiles
+        core_tile_min = civ.location.area[AreaType.CORE][Area.TILE_MIN]
+        core_tile_max = civ.location.area[AreaType.CORE][Area.TILE_MAX]
+        core_additional_tiles = civ.location.area[AreaType.CORE][Area.ADDITIONAL_TILES]
+        normal_tile_min = civ.location.area[AreaType.NORMAL][Area.TILE_MIN]
+        normal_tile_max = civ.location.area[AreaType.NORMAL][Area.TILE_MAX]
+        normal_exception_tiles = civ.location.area[AreaType.NORMAL][Area.EXCEPTION_TILES]
         gc.setCoreNormal(
             civ.id,
             core_tile_min[0],

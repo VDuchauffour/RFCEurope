@@ -3,7 +3,7 @@ from CivilizationsData import TECH_STARTERS_1200AD
 from CoreData import civilization, civilizations
 from CoreFunctions import get_civ_by_id
 from CoreStructures import human, make_unit, make_units, team, teamtype, year, plots
-from CoreTypes import Civ, Technology, Unit
+from CoreTypes import Area, Civ, InitialCondition, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from MiscData import REVEAL_DATE_TECHNOLOGY
 from RFCUtils import change_attitude_extra_between_civ
@@ -24,14 +24,14 @@ def set_starting_gold():
     for civ in civilizations():
         condition = civ.scenario.get("condition")
         if condition is not None:
-            civ.player.changeGold(condition.gold)
+            civ.player.changeGold(condition[InitialCondition.GOLD])
 
 
 def set_starting_faith():
     for civ in civilizations():
         condition = civ.scenario.get("condition")
         if condition is not None:
-            civ.player.setFaith(condition.faith)
+            civ.player.setFaith(condition[InitialCondition.FAITH])
 
 
 def create_starting_workers(iCiv, tPlot):
@@ -137,13 +137,14 @@ def set_initial_contacts(iCiv, bMeet=True):
 
 
 def reveal_rectangle(iCiv, area):
-    for plot in plots().rectangle(area.tile_min, area.tile_max).entities():
+    for plot in plots().rectangle(area[Area.TILE_MIN], area[Area.TILE_MAX]).entities():
         plot.setRevealed(teamtype(iCiv), True, False, -1)
 
 
 def reveal_areas(iCiv):
     for area in civilization(iCiv).location.visible_area:
         reveal_rectangle(iCiv, area)
+
 
 def has_date_revealed(identifier=None):
     if team(identifier).isHasTech(REVEAL_DATE_TECHNOLOGY):

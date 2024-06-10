@@ -18,12 +18,11 @@ from CoreTypes import (
 from BaseStructures import (
     CompanyDataMapper,
     DataMapper,
-    IntEnumDataMapper,
-    ScenarioDataMapper,
+    EnumDataMapper,
     CivDataMapper,
 )
 
-CITIES = IntEnumDataMapper(
+CITIES = EnumDataMapper(
     {
         City.CONSTANTINOPLE: (81, 24),
         City.PARIS: (44, 46),
@@ -130,22 +129,27 @@ CITIES = IntEnumDataMapper(
         City.TANAIS: (96, 38),
         City.REYKJAVIK: (2, 70),
         City.VALLETTA: (57, 14),
-    }
+    },
 )
 
-ALTERNATE_CITIES_LOCATION = IntEnumDataMapper(
+ALTERNATE_CITIES_LOCATION = EnumDataMapper(
     {
         City.TOULOUSE: [(40, 34)],
         City.INVERNESS: [(37, 65)],
         City.PAMPLONA: [(34, 33)],
         City.LUBECK: [(57, 53)],
         City.BRANDEBURG: [(60, 50)],
-    }
+    },
 )
 
-INDY_CITIES_TO_BE_REDUCED = [City.INVERNESS, City.NORWICH, City.LEICESTER, City.UPPSALA]
+INDY_CITIES_TO_BE_REDUCED = [
+    City.INVERNESS,
+    City.NORWICH,
+    City.LEICESTER,
+    City.UPPSALA,
+]
 
-REGIONS = IntEnumDataMapper(
+REGIONS = EnumDataMapper(
     {
         Region.IBERIA: [
             Province.GALICIA,
@@ -338,7 +342,7 @@ REGIONS = IntEnumDataMapper(
             Province.THRAKESION,
             Province.OPSIKION,
         ],
-    }
+    },
 )
 
 COMPANY_REGION = CompanyDataMapper(
@@ -494,11 +498,11 @@ COMPANY_REGION = CompanyDataMapper(
             Province.LA_MANCHA,
             Province.BALEARS,
         ],
-    }
+    },
 )
 
 # Used for the Colony panel
-COLONY_LOCATIONS = IntEnumDataMapper(
+COLONY_LOCATIONS = EnumDataMapper(
     {
         Colony.VINLAND: (275, 150),
         Colony.GOLD_COAST: (480, 335),
@@ -522,10 +526,10 @@ COLONY_LOCATIONS = IntEnumDataMapper(
         Colony.PANAMA: (130, 325),
         Colony.LOUISIANA: (110, 220),
         Colony.PHILIPPINES: (960, 320),
-    }
+    },
 )
 
-LAKE_LOCATIONS = IntEnumDataMapper(
+LAKE_LOCATIONS = EnumDataMapper(
     {
         Lake.LOUGH_NEAGH: [(32, 61)],
         Lake.LAKE_BALATON: [(64, 36)],
@@ -570,7 +574,7 @@ LAKE_LOCATIONS = IntEnumDataMapper(
         Lake.LAKE_NASIJARVI: [(72, 68)],
         Lake.LIMFJORDEN: [(55, 59)],
         Lake.TRONDHEIMFJORDEN: [(58, 71)],
-    }
+    },
 )
 
 CIV_CAPITAL_LOCATIONS = CivDataMapper(
@@ -604,7 +608,7 @@ CIV_CAPITAL_LOCATIONS = CivDataMapper(
         Civ.MOSCOW: CITIES[City.MOSCOW],
         Civ.DUTCH: CITIES[City.AMSTERDAM],
         Civ.POPE: CITIES[City.ROME],
-    }
+    },
 )
 
 # Used for respawning
@@ -619,7 +623,7 @@ CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
         Civ.MOROCCO: [(25, 13)],  # Rabat
         Civ.ARAGON: [(59, 24)],  # Naples
         Civ.PRUSSIA: [(60, 48), (61, 48), (61, 49), (62, 48)],  # Berlin
-    }
+    },
 )
 
 CIV_NEIGHBOURS = CivDataMapper(
@@ -672,7 +676,7 @@ CIV_NEIGHBOURS = CivDataMapper(
         Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.POLAND, Civ.LITHUANIA],
         Civ.DUTCH: [Civ.GERMANY, Civ.ENGLAND, Civ.BURGUNDY, Civ.SCOTLAND],
         Civ.POPE: [Civ.VENECIA, Civ.GENOA],
-    }
+    },
 )
 
 # Reformation neighbours spread reformation choice to each other
@@ -733,7 +737,7 @@ CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
         Civ.MOSCOW: [Civ.KIEV, Civ.POLAND, Civ.SWEDEN, Civ.LITHUANIA, Civ.NOVGOROD],
         Civ.DUTCH: [Civ.BURGUNDY, Civ.FRANCE, Civ.GERMANY, Civ.ENGLAND, Civ.SCOTLAND],
         Civ.POPE: [Civ.VENECIA, Civ.GENOA],
-    }
+    },
 )
 
 # Used for the Colony panel
@@ -767,7 +771,7 @@ CIV_HOME_LOCATIONS = CivDataMapper(
         Civ.OTTOMAN: (590, 195),
         Civ.MOSCOW: (595, 110),
         Civ.DUTCH: (492, 131),
-    }
+    },
 )
 
 # Used for initial spawn location, no longer relevant for stability.
@@ -992,7 +996,7 @@ CIV_CORE_AREA = CivDataMapper(
             Area.ADDITIONAL_TILES: [(46, 49), (47, 49), (48, 49), (49, 49), (50, 49)],
         },
         Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
-    }
+    },
 ).apply(lambda d: parse_area_dict(d))
 
 # Used for resurrection
@@ -1366,7 +1370,7 @@ CIV_NORMAL_AREA = CivDataMapper(
             Area.EXCEPTION_TILES: [(51, 50), (52, 50)],
         },
         Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
-    }
+    },
 ).apply(lambda d: parse_area_dict(d))
 
 # Used in civ birth only
@@ -1401,7 +1405,7 @@ CIV_BROADER_AREA = CivDataMapper(
         Civ.MOSCOW: {Area.TILE_MIN: (83, 51), Area.TILE_MAX: (93, 61)},
         Civ.DUTCH: {Area.TILE_MIN: (44, 47), Area.TILE_MAX: (54, 57)},
         Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
-    }
+    },
 ).apply(lambda d: parse_area_dict(d))
 
 CIV_AREAS = CivDataMapper(
@@ -1421,958 +1425,923 @@ CIV_AREAS = CivDataMapper(
 
 CIV_PROVINCES = CivDataMapper(
     {
-        Civ.BYZANTIUM: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.CONSTANTINOPLE,
-                    Province.THRACE,
-                    Province.THESSALY,
-                    Province.THESSALONIKI,
-                    Province.EPIRUS,
-                    Province.MOREA,
-                    Province.OPSIKION,
-                    Province.PAPHLAGONIA,
-                    Province.THRAKESION,
-                    Province.CILICIA,
-                    Province.ANATOLIKON,
-                    Province.ARMENIAKON,
-                    Province.CHARSIANON,
-                    Province.COLONEA,
-                    Province.ANTIOCHIA,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.MOESIA,
-                    Province.SERBIA,
-                    Province.MACEDONIA,
-                    Province.ARBERIA,
-                    Province.CYPRUS,
-                    Province.CRETE,
-                    Province.RHODES,
-                    Province.SYRIA,
-                    Province.LEBANON,
-                    Province.JERUSALEM,
-                    Province.EGYPT,
-                    Province.CYRENAICA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.CALABRIA,
-                    Province.APULIA,
-                    Province.SICILY,
-                    Province.MALTA,
-                    Province.TRIPOLITANIA,
-                    Province.IFRIQIYA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CRIMEA,
-                    Province.ARABIA,
-                    Province.BOSNIA,
-                    Province.SLAVONIA,
-                    Province.DALMATIA,
-                    Province.VERONA,
-                    Province.LOMBARDY,
-                    Province.LIGURIA,
-                    Province.TUSCANY,
-                    Province.LATIUM,
-                    Province.SARDINIA,
-                    Province.CORSICA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.FRANCE: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.ILE_DE_FRANCE, Province.ORLEANS, Province.CHAMPAGNE],
-                ProvinceType.HISTORICAL: [
-                    Province.PICARDY,
-                    Province.NORMANDY,
-                    Province.AQUITAINE,
-                    Province.LORRAINE,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.BRETAGNE,
-                    Province.PROVENCE,
-                    Province.BURGUNDY,
-                    Province.FLANDERS,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CATALONIA,
-                    Province.ARAGON,
-                    Province.NAVARRE,
-                    Province.NETHERLANDS,
-                    Province.BAVARIA,
-                    Province.SAXONY,
-                    Province.SWABIA,
-                    Province.FRANCONIA,
-                    Province.LOMBARDY,
-                    Province.LIGURIA,
-                    Province.CORSICA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARABIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.SYRIA,
-                    Province.LEBANON,
-                    Province.JERUSALEM,
-                    Province.ARABIA,
-                ],
-                ProvinceType.HISTORICAL: [Province.EGYPT, Province.CYRENAICA],
-                ProvinceType.POTENTIAL: [
-                    Province.ANTIOCHIA,
-                    Province.CYPRUS,
-                    Province.IFRIQIYA,
-                    Province.TRIPOLITANIA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.ORAN,
-                    Province.ALGIERS,
-                    Province.SICILY,
-                    Province.MALTA,
-                    Province.CRETE,
-                    Province.RHODES,
-                    Province.CILICIA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.MOESIA],
-                ProvinceType.HISTORICAL: [Province.MACEDONIA, Province.WALLACHIA],
-                ProvinceType.POTENTIAL: [Province.THRACE, Province.THESSALONIKI],
-                ProvinceType.CONTESTED: [
-                    Province.SERBIA,
-                    Province.BANAT,
-                    Province.EPIRUS,
-                    Province.ARBERIA,
-                    Province.CONSTANTINOPLE,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.ANDALUSIA, Province.VALENCIA, Province.LA_MANCHA],
-                ProvinceType.HISTORICAL: [Province.TETOUAN],
-                ProvinceType.POTENTIAL: [
-                    Province.MOROCCO,
-                    Province.FEZ,
-                    Province.MARRAKESH,
-                    Province.CATALONIA,
-                    Province.ARAGON,
-                    Province.BALEARS,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.LEON,
-                    Province.LUSITANIA,
-                    Province.NAVARRE,
-                    Province.CASTILE,
-                    Province.ORAN,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.VERONA],
-                ProvinceType.HISTORICAL: [Province.DALMATIA],
-                ProvinceType.POTENTIAL: [
-                    Province.TUSCANY,
-                    Province.ARBERIA,
-                    Province.CRETE,
-                    Province.CYPRUS,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.EPIRUS,
-                    Province.MOREA,
-                    Province.RHODES,
-                    Province.CONSTANTINOPLE,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.BURGUNDY],
-                ProvinceType.HISTORICAL: [Province.PROVENCE, Province.FLANDERS],
-                ProvinceType.POTENTIAL: [
-                    Province.CHAMPAGNE,
-                    Province.PICARDY,
-                    Province.ILE_DE_FRANCE,
-                    Province.AQUITAINE,
-                    Province.ORLEANS,
-                    Province.NORMANDY,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.LORRAINE,
-                    Province.SWABIA,
-                    Province.LOMBARDY,
-                    Province.LIGURIA,
-                    Province.BRETAGNE,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.FRANCONIA,
-                    Province.LORRAINE,
-                    Province.BAVARIA,
-                    Province.SWABIA,
-                    Province.SAXONY,
-                ],
-                ProvinceType.HISTORICAL: [Province.BRANDENBURG],
-                ProvinceType.POTENTIAL: [
-                    Province.BOHEMIA,
-                    Province.HOLSTEIN,
-                    Province.POMERANIA,
-                    Province.NETHERLANDS,
-                    Province.FLANDERS,
-                    Province.LOMBARDY,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CHAMPAGNE,
-                    Province.PICARDY,
-                    Province.BURGUNDY,
-                    Province.LIGURIA,
-                    Province.VERONA,
-                    Province.TUSCANY,
-                    Province.AUSTRIA,
-                    Province.MORAVIA,
-                    Province.SILESIA,
-                    Province.GREATER_POLAND,
-                    Province.CARINTHIA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.NOVGOROD, Province.KARELIA],
-                ProvinceType.HISTORICAL: [Province.ROSTOV, Province.VOLOGDA],
-                ProvinceType.POTENTIAL: [Province.ESTONIA, Province.OSTERLAND],
-                ProvinceType.CONTESTED: [Province.SMOLENSK, Province.POLOTSK, Province.LIVONIA],
-            },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.NORWAY, Province.VESTFOLD],
-                ProvinceType.HISTORICAL: [Province.ICELAND],
-                ProvinceType.POTENTIAL: [Province.THE_ISLES, Province.JAMTLAND],
-                ProvinceType.CONTESTED: [
-                    Province.SCOTLAND,
-                    Province.NORTHUMBRIA,
-                    Province.IRELAND,
-                    Province.NORMANDY,
-                    Province.SVEALAND,
-                    Province.NORRLAND,
-                    Province.SICILY,
-                    Province.APULIA,
-                    Province.CALABRIA,
-                    Province.MALTA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.KIEV,
-                    Province.SLOBODA,
-                    Province.PEREYASLAVL,
-                    Province.CHERNIGOV,
-                ],
-                ProvinceType.HISTORICAL: [Province.PODOLIA, Province.VOLHYNIA],
-                ProvinceType.POTENTIAL: [Province.MINSK, Province.SMOLENSK, Province.ZAPORIZHIA],
-                ProvinceType.CONTESTED: [
-                    Province.MOLDOVA,
-                    Province.GALICJA,
-                    Province.BREST,
-                    Province.POLOTSK,
-                    Province.NOVGOROD,
-                    Province.MOSCOW,
-                    Province.MUROM,
-                    Province.SIMBIRSK,
-                    Province.CRIMEA,
-                    Province.DONETS,
-                    Province.KUBAN,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.HUNGARY,
-                    Province.UPPER_HUNGARY,
-                    Province.PANNONIA,
-                    Province.TRANSYLVANIA,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.SLAVONIA,
-                    Province.BANAT,
-                    Province.BOSNIA,
-                    Province.DALMATIA,
-                ],
-                ProvinceType.POTENTIAL: [Province.MORAVIA, Province.AUSTRIA, Province.CARINTHIA],
-                ProvinceType.CONTESTED: [
-                    Province.SERBIA,
-                    Province.WALLACHIA,
-                    Province.MOLDOVA,
-                    Province.GALICJA,
-                    Province.BAVARIA,
-                    Province.BOHEMIA,
-                    Province.SILESIA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.LEON, Province.GALICIA, Province.CASTILE],
-                ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [
-                    Province.NAVARRE,
-                    Province.ANDALUSIA,
-                    Province.VALENCIA,
-                    Province.LA_MANCHA,
-                    Province.CANARIES,
-                    Province.MADEIRA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.LUSITANIA,
-                    Province.CATALONIA,
-                    Province.ARAGON,
-                    Province.BALEARS,
-                    Province.AQUITAINE,
-                    Province.PROVENCE,
-                    Province.TETOUAN,
-                    Province.FEZ,
-                    Province.ORAN,
-                    Province.ALGIERS,
-                    Province.SARDINIA,
-                    Province.CORSICA,
-                    Province.AZORES,
-                    Province.SICILY,
-                    Province.CALABRIA,
-                    Province.APULIA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.DENMARK, Province.SKANELAND],
-                ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [Province.ESTONIA, Province.GOTLAND, Province.HOLSTEIN],
-                ProvinceType.CONTESTED: [
-                    Province.GOTALAND,
-                    Province.SVEALAND,
-                    Province.NORTHUMBRIA,
-                    Province.MERCIA,
-                    Province.EAST_ANGLIA,
-                    Province.LONDON,
-                    Province.BRANDENBURG,
-                    Province.NORWAY,
-                    Province.VESTFOLD,
-                    Province.NORMANDY,
-                    Province.SICILY,
-                    Province.APULIA,
-                    Province.CALABRIA,
-                    Province.MALTA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.SCOTLAND],
-                ProvinceType.HISTORICAL: [Province.THE_ISLES],
-                ProvinceType.POTENTIAL: [Province.NORTHUMBRIA],
-                ProvinceType.CONTESTED: [Province.IRELAND, Province.MERCIA, Province.WALES],
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.GREATER_POLAND,
-                    Province.LESSER_POLAND,
-                    Province.MASOVIA,
-                ],
-                ProvinceType.HISTORICAL: [Province.BREST, Province.GALICJA],
-                ProvinceType.POTENTIAL: [Province.POMERANIA, Province.SILESIA, Province.SUVALKIJA],
-                ProvinceType.CONTESTED: [
-                    Province.PRUSSIA,
-                    Province.LITHUANIA,
-                    Province.POLOTSK,
-                    Province.MINSK,
-                    Province.VOLHYNIA,
-                    Province.PODOLIA,
-                    Province.MOLDOVA,
-                    Province.KIEV,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.GENOA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.LIGURIA],
-                ProvinceType.HISTORICAL: [Province.CORSICA, Province.SARDINIA],
-                ProvinceType.POTENTIAL: [
-                    Province.SICILY,
-                    Province.MALTA,
-                    Province.LOMBARDY,
-                    Province.TUSCANY,
-                    Province.RHODES,
-                    Province.CRIMEA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CONSTANTINOPLE,
-                    Province.CRETE,
-                    Province.CYPRUS,
-                    Province.MOREA,
-                    Province.ARMENIAKON,
-                    Province.PAPHLAGONIA,
-                    Province.THRAKESION,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.MARRAKESH, Province.MOROCCO, Province.FEZ],
-                ProvinceType.HISTORICAL: [Province.TETOUAN],
-                ProvinceType.POTENTIAL: [Province.ORAN, Province.ALGIERS],
-                ProvinceType.CONTESTED: [
-                    Province.IFRIQIYA,
-                    Province.ANDALUSIA,
-                    Province.VALENCIA,
-                    Province.TRIPOLITANIA,
-                    Province.SAHARA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.LONDON,
-                    Province.EAST_ANGLIA,
-                    Province.MERCIA,
-                    Province.WESSEX,
-                ],
-                ProvinceType.HISTORICAL: [Province.NORTHUMBRIA],
-                ProvinceType.POTENTIAL: [Province.WALES],
-                ProvinceType.CONTESTED: [
-                    Province.ILE_DE_FRANCE,
-                    Province.BRETAGNE,
-                    Province.AQUITAINE,
-                    Province.ORLEANS,
-                    Province.CHAMPAGNE,
-                    Province.FLANDERS,
-                    Province.NORMANDY,
-                    Province.PICARDY,
-                    Province.SCOTLAND,
-                    Province.THE_ISLES,
-                    Province.IRELAND,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.LUSITANIA],
-                ProvinceType.HISTORICAL: [Province.AZORES],
-                ProvinceType.POTENTIAL: [Province.MADEIRA, Province.CANARIES, Province.ANDALUSIA],
-                ProvinceType.CONTESTED: [
-                    Province.MOROCCO,
-                    Province.TETOUAN,
-                    Province.LEON,
-                    Province.GALICIA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.ARAGON,
-                    Province.CATALONIA,
-                    Province.BALEARS,
-                    Province.VALENCIA,
-                ],
-                ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [
-                    Province.NAVARRE,
-                    Province.ANDALUSIA,
-                    Province.LA_MANCHA,
-                    Province.SARDINIA,
-                    Province.SICILY,
-                    Province.APULIA,
-                    Province.CALABRIA,
-                    Province.MALTA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CASTILE,
-                    Province.PROVENCE,
-                    Province.CORSICA,
-                    Province.THESSALY,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.NORRLAND, Province.SVEALAND],
-                ProvinceType.HISTORICAL: [Province.GOTALAND, Province.GOTLAND],
-                ProvinceType.POTENTIAL: [
-                    Province.JAMTLAND,
-                    Province.OSTERLAND,
-                    Province.KARELIA,
-                    Province.ESTONIA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.SKANELAND,
-                    Province.VESTFOLD,
-                    Province.POMERANIA,
-                    Province.LIVONIA,
-                    Province.PRUSSIA,
-                    Province.NOVGOROD,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.PRUSSIA],
-                ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [Province.POMERANIA, Province.LIVONIA],
-                ProvinceType.CONTESTED: [
-                    Province.BRANDENBURG,
-                    Province.ESTONIA,
-                    Province.GOTLAND,
-                    Province.LITHUANIA,
-                    Province.SUVALKIJA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.LITHUANIA],
-                ProvinceType.HISTORICAL: [Province.SUVALKIJA, Province.MINSK, Province.POLOTSK],
-                ProvinceType.POTENTIAL: [
-                    Province.BREST,
-                    Province.PODOLIA,
-                    Province.VOLHYNIA,
-                    Province.KIEV,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.GREATER_POLAND,
-                    Province.LESSER_POLAND,
-                    Province.MASOVIA,
-                    Province.GALICJA,
-                    Province.SLOBODA,
-                    Province.PEREYASLAVL,
-                    Province.LIVONIA,
-                    Province.ESTONIA,
-                    Province.NOVGOROD,
-                    Province.SMOLENSK,
-                    Province.CHERNIGOV,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.AUSTRIA, Province.CARINTHIA],
-                ProvinceType.HISTORICAL: [Province.BOHEMIA, Province.MORAVIA],
-                ProvinceType.POTENTIAL: [
-                    Province.BAVARIA,
-                    Province.SILESIA,
-                    Province.PANNONIA,
-                    Province.UPPER_HUNGARY,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.VERONA,
-                    Province.HUNGARY,
-                    Province.TRANSYLVANIA,
-                    Province.SLAVONIA,
-                    Province.DALMATIA,
-                    Province.LESSER_POLAND,
-                    Province.GALICJA,
-                    Province.NETHERLANDS,
-                    Province.FLANDERS,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.OPSIKION,
-                    Province.THRAKESION,
-                    Province.PAPHLAGONIA,
-                    Province.ANATOLIKON,
-                    Province.CONSTANTINOPLE,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.THRACE,
-                    Province.ARMENIAKON,
-                    Province.CHARSIANON,
-                    Province.CILICIA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.COLONEA,
-                    Province.ANTIOCHIA,
-                    Province.SYRIA,
-                    Province.LEBANON,
-                    Province.JERUSALEM,
-                    Province.EGYPT,
-                    Province.ARABIA,
-                    Province.MACEDONIA,
-                    Province.THESSALONIKI,
-                    Province.MOESIA,
-                    Province.CYPRUS,
-                    Province.RHODES,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.THESSALY,
-                    Province.EPIRUS,
-                    Province.MOREA,
-                    Province.ARBERIA,
-                    Province.WALLACHIA,
-                    Province.SERBIA,
-                    Province.BOSNIA,
-                    Province.BANAT,
-                    Province.SLAVONIA,
-                    Province.PANNONIA,
-                    Province.HUNGARY,
-                    Province.TRANSYLVANIA,
-                    Province.MOLDOVA,
-                    Province.CRIMEA,
-                    Province.CRETE,
-                    Province.CYRENAICA,
-                    Province.TRIPOLITANIA,
-                    Province.KUBAN,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [
-                    Province.MOSCOW,
-                    Province.MUROM,
-                    Province.ROSTOV,
-                    Province.SMOLENSK,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.NIZHNYNOVGOROD,
-                    Province.SIMBIRSK,
-                    Province.PEREYASLAVL,
-                    Province.CHERNIGOV,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.NOVGOROD,
-                    Province.VOLOGDA,
-                    Province.KIEV,
-                    Province.MINSK,
-                    Province.POLOTSK,
-                    Province.VOLHYNIA,
-                    Province.PODOLIA,
-                    Province.DONETS,
-                    Province.SLOBODA,
-                    Province.ZAPORIZHIA,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.CRIMEA,
-                    Province.MOLDOVA,
-                    Province.GALICJA,
-                    Province.KUBAN,
-                    Province.BREST,
-                    Province.LITHUANIA,
-                    Province.LIVONIA,
-                    Province.ESTONIA,
-                    Province.KARELIA,
-                    Province.OSTERLAND,
-                    Province.PRUSSIA,
-                    Province.SUVALKIJA,
-                ],
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                ProvinceType.CORE: [Province.NETHERLANDS],
-                ProvinceType.HISTORICAL: [Province.FLANDERS],
-                ProvinceType.POTENTIAL: [],
-                ProvinceType.CONTESTED: [],
-            },
-            do_not_cast=True,
-        ),
-    }
+        Civ.BYZANTIUM: {
+            ProvinceType.CORE: [
+                Province.CONSTANTINOPLE,
+                Province.THRACE,
+                Province.THESSALY,
+                Province.THESSALONIKI,
+                Province.EPIRUS,
+                Province.MOREA,
+                Province.OPSIKION,
+                Province.PAPHLAGONIA,
+                Province.THRAKESION,
+                Province.CILICIA,
+                Province.ANATOLIKON,
+                Province.ARMENIAKON,
+                Province.CHARSIANON,
+                Province.COLONEA,
+                Province.ANTIOCHIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.MOESIA,
+                Province.SERBIA,
+                Province.MACEDONIA,
+                Province.ARBERIA,
+                Province.CYPRUS,
+                Province.CRETE,
+                Province.RHODES,
+                Province.SYRIA,
+                Province.LEBANON,
+                Province.JERUSALEM,
+                Province.EGYPT,
+                Province.CYRENAICA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.CALABRIA,
+                Province.APULIA,
+                Province.SICILY,
+                Province.MALTA,
+                Province.TRIPOLITANIA,
+                Province.IFRIQIYA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CRIMEA,
+                Province.ARABIA,
+                Province.BOSNIA,
+                Province.SLAVONIA,
+                Province.DALMATIA,
+                Province.VERONA,
+                Province.LOMBARDY,
+                Province.LIGURIA,
+                Province.TUSCANY,
+                Province.LATIUM,
+                Province.SARDINIA,
+                Province.CORSICA,
+            ],
+        },
+        Civ.FRANCE: {
+            ProvinceType.CORE: [
+                Province.ILE_DE_FRANCE,
+                Province.ORLEANS,
+                Province.CHAMPAGNE,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.PICARDY,
+                Province.NORMANDY,
+                Province.AQUITAINE,
+                Province.LORRAINE,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.BRETAGNE,
+                Province.PROVENCE,
+                Province.BURGUNDY,
+                Province.FLANDERS,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CATALONIA,
+                Province.ARAGON,
+                Province.NAVARRE,
+                Province.NETHERLANDS,
+                Province.BAVARIA,
+                Province.SAXONY,
+                Province.SWABIA,
+                Province.FRANCONIA,
+                Province.LOMBARDY,
+                Province.LIGURIA,
+                Province.CORSICA,
+            ],
+        },
+        Civ.ARABIA: {
+            ProvinceType.CORE: [
+                Province.SYRIA,
+                Province.LEBANON,
+                Province.JERUSALEM,
+                Province.ARABIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.EGYPT,
+                Province.CYRENAICA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.ANTIOCHIA,
+                Province.CYPRUS,
+                Province.IFRIQIYA,
+                Province.TRIPOLITANIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.ORAN,
+                Province.ALGIERS,
+                Province.SICILY,
+                Province.MALTA,
+                Province.CRETE,
+                Province.RHODES,
+                Province.CILICIA,
+            ],
+        },
+        Civ.BULGARIA: {
+            ProvinceType.CORE: [Province.MOESIA],
+            ProvinceType.HISTORICAL: [
+                Province.MACEDONIA,
+                Province.WALLACHIA,
+            ],
+            ProvinceType.POTENTIAL: [Province.THRACE, Province.THESSALONIKI],
+            ProvinceType.CONTESTED: [
+                Province.SERBIA,
+                Province.BANAT,
+                Province.EPIRUS,
+                Province.ARBERIA,
+                Province.CONSTANTINOPLE,
+            ],
+        },
+        Civ.CORDOBA: {
+            ProvinceType.CORE: [
+                Province.ANDALUSIA,
+                Province.VALENCIA,
+                Province.LA_MANCHA,
+            ],
+            ProvinceType.HISTORICAL: [Province.TETOUAN],
+            ProvinceType.POTENTIAL: [
+                Province.MOROCCO,
+                Province.FEZ,
+                Province.MARRAKESH,
+                Province.CATALONIA,
+                Province.ARAGON,
+                Province.BALEARS,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.LEON,
+                Province.LUSITANIA,
+                Province.NAVARRE,
+                Province.CASTILE,
+                Province.ORAN,
+            ],
+        },
+        Civ.VENECIA: {
+            ProvinceType.CORE: [Province.VERONA],
+            ProvinceType.HISTORICAL: [Province.DALMATIA],
+            ProvinceType.POTENTIAL: [
+                Province.TUSCANY,
+                Province.ARBERIA,
+                Province.CRETE,
+                Province.CYPRUS,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.EPIRUS,
+                Province.MOREA,
+                Province.RHODES,
+                Province.CONSTANTINOPLE,
+            ],
+        },
+        Civ.BURGUNDY: {
+            ProvinceType.CORE: [Province.BURGUNDY],
+            ProvinceType.HISTORICAL: [
+                Province.PROVENCE,
+                Province.FLANDERS,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.CHAMPAGNE,
+                Province.PICARDY,
+                Province.ILE_DE_FRANCE,
+                Province.AQUITAINE,
+                Province.ORLEANS,
+                Province.NORMANDY,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.LORRAINE,
+                Province.SWABIA,
+                Province.LOMBARDY,
+                Province.LIGURIA,
+                Province.BRETAGNE,
+            ],
+        },
+        Civ.GERMANY: {
+            ProvinceType.CORE: [
+                Province.FRANCONIA,
+                Province.LORRAINE,
+                Province.BAVARIA,
+                Province.SWABIA,
+                Province.SAXONY,
+            ],
+            ProvinceType.HISTORICAL: [Province.BRANDENBURG],
+            ProvinceType.POTENTIAL: [
+                Province.BOHEMIA,
+                Province.HOLSTEIN,
+                Province.POMERANIA,
+                Province.NETHERLANDS,
+                Province.FLANDERS,
+                Province.LOMBARDY,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CHAMPAGNE,
+                Province.PICARDY,
+                Province.BURGUNDY,
+                Province.LIGURIA,
+                Province.VERONA,
+                Province.TUSCANY,
+                Province.AUSTRIA,
+                Province.MORAVIA,
+                Province.SILESIA,
+                Province.GREATER_POLAND,
+                Province.CARINTHIA,
+            ],
+        },
+        Civ.NOVGOROD: {
+            ProvinceType.CORE: [
+                Province.NOVGOROD,
+                Province.KARELIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.ROSTOV,
+                Province.VOLOGDA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.ESTONIA,
+                Province.OSTERLAND,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.SMOLENSK,
+                Province.POLOTSK,
+                Province.LIVONIA,
+            ],
+        },
+        Civ.NORWAY: {
+            ProvinceType.CORE: [
+                Province.NORWAY,
+                Province.VESTFOLD,
+            ],
+            ProvinceType.HISTORICAL: [Province.ICELAND],
+            ProvinceType.POTENTIAL: [
+                Province.THE_ISLES,
+                Province.JAMTLAND,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.SCOTLAND,
+                Province.NORTHUMBRIA,
+                Province.IRELAND,
+                Province.NORMANDY,
+                Province.SVEALAND,
+                Province.NORRLAND,
+                Province.SICILY,
+                Province.APULIA,
+                Province.CALABRIA,
+                Province.MALTA,
+            ],
+        },
+        Civ.KIEV: {
+            ProvinceType.CORE: [
+                Province.KIEV,
+                Province.SLOBODA,
+                Province.PEREYASLAVL,
+                Province.CHERNIGOV,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.PODOLIA,
+                Province.VOLHYNIA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.MINSK,
+                Province.SMOLENSK,
+                Province.ZAPORIZHIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.MOLDOVA,
+                Province.GALICJA,
+                Province.BREST,
+                Province.POLOTSK,
+                Province.NOVGOROD,
+                Province.MOSCOW,
+                Province.MUROM,
+                Province.SIMBIRSK,
+                Province.CRIMEA,
+                Province.DONETS,
+                Province.KUBAN,
+            ],
+        },
+        Civ.HUNGARY: {
+            ProvinceType.CORE: [
+                Province.HUNGARY,
+                Province.UPPER_HUNGARY,
+                Province.PANNONIA,
+                Province.TRANSYLVANIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.SLAVONIA,
+                Province.BANAT,
+                Province.BOSNIA,
+                Province.DALMATIA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.MORAVIA,
+                Province.AUSTRIA,
+                Province.CARINTHIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.SERBIA,
+                Province.WALLACHIA,
+                Province.MOLDOVA,
+                Province.GALICJA,
+                Province.BAVARIA,
+                Province.BOHEMIA,
+                Province.SILESIA,
+            ],
+        },
+        Civ.CASTILE: {
+            ProvinceType.CORE: [
+                Province.LEON,
+                Province.GALICIA,
+                Province.CASTILE,
+            ],
+            ProvinceType.HISTORICAL: [],
+            ProvinceType.POTENTIAL: [
+                Province.NAVARRE,
+                Province.ANDALUSIA,
+                Province.VALENCIA,
+                Province.LA_MANCHA,
+                Province.CANARIES,
+                Province.MADEIRA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.LUSITANIA,
+                Province.CATALONIA,
+                Province.ARAGON,
+                Province.BALEARS,
+                Province.AQUITAINE,
+                Province.PROVENCE,
+                Province.TETOUAN,
+                Province.FEZ,
+                Province.ORAN,
+                Province.ALGIERS,
+                Province.SARDINIA,
+                Province.CORSICA,
+                Province.AZORES,
+                Province.SICILY,
+                Province.CALABRIA,
+                Province.APULIA,
+            ],
+        },
+        Civ.DENMARK: {
+            ProvinceType.CORE: [
+                Province.DENMARK,
+                Province.SKANELAND,
+            ],
+            ProvinceType.HISTORICAL: [],
+            ProvinceType.POTENTIAL: [
+                Province.ESTONIA,
+                Province.GOTLAND,
+                Province.HOLSTEIN,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.GOTALAND,
+                Province.SVEALAND,
+                Province.NORTHUMBRIA,
+                Province.MERCIA,
+                Province.EAST_ANGLIA,
+                Province.LONDON,
+                Province.BRANDENBURG,
+                Province.NORWAY,
+                Province.VESTFOLD,
+                Province.NORMANDY,
+                Province.SICILY,
+                Province.APULIA,
+                Province.CALABRIA,
+                Province.MALTA,
+            ],
+        },
+        Civ.SCOTLAND: {
+            ProvinceType.CORE: [Province.SCOTLAND],
+            ProvinceType.HISTORICAL: [Province.THE_ISLES],
+            ProvinceType.POTENTIAL: [Province.NORTHUMBRIA],
+            ProvinceType.CONTESTED: [
+                Province.IRELAND,
+                Province.MERCIA,
+                Province.WALES,
+            ],
+        },
+        Civ.POLAND: {
+            ProvinceType.CORE: [
+                Province.GREATER_POLAND,
+                Province.LESSER_POLAND,
+                Province.MASOVIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.BREST,
+                Province.GALICJA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.POMERANIA,
+                Province.SILESIA,
+                Province.SUVALKIJA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.PRUSSIA,
+                Province.LITHUANIA,
+                Province.POLOTSK,
+                Province.MINSK,
+                Province.VOLHYNIA,
+                Province.PODOLIA,
+                Province.MOLDOVA,
+                Province.KIEV,
+            ],
+        },
+        Civ.GENOA: {
+            ProvinceType.CORE: [
+                Province.LIGURIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.CORSICA,
+                Province.SARDINIA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.SICILY,
+                Province.MALTA,
+                Province.LOMBARDY,
+                Province.TUSCANY,
+                Province.RHODES,
+                Province.CRIMEA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CONSTANTINOPLE,
+                Province.CRETE,
+                Province.CYPRUS,
+                Province.MOREA,
+                Province.ARMENIAKON,
+                Province.PAPHLAGONIA,
+                Province.THRAKESION,
+            ],
+        },
+        Civ.MOROCCO: {
+            ProvinceType.CORE: [
+                Province.MARRAKESH,
+                Province.MOROCCO,
+                Province.FEZ,
+            ],
+            ProvinceType.HISTORICAL: [Province.TETOUAN],
+            ProvinceType.POTENTIAL: [
+                Province.ORAN,
+                Province.ALGIERS,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.IFRIQIYA,
+                Province.ANDALUSIA,
+                Province.VALENCIA,
+                Province.TRIPOLITANIA,
+                Province.SAHARA,
+            ],
+        },
+        Civ.ENGLAND: {
+            ProvinceType.CORE: [
+                Province.LONDON,
+                Province.EAST_ANGLIA,
+                Province.MERCIA,
+                Province.WESSEX,
+            ],
+            ProvinceType.HISTORICAL: [Province.NORTHUMBRIA],
+            ProvinceType.POTENTIAL: [Province.WALES],
+            ProvinceType.CONTESTED: [
+                Province.ILE_DE_FRANCE,
+                Province.BRETAGNE,
+                Province.AQUITAINE,
+                Province.ORLEANS,
+                Province.CHAMPAGNE,
+                Province.FLANDERS,
+                Province.NORMANDY,
+                Province.PICARDY,
+                Province.SCOTLAND,
+                Province.THE_ISLES,
+                Province.IRELAND,
+            ],
+        },
+        Civ.PORTUGAL: {
+            ProvinceType.CORE: [Province.LUSITANIA],
+            ProvinceType.HISTORICAL: [Province.AZORES],
+            ProvinceType.POTENTIAL: [
+                Province.MADEIRA,
+                Province.CANARIES,
+                Province.ANDALUSIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.MOROCCO,
+                Province.TETOUAN,
+                Province.LEON,
+                Province.GALICIA,
+            ],
+        },
+        Civ.ARAGON: {
+            ProvinceType.CORE: [
+                Province.ARAGON,
+                Province.CATALONIA,
+                Province.BALEARS,
+                Province.VALENCIA,
+            ],
+            ProvinceType.HISTORICAL: [],
+            ProvinceType.POTENTIAL: [
+                Province.NAVARRE,
+                Province.ANDALUSIA,
+                Province.LA_MANCHA,
+                Province.SARDINIA,
+                Province.SICILY,
+                Province.APULIA,
+                Province.CALABRIA,
+                Province.MALTA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CASTILE,
+                Province.PROVENCE,
+                Province.CORSICA,
+                Province.THESSALY,
+            ],
+        },
+        Civ.SWEDEN: {
+            ProvinceType.CORE: [
+                Province.NORRLAND,
+                Province.SVEALAND,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.GOTALAND,
+                Province.GOTLAND,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.JAMTLAND,
+                Province.OSTERLAND,
+                Province.KARELIA,
+                Province.ESTONIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.SKANELAND,
+                Province.VESTFOLD,
+                Province.POMERANIA,
+                Province.LIVONIA,
+                Province.PRUSSIA,
+                Province.NOVGOROD,
+            ],
+        },
+        Civ.PRUSSIA: {
+            ProvinceType.CORE: [Province.PRUSSIA],
+            ProvinceType.HISTORICAL: [],
+            ProvinceType.POTENTIAL: [
+                Province.POMERANIA,
+                Province.LIVONIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.BRANDENBURG,
+                Province.ESTONIA,
+                Province.GOTLAND,
+                Province.LITHUANIA,
+                Province.SUVALKIJA,
+            ],
+        },
+        Civ.LITHUANIA: {
+            ProvinceType.CORE: [Province.LITHUANIA],
+            ProvinceType.HISTORICAL: [
+                Province.SUVALKIJA,
+                Province.MINSK,
+                Province.POLOTSK,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.BREST,
+                Province.PODOLIA,
+                Province.VOLHYNIA,
+                Province.KIEV,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.GREATER_POLAND,
+                Province.LESSER_POLAND,
+                Province.MASOVIA,
+                Province.GALICJA,
+                Province.SLOBODA,
+                Province.PEREYASLAVL,
+                Province.LIVONIA,
+                Province.ESTONIA,
+                Province.NOVGOROD,
+                Province.SMOLENSK,
+                Province.CHERNIGOV,
+            ],
+        },
+        Civ.AUSTRIA: {
+            ProvinceType.CORE: [
+                Province.AUSTRIA,
+                Province.CARINTHIA,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.BOHEMIA,
+                Province.MORAVIA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.BAVARIA,
+                Province.SILESIA,
+                Province.PANNONIA,
+                Province.UPPER_HUNGARY,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.VERONA,
+                Province.HUNGARY,
+                Province.TRANSYLVANIA,
+                Province.SLAVONIA,
+                Province.DALMATIA,
+                Province.LESSER_POLAND,
+                Province.GALICJA,
+                Province.NETHERLANDS,
+                Province.FLANDERS,
+            ],
+        },
+        Civ.OTTOMAN: {
+            ProvinceType.CORE: [
+                Province.OPSIKION,
+                Province.THRAKESION,
+                Province.PAPHLAGONIA,
+                Province.ANATOLIKON,
+                Province.CONSTANTINOPLE,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.THRACE,
+                Province.ARMENIAKON,
+                Province.CHARSIANON,
+                Province.CILICIA,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.COLONEA,
+                Province.ANTIOCHIA,
+                Province.SYRIA,
+                Province.LEBANON,
+                Province.JERUSALEM,
+                Province.EGYPT,
+                Province.ARABIA,
+                Province.MACEDONIA,
+                Province.THESSALONIKI,
+                Province.MOESIA,
+                Province.CYPRUS,
+                Province.RHODES,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.THESSALY,
+                Province.EPIRUS,
+                Province.MOREA,
+                Province.ARBERIA,
+                Province.WALLACHIA,
+                Province.SERBIA,
+                Province.BOSNIA,
+                Province.BANAT,
+                Province.SLAVONIA,
+                Province.PANNONIA,
+                Province.HUNGARY,
+                Province.TRANSYLVANIA,
+                Province.MOLDOVA,
+                Province.CRIMEA,
+                Province.CRETE,
+                Province.CYRENAICA,
+                Province.TRIPOLITANIA,
+                Province.KUBAN,
+            ],
+        },
+        Civ.MOSCOW: {
+            ProvinceType.CORE: [
+                Province.MOSCOW,
+                Province.MUROM,
+                Province.ROSTOV,
+                Province.SMOLENSK,
+            ],
+            ProvinceType.HISTORICAL: [
+                Province.NIZHNYNOVGOROD,
+                Province.SIMBIRSK,
+                Province.PEREYASLAVL,
+                Province.CHERNIGOV,
+            ],
+            ProvinceType.POTENTIAL: [
+                Province.NOVGOROD,
+                Province.VOLOGDA,
+                Province.KIEV,
+                Province.MINSK,
+                Province.POLOTSK,
+                Province.VOLHYNIA,
+                Province.PODOLIA,
+                Province.DONETS,
+                Province.SLOBODA,
+                Province.ZAPORIZHIA,
+            ],
+            ProvinceType.CONTESTED: [
+                Province.CRIMEA,
+                Province.MOLDOVA,
+                Province.GALICJA,
+                Province.KUBAN,
+                Province.BREST,
+                Province.LITHUANIA,
+                Province.LIVONIA,
+                Province.ESTONIA,
+                Province.KARELIA,
+                Province.OSTERLAND,
+                Province.PRUSSIA,
+                Province.SUVALKIJA,
+            ],
+        },
+        Civ.DUTCH: {
+            ProvinceType.CORE: [Province.NETHERLANDS],
+            ProvinceType.HISTORICAL: [Province.FLANDERS],
+            ProvinceType.POTENTIAL: [],
+            ProvinceType.CONTESTED: [],
+        },
+    },
 )
 
 CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
     {
-        Civ.ARABIA: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BYZANTIUM, Province.CYRENAICA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.TRIPOLITANIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.IFRIQIYA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.EGYPT, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.ARABIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.SYRIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.LEBANON, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.JERUSALEM, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.HISTORICAL),
+        Civ.ARABIA: {
+            Event.ON_SPAWN: [
+                (Civ.BYZANTIUM, Province.CYRENAICA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.TRIPOLITANIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.IFRIQIYA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.EGYPT, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.ARABIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.SYRIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.LEBANON, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.JERUSALEM, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.HISTORICAL),
+            ]
+        },
+        Civ.BULGARIA: {
+            Event.ON_SPAWN: [
+                (Civ.BYZANTIUM, Province.SERBIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.MOESIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.THRACE, ProvinceType.HISTORICAL),
+            ]
+        },
+        Civ.CORDOBA: {
+            Event.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
+            + [
+                (Province.IFRIQIYA, ProvinceType.CORE),
+                (Province.ALGIERS, ProvinceType.HISTORICAL),
+                (Province.ORAN, ProvinceType.CONTESTED),
+                (Province.TRIPOLITANIA, ProvinceType.CONTESTED),
+                (Province.TETOUAN, ProvinceType.CONTESTED),
+                (Province.MOROCCO, ProvinceType.CONTESTED),
+                (Province.FEZ, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.VENECIA: {
+            Event.ON_SPAWN: [
+                (Civ.BYZANTIUM, Province.DALMATIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.BOSNIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.SLAVONIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.VERONA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.TUSCANY, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.LOMBARDY, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.LIGURIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.CORSICA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.SARDINIA, ProvinceType.NONE),
+                (Civ.BYZANTIUM, Province.LATIUM, ProvinceType.NONE),
+            ]
+        },
+        Civ.BURGUNDY: {
+            Event.ON_SPAWN: [
+                (Civ.FRANCE, Province.PROVENCE, ProvinceType.POTENTIAL),
+                (Civ.FRANCE, Province.BURGUNDY, ProvinceType.POTENTIAL),
+            ]
+        },
+        Civ.GERMANY: {
+            Event.ON_SPAWN: [
+                (Civ.FRANCE, Province.LORRAINE, ProvinceType.CONTESTED),
+                (Civ.FRANCE, Province.BAVARIA, ProvinceType.NONE),
+                (Civ.FRANCE, Province.FRANCONIA, ProvinceType.NONE),
+                (Civ.FRANCE, Province.SAXONY, ProvinceType.NONE),
+                (Civ.FRANCE, Province.NETHERLANDS, ProvinceType.NONE),
+            ]
+        },
+        Civ.NORWAY: {
+            Event.ON_DATETURN: {
+                # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
+                1194
+                + 1: [
+                    (Province.APULIA, ProvinceType.NONE),
+                    (Province.CALABRIA, ProvinceType.NONE),
+                    (Province.SICILY, ProvinceType.NONE),
+                    (Province.MALTA, ProvinceType.NONE),
                 ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BYZANTIUM, Province.SERBIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.MOESIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.THRACE, ProvinceType.HISTORICAL),
+            }
+        },
+        Civ.HUNGARY: {
+            Event.ON_SPAWN: [
+                (Civ.BULGARIA, Province.BANAT, ProvinceType.NONE),
+                (Civ.BULGARIA, Province.WALLACHIA, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.CASTILE: {
+            Event.ON_SPAWN: [(Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL)]
+        },
+        Civ.DENMARK: {
+            Event.ON_DATETURN: {
+                # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
+                1194
+                + 1: [
+                    (Province.APULIA, ProvinceType.NONE),
+                    (Province.CALABRIA, ProvinceType.NONE),
+                    (Province.SICILY, ProvinceType.NONE),
+                    (Province.MALTA, ProvinceType.NONE),
                 ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {
-                Event.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
-                + [
-                    (Province.IFRIQIYA, ProvinceType.CORE),
-                    (Province.ALGIERS, ProvinceType.HISTORICAL),
-                    (Province.ORAN, ProvinceType.CONTESTED),
-                    (Province.TRIPOLITANIA, ProvinceType.CONTESTED),
-                    (Province.TETOUAN, ProvinceType.CONTESTED),
-                    (Province.MOROCCO, ProvinceType.CONTESTED),
-                    (Province.FEZ, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BYZANTIUM, Province.DALMATIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.BOSNIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.SLAVONIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.VERONA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.TUSCANY, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.LOMBARDY, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.LIGURIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.CORSICA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.SARDINIA, ProvinceType.NONE),
-                    (Civ.BYZANTIUM, Province.LATIUM, ProvinceType.NONE),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.FRANCE, Province.PROVENCE, ProvinceType.POTENTIAL),
-                    (Civ.FRANCE, Province.BURGUNDY, ProvinceType.POTENTIAL),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.FRANCE, Province.LORRAINE, ProvinceType.CONTESTED),
-                    (Civ.FRANCE, Province.BAVARIA, ProvinceType.NONE),
-                    (Civ.FRANCE, Province.FRANCONIA, ProvinceType.NONE),
-                    (Civ.FRANCE, Province.SAXONY, ProvinceType.NONE),
-                    (Civ.FRANCE, Province.NETHERLANDS, ProvinceType.NONE),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                Event.ON_DATETURN: {
-                    # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-                    1194
-                    + 1: [
-                        (Province.APULIA, ProvinceType.NONE),
-                        (Province.CALABRIA, ProvinceType.NONE),
-                        (Province.SICILY, ProvinceType.NONE),
-                        (Province.MALTA, ProvinceType.NONE),
+            }
+        },
+        Civ.MOROCCO: {
+            Event.ON_SPAWN: [
+                (Civ.CORDOBA, Province.MOROCCO, ProvinceType.NONE),
+                (Civ.CORDOBA, Province.MARRAKESH, ProvinceType.NONE),
+                (Civ.CORDOBA, Province.FEZ, ProvinceType.CONTESTED),
+                (Civ.CORDOBA, Province.TETOUAN, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.ENGLAND: {
+            Event.ON_SPAWN: [
+                (Civ.FRANCE, Province.NORMANDY, ProvinceType.POTENTIAL),
+                (Civ.SCOTLAND, Province.NORTHUMBRIA, ProvinceType.CONTESTED),
+                (Civ.SCOTLAND, Province.MERCIA, ProvinceType.NONE),
+                (Civ.DENMARK, Province.NORTHUMBRIA, ProvinceType.NONE),
+                (Civ.DENMARK, Province.MERCIA, ProvinceType.NONE),
+                (Civ.DENMARK, Province.EAST_ANGLIA, ProvinceType.NONE),
+                (Civ.DENMARK, Province.LONDON, ProvinceType.NONE),
+            ]
+        },
+        Civ.ARAGON: {
+            Event.ON_SPAWN: [
+                (Civ.BYZANTIUM, Province.APULIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.CALABRIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.SICILY, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.MALTA, ProvinceType.CONTESTED),
+                (Civ.CORDOBA, Province.ARAGON, ProvinceType.CONTESTED),
+                (Civ.CORDOBA, Province.CATALONIA, ProvinceType.CONTESTED),
+                (Civ.CORDOBA, Province.VALENCIA, ProvinceType.HISTORICAL),
+                (Civ.CORDOBA, Province.BALEARS, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.SWEDEN: {
+            Event.ON_SPAWN: [
+                (Civ.NORWAY, Province.SVEALAND, ProvinceType.NONE),
+                (Civ.DENMARK, Province.GOTALAND, ProvinceType.NONE),
+                (Civ.DENMARK, Province.SVEALAND, ProvinceType.NONE),
+                (Civ.NOVGOROD, Province.OSTERLAND, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.PRUSSIA: {
+            Event.ON_DATETURN: DataMapper(
+                {
+                    1618: [
+                        (Province.ESTONIA, ProvinceType.NONE),
+                        (Province.LITHUANIA, ProvinceType.NONE),
+                        (Province.SUVALKIJA, ProvinceType.NONE),
+                        (Province.LIVONIA, ProvinceType.CONTESTED),
+                        (Province.POMERANIA, ProvinceType.HISTORICAL),
+                        (Province.BRANDENBURG, ProvinceType.HISTORICAL),
+                        (Province.SILESIA, ProvinceType.POTENTIAL),
+                        (Province.GREATER_POLAND, ProvinceType.CONTESTED),
                     ]
                 }
-            },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BULGARIA, Province.BANAT, ProvinceType.NONE),
-                    (Civ.BULGARIA, Province.WALLACHIA, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {Event.ON_SPAWN: [(Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL)]},
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {
-                Event.ON_DATETURN: {
-                    # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-                    1194
-                    + 1: [
-                        (Province.APULIA, ProvinceType.NONE),
-                        (Province.CALABRIA, ProvinceType.NONE),
-                        (Province.SICILY, ProvinceType.NONE),
-                        (Province.MALTA, ProvinceType.NONE),
-                    ]
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.CORDOBA, Province.MOROCCO, ProvinceType.NONE),
-                    (Civ.CORDOBA, Province.MARRAKESH, ProvinceType.NONE),
-                    (Civ.CORDOBA, Province.FEZ, ProvinceType.CONTESTED),
-                    (Civ.CORDOBA, Province.TETOUAN, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.FRANCE, Province.NORMANDY, ProvinceType.POTENTIAL),
-                    (Civ.SCOTLAND, Province.NORTHUMBRIA, ProvinceType.CONTESTED),
-                    (Civ.SCOTLAND, Province.MERCIA, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.NORTHUMBRIA, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.MERCIA, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.EAST_ANGLIA, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.LONDON, ProvinceType.NONE),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BYZANTIUM, Province.APULIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.CALABRIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.SICILY, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.MALTA, ProvinceType.CONTESTED),
-                    (Civ.CORDOBA, Province.ARAGON, ProvinceType.CONTESTED),
-                    (Civ.CORDOBA, Province.CATALONIA, ProvinceType.CONTESTED),
-                    (Civ.CORDOBA, Province.VALENCIA, ProvinceType.HISTORICAL),
-                    (Civ.CORDOBA, Province.BALEARS, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.NORWAY, Province.SVEALAND, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.GOTALAND, ProvinceType.NONE),
-                    (Civ.DENMARK, Province.SVEALAND, ProvinceType.NONE),
-                    (Civ.NOVGOROD, Province.OSTERLAND, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {
-                Event.ON_DATETURN: DataMapper(
-                    {
-                        1618: [
-                            (Province.ESTONIA, ProvinceType.NONE),
-                            (Province.LITHUANIA, ProvinceType.NONE),
-                            (Province.SUVALKIJA, ProvinceType.NONE),
-                            (Province.LIVONIA, ProvinceType.CONTESTED),
-                            (Province.POMERANIA, ProvinceType.HISTORICAL),
-                            (Province.BRANDENBURG, ProvinceType.HISTORICAL),
-                            (Province.SILESIA, ProvinceType.POTENTIAL),
-                            (Province.GREATER_POLAND, ProvinceType.CONTESTED),
-                        ]
-                    }
-                )
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.HUNGARY, Province.CARINTHIA, ProvinceType.CONTESTED),
-                    (Civ.HUNGARY, Province.AUSTRIA, ProvinceType.CONTESTED),
-                    (Civ.HUNGARY, Province.MORAVIA, ProvinceType.CONTESTED),
-                    (Civ.HUNGARY, Province.BAVARIA, ProvinceType.NONE),
-                    (Civ.GERMANY, Province.BAVARIA, ProvinceType.CONTESTED),
-                    (Civ.GERMANY, Province.BOHEMIA, ProvinceType.CONTESTED),
-                    (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.CONTESTED),
-                    (Civ.CASTILE, Province.FLANDERS, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.ARMENIAKON, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.CYPRUS, ProvinceType.CONTESTED),
-                    (Civ.BYZANTIUM, Province.ANATOLIKON, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.OPSIKION, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.THRAKESION, ProvinceType.HISTORICAL),
-                    (Civ.BYZANTIUM, Province.PAPHLAGONIA, ProvinceType.HISTORICAL),
-                    (Civ.HUNGARY, Province.DALMATIA, ProvinceType.CONTESTED),
-                    (Civ.HUNGARY, Province.BOSNIA, ProvinceType.CONTESTED),
-                    (Civ.HUNGARY, Province.BANAT, ProvinceType.CONTESTED),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.NOVGOROD, Province.ROSTOV, ProvinceType.CONTESTED),
-                    (Civ.NOVGOROD, Province.SMOLENSK, ProvinceType.NONE),
-                ]
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.NONE),
-                    (Civ.CASTILE, Province.FLANDERS, ProvinceType.NONE),
-                    (Civ.AUSTRIA, Province.NETHERLANDS, ProvinceType.NONE),
-                    (Civ.AUSTRIA, Province.FLANDERS, ProvinceType.NONE),
-                ]
-            },
-            do_not_cast=True,
-        ),
-    }
-).fill_missing_members(IntEnumDataMapper({}))
+            )
+        },
+        Civ.AUSTRIA: {
+            Event.ON_SPAWN: [
+                (Civ.HUNGARY, Province.CARINTHIA, ProvinceType.CONTESTED),
+                (Civ.HUNGARY, Province.AUSTRIA, ProvinceType.CONTESTED),
+                (Civ.HUNGARY, Province.MORAVIA, ProvinceType.CONTESTED),
+                (Civ.HUNGARY, Province.BAVARIA, ProvinceType.NONE),
+                (Civ.GERMANY, Province.BAVARIA, ProvinceType.CONTESTED),
+                (Civ.GERMANY, Province.BOHEMIA, ProvinceType.CONTESTED),
+                (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.CONTESTED),
+                (Civ.CASTILE, Province.FLANDERS, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.OTTOMAN: {
+            Event.ON_SPAWN: [
+                (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.ARMENIAKON, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.CYPRUS, ProvinceType.CONTESTED),
+                (Civ.BYZANTIUM, Province.ANATOLIKON, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.OPSIKION, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.THRAKESION, ProvinceType.HISTORICAL),
+                (Civ.BYZANTIUM, Province.PAPHLAGONIA, ProvinceType.HISTORICAL),
+                (Civ.HUNGARY, Province.DALMATIA, ProvinceType.CONTESTED),
+                (Civ.HUNGARY, Province.BOSNIA, ProvinceType.CONTESTED),
+                (Civ.HUNGARY, Province.BANAT, ProvinceType.CONTESTED),
+            ]
+        },
+        Civ.MOSCOW: {
+            Event.ON_SPAWN: [
+                (Civ.NOVGOROD, Province.ROSTOV, ProvinceType.CONTESTED),
+                (Civ.NOVGOROD, Province.SMOLENSK, ProvinceType.NONE),
+            ]
+        },
+        Civ.DUTCH: {
+            Event.ON_SPAWN: [
+                (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.NONE),
+                (Civ.CASTILE, Province.FLANDERS, ProvinceType.NONE),
+                (Civ.AUSTRIA, Province.NETHERLANDS, ProvinceType.NONE),
+                (Civ.AUSTRIA, Province.FLANDERS, ProvinceType.NONE),
+            ]
+        },
+    },
+).fill_missing_members({})
 
 CIV_VISIBLE_AREA_500AD = CivDataMapper(
     {
@@ -2493,7 +2462,7 @@ CIV_VISIBLE_AREA_500AD = CivDataMapper(
             {Area.TILE_MIN: (46, 39), Area.TILE_MAX: (63, 44)},
         ],
         Civ.POPE: [{Area.TILE_MIN: (39, 12), Area.TILE_MAX: (73, 44)}],
-    }
+    },
 ).applymap(lambda d: parse_area_dict(d))
 
 CIV_VISIBLE_AREA_1200AD = CivDataMapper(
@@ -2611,15 +2580,18 @@ CIV_VISIBLE_AREA_1200AD = CivDataMapper(
             {Area.TILE_MIN: (46, 39), Area.TILE_MAX: (63, 44)},
         ],
         Civ.POPE: [{Area.TILE_MIN: (39, 12), Area.TILE_MAX: (73, 44)}],
-    }
+    },
 ).applymap(lambda d: parse_area_dict(d))
 
-CIV_VISIBLE_AREA = ScenarioDataMapper(
-    {Scenario.i500AD: CIV_VISIBLE_AREA_500AD, Scenario.i1200AD: CIV_VISIBLE_AREA_1200AD}
+CIV_VISIBLE_AREA = EnumDataMapper(
+    {
+        Scenario.i500AD: CIV_VISIBLE_AREA_500AD,
+        Scenario.i1200AD: CIV_VISIBLE_AREA_1200AD,
+    },
 )
 
 # Used for Congresses and Victory
-CIV_GROUPS = IntEnumDataMapper(
+CIV_GROUPS = EnumDataMapper(
     {
         CivGroup.EASTERN: [
             Civ.BYZANTIUM,
@@ -2649,5 +2621,5 @@ CIV_GROUPS = IntEnumDataMapper(
         CivGroup.ISLAMIC: [Civ.ARABIA, Civ.CORDOBA, Civ.MOROCCO, Civ.OTTOMAN],
         CivGroup.ITALIAN: [Civ.GENOA, Civ.VENECIA, Civ.POPE],
         CivGroup.SCANDINAVIAN: [Civ.NORWAY, Civ.DENMARK, Civ.SWEDEN],
-    }
+    },
 )

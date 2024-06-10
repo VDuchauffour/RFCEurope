@@ -14,7 +14,16 @@ from CoreStructures import (
     plots,
     cities,
 )
-from CoreTypes import Building, Civ, StabilityCategory, Technology, Unit
+from CoreTypes import (
+    Area,
+    AreaType,
+    Building,
+    Civ,
+    LeaderType,
+    StabilityCategory,
+    Technology,
+    Unit,
+)
 from PyUtils import percentage, percentage_chance, rand
 from RFCUtils import (
     calculateDistance,
@@ -66,14 +75,17 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
             and iGameTurn > civilization(iDeadCiv).date.birth + 25
             and iGameTurn > getLastTurnAlive(iDeadCiv) + 10
         ):  # Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
-            tile_min = civilization(iDeadCiv).location.area.normal.tile_min
-            tile_max = civilization(iDeadCiv).location.area.normal.tile_max
+            tile_min = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MIN]
+            tile_max = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX]
 
             for city in (
                 plots()
                 .rectangle(tile_min, tile_max)
                 .filter(
-                    lambda p: p not in civilization(iDeadCiv).location.area.normal.exception_tiles
+                    lambda p: p
+                    not in civilization(iDeadCiv).location.area[AreaType.NORMAL][
+                        Area.EXCEPTION_TILES
+                    ]
                 )
                 .cities()
                 .entities()
@@ -213,7 +225,7 @@ def resurectCiv(iDeadCiv):
 
     # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
     # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
-    leaders = civilization(iDeadCiv).leaders.late
+    leaders = civilization(iDeadCiv).leaders[LeaderType.LATE]
     if leaders:
         # no change if we are already at the last leader
         for leader in leaders[:-1]:
@@ -424,10 +436,16 @@ def makeResurectionUnits(iPlayer, iX, iY):
 def convertBackCulture(iCiv):
     # 3Miro: same as Normal Areas in Resurrection
     # Sedna17: restored to be normal areas, not core
-    tile_min = civilization(iCiv).location.area.normal.tile_min
-    tile_max = civilization(iCiv).location.area.normal.tile_max
     # collect all the cities in the region
-    for city in plots().rectangle(tile_min, tile_max).cities().entities():
+    for city in (
+        plots()
+        .rectangle(
+            civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MIN],
+            civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MAX],
+        )
+        .cities()
+        .entities()
+    ):
         for plot in plots().surrounding(location(city)).entities():
             iCivCulture = plot.getCulture(iCiv)
             iLoopCivCulture = 0

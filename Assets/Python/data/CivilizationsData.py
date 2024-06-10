@@ -1,4 +1,4 @@
-from BaseStructures import IntEnumDataMapper, ReligionDataMapper, ScenarioDataMapper, CivDataMapper
+from BaseStructures import EnumDataMapper, CivDataMapper
 from CoreTypes import (
     Building,
     Civ,
@@ -498,470 +498,386 @@ CIV_INITIAL_WORKERS = CivDataMapper(
         Civ.MOSCOW: 4,
         Civ.DUTCH: 4,
         Civ.POPE: 0,
-    }
+    },
 )
 
 CIV_INITIAL_UNITS = CivDataMapper(
     {
         Civ.BYZANTIUM: None,
         Civ.FRANCE: None,
-        Civ.ARABIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 2,
-                    Unit.SETTLER: 2,
-                    Unit.HORSE_ARCHER: 7,
-                    Unit.AXEMAN: 2,
-                    Unit.SPEARMAN: 2,
-                },
-                PlayerType.AI: {
-                    Unit.HORSE_ARCHER: 2,
-                    Unit.ARCHER: 2,
-                    Unit.SPEARMAN: 2,
-                    Unit.SETTLER: 2,
-                },
+        Civ.ARABIA: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 2,
+                Unit.SETTLER: 2,
+                Unit.HORSE_ARCHER: 7,
+                Unit.AXEMAN: 2,
+                Unit.SPEARMAN: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {Unit.ARCHER: 4, Unit.SETTLER: 2, Unit.BULGARIAN_KONNIK: 5},
-                PlayerType.AI: {Unit.ARCHER: 1, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
+            PlayerType.AI: {
+                Unit.HORSE_ARCHER: 2,
+                Unit.ARCHER: 2,
+                Unit.SPEARMAN: 2,
+                Unit.SETTLER: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 3,
-                    Unit.SETTLER: 1,
-                    Unit.AXEMAN: 2,
-                    Unit.ISLAMIC_MISSIONARY: 3,
-                },
-                PlayerType.AI: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 2,
-                    Unit.AXEMAN: 1,
-                    Unit.ISLAMIC_MISSIONARY: 2,
-                },
-                PlayerType.HUMAN: {Unit.HORSE_ARCHER: 3},
+        },
+        Civ.BULGARIA: {
+            PlayerType.ANY: {Unit.ARCHER: 4, Unit.SETTLER: 2, Unit.BULGARIAN_KONNIK: 5},
+            PlayerType.AI: {Unit.ARCHER: 1, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
+        },
+        Civ.CORDOBA: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 3,
+                Unit.SETTLER: 1,
+                Unit.AXEMAN: 2,
+                Unit.ISLAMIC_MISSIONARY: 3,
             },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 2,
-                    Unit.SETTLER: 1,
-                    Unit.SPEARMAN: 1,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                }
+            PlayerType.AI: {
+                Unit.ARCHER: 4,
+                Unit.SETTLER: 2,
+                Unit.AXEMAN: 1,
+                Unit.ISLAMIC_MISSIONARY: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.SETTLER: 1,
-                    Unit.ARCHER: 2,
-                    Unit.GUISARME: 2,
-                    Unit.AXEMAN: 2,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                }
+            PlayerType.HUMAN: {Unit.HORSE_ARCHER: 3},
+        },
+        Civ.VENECIA: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 2,
+                Unit.SETTLER: 1,
+                Unit.SPEARMAN: 1,
+                Unit.CATHOLIC_MISSIONARY: 1,
+            }
+        },
+        Civ.BURGUNDY: {
+            PlayerType.ANY: {
+                Unit.SETTLER: 1,
+                Unit.ARCHER: 2,
+                Unit.GUISARME: 2,
+                Unit.AXEMAN: 2,
+                Unit.CATHOLIC_MISSIONARY: 1,
+            }
+        },
+        Civ.GERMANY: {
+            PlayerType.ANY: {
+                Unit.SETTLER: 2,
+                Unit.AXEMAN: 2,
+                Unit.SWORDSMAN: 2,
+                Unit.GUISARME: 2,
+                Unit.ARCHER: 2,
+                Unit.CATHOLIC_MISSIONARY: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.SETTLER: 2,
-                    Unit.AXEMAN: 2,
-                    Unit.SWORDSMAN: 2,
-                    Unit.GUISARME: 2,
-                    Unit.ARCHER: 2,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                },
-                PlayerType.AI: {Unit.ARCHER: 2, Unit.SETTLER: 1, Unit.CATHOLIC_MISSIONARY: 1},
+            PlayerType.AI: {Unit.ARCHER: 2, Unit.SETTLER: 1, Unit.CATHOLIC_MISSIONARY: 1},
+        },
+        Civ.NOVGOROD: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 3,
+                Unit.SETTLER: 3,
+                Unit.AXEMAN: 1,
+                Unit.HORSE_ARCHER: 1,
             },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 3,
-                    Unit.SETTLER: 3,
-                    Unit.AXEMAN: 1,
-                    Unit.HORSE_ARCHER: 1,
-                },
-                PlayerType.AI: {Unit.ARCHER: 4, Unit.SETTLER: 1},
+            PlayerType.AI: {Unit.ARCHER: 4, Unit.SETTLER: 1},
+        },
+        Civ.NORWAY: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 2,
+                Unit.SETTLER: 2,
+                Unit.VIKING_BERSERKER: 2,
+                Unit.SWORDSMAN: 1,
+            }
+        },
+        Civ.KIEV: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 4,
+                Unit.SETTLER: 3,
+                Unit.AXEMAN: 2,
+                Unit.HORSE_ARCHER: 3,
             },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 2,
-                    Unit.SETTLER: 2,
-                    Unit.VIKING_BERSERKER: 2,
-                    Unit.SWORDSMAN: 1,
-                }
+            PlayerType.AI: {Unit.ARCHER: 3, Unit.SPEARMAN: 3, Unit.SETTLER: 2},
+        },
+        Civ.HUNGARY: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 4,
+                Unit.SETTLER: 3,
+                Unit.AXEMAN: 2,
+                Unit.HORSE_ARCHER: 4,
             },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 3,
-                    Unit.AXEMAN: 2,
-                    Unit.HORSE_ARCHER: 3,
-                },
-                PlayerType.AI: {Unit.ARCHER: 3, Unit.SPEARMAN: 3, Unit.SETTLER: 2},
+            PlayerType.AI: {Unit.ARCHER: 2, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
+        },
+        Civ.CASTILE: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 4,
+                Unit.SETTLER: 3,
+                Unit.CATHOLIC_MISSIONARY: 2,
+                Unit.SWORDSMAN: 2,
+                Unit.LANCER: 2,
+                Unit.CATAPULT: 1,
             },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 3,
-                    Unit.AXEMAN: 2,
-                    Unit.HORSE_ARCHER: 4,
-                },
-                PlayerType.AI: {Unit.ARCHER: 2, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
+            PlayerType.AI: {Unit.CROSSBOWMAN: 1, Unit.SWORDSMAN: 2, Unit.LANCER: 2},
+        },
+        Civ.DENMARK: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 2,
+                Unit.SETTLER: 2,
+                Unit.DENMARK_HUSKARL: 4,
+            }
+        },
+        Civ.SCOTLAND: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 3,
+                Unit.SETTLER: 2,
+                Unit.SWORDSMAN: 2,
+                Unit.CATHOLIC_MISSIONARY: 2,
+            }
+        },
+        Civ.POLAND: {
+            PlayerType.ANY: {
+                Unit.ARCHER: 4,
+                Unit.SETTLER: 3,
+                Unit.AXEMAN: 2,
+                Unit.SWORDSMAN: 2,
+                Unit.CATHOLIC_MISSIONARY: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 3,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                    Unit.SWORDSMAN: 2,
-                    Unit.LANCER: 2,
-                    Unit.CATAPULT: 1,
-                },
-                PlayerType.AI: {Unit.CROSSBOWMAN: 1, Unit.SWORDSMAN: 2, Unit.LANCER: 2},
+            PlayerType.AI: {Unit.CROSSBOWMAN: 4, Unit.SETTLER: 1},
+        },
+        Civ.GENOA: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 4,
+                Unit.SETTLER: 2,
+                Unit.SWORDSMAN: 2,
+                Unit.CATHOLIC_MISSIONARY: 1,
+            }
+        },
+        Civ.MOROCCO: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 4,
+                Unit.SETTLER: 2,
+                Unit.MACEMAN: 2,
+                Unit.HEAVY_LANCER: 2,
+                Unit.ISLAMIC_MISSIONARY: 1,
             },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {PlayerType.ANY: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 2, Unit.DENMARK_HUSKARL: 4}},
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 3,
-                    Unit.SETTLER: 2,
-                    Unit.SWORDSMAN: 2,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                }
+            PlayerType.AI: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 1, Unit.ISLAMIC_MISSIONARY: 2},
+        },
+        Civ.ENGLAND: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 4,
+                Unit.SETTLER: 3,
+                Unit.LONG_SWORDSMAN: 2,
+                Unit.HEAVY_LANCER: 2,
+                Unit.CATHOLIC_MISSIONARY: 2,
             },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 3,
-                    Unit.AXEMAN: 2,
-                    Unit.SWORDSMAN: 2,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                },
-                PlayerType.AI: {Unit.CROSSBOWMAN: 4, Unit.SETTLER: 1},
+            PlayerType.AI: {
+                Unit.CROSSBOWMAN: 2,
+                Unit.LONG_SWORDSMAN: 2,
+                Unit.SETTLER: 1,
+                Unit.CATHOLIC_MISSIONARY: 1,
             },
-            do_not_cast=True,
-        ),
-        Civ.GENOA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 2,
-                    Unit.SWORDSMAN: 2,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                }
+        },
+        Civ.PORTUGAL: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 2,
+                Unit.SETTLER: 2,
+                Unit.PORTUGAL_FOOT_KNIGHT: 4,
+                Unit.TREBUCHET: 2,
+                Unit.GUISARME: 2,
+                Unit.CATHOLIC_MISSIONARY: 1,
+            }
+        },
+        Civ.ARAGON: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 3,
+                Unit.SETTLER: 2,
+                Unit.ARAGON_ALMOGAVAR: 5,
+                Unit.CATHOLIC_MISSIONARY: 2,
+            }
+        },
+        Civ.SWEDEN: {
+            PlayerType.ANY: {
+                Unit.LONG_SWORDSMAN: 3,
+                Unit.HEAVY_LANCER: 1,
+                Unit.KNIGHT: 1,
+                Unit.SETTLER: 3,
+                Unit.CROSSBOWMAN: 2,
+                Unit.ARBALEST: 2,
+                Unit.CATHOLIC_MISSIONARY: 2,
+            }
+        },
+        Civ.PRUSSIA: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 3,
+                Unit.SETTLER: 2,
+                Unit.TEUTONIC: 3,
+                Unit.GUISARME: 2,
+                Unit.TREBUCHET: 2,
+                Unit.CATHOLIC_MISSIONARY: 3,
+            }
+        },
+        Civ.LITHUANIA: {
+            PlayerType.ANY: {
+                Unit.CROSSBOWMAN: 4,
+                Unit.SETTLER: 3,
+                Unit.LITHUANIAN_BAJORAS: 5,
+                Unit.GUISARME: 3,
+            }
+        },
+        Civ.AUSTRIA: {
+            PlayerType.ANY: {
+                Unit.ARBALEST: 4,
+                Unit.SETTLER: 2,
+                Unit.MACEMAN: 3,
+                Unit.HEAVY_LANCER: 3,
+                Unit.CROSSBOWMAN: 3,
+                Unit.KNIGHT: 4,
+                Unit.CATHOLIC_MISSIONARY: 2,
+            }
+        },
+        Civ.OTTOMAN: {
+            PlayerType.ANY: {
+                Unit.LONGBOWMAN: 5,
+                Unit.SETTLER: 3,
+                Unit.MACEMAN: 4,
+                Unit.KNIGHT: 2,
+                Unit.HORSE_ARCHER: 4,
+                Unit.TREBUCHET: 2,
+                Unit.TURKEY_GREAT_BOMBARD: 3,
+                Unit.ISLAMIC_MISSIONARY: 4,
             },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 2,
-                    Unit.MACEMAN: 2,
-                    Unit.HEAVY_LANCER: 2,
-                    Unit.ISLAMIC_MISSIONARY: 1,
-                },
-                PlayerType.AI: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 1, Unit.ISLAMIC_MISSIONARY: 2},
+            PlayerType.AI: {Unit.KNIGHT: 2, Unit.HORSE_ARCHER: 2, Unit.LONGBOWMAN: 3},
+        },
+        Civ.MOSCOW: {
+            PlayerType.ANY: {
+                Unit.ARBALEST: 5,
+                Unit.SETTLER: 3,
+                Unit.MOSCOW_BOYAR: 5,
+                Unit.GUISARME: 4,
+                Unit.MACEMAN: 3,
+                Unit.ORTHODOX_MISSIONARY: 3,
             },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 3,
-                    Unit.LONG_SWORDSMAN: 2,
-                    Unit.HEAVY_LANCER: 2,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                },
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 2,
-                    Unit.LONG_SWORDSMAN: 2,
-                    Unit.SETTLER: 1,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                },
+            PlayerType.AI: {
+                Unit.MACEMAN: 2,
+                Unit.SETTLER: 1,
+                Unit.ARBALEST: 2,
+                Unit.ORTHODOX_MISSIONARY: 1,
             },
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 2,
-                    Unit.SETTLER: 2,
-                    Unit.PORTUGAL_FOOT_KNIGHT: 4,
-                    Unit.TREBUCHET: 2,
-                    Unit.GUISARME: 2,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 3,
-                    Unit.SETTLER: 2,
-                    Unit.ARAGON_ALMOGAVAR: 5,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.LONG_SWORDSMAN: 3,
-                    Unit.HEAVY_LANCER: 1,
-                    Unit.KNIGHT: 1,
-                    Unit.SETTLER: 3,
-                    Unit.CROSSBOWMAN: 2,
-                    Unit.ARBALEST: 2,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 3,
-                    Unit.SETTLER: 2,
-                    Unit.TEUTONIC: 3,
-                    Unit.GUISARME: 2,
-                    Unit.TREBUCHET: 2,
-                    Unit.CATHOLIC_MISSIONARY: 3,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 3,
-                    Unit.LITHUANIAN_BAJORAS: 5,
-                    Unit.GUISARME: 3,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARBALEST: 4,
-                    Unit.SETTLER: 2,
-                    Unit.MACEMAN: 3,
-                    Unit.HEAVY_LANCER: 3,
-                    Unit.CROSSBOWMAN: 3,
-                    Unit.KNIGHT: 4,
-                    Unit.CATHOLIC_MISSIONARY: 2,
-                }
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.LONGBOWMAN: 5,
-                    Unit.SETTLER: 3,
-                    Unit.MACEMAN: 4,
-                    Unit.KNIGHT: 2,
-                    Unit.HORSE_ARCHER: 4,
-                    Unit.TREBUCHET: 2,
-                    Unit.TURKEY_GREAT_BOMBARD: 3,
-                    Unit.ISLAMIC_MISSIONARY: 4,
-                },
-                PlayerType.AI: {Unit.KNIGHT: 2, Unit.HORSE_ARCHER: 2, Unit.LONGBOWMAN: 3},
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.ARBALEST: 5,
-                    Unit.SETTLER: 3,
-                    Unit.MOSCOW_BOYAR: 5,
-                    Unit.GUISARME: 4,
-                    Unit.MACEMAN: 3,
-                    Unit.ORTHODOX_MISSIONARY: 3,
-                },
-                PlayerType.AI: {
-                    Unit.MACEMAN: 2,
-                    Unit.SETTLER: 1,
-                    Unit.ARBALEST: 2,
-                    Unit.ORTHODOX_MISSIONARY: 1,
-                },
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.MUSKETMAN: 8,
-                    Unit.SETTLER: 2,
-                    Unit.MACEMAN: 3,
-                    Unit.PROTESTANT_MISSIONARY: 2,
-                }
-            },
-            do_not_cast=True,
-        ),
-    }
+        },
+        Civ.DUTCH: {
+            PlayerType.ANY: {
+                Unit.MUSKETMAN: 8,
+                Unit.SETTLER: 2,
+                Unit.MACEMAN: 3,
+                Unit.PROTESTANT_MISSIONARY: 2,
+            }
+        },
+    },
 )
 
 CIV_ADDITIONAL_UNITS = CivDataMapper(
     {
         Civ.BYZANTIUM: None,
         Civ.FRANCE: None,
-        Civ.ARABIA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.BULGARIAN_KONNIK: 2},
-                PlayerType.HUMAN: {Unit.BULGARIAN_KONNIK: 1},
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.AXEMAN: 2}, PlayerType.HUMAN: {Unit.AXEMAN: 1}}, do_not_cast=True
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 2}},
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
-        ),
-        Civ.NOVGOROD: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 1}},
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.VIKING_BERSERKER: 3},
-                PlayerType.HUMAN: {Unit.VIKING_BERSERKER: 1},
-            },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 4}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.DENMARK_HUSKARL: 3},
-                PlayerType.HUMAN: {Unit.DENMARK_HUSKARL: 1},
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.AXEMAN: 4}, PlayerType.HUMAN: {Unit.AXEMAN: 2}}, do_not_cast=True
-        ),
-        Civ.POLAND: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
-        ),
-        Civ.GENOA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 2}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.PORTUGAL_FOOT_KNIGHT: 4},
-                PlayerType.HUMAN: {Unit.PORTUGAL_FOOT_KNIGHT: 1},
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.TEUTONIC: 3}, PlayerType.HUMAN: {Unit.TEUTONIC: 1}},
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.LITHUANIAN_BAJORAS: 3},
-                PlayerType.HUMAN: {Unit.LITHUANIAN_BAJORAS: 1},
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {PlayerType.AI: {Unit.MOSCOW_BOYAR: 3}, PlayerType.HUMAN: {Unit.MOSCOW_BOYAR: 1}},
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                PlayerType.AI: {Unit.NETHERLANDS_GRENADIER: 4},
-                PlayerType.HUMAN: {Unit.NETHERLANDS_GRENADIER: 2},
-            },
-            do_not_cast=True,
-        ),
-    }
+        Civ.ARABIA: {
+            PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+            PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+        },
+        Civ.BULGARIA: {
+            PlayerType.AI: {Unit.BULGARIAN_KONNIK: 2},
+            PlayerType.HUMAN: {Unit.BULGARIAN_KONNIK: 1},
+        },
+        Civ.CORDOBA: {
+            PlayerType.AI: {Unit.AXEMAN: 2},
+            PlayerType.HUMAN: {Unit.AXEMAN: 1},
+        },
+        Civ.VENECIA: {
+            PlayerType.AI: {Unit.CROSSBOWMAN: 3},
+            PlayerType.HUMAN: {Unit.CROSSBOWMAN: 2},
+        },
+        Civ.BURGUNDY: {
+            PlayerType.AI: {Unit.LANCER: 3},
+            PlayerType.HUMAN: {Unit.LANCER: 1},
+        },
+        Civ.GERMANY: {
+            PlayerType.AI: {Unit.LANCER: 3},
+            PlayerType.HUMAN: {Unit.LANCER: 1},
+        },
+        Civ.NOVGOROD: {
+            PlayerType.AI: {Unit.CROSSBOWMAN: 3},
+            PlayerType.HUMAN: {Unit.CROSSBOWMAN: 1},
+        },
+        Civ.NORWAY: {
+            PlayerType.AI: {Unit.VIKING_BERSERKER: 3},
+            PlayerType.HUMAN: {Unit.VIKING_BERSERKER: 1},
+        },
+        Civ.KIEV: {
+            PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+            PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+        },
+        Civ.HUNGARY: {
+            PlayerType.AI: {Unit.HORSE_ARCHER: 4},
+            PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2},
+        },
+        Civ.CASTILE: {
+            PlayerType.AI: {Unit.LANCER: 4},
+            PlayerType.HUMAN: {Unit.LANCER: 1},
+        },
+        Civ.DENMARK: {
+            PlayerType.AI: {Unit.DENMARK_HUSKARL: 3},
+            PlayerType.HUMAN: {Unit.DENMARK_HUSKARL: 1},
+        },
+        Civ.SCOTLAND: {
+            PlayerType.AI: {Unit.AXEMAN: 4},
+            PlayerType.HUMAN: {Unit.AXEMAN: 2},
+        },
+        Civ.POLAND: {
+            PlayerType.AI: {Unit.LANCER: 3},
+            PlayerType.HUMAN: {Unit.LANCER: 1},
+        },
+        Civ.GENOA: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+        },
+        Civ.MOROCCO: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 2},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+        },
+        Civ.ENGLAND: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+        },
+        Civ.PORTUGAL: {
+            PlayerType.AI: {Unit.PORTUGAL_FOOT_KNIGHT: 4},
+            PlayerType.HUMAN: {Unit.PORTUGAL_FOOT_KNIGHT: 1},
+        },
+        Civ.ARAGON: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2},
+        },
+        Civ.SWEDEN: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+        },
+        Civ.PRUSSIA: {
+            PlayerType.AI: {Unit.TEUTONIC: 3},
+            PlayerType.HUMAN: {Unit.TEUTONIC: 1},
+        },
+        Civ.LITHUANIA: {
+            PlayerType.AI: {Unit.LITHUANIAN_BAJORAS: 3},
+            PlayerType.HUMAN: {Unit.LITHUANIAN_BAJORAS: 1},
+        },
+        Civ.AUSTRIA: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 4},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2},
+        },
+        Civ.OTTOMAN: {
+            PlayerType.AI: {Unit.HEAVY_LANCER: 3},
+            PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1},
+        },
+        Civ.MOSCOW: {
+            PlayerType.AI: {Unit.MOSCOW_BOYAR: 3},
+            PlayerType.HUMAN: {Unit.MOSCOW_BOYAR: 1},
+        },
+        Civ.DUTCH: {
+            PlayerType.AI: {Unit.NETHERLANDS_GRENADIER: 4},
+            PlayerType.HUMAN: {Unit.NETHERLANDS_GRENADIER: 2},
+        },
+    },
 )
 
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
@@ -995,7 +911,7 @@ CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
         Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
         Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
         Civ.POPE: {InitialCondition.GOLD: 50, InitialCondition.FAITH: 0},
-    }
+    },
 )
 
 CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
@@ -1029,17 +945,16 @@ CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
         Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
         Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
         Civ.POPE: {InitialCondition.GOLD: 200, InitialCondition.FAITH: 0},
-    }
+    },
 )
 
-CIV_SCENARIO_CONDITION = ScenarioDataMapper(
+CIV_SCENARIO_CONDITION = EnumDataMapper(
     {
         Scenario.i500AD: CIV_SCENARIO_CONDITION_500AD,
         Scenario.i1200AD: CIV_SCENARIO_CONDITION_1200AD,
-    }
+    },
 )
 
-# Used by GameBalance
 CIV_INITIAL_BUILDINGS = CivDataMapper(
     {
         Civ.BYZANTIUM: None,
@@ -1081,861 +996,673 @@ CIV_INITIAL_BUILDINGS = CivDataMapper(
             Building.SMOKEHOUSE,
         ],
         Civ.POPE: None,
-    }
+    },
 )
 
-# Used by GameBalance
 CIV_HUMAN_MODIFIERS = CivDataMapper(
     {
-        Civ.BYZANTIUM: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (150, 100, 200, 100, 100, 2),
-                Modifier.PRODUCTION: (200, 150, 200, 350),
-                Modifier.SUPPORT: (50, 150, 70, 50, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.FRANCE: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
-                Modifier.PRODUCTION: (150, 120, 125, 130),
-                Modifier.SUPPORT: (30, 120, 70, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARABIA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
-                Modifier.PRODUCTION: (150, 125, 150, 230),
-                Modifier.SUPPORT: (30, 150, 70, 40, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 1),
-                Modifier.PRODUCTION: (150, 150, 125, 200),
-                Modifier.SUPPORT: (40, 150, 80, 50, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
-                Modifier.PRODUCTION: (200, 180, 140, 230),
-                Modifier.SUPPORT: (40, 150, 70, 40, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 130),
-                Modifier.SUPPORT: (20, 100, 60, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (150, 120, 120, 150),
-                Modifier.SUPPORT: (30, 120, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (140, 140, 125, 130),
-                Modifier.SUPPORT: (20, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 125, 125, 150),
-                Modifier.SUPPORT: (30, 120, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 125, 100, 140),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 150, 125, 150),
-                Modifier.SUPPORT: (30, 120, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 125, 100, 130),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 100, 100, 120),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 120),
-                Modifier.SUPPORT: (20, 100, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (110, 110, 110, 125),
-                Modifier.SUPPORT: (25, 100, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (120, 120, 120, 130),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.GENOA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (100, 100, 100, 125),
-                Modifier.SUPPORT: (20, 100, 60, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (120, 120, 120, 175),
-                Modifier.SUPPORT: (25, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (100, 100, 100, 110),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 90, 100, 100),
-                Modifier.SUPPORT: (20, 100, 70, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 100, 100, 125),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 80, 100, 100),
-                Modifier.SUPPORT: (20, 90, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (75, 80, 120, 100),
-                Modifier.SUPPORT: (20, 90, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 100, 110, 100),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {
-                # Austria is squashed by other's culture, they need the boost
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 80, 100, 100),
-                Modifier.SUPPORT: (20, 80, 80, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (75, 75, 100, 110),
-                Modifier.SUPPORT: (30, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (110, 110, 100, 120),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
-                Modifier.PRODUCTION: (90, 50, 60, 50),
-                Modifier.SUPPORT: (20, 70, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-    }
-).fill_missing_members(IntEnumDataMapper({}))
+        Civ.BYZANTIUM: {
+            Modifier.GROWTH: (150, 100, 200, 100, 100, 2),
+            Modifier.PRODUCTION: (200, 150, 200, 350),
+            Modifier.SUPPORT: (50, 150, 70, 50, 120),
+        },
+        Civ.FRANCE: {
+            Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
+            Modifier.PRODUCTION: (150, 120, 125, 130),
+            Modifier.SUPPORT: (30, 120, 70, 50, 100),
+        },
+        Civ.ARABIA: {
+            Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
+            Modifier.PRODUCTION: (150, 125, 150, 230),
+            Modifier.SUPPORT: (30, 150, 70, 40, 120),
+        },
+        Civ.BULGARIA: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 1),
+            Modifier.PRODUCTION: (150, 150, 125, 200),
+            Modifier.SUPPORT: (40, 150, 80, 50, 120),
+        },
+        Civ.CORDOBA: {
+            Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+            Modifier.PRODUCTION: (200, 180, 140, 230),
+            Modifier.SUPPORT: (40, 150, 70, 40, 120),
+        },
+        Civ.VENECIA: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 130),
+            Modifier.SUPPORT: (20, 100, 60, 50, 100),
+        },
+        Civ.BURGUNDY: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (150, 120, 120, 150),
+            Modifier.SUPPORT: (30, 120, 70, 40, 100),
+        },
+        Civ.GERMANY: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (140, 140, 125, 130),
+            Modifier.SUPPORT: (20, 100, 70, 40, 100),
+        },
+        Civ.NOVGOROD: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 125, 125, 150),
+            Modifier.SUPPORT: (30, 120, 70, 40, 100),
+        },
+        Civ.NORWAY: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 125, 100, 140),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.KIEV: {
+            Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 150, 125, 150),
+            Modifier.SUPPORT: (30, 120, 60, 40, 100),
+        },
+        Civ.HUNGARY: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 125, 100, 130),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.CASTILE: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 100, 100, 120),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.DENMARK: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 120),
+            Modifier.SUPPORT: (20, 100, 80, 50, 100),
+        },
+        Civ.SCOTLAND: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (110, 110, 110, 125),
+            Modifier.SUPPORT: (25, 100, 80, 50, 100),
+        },
+        Civ.POLAND: {
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (120, 120, 120, 130),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.GENOA: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (100, 100, 100, 125),
+            Modifier.SUPPORT: (20, 100, 60, 50, 100),
+        },
+        Civ.MOROCCO: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (120, 120, 120, 175),
+            Modifier.SUPPORT: (25, 100, 60, 40, 100),
+        },
+        Civ.ENGLAND: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (100, 100, 100, 110),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.PORTUGAL: {
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 90, 100, 100),
+            Modifier.SUPPORT: (20, 100, 70, 50, 100),
+        },
+        Civ.ARAGON: {
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 100, 100, 125),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.SWEDEN: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 80, 100, 100),
+            Modifier.SUPPORT: (20, 90, 70, 40, 100),
+        },
+        Civ.PRUSSIA: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (75, 80, 120, 100),
+            Modifier.SUPPORT: (20, 90, 70, 40, 100),
+        },
+        Civ.LITHUANIA: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 100, 110, 100),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.AUSTRIA: {
+            # Austria is squashed by other's culture, they need the boost
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 80, 100, 100),
+            Modifier.SUPPORT: (20, 80, 80, 40, 100),
+        },
+        Civ.OTTOMAN: {
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (75, 75, 100, 110),
+            Modifier.SUPPORT: (30, 100, 60, 40, 100),
+        },
+        Civ.MOSCOW: {
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (110, 110, 100, 120),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.DUTCH: {
+            Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
+            Modifier.PRODUCTION: (90, 50, 60, 50),
+            Modifier.SUPPORT: (20, 70, 80, 50, 100),
+        },
+    },
+).fill_missing_members({})
 
-# Used by GameBalance
 CIV_AI_MODIFIERS = CivDataMapper(
     {
-        Civ.BYZANTIUM: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 0),  # 7
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.ST_CATHERINE_MONASTERY, 15),
-                    (Wonder.BOYANA_CHURCH, 2),
-                    (Wonder.ROUND_CHURCH, 2),
-                    (Wonder.SOPHIA_KIEV, 5),
-                ],
-                Modifier.GROWTH: (200, 100, 200, 100, 100, 2),
-                Modifier.PRODUCTION: (200, 200, 200, 350),
-                Modifier.SUPPORT: (50, 150, 70, 50, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.FRANCE: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.NOTRE_DAME, 20),
-                    (Wonder.VERSAILLES, 20),
-                    (Wonder.FONTAINEBLEAU, 10),
-                    (Wonder.MONASTERY_OF_CLUNY, 10),
-                    (Wonder.MONT_SAINT_MICHEL, 10),
-                    (Wonder.PALAIS_DES_PAPES, 5),
-                    (Wonder.LOUVRE, 20),
-                ],
-                Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
-                Modifier.PRODUCTION: (140, 120, 125, 150),
-                Modifier.SUPPORT: (30, 120, 70, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARABIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.DOME_ROCK, 15),
-                    (Wonder.TOMB_AL_WALID, 20),
-                    (Wonder.ALAZHAR, 20),
-                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
-                    (Wonder.KOUTOUBIA_MOSQUE, 5),
-                    (Wonder.GARDENS_AL_ANDALUS, 5),
-                    (Wonder.LA_MEZQUITA, 5),
-                    (Wonder.ALHAMBRA, 5),
-                    (Wonder.NOTRE_DAME, -5),
-                    (Wonder.STEPHANSDOM, -5),
-                    (Wonder.SISTINE_CHAPEL, -5),
-                    (Wonder.KRAK_DES_CHEVALIERS, -5),
-                    (Wonder.LEANING_TOWER, -3),
-                    (Wonder.GOLDEN_BULL, -3),
-                    (Wonder.COPERNICUS, -3),
-                ],
-                Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
-                Modifier.PRODUCTION: (130, 125, 150, 280),
-                Modifier.SUPPORT: (30, 150, 70, 40, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
-                Modifier.CITY_WAR_DISTANCE: 1,
-                Modifier.TECH_PREFERENCE: [(Technology.BRONZE_CASTING, 200)],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.ROUND_CHURCH, 20),
-                    (Wonder.BOYANA_CHURCH, 20),
-                    (Wonder.ST_CATHERINE_MONASTERY, 5),
-                    (Wonder.SOPHIA_KIEV, 5),
-                ],
-                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
-                Modifier.PRODUCTION: (130, 125, 125, 250),
-                Modifier.SUPPORT: (40, 150, 80, 50, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.GARDENS_AL_ANDALUS, 20),
-                    (Wonder.LA_MEZQUITA, 20),
-                    (Wonder.ALHAMBRA, 20),
-                    (Wonder.DOME_ROCK, 10),
-                    (Wonder.ALAZHAR, 5),
-                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
-                    (Wonder.KOUTOUBIA_MOSQUE, 5),
-                    (Wonder.NOTRE_DAME, -5),
-                    (Wonder.STEPHANSDOM, -5),
-                    (Wonder.SISTINE_CHAPEL, -5),
-                    (Wonder.KRAK_DES_CHEVALIERS, -5),
-                    (Wonder.LEANING_TOWER, -3),
-                    (Wonder.GOLDEN_BULL, -3),
-                ],
-                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
-                Modifier.PRODUCTION: (180, 170, 130, 250),
-                Modifier.SUPPORT: (40, 150, 70, 40, 120),
-            },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.MARCO_POLO, 15),
-                    (Wonder.SAN_MARCO, 20),
-                    (Wonder.LANTERNA, 10),
-                    (Wonder.LEONARDOS_WORKSHOP, 5),
-                    (Wonder.LEANING_TOWER, 5),
-                    (Wonder.GRAND_ARSENAL, 20),
-                    (Wonder.GALATA_TOWER, 10),
-                    (Wonder.FLORENCE_DUOMO, 10),
-                    (Wonder.SAN_GIORGIO, 5),
-                ],
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 150),
-                Modifier.SUPPORT: (20, 100, 60, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
-                Modifier.CITY_WAR_DISTANCE: 1,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.MONASTERY_OF_CLUNY, 20),
-                    (Wonder.NOTRE_DAME, 10),
-                    (Wonder.VERSAILLES, 10),
-                    (Wonder.MONT_SAINT_MICHEL, 10),
-                    (Wonder.FONTAINEBLEAU, 5),
-                    (Wonder.PALAIS_DES_PAPES, 5),
-                    (Wonder.LOUVRE, 10),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (130, 120, 120, 150),
-                Modifier.SUPPORT: (30, 120, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 200)],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.BRANDENBURG_GATE, 10),
-                    (Wonder.IMPERIAL_DIET, 20),
-                    (Wonder.COPERNICUS, 5),
-                    (Wonder.GOLDEN_BULL, 10),
-                    (Wonder.MONASTERY_OF_CLUNY, 5),
-                    (Wonder.URANIBORG, 5),
-                    (Wonder.THOMASKIRCHE, 20),
-                ],
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (120, 120, 100, 140),
-                Modifier.SUPPORT: (20, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.ST_BASIL, 10),
-                    (Wonder.SOPHIA_KIEV, 10),
-                    (Wonder.ROUND_CHURCH, 5),
-                    (Wonder.BOYANA_CHURCH, 5),
-                    (Wonder.BORGUND_STAVE_CHURCH, 5),
-                    (Wonder.PETERHOF_PALACE, 15),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (120, 120, 120, 150),
-                Modifier.SUPPORT: (30, 120, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.SHRINE_OF_UPPSALA, 20),
-                    (Wonder.SAMOGITIAN_ALKAS, 5),
-                    (Wonder.BORGUND_STAVE_CHURCH, 15),
-                    (Wonder.URANIBORG, 10),
-                    (Wonder.KALMAR_CASTLE, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (125, 125, 125, 130),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.SOPHIA_KIEV, 20),
-                    (Wonder.ST_BASIL, 5),
-                    (Wonder.ROUND_CHURCH, 5),
-                    (Wonder.BOYANA_CHURCH, 5),
-                    (Wonder.PETERHOF_PALACE, 10),
-                ],
-                Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 120, 100, 140),
-                Modifier.SUPPORT: (30, 120, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.PRESSBURG, 20),
-                    (Wonder.GOLDEN_BULL, 20),
-                    (Wonder.BIBLIOTHECA_CORVINIANA, 20),
-                    (Wonder.KAZIMIERZ, 10),
-                    (Wonder.COPERNICUS, 5),
-                    (Wonder.STEPHANSDOM, 5),
-                ],
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (120, 120, 100, 150),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.ESCORIAL, 20),
-                    (Wonder.MAGELLANS_VOYAGE, 10),
-                    (Wonder.TORRE_DEL_ORO, 20),
-                    (Wonder.BELEM_TOWER, 10),
-                ],
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 130),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.KALMAR_CASTLE, 10),
-                    (Wonder.SHRINE_OF_UPPSALA, 20),
-                    (Wonder.SAMOGITIAN_ALKAS, 5),
-                    (Wonder.BORGUND_STAVE_CHURCH, 15),
-                    (Wonder.URANIBORG, 20),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 110),
-                Modifier.SUPPORT: (20, 100, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 2),  # 13
-                Modifier.CITY_WAR_DISTANCE: 1,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.MAGNA_CARTA, 10),
-                    (Wonder.WESTMINSTER, 10),
-                    (Wonder.MONASTERY_OF_CLUNY, 5),
-                    (Wonder.BORGUND_STAVE_CHURCH, 5),
-                    (Wonder.MONT_SAINT_MICHEL, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 100, 100, 125),
-                Modifier.SUPPORT: (25, 100, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.PRESSBURG, 10),
-                    (Wonder.COPERNICUS, 10),
-                    (Wonder.GOLDEN_BULL, 5),
-                    (Wonder.KAZIMIERZ, 15),
-                    (Wonder.JASNA_GORA, 20),
-                    (Wonder.BRANDENBURG_GATE, 5),
-                ],
-                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
-                Modifier.PRODUCTION: (100, 120, 120, 140),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.GENOA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.SAN_GIORGIO, 20),
-                    (Wonder.LANTERNA, 20),
-                    (Wonder.LEONARDOS_WORKSHOP, 5),
-                    (Wonder.LEANING_TOWER, 5),
-                    (Wonder.SAN_MARCO, 5),
-                    (Wonder.MARCO_POLO, 5),
-                    (Wonder.GRAND_ARSENAL, 10),
-                    (Wonder.GALATA_TOWER, 20),
-                    (Wonder.FLORENCE_DUOMO, 10),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (100, 100, 100, 130),
-                Modifier.SUPPORT: (20, 100, 60, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.GARDENS_AL_ANDALUS, 10),
-                    (Wonder.LA_MEZQUITA, 10),
-                    (Wonder.ALHAMBRA, 10),
-                    (Wonder.DOME_ROCK, 10),
-                    (Wonder.ALAZHAR, 5),
-                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
-                    (Wonder.KOUTOUBIA_MOSQUE, 20),
-                    (Wonder.NOTRE_DAME, -5),
-                    (Wonder.STEPHANSDOM, -5),
-                    (Wonder.SISTINE_CHAPEL, -5),
-                    (Wonder.KRAK_DES_CHEVALIERS, -5),
-                    (Wonder.LEANING_TOWER, -3),
-                    (Wonder.GOLDEN_BULL, -3),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (120, 120, 120, 175),
-                Modifier.SUPPORT: (25, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 150)],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.MAGNA_CARTA, 20),
-                    (Wonder.WESTMINSTER, 20),
-                    (Wonder.MONASTERY_OF_CLUNY, 5),
-                    (Wonder.URANIBORG, 5),
-                    (Wonder.TORRE_DEL_ORO, 5),
-                    (Wonder.BELEM_TOWER, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 80, 100, 120),
-                Modifier.SUPPORT: (20, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.BELEM_TOWER, 20),
-                    (Wonder.PALACIO_DA_PENA, 20),
-                    (Wonder.MAGELLANS_VOYAGE, 20),
-                    (Wonder.TORRE_DEL_ORO, 10),
-                ],
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (70, 90, 100, 110),
-                Modifier.SUPPORT: (20, 100, 70, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.MAGELLANS_VOYAGE, 10),
-                    (Wonder.TORRE_DEL_ORO, 10),
-                    (Wonder.ESCORIAL, 5),
-                    (Wonder.BELEM_TOWER, 10),
-                ],
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (75, 90, 100, 125),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 2, 2),  # 9
-                Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.KALMAR_CASTLE, 20),
-                    (Wonder.SHRINE_OF_UPPSALA, 5),
-                    (Wonder.BORGUND_STAVE_CHURCH, 15),
-                    (Wonder.URANIBORG, 10),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 80, 100, 100),
-                Modifier.SUPPORT: (20, 90, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.BRANDENBURG_GATE, 20),
-                    (Wonder.THOMASKIRCHE, 10),
-                    (Wonder.COPERNICUS, 5),
-                    (Wonder.PRESSBURG, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (60, 80, 120, 90),
-                Modifier.SUPPORT: (20, 90, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.SAMOGITIAN_ALKAS, 20),
-                    (Wonder.GEDIMINAS_TOWER, 20),
-                    (Wonder.BORGUND_STAVE_CHURCH, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (70, 100, 110, 110),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.STEPHANSDOM, 20),
-                    (Wonder.THOMASKIRCHE, 15),
-                    (Wonder.COPERNICUS, 5),
-                    (Wonder.GOLDEN_BULL, 5),
-                    (Wonder.PRESSBURG, 5),
-                    (Building.AUSTRIAN_OPERA_HOUSE, 10),
-                ],
-                # Austria is squashed by other's culture, they need the boost
-                Modifier.GROWTH: (100, 200, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (50, 80, 100, 80),
-                Modifier.SUPPORT: (20, 80, 80, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.TOPKAPI_PALACE, 20),
-                    (Wonder.BLUE_MOSQUE, 20),
-                    (Wonder.SELIMIYE_MOSQUE, 20),
-                    (Wonder.TOMB_AL_WALID, 10),
-                    (Wonder.KIZIL_KULE, 10),
-                    (Wonder.ALAZHAR, 5),
-                ],
-                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (60, 75, 100, 120),
-                Modifier.SUPPORT: (30, 100, 60, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (1, 4, 1),  # 5
-                Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.ST_BASIL, 20),
-                    (Wonder.PETERHOF_PALACE, 20),
-                    (Wonder.SOPHIA_KIEV, 5),
-                ],
-                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
-                Modifier.PRODUCTION: (80, 80, 100, 120),
-                Modifier.SUPPORT: (25, 100, 70, 40, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
-                Modifier.CITY_WAR_DISTANCE: 1,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.BEURS, 20),
-                    (Wonder.URANIBORG, 5),
-                    (Wonder.THOMASKIRCHE, 5),
-                ],
-                Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
-                Modifier.PRODUCTION: (80, 50, 50, 50),
-                Modifier.SUPPORT: (20, 70, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.POPE: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.PRINTING_PRESS, 10)  # Pope shouldn't want this
-                ],
-                Modifier.BUILDING_PREFERENCE: [
-                    (Wonder.SISTINE_CHAPEL, 20),
-                    (Wonder.PALAIS_DES_PAPES, 10),
-                    (Wonder.LEANING_TOWER, 5),
-                    (Wonder.FLORENCE_DUOMO, 5),
-                    (Wonder.LEONARDOS_WORKSHOP, 5),
-                ],
-                Modifier.GROWTH: (150, 100, 100, 50, 100, 1),
-                Modifier.PRODUCTION: (300, 200, 100, 350),
-                Modifier.SUPPORT: (20, 150, 80, 50, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
-                # The peaceful ones
-                Modifier.PRODUCTION: (170, 100, 400, 200),
-                Modifier.SUPPORT: (10, 100, 10, 20, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_2: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
-                # The peaceful ones
-                Modifier.PRODUCTION: (170, 100, 400, 200),
-                Modifier.SUPPORT: (10, 100, 10, 20, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_3: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
-                # The warlike ones
-                Modifier.PRODUCTION: (125, 100, 600, 300),
-                Modifier.SUPPORT: (10, 100, 10, 20, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_4: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
-                # The warlike ones
-                Modifier.PRODUCTION: (125, 100, 600, 300),
-                Modifier.SUPPORT: (10, 100, 10, 20, 100),
-            },
-            do_not_cast=True,
-        ),
-        Civ.BARBARIAN: IntEnumDataMapper(
-            {
-                Modifier.CITY_CLUSTER: None,
-                Modifier.CITY_WAR_DISTANCE: None,
-                Modifier.TECH_PREFERENCE: [],
-                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
-                Modifier.PRODUCTION: (125, 100, 900, 350),
-                Modifier.SUPPORT: (10, 250, 10, 20, 100),
-            },
-            do_not_cast=True,
-        ),
-    }
+        Civ.BYZANTIUM: {
+            Modifier.CITY_CLUSTER: (1, 3, 0),  # 7
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.ST_CATHERINE_MONASTERY, 15),
+                (Wonder.BOYANA_CHURCH, 2),
+                (Wonder.ROUND_CHURCH, 2),
+                (Wonder.SOPHIA_KIEV, 5),
+            ],
+            Modifier.GROWTH: (200, 100, 200, 100, 100, 2),
+            Modifier.PRODUCTION: (200, 200, 200, 350),
+            Modifier.SUPPORT: (50, 150, 70, 50, 120),
+        },
+        Civ.FRANCE: {
+            Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.NOTRE_DAME, 20),
+                (Wonder.VERSAILLES, 20),
+                (Wonder.FONTAINEBLEAU, 10),
+                (Wonder.MONASTERY_OF_CLUNY, 10),
+                (Wonder.MONT_SAINT_MICHEL, 10),
+                (Wonder.PALAIS_DES_PAPES, 5),
+                (Wonder.LOUVRE, 20),
+            ],
+            Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
+            Modifier.PRODUCTION: (140, 120, 125, 150),
+            Modifier.SUPPORT: (30, 120, 70, 50, 100),
+        },
+        Civ.ARABIA: {
+            Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.DOME_ROCK, 15),
+                (Wonder.TOMB_AL_WALID, 20),
+                (Wonder.ALAZHAR, 20),
+                (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                (Wonder.KOUTOUBIA_MOSQUE, 5),
+                (Wonder.GARDENS_AL_ANDALUS, 5),
+                (Wonder.LA_MEZQUITA, 5),
+                (Wonder.ALHAMBRA, 5),
+                (Wonder.NOTRE_DAME, -5),
+                (Wonder.STEPHANSDOM, -5),
+                (Wonder.SISTINE_CHAPEL, -5),
+                (Wonder.KRAK_DES_CHEVALIERS, -5),
+                (Wonder.LEANING_TOWER, -3),
+                (Wonder.GOLDEN_BULL, -3),
+                (Wonder.COPERNICUS, -3),
+            ],
+            Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
+            Modifier.PRODUCTION: (130, 125, 150, 280),
+            Modifier.SUPPORT: (30, 150, 70, 40, 120),
+        },
+        Civ.BULGARIA: {
+            Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
+            Modifier.CITY_WAR_DISTANCE: 1,
+            Modifier.TECH_PREFERENCE: [(Technology.BRONZE_CASTING, 200)],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.ROUND_CHURCH, 20),
+                (Wonder.BOYANA_CHURCH, 20),
+                (Wonder.ST_CATHERINE_MONASTERY, 5),
+                (Wonder.SOPHIA_KIEV, 5),
+            ],
+            Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+            Modifier.PRODUCTION: (130, 125, 125, 250),
+            Modifier.SUPPORT: (40, 150, 80, 50, 120),
+        },
+        Civ.CORDOBA: {
+            Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.GARDENS_AL_ANDALUS, 20),
+                (Wonder.LA_MEZQUITA, 20),
+                (Wonder.ALHAMBRA, 20),
+                (Wonder.DOME_ROCK, 10),
+                (Wonder.ALAZHAR, 5),
+                (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                (Wonder.KOUTOUBIA_MOSQUE, 5),
+                (Wonder.NOTRE_DAME, -5),
+                (Wonder.STEPHANSDOM, -5),
+                (Wonder.SISTINE_CHAPEL, -5),
+                (Wonder.KRAK_DES_CHEVALIERS, -5),
+                (Wonder.LEANING_TOWER, -3),
+                (Wonder.GOLDEN_BULL, -3),
+            ],
+            Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+            Modifier.PRODUCTION: (180, 170, 130, 250),
+            Modifier.SUPPORT: (40, 150, 70, 40, 120),
+        },
+        Civ.VENECIA: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.MARCO_POLO, 15),
+                (Wonder.SAN_MARCO, 20),
+                (Wonder.LANTERNA, 10),
+                (Wonder.LEONARDOS_WORKSHOP, 5),
+                (Wonder.LEANING_TOWER, 5),
+                (Wonder.GRAND_ARSENAL, 20),
+                (Wonder.GALATA_TOWER, 10),
+                (Wonder.FLORENCE_DUOMO, 10),
+                (Wonder.SAN_GIORGIO, 5),
+            ],
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 150),
+            Modifier.SUPPORT: (20, 100, 60, 50, 100),
+        },
+        Civ.BURGUNDY: {
+            Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
+            Modifier.CITY_WAR_DISTANCE: 1,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.MONASTERY_OF_CLUNY, 20),
+                (Wonder.NOTRE_DAME, 10),
+                (Wonder.VERSAILLES, 10),
+                (Wonder.MONT_SAINT_MICHEL, 10),
+                (Wonder.FONTAINEBLEAU, 5),
+                (Wonder.PALAIS_DES_PAPES, 5),
+                (Wonder.LOUVRE, 10),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (130, 120, 120, 150),
+            Modifier.SUPPORT: (30, 120, 70, 40, 100),
+        },
+        Civ.GERMANY: {
+            Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 200)],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.BRANDENBURG_GATE, 10),
+                (Wonder.IMPERIAL_DIET, 20),
+                (Wonder.COPERNICUS, 5),
+                (Wonder.GOLDEN_BULL, 10),
+                (Wonder.MONASTERY_OF_CLUNY, 5),
+                (Wonder.URANIBORG, 5),
+                (Wonder.THOMASKIRCHE, 20),
+            ],
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (120, 120, 100, 140),
+            Modifier.SUPPORT: (20, 100, 70, 40, 100),
+        },
+        Civ.NOVGOROD: {
+            Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.ST_BASIL, 10),
+                (Wonder.SOPHIA_KIEV, 10),
+                (Wonder.ROUND_CHURCH, 5),
+                (Wonder.BOYANA_CHURCH, 5),
+                (Wonder.BORGUND_STAVE_CHURCH, 5),
+                (Wonder.PETERHOF_PALACE, 15),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (120, 120, 120, 150),
+            Modifier.SUPPORT: (30, 120, 70, 40, 100),
+        },
+        Civ.NORWAY: {
+            Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.SHRINE_OF_UPPSALA, 20),
+                (Wonder.SAMOGITIAN_ALKAS, 5),
+                (Wonder.BORGUND_STAVE_CHURCH, 15),
+                (Wonder.URANIBORG, 10),
+                (Wonder.KALMAR_CASTLE, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (125, 125, 125, 130),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.KIEV: {
+            Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.SOPHIA_KIEV, 20),
+                (Wonder.ST_BASIL, 5),
+                (Wonder.ROUND_CHURCH, 5),
+                (Wonder.BOYANA_CHURCH, 5),
+                (Wonder.PETERHOF_PALACE, 10),
+            ],
+            Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 120, 100, 140),
+            Modifier.SUPPORT: (30, 120, 60, 40, 100),
+        },
+        Civ.HUNGARY: {
+            Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.PRESSBURG, 20),
+                (Wonder.GOLDEN_BULL, 20),
+                (Wonder.BIBLIOTHECA_CORVINIANA, 20),
+                (Wonder.KAZIMIERZ, 10),
+                (Wonder.COPERNICUS, 5),
+                (Wonder.STEPHANSDOM, 5),
+            ],
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (120, 120, 100, 150),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.CASTILE: {
+            Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.ESCORIAL, 20),
+                (Wonder.MAGELLANS_VOYAGE, 10),
+                (Wonder.TORRE_DEL_ORO, 20),
+                (Wonder.BELEM_TOWER, 10),
+            ],
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 130),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.DENMARK: {
+            Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.KALMAR_CASTLE, 10),
+                (Wonder.SHRINE_OF_UPPSALA, 20),
+                (Wonder.SAMOGITIAN_ALKAS, 5),
+                (Wonder.BORGUND_STAVE_CHURCH, 15),
+                (Wonder.URANIBORG, 20),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 110),
+            Modifier.SUPPORT: (20, 100, 80, 50, 100),
+        },
+        Civ.SCOTLAND: {
+            Modifier.CITY_CLUSTER: (2, 3, 2),  # 13
+            Modifier.CITY_WAR_DISTANCE: 1,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.MAGNA_CARTA, 10),
+                (Wonder.WESTMINSTER, 10),
+                (Wonder.MONASTERY_OF_CLUNY, 5),
+                (Wonder.BORGUND_STAVE_CHURCH, 5),
+                (Wonder.MONT_SAINT_MICHEL, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 100, 100, 125),
+            Modifier.SUPPORT: (25, 100, 80, 50, 100),
+        },
+        Civ.POLAND: {
+            Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.PRESSBURG, 10),
+                (Wonder.COPERNICUS, 10),
+                (Wonder.GOLDEN_BULL, 5),
+                (Wonder.KAZIMIERZ, 15),
+                (Wonder.JASNA_GORA, 20),
+                (Wonder.BRANDENBURG_GATE, 5),
+            ],
+            Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+            Modifier.PRODUCTION: (100, 120, 120, 140),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.GENOA: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.SAN_GIORGIO, 20),
+                (Wonder.LANTERNA, 20),
+                (Wonder.LEONARDOS_WORKSHOP, 5),
+                (Wonder.LEANING_TOWER, 5),
+                (Wonder.SAN_MARCO, 5),
+                (Wonder.MARCO_POLO, 5),
+                (Wonder.GRAND_ARSENAL, 10),
+                (Wonder.GALATA_TOWER, 20),
+                (Wonder.FLORENCE_DUOMO, 10),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (100, 100, 100, 130),
+            Modifier.SUPPORT: (20, 100, 60, 50, 100),
+        },
+        Civ.MOROCCO: {
+            Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.GARDENS_AL_ANDALUS, 10),
+                (Wonder.LA_MEZQUITA, 10),
+                (Wonder.ALHAMBRA, 10),
+                (Wonder.DOME_ROCK, 10),
+                (Wonder.ALAZHAR, 5),
+                (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                (Wonder.KOUTOUBIA_MOSQUE, 20),
+                (Wonder.NOTRE_DAME, -5),
+                (Wonder.STEPHANSDOM, -5),
+                (Wonder.SISTINE_CHAPEL, -5),
+                (Wonder.KRAK_DES_CHEVALIERS, -5),
+                (Wonder.LEANING_TOWER, -3),
+                (Wonder.GOLDEN_BULL, -3),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (120, 120, 120, 175),
+            Modifier.SUPPORT: (25, 100, 60, 40, 100),
+        },
+        Civ.ENGLAND: {
+            Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 150)],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.MAGNA_CARTA, 20),
+                (Wonder.WESTMINSTER, 20),
+                (Wonder.MONASTERY_OF_CLUNY, 5),
+                (Wonder.URANIBORG, 5),
+                (Wonder.TORRE_DEL_ORO, 5),
+                (Wonder.BELEM_TOWER, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 80, 100, 120),
+            Modifier.SUPPORT: (20, 100, 60, 40, 100),
+        },
+        Civ.PORTUGAL: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.BELEM_TOWER, 20),
+                (Wonder.PALACIO_DA_PENA, 20),
+                (Wonder.MAGELLANS_VOYAGE, 20),
+                (Wonder.TORRE_DEL_ORO, 10),
+            ],
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (70, 90, 100, 110),
+            Modifier.SUPPORT: (20, 100, 70, 50, 100),
+        },
+        Civ.ARAGON: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.MAGELLANS_VOYAGE, 10),
+                (Wonder.TORRE_DEL_ORO, 10),
+                (Wonder.ESCORIAL, 5),
+                (Wonder.BELEM_TOWER, 10),
+            ],
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (75, 90, 100, 125),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.SWEDEN: {
+            Modifier.CITY_CLUSTER: (1, 2, 2),  # 9
+            Modifier.CITY_WAR_DISTANCE: 3,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.KALMAR_CASTLE, 20),
+                (Wonder.SHRINE_OF_UPPSALA, 5),
+                (Wonder.BORGUND_STAVE_CHURCH, 15),
+                (Wonder.URANIBORG, 10),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 80, 100, 100),
+            Modifier.SUPPORT: (20, 90, 70, 40, 100),
+        },
+        Civ.PRUSSIA: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.BRANDENBURG_GATE, 20),
+                (Wonder.THOMASKIRCHE, 10),
+                (Wonder.COPERNICUS, 5),
+                (Wonder.PRESSBURG, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (60, 80, 120, 90),
+            Modifier.SUPPORT: (20, 90, 70, 40, 100),
+        },
+        Civ.LITHUANIA: {
+            Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.SAMOGITIAN_ALKAS, 20),
+                (Wonder.GEDIMINAS_TOWER, 20),
+                (Wonder.BORGUND_STAVE_CHURCH, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (70, 100, 110, 110),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.AUSTRIA: {
+            Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.STEPHANSDOM, 20),
+                (Wonder.THOMASKIRCHE, 15),
+                (Wonder.COPERNICUS, 5),
+                (Wonder.GOLDEN_BULL, 5),
+                (Wonder.PRESSBURG, 5),
+                (Building.AUSTRIAN_OPERA_HOUSE, 10),
+            ],
+            # Austria is squashed by other's culture, they need the boost
+            Modifier.GROWTH: (100, 200, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (50, 80, 100, 80),
+            Modifier.SUPPORT: (20, 80, 80, 40, 100),
+        },
+        Civ.OTTOMAN: {
+            Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.TOPKAPI_PALACE, 20),
+                (Wonder.BLUE_MOSQUE, 20),
+                (Wonder.SELIMIYE_MOSQUE, 20),
+                (Wonder.TOMB_AL_WALID, 10),
+                (Wonder.KIZIL_KULE, 10),
+                (Wonder.ALAZHAR, 5),
+            ],
+            Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (60, 75, 100, 120),
+            Modifier.SUPPORT: (30, 100, 60, 40, 100),
+        },
+        Civ.MOSCOW: {
+            Modifier.CITY_CLUSTER: (1, 4, 1),  # 5
+            Modifier.CITY_WAR_DISTANCE: 2,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.ST_BASIL, 20),
+                (Wonder.PETERHOF_PALACE, 20),
+                (Wonder.SOPHIA_KIEV, 5),
+            ],
+            Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+            Modifier.PRODUCTION: (80, 80, 100, 120),
+            Modifier.SUPPORT: (25, 100, 70, 40, 100),
+        },
+        Civ.DUTCH: {
+            Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
+            Modifier.CITY_WAR_DISTANCE: 1,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.BEURS, 20),
+                (Wonder.URANIBORG, 5),
+                (Wonder.THOMASKIRCHE, 5),
+            ],
+            Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
+            Modifier.PRODUCTION: (80, 50, 50, 50),
+            Modifier.SUPPORT: (20, 70, 80, 50, 100),
+        },
+        Civ.POPE: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [
+                (Technology.PRINTING_PRESS, 10)  # Pope shouldn't want this
+            ],
+            Modifier.BUILDING_PREFERENCE: [
+                (Wonder.SISTINE_CHAPEL, 20),
+                (Wonder.PALAIS_DES_PAPES, 10),
+                (Wonder.LEANING_TOWER, 5),
+                (Wonder.FLORENCE_DUOMO, 5),
+                (Wonder.LEONARDOS_WORKSHOP, 5),
+            ],
+            Modifier.GROWTH: (150, 100, 100, 50, 100, 1),
+            Modifier.PRODUCTION: (300, 200, 100, 350),
+            Modifier.SUPPORT: (20, 150, 80, 50, 100),
+        },
+        Civ.INDEPENDENT: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+            # The peaceful ones
+            Modifier.PRODUCTION: (170, 100, 400, 200),
+            Modifier.SUPPORT: (10, 100, 10, 20, 100),
+        },
+        Civ.INDEPENDENT_2: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+            # The peaceful ones
+            Modifier.PRODUCTION: (170, 100, 400, 200),
+            Modifier.SUPPORT: (10, 100, 10, 20, 100),
+        },
+        Civ.INDEPENDENT_3: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+            # The warlike ones
+            Modifier.PRODUCTION: (125, 100, 600, 300),
+            Modifier.SUPPORT: (10, 100, 10, 20, 100),
+        },
+        Civ.INDEPENDENT_4: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+            # The warlike ones
+            Modifier.PRODUCTION: (125, 100, 600, 300),
+            Modifier.SUPPORT: (10, 100, 10, 20, 100),
+        },
+        Civ.BARBARIAN: {
+            Modifier.CITY_CLUSTER: None,
+            Modifier.CITY_WAR_DISTANCE: None,
+            Modifier.TECH_PREFERENCE: [],
+            Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+            Modifier.PRODUCTION: (125, 100, 900, 350),
+            Modifier.SUPPORT: (10, 250, 10, 20, 100),
+        },
+    },
 )
 
 CIV_STABILITY_AI_BONUS = CivDataMapper(
@@ -1968,7 +1695,7 @@ CIV_STABILITY_AI_BONUS = CivDataMapper(
         Civ.OTTOMAN: 8,
         Civ.MOSCOW: 0,
         Civ.DUTCH: 0,
-    }
+    },
 )
 
 CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
@@ -1999,7 +1726,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
         Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.ARABIA],
         Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.LITHUANIA],
         Civ.DUTCH: [Civ.ENGLAND, Civ.CASTILE, Civ.FRANCE, Civ.GERMANY, Civ.DENMARK, Civ.NORWAY],
-    }
+    },
 )
 
 CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
@@ -2065,84 +1792,78 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.NORWAY,
             Civ.SWEDEN,
         ],
-    }
+    },
 )
 
-CIV_INITIAL_CONTACTS = ScenarioDataMapper(
-    {Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD, Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD}
+CIV_INITIAL_CONTACTS = EnumDataMapper(
+    {
+        Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD,
+        Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD,
+    },
 )
 
 CIV_INITIAL_WARS_500AD = CivDataMapper(
     {
-        Civ.BYZANTIUM: CivDataMapper(
-            {Civ.ARABIA: 90, Civ.BULGARIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
-        ),
-        Civ.FRANCE: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.ARABIA: CivDataMapper({Civ.OTTOMAN: 60}, do_not_cast=True),
-        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
-        Civ.CORDOBA: CivDataMapper(
-            {Civ.CASTILE: 90, Civ.PORTUGAL: 90, Civ.ARAGON: 80}, do_not_cast=True
-        ),
-        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
-        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
-        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
-        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
-        Civ.OTTOMAN: CivDataMapper(
-            {
-                Civ.INDEPENDENT: 50,
-                Civ.INDEPENDENT_2: 50,
-                Civ.INDEPENDENT_3: 50,
-                Civ.INDEPENDENT_4: 50,
-            },
-            do_not_cast=True,
-        ),
-    }
-).fill_missing_members(CivDataMapper({}))
+        Civ.BYZANTIUM: {Civ.ARABIA: 90, Civ.BULGARIA: 90, Civ.OTTOMAN: 90},
+        Civ.FRANCE: {Civ.ENGLAND: 60},
+        Civ.ARABIA: {Civ.OTTOMAN: 60},
+        Civ.BULGARIA: {Civ.OTTOMAN: 70},
+        Civ.CORDOBA: {Civ.CASTILE: 90, Civ.PORTUGAL: 90, Civ.ARAGON: 80},
+        Civ.NOVGOROD: {Civ.PRUSSIA: 80},
+        Civ.DENMARK: {Civ.SWEDEN: 60},
+        Civ.SCOTLAND: {Civ.ENGLAND: 60},
+        Civ.POLAND: {Civ.PRUSSIA: 20},
+        Civ.PRUSSIA: {Civ.LITHUANIA: 80},
+        Civ.OTTOMAN: {
+            Civ.INDEPENDENT: 50,
+            Civ.INDEPENDENT_2: 50,
+            Civ.INDEPENDENT_3: 50,
+            Civ.INDEPENDENT_4: 50,
+        },
+    },
+).fill_missing_members({})
 
 CIV_INITIAL_WARS_1200AD = CivDataMapper(
     {
-        Civ.BYZANTIUM: CivDataMapper(
-            {Civ.ARABIA: 20, Civ.BULGARIA: 70, Civ.VENECIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
-        ),
-        Civ.FRANCE: CivDataMapper({Civ.ARABIA: 30, Civ.ENGLAND: 90}, do_not_cast=True),
-        Civ.ARABIA: CivDataMapper(
-            {
-                Civ.GERMANY: 20,
-                Civ.HUNGARY: 20,
-                Civ.CASTILE: 30,
-                Civ.GENOA: 20,
-                Civ.ENGLAND: 20,
-                Civ.PORTUGAL: 20,
-                Civ.ARAGON: 10,
-                Civ.OTTOMAN: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
-        Civ.CORDOBA: CivDataMapper({Civ.PORTUGAL: 90}, do_not_cast=True),
-        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
-        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
-        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
-        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
-        Civ.MOROCCO: CivDataMapper(
-            {Civ.CASTILE: 90, Civ.PORTUGAL: 80, Civ.ARAGON: 80}, do_not_cast=True
-        ),
-        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
-        Civ.OTTOMAN: CivDataMapper(
-            {
-                Civ.INDEPENDENT: 50,
-                Civ.INDEPENDENT_2: 50,
-                Civ.INDEPENDENT_3: 50,
-                Civ.INDEPENDENT_4: 50,
-            },
-            do_not_cast=True,
-        ),
-    }
-).fill_missing_members(CivDataMapper({}))
+        Civ.BYZANTIUM: {
+            Civ.ARABIA: 20,
+            Civ.BULGARIA: 70,
+            Civ.VENECIA: 90,
+            Civ.OTTOMAN: 90,
+        },
+        Civ.FRANCE: {Civ.ARABIA: 30, Civ.ENGLAND: 90},
+        Civ.ARABIA: {
+            Civ.GERMANY: 20,
+            Civ.HUNGARY: 20,
+            Civ.CASTILE: 30,
+            Civ.GENOA: 20,
+            Civ.ENGLAND: 20,
+            Civ.PORTUGAL: 20,
+            Civ.ARAGON: 10,
+            Civ.OTTOMAN: 60,
+        },
+        Civ.BULGARIA: {Civ.OTTOMAN: 70},
+        Civ.CORDOBA: {Civ.PORTUGAL: 90},
+        Civ.NOVGOROD: {Civ.PRUSSIA: 80},
+        Civ.DENMARK: {Civ.SWEDEN: 60},
+        Civ.SCOTLAND: {Civ.ENGLAND: 60},
+        Civ.POLAND: {Civ.PRUSSIA: 20},
+        Civ.MOROCCO: {Civ.CASTILE: 90, Civ.PORTUGAL: 80, Civ.ARAGON: 80},
+        Civ.PRUSSIA: {Civ.LITHUANIA: 80},
+        Civ.OTTOMAN: {
+            Civ.INDEPENDENT: 50,
+            Civ.INDEPENDENT_2: 50,
+            Civ.INDEPENDENT_3: 50,
+            Civ.INDEPENDENT_4: 50,
+        },
+    },
+).fill_missing_members({})
 
-CIV_INITIAL_WARS = ScenarioDataMapper(
-    {Scenario.i500AD: CIV_INITIAL_WARS_500AD, Scenario.i1200AD: CIV_INITIAL_WARS_1200AD}
+CIV_INITIAL_WARS = EnumDataMapper(
+    {
+        Scenario.i500AD: CIV_INITIAL_WARS_500AD,
+        Scenario.i1200AD: CIV_INITIAL_WARS_1200AD,
+    },
 )
 
 # Used for mercenaries (Higher number = less likely to hire)
@@ -2182,7 +1903,7 @@ CIV_HIRE_MERCENARY_THRESHOLD = CivDataMapper(
         Civ.INDEPENDENT_3: 50,
         Civ.INDEPENDENT_4: 50,
         Civ.BARBARIAN: 50,
-    }
+    },
 )
 
 # Used for war during rise and respawn of new civs (Higher number means less chance for war)
@@ -2217,7 +1938,7 @@ CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
         Civ.MOSCOW: 70,
         Civ.DUTCH: 80,
         Civ.POPE: 90,
-    }
+    },
 )
 
 # Matrix determines how likely the AI is to switch to Protestantism
@@ -2257,7 +1978,7 @@ CIV_AI_REFORMATION_THRESHOLD = CivDataMapper(
         Civ.INDEPENDENT_3: 40,
         Civ.INDEPENDENT_4: 40,
         Civ.BARBARIAN: 40,
-    }
+    },
 )
 
 # Used to tune frequency of resurrections.
@@ -2292,352 +2013,250 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
         Civ.MOSCOW: 80,
         Civ.DUTCH: 60,
         Civ.POPE: 90,
-    }
+    },
 )
 
 CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
     {
-        Civ.BYZANTIUM: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 100,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 70,
-                Religion.ORTHODOXY: 150,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.FRANCE: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 150,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 70,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARABIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 20,
-                Religion.ISLAM: 350,
-                Religion.CATHOLICISM: 50,
-                Religion.ORTHODOXY: 10,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 80,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 80,
-                Religion.ORTHODOXY: 400,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 50,
-                Religion.ISLAM: 250,
-                Religion.CATHOLICISM: 80,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.VENECIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 90,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 200,
-                Religion.ORTHODOXY: 30,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.BURGUNDY: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 150,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 150,
-                Religion.ORTHODOXY: 70,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.GERMANY: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 450,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 60,
-                Religion.ISLAM: 40,
-                Religion.CATHOLICISM: 60,
-                Religion.ORTHODOXY: 500,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.NORWAY: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 150,
-                Religion.ORTHODOXY: 80,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.KIEV: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 90,
-                Religion.ISLAM: 60,
-                Religion.CATHOLICISM: 90,
-                Religion.ORTHODOXY: 400,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.HUNGARY: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 60,
-                Religion.CATHOLICISM: 200,
-                Religion.ORTHODOXY: 80,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.CASTILE: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 100,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 200,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 180,
-                Religion.ORTHODOXY: 80,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 450,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 200,
-                Religion.ISLAM: 60,
-                Religion.CATHOLICISM: 450,
-                Religion.ORTHODOXY: 200,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.GENOA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 190,
-                Religion.ISLAM: 50,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 30,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOROCCO: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 50,
-                Religion.ISLAM: 250,
-                Religion.CATHOLICISM: 70,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.ENGLAND: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 450,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.PORTUGAL: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 200,
-                Religion.ISLAM: 80,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARAGON: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 150,
-                Religion.ISLAM: 80,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.SWEDEN: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 450,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 200,
-                Religion.ORTHODOXY: 50,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 450,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.LITHUANIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 80,
-                Religion.ISLAM: 80,
-                Religion.CATHOLICISM: 80,
-                Religion.ORTHODOXY: 80,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.AUSTRIA: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 200,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 250,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.OTTOMAN: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 20,
-                Religion.ISLAM: 350,
-                Religion.CATHOLICISM: 80,
-                Religion.ORTHODOXY: 80,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.MOSCOW: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 100,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 250,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.DUTCH: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 550,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 90,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.POPE: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 10,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 500,
-                Religion.ORTHODOXY: 10,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 100,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 100,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_2: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 100,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 100,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_3: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 100,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 100,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.INDEPENDENT_4: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 250,
-                Religion.ISLAM: 100,
-                Religion.CATHOLICISM: 100,
-                Religion.ORTHODOXY: 100,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-        Civ.BARBARIAN: ReligionDataMapper(
-            {
-                Religion.PROTESTANTISM: 20,
-                Religion.ISLAM: 20,
-                Religion.CATHOLICISM: 20,
-                Religion.ORTHODOXY: 20,
-                Religion.JUDAISM: 10,
-            },
-            do_not_cast=True,
-        ),
-    }
+        Civ.BYZANTIUM: {
+            Religion.PROTESTANTISM: 100,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 70,
+            Religion.ORTHODOXY: 150,
+            Religion.JUDAISM: 10,
+        },
+        Civ.FRANCE: {
+            Religion.PROTESTANTISM: 150,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 70,
+            Religion.JUDAISM: 10,
+        },
+        Civ.ARABIA: {
+            Religion.PROTESTANTISM: 20,
+            Religion.ISLAM: 350,
+            Religion.CATHOLICISM: 50,
+            Religion.ORTHODOXY: 10,
+            Religion.JUDAISM: 10,
+        },
+        Civ.BULGARIA: {
+            Religion.PROTESTANTISM: 80,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 80,
+            Religion.ORTHODOXY: 400,
+            Religion.JUDAISM: 10,
+        },
+        Civ.CORDOBA: {
+            Religion.PROTESTANTISM: 50,
+            Religion.ISLAM: 250,
+            Religion.CATHOLICISM: 80,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.VENECIA: {
+            Religion.PROTESTANTISM: 90,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 200,
+            Religion.ORTHODOXY: 30,
+            Religion.JUDAISM: 10,
+        },
+        Civ.BURGUNDY: {
+            Religion.PROTESTANTISM: 150,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 150,
+            Religion.ORTHODOXY: 70,
+            Religion.JUDAISM: 10,
+        },
+        Civ.GERMANY: {
+            Religion.PROTESTANTISM: 450,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.NOVGOROD: {
+            Religion.PROTESTANTISM: 60,
+            Religion.ISLAM: 40,
+            Religion.CATHOLICISM: 60,
+            Religion.ORTHODOXY: 500,
+            Religion.JUDAISM: 10,
+        },
+        Civ.NORWAY: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 150,
+            Religion.ORTHODOXY: 80,
+            Religion.JUDAISM: 10,
+        },
+        Civ.KIEV: {
+            Religion.PROTESTANTISM: 90,
+            Religion.ISLAM: 60,
+            Religion.CATHOLICISM: 90,
+            Religion.ORTHODOXY: 400,
+            Religion.JUDAISM: 10,
+        },
+        Civ.HUNGARY: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 60,
+            Religion.CATHOLICISM: 200,
+            Religion.ORTHODOXY: 80,
+            Religion.JUDAISM: 10,
+        },
+        Civ.CASTILE: {
+            Religion.PROTESTANTISM: 100,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 200,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.DENMARK: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 180,
+            Religion.ORTHODOXY: 80,
+            Religion.JUDAISM: 10,
+        },
+        Civ.SCOTLAND: {
+            Religion.PROTESTANTISM: 450,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.POLAND: {
+            Religion.PROTESTANTISM: 200,
+            Religion.ISLAM: 60,
+            Religion.CATHOLICISM: 450,
+            Religion.ORTHODOXY: 200,
+            Religion.JUDAISM: 10,
+        },
+        Civ.GENOA: {
+            Religion.PROTESTANTISM: 190,
+            Religion.ISLAM: 50,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 30,
+            Religion.JUDAISM: 10,
+        },
+        Civ.MOROCCO: {
+            Religion.PROTESTANTISM: 50,
+            Religion.ISLAM: 250,
+            Religion.CATHOLICISM: 70,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.ENGLAND: {
+            Religion.PROTESTANTISM: 450,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.PORTUGAL: {
+            Religion.PROTESTANTISM: 200,
+            Religion.ISLAM: 80,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.ARAGON: {
+            Religion.PROTESTANTISM: 150,
+            Religion.ISLAM: 80,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.SWEDEN: {
+            Religion.PROTESTANTISM: 450,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 200,
+            Religion.ORTHODOXY: 50,
+            Religion.JUDAISM: 10,
+        },
+        Civ.PRUSSIA: {
+            Religion.PROTESTANTISM: 450,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.LITHUANIA: {
+            Religion.PROTESTANTISM: 80,
+            Religion.ISLAM: 80,
+            Religion.CATHOLICISM: 80,
+            Religion.ORTHODOXY: 80,
+            Religion.JUDAISM: 10,
+        },
+        Civ.AUSTRIA: {
+            Religion.PROTESTANTISM: 200,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 250,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.OTTOMAN: {
+            Religion.PROTESTANTISM: 20,
+            Religion.ISLAM: 350,
+            Religion.CATHOLICISM: 80,
+            Religion.ORTHODOXY: 80,
+            Religion.JUDAISM: 10,
+        },
+        Civ.MOSCOW: {
+            Religion.PROTESTANTISM: 100,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 250,
+            Religion.JUDAISM: 10,
+        },
+        Civ.DUTCH: {
+            Religion.PROTESTANTISM: 550,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 90,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+        Civ.POPE: {
+            Religion.PROTESTANTISM: 10,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 500,
+            Religion.ORTHODOXY: 10,
+            Religion.JUDAISM: 10,
+        },
+        Civ.INDEPENDENT: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 100,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 100,
+            Religion.JUDAISM: 10,
+        },
+        Civ.INDEPENDENT_2: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 100,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 100,
+            Religion.JUDAISM: 10,
+        },
+        Civ.INDEPENDENT_3: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 100,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 100,
+            Religion.JUDAISM: 10,
+        },
+        Civ.INDEPENDENT_4: {
+            Religion.PROTESTANTISM: 250,
+            Religion.ISLAM: 100,
+            Religion.CATHOLICISM: 100,
+            Religion.ORTHODOXY: 100,
+            Religion.JUDAISM: 10,
+        },
+        Civ.BARBARIAN: {
+            Religion.PROTESTANTISM: 20,
+            Religion.ISLAM: 20,
+            Religion.CATHOLICISM: 20,
+            Religion.ORTHODOXY: 20,
+            Religion.JUDAISM: 10,
+        },
+    },
 )
 
 # 100 and 80: don't purge any religions; 60: purge islam if christian, and all christian religions if muslim; 40: also judaism; 20: all but state religion
@@ -2677,7 +2296,7 @@ CIV_RELIGIOUS_TOLERANCE = CivDataMapper(
         Civ.INDEPENDENT_3: 100,
         Civ.INDEPENDENT_4: 100,
         Civ.BARBARIAN: 100,
-    }
+    },
 )
 
 # Late leader: (leader, starting date, threshold, era)
@@ -2842,5 +2461,5 @@ CIV_LEADERS = CivDataMapper(
             LeaderType.EARLY: Leader.THE_POPE,
             LeaderType.LATE: None,
         },
-    }
+    },
 )
