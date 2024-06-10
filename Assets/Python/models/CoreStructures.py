@@ -18,7 +18,7 @@ from CoreFunctions import (
 )
 from PyUtils import any, none, rand
 import CoreTypes
-from BaseStructures import (
+from DataStructures import (
     CivDataMapper,
     CompanyDataMapper,
     EntitiesCollection,

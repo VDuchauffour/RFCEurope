@@ -1,4 +1,4 @@
-from BaseStructures import CivDataMapper
+from DataStructures import CivDataMapper
 from CoreTypes import Civ
 
 SETTLERS_MAP = CivDataMapper({

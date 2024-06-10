@@ -1,4 +1,4 @@
-from BaseStructures import EnumDataMapper, CivDataMapper
+from DataStructures import EnumDataMapper, CivDataMapper
 from CoreTypes import (
     Building,
     Civ,

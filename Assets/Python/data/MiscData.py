@@ -1,4 +1,4 @@
-from BaseStructures import CompanyDataMapper
+from DataStructures import CompanyDataMapper
 from CoreTypes import Building, Civ, Company, Technology, Unit
 
 PLAGUE_IMMUNITY = 20

@@ -1,6 +1,6 @@
 import unittest
 
-from BaseStructures import (
+from DataStructures import (
     DataMapper,
     EnumDataMapper,
     NotACallableError,

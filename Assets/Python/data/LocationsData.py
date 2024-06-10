@@ -15,7 +15,7 @@ from CoreTypes import (
     Lake,
     Area,
 )
-from BaseStructures import (
+from DataStructures import (
     CompanyDataMapper,
     DataMapper,
     EnumDataMapper,

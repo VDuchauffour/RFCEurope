@@ -1,4 +1,4 @@
-from BaseStructures import EnumDataMapper
+from DataStructures import EnumDataMapper
 from CoreTypes import Building, Religion, Wonder
 
 
