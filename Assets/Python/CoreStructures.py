@@ -31,6 +31,8 @@ from Errors import NotTypeExpectedError
 try:
     from CvPythonExtensions import (
         CyGlobalContext,
+        CyTranslator,
+        CyInterface,
         CyPlayer,
         CyTeam,
         CyPlot,
@@ -70,10 +72,14 @@ try:
 
     gc = CyGlobalContext()
     game = gc.getGame()
+    translator = CyTranslator()
+    interface = CyInterface()
 
 except ImportError:
     gc = None
     game = None
+    translator = None
+    interface = None
 
 
 class Company(Item):
