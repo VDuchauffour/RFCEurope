@@ -1,5 +1,5 @@
 from Consts import MINOR_CIVS
-from CoreFunctions import parse_area_dict
+from Core import parse_area_dict
 from CoreTypes import (
     AreaType,
     City,

@@ -7,8 +7,18 @@ from CvPythonExtensions import (
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreFunctions import event_popup, get_religion_by_id, location, message, text
-from CoreStructures import human, player, year, cities, units
+from Core import (
+    event_popup,
+    get_religion_by_id,
+    human,
+    location,
+    player,
+    text,
+    message,
+    year,
+    cities,
+    units,
+)
 from CoreTypes import (
     Building,
     Civ,
@@ -276,16 +286,12 @@ class Religions:
         # Bulgaria and Balkans:
         if year(700) < iGameTurn < year(800) and iGameTurn % 3 == 1:
             if percentage_chance(25, strict=True):
-                tCity = self.selectRandomCityRegion(
-                    tBulgariaBalkans, Religion.ORTHODOXY, True
-                )
+                tCity = self.selectRandomCityRegion(tBulgariaBalkans, Religion.ORTHODOXY, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.ORTHODOXY)
         if year(800) < iGameTurn < year(1000) and iGameTurn % 4 == 1:
             if percentage_chance(15, strict=True):
-                tCity = self.selectRandomCityRegion(
-                    tBulgariaBalkans, Religion.ORTHODOXY, True
-                )
+                tCity = self.selectRandomCityRegion(tBulgariaBalkans, Religion.ORTHODOXY, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.ORTHODOXY)
         # Old Rus territories:
@@ -315,9 +321,7 @@ class Religions:
         # Scandinavia:
         if year(1000) < iGameTurn < year(1300) and iGameTurn % 4 == 0:
             if percentage_chance(24, strict=True):
-                tCity = self.selectRandomCityRegion(
-                    tSouthScandinavia, Religion.CATHOLICISM, True
-                )
+                tCity = self.selectRandomCityRegion(tSouthScandinavia, Religion.CATHOLICISM, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.CATHOLICISM)
 
@@ -1047,9 +1051,7 @@ class Religions:
 
     def doCounterReformationNo(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        pPlayer.changeStabilityBase(
-            StabilityCategory.CITIES, max(1, pPlayer.getNumCities() / 3)
-        )
+        pPlayer.changeStabilityBase(StabilityCategory.CITIES, max(1, pPlayer.getNumCities() / 3))
 
     ### End Reformation ###
 

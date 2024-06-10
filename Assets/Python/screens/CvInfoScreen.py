@@ -6,8 +6,7 @@
 import math
 from CvPythonExtensions import *
 from Civilizations import has_date_revealed
-from CoreFunctions import colortext, text
-from CoreStructures import is_independent_civ, turn
+from Core import colortext, is_independent_civ, text, turn
 import CvUtil
 
 import string

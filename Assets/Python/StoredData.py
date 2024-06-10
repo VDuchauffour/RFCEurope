@@ -1,5 +1,5 @@
 from CoreData import civilizations
-from CoreStructures import player
+from Core import player
 from CoreTypes import Civ
 import cPickle as pickle
 from MiscData import NUM_CRUSADES

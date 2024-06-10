@@ -4,9 +4,7 @@
 from CvPythonExtensions import *
 
 from Consts import MessageData
-from CoreFunctions import text
-from CoreFunctions import message
-from CoreStructures import year
+from Core import text, message, year
 from CoreTypes import Improvement, Bonus
 
 # globals
@@ -72,8 +70,7 @@ class Resources:
             if iBonusType == Bonus.HORSE and iImprovementType == Improvement.PASTURE:
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
             elif (
-                iBonusType == Bonus.NORTH_ACCESS
-                and iImprovementType == Improvement.COLONIAL_TRADE
+                iBonusType == Bonus.NORTH_ACCESS and iImprovementType == Improvement.COLONIAL_TRADE
             ):
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
 

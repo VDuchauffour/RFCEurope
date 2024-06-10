@@ -13,13 +13,17 @@ from Civilizations import (
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreStructures import (
+from Core import (
+    event_popup,
     human,
     is_major_civ,
     is_minor_civ,
+    location,
     make_unit,
     make_units,
     player,
+    text,
+    message,
     turn,
     year,
     cities,
@@ -76,7 +80,6 @@ from CoreTypes import (
     StabilityCategory,
     Unit,
 )
-from CoreFunctions import event_popup, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from Wonders import leaning_tower_effect
 

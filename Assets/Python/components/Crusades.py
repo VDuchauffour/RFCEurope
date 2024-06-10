@@ -1,14 +1,18 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import event_popup, get_civ_by_id, location, message, text
-from CoreStructures import (
+from Core import (
+    event_popup,
+    get_civ_by_id,
     human,
+    location,
     make_crusade_unit,
     make_crusade_units,
     player,
     team,
     teamtype,
+    message,
+    text,
     turn,
     year,
     cities,
@@ -1554,9 +1558,7 @@ class Crusades:
                                             iHuman,
                                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                             sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                            button=gc.getUnitInfo(
-                                                Unit.HOLY_RELIC
-                                            ).getButton(),
+                                            button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                                             color=MessageData.GREEN,
                                             location=(iCapitalX, iCapitalY),
                                         )

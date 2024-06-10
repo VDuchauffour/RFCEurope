@@ -1,4 +1,4 @@
-from CoreStructures import player, year
+from Core import player, year
 from CoreTypes import Civ, Scenario
 
 

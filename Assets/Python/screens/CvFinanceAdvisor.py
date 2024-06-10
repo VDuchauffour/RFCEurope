@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import font_text, text
+from Core import font_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
 import CvUtil
 import CvScreenEnums
@@ -163,7 +163,11 @@ class CvFinanceAdvisor:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
+                        self.szDropdownName,
+                        gc.getPlayer(j).getCivilizationShortDescription(0),
+                        j,
+                        j,
+                        False,
                     )
 
         # Absinthe: update all stability values for the active player

@@ -1,4 +1,4 @@
-from CoreStructures import make_units
+from Core import make_units
 from CoreTypes import Unit
 
 

@@ -12,7 +12,7 @@ from CoreTypes import Civ, Promotion
 import CvUtil
 import CvScreenEnums
 from MiscData import BARBARIAN_ONLY_UNITS, MERCENARY_ONLY_UNITS
-from CoreFunctions import text
+from Core import text
 
 # globals
 gc = CyGlobalContext()

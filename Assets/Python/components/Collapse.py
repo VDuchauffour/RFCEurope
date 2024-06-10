@@ -2,8 +2,7 @@ from CvPythonExtensions import CyGlobalContext
 
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreFunctions import message, text
-from CoreStructures import human
+from Core import message, human, text
 from CoreTypes import Civ
 from RFCUtils import collapseImmune, getLastRespawnTurn, killAndFragmentCiv
 from StoredData import data

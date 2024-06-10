@@ -18,8 +18,7 @@ from CivilizationsData import (
     CIV_STABILITY_AI_BONUS,
     CIV_SCENARIO_CONDITION,
 )
-from CoreFunctions import get_civ_by_id
-from CoreStructures import Civilization, CivilizationsFactory, CompaniesFactory
+from Core import get_civ_by_id, Civilization, CivilizationsFactory, CompaniesFactory
 from CoreTypes import Scenario, Civ
 from Errors import NotTypeExpectedError
 from LocationsData import (

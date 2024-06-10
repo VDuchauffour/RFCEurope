@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import message, text
-from CoreStructures import human, turn, cities, units
+from Core import message, human, text, turn, cities, units
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 from PyUtils import percentage_chance, rand, choice
@@ -1312,8 +1311,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         240,
         255,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         5,
     ],
@@ -1322,8 +1320,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         255,
         270,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         5,
     ],
@@ -1332,8 +1329,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         270,
         285,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1342,8 +1338,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         285,
         300,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1352,8 +1347,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         300,
         315,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1362,8 +1356,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         315,
         330,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1372,8 +1365,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         330,
         345,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1382,8 +1374,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         345,
         360,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1392,8 +1383,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         360,
         375,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         10,
     ],
@@ -1402,8 +1392,7 @@ lMercList = [
         "TXT_KEY_MERC_BALTIC",
         375,
         385,
-        REGIONS[Region.LITHUANIA]
-        + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
+        REGIONS[Region.LITHUANIA] + [Province.POLOTSK, Province.SUVALKIJA, Province.MINSK],
         [],
         5,
     ],
@@ -2904,9 +2893,7 @@ class MercenaryManager:
                     pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100
                     and pPlayer.getGold()
                     < (
-                        pPlayer.getPicklefreeParameter(
-                            SpecialParameter.MERCENARY_COST_PER_TURN
-                        )
+                        pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN)
                         + 99
                     )
                     / 100
@@ -3246,13 +3233,9 @@ class GlobalMercenaryUtils:
             # iTotalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
             iTotalUpkeep += pUnit.getMercUpkeep()
 
-        iSavedUpkeep = pPlayer.getPicklefreeParameter(
-            SpecialParameter.MERCENARY_COST_PER_TURN
-        )
+        iSavedUpkeep = pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN)
         if iSavedUpkeep != iTotalUpkeep:
-            pPlayer.setPicklefreeParameter(
-                SpecialParameter.MERCENARY_COST_PER_TURN, iTotalUpkeep
-            )
+            pPlayer.setPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN, iTotalUpkeep)
             return False
         return True
 
@@ -3324,8 +3307,7 @@ class GlobalMercenaryUtils:
         pPlayer.setGold(pPlayer.getGold() - iCost)
         pPlayer.setPicklefreeParameter(
             SpecialParameter.MERCENARY_COST_PER_TURN,
-            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN)
-            + iUpkeep,
+            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN) + iUpkeep,
         )
 
         # remove the merc from the global pool and set the "hired by" index
@@ -3388,8 +3370,7 @@ class GlobalMercenaryUtils:
             SpecialParameter.MERCENARY_COST_PER_TURN,
             max(
                 0,
-                pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN)
-                - iUpkeep,
+                pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN) - iUpkeep,
             ),
         )
 

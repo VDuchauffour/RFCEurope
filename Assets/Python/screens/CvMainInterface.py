@@ -3,8 +3,7 @@
 from CvPythonExtensions import *
 from Civilizations import has_date_revealed
 from CoreData import civilization
-from CoreFunctions import font_symbol, font_text, text
-from CoreStructures import human, is_minor_civ
+from Core import font_symbol, font_text, human, is_minor_civ, text
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums
@@ -8610,7 +8609,9 @@ class CvMainInterface:
 
                                             # BUG - Dead Civs - start
                                             if ScoreOpt.isUsePlayerName():
-                                                szPlayerName = gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
+                                                szPlayerName = gc.getPlayer(
+                                                    ePlayer
+                                                ).getCivilizationShortDescription(0)
                                             else:
                                                 szPlayerName = gc.getLeaderHeadInfo(
                                                     gc.getPlayer(ePlayer).getLeaderType()

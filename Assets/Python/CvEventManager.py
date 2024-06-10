@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
-from CoreFunctions import get_data_from_upside_down_map, message, text
-from CoreStructures import human, player, team, cities
+from Core import get_data_from_upside_down_map, human, message, player, team, cities, text
 import CvEspionageAdvisor
 import CvUtil
 import CvScreensInterface

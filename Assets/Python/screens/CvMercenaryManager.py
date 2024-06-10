@@ -6,8 +6,7 @@
 # 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
-from CoreFunctions import text
-from CoreStructures import player
+from Core import text, player
 from CoreTypes import SpecialParameter, Promotion
 import CvUtil
 import PyHelpers
@@ -775,32 +774,20 @@ class CvMercenaryManager:
             szText = BugUtil.getText("TXT_KEY_MISC_NEG_GOLD", iGold)
             if iGoldRate != 0:
                 if iGold + iGoldRate >= 0:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate)
                 elif iGoldRate >= 0:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_POS_WARNING_GOLD_PER_TURN", iGoldRate)
                 else:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate)
         else:
             szText = BugUtil.getText("TXT_KEY_MISC_POS_GOLD", iGold)
             if iGoldRate != 0:
                 if iGoldRate >= 0:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate)
                 elif iGold + iGoldRate >= 0:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN", iGoldRate)
                 else:
-                    szText += BugUtil.getText(
-                        "TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate
-                    )
+                    szText += BugUtil.getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate)
 
         screen.setLabel(
             "GoldText",

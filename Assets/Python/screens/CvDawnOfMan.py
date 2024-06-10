@@ -3,8 +3,7 @@
 
 import math
 from CoreData import civilization
-from CoreFunctions import text
-from CoreStructures import turn
+from Core import text, turn
 import CvUtil
 from CvPythonExtensions import *
 

@@ -3,7 +3,7 @@
 from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
-from CoreFunctions import get_civ_by_id, text
+from Core import text, get_civ_by_id
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
 from CoreTypes import Area, AreaType
 import CvScreenEnums

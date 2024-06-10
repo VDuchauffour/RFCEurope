@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import year
+from Core import year
 from CoreTypes import (
     Modifier,
     Building,
@@ -230,9 +230,7 @@ def set_unique_powers():
 
     gc.setUP(Civ.BULGARIA, UniquePower.NO_RESISTANCE, 0)
 
-    gc.setUP(
-        Civ.CORDOBA, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS, Promotion.MEDIC
-    )
+    gc.setUP(Civ.CORDOBA, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS, Promotion.MEDIC)
     gc.setUP(Civ.CORDOBA, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS, 50)
 
     gc.setUP(
@@ -250,9 +248,7 @@ def set_unique_powers():
     gc.setUP(Civ.CASTILE, UniquePower.PER_CITY_COMMERCE_BONUS, 2)
 
     gc.setUP(Civ.NORWAY, UniquePower.CAN_ENTER_TERRAIN, Terrain.OCEAN)
-    gc.setUP(
-        Civ.NORWAY, UniquePower.STABILITY_BONUS_FOUNDING, 1
-    )  # "hidden" part of the UP
+    gc.setUP(Civ.NORWAY, UniquePower.STABILITY_BONUS_FOUNDING, 1)  # "hidden" part of the UP
 
     gc.setUP(Civ.VENECIA, UniquePower.PRE_ACCESS_CIVICS, Civic.MERCHANT_REPUBLIC)
 
@@ -318,9 +314,7 @@ def set_unique_powers():
         UniquePower.LOWER_COST_FOR_PROJECTS,
         (len(Project) - 2) * 1000000 + max(Colony) * 1000 + 30,
     )
-    gc.setUP(
-        Civ.PORTUGAL, UniquePower.STABILITY_BONUS_FOUNDING, 1
-    )  # "hidden" part of the UP
+    gc.setUP(Civ.PORTUGAL, UniquePower.STABILITY_BONUS_FOUNDING, 1)  # "hidden" part of the UP
 
     for i in civilizations().drop(Civ.BARBARIAN).ids():
         if not i == Civ.AUSTRIA:
@@ -390,19 +384,13 @@ def set_religion_benefit():
     # iFP_Diplomacy: iAttitude += iParameter * num_FaithPoints / 100
     # 		i.e. 1 Faith Point = iParameter percent of an attitude point
 
-    gc.setReligionBenefit(
-        Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_STABILITY, 10, 100
-    )
-    gc.setReligionBenefit(
-        Religion.ORTHODOXY, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP, 50, 100
-    )
+    gc.setReligionBenefit(Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_STABILITY, 10, 100)
+    gc.setReligionBenefit(Religion.ORTHODOXY, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP, 50, 100)
 
     gc.setReligionBenefit(
         Religion.ISLAM, FaithPointBonusCategory.FASTER_POPULATION_GROWTH, 50, 100
     )
-    gc.setReligionBenefit(
-        Religion.ISLAM, FaithPointBonusCategory.REDUCING_COST_UNITS, 50, 100
-    )
+    gc.setReligionBenefit(Religion.ISLAM, FaithPointBonusCategory.REDUCING_COST_UNITS, 50, 100)
 
     gc.setReligionBenefit(
         Religion.PROTESTANTISM, FaithPointBonusCategory.REDUCING_TECH_COST, 30, 100
@@ -411,18 +399,10 @@ def set_religion_benefit():
         Religion.PROTESTANTISM, FaithPointBonusCategory.REDUCING_WONDER_COST, 30, 100
     )
 
-    gc.setReligionBenefit(
-        Religion.CATHOLICISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 6, 100
-    )
-    gc.setReligionBenefit(
-        Religion.ISLAM, FaithPointBonusCategory.BOOST_DIPLOMACY, 5, 100
-    )
-    gc.setReligionBenefit(
-        Religion.PROTESTANTISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 4, 100
-    )
-    gc.setReligionBenefit(
-        Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_DIPLOMACY, 3, 100
-    )
+    gc.setReligionBenefit(Religion.CATHOLICISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 6, 100)
+    gc.setReligionBenefit(Religion.ISLAM, FaithPointBonusCategory.BOOST_DIPLOMACY, 5, 100)
+    gc.setReligionBenefit(Religion.PROTESTANTISM, FaithPointBonusCategory.BOOST_DIPLOMACY, 4, 100)
+    gc.setReligionBenefit(Religion.ORTHODOXY, FaithPointBonusCategory.BOOST_DIPLOMACY, 3, 100)
 
 
 def set_historical_enemies():

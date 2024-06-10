@@ -4,8 +4,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, COMPANIES
-from CoreFunctions import get_enum_by_id, text, message
-from CoreStructures import human, player, turn, year, cities
+from Core import message, get_enum_by_id, human, player, text, turn, year, cities
 from LocationsData import CITIES
 from PyUtils import rand
 import Crusades
@@ -71,9 +70,7 @@ class Companies:
                 COMPANIES[iCompany].deathdate
             ):
                 iMaxCompanies -= 1
-            elif iCompany == Company.TEUTONS and iGameTurn < year(
-                COMPANIES[iCompany].deathdate
-            ):
+            elif iCompany == Company.TEUTONS and iGameTurn < year(COMPANIES[iCompany].deathdate):
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
         if iCompany == Company.HANSA:
@@ -87,10 +84,7 @@ class Companies:
         # Order of Calatrava is only active if Cordoba or Morocco is alive
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
         if iCompany == Company.CALATRAVA:
-            if not (
-                gc.getPlayer(Civ.CORDOBA).isAlive()
-                or gc.getPlayer(Civ.MOROCCO).isAlive()
-            ):
+            if not (gc.getPlayer(Civ.CORDOBA).isAlive() or gc.getPlayer(Civ.MOROCCO).isAlive()):
                 iMaxCompanies = 0
         # Order of the Dragon is only active if the Ottomans are alive
         if iCompany == Company.DRAGON:
@@ -387,9 +381,7 @@ class Companies:
             if city.isHasReligion(Religion.ISLAM):
                 iValue -= 1
         elif iCompany == Company.DRAGON:
-            if city.isHasReligion(Religion.CATHOLICISM) or city.isHasReligion(
-                Religion.ORTHODOXY
-            ):
+            if city.isHasReligion(Religion.CATHOLICISM) or city.isHasReligion(Religion.ORTHODOXY):
                 iValue += 1
             if city.isHasReligion(Religion.ISLAM):
                 iValue -= 1
@@ -441,24 +433,13 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE)) > 0:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)
-                )
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)) > 0:
                 iBuildCounter += 2
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.GUILD_HALL)) > 0:
                 iBuildCounter += 1
@@ -484,24 +465,13 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE)) > 0:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_TEMPLE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(
-                    getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)
-                )
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.CATHOLIC_MONASTERY)) > 0:
                 iBuildCounter += 2
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STAR_FORT)) > 0:
                 iBuildCounter += 1
@@ -516,10 +486,7 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.STABLE)) > 0:
                 iBuildCounter += 1
-            if (
-                city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE))
-                > 0
-            ):
+            if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.ARCHERY_RANGE)) > 0:
                 iBuildCounter += 1
             if city.getNumRealBuilding(getUniqueBuilding(iOwner, Building.FORGE)) > 0:
                 iBuildCounter += 1
@@ -763,19 +730,13 @@ class Companies:
                 iValue *= 2
                 iValue /= 3
         elif iCompany == Company.MEDICI:
-            if city.isHasCorporation(Company.ST_GEORGE) or city.isHasCorporation(
-                Company.AUGSBURG
-            ):
+            if city.isHasCorporation(Company.ST_GEORGE) or city.isHasCorporation(Company.AUGSBURG):
                 iValue /= 2
         elif iCompany == Company.ST_GEORGE:
-            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(
-                Company.AUGSBURG
-            ):
+            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(Company.AUGSBURG):
                 iValue /= 2
         elif iCompany == Company.AUGSBURG:
-            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(
-                Company.ST_GEORGE
-            ):
+            if city.isHasCorporation(Company.MEDICI) or city.isHasCorporation(Company.ST_GEORGE):
                 iValue /= 2
 
         # threshold

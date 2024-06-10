@@ -2,8 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
-from CoreFunctions import colortext, font_text, text
-from CoreStructures import turn, year, cities
+from Core import font_text, colortext, text, turn, year, cities
 from CoreTypes import (
     Building,
     City,
@@ -521,7 +520,9 @@ class CvVictoryScreen:
                     szTable,
                     1,
                     iRow,
-                    gc.getPlayer(gc.getGame().getSecretaryGeneral(i)).getCivilizationShortDescription(0),
+                    gc.getPlayer(
+                        gc.getGame().getSecretaryGeneral(i)
+                    ).getCivilizationShortDescription(0),
                     "",
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -2310,7 +2311,11 @@ class CvVictoryScreen:
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
                     screen.addPullDownString(
-                        self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False
+                        self.szDropdownName,
+                        gc.getPlayer(j).getCivilizationShortDescription(0),
+                        j,
+                        j,
+                        False,
                     )
 
         self.drawTabs()
@@ -2743,9 +2748,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tHungaryControl)
         # UHV2
         sEnemyString = "The Ottomans"
-        sText2 += self.getNotCivProvinceString(
-            Civ.OTTOMAN, sEnemyString, vic.tHungaryControlII
-        )
+        sText2 += self.getNotCivProvinceString(Civ.OTTOMAN, sEnemyString, vic.tHungaryControlII)
         # UHV3
         iGoal = pPlayer.getUHV(2)
         sText3 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_ADOPTION_YET"))
@@ -2864,9 +2867,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        iScotlandFort = gc.getPlayer(Civ.SCOTLAND).getImprovementCount(
-            Improvement.FORT
-        )
+        iScotlandFort = gc.getPlayer(Civ.SCOTLAND).getImprovementCount(Improvement.FORT)
         iScotlandCastle = gc.getPlayer(Civ.SCOTLAND).countNumBuildings(Building.CASTLE)
         sScotlandFort = text("TXT_KEY_IMPROVEMENT_FORT") + ": "
         sScotlandCastle = text("TXT_KEY_BUILDING_CASTLE") + ": "
@@ -3259,9 +3260,7 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         sEnemyString = "Barbarians"
-        sText1 += self.getNotCivProvinceString(
-            Civ.BARBARIAN, sEnemyString, vic.tMoscowControl
-        )
+        sText1 += self.getNotCivProvinceString(Civ.BARBARIAN, sEnemyString, vic.tMoscowControl)
         # UHV2
         totalLand = gc.getMap().getLandPlots()
         RussianLand = pPlayer.getTotalLand()
@@ -3305,7 +3304,9 @@ class CvVictoryScreen:
                 + " "
                 + text("TXT_KEY_CITY_NAME_CONSTANTINOPLE")
                 + ": "
-                + self.determineColor(bColor, gc.getPlayer(iConstantinopleOwner).getCivilizationShortDescription(0))
+                + self.determineColor(
+                    bColor, gc.getPlayer(iConstantinopleOwner).getCivilizationShortDescription(0)
+                )
             )
         else:
             sText3 += self.checkCity(
@@ -3326,9 +3327,7 @@ class CvVictoryScreen:
         tAmsterdam = civilization(iPlayer).location.capital
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if self.checkCity(tAmsterdam, iPlayer, text("TXT_KEY_CITY_NAME_AMSTERDAM")) == -1:
-            iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(
-                Specialist.GREAT_MERCHANT
-            )
+            iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(Specialist.GREAT_MERCHANT)
             sText1 += self.getCounterString(iNumMerchants, 5)
         else:
             sText1 += self.checkCity(tAmsterdam, iPlayer, text("TXT_KEY_CITY_NAME_AMSTERDAM"))
@@ -3633,7 +3632,9 @@ class CvVictoryScreen:
                 + " "
                 + cityName
                 + ": "
-                + self.determineColor(iOwner == iCiv, gc.getPlayer(iOwner).getCivilizationShortDescription(0))
+                + self.determineColor(
+                    iOwner == iCiv, gc.getPlayer(iOwner).getCivilizationShortDescription(0)
+                )
             )
         return -1
 
@@ -3693,15 +3694,13 @@ class CvVictoryScreen:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif (
                 not pEnemy.isAlive()
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
-                < ProvinceStatus.CONQUER
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif (
                 pEnemy.isAlive()
                 and not teamEnemy.isVassal(teamOwn.getID())
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
-                < ProvinceStatus.CONQUER
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             else:

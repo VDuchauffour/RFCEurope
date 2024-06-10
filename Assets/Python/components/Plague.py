@@ -3,10 +3,20 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import location, message, owner, text
-from CoreFunctions import plot as _plot
-from CoreStructures import human, player, turn, year, cities, plots
-from CoreStructures import city as _city
+from Core import (
+    message,
+    location,
+    owner,
+    text,
+    human,
+    player,
+    turn,
+    year,
+    city as _city,
+    plot as _plot,
+    cities,
+    plots,
+)
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 

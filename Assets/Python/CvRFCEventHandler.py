@@ -2,8 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import message, show, text
-from CoreStructures import human, make_unit, make_units, player, turn, year, cities
+from Core import message, human, make_unit, make_units, player, show, text, turn, year, cities
 import CvUtil
 import CvEventManager
 import PyHelpers
@@ -255,16 +254,10 @@ class CvRFCEventHandler:
         tCity = (city.getX(), city.getY())
 
         # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
-        if playerType == Civ.ARABIA and not gc.getGame().isReligionFounded(
-            Religion.ISLAM
-        ):
+        if playerType == Civ.ARABIA and not gc.getGame().isReligionFounded(Religion.ISLAM):
             # has to be done before the Arab UP is triggered
-            gc.getPlayer(Civ.ARABIA).foundReligion(
-                Religion.ISLAM, Religion.ISLAM, False
-            )
-            gc.getGame().getHolyCity(Religion.ISLAM).setNumRealBuilding(
-                Building.ISLAMIC_SHRINE, 1
-            )
+            gc.getPlayer(Civ.ARABIA).foundReligion(Religion.ISLAM, Religion.ISLAM, False)
+            gc.getGame().getHolyCity(Religion.ISLAM).setNumRealBuilding(Building.ISLAMIC_SHRINE, 1)
 
         # 3Miro: Arab UP
         if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
@@ -290,9 +283,7 @@ class CvRFCEventHandler:
             self.up.confederationUP(playerType)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if playerType == Civ.DUTCH and not gc.getGame().isReligionFounded(
-            Religion.PROTESTANTISM
-        ):
+        if playerType == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
             gc.getPlayer(Civ.DUTCH).foundReligion(
                 Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
             )
@@ -365,9 +356,7 @@ class CvRFCEventHandler:
                     or city.isHasBuilding(Building.HUNGARIAN_STRONGHOLD)
                     or city.isHasBuilding(Building.CASTLE)
                 ):
-                    city.setHasRealBuilding(
-                        getUniqueBuilding(iNewOwner, Building.CASTLE), True
-                    )
+                    city.setHasRealBuilding(getUniqueBuilding(iNewOwner, Building.CASTLE), True)
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         # Sedna17, end
 
@@ -460,10 +449,7 @@ class CvRFCEventHandler:
         iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
         iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
         # Absinthe: free walls if built on fort
-        if (
-            iImpBeforeCityType == Improvement.FORT
-            and (iImpBeforeCityX, iImpBeforeCityY) == tCity
-        ):
+        if iImpBeforeCityType == Improvement.FORT and (iImpBeforeCityX, iImpBeforeCityY) == tCity:
             city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.WALLS), True)
         # Absinthe: free granary if built on hamlet
         if (
@@ -488,9 +474,7 @@ class CvRFCEventHandler:
             self.up.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if iOwner == Civ.DUTCH and not gc.getGame().isReligionFounded(
-            Religion.PROTESTANTISM
-        ):
+        if iOwner == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
             gc.getPlayer(Civ.DUTCH).foundReligion(
                 Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
             )
@@ -581,10 +565,7 @@ class CvRFCEventHandler:
         iPlotY = pUnit.getY()
         pPlot = CyMap().plot(iPlotX, iPlotY)
         if pPlot.countTotalCulture() == 0:
-            if (
-                iImprovement >= Improvement.COTTAGE
-                and iImprovement <= Improvement.TOWN
-            ):
+            if iImprovement >= Improvement.COTTAGE and iImprovement <= Improvement.TOWN:
                 self.barb.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
         if iVictim > -1 and iVictim < civilizations().majors().len():

@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import text
+from Core import text
 from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums
@@ -102,7 +102,13 @@ class CvTechChooser:
             screen.setActivation("CivDropDown", ActivationTypes.ACTIVATE_MIMICPARENTFOCUS)
             for j in range(gc.getMAX_PLAYERS()):
                 if gc.getPlayer(j).isAlive():
-                    screen.addPullDownString("CivDropDown", gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False)
+                    screen.addPullDownString(
+                        "CivDropDown",
+                        gc.getPlayer(j).getCivilizationShortDescription(0),
+                        j,
+                        j,
+                        False,
+                    )
         else:
             screen.hide("CivDropDown")
 

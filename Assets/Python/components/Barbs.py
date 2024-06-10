@@ -2,8 +2,18 @@
 
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
-from CoreFunctions import event_popup, location, message, text
-from CoreStructures import human, make_unit, make_units, turn, cities, plots
+from Core import (
+    message,
+    event_popup,
+    human,
+    location,
+    make_unit,
+    make_units,
+    text,
+    turn,
+    cities,
+    plots,
+)
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 from RFCUtils import (
@@ -2147,9 +2157,7 @@ class Barbs:
 
         # Barbs in the middle east
         if DateTurn.i700AD <= iGameTurn <= DateTurn.i1300AD:
-            if not gc.getTeam(gc.getPlayer(Civ.ARABIA).getTeam()).isHasTech(
-                Technology.FARRIERS
-            ):
+            if not gc.getTeam(gc.getPlayer(Civ.ARABIA).getTeam()).isHasTech(Technology.FARRIERS):
                 self.spawnUnits(
                     Civ.BARBARIAN,
                     (94, 0),

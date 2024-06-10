@@ -2,8 +2,7 @@ from CvPythonExtensions import CyGlobalContext, WarPlanTypes
 
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreFunctions import message, text
-from CoreStructures import human, cities
+from Core import message, human, cities, text
 from CoreTypes import ProvinceType, StabilityCategory, UniquePower
 from PyUtils import chance, rand, choice
 from RFCUtils import (

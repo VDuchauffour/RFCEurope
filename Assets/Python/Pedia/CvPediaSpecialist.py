@@ -11,7 +11,7 @@ from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
 import string
-from CoreFunctions import text
+from Core import text
 
 # globals
 gc = CyGlobalContext()

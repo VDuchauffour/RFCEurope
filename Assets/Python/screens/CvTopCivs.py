@@ -8,7 +8,7 @@ import CvUtil
 import CvScreenEnums
 import random
 from CvPythonExtensions import *
-from CoreFunctions import text
+from Core import text
 
 gc = CyGlobalContext()
 

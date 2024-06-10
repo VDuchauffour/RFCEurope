@@ -1,7 +1,6 @@
 from itertools import groupby
 import random
 from copy import copy, deepcopy
-from CoreFunctions import sort
 import CoreTypes
 
 from Enum import Enum, IntEnum
@@ -543,3 +542,7 @@ class CivDataMapper(EnumDataMapper):
     """Class to map data to Civ enum."""
 
     BASE_CLASS = CoreTypes.Civ
+
+
+def sort(iterable, key=lambda x: x, reverse=False):
+    return sorted(iterable, key=key, reverse=reverse)

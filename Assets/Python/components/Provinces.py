@@ -1,4 +1,4 @@
-from CoreStructures import player, year, cities
+from Core import player, year, cities
 from RFCUtils import refreshStabilityOverlay
 from Scenario import get_scenario
 

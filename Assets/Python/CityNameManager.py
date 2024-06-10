@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CityMapData import CITIES_MAP
-from CoreFunctions import get_data_from_upside_down_map
+from Core import get_data_from_upside_down_map
 
 gc = CyGlobalContext()
 
