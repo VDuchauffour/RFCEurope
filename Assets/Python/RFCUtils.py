@@ -971,8 +971,7 @@ def goodPlots(tCoords, argsList):
                         Terrain.DESERT,
                         Terrain.TUNDRA,
                     ]
-                    and pCurrent.getFeatureType()
-                    not in [Feature.MARSH, Feature.JUNGLE]
+                    and pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]
                 ):
                     if pCurrent.countTotalCulture() == 0:
                         return True
@@ -1165,9 +1164,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
                     )
 
         # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-        if gc.hasUP(
-            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION
-        ):  # Spanish UP
+        if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION):  # Spanish UP
             pPlayer.changeProsecutionCount(4)
         else:
             pPlayer.changeProsecutionCount(8)
@@ -1190,9 +1187,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
         )
 
         # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-        if gc.hasUP(
-            iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION
-        ):  # Spanish UP
+        if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION):  # Spanish UP
             pPlayer.changeProsecutionCount(2)
         else:
             pPlayer.changeProsecutionCount(4)
