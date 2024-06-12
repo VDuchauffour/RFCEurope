@@ -593,7 +593,7 @@ class Civilization(Item):
 
     def has_state_religion(self, identifier):
         """Return True if the civilization has the given religion as state religion."""
-        return self.state_religion() == religion(identifier)
+        return self.state_religion() == identifier
 
     def is_christian(self):
         """Return True if the civilization is christian."""
@@ -2301,15 +2301,6 @@ def get_data_from_province_map(plot):
 def get_data_from_upside_down_map(map, civ, plot):
     x, y = location(plot)
     return map[get_civ_by_id(civ)][WORLD_HEIGHT - 1 - y][x]
-
-
-def religion(identifier):
-    """Return the identifier of a religion."""
-    if isinstance(identifier, int):
-        return identifier
-
-    if isinstance(identifier, CoreTypes.Religion):
-        return identifier.value
 
 
 def get_enum_by_id(enum, id):
