@@ -1,9 +1,7 @@
-from Core import player, year, cities
+from Core import civilization, civilizations, player, year, cities
 from RFCUtils import refreshStabilityOverlay
 from Scenario import get_scenario
-
 from ProvinceMapData import PROVINCES_MAP
-from CoreData import civilization, civilizations
 from CoreTypes import Province, Event, Scenario, ProvinceType
 
 

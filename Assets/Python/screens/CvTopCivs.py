@@ -3,12 +3,11 @@
 # Author - Jon Shafer
 # Top Civilizations screen
 
-from CoreData import civilizations
+from Core import civilizations, text
 import CvUtil
 import CvScreenEnums
 import random
 from CvPythonExtensions import *
-from Core import text
 
 gc = CyGlobalContext()
 

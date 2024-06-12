@@ -6,8 +6,9 @@ from CvPythonExtensions import (
     DirectionTypes,
 )
 from Consts import MessageData
-from CoreData import civilization, civilizations
 from Core import (
+    civilization,
+    civilizations,
     event_popup,
     get_religion_by_id,
     human,

@@ -1,5 +1,4 @@
-from CoreData import civilization
-from Core import text, get_religion_by_id, turn
+from Core import civilization, text, get_religion_by_id, turn
 from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *

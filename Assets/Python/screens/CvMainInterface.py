@@ -2,8 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from Civilizations import has_date_revealed
-from CoreData import civilization
-from Core import font_symbol, font_text, human, is_minor_civ, text
+from Core import civilization, font_symbol, font_text, human, is_minor_civ, text
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums

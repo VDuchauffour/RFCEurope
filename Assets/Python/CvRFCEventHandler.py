@@ -1,8 +1,20 @@
 # Rhye's and Fall of Civilization: Europe - Event handler
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from Core import message, human, make_unit, make_units, player, show, text, turn, year, cities
+from Core import (
+    civilization,
+    civilizations,
+    message,
+    human,
+    make_unit,
+    make_units,
+    player,
+    show,
+    text,
+    turn,
+    year,
+    cities,
+)
 import CvUtil
 import CvEventManager
 import PyHelpers

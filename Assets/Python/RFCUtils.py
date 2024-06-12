@@ -1,9 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
 from Core import (
     city,
+    civilization,
+    civilizations,
     get_religion_by_id,
     human,
     location,

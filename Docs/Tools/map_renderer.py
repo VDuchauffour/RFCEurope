@@ -9,7 +9,7 @@ from random import randint
 
 from PIL import Image, ImageOps
 from Consts import MINOR_CIVS
-from CoreData import civilizations
+from Core import civilizations
 
 from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA, CIV_PROVINCES
 from CoreTypes import Civ, Province, ProvinceType

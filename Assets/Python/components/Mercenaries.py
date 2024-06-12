@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from Core import message, human, text, turn, cities, units
+from Core import civilization, civilizations, message, human, text, turn, cities, units
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 from PyUtils import percentage_chance, rand, choice

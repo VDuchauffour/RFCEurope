@@ -1,7 +1,17 @@
 from CvPythonExtensions import CyGlobalContext
 from CivilizationsData import TECH_STARTERS_1200AD
-from CoreData import civilization, civilizations
-from Core import get_civ_by_id, human, make_unit, make_units, team, teamtype, year, plots
+from Core import (
+    civilization,
+    civilizations,
+    get_civ_by_id,
+    human,
+    make_unit,
+    make_units,
+    team,
+    teamtype,
+    year,
+    plots,
+)
 from CoreTypes import Area, Civ, InitialCondition, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from MiscData import REVEAL_DATE_TECHNOLOGY

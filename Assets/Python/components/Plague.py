@@ -2,8 +2,9 @@
 
 from CvPythonExtensions import *
 from Consts import MessageData
-from CoreData import civilizations, civilization
 from Core import (
+    civilization,
+    civilizations,
     message,
     location,
     owner,

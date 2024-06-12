@@ -1,5 +1,15 @@
 from CvPythonExtensions import *
-from Core import get_data_from_upside_down_map, human, message, player, team, cities, text
+from Core import (
+    civilization,
+    civilizations,
+    get_data_from_upside_down_map,
+    human,
+    text,
+    message,
+    player,
+    team,
+    cities,
+)
 import CvEspionageAdvisor
 import CvUtil
 import CvScreensInterface
@@ -15,7 +25,6 @@ from PyUtils import percentage_chance, rand, choice
 from RFCUtils import getBaseUnit, getUniqueUnit
 import random
 from Consts import MessageData
-from CoreData import civilizations, civilization
 from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 

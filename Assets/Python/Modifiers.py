@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from Core import year
+from Core import civilization, civilizations, year
 from CoreTypes import (
     Modifier,
     Building,

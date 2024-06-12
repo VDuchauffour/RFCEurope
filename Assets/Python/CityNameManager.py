@@ -1,9 +1,8 @@
 # Rhye's and Fall of Civilization: Europe - City naming and renaming management
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from Core import civilizations, get_data_from_upside_down_map
 from CityMapData import CITIES_MAP
-from Core import get_data_from_upside_down_map
 
 gc = CyGlobalContext()
 

@@ -1,7 +1,8 @@
 from CvPythonExtensions import *
 from Consts import MessageData
-from CoreData import civilizations, civilization
 from Core import (
+    civilization,
+    civilizations,
     event_popup,
     get_civ_by_id,
     human,

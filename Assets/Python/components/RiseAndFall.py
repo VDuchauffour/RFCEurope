@@ -12,8 +12,9 @@ from Civilizations import (
     set_starting_faith,
 )
 from Consts import MessageData
-from CoreData import civilization, civilizations
 from Core import (
+    civilization,
+    civilizations,
     event_popup,
     human,
     is_major_civ,

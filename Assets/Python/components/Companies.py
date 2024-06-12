@@ -3,8 +3,18 @@
 
 from CvPythonExtensions import *
 from Consts import MessageData
-from CoreData import civilizations, COMPANIES
-from Core import message, get_enum_by_id, human, player, text, turn, year, cities
+from Core import (
+    civilizations,
+    COMPANIES,
+    message,
+    get_enum_by_id,
+    human,
+    player,
+    text,
+    turn,
+    year,
+    cities,
+)
 from LocationsData import CITIES
 from PyUtils import rand
 import Crusades

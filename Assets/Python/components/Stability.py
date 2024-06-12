@@ -1,8 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from Core import message, human, cities, text
+from Core import civilization, civilizations, message, human, cities, text
 
 from Consts import MessageData
 from CoreTypes import (

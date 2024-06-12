@@ -1,6 +1,19 @@
 from CvPythonExtensions import *
-from CoreData import civilization, civilizations, COMPANIES
-from Core import message, human, player, show, team, text, turn, year, plots, cities
+from Core import (
+    civilization,
+    COMPANIES,
+    civilizations,
+    message,
+    human,
+    player,
+    show,
+    team,
+    text,
+    turn,
+    year,
+    plots,
+    cities,
+)
 from CoreTypes import (
     Building,
     City,

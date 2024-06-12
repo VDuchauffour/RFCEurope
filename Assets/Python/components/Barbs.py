@@ -1,8 +1,9 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
-from Consts import INDEPENDENT_CIVS
+from Consts import INDEPENDENT_CIVS, MessageData
 from Core import (
+    civilizations,
     message,
     event_popup,
     human,
@@ -29,8 +30,6 @@ from RFCUtils import (
 from TimelineData import DateTurn
 from StoredData import data
 
-from CoreData import civilizations
-from Consts import MessageData
 
 gc = CyGlobalContext()
 

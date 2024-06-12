@@ -1,8 +1,17 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization, COMPANIES
-from Core import font_text, colortext, text, turn, year, cities
+from Core import (
+    civilization,
+    COMPANIES,
+    civilizations,
+    font_text,
+    colortext,
+    text,
+    turn,
+    year,
+    cities,
+)
 from CoreTypes import (
     Building,
     City,

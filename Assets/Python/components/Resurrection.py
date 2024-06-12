@@ -1,8 +1,9 @@
 from CvPythonExtensions import CyGlobalContext
 
 from Consts import MessageData
-from CoreData import civilization, civilizations
 from Core import (
+    civilization,
+    civilizations,
     event_popup,
     human,
     is_minor_civ,
