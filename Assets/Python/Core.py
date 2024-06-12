@@ -2361,7 +2361,7 @@ def civilizations(scenario=None):
     if scenario is None:
         scenario = get_scenario()
 
-    data_mapper = {Scenario.i500AD: CIVILIZATIONS_500AD, Scenario.i1200AD: CIVILIZATIONS_1200AD}
+    data_mapper = {Scenario.i500AD: civilizations_500AD, Scenario.i1200AD: civilizations_1200AD}
     return data_mapper[scenario]
 
 
@@ -2395,7 +2395,7 @@ def civilization(identifier=None):
     )
 
 
-COMPANIES = (
+companies = (
     CompaniesFactory()
     .attach("birthdate", COMPANY_BIRTHDATE)
     .attach("deathdate", COMPANY_DEATHDATE)
@@ -2403,7 +2403,7 @@ COMPANIES = (
     .attach("limit", COMPANY_LIMIT)
     .collect()
 )
-CIVILIZATIONS_BASE = (
+civilizations_base = (
     CivilizationsFactory()
     .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event", "scenario")
     .attach("leaders", CIV_LEADERS)
@@ -2433,15 +2433,15 @@ CIVILIZATIONS_BASE = (
     .attach("additional_units", CIV_ADDITIONAL_UNITS, key="initial")
     .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
 )
-CIVILIZATIONS_500AD = (
-    CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
+civilizations_500AD = (
+    civilizations_base.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
     .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i500AD], key="scenario")
     .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="scenario")
     .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="scenario")
     .collect()
 )
-CIVILIZATIONS_1200AD = (
-    CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
+civilizations_1200AD = (
+    civilizations_base.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
     .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i1200AD], key="scenario")
     .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="scenario")
     .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="scenario")

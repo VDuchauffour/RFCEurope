@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 from Consts import MessageData
 from Core import (
     civilizations,
-    COMPANIES,
+    companies,
     get_scenario,
     message,
     get_enum_by_id,
@@ -46,19 +46,19 @@ class Companies:
 
         # update companies at the beginning of the 1200AD scenario:
         if get_scenario() == Scenario.i1200AD:
-            for company in COMPANIES:
+            for company in companies:
                 if year(1200).between(company.birthdate, company.deathdate):
                     self.addCompany(company.id, 2)
 
     def checkTurn(self, iGameTurn):
 
         # check if it's not too early
-        iCompany = iGameTurn % COMPANIES.len()
-        if iGameTurn < year(COMPANIES[iCompany].birthdate):
+        iCompany = iGameTurn % companies.len()
+        if iGameTurn < year(companies[iCompany].birthdate):
             return
 
         # check if it's not too late
-        elif iGameTurn > year(COMPANIES[iCompany].deathdate) + rand(COMPANIES.len()):
+        elif iGameTurn > year(companies[iCompany].deathdate) + rand(companies.len()):
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == Company.TEMPLARS:
@@ -68,23 +68,23 @@ class Companies:
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
                         == Religion.CATHOLICISM
                     ):
-                        iMaxCompanies = COMPANIES[iCompany].limit
+                        iMaxCompanies = companies[iCompany].limit
 
         # set the company limit
         else:
-            iMaxCompanies = COMPANIES[iCompany].limit
+            iMaxCompanies = companies[iCompany].limit
 
         # modified limit for Hospitallers and Teutons after the Crusades
-        if iGameTurn > year(COMPANIES[Company.TEMPLARS].deathdate):
+        if iGameTurn > year(companies[Company.TEMPLARS].deathdate):
             if iCompany == Company.HOSPITALLERS and iGameTurn < year(
-                COMPANIES[iCompany].deathdate
+                companies[iCompany].deathdate
             ):
                 iMaxCompanies -= 1
-            elif iCompany == Company.TEUTONS and iGameTurn < year(COMPANIES[iCompany].deathdate):
+            elif iCompany == Company.TEUTONS and iGameTurn < year(companies[iCompany].deathdate):
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
         if iCompany == Company.HANSA:
-            if year(1356) < iGameTurn < year(COMPANIES[iCompany].deathdate):
+            if year(1356) < iGameTurn < year(companies[iCompany].deathdate):
                 iMaxCompanies += 3
 
         # Templars are Teutons are gone after the Protestant reformation
@@ -173,7 +173,7 @@ class Companies:
         iPlayer, iNewReligion, iOldReligion = argsList
 
         for city in cities().owner(iPlayer).entities():
-            for iCompany in COMPANIES.ids():
+            for iCompany in companies.ids():
                 if city.isHasCorporation(iCompany):
                     if self.getCityValue(city, iCompany) < 0:
                         city.setHasCorporation(iCompany, False, True, True)
@@ -191,7 +191,7 @@ class Companies:
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
-        for iCompany in COMPANIES.ids():
+        for iCompany in companies.ids():
             if city.isHasCorporation(iCompany):
                 if self.getCityValue(city, iCompany) < 0:
                     city.setHasCorporation(iCompany, False, True, True)
@@ -294,8 +294,8 @@ class Companies:
         # geographical requirements
         iProvince = city.getProvince()
         if (
-            len(COMPANIES[iCompany].region)
-            and get_enum_by_id(Province, iProvince) not in COMPANIES[iCompany].region
+            len(companies[iCompany].region)
+            and get_enum_by_id(Province, iProvince) not in companies[iCompany].region
         ):
             return -1
         if iCompany == Company.MEDICI:
@@ -317,7 +317,7 @@ class Companies:
 
         # geographical requirement changes after the Crusades
         iGameTurn = turn()
-        if iGameTurn < year(COMPANIES[Company.TEMPLARS].deathdate):
+        if iGameTurn < year(companies[Company.TEMPLARS].deathdate):
             if iCompany in [
                 Company.HOSPITALLERS,
                 Company.TEMPLARS,

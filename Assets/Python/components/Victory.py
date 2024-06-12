@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from Core import (
     civilization,
-    COMPANIES,
+    companies,
     civilizations,
     message,
     human,
@@ -1653,7 +1653,7 @@ class Victory:
                     ):
                         iBanks += 1
                 iCompanyCities = player(Civ.GENOA).countCorporations(Company.ST_GEORGE)
-                if iBanks >= 8 and iCompanyCities == COMPANIES[Company.ST_GEORGE].limit:
+                if iBanks >= 8 and iCompanyCities == companies[Company.ST_GEORGE].limit:
                     self.wonUHV(Civ.GENOA, 2)
                 else:
                     self.lostUHV(Civ.GENOA, 2)

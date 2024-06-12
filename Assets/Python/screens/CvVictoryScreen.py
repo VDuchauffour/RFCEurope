@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from Core import (
     civilization,
-    COMPANIES,
+    companies,
     civilizations,
     font_text,
     colortext,
@@ -3011,7 +3011,7 @@ class CvVictoryScreen:
             + text("TXT_KEY_UHV_COMPANIES")
             + ": "
             + self.determineColor(
-                iCompanyCities == COMPANIES[Company.ST_GEORGE].limit, str(iCompanyCities)
+                iCompanyCities == companies[Company.ST_GEORGE].limit, str(iCompanyCities)
             )
         )
         lHelpTexts = [sText1, sText2, sText3]
