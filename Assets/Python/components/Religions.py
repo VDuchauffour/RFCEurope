@@ -10,7 +10,6 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
-    get_religion_by_id,
     human,
     location,
     player,
@@ -637,7 +636,7 @@ class Religions:
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
                         spread_factor = civilization(iPlayer).religion.spreading_threshold[
-                            get_religion_by_id(iReligion)
+                            iReligion
                         ]
                         if spread_factor < 60:
                             iReligionPoint = (iReligionPoint * 5) / 10

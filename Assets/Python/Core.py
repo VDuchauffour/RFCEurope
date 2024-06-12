@@ -879,7 +879,7 @@ def is_minor_civ(identifier):
 
 def is_independent_civ(identifier):
     """Return True if it's a non-playable independent civilization."""
-    return get_civ_by_id(player(identifier).getID()) in INDEPENDENT_CIVS
+    return player(identifier).getID() in INDEPENDENT_CIVS
 
 
 def is_barbarian_civ(identifier):
@@ -913,9 +913,7 @@ def base_unit(iUnit):
 
 
 def unique_building_from_class(identifier, iBuildingClass):
-    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationBuildings(
-        iBuildingClass
-    )
+    return gc.getCivilizationInfo(identifier).getCivilizationBuildings(iBuildingClass)
 
 
 def unique_building(identifier, iBuilding):
@@ -927,7 +925,7 @@ def unique_building(identifier, iBuilding):
 
 
 def unique_unit_from_class(identifier, iUnitClass):
-    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationUnits(iUnitClass)
+    return gc.getCivilizationInfo(identifier).getCivilizationUnits(iUnitClass)
 
 
 def unique_unit(identifier, iUnit):
@@ -2300,22 +2298,7 @@ def get_data_from_province_map(plot):
 
 def get_data_from_upside_down_map(map, civ, plot):
     x, y = location(plot)
-    return map[get_civ_by_id(civ)][WORLD_HEIGHT - 1 - y][x]
-
-
-def get_enum_by_id(enum, id):
-    """Return a enum member by its index."""
-    return enum[enum._member_names_[id]]
-
-
-def get_civ_by_id(id):
-    """Return a Civ member by its index."""
-    return get_enum_by_id(CoreTypes.Civ, id)
-
-
-def get_religion_by_id(id):
-    """Return a Religion member by its index."""
-    return get_enum_by_id(CoreTypes.Religion, id)
+    return map[civ][WORLD_HEIGHT - 1 - y][x]
 
 
 def get_scenario():
@@ -2359,7 +2342,7 @@ def civilizations(scenario=None):
 def civilization(identifier=None):
     """Return Civilization object given an identifier."""
     if identifier is None:
-        return civilizations()[get_civ_by_id(gc.getGame().getActiveCivilizationType())]
+        return civilizations()[gc.getGame().getActiveCivilizationType()]
 
     if isinstance(identifier, int):
         return civilizations()[identifier]
@@ -2371,7 +2354,7 @@ def civilization(identifier=None):
         return civilizations()[identifier.id]
 
     if isinstance(identifier, (CyPlayer, CyUnit)):
-        return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
+        return civilizations()[identifier.getCivilizationType()]
 
     if isinstance(identifier, CyPlot):
         if not identifier.isOwned():

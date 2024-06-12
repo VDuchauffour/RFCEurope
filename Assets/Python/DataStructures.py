@@ -13,6 +13,7 @@ class DataMapper(dict):
     """Base class to map data to a specific data type."""
 
     BASE_CLASS = int
+    SIDE_CLASS = int
 
     def __init__(self, elements, default=None):
         self._default = default
@@ -20,14 +21,14 @@ class DataMapper(dict):
             self[key] = value
 
     def _check_condition(self, key):
-        return isinstance(key, self.BASE_CLASS)
+        return isinstance(key, (self.BASE_CLASS, self.SIDE_CLASS))
 
     def __contains__(self, key):
         if self._check_condition(key):
             return dict.__contains__(self, key)
         raise TypeError(
             "%s only accepts keys of type %s, received: %s"
-            % (self.__class__.__name__, self.BASE_CLASS, type(key))
+            % (self.__class__.__name__, (self.BASE_CLASS, self.SIDE_CLASS), type(key))
         )
 
     def __getitem__(self, key):
@@ -37,14 +38,14 @@ class DataMapper(dict):
             return dict.__getitem__(self, key)
         raise TypeError(
             "%s only accepts keys of type %s, received: %s"
-            % (self.__class__.__name__, self.BASE_CLASS, type(key))
+            % (self.__class__.__name__, (self.BASE_CLASS, self.SIDE_CLASS), type(key))
         )
 
     def __setitem__(self, key, value):
         if not self._check_condition(key):
             raise TypeError(
                 "%s only accepts keys of type %s, received: %s with value %s"
-                % (self.__class__.__name__, self.BASE_CLASS, type(key), value)
+                % (self.__class__.__name__, (self.BASE_CLASS, self.SIDE_CLASS), type(key), value)
             )
         dict.__setitem__(self, key, value)
 
@@ -95,14 +96,15 @@ class DataMapper(dict):
 class EnumDataMapper(DataMapper):
     """Class to map data to Enum."""
 
-    BASE_CLASS = (IntEnum, int)
+    BASE_CLASS = IntEnum
+    SIDE_CLASS = int
 
     def __init__(self, elements, default=None, do_cast=False):
         super(EnumDataMapper, self).__init__(elements, default)
         self.do_cast = do_cast
 
     def _check_condition(self, key):
-        return issubclass(type(key), self.BASE_CLASS)
+        return issubclass(type(key), (self.BASE_CLASS, self.SIDE_CLASS))
 
     def fill_missing_members(self, value):
         """Fill all missing members of the `BASE_CLASS` with `value`."""
@@ -154,12 +156,14 @@ class CompanyDataMapper(EnumDataMapper):
     """Class to map data to Company enum."""
 
     BASE_CLASS = CoreTypes.Company
+    SIDE_CLASS = int
 
 
 class CivDataMapper(EnumDataMapper):
     """Class to map data to Civ enum."""
 
     BASE_CLASS = CoreTypes.Civ
+    SIDE_CLASS = int
 
 
 def sort(iterable, key=lambda x: x, reverse=False):

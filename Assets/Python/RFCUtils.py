@@ -6,7 +6,6 @@ from Core import (
     city,
     civilization,
     civilizations,
-    get_religion_by_id,
     human,
     location,
     make_unit,
@@ -1031,7 +1030,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
 
     # determine the target religion, if not supplied by the popup decision (for the AI)
     if iReligion == -1:
-        for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
+        for iReligion in RELIGION_PERSECUTION_ORDER[iStateReligion]:
             if not city.isHolyCityByType(iReligion):  # spare holy cities
                 if city.isHasReligion(iReligion):
                     # so this will be the iReligion for further calculations

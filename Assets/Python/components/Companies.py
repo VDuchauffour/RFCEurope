@@ -5,16 +5,15 @@ from CvPythonExtensions import *
 from Consts import MessageData
 from Core import (
     civilizations,
-    companies,
     get_scenario,
     message,
-    get_enum_by_id,
     human,
     player,
     text,
     turn,
     year,
     cities,
+    companies,
 )
 from LocationsData import CITIES
 from PyUtils import rand
@@ -293,10 +292,7 @@ class Companies:
 
         # geographical requirements
         iProvince = city.getProvince()
-        if (
-            len(companies[iCompany].region)
-            and get_enum_by_id(Province, iProvince) not in companies[iCompany].region
-        ):
+        if len(companies[iCompany].region) and iProvince not in companies[iCompany].region:
             return -1
         if iCompany == Company.MEDICI:
             if iProvince == Province.TUSCANY:

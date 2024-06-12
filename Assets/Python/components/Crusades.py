@@ -4,7 +4,6 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
-    get_civ_by_id,
     human,
     location,
     make_crusade_unit,
@@ -992,13 +991,7 @@ class Crusades:
         else:
             iPowerVotes = self.getVotingPower(iPowerful)
 
-        for civ in (
-            civilizations()
-            .majors()
-            .ai()
-            .drop(get_civ_by_id(iFavorite), get_civ_by_id(iPowerful))
-            .ids()
-        ):
+        for civ in civilizations().majors().ai().drop(iFavorite, iPowerful).ids():
             iVotes = self.getVotingPower(civ)
             if iVotes > 0:
                 if gc.getRelationTowards(civ, iFavorite) > gc.getRelationTowards(civ, iPowerful):

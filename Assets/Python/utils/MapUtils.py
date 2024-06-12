@@ -2,7 +2,7 @@
 
 from copy import deepcopy
 from CvPythonExtensions import *
-from Core import civilizations, text, get_civ_by_id
+from Core import civilizations, text
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
 from CoreTypes import Area, AreaType
 import CvScreenEnums
@@ -257,13 +257,13 @@ class RFCEMapManager:
         return True
 
     def getValue(self, iPlayer, pPlot, aMap):
-        return aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()]
+        return aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()]
 
     def setValue(self, iPlayer, pPlot, aMap, iValue):
-        aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()] = iValue
+        aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()] = iValue
 
     def setStringValue(self, iPlayer, pPlot, aMap, sValue):
-        aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()] = "%s" % sValue
+        aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()] = "%s" % sValue
 
     def changeValue(self, iPlayer, pPlot, aMap, aShades, iChange):
         iValue = self.getValue(iPlayer, pPlot, aMap)

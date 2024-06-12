@@ -3,7 +3,6 @@ from CivilizationsData import TECH_STARTERS_1200AD
 from Core import (
     civilization,
     civilizations,
-    get_civ_by_id,
     human,
     make_unit,
     make_units,
@@ -58,7 +57,7 @@ def create_starting_units_500AD():
     iHuman = human()
     if civilization(iHuman).date.birth > year(500):
         # so everyone apart from Byzantium and France
-        tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)]
+        tStart = CIV_CAPITAL_LOCATIONS[iHuman]
 
         # Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
         if iHuman == Civ.ARABIA:  # contact with Byzantium
