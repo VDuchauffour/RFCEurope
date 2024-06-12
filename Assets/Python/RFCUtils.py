@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from Core import (
+    get_scenario,
     city,
     civilization,
     civilizations,
@@ -47,7 +48,6 @@ from LocationsData import CITIES
 import Popup
 from PyUtils import percentage, percentage_chance, rand
 from ReligionData import RELIGION_PERSECUTION_ORDER
-from Scenario import get_scenario
 from SettlerMapData import SETTLERS_MAP
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS

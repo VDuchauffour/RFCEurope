@@ -16,6 +16,8 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
+    get_scenario,
+    get_scenario_start_turn,
     human,
     is_major_civ,
     is_minor_civ,
@@ -57,7 +59,6 @@ from RFCUtils import (
     updateMinorTechs,
 )
 import Religions
-from Scenario import get_scenario, get_scenario_start_turn
 from Collapse import collapseByBarbs, collapseGeneric, collapseMotherland
 from Secession import secession, secessionCloseCollapse
 from Resurrection import resurectCiv, resurrection

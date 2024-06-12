@@ -6,6 +6,7 @@ from Consts import MessageData
 from Core import (
     civilizations,
     COMPANIES,
+    get_scenario,
     message,
     get_enum_by_id,
     human,
@@ -20,7 +21,6 @@ from PyUtils import rand
 import Crusades
 from operator import itemgetter
 from RFCUtils import getUniqueBuilding
-from Scenario import get_scenario
 
 from MiscData import COMPANY_BUILDINGS
 from CoreTypes import (

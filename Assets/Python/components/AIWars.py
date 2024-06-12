@@ -6,6 +6,7 @@ from Core import (
     civilization,
     civilizations,
     get_data_from_upside_down_map,
+    get_scenario_start_turn,
     is_independent_civ,
     is_major_civ,
     turn,
@@ -23,7 +24,6 @@ from RFCUtils import (
     restorePeaceAI,
     restorePeaceHuman,
 )
-from Scenario import get_scenario_start_turn
 from StoredData import data
 from WarMapData import WARS_MAP
 

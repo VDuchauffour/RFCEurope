@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from Core import (
+    get_scenario,
     civilization,
     civilizations,
     message,
@@ -48,7 +49,6 @@ import Provinces
 import Civilizations
 import Mercenaries
 
-from Scenario import get_scenario
 from Consts import MessageData
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (

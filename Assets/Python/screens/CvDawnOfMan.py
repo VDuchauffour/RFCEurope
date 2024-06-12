@@ -2,12 +2,11 @@
 ## Copyright Firaxis Games 2005
 
 import math
-from Core import civilization, text, turn
+from Core import civilization, text, turn, get_scenario_start_turn
 import CvUtil
 from CvPythonExtensions import *
 
 from RFCUtils import getDawnOfManText
-from Scenario import get_scenario_start_turn
 
 ## HOF MOD
 import Buffy  # noqa: F401

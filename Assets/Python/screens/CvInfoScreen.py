@@ -6,7 +6,8 @@
 import math
 from CvPythonExtensions import *
 from Civilizations import has_date_revealed
-from Core import colortext, is_independent_civ, text, turn
+from CoreTypes import Scenario
+from Core import colortext, get_scenario, get_scenario_start_years, is_independent_civ, text, turn
 import CvUtil
 
 import string
@@ -14,8 +15,6 @@ import string
 
 from PyHelpers import PyPlayer
 
-from CoreTypes import Scenario
-from Scenario import get_scenario, get_scenario_start_years
 
 # BUG - 3.17 No Espionage - start
 import GameUtil

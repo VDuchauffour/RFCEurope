@@ -1,5 +1,4 @@
 from Consts import MINOR_CIVS
-from Core import parse_area_dict
 from CoreTypes import (
     AreaType,
     City,
@@ -21,6 +20,17 @@ from DataStructures import (
     EnumDataMapper,
     CivDataMapper,
 )
+
+
+def parse_area_dict(data):
+    """Parse a dict of area properties."""
+    return {
+        Area.TILE_MIN: data[Area.TILE_MIN],
+        Area.TILE_MAX: data[Area.TILE_MAX],
+        Area.ADDITIONAL_TILES: data.get(Area.ADDITIONAL_TILES, []),
+        Area.EXCEPTION_TILES: data.get(Area.EXCEPTION_TILES, []),
+    }
+
 
 CITIES = EnumDataMapper(
     {

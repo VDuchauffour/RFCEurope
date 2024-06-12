@@ -60,7 +60,6 @@ from DataStructures import (
 )
 from Errors import NotTypeExpectedError, NotACallableError
 from Enum import Enum
-from Scenario import get_scenario
 from TimelineData import (
     CIV_BIRTHDATE,
     CIV_COLLAPSE_DATE,
@@ -2214,16 +2213,6 @@ def find_max(list, metric=lambda x: x):
     return find(list, metric, True)
 
 
-def parse_area_dict(data):
-    """Parse a dict of area properties."""
-    return {
-        CoreTypes.Area.TILE_MIN: data[CoreTypes.Area.TILE_MIN],
-        CoreTypes.Area.TILE_MAX: data[CoreTypes.Area.TILE_MAX],
-        CoreTypes.Area.ADDITIONAL_TILES: data.get(CoreTypes.Area.ADDITIONAL_TILES, []),
-        CoreTypes.Area.EXCEPTION_TILES: data.get(CoreTypes.Area.EXCEPTION_TILES, []),
-    }
-
-
 def text(key, *format):
     return translator.getText(str(key), tuple(format))
 
@@ -2338,11 +2327,74 @@ def get_religion_by_id(id):
     return get_enum_by_id(CoreTypes.Religion, id)
 
 
-techs = TechFactory
-units = UnitFactory
-plots = PlotFactory
-cities = CityFactory
-infos = Infos
+def get_scenario():
+    """Return scenario given the current situation."""
+    try:
+        if player(Civ.BURGUNDY).isPlayable():
+            return Scenario.i500AD
+    except:  # noqa: E722
+        return Scenario.i1200AD
+    else:
+        return Scenario.i1200AD
+
+
+def get_scenario_start_years(scenario=None):
+    """Return scenario start year given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    years = [500, 1200]
+    return years[scenario]
+
+
+def get_scenario_start_turn(scenario=None):
+    """Return scenario start turn given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    dateturn = [year(500), year(1200)]
+    return dateturn[scenario]
+
+
+def civilizations(scenario=None):
+    """Return civilizations data given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    data_mapper = {Scenario.i500AD: CIVILIZATIONS_500AD, Scenario.i1200AD: CIVILIZATIONS_1200AD}
+    return data_mapper[scenario]
+
+
+def civilization(identifier=None):
+    """Return Civilization object given an identifier."""
+    if identifier is None:
+        return civilizations()[get_civ_by_id(gc.getGame().getActiveCivilizationType())]
+
+    if isinstance(identifier, int):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civ):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civilization):
+        return civilizations()[identifier.id]
+
+    if isinstance(identifier, (CyPlayer, CyUnit)):
+        return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
+
+    if isinstance(identifier, CyPlot):
+        if not identifier.isOwned():
+            return None
+        return civilizations()[identifier.getOwner()]
+
+    if isinstance(identifier, CyCity):
+        return civilizations()[identifier.getOwner()]
+
+    raise NotTypeExpectedError(
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot, CyCity or CyUnit, or int", type(identifier)
+    )
+
+
 COMPANIES = (
     CompaniesFactory()
     .attach("birthdate", COMPANY_BIRTHDATE)
@@ -2396,41 +2448,8 @@ CIVILIZATIONS_1200AD = (
     .collect()
 )
 
-
-def civilizations(scenario=None):
-    """Return civilizations data given a scenario."""
-    if scenario is None:
-        scenario = get_scenario()
-
-    data_mapper = {Scenario.i500AD: CIVILIZATIONS_500AD, Scenario.i1200AD: CIVILIZATIONS_1200AD}
-    return data_mapper[scenario]
-
-
-def civilization(identifier=None):
-    """Return Civilization object given an identifier."""
-    if identifier is None:
-        return civilizations()[get_civ_by_id(gc.getGame().getActiveCivilizationType())]
-
-    if isinstance(identifier, int):
-        return civilizations()[identifier]
-
-    if isinstance(identifier, Civ):
-        return civilizations()[identifier]
-
-    if isinstance(identifier, Civilization):
-        return civilizations()[identifier.id]
-
-    if isinstance(identifier, (CyPlayer, CyUnit)):
-        return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
-
-    if isinstance(identifier, CyPlot):
-        if not identifier.isOwned():
-            return None
-        return civilizations()[identifier.getOwner()]
-
-    if isinstance(identifier, CyCity):
-        return civilizations()[identifier.getOwner()]
-
-    raise NotTypeExpectedError(
-        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot, CyCity or CyUnit, or int", type(identifier)
-    )
+techs = TechFactory
+units = UnitFactory
+plots = PlotFactory
+cities = CityFactory
+infos = Infos
