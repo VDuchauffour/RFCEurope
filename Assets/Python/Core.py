@@ -1,32 +1,72 @@
 # from BugEventManager import g_eventManager as events
-from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH
-from CoreFunctions import (
-    city,
-    distance,
-    find_min,
-    get_area,
-    get_civ_by_id,
-    iterate,
-    location,
-    owner,
-    parse_tile,
-    plot,
-    religion,
-    sort,
-    text,
-    wrap,
+
+from CivilizationsData import (
+    CIV_ADDITIONAL_UNITS,
+    CIV_AI_MODIFIERS,
+    CIV_AI_REFORMATION_THRESHOLD,
+    CIV_AI_STOP_BIRTH_THRESHOLD,
+    CIV_HIRE_MERCENARY_THRESHOLD,
+    CIV_HUMAN_MODIFIERS,
+    CIV_INITIAL_BUILDINGS,
+    CIV_INITIAL_CONTACTS,
+    CIV_INITIAL_TECH,
+    CIV_INITIAL_UNITS,
+    CIV_INITIAL_WARS,
+    CIV_INITIAL_WORKERS,
+    CIV_LEADERS,
+    CIV_RELIGION_SPREADING_THRESHOLD,
+    CIV_RELIGIOUS_TOLERANCE,
+    CIV_RESPAWNING_THRESHOLD,
+    CIV_SCENARIO_CONDITION,
+    CIV_STABILITY_AI_BONUS,
 )
-from PyUtils import any, none, rand
+from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH, MessageData
+from CoreTypes import Civ, Scenario
+from LocationsData import (
+    CIV_AREAS,
+    CIV_CAPITAL_LOCATIONS,
+    CIV_EVENT_DRIVE_PROVINCES,
+    CIV_HOME_LOCATIONS,
+    CIV_NEIGHBOURS,
+    CIV_NEW_CAPITAL_LOCATIONS,
+    CIV_PROVINCES,
+    CIV_REFORMATION_NEIGHBOURS,
+    CIV_VISIBLE_AREA,
+    COMPANY_REGION,
+)
+from MiscData import COMPANY_LIMIT
+from ProvinceMapData import PROVINCES_MAP
+from PyUtils import (
+    all,
+    any,
+    none,
+    rand,
+    attrgetter,
+    choices,
+    combinations,
+    permutations,
+    product,
+    random_entry,
+)
+from itertools import groupby
+import random
+from copy import deepcopy
 import CoreTypes
 from DataStructures import (
     CivDataMapper,
     CompanyDataMapper,
-    EntitiesCollection,
-    EnumCollectionFactory,
-    Item,
-    EnumCollection,
+    Attributes,
+    sort,
 )
-from Errors import NotTypeExpectedError
+from Errors import NotTypeExpectedError, NotACallableError
+from Enum import Enum
+from TimelineData import (
+    CIV_BIRTHDATE,
+    CIV_COLLAPSE_DATE,
+    CIV_RESPAWNING_DATE,
+    COMPANY_BIRTHDATE,
+    COMPANY_DEATHDATE,
+)
 
 try:
     from CvPythonExtensions import (
@@ -38,8 +78,7 @@ try:
         CyPlot,
         CyCity,
         CyUnit,
-        AttitudeTypes,
-        CommerceTypes,
+        CyGame,
         CvBonusInfo,
         CvBuildInfo,
         CvBuildingInfo,
@@ -64,11 +103,19 @@ try:
         CvUnitInfo,
         UnitCombatTypes,
         getTurnForYear,
+        AttitudeTypes,
+        CommerceTypes,
+        ColorTypes,
         DomainTypes,
         UnitAITypes,
         DirectionTypes,
+        EventContextTypes,
+        PlayerTypes,
+        TeamTypes,
         plotDistance,
+        stepDistance,
     )
+    import Popup
 
     gc = CyGlobalContext()
     game = gc.getGame()
@@ -80,6 +127,375 @@ except ImportError:
     game = None
     translator = None
     interface = None
+
+
+class Item(object):
+    """A base class to handle a game item backed with enum."""
+
+    BASE_CLASS = None
+
+    def __init__(self, id, **kwargs):
+        if not issubclass(self.BASE_CLASS, Enum):  # type: ignore
+            raise NotTypeExpectedError(Enum, self.BASE_CLASS)
+
+        if not isinstance(id, self.BASE_CLASS):
+            raise NotTypeExpectedError(self.BASE_CLASS, type(id))
+
+        self._id = id
+        for name, value in kwargs.items():
+            setattr(self, name, value)
+
+    @property
+    def id(self):
+        return self._id.value  # type: ignore
+
+    @property
+    def key(self):
+        return self._id
+
+    @property
+    def id_name(self):
+        return self._id.name  # type: ignore
+
+    def __repr__(self):
+        return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.id_name]) + ")"
+
+    def copy(self, **kwargs):
+        return self.__class__(self.key, **kwargs)
+
+
+class Collection(list):
+    """A base class to handle a set of game item."""
+
+    def __init__(self, *items):
+        for item in items:
+            self.append(item)
+
+    def len(self):
+        return self.__len__()
+
+    def copy(self, *items):
+        return self.__class__(*items)
+
+    def empty(self):
+        return self.copy(*[])
+
+    def first(self):
+        """Return the first item of the collection."""
+        return self[0]
+
+    def last(self):
+        """Return the last item of the collection."""
+        return self[-1]
+
+    def unwrap(self):
+        """Unwrap items of the collection."""
+        if len(self) == 1:
+            return self.first()
+        return self
+
+    def apply(self, condition):
+        if not callable(condition):
+            raise NotACallableError(condition)
+        return [condition(item) for item in self]
+
+    def _compress(self, selectors, negate=False):
+        if negate:
+            return (item for item, s in zip(self, selectors) if not s)
+        return (item for item, s in zip(self, selectors) if s)
+
+    def _filter(self, condition):
+        return self._compress(self.apply(condition))
+
+    def filter(self, condition):
+        """Filter item when `condition` is True."""
+        return self.copy(*self._filter(condition))
+
+    def transform(self, cls, map=lambda x: x, condition=lambda x: True):
+        """Return new class given a map function and a condition function."""
+        return cls([map(k) for k in self if condition(k)])
+
+    @staticmethod
+    def __handle_string_args(strings):
+        if isinstance(strings, str):
+            strings = [strings]
+        if not isinstance(strings, (tuple, list)):
+            raise ValueError("`attributes` must be a list or a tuple, received %s" % type(strings))
+        return strings
+
+    def _select(self, attributes):
+        items = []
+        obj = deepcopy(self)
+        for item in obj:
+            for attr in item.__dict__.keys():
+                if not attr.startswith("_") and attr not in attributes:
+                    item.__dict__.pop(attr, None)
+            items.append(item)
+        return self.copy(*items)
+
+    def select(self, attributes):
+        """Return the object with selected attributes of items. `attributes` can be a single attribute or a sequence of attributes.
+        Only works with a primary key, using nested keys do not work."""
+        attributes = self.__handle_string_args(attributes)
+        return self._select(attributes)
+
+    @staticmethod
+    def _dropna(data, attribute):
+        """Return True if any subkey of data is not None or the value is not None."""
+        f = attrgetter(attribute)
+        attr = f(data)
+        if issubclass(attr.__class__, dict):
+            return any([v is not None for v in attr.values()])
+        else:
+            return attr is not None
+
+    def dropna(self, attributes):  # TODO to move to enum collection ?
+        """Return the object without those that have None as the value for the `attribute`.
+        Only works with a primary key, using nested keys do not work."""
+        attributes = self.__handle_string_args(attributes)
+        obj = deepcopy(self)
+        for attribute in attributes:
+            obj = obj.filter(lambda c: self._dropna(c, attribute))
+        return obj
+
+    def split(self, condition):
+        """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
+        status = self.apply(condition)
+        valid_items = self._compress(status)
+        rest_items = self._compress(status, negate=True)
+        return (self.copy(*valid_items), self.copy(*rest_items))
+
+    def all(self, condition):
+        """Return True if `condition` is True for all items."""
+        return all(self.apply(condition))
+
+    def any(self, condition):
+        """Return True if `condition` is True for at least one items."""
+        return any(self.apply(condition))
+
+    def none(self, condition):
+        """Return True if `condition` is False for all items."""
+        return not self.any(condition)
+
+    def drop(self, *items):  # TODO this should be renamed to without
+        """Return the object without `items` given its item."""
+        return self.filter(lambda x: x not in items)
+
+    def take(self, *items):
+        """Return the object with only `items` given its item."""
+        return self.filter(lambda x: x in items)
+
+    def unique(self):
+        """Return only unique items."""
+        return self.copy(*[k for k in set(self)])
+
+    def enrich(self, func):
+        """Return an enriched version of the object given a function."""
+        enrich = self.copy(*[])
+        for key in self:
+            enrich += func(key)
+        enriched = self + enrich
+        return enriched.unique()
+
+    def limit(self, n):
+        """Return the first `n` items of the object."""
+        return self[:n]
+
+    def groupby(self, func):
+        """Return the grouped collection given a function."""
+        return [
+            (key, self.copy(*group))
+            for key, group in groupby(self.sort(func), lambda key: func(key))
+        ]
+
+    def sort(self, metric, reverse=False):
+        """Return the object sorted given a `metric` function."""
+        return self.copy(*sorted(self, key=metric, reverse=reverse))
+
+    def nlargest(self, n, metric):
+        """Return the first `n` largest item of the object given a `metric` function."""
+        return self.sort(metric, reverse=True).limit(n)
+
+    def nsmallest(self, n, metric):
+        """Return the first `n` smallest item of the object given a `metric` function."""
+        return self.sort(metric).limit(n)
+
+    def maximum(self, metric):
+        """Return the largest item of the object given a `metric` function."""
+        return self.nlargest(1, metric)
+
+    def minimum(self, metric):
+        """Return the smallest item of the object given a `metric` function."""
+        return self.nsmallest(1, metric)
+
+    def rank(self, key, metric):
+        """Return the ranked collection given a `metric` function."""
+        sorted_keys = sort(self, lambda k: metric(k), True)
+        return sorted_keys.index(key)
+
+    def random(self, weights=None, k=1):
+        """Return a k sized list of items."""
+        return self.copy(*choices(self, weights, k=k))
+
+    def random_entry(self):
+        """Return a single random item. Return None if no entries available."""
+        return random_entry(self)
+
+    def shuffle(self):
+        """Return the object with the shuffled items."""
+        return self.copy(*random.shuffle(self))
+
+    def sample(self, k):
+        """Return a sample of the object."""
+        return self.copy(*random.sample(self, k))
+
+    def product(self, other=None, repeat=1):
+        """Return catersian product of the object."""
+        if other is None:
+            other = self
+            print(type(other), other)
+        return product(repeat, self, other)
+
+    def permutations(self, repeat=2):
+        """Return successive `repeat` length permutations of the object."""
+        return permutations(self, repeat)
+
+    def combinations(self, repeat=2):
+        """Return `repeat` length subsequences of the object."""
+        return combinations(self, repeat)
+
+
+class EntitiesCollection(Collection):
+    """A base class to handle a set of game item taken from RFC DoC."""
+
+    def _keyify(self, item):
+        """Inner function for retrieving the in-game items of the entity."""
+        return item
+
+    def _factory(self, key):
+        """Inner function for producing the in-game class of the entity."""
+        return key
+
+    def entities(self):
+        """Retrieve in-game item of the collection."""
+        return [self._factory(x) for x in self]
+
+    def __getitem__(self, index):
+        return self.entities()[index]
+
+    # def __iter__(self):  # TODO currently recursive loop, we should using the _keys attribute paradigm
+    #     return iter(self.entities())
+
+    def __add__(self, other):
+        if other is None:
+            return self
+        if not isinstance(other, type(self)):
+            raise TypeError("Cannot combine left '%s' with right '%s'" % (type(self), type(other)))
+        items = [s for s in self] + [o for o in other]
+        return self.copy(*items)
+
+    def add(self, other):
+        return self.__add__(other)
+
+    def apply(self, condition):
+        if not callable(condition):
+            raise NotACallableError(condition)
+        return [condition(self._factory(item)) for item in self]
+
+    def sort(self, metric, reverse=False):
+        """Return the object sorted given a `metric` function."""
+        return self.copy(*sorted(self, key=lambda x: metric(self._factory(x)), reverse=reverse))
+
+    def transform(self, cls, map=lambda x: x, condition=lambda x: True):
+        """Return new class given a map function and a condition function."""
+        return cls(*[map(k) for k in self if condition(self._factory(k))])
+
+    def groupby(self, func):
+        """Return the grouped collection given a function."""
+        return [
+            (key, self.copy(*group))
+            for key, group in groupby(self.sort(func), lambda key: func(self._factory(key)))
+        ]
+
+    def rank(self, key, metric):
+        """Return the ranked collection given a `metric` function."""
+        sorted_keys = sort(self._keys, lambda k: metric(self._factory(k)), True)
+        return sorted_keys.index(key)
+
+
+class EnumCollection(Collection):
+    """A base class to handle a set of a specific type of `Item`."""
+
+    BASE_CLASS = None
+
+    def __init__(self, *items):
+        for item in items:
+            if not isinstance(item, self.BASE_CLASS):  # type: ignore
+                raise NotTypeExpectedError(self.BASE_CLASS, type(item))
+            self.append(item)
+
+    def drop(self, *items):  # TODO this should be renamed to without
+        """Return the object without `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key not in items)
+
+    def take(self, *items):
+        """Return the object with only `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key in items)
+
+    def ids(self):
+        """Return a list of identifiers."""
+        return self.apply(lambda c: c.id)
+
+
+class EnumCollectionFactory(object):
+    """A base for factories."""
+
+    MEMBERS_CLASS = None
+    DATA_CLASS = None
+    ITEM_CLASS = None
+    ITEM_COLLECTION_CLASS = None
+
+    def __init__(self):
+        self._attachments = {}
+        self._keys_attachments = {}
+
+    def add_key(self, *keys):
+        for key in keys:
+            self._keys_attachments[key] = {}
+        return self
+
+    def attach(self, name, data, key=None):
+        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):  # type: ignore
+            if key is not None:
+                self._keys_attachments[key][name] = data
+            else:
+                self._attachments[name] = data
+        return self
+
+    def _collect_direct_keys(self, member):
+        return dict(
+            (k, Attributes.from_nested_dicts(v.get(member))) for k, v in self._attachments.items()
+        )
+
+    def _collect_subkeys(self, member):
+        attachments = {}
+        for key in self._keys_attachments.keys():
+            attachments[key] = dict(
+                (name, Attributes.from_nested_dicts(data.get(member)))
+                for name, data in self._keys_attachments[key].items()
+            )
+        return Attributes.from_nested_dicts(attachments)
+
+    def collect(self):
+        items = []
+        for member in self.MEMBERS_CLASS:
+            attachments = {}
+            if self._attachments:
+                attachments.update(self._collect_direct_keys(member))
+            if self._keys_attachments:
+                attachments.update(self._collect_subkeys(member))
+            items.append(self.ITEM_CLASS(member, **attachments))
+        return self.ITEM_COLLECTION_CLASS(*items)
 
 
 class Company(Item):
@@ -177,7 +593,7 @@ class Civilization(Item):
 
     def has_state_religion(self, identifier):
         """Return True if the civilization has the given religion as state religion."""
-        return self.state_religion() == religion(identifier)
+        return self.state_religion() == identifier
 
     def is_christian(self):
         """Return True if the civilization is christian."""
@@ -463,7 +879,7 @@ def is_minor_civ(identifier):
 
 def is_independent_civ(identifier):
     """Return True if it's a non-playable independent civilization."""
-    return get_civ_by_id(player(identifier).getID()) in INDEPENDENT_CIVS
+    return player(identifier).getID() in INDEPENDENT_CIVS
 
 
 def is_barbarian_civ(identifier):
@@ -497,9 +913,7 @@ def base_unit(iUnit):
 
 
 def unique_building_from_class(identifier, iBuildingClass):
-    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationBuildings(
-        iBuildingClass
-    )
+    return gc.getCivilizationInfo(identifier).getCivilizationBuildings(iBuildingClass)
 
 
 def unique_building(identifier, iBuilding):
@@ -511,7 +925,7 @@ def unique_building(identifier, iBuilding):
 
 
 def unique_unit_from_class(identifier, iUnitClass):
-    return gc.getCivilizationInfo(get_civ_by_id(identifier)).getCivilizationUnits(iUnitClass)
+    return gc.getCivilizationInfo(identifier).getCivilizationUnits(iUnitClass)
 
 
 def unique_unit(identifier, iUnit):
@@ -1662,6 +2076,351 @@ class CityFactory:
     # def newCapital(self, identifier):
     #     return city(self.plots.newCapital(identifier))
 
+
+def owner(entity, identifier):
+    return entity.getOwner() == identifier
+
+
+def wrap(*args):
+    parsed = parse_tile(*args)
+    if parsed is None:
+        return None
+    x, y = parsed
+    return x % WORLD_WIDTH, max(0, min(y, WORLD_HEIGHT - 1))
+
+
+def iterate(first, next, getter=lambda x: x):
+    list = []
+    entity, iter = first(False)
+    while entity:
+        list.append(getter(entity))
+        entity, iter = next(iter, False)
+    return [x for x in list if x is not None]
+
+
+def plot(*args):
+    x, y = parse_tile(*args)
+    return gc.getMap().plot(x, y)
+
+
+def city(*args):
+    if len(args) == 1 and isinstance(args[0], CyCity):
+        return args[0]
+
+    p = plot(*args)
+    if not p.isCity():
+        return None
+    return p.getPlotCity()
+
+
+def location(entity):
+    if not entity:
+        return None
+
+    if isinstance(entity, (CyPlot, CyCity, CyUnit)):
+        return entity.getX(), entity.getY()
+
+    return parse_tile(entity)
+
+
+def parse_tile(*args):
+    if len(args) == 2:
+        return args
+    elif len(args) == 1:
+        if isinstance(args[0], tuple) and len(args[0]) == 2:
+            return args[0]
+        elif isinstance(args[0], (CyPlot, CyCity, CyUnit)):
+            if args[0].isNone() or args[0].getX() < 0 or args[0].getY() < 0:
+                return None
+            return args[0].getX(), args[0].getY()
+
+    raise TypeError(
+        "Only accepts two coordinates or a tuple of two coordinates, received: %s %s"
+        % (args, type(args[0]))
+    )
+
+
+def get_area(area):
+    if isinstance(area, (CyPlot, CyCity)):
+        return area.getArea()
+    elif isinstance(area, CyUnit):
+        return get_area(plot(area))
+    elif isinstance(area, tuple) and len(area) == 2:
+        return plot(area).getArea()
+    return area
+
+
+def distance(location1, location2):
+    if not location1 or not location2:
+        return map.maxStepDistance()
+
+    x1, y1 = parse_tile(location1)
+    x2, y2 = parse_tile(location2)
+    return stepDistance(x1, y1, x2, y2)
+
+
+def closest_city(entity, owner=None, same_continent=False, coastal_only=False, skip_city=None):
+    if owner is None:
+        owner = PlayerTypes.NO_PLAYER
+
+    if skip_city is None:
+        if isinstance(entity, CyCity):
+            skip_city = entity
+        else:
+            skip_city = CyCity()
+    elif isinstance(skip_city, CyPlot):
+        skip_city = skip_city.isCity() and city(skip_city) or CyCity()
+
+    x, y = parse_tile(entity)
+    city_ = map.findCity(
+        x,
+        y,
+        owner,
+        TeamTypes.NO_TEAM,
+        same_continent,
+        coastal_only,
+        TeamTypes.NO_TEAM,
+        DirectionTypes.NO_DIRECTION,
+        skip_city,
+    )
+
+    if city_.isNone():
+        return None
+    return city_
+
+
+class FindResult(object):
+    def __init__(self, result, index, value):
+        self.result = result
+        self.index = index
+        self.value = value
+
+
+def find(list, metric=lambda x: x, reverse=True):
+    if not list:
+        return FindResult(None, None, None)
+    result = sort(list, metric, reverse)[0]
+    return FindResult(result=result, index=list.index(result), value=metric(result))
+
+
+def find_min(list, metric=lambda x: x):
+    return find(list, metric, False)
+
+
+def find_max(list, metric=lambda x: x):
+    return find(list, metric, True)
+
+
+def text(key, *format):
+    return translator.getText(str(key), tuple(format))
+
+
+def text_if_exists(key, *format, **kwargs):
+    otherwise = kwargs.get("otherwise")
+    key_text = text(key, *format)
+    if key_text != key:
+        return key_text
+    elif otherwise:
+        return text(otherwise, *format)
+    return ""
+
+
+def colortext(key, color, *format):
+    return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
+
+
+def font_text(text, fontsize=2):
+    return u"<font=%s>%s</font>" % (str(fontsize), text)
+
+
+def symbol(identifier):
+    return unichr(CyGame().getSymbolID(identifier))  # noqa: F821
+
+
+def font_symbol(iSymbol, fontsize=2):
+    return font_text(symbol(iSymbol), fontsize)
+
+
+def show(message, *format):
+    if format:
+        message = message % tuple(format)
+
+    popup = Popup.PyPopup()
+    popup.setBodyString(message)
+    popup.launch()
+
+
+def event_popup(id, title, message, labels=None):
+    if labels is None:
+        labels = []
+
+    popup = Popup.PyPopup(id, EventContextTypes.EVENTCONTEXT_ALL)
+    popup.setHeaderString(title)
+    popup.setBodyString(message)
+    for label in labels:
+        popup.addButton(label)
+    popup.launch(not labels)
+
+
+def message(player, text, **settings):
+    force = settings.get("force", False)
+    duration = settings.get("duration", MessageData.DURATION)
+    sound = settings.get("sound", "")
+    event = settings.get("event", 0)
+    button = settings.get("button", "")
+    color = settings.get("color", MessageData.WHITE)
+
+    tile = settings.get("location")
+    x, y = -1, -1
+    if tile:
+        x, y = location(tile)
+
+    interface.addMessage(
+        int(player),
+        force,
+        duration,
+        text,
+        sound,
+        event,
+        button,
+        ColorTypes(color),
+        x,
+        y,
+        True,
+        True,
+    )
+
+
+def get_data_from_province_map(plot):
+    x, y = location(plot)
+    return PROVINCES_MAP[y][x]
+
+
+def get_data_from_upside_down_map(map, civ, plot):
+    x, y = location(plot)
+    return map[civ][WORLD_HEIGHT - 1 - y][x]
+
+
+def get_scenario():
+    """Return scenario given the current situation."""
+    try:
+        if player(Civ.BURGUNDY).isPlayable():
+            return Scenario.i500AD
+    except:  # noqa: E722
+        return Scenario.i1200AD
+    else:
+        return Scenario.i1200AD
+
+
+def get_scenario_start_years(scenario=None):
+    """Return scenario start year given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    years = [500, 1200]
+    return years[scenario]
+
+
+def get_scenario_start_turn(scenario=None):
+    """Return scenario start turn given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    dateturn = [year(500), year(1200)]
+    return dateturn[scenario]
+
+
+def civilizations(scenario=None):
+    """Return civilizations data given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    data_mapper = {Scenario.i500AD: civilizations_500AD, Scenario.i1200AD: civilizations_1200AD}
+    return data_mapper[scenario]
+
+
+def civilization(identifier=None):
+    """Return Civilization object given an identifier."""
+    if identifier is None:
+        return civilizations()[gc.getGame().getActiveCivilizationType()]
+
+    if isinstance(identifier, int):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civ):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civilization):
+        return civilizations()[identifier.id]
+
+    if isinstance(identifier, (CyPlayer, CyUnit)):
+        return civilizations()[identifier.getCivilizationType()]
+
+    if isinstance(identifier, CyPlot):
+        if not identifier.isOwned():
+            return None
+        return civilizations()[identifier.getOwner()]
+
+    if isinstance(identifier, CyCity):
+        return civilizations()[identifier.getOwner()]
+
+    raise NotTypeExpectedError(
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot, CyCity or CyUnit, or int", type(identifier)
+    )
+
+
+companies = (
+    CompaniesFactory()
+    .attach("birthdate", COMPANY_BIRTHDATE)
+    .attach("deathdate", COMPANY_DEATHDATE)
+    .attach("region", COMPANY_REGION)
+    .attach("limit", COMPANY_LIMIT)
+    .collect()
+)
+civilizations_base = (
+    CivilizationsFactory()
+    .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event", "scenario")
+    .attach("leaders", CIV_LEADERS)
+    .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
+    .attach("capital", CIV_CAPITAL_LOCATIONS, key="location")
+    .attach("new_capital", CIV_NEW_CAPITAL_LOCATIONS, key="location")
+    .attach("neighbours", CIV_NEIGHBOURS, key="location")
+    .attach("reformation_neighbours", CIV_REFORMATION_NEIGHBOURS, key="location")
+    .attach("home_colony", CIV_HOME_LOCATIONS, key="location")
+    .attach("provinces", CIV_PROVINCES, key="location")
+    .attach("area", CIV_AREAS, key="location")
+    .attach("spreading_threshold", CIV_RELIGION_SPREADING_THRESHOLD, key="religion")
+    .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
+    .attach("modifiers", CIV_HUMAN_MODIFIERS, key="human")
+    .attach("modifiers", CIV_AI_MODIFIERS, key="ai")
+    .attach("stop_birth_threshold", CIV_AI_STOP_BIRTH_THRESHOLD, key="ai")
+    .attach("stability_bonus", CIV_STABILITY_AI_BONUS, key="ai")
+    .attach("reformation_threshold", CIV_AI_REFORMATION_THRESHOLD, key="ai")
+    .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
+    .attach("birth", CIV_BIRTHDATE, key="date")
+    .attach("collapse", CIV_COLLAPSE_DATE, key="date")
+    .attach("respawning", CIV_RESPAWNING_DATE, key="date")
+    .attach("buildings", CIV_INITIAL_BUILDINGS, key="initial")
+    .attach("tech", CIV_INITIAL_TECH, key="initial")
+    .attach("workers", CIV_INITIAL_WORKERS, key="initial")
+    .attach("units", CIV_INITIAL_UNITS, key="initial")
+    .attach("additional_units", CIV_ADDITIONAL_UNITS, key="initial")
+    .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
+)
+civilizations_500AD = (
+    civilizations_base.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
+    .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i500AD], key="scenario")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="scenario")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="scenario")
+    .collect()
+)
+civilizations_1200AD = (
+    civilizations_base.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
+    .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i1200AD], key="scenario")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="scenario")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="scenario")
+    .collect()
+)
 
 techs = TechFactory
 units = UnitFactory

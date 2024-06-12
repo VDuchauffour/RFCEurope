@@ -5,8 +5,7 @@
 
 
 from CvPythonExtensions import *
-from CoreFunctions import text
-from CoreStructures import turn
+from Core import text, turn
 import PyHelpers
 
 

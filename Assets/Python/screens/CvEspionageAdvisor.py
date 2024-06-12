@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
-from CoreData import civilizations
-from CoreFunctions import text
+from Core import civilizations, text
 import CvScreenEnums
 import CvUtil
 from MiscData import MODNET_EVENTS

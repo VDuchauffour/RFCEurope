@@ -1,8 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
-from CoreFunctions import message, text
-from CoreStructures import human, make_unit, cities, plots
+from Core import message, human, make_unit, cities, plots, text
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
 
@@ -91,9 +90,7 @@ class UniquePowers:
                     iJanissaryPoint = iCityPopulation * 9
                 else:
                     iJanissaryPoint = iCityPopulation * 4
-                iOldPoints = pPlayer.getPicklefreeParameter(
-                    SpecialParameter.JANISSARY_POINTS
-                )
+                iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS)
                 pPlayer.setPicklefreeParameter(
                     SpecialParameter.JANISSARY_POINTS, iOldPoints + iJanissaryPoint
                 )

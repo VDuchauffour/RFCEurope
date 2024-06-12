@@ -5,13 +5,12 @@
 ## Inspiration from zappara to handle new religions, extended to handle new types of buildings and units
 
 from CvPythonExtensions import *
-from CoreFunctions import text
+from Core import text, font_text
 import PyHelpers
 import CvUtil
 from RFCUtils import render_faith_benefits, render_faith_status
 import ScreenInput  # noqa: F401
 import CvScreenEnums
-from CoreFunctions import font_text
 
 # BUG - start
 import BugUtil  # noqa: F401

@@ -1,8 +1,14 @@
 from CvPythonExtensions import *
 from CityMapData import CITIES_MAP
-from CoreFunctions import get_data_from_upside_down_map, location, plot
-from CoreStructures import is_major_civ, name, player
-from CoreFunctions import city as _city
+from Core import (
+    get_data_from_upside_down_map,
+    is_major_civ,
+    location,
+    name,
+    player,
+    plot,
+    city as _city,
+)
 import CvUtil
 import CvScreenEnums
 import WBPlotScreen

@@ -1,7 +1,19 @@
 from CvPythonExtensions import *
-from CoreData import civilization, civilizations, COMPANIES
-from CoreFunctions import message, show, text
-from CoreStructures import human, player, team, turn, year, plots, cities
+from Core import (
+    civilization,
+    companies,
+    civilizations,
+    message,
+    human,
+    player,
+    show,
+    team,
+    text,
+    turn,
+    year,
+    plots,
+    cities,
+)
 from CoreTypes import (
     Building,
     City,
@@ -922,12 +934,8 @@ class Victory:
                 if bColony:
                     player(Civ.DUTCH).setUHVCounter(1, player(Civ.DUTCH).getUHVCounter(1) + 1)
                 if player(Civ.DUTCH).getUHVCounter(1) >= 3:
-                    iWestCompany = team(Civ.DUTCH).getProjectCount(
-                        Project.WEST_INDIA_COMPANY
-                    )
-                    iEastCompany = team(Civ.DUTCH).getProjectCount(
-                        Project.EAST_INDIA_COMPANY
-                    )
+                    iWestCompany = team(Civ.DUTCH).getProjectCount(Project.WEST_INDIA_COMPANY)
+                    iEastCompany = team(Civ.DUTCH).getProjectCount(Project.EAST_INDIA_COMPANY)
                     # if the companies are already built previously, or currently being built (one of them is the current project)
                     if iProject == Project.WEST_INDIA_COMPANY or iWestCompany >= 1:
                         if iProject == Project.EAST_INDIA_COMPANY or iEastCompany >= 1:
@@ -939,12 +947,8 @@ class Victory:
                 if bColony:
                     player(Civ.DENMARK).setUHVCounter(2, player(Civ.DENMARK).getUHVCounter(2) + 1)
                 if player(Civ.DENMARK).getUHVCounter(2) >= 3:
-                    iWestCompany = team(Civ.DENMARK).getProjectCount(
-                        Project.WEST_INDIA_COMPANY
-                    )
-                    iEastCompany = team(Civ.DENMARK).getProjectCount(
-                        Project.EAST_INDIA_COMPANY
-                    )
+                    iWestCompany = team(Civ.DENMARK).getProjectCount(Project.WEST_INDIA_COMPANY)
+                    iEastCompany = team(Civ.DENMARK).getProjectCount(Project.EAST_INDIA_COMPANY)
                     # if the companies are already built previously, or currently being built (one of them is the current project)
                     if iProject == Project.WEST_INDIA_COMPANY or iWestCompany == 1:
                         if iProject == Project.EAST_INDIA_COMPANY or iEastCompany == 1:
@@ -1151,9 +1155,7 @@ class Victory:
             if self.isPossibleUHV(Civ.CORDOBA, 2, True):
                 bIslamized = True
                 for iProv in tCordobaIslamize:
-                    if not player(Civ.CORDOBA).provinceIsSpreadReligion(
-                        iProv, Religion.ISLAM
-                    ):
+                    if not player(Civ.CORDOBA).provinceIsSpreadReligion(iProv, Religion.ISLAM):
                         bIslamized = False
                         break
                 if bIslamized:
@@ -1353,10 +1355,7 @@ class Victory:
             if self.isPossibleUHV(Civ.KIEV, 1, True):
                 iConq = 0
                 for iProv in tKievControl:
-                    if (
-                        player(Civ.KIEV).getProvinceCurrentState(iProv)
-                        >= ProvinceStatus.CONQUER
-                    ):
+                    if player(Civ.KIEV).getProvinceCurrentState(iProv) >= ProvinceStatus.CONQUER:
                         iConq += 1
                 if iConq >= 10:
                     self.wonUHV(Civ.KIEV, 1)
@@ -1654,7 +1653,7 @@ class Victory:
                     ):
                         iBanks += 1
                 iCompanyCities = player(Civ.GENOA).countCorporations(Company.ST_GEORGE)
-                if iBanks >= 8 and iCompanyCities == COMPANIES[Company.ST_GEORGE].limit:
+                if iBanks >= 8 and iCompanyCities == companies[Company.ST_GEORGE].limit:
                     self.wonUHV(Civ.GENOA, 2)
                 else:
                     self.lostUHV(Civ.GENOA, 2)
@@ -1817,10 +1816,7 @@ class Victory:
                 bMost = True
                 iCount = self.getTerritoryPercentEurope(Civ.LITHUANIA)
                 for iOtherPlayer in civilizations().majors().ids():
-                    if (
-                        not gc.getPlayer(iOtherPlayer).isAlive()
-                        or iOtherPlayer == Civ.LITHUANIA
-                    ):
+                    if not gc.getPlayer(iOtherPlayer).isAlive() or iOtherPlayer == Civ.LITHUANIA:
                         continue
                     iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
                     if iOtherCount >= iCount:

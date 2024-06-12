@@ -1,6 +1,4 @@
-from CoreData import civilization
-from CoreFunctions import get_religion_by_id, text
-from CoreStructures import turn
+from Core import civilization, text, turn
 from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
@@ -249,7 +247,7 @@ class CvGameUtils:
         iTolerance = civilization(iCiv).religion.tolerance
         apCityList = PyPlayer(iCiv).getCityList()
         # Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
-        for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
+        for iReligion in RELIGION_PERSECUTION_ORDER[iStateReligion]:
             bCanPurge = False
             # If the civ's tolerance > 70 it won't purge any religions
             # If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion

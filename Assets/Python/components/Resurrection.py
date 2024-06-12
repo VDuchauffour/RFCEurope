@@ -1,15 +1,19 @@
 from CvPythonExtensions import CyGlobalContext
 
 from Consts import MessageData
-from CoreData import civilization, civilizations
-from CoreFunctions import event_popup, location, message, text
-from CoreStructures import (
+from Core import (
+    civilization,
+    civilizations,
+    event_popup,
     human,
     is_minor_civ,
+    location,
     make_unit,
     make_units,
     player,
     team,
+    text,
+    message,
     turn,
     plots,
     cities,

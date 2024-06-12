@@ -8,7 +8,7 @@
 
 
 from CvPythonExtensions import *
-from CoreFunctions import text
+from Core import text
 from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums

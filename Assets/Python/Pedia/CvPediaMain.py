@@ -33,7 +33,7 @@ import CvPediaReligion
 import CvPediaCorporation
 
 from CoreTypes import Leader
-from CoreFunctions import text
+from Core import text
 
 # globals
 gc = CyGlobalContext()

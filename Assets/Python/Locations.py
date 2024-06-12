@@ -1,10 +1,14 @@
 from CvPythonExtensions import CyGlobalContext
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
-from CoreFunctions import get_data_from_province_map, get_data_from_upside_down_map, location
-from CoreFunctions import plot as _plot
-from CoreFunctions import location as _location
-from CoreData import civilizations
-from CoreStructures import plots
+from Core import (
+    civilizations,
+    get_data_from_upside_down_map,
+    get_data_from_province_map,
+    location,
+    plot as _plot,
+    location as _location,
+    plots,
+)
 from CoreTypes import Area, AreaType, Civ, PlagueType, ProvinceType, Religion, Technology
 from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP

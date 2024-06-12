@@ -1,9 +1,20 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
-from Consts import INDEPENDENT_CIVS
-from CoreFunctions import event_popup, location, message, text
-from CoreStructures import human, make_unit, make_units, turn, cities, plots
+from Consts import INDEPENDENT_CIVS, MessageData
+from Core import (
+    civilizations,
+    message,
+    event_popup,
+    human,
+    location,
+    make_unit,
+    make_units,
+    text,
+    turn,
+    cities,
+    plots,
+)
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 from RFCUtils import (
@@ -19,8 +30,6 @@ from RFCUtils import (
 from TimelineData import DateTurn
 from StoredData import data
 
-from CoreData import civilizations
-from Consts import MessageData
 
 gc = CyGlobalContext()
 
@@ -2147,9 +2156,7 @@ class Barbs:
 
         # Barbs in the middle east
         if DateTurn.i700AD <= iGameTurn <= DateTurn.i1300AD:
-            if not gc.getTeam(gc.getPlayer(Civ.ARABIA).getTeam()).isHasTech(
-                Technology.FARRIERS
-            ):
+            if not gc.getTeam(gc.getPlayer(Civ.ARABIA).getTeam()).isHasTech(Technology.FARRIERS):
                 self.spawnUnits(
                     Civ.BARBARIAN,
                     (94, 0),

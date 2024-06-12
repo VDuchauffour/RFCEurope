@@ -1,9 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from CoreFunctions import message, text
-from CoreStructures import human, cities
+from Core import get_scenario, civilization, civilizations, message, human, cities, text
 
 from Consts import MessageData
 from CoreTypes import (
@@ -27,7 +25,6 @@ from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
 import RiseAndFall
 import Provinces
-from Scenario import get_scenario
 from Secession import revoltCity
 
 rnf = RiseAndFall.RiseAndFall()
@@ -95,9 +92,7 @@ class Stability:
 
             # Small boost for small civs
             if iCounter < 6:  # instead of the additional boost for the first few cities
-                pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION, (6 - iCounter) / 2 + 1
-                )
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, (6 - iCounter) / 2 + 1)
 
             # Known techs which otherwise give instability should also give the penalty here
             for iTech in [
@@ -978,9 +973,7 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         iExpStability = 0
         iCivic5 = pPlayer.getCivics(5)
-        bIsUPLandStability = gc.hasUP(
-            iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND
-        )
+        bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND)
         iCivicBonus = 0
         iUPBonus = 0
         for pCity in cities().owner(iPlayer).entities():

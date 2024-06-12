@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CoreFunctions import text
+from Core import text
 import CvUtil
 import CvScreenEnums
 import CvScreensInterface
@@ -200,7 +200,11 @@ class CvCivicsScreen:
             for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 if gc.getPlayer(iPlayer).isAlive():
                     screen.addPullDownString(
-                        "DebugMenu", gc.getPlayer(iPlayer).getCivilizationShortDescription(0), iPlayer, iPlayer, False
+                        "DebugMenu",
+                        gc.getPlayer(iPlayer).getCivilizationShortDescription(0),
+                        iPlayer,
+                        iPlayer,
+                        False,
                     )
 
         self.placeContents()

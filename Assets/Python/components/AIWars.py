@@ -2,9 +2,17 @@
 
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
-from CoreData import civilizations, civilization
-from CoreFunctions import get_data_from_upside_down_map
-from CoreStructures import is_independent_civ, is_major_civ, turn, year, plots
+from Core import (
+    civilization,
+    civilizations,
+    get_data_from_upside_down_map,
+    get_scenario_start_turn,
+    is_independent_civ,
+    is_major_civ,
+    turn,
+    year,
+    plots,
+)
 from CoreTypes import Civ
 from PyUtils import rand
 from RFCUtils import (
@@ -16,7 +24,6 @@ from RFCUtils import (
     restorePeaceAI,
     restorePeaceHuman,
 )
-from Scenario import get_scenario_start_turn
 from StoredData import data
 from WarMapData import WARS_MAP
 

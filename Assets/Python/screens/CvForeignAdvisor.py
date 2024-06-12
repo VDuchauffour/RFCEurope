@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import colortext, text
+from Core import colortext, text
 import CvUtil
 import CvScreenEnums
 import math

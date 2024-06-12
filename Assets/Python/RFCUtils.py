@@ -1,19 +1,28 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
-from CoreStructures import (
+from Core import (
+    get_scenario,
+    city,
+    civilization,
+    civilizations,
     human,
+    location,
     make_unit,
     make_units,
+    message,
     name,
     player,
+    symbol,
     team,
     teamtype,
+    text,
+    text_if_exists,
     turn,
     units,
     cities,
     plots,
+    get_data_from_upside_down_map,
 )
 from CoreTypes import (
     City,
@@ -38,21 +47,10 @@ from LocationsData import CITIES
 import Popup
 from PyUtils import percentage, percentage_chance, rand
 from ReligionData import RELIGION_PERSECUTION_ORDER
-from Scenario import get_scenario
 from SettlerMapData import SETTLERS_MAP
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS
 
-from CoreFunctions import (
-    city,
-    get_data_from_upside_down_map,
-    get_religion_by_id,
-    location,
-    message,
-    symbol,
-    text,
-    text_if_exists,
-)
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 from Consts import MINOR_CIVS, WORLD_HEIGHT, MessageData
@@ -1032,7 +1030,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
 
     # determine the target religion, if not supplied by the popup decision (for the AI)
     if iReligion == -1:
-        for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
+        for iReligion in RELIGION_PERSECUTION_ORDER[iStateReligion]:
             if not city.isHolyCityByType(iReligion):  # spare holy cities
                 if city.isHasReligion(iReligion):
                     # so this will be the iReligion for further calculations

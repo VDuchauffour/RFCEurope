@@ -2,19 +2,16 @@
 ## Copyright Firaxis Games 2005
 
 import math
-from CoreData import civilization
-from CoreFunctions import text
-from CoreStructures import turn
+from Core import civilization, text, turn, get_scenario_start_turn
 import CvUtil
 from CvPythonExtensions import *
 
 from RFCUtils import getDawnOfManText
-from Scenario import get_scenario_start_turn
 
 ## HOF MOD
-import Buffy
+import Buffy  # noqa: F401
 import BugCore
-import GameSetUpCheck
+import GameSetUpCheck  # noqa: F401
 
 BUFFYOpt = BugCore.game.BUFFY
 ## end HOF MOD

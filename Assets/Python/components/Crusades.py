@@ -1,14 +1,18 @@
 from CvPythonExtensions import *
 from Consts import MessageData
-from CoreData import civilizations, civilization
-from CoreFunctions import event_popup, get_civ_by_id, location, message, text
-from CoreStructures import (
+from Core import (
+    civilization,
+    civilizations,
+    event_popup,
     human,
+    location,
     make_crusade_unit,
     make_crusade_units,
     player,
     team,
     teamtype,
+    message,
+    text,
     turn,
     year,
     cities,
@@ -987,13 +991,7 @@ class Crusades:
         else:
             iPowerVotes = self.getVotingPower(iPowerful)
 
-        for civ in (
-            civilizations()
-            .majors()
-            .ai()
-            .drop(get_civ_by_id(iFavorite), get_civ_by_id(iPowerful))
-            .ids()
-        ):
+        for civ in civilizations().majors().ai().drop(iFavorite, iPowerful).ids():
             iVotes = self.getVotingPower(civ)
             if iVotes > 0:
                 if gc.getRelationTowards(civ, iFavorite) > gc.getRelationTowards(civ, iPowerful):
@@ -1554,9 +1552,7 @@ class Crusades:
                                             iHuman,
                                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                             sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                            button=gc.getUnitInfo(
-                                                Unit.HOLY_RELIC
-                                            ).getButton(),
+                                            button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                                             color=MessageData.GREEN,
                                             location=(iCapitalX, iCapitalY),
                                         )

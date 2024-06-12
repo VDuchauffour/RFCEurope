@@ -9,8 +9,7 @@
 #
 # No other modules should import this
 #
-from CoreFunctions import message, text
-from CoreStructures import turn
+from Core import message, text, turn
 from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *

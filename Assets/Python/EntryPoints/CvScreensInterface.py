@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 # ruff: noqa: F401, F811
-from CoreStructures import player
+from Core import player
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser

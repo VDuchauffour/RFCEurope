@@ -1,8 +1,16 @@
 from CvPythonExtensions import CyGlobalContext
 from CivilizationsData import TECH_STARTERS_1200AD
-from CoreData import civilization, civilizations
-from CoreFunctions import get_civ_by_id
-from CoreStructures import human, make_unit, make_units, team, teamtype, year, plots
+from Core import (
+    civilization,
+    civilizations,
+    human,
+    make_unit,
+    make_units,
+    team,
+    teamtype,
+    year,
+    plots,
+)
 from CoreTypes import Area, Civ, InitialCondition, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from MiscData import REVEAL_DATE_TECHNOLOGY
@@ -49,7 +57,7 @@ def create_starting_units_500AD():
     iHuman = human()
     if civilization(iHuman).date.birth > year(500):
         # so everyone apart from Byzantium and France
-        tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)]
+        tStart = CIV_CAPITAL_LOCATIONS[iHuman]
 
         # Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
         if iHuman == Civ.ARABIA:  # contact with Byzantium

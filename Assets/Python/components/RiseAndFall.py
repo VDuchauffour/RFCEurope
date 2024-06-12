@@ -12,14 +12,21 @@ from Civilizations import (
     set_starting_faith,
 )
 from Consts import MessageData
-from CoreData import civilization, civilizations
-from CoreStructures import (
+from Core import (
+    civilization,
+    civilizations,
+    event_popup,
+    get_scenario,
+    get_scenario_start_turn,
     human,
     is_major_civ,
     is_minor_civ,
+    location,
     make_unit,
     make_units,
     player,
+    text,
+    message,
     turn,
     year,
     cities,
@@ -52,7 +59,6 @@ from RFCUtils import (
     updateMinorTechs,
 )
 import Religions
-from Scenario import get_scenario, get_scenario_start_turn
 from Collapse import collapseByBarbs, collapseGeneric, collapseMotherland
 from Secession import secession, secessionCloseCollapse
 from Resurrection import resurectCiv, resurrection
@@ -76,7 +82,6 @@ from CoreTypes import (
     StabilityCategory,
     Unit,
 )
-from CoreFunctions import event_popup, location, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from Wonders import leaning_tower_effect
 

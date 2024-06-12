@@ -10,7 +10,7 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
-from CoreFunctions import text
+from Core import text
 
 # globals
 gc = CyGlobalContext()

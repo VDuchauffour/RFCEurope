@@ -1,4 +1,4 @@
-from CoreFunctions import city
+from Core import city
 from CoreTypes import Specialist
 from PyUtils import rand
 
