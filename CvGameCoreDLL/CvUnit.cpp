@@ -90,9 +90,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
   int iUnitName;
   int iI, iJ;
 
-  //GC.getGameINLINE().logMsg("   --- Init 0 with ");
   FAssert(NO_UNIT != eUnit);
-  //GC.getGameINLINE().logMsg("   --- Init 1 with %d %d %d %d ",eUnit,eOwner,iX,iY);
 
   //--------------------------------
   // Init saved data
@@ -112,16 +110,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
   //--------------------------------
   // Init non-saved data
-  //GC.getGameINLINE().logMsg("   --- Init 2 with ");
   setupGraphical();
-  //GC.getGameINLINE().logMsg("   --- Init 3 with ");
 
   //--------------------------------
   // Init other game data
   plot()->updateCenterUnit();
 
   plot()->setFlagDirty(true);
-  //GC.getGameINLINE().logMsg("   --- Init 4 with ");
 
   iUnitName = GC.getGameINLINE().getUnitCreatedCount(getUnitType());
   int iNumNames = m_pUnitInfo->getNumUnitNames();
@@ -141,7 +136,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   --- Init 5 with ");
 
   setGameTurnCreated(GC.getGameINLINE().getGameTurn());
 
@@ -151,7 +145,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
   GET_TEAM(getTeam()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
   GET_PLAYER(getOwnerINLINE()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
 
-  //GC.getGameINLINE().logMsg("   --- Init 6 with ");
   GET_PLAYER(getOwnerINLINE()).changeExtraUnitCost(m_pUnitInfo->getExtraCost());
 
   if (m_pUnitInfo->getNukeRange() != -1)
@@ -164,7 +157,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
     GET_PLAYER(getOwnerINLINE()).changeNumMilitaryUnits(1);
   }
 
-  //GC.getGameINLINE().logMsg("   --- Init 7 with ");
   GET_PLAYER(getOwnerINLINE()).changeAssets(m_pUnitInfo->getAssetValue());
 
   GET_PLAYER(getOwnerINLINE()).changePower(m_pUnitInfo->getPowerValue());
@@ -177,7 +169,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
     }
   }
 
-  //GC.getGameINLINE().logMsg("   --- Init 8 with ");
   FAssertMsg(
       (GC.getNumTraitInfos() > 0),
       "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvUnit::init");
@@ -210,7 +201,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
     }
   }
 
-  //GC.getGameINLINE().logMsg("   --- Init 9 with ");
   if (NO_UNITCLASS != getUnitClassType())
   {
     for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
@@ -232,7 +222,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if ( getUnitCombatType() >= 1 ) // all military units, i.e. not workers and settlers and missionaries
 			setHasPromotion(((PromotionTypes)PROMOTION_FORMATION), true); // Formation I
 	};*/
-  //GC.getGameINLINE().logMsg("   --- Init 10 with ");
   int iUPP = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PROMOTION_I];
   if (iUPP > -1)
   {
@@ -246,7 +235,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
   {
     setHasPromotion(((PromotionTypes)iUPP), true);
   };
-  //GC.getGameINLINE().logMsg("   --- Init 11 with ");
   //Rhye - end
 
   if (getDomainType() == DOMAIN_LAND)
@@ -266,7 +254,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
     gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
   }
 
-  //GC.getGameINLINE().logMsg("   --- Init 12 with ");
   if (isWorldUnitClass((UnitClassTypes)(m_pUnitInfo->getUnitClassType())))
   {
     for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -300,13 +287,10 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
                                         getY_INLINE(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
   }
 
-  //GC.getGameINLINE().logMsg("   --- Init 13 with ");
   AI_init(eUnitAI);
 
-  //GC.getGameINLINE().logMsg("   --- Init 14 with ");
   // 3Miro: SPEEDTWEAK: more Python
   //CvEventReporter::getInstance().unitCreated(this);
-  //GC.getGameINLINE().logMsg("   --- Init 15 with ");
 }
 
 void CvUnit::uninit()
@@ -550,7 +534,6 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
   FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
   //if (pPlot->getX() == 0 && pPlot->getY() == 0)
-  //	GC.getGameINLINE().logMsg("kill in 00"); //Rhye
 
   static std::vector<IDInfo> oldUnits;
   oldUnits.clear();
@@ -695,11 +678,9 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
                                        : NO_UNIT);
 
   setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
-  //GC.getGameINLINE().logMsg(" BUT WE ARE KILLING THE UNIT" ); // 3Miro
 
   joinGroup(NULL, false, false);
 
-  //GC.getGameINLINE().logMsg(" Unit Lost Called for unit type: %d",getUnitType() );
   CvEventReporter::getInstance().unitLost(this);
 
   GET_PLAYER(getOwnerINLINE()).deleteUnit(getID());
@@ -2694,16 +2675,12 @@ bool CvUnit::canMoveInto(const CvPlot *pPlot, bool bAttack, bool bDeclareWar, bo
     }
   }
 
-  //GC.getGameINLINE().logMsg(" canMoveInto: %d  ",getUnitType() );
   if (isNoCapture())
   {
-    //GC.getGameINLINE().logMsg(" -------: %d  ",getUnitType() );
     if (!bAttack)
     {
-      //GC.getGameINLINE().logMsg(" -------: %d  ",getUnitType() );
       if (pPlot->isEnemyCity(*this))
       {
-        //GC.getGameINLINE().logMsg(" -------: %d  ",getUnitType() );
         return false;
       }
     }
@@ -3059,8 +3036,6 @@ bool CvUnit::jumpToNearestValidPlot()
   int iBestValue;
   int iI;
 
-  //GC.getGameINLINE().logMsg("  DEBUG Jumping %d ",getOwner() );
-
   FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
   FAssertMsg(!isFighting(), "isFighting did not return false as expected");
 
@@ -3080,7 +3055,6 @@ bool CvUnit::jumpToNearestValidPlot()
         if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !isEnemy(pLoopPlot->getTeam(), pLoopPlot))
         {
           FAssertMsg(!atPlot(pLoopPlot), "atPlot(pLoopPlot) did not return false as expected");
-          //GC.getGameINLINE().logMsg(" We cn enter this plot: %d %d ",pLoopPlot->getX(),pLoopPlot->getY()); // 3Miro
 
           if ((getDomainType() != DOMAIN_AIR) || pLoopPlot->isFriendlyCity(*this, true))
           {
@@ -3122,8 +3096,6 @@ bool CvUnit::jumpToNearestValidPlot()
     }
   }
 
-  //GC.getGameINLINE().logMsg(" Best plot: %d %d ",pBestPlot->getX(),pBestPlot->getY()); // 3Miro
-  //GC.getGameINLINE().logMsg(" Best plot owner and unit owner: %d %d ",pBestPlot->getOwner(),getOwner() ); // 3Miro
   bool bValid = true;
   if (pBestPlot != NULL)
   {
@@ -12947,7 +12919,6 @@ void CvUnit::getDefenderCombatValues(CvUnit &kDefender, const CvPlot *pPlot, int
           (!GET_PLAYER(pPlot->getPlotCity()->getOwner()).isHuman()))
       {
         iTheirOdds -= (iTheirOdds / 5); // Absinthe: -20%, instead of a fix 40% chance
-                                        //GC.getGameINLINE().logMsg(" Psycho AI Odds "); // 3Miro
       };
     };
   };

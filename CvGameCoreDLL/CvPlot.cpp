@@ -109,7 +109,6 @@ CvPlot::~CvPlot()
 
 void CvPlot::init(int iX, int iY)
 {
-  //GC.getGameINLINE().logMsg("plot init", iX, iY); //Rhye
   //--------------------------------
   // Init saved data
   reset(iX, iY);
@@ -598,9 +597,7 @@ void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
   if (!isCity())
   {
-    //GC.getGameINLINE().logMsg("  culture  1");
     setOwner(calculateCulturalOwner(), bBumpUnits, bUpdatePlotGroups);
-    //GC.getGameINLINE().logMsg("  culture  2");
   }
 }
 
@@ -845,8 +842,6 @@ void CvPlot::verifyUnitValidPlot()
 {
   PROFILE_FUNC();
 
-  //GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y - Turn) %d  - %d  %d - %d",getOwner(),getX(),getY(), GC.getGameINLINE().getGameTurn() );
-
   std::vector<CvUnit *> aUnits;
   CLLNode<IDInfo> *pUnitNode = headUnitNode();
   while (pUnitNode != NULL)
@@ -867,11 +862,8 @@ void CvPlot::verifyUnitValidPlot()
     bool bMovedAlready = false; // 3MiroBugfix
 
     // 3MiroDebug: start
-    //GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y ) %d  - %d  %d  Unit Type %d",getOwner(),getX(),getY(),pLoopUnit->getUnitType() );
     //if (  (pLoopUnit->canEnterArea(getTeam(), area()))   ){
-    //	GC.getGameINLINE().logMsg("  DEBUG Can enter ");
     //}else{
-    //	GC.getGameINLINE().logMsg("  DEBUG Cannot enter ");
     //};
     // 3MiroDebug: end
 
@@ -3449,10 +3441,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
         //Rhye - start (core territories of modern civs are not invaded by old civs' culture dominance)
         // 3Miro: Cultural domination, change for some civs, maybe will make the check only later in thegame
         //if (settlersMaps[iI][EARTH_Y - 1 - getY_INLINE()][getX_INLINE()] >= 500)
-        //GC.getGameINLINE().logMsg("  Before check ");
         //if ( settlersMaps == NULL )
-        //	GC.getGameINLINE().logMsg("  Map is NULL ");
-        //GC.getGameINLINE().logMsg("  afterCheck ");
         //if ( getSettlersMaps(iI,EARTH_Y - 1 - getY_INLINE(),getX_INLINE()) >= 500)
         //if ( getSettlersMaps(iI,EARTH_Y - 1 - getY_INLINE(),getX_INLINE(),"calculateCulturalOwner") >= 500)
         //	if (!isCity())
@@ -5682,7 +5671,6 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 FeatureTypes CvPlot::getFeatureType() const
 {
-  //GC.getGameINLINE().logMsg("CvPlot getFeatureType HERE 1 " ); // 3Miro: don't do this, creates a log in size a few GB
   return (FeatureTypes)m_eFeatureType;
 }
 
@@ -7080,7 +7068,6 @@ int CvPlot::getCulture(PlayerTypes eIndex) const
   }
 
   // 3MiroPope: the pope does not have culture beyond Rome's BFC
-  //GC.getGameINLINE().logMsg( "  Culture: %d %d %d %d ",eIndex,PAPAL_PLAYER,getX(),getY() );
   /*if ( eIndex == PAPAL_PLAYER ){
 		CvCity *pCity = GET_PLAYER(eIndex).getCapitalCity();
 		if ( (pCity != NULL) && ((abs( getX() - pCity ->getX() ) > 2) || ( abs( getY() - pCity ->getY() ) > 2 ) ) ){
@@ -7184,36 +7171,28 @@ int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups)
 {
   PROFILE_FUNC();
-  //GC.getGameINLINE().logMsg("  plot  1");
 
   CvCity *pCity;
 
   FAssertMsg(eIndex >= 0, "iIndex is expected to be non-negative (invalid Index)");
   FAssertMsg(eIndex < MAX_PLAYERS, "iIndex is expected to be within maximum bounds (invalid Index)");
-  //GC.getGameINLINE().logMsg("  plot  2");
 
   if (getCulture(eIndex) != iNewValue)
   {
-    //GC.getGameINLINE().logMsg("  plot  3");
-    //GC.getGameINLINE().logMsg("  Change for %d %d iNewValue: %d ",getX_INLINE(),getY_INLINE(),iNewValue);
     if (NULL == m_aiCulture)
     {
-      //GC.getGameINLINE().logMsg("  plot  4");
       m_aiCulture = new int[MAX_PLAYERS];
       for (int iI = 0; iI < MAX_PLAYERS; ++iI)
       {
         m_aiCulture[iI] = 0;
       }
-      //GC.getGameINLINE().logMsg("  plot  5");
     }
 
     // 3MiroProvinces: Culture modifiers and immunity
     int iChange = iNewValue - getCulture(eIndex);
-    //GC.getGameINLINE().logMsg("  Change for %d %d chage: %d ",getX_INLINE(),getY_INLINE(),iChange);
     if (iChange > 2)
     {
       int iProvince = provinceMap[getY_INLINE() * EARTH_X + getX_INLINE()];
-      //GC.getGameINLINE().logMsg("  Change for %d %d Province: %d ",getX_INLINE(),getY_INLINE(),iProvince);
       if ((iProvince > -1) && (iProvince < MAX_NUM_PROVINCES))
       {
         //if ( iCultureImmune[iProvince] > 0 ){
@@ -7224,7 +7203,6 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
         if ((eIndex > -1) && (eIndex < NUM_ALL_PLAYERS_B))
         {
           int iProvinceType = GET_PLAYER(eIndex).getProvinceType(iProvince);
-          //GC.getGameINLINE().logMsg("  Change for %d %d ProvinceType: %d ",getX_INLINE(),getY_INLINE(),iProvinceType);
           if ((iProvinceType > -1) && (iProvinceType < iNumProvinceTypes))
           {
             iChange = (iChange * iModCultureTop[iProvinceType]) / iModCultureBottom[iProvinceType];
@@ -7233,35 +7211,27 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
         };
       };
     };
-    //GC.getGameINLINE().logMsg("  Change for %d %d after iNewValue: %d ",getX_INLINE(),getY_INLINE(),iNewValue);
 
     // 3MiroPAPAL: pope's culture is restricted close to ROME
     if (eIndex == PAPAL_PLAYER)
     {
-      //GC.getGameINLINE().logMsg("   In Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
       CvCity *pPopeCity = GET_PLAYER(eIndex).getCapitalCity();
       //if ( pPopeCity == NULL ){
-      //	GC.getGameINLINE().logMsg("   In Papal - NULL City %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
       //}else{
-      //	GC.getGameINLINE().logMsg("   In Papal - Plot - City %d %d %d %d  ",getX_INLINE(),getY_INLINE(),pPopeCity ->getX(),pPopeCity ->getY()); //Rhye and 3Miro
       //};
       if ((pPopeCity != NULL) &&
           ((abs(getX_INLINE() - pPopeCity->getX()) > 2) || (abs(getY_INLINE() - pPopeCity->getY()) > 2) ||
            (abs(getX() - pPopeCity->getX()) + abs(getY() - pPopeCity->getY()) > 3)))
       {
-        //GC.getGameINLINE().logMsg("   In Papal - Null culture %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
-        //GC.getGameINLINE().logMsg("   In Papal - Null results %d %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),abs( getX_INLINE() - pPopeCity ->getY() ),abs( getX() - pPopeCity ->getX() ) + abs( getY() - pPopeCity ->getY() )); //Rhye and 3Miro
         m_aiCulture[eIndex] = 0;
       }
       else
       {
-        //GC.getGameINLINE().logMsg("   In Papal - Add culture %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),getY_INLINE()); //Rhye and 3Miro
         m_aiCulture[eIndex] = iNewValue;
       };
     }
     else
     {
-      //GC.getGameINLINE().logMsg("   Not in Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
       // 3Miro: Nasty bug expelling units from territory on flip,
       //			now if a plot is in someone's core, nobody gets culture there for 3 turns after spawn
       /*if ( withinSpawnDate ){
@@ -7309,24 +7279,18 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
     // 3MiroPAPAL: end of section
     //m_aiCulture[eIndex] = iNewValue;
 
-    //GC.getGameINLINE().logMsg("  plot  6");
     FAssert(getCulture(eIndex) >= 0);
 
     if (bUpdate)
     {
-      //GC.getGameINLINE().logMsg("  plot  7");
       updateCulture(true, bUpdatePlotGroups);
-      //GC.getGameINLINE().logMsg("  plot  8");
     }
 
-    //GC.getGameINLINE().logMsg("  plot  9");
     pCity = getPlotCity();
 
     if (pCity != NULL)
     {
-      //GC.getGameINLINE().logMsg("  plot  10");
       pCity->AI_setAssignWorkDirty(true);
-      //GC.getGameINLINE().logMsg("  plot  11");
     }
   }
 }

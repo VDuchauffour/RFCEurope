@@ -432,7 +432,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
   bool bValid;
   int iPass;
   int iLoop;
-  //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 1 %d", getID()); // 3Miro
 
   if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
   {
@@ -474,7 +473,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
   /* BETTER_BTS_AI_MOD                       END                                                  */
   /************************************************************************************************/
 
-  //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 2 %d", getID()); // 3Miro
   CvPlot *pLastUpgradePlot = NULL;
   for (iPass = 0; iPass < 4; iPass++)
   {
@@ -486,14 +484,12 @@ void CvPlayerAI::AI_doTurnUnitsPost()
       switch (iPass)
       {
       case 0:
-        //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 3 %d", getID()); // 3Miro
         if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
         {
           bValid = true;
         }
         break;
       case 1:
-        //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 4 %d", getID()); // 3Miro
         pUnitPlot = pLoopUnit->plot();
         if (pUnitPlot->isCity())
         {
@@ -573,7 +569,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
       if (bValid)
       {
-        //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 7 %d", getID()); // 3Miro
         bool bKilled = false;
         if (!bNoDisband)
         {
@@ -608,11 +603,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
                     /************************************************************************************************/ // 3Miro Original
                     /*if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
 									{
-										//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 8 %d", getID()); // 3Miro
 										if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, getID()) > 1)
 									*/
                     {
-                      //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 9 %d", getID()); // 3Miro
                       pLoopUnit->kill(false);
                       bKilled = true;
                       pLastUpgradePlot = NULL;
@@ -625,20 +618,16 @@ void CvPlayerAI::AI_doTurnUnitsPost()
         }
         if (!bKilled)
         {
-          //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 10 %d", getID()); // 3Miro
           pLoopUnit->AI_upgrade(); // CAN DELETE UNIT!!!
         }
       }
     }
   }
-  //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 11 %d", getID()); // 3Miro
 
   if (isBarbarian())
   {
-    //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 12 %d", getID()); // 3Miro
     return;
   }
-  //GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 13 %d", getID()); // 3Miro
 }
 
 void CvPlayerAI::AI_doPeace()
@@ -6068,14 +6057,11 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
   };
 
   // 3MiroSchism: if before the schism date, the two don't hate each other
-  //GC.getGameINLINE().logMsg("  Schism: Players (%d,%d),  religions (%d,%d), turn %d",getID(),ePlayer,getStateReligion(),GET_PLAYER(ePlayer).getStateReligion(),GC.getGameINLINE().getGameTurn() );
-  //GC.getGameINLINE().logMsg("  Schism: A, B, Year = %d %d %d ",SCHISM_A, SCHISM_B, SCHISM_YEAR );
   if (GC.getGameINLINE().getGameTurn() < SCHISM_YEAR)
   {
     if (((getStateReligion() == SCHISM_A) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_B)) ||
         ((getStateReligion() == SCHISM_B) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_A)))
     {
-      //GC.getGameINLINE().logMsg(" Still Friends ");
       iAttitude = 0;
     };
   };
@@ -11009,8 +10995,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
   iValue = GC.getGameINLINE().countReligionLevels(eReligion);
 
   //if ( getID() == 18 ){
-  //	GC.getGameINLINE().logMsg(" ---------------------- ");
-  //	GC.getGameINLINE().logMsg(" Religion Levels HS %d  %d",eReligion,iValue);
   //};
 
   // 3MiroFaith: let the AI be aware of the Faith Points Accumulated
@@ -11026,7 +11010,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
   // 3MiroFaith: end
 
   //if ( getID() == 18 ){
-  //	GC.getGameINLINE().logMsg(" Added Faith HS %d  %d",eReligion,iValue);
   //};
 
   int iLoop;
@@ -11068,7 +11051,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
   // 3MiroUP: end
 
   //if ( getID() == 18 ){
-  //	GC.getGameINLINE().logMsg(" Before HS %d  %d",eReligion,iValue);
   //};
 
   CvCity *pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
@@ -11123,7 +11105,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
   }
 
   //if ( getID() == 18 ){
-  //	GC.getGameINLINE().logMsg(" After HS %d  %d",eReligion,iValue);
   //};
 
   return iValue;
@@ -18586,12 +18567,9 @@ int CvPlayerAI::AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDo
   int iBestUnitAIStrength = 0;
   int iBestOtherStrength = 0;
 
-  //GC.getGameINLINE().logMsg("   city AIViability in "); //Rhye and 3Miro
   for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
   {
-    //GC.getGameINLINE().logMsg("   city AIViability loop "); //Rhye and 3Miro
     UnitTypes eLoopUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)iI).getDefaultUnitIndex();
-    //GC.getGameINLINE().logMsg("   city AIViability get Unit "); //Rhye and 3Miro
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                       01/15/09                                jdog5000      */
     /*                                                                                              */
@@ -18604,28 +18582,20 @@ int CvPlayerAI::AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDo
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                        END                                                  */
     /************************************************************************************************/
-    //GC.getGameINLINE().logMsg("   city AIViability get Info "); //Rhye and 3Miro
     if (kUnitInfo.getDomainType() == eDomain)
     {
-      //GC.getGameINLINE().logMsg("   city AIViability inside IF "); //Rhye and 3Miro
       TechTypes eTech = (TechTypes)kUnitInfo.getPrereqAndTech();
-      //GC.getGameINLINE().logMsg("   city AIViability get Tech "); //Rhye and 3Miro
       if ((m_aiUnitClassWeights[iI] > 0) || GET_TEAM(getTeam()).isHasTech((eTech)))
       {
-        //GC.getGameINLINE().logMsg("   city AIViability inside IF "); //Rhye and 3Miro
         if (kUnitInfo.getUnitAIType(eUnitAI))
         {
-          //GC.getGameINLINE().logMsg("   city AIViability inside IF "); //Rhye and 3Miro
           iBestUnitAIStrength = std::max(iBestUnitAIStrength, kUnitInfo.getCombat());
         }
-        //GC.getGameINLINE().logMsg("   city AIViability outside IF "); //Rhye and 3Miro
         iBestOtherStrength = std::max(iBestOtherStrength, kUnitInfo.getCombat());
-        //GC.getGameINLINE().logMsg("   city AIViability get Best Order "); //Rhye and 3Miro
       }
     }
   }
 
-  //GC.getGameINLINE().logMsg("   city AIViability out "); //Rhye and 3Miro
   return (100 * iBestUnitAIStrength) / std::max(1, iBestOtherStrength);
 }
 

@@ -1110,7 +1110,6 @@ void CyUnit::setXYOld(int iX, int iY)
 {
   if (m_pUnit)
   {
-    //GC.getGameINLINE().logMsg(" Call by Rhye %d %d  %d ",getID(),getUnitType(),getOwner());
     return m_pUnit->setXY(iX, iY);
   };
 }

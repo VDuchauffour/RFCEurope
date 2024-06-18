@@ -75,8 +75,6 @@ std::wstring CyPlayer::getNewCityName()
 CyUnit *CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI,
                            DirectionTypes eFacingDirection)
 {
-  //GC.getGameINLINE().logMsg(" CyPlayer in " );
-  //GC.getGameINLINE().logMsg(" CyPlayer HERE %d %d %d %d ",iIndex, m_pPlayer->getID(),iX, iY );
   return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes)iIndex, iX, iY, eUnitAI, eFacingDirection)) : NULL;
 }
 

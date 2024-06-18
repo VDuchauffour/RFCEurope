@@ -95,7 +95,6 @@ CvTeam::~CvTeam()
 
 void CvTeam::init(TeamTypes eID)
 {
-  //GC.getGameINLINE().logMsg("team init"); //Rhye
   //--------------------------------
   // Init saved data
   reset(eID);
@@ -236,13 +235,11 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
   if (!bConstructorCall)
   {
     //3MiroProjects - Begin
-    //GC.getGameINLINE().logMsg(" HERE 1");
     m_paiFreeBonus = new int[GC.getNumBonusInfos()];
     for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
     {
       m_paiFreeBonus[iI] = 0;
     }
-    //GC.getGameINLINE().logMsg(" HERE 2");
     //3MiroProjects - End
 
     FAssertMsg(m_abCanLaunch == NULL, "about to leak memory, CvTeam::m_abCanLaunch");
@@ -2960,23 +2957,18 @@ int CvTeam::getResearchCostUntimely(TechTypes eTech) const
   //iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent(); //Rhye
   iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercentByID(getLeaderID()); //Rhye
   iCost /= 100;
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 2  %d  %d ",getID(),iCost);
 
   iCost *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getResearchPercent();
   iCost /= 100;
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 3 %d  %d ",getID(),iCost);
 
   iCost *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
   iCost /= 100;
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 4 %d  %d ",getID(),iCost);
 
   iCost *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getResearchPercent();
   iCost /= 100;
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 5 %d  %d ",getID(),iCost);
 
   iCost *= std::max(0, ((GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * (getNumMembers() - 1)) + 100));
   iCost /= 100;
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 6 %d  %d ",getID(),iCost);
 
   //Rhye - start penalty for large / giga empires
   // 3Miro: Number of cities penalty
@@ -2989,7 +2981,6 @@ int CvTeam::getResearchCostUntimely(TechTypes eTech) const
     iCost *= 100 + iMultiplier * (iNumCities - 10);
     iCost /= 100;
   }
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7  %d  %d ",getID(),iCost);
   //Rhye - end
 
   //Rhye - start
@@ -3007,7 +2998,6 @@ int CvTeam::getResearchCostUntimely(TechTypes eTech) const
       }
     }
   }
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 8 %d  %d ",getID(),iCost);
   //Rhye - end
 
   return std::max(1, iCost);
@@ -3054,7 +3044,6 @@ int CvTeam::getResearchCostForTurn(TechTypes eTech, int iTurn) const
     iCost *= 100 + iMultiplier * (iNumCities - 10);
     iCost /= 100;
   }
-  //if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7  %d  %d ",getID(),iCost);
   //Rhye - end
 
   //Rhye - start
@@ -4748,8 +4737,6 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
   FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
   FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-  //GC.getGameINLINE().logMsg("  changeProject Called, Project %d  change %d ",eIndex,iChange);
-
   if (iChange != 0)
   {
     GC.getGameINLINE().incrementProjectCreatedCount(eIndex, iChange);
@@ -4806,7 +4793,6 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
       {
         changeFreeBonus((BonusTypes)iI, iChange * kProject.getFreeBonus((BonusTypes)iI));
         pOneCapitolCity->changeFreeBonus((BonusTypes)iI, iChange * kProject.getFreeBonus((BonusTypes)iI));
-        //GC.getGameINLINE().logMsg("  resource %d  amount %d ",iI, kProject.getFreeBonus( (BonusTypes) iI ) );
         //pOneCapitolCity ->plot() ->getPlotGroup( pOneCapitolCity ->getOwner() ) ->changeNumBonuses((BonusTypes) iI,iChange * kProject.getFreeBonus( (BonusTypes) iI ) );
       };
       //pOneCapitolCity ->plot() ->updatePlotGroupBonus(true);
@@ -6468,19 +6454,13 @@ void CvTeam::setEspionagePointsAgainstTeam(TeamTypes eIndex, int iValue)
   FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
   FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-  //GC.getGameINLINE().logMsg("         ==== SetPoints 1 ");
   if (iValue != getEspionagePointsAgainstTeam(eIndex))
   {
-    //GC.getGameINLINE().logMsg("         ==== SetPoints 2 ");
     m_aiEspionagePointsAgainstTeam[eIndex] = iValue;
-    //GC.getGameINLINE().logMsg("         ==== SetPoints 3 ");
 
     verifySpyUnitsValidPlot();
-    //GC.getGameINLINE().logMsg("         ==== SetPoints 4 ");
     GET_TEAM(eIndex).verifySpyUnitsValidPlot();
-    //GC.getGameINLINE().logMsg("         ==== SetPoints 5 ");
   }
-  //GC.getGameINLINE().logMsg("         ==== SetPoints 6 ");
 }
 
 void CvTeam::changeEspionagePointsAgainstTeam(TeamTypes eIndex, int iChange)
@@ -6488,9 +6468,7 @@ void CvTeam::changeEspionagePointsAgainstTeam(TeamTypes eIndex, int iChange)
   FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
   FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-  //GC.getGameINLINE().logMsg("        --- Team In ");
   setEspionagePointsAgainstTeam(eIndex, getEspionagePointsAgainstTeam(eIndex) + iChange);
-  //GC.getGameINLINE().logMsg("        --- Team Out ");
 }
 
 int CvTeam::getEspionagePointsEver() const
@@ -6571,7 +6549,6 @@ void CvTeam::verifySpyUnitsValidPlot()
 {
   std::vector<CvUnit *> aUnits;
 
-  //GC.getGameINLINE().logMsg("        ====== First Loop ");
   for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
   {
     CvPlayer &kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
@@ -6581,8 +6558,6 @@ void CvTeam::verifySpyUnitsValidPlot()
       int iLoop;
       for (CvUnit *pUnit = kPlayer.firstUnit(&iLoop); pUnit != NULL; pUnit = kPlayer.nextUnit(&iLoop))
       {
-        //GC.getGameINLINE().logMsg("    ------------- loop %d %d",iPlayer,pUnit->getUnitType() );
-        //GC.getGameINLINE().logMsg("    ------------- loop %d %d",pUnit->plot()->getX(),pUnit->plot()->getY() );
         //PlayerTypes eOwner = pUnit->plot()->getOwnerINLINE();
         PlayerTypes eOwner;
         if ((pUnit != NULL) && (pUnit->plot() != NULL))
@@ -6593,7 +6568,6 @@ void CvTeam::verifySpyUnitsValidPlot()
         {
           eOwner = NO_PLAYER;
         };
-        //GC.getGameINLINE().logMsg("    ------------- loop %d",eOwner);
         if (NO_PLAYER != eOwner)
         {
           if (pUnit->isSpy())
@@ -6604,12 +6578,10 @@ void CvTeam::verifySpyUnitsValidPlot()
             }
           }
         }
-        //GC.getGameINLINE().logMsg("    ------------- loop Out ");
       }
     }
   }
 
-  //GC.getGameINLINE().logMsg("        ====== Second Loop ");
   for (uint i = 0; i < aUnits.size(); ++i)
   {
     aUnits[i]->jumpToNearestValidPlot();

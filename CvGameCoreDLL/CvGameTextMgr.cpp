@@ -11113,7 +11113,6 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
   };
 
   // 3Miro: Prereq Bonus
-  //GC.getGameINLINE().logMsg(" Project: %d  Bonus: %d ",eProject,kProject.getPrereqBonus());
   if (kProject.getPrereqBonus() > -1)
   {
     szBuffer.append(NEWLINE);
@@ -13998,7 +13997,6 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer &szBuffer, PlayerTypes ePl
     }
 
     iAttitudeChange = kPlayer.AI_getSameReligionAttitude(eTargetPlayer);
-    //GC.getGameINLINE().logMsg( "  Shows Same Rel iAttitudeChange = %d ",iAttitudeChange);
     if ((iPass == 0) ? (iAttitudeChange > 0) : (iAttitudeChange < 0))
     {
       szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
@@ -14009,7 +14007,6 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer &szBuffer, PlayerTypes ePl
     }
 
     iAttitudeChange = kPlayer.AI_getDifferentReligionAttitude(eTargetPlayer);
-    //GC.getGameINLINE().logMsg( "  Shows Rival Rel iAttitudeChange = %d ",iAttitudeChange);
     if ((iPass == 0) ? (iAttitudeChange > 0) : (iAttitudeChange < 0))
     {
       szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,

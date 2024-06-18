@@ -108,7 +108,6 @@ void CvGame::updateColoredPlots()
   pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
   // 3MiroProvince: if some city is selected, but I am not sure what
-  //GC.getGameINLINE().logMsg(" Here ");
   //NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
   //mcolor.a = 0.5f;
   //gDLL->getEngineIFace()->fillAreaBorderPlot(44, 47, mcolor, AREA_BORDER_LAYER_RANGED);

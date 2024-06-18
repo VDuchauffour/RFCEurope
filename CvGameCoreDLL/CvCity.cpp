@@ -158,7 +158,6 @@ CvCity::~CvCity()
 
 void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, bool bUpdatePlotGroups)
 {
-  //GC.getGameINLINE().logMsg("city init"); //Rhye
 
   CvPlot *pAdjacentPlot;
   CvPlot *pPlot;
@@ -182,39 +181,28 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   //--------------------------------
   // Init saved data
   reset(iID, eOwner, pPlot->getX_INLINE(), pPlot->getY_INLINE());
-  //GC.getGameINLINE().logMsg("  city init  2");
 
   //--------------------------------
   // Init non-saved data
   setupGraphical();
-  //GC.getGameINLINE().logMsg("  city init  2.1");
 
   //--------------------------------
   // Init other game data
   setName(GET_PLAYER(getOwnerINLINE()).getNewCityName());
-  //GC.getGameINLINE().logMsg("  city init  2.1.1");
 
   setEverOwned(getOwnerINLINE(), true);
-  //GC.getGameINLINE().logMsg("  city init  2.1.2");
 
   updateCultureLevel(false);
-  //GC.getGameINLINE().logMsg("  city init  2.1.3");
 
   if (pPlot->getCulture(getOwnerINLINE()) < GC.getDefineINT("FREE_CITY_CULTURE"))
   {
-    //GC.getGameINLINE().logMsg("  city init  2.1.4");
     pPlot->setCulture(getOwnerINLINE(), GC.getDefineINT("FREE_CITY_CULTURE"), bBumpUnits, false);
-    //GC.getGameINLINE().logMsg("  city init  2.1.4.1");
   }
-  //GC.getGameINLINE().logMsg("  city init  2.1.5");
-  //GC.getGameINLINE().logMsg("  CvCity init set owner() %d ",getOwnerINLINE());
   pPlot->setOwner(getOwnerINLINE(), bBumpUnits, false);
   // 3MiroBugfix: removing units again
   //pPlot->verifyUnitValidPlot();
   // 3MiroBugfix: end
-  //GC.getGameINLINE().logMsg("  city init  2.1.5.1");
   pPlot->setPlotCity(this);
-  //GC.getGameINLINE().logMsg("  city init  2.2");
 
   for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
   {
@@ -229,7 +217,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
       pAdjacentPlot->updateCulture(bBumpUnits, false);
     }
   }
-  //GC.getGameINLINE().logMsg("  city init  2.3");
 
   for (iI = 0; iI < MAX_TEAMS; iI++)
   {
@@ -244,7 +231,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   argsList.add(iY);
   long lResult = 0;
   gDLL->getPythonIFace()->callFunction(PYGameModule, "citiesDestroyFeatures", argsList.makeFunctionArgs(), &lResult);
-  //GC.getGameINLINE().logMsg("city init  3");
 
   if (lResult == 1)
   {
@@ -269,7 +255,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   }
 
   changeMilitaryHappinessUnits(pPlot->plotCount(PUF_isMilitaryHappiness));
-  //GC.getGameINLINE().logMsg("city init  4");
 
   for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
   {
@@ -293,7 +278,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   setGameTurnFounded(GC.getGameINLINE().getGameTurn());
   //setGameTurnAcquired(196); //Rhye
   setGameTurnAcquired(GC.getGameINLINE().getGameTurn()); //Rhye - infinite loop????
-  //GC.getGameINLINE().logMsg("city init  5");
 
   // 3Miro: initial population in a city
   changePopulation(cityInitPop[getOwnerINLINE()]);
@@ -304,21 +288,17 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   changeAirUnitCapacity(GC.getDefineINT("CITY_AIR_UNIT_CAPACITY"));
 
   updateFreshWaterHealth();
-  //GC.getGameINLINE().logMsg("  init city health ");
   updateFeatureHealth();
   updateFeatureHappiness();
   updatePowerHealth();
-  //GC.getGameINLINE().logMsg("   init city health out");
 
   GET_PLAYER(getOwnerINLINE()).updateMaintenance();
-  //GC.getGameINLINE().logMsg("  init city updateMaintenance ");
 
   GC.getMapINLINE().updateWorkingCity();
 
   GC.getGameINLINE().AI_makeAssignWorkDirty();
 
   GET_PLAYER(getOwnerINLINE()).setFoundedFirstCity(true);
-  //GC.getGameINLINE().logMsg("  init city setFoundedFirstCity ");
 
   if (GC.getGameINLINE().isFinalInitialized())
   {
@@ -343,7 +323,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
       }
     }
   }
-  //GC.getGameINLINE().logMsg("  init city isFinalInitialized ");
 
   // 3Miro: free buildings per player
   for (int i = 0; i < NUM_BUILDINGS; i++)
@@ -356,16 +335,13 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
   };
 
   updateEspionageVisibility(false);
-  //GC.getGameINLINE().logMsg("  init city updateEspionageVisibility ");
 
   if (bUpdatePlotGroups)
   {
     GC.getGameINLINE().updatePlotGroups();
   }
-  //GC.getGameINLINE().logMsg("  init city PlotGroups ");
 
   AI_init();
-  //GC.getGameINLINE().logMsg("  init city initOut ");
 }
 
 void CvCity::uninit()
@@ -3873,7 +3849,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
     };
     if (GC.getBuildingInfo(eBuilding).getBombardImmuneDefense() > 0)
     {
-      //GC.getGameINLINE().logMsg(" Change in Bombard Immune: %d",GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
       chnageBombImmuneDefense(iChange * GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
     };
     if (GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() > 0)
@@ -7232,7 +7207,6 @@ int CvCity::getDefenseModifier(bool bIgnoreBuilding) const
 
   // 3MiroBomb
   //if ( getX() == 44 && getY() == 46 ){
-  //	GC.getGameINLINE().logMsg(" Frances Extra Defense: %d",getBombImmuneDefense() );
   //};
   return ((getTotalDefense(bIgnoreBuilding) * (GC.getMAX_CITY_DEFENSE_DAMAGE() - getDefenseDamage())) /
           GC.getMAX_CITY_DEFENSE_DAMAGE()) +
@@ -11133,7 +11107,6 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 {
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder in "); //Rhye and 3Miro
   CLLNode<OrderData> *pOrderNode;
   CvUnit *pUnit;
   CvPlot *pRallyPlot;
@@ -11188,29 +11161,23 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
   eConstructBuilding = NO_BUILDING;
   eCreateProject = NO_PROJECT;
 
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder before switch "); //Rhye and 3Miro
   switch (pOrderNode->m_data.eOrderType)
   {
   case ORDER_TRAIN:
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train "); //Rhye and 3Miro
     eTrainUnit = ((UnitTypes)(pOrderNode->m_data.iData1));
     eTrainAIUnit = ((UnitAITypes)(pOrderNode->m_data.iData2));
     FAssertMsg(eTrainUnit != NO_UNIT, "eTrainUnit is expected to be assigned a valid unit type");
     FAssertMsg(eTrainAIUnit != NO_UNITAI, "eTrainAIUnit is expected to be assigned a valid unit AI type");
 
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 1"); //Rhye and 3Miro
     GET_PLAYER(getOwnerINLINE())
         .changeUnitClassMaking(((UnitClassTypes)(GC.getUnitInfo(eTrainUnit).getUnitClassType())), -1);
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 2"); //Rhye and 3Miro
 
     area()->changeNumTrainAIUnits(getOwnerINLINE(), eTrainAIUnit, -1);
     GET_PLAYER(getOwnerINLINE()).AI_changeNumTrainAIUnits(eTrainAIUnit, -1);
 
     if (bFinish)
     {
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 3"); //Rhye and 3Miro
       iProductionNeeded = getProductionNeeded(eTrainUnit);
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 4"); //Rhye and 3Miro
 
       // max overflow is the value of the item produced (to eliminate prebuild exploits)
       iOverflow = getUnitProduction(eTrainUnit) - iProductionNeeded;
@@ -11219,7 +11186,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
           std::max(iProductionNeeded,
                    getProductionDifference(getProductionNeeded(), getProduction(), 0, isFoodProduction(), false));
       iOverflow = std::min(iMaxOverflow, iOverflow);
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 5"); //Rhye and 3Miro
       if (iOverflow > 0)
       {
         changeOverflowProduction(iOverflow, getProductionModifier(eTrainUnit));
@@ -11230,14 +11196,10 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
           std::max(0, iOverflow - iMaxOverflowForGold) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100;
       if (iProductionGold > 0)
       {
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 6"); //Rhye and 3Miro
         GET_PLAYER(getOwnerINLINE()).changeGold(iProductionGold);
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 7"); //Rhye and 3Miro
       }
 
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 8"); //Rhye and 3Miro
       pUnit = GET_PLAYER(getOwnerINLINE()).initUnit(eTrainUnit, getX_INLINE(), getY_INLINE(), eTrainAIUnit);
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 9"); //Rhye and 3Miro
       FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 
       pUnit->finishMoves();
@@ -11251,7 +11213,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
         pUnit->getGroup()->pushMission(MISSION_MOVE_TO, pRallyPlot->getX_INLINE(), pRallyPlot->getY_INLINE());
       }
 
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 10"); //Rhye and 3Miro
       if (isHuman())
       {
         if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_START_AUTOMATED))
@@ -11265,9 +11226,7 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
         }
       }
 
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 11"); //Rhye and 3Miro
       CvEventReporter::getInstance().unitBuilt(this, pUnit);
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Train 12"); //Rhye and 3Miro
 
       if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)
       {
@@ -11280,7 +11239,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
     break;
 
   case ORDER_CONSTRUCT:
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Construct "); //Rhye and 3Miro
     eConstructBuilding = ((BuildingTypes)(pOrderNode->m_data.iData1));
 
     GET_PLAYER(getOwnerINLINE())
@@ -11325,21 +11283,16 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
     break;
 
   case ORDER_CREATE:
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create "); //Rhye and 3Miro
     eCreateProject = ((ProjectTypes)(pOrderNode->m_data.iData1));
 
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 1"); //Rhye and 3Miro
     GET_TEAM(getTeam()).changeProjectMaking(eCreateProject, -1);
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 2"); //Rhye and 3Miro
 
     if (bFinish)
     {
       // Event reported to Python before the project is built, so that we can show the movie before awarding free techs, for example
       CvEventReporter::getInstance().projectBuilt(this, eCreateProject);
 
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 3"); //Rhye and 3Miro
       GET_TEAM(getTeam()).changeProjectCount(eCreateProject, 1);
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 4"); //Rhye and 3Miro
 
       if (GC.getProjectInfo(eCreateProject).isSpaceship())
       {
@@ -11350,7 +11303,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
         {
           if (isHuman())
           {
-            //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 7"); //Rhye and 3Miro
             CvPopupInfo *pInfo = NULL;
 
             if (GC.getGameINLINE().isNetworkMultiPlayer())
@@ -11368,7 +11320,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
           }
           else
           {
-            //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 9"); //Rhye and 3Miro
             GET_PLAYER(getOwnerINLINE()).AI_launch(eVictory);
           }
         }
@@ -11389,12 +11340,9 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 
         if (needsArtType)
         {
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 10"); //Rhye and 3Miro
           int defaultArtType = GET_TEAM(getTeam()).getProjectDefaultArtType(eCreateProject);
           int projectCount = GET_TEAM(getTeam()).getProjectCount(eCreateProject);
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 11"); //Rhye and 3Miro
           GET_TEAM(getTeam()).setProjectArtType(eCreateProject, projectCount - 1, defaultArtType);
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 12"); //Rhye and 3Miro
         }
       }
 
@@ -11428,7 +11376,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
     FAssertMsg(false, "pOrderNode->m_data.eOrderType is not a valid option");
     break;
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder switch out "); //Rhye and 3Miro
 
   if (pOrderNode == headOrderQueueNode())
   {
@@ -11468,22 +11415,16 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
     {
       if (!isHuman() || isProductionAutomated())
       {
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder before AI chose "); //Rhye and 3Miro
         AI_chooseProduction();
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder after AI chose "); //Rhye and 3Miro
       }
       else
       {
         if (bWasFoodProduction)
         {
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Food in "); //Rhye and 3Miro
           AI_assignWorkingPlots();
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Food out "); //Rhye and 3Miro
         }
 
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder choose prod in "); //Rhye and 3Miro
         chooseProduction(eTrainUnit, eConstructBuilding, eCreateProject, bFinish);
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder choose prod out "); //Rhye and 3Miro
 
         bMessage = true;
       }
@@ -11553,7 +11494,6 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
       gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder out "); //Rhye and 3Miro
 }
 
 void CvCity::startHeadOrder()
@@ -12034,60 +11974,44 @@ void CvCity::doProduction(bool bAllowNoProduction)
   //Speed: End Modify
   //Rhye - end
 
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction in  coords: %d %d ",getX(),getY()); //Rhye and 3Miro
   if (!isHuman() || isProductionAutomated())
   {
     if (!isProduction() || isProductionProcess() || AI_isChooseProductionDirty())
     {
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction AI Chose in "); //Rhye and 3Miro
       AI_chooseProduction();
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction AI Chose out "); //Rhye and 3Miro
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction if1  "); //Rhye and 3Miro
 
   if (!bAllowNoProduction && !isProduction())
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction return1 "); //Rhye and 3Miro
     return;
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction if2 "); //Rhye and 3Miro
 
   if (isProductionProcess())
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction return2 "); //Rhye and 3Miro
     return;
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction if3 "); //Rhye and 3Miro
 
   if (isDisorder())
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction disorder "); //Rhye and 3Miro
     return;
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction if4 "); //Rhye and 3Miro
 
   if (isProduction())
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction if "); //Rhye and 3Miro
     changeProduction(getCurrentProductionDifference(false, true));
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction out Change "); //Rhye and 3Miro
     setOverflowProduction(0);
     setFeatureProduction(0);
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction set Overflows "); //Rhye and 3Miro
 
     if (getProduction() >= getProductionNeeded())
     {
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction popOrder "); //Rhye and 3Miro
       popOrder(0, true, true);
     }
   }
   else
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction if else "); //Rhye and 3Miro
     changeOverflowProduction(getCurrentProductionDifference(false, false), getProductionModifier());
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction out "); //Rhye and 3Miro
 }
 
 void CvCity::doDecay()

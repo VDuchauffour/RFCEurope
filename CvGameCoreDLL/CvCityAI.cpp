@@ -66,18 +66,14 @@ CvCityAI::~CvCityAI()
 void CvCityAI::AI_init()
 {
   AI_reset();
-  //GC.getGameINLINE().logMsg("     AIinit city reset ");
 
   //--------------------------------
   // Init other game data
   AI_assignWorkingPlots();
-  //GC.getGameINLINE().logMsg("     AIinit city working plots ");
 
   AI_updateWorkersNeededHere();
-  //GC.getGameINLINE().logMsg("     AIinit city workers ");
 
   AI_updateBestBuild();
-  //GC.getGameINLINE().logMsg("     AIinit city best build ");
 }
 
 void CvCityAI::AI_uninit()
@@ -593,9 +589,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 void CvCityAI::AI_chooseProduction()
 {
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI in "); //Rhye and 3Miro
   PROFILE_FUNC();
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI PROFILE "); //Rhye and 3Miro
 
   CvArea *pWaterArea;
   UnitTypes eProductionUnit;
@@ -670,7 +664,6 @@ void CvCityAI::AI_chooseProduction()
   // only clear the dirty bit if we actually do a check, multiple items might be queued
   AI_setChooseProductionDirty(false);
 
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 1 "); //Rhye and 3Miro
   // allow python to handle it
   //Rhye - start
   //Speed: Modified by Kael 04/19/2007
@@ -789,7 +782,6 @@ void CvCityAI::AI_chooseProduction()
   {
     iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 2 "); //Rhye and 3Miro
 
   if (iNumCitiesInArea > 2)
   {
@@ -868,19 +860,16 @@ void CvCityAI::AI_chooseProduction()
       return;
     }
 
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI Special in "); //Rhye and 3Miro
     if (AI_chooseUnit(UNITAI_CITY_SPECIAL))
     {
       return;
     }
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI Special out "); //Rhye and 3Miro
 
     if (AI_chooseUnit(UNITAI_ATTACK))
     {
       return;
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 3 "); //Rhye and 3Miro
 
   if (isBarbarian())
   {
@@ -1022,7 +1011,6 @@ void CvCityAI::AI_chooseProduction()
       bChooseWorker = true;
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 4 "); //Rhye and 3Miro
 
   int iPercentOfDomination = 0;
   int iOurPopPercent =
@@ -1148,7 +1136,6 @@ void CvCityAI::AI_chooseProduction()
       bChooseWorker = true;
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 5 "); //Rhye and 3Miro
 
   bool bCrushStrategy = kPlayer.AI_isDoStrategy(AI_STRATEGY_CRUSH);
   int iNeededFloatingDefenders =
@@ -1273,7 +1260,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 6 "); //Rhye and 3Miro
 
   //opportunistic wonder build (1)
   if (!bDanger && (!hasActiveWorldWonder()) && (kPlayer.getNumCities() <= 3))
@@ -1401,7 +1387,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 7 "); //Rhye and 3Miro
 
   //this is needed to build the cathedrals quickly
   //also very good for giving cultural cities first dibs on wonders
@@ -1513,7 +1498,6 @@ void CvCityAI::AI_chooseProduction()
     FAssertMsg(false, "AI_bestSpreadUnit should provide a valid unit when it returns true");
   }
 
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 8 "); //Rhye and 3Miro
   //int iMaxUnitSpending = (bAggressiveAI ? 7 : 3) + iBuildUnitProb / 3; //Rhye
   int iMaxUnitSpending = 3 + iBuildUnitProb / 3; //Rhye
   if (bAlwaysPeace)
@@ -1559,7 +1543,6 @@ void CvCityAI::AI_chooseProduction()
       FAssert(false);
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 9 "); //Rhye and 3Miro
 
   if (iUnitCostPercentage < (iMaxUnitSpending + 10))
   {
@@ -1684,7 +1667,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 10 "); //Rhye and 3Miro
 
   UnitTypeWeightArray airUnitTypes;
 
@@ -1820,33 +1802,26 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11 "); //Rhye and 3Miro
 
   //Arr.
   if ((pWaterArea != NULL) && !bLandWar && !bAssault)
   {
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.01 "); //Rhye and 3Miro
     int iPirateCount = kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_PIRATE_SEA);
     int iNeededPirates = (1 + (pWaterArea->getNumTiles() / std::max(1, 200 - iBuildUnitProb)));
     iNeededPirates *= (20 + iWaterPercent);
     iNeededPirates /= 100;
 
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.02 "); //Rhye and 3Miro
     if (kPlayer.isNoForeignTrade())
     {
       iNeededPirates *= 3;
       iNeededPirates /= 2;
     }
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.03 "); //Rhye and 3Miro
     if (kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_PIRATE_SEA) < iNeededPirates)
     {
-      //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.04 "); //Rhye and 3Miro
       if (kPlayer.AI_calculateUnitAIViability(UNITAI_PIRATE_SEA, DOMAIN_SEA) > 49)
       {
-        //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.05 "); //Rhye and 3Miro
         if (GC.getGameINLINE().getSorenRandNum(100, "AI train pirate") < (iWaterPercent / (1 + iPirateCount)))
         {
-          //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.06 "); //Rhye and 3Miro
           if (AI_chooseUnit(UNITAI_PIRATE_SEA))
           {
             return;
@@ -1855,7 +1830,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.1 "); //Rhye and 3Miro
 
   if (!bLandWar)
   {
@@ -1873,7 +1847,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.2 "); //Rhye and 3Miro
 
   if (iBestSpreadUnitValue > ((iSpreadUnitThreshold * 40) / 100))
   {
@@ -1883,7 +1856,6 @@ void CvCityAI::AI_chooseProduction()
     }
     FAssertMsg(false, "AI_bestSpreadUnit should provide a valid unit when it returns true");
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 11.3 "); //Rhye and 3Miro
 
   if (iTotalFloatingDefenders < iNeededFloatingDefenders)
   {
@@ -1895,7 +1867,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 12 "); //Rhye and 3Miro
 
   int iNumSpies = (kPlayer.AI_totalAreaUnitAIs(pArea, UNITAI_SPY));
   //int iNeededSpies = iNumCitiesInArea / 3; //Rhye
@@ -1992,7 +1963,6 @@ void CvCityAI::AI_chooseProduction()
       }
     }
   }
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 13 "); //Rhye and 3Miro
 
   if (!bLandWar)
   {
@@ -2102,7 +2072,6 @@ void CvCityAI::AI_chooseProduction()
         }
       }
     }
-    //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 14 "); //Rhye and 3Miro
 
     if (getBaseYieldRate(YIELD_PRODUCTION) >= 8)
     {
@@ -2146,7 +2115,6 @@ void CvCityAI::AI_chooseProduction()
     }
   }
 
-  //GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 15 "); //Rhye and 3Miro
   if (AI_chooseProject())
   {
     return;
@@ -7858,7 +7826,6 @@ int CvCityAI::AI_plotValue(CvPlot *pPlot, bool bAvoidGrowth, bool bRemove, bool 
     iValue += 200;
     // 3Miro: upgrade time for the improvemnts is now measured in hundreds (to account for the -50% grows in Civic)
     //if ( (pPlot->getX() == 43)&&(pPlot->getY() == 48) ){
-    //	GC.getGameINLINE().logMsg(" The Cottage plot: upgrade time left %d",pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER));
     //};
     //iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER);
     iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER) / 100;
@@ -9746,7 +9713,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
   {
     iWorkersHave += startingWorkers[getOwnerINLINE()];
   };
-  //GC.getGameINLINE().logMsg("      AIworkers city 1 ");
   for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
   {
     pLoopPlot = getCityIndexPlot(iI);
@@ -9813,7 +9779,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
     }
   }
   //specialists?
-  //GC.getGameINLINE().logMsg("      AIworkers city 2 ");
 
   iUnimprovedWorkedPlotCount += std::min(iUnimprovedUnworkedPlotCount, iWorkedUnimprovableCount) / 2;
 
@@ -9861,7 +9826,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
         }
       }
     }
-    //GC.getGameINLINE().logMsg("      AIworkers city 3 ");
 
     if (iBestPlot != -1)
     {
@@ -9880,13 +9844,11 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
   iWorkersNeeded += (std::max(0, iUnimprovedWorkedPlotCount - 1) * (GET_PLAYER(getOwnerINLINE()).getCurrentEra())) / 3;
 
-  //GC.getGameINLINE().logMsg("      AIworkers city 4 ");
   if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
   {
     iWorkersNeeded *= 3;
     iWorkersNeeded /= 2;
   }
-  //GC.getGameINLINE().logMsg("      AIworkers city 5 ");
 
   if (iWorkersNeeded > 0)
   {
@@ -9915,7 +9877,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
   m_iWorkersNeeded = iWorkersNeeded;
   m_iWorkersHave = iWorkersHave;
-  //GC.getGameINLINE().logMsg("      AIworkers city 6 ");
 }
 
 BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)

@@ -1430,7 +1430,6 @@ void CvMap::calculateAreas()
   // All "ranged" AI units were basically useless (only able to move in their own region): barbs, workers, missionaries/inquisitors, GPs
   /*
 	// 3Miro: I have access to provinces here, we can use them to define Areas
-	//GC.getGameINLINE().logMsg(" Province for Constantinople: %d",provinceMap[ 25 * EARTH_X + 81]);
 
 	CvArea* workArea = addArea();
 	int workAreaID = workArea->getID();

@@ -1303,7 +1303,6 @@ void CvTechInfo::read(FDataStreamBase *stream)
   stream->Read(&m_iGridX);
   stream->Read(&m_iGridY);
   // 3Miro: block research for 10 turns after a tech is discovered
-  //GC.getGameINLINE().logMsg(" Reading TechInfo()");
   //stream->Read(&m_iFirstResearched);
 
   SAFE_DELETE_ARRAY(m_piDomainExtraMoves);
@@ -1380,7 +1379,6 @@ void CvTechInfo::write(FDataStreamBase *stream)
   stream->Write(m_iGridX);
   stream->Write(m_iGridY);
   // 3Miro: block tech trade for 10 turns after a tech is researched
-  //GC.getGameINLINE().logMsg(" Writing TechInfo()");
   //stream->Write(m_iFirstResearched);
 
   stream->Write(NUM_DOMAIN_TYPES, m_piDomainExtraMoves);
@@ -8319,7 +8317,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility *pXML)
   pXML->GetChildXmlValByName(&m_iPaganCulturePerCity, "iPaganCulturePerCity");
   pXML->GetChildXmlValByName(&m_iInterest, "iInterestPerTurn");
   //if ( m_iBombardImmuneDefense > 0 ){
-  //	GC.getGameINLINE().logMsg(" Reding Building BID: %d",m_iBombardImmuneDefense);
   //};
 
   pXML->GetChildXmlValByName(&m_iGreatPeopleRateChange, "iGreatPeopleRateChange");
@@ -10547,7 +10544,6 @@ int CvHandicapInfo::getResearchPercentByID(PlayerTypes pl) const
 
   //if ( researchModifier[4] < 1 ){
   //if ( pl < 6 ){
-  //	GC.getGameINLINE().logMsg(" research: %d  %d",pl,researchPercent );
   //};
 
   // 3MiroUP: Golden Liberty
@@ -15875,7 +15871,6 @@ bool CvProjectInfo::read(CvXMLLoadUtility *pXML)
 
   // 3MiroProjects: read the prereq bonus
   pXML->GetChildXmlValByName(szTextVal, "PBonus");
-  //GC.getGameINLINE().logMsg( " Bonus read:  %s ", szTextVal.c_str() );
   m_iPrereqBonus = pXML->FindInInfoClass(szTextVal);
 
   pXML->GetChildXmlValByName(&m_bIsColony, "bIsColony");                           // 3MiroProjects

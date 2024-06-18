@@ -2249,7 +2249,6 @@ void CvGame::update()
 		}
 		//logMsg("Update in Here 5 iHuman %d",iHuman); //3Miro
 		// 3Miro
-		//GC.getGameINLINE().logMsg(" update getAIAutoPlay() = %d ",getAIAutoPlay());
 		if ( (iHuman > -1) && (iHuman <NUM_ALL_PLAYERS_B) ){
 			if ( startingTurn[iHuman] > 0 ){
 				if ( getGameTurn() == 0 ){
@@ -10151,14 +10150,10 @@ void CvGame::calcLastOwned(){
 			iOwner = plot ->getOwner();
 			if ( (iOwner >= 0)&&(iOwner<NUM_MAJOR_PLAYERS) && ( (plot ->isHills() ) || (plot ->isFlatlands() ) ) ) {
 				//if ( settlersMaps[iOwner][EARTH_Y-y-1][x] < 90 ) lOwnedPlots[iOwner]++;
-				//GC.getGameINLINE().logMsg(" 1");
 				//if ( getSettlersMaps(iOwner,EARTH_Y-y-1,x) < 90 ) lOwnedPlots[iOwner]++;
 				if ( getSettlersMaps(iOwner,EARTH_Y-y-1,x,"calcLastOwned1") < 90 ) lOwnedPlots[iOwner]++;
-				//GC.getGameINLINE().logMsg("2");
 				if ( plot ->isCity() ){
-					//GC.getGameINLINE().logMsg("3");
 					iCityOwner = plot ->getPlotCity() ->getOwner();
-					//GC.getGameINLINE().logMsg("4");
 					for( i = 0; i <NUM_MAJOR_PLAYERS; i++ ){
 						if ( (i!=iCityOwner) && (GET_PLAYER((PlayerTypes)i).isAlive()) && (getGameTurn()>startingTurn[i]+30) ){
 							//if ( (settlersMaps[i][EARTH_Y-x-1][x] >= 400) && MiroBelongToCore( i, x, y ) ){
@@ -10169,7 +10164,6 @@ void CvGame::calcLastOwned(){
 						};
 					};
 				};
-				//GC.getGameINLINE().logMsg(" 5");
 			};
 		};
 	};

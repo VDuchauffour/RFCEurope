@@ -191,11 +191,7 @@ int CvPlotGroup::getNumBonuses(BonusTypes eBonus) const
   // 3MiroProjects: the new free resources should go here
   return m_paiNumBonuses[eBonus];
 
-  //GC.getGameINLINE().logMsg(" Before get Team ");
   int iMod = GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getFreeBonus(eBonus);
-  //GC.getGameINLINE().logMsg(" After get Team ");
-
-  //GC.getGameINLINE().logMsg("  in Plot Group resource %d   original %d   iMod %d ",eBonus,m_paiNumBonuses[eBonus],iMod );
 
   //return (m_paiNumBonuses[eBonus] + iMod);
   //return m_paiNumBonuses[eBonus] + GET_TEAM( GET_PLAYER( getOwner() ).getTeam() ).getFreeBonus( eBonus );
