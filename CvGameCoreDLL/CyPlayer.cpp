@@ -75,8 +75,6 @@ std::wstring CyPlayer::getNewCityName()
 CyUnit *CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI,
                            DirectionTypes eFacingDirection)
 {
-  //GC.getGameINLINE().logMsg(" CyPlayer in " );
-  //GC.getGameINLINE().logMsg(" CyPlayer HERE %d %d %d %d ",iIndex, m_pPlayer->getID(),iX, iY );
   return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes)iIndex, iX, iY, eUnitAI, eFacingDirection)) : NULL;
 }
 
@@ -1252,6 +1250,14 @@ int CyPlayer::getExtraHealth()
   return m_pPlayer ? m_pPlayer->getExtraHealth() : -1;
 }
 
+// BUG - start
+void CyPlayer::changeExtraHealth(int iChange)
+{
+  if (m_pPlayer)
+    m_pPlayer->changeExtraHealth(iChange);
+}
+// BUG - end
+
 int CyPlayer::getBuildingGoodHealth()
 {
   return m_pPlayer ? m_pPlayer->getBuildingGoodHealth() : -1;
@@ -2212,6 +2218,13 @@ void CyPlayer::AI_setExtraGoldTarget(int iNewValue)
   }
 }
 
+// BUG - Refuses to Talk - start
+bool CyPlayer::AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer)
+{
+  return m_pPlayer ? m_pPlayer->AI_isWillingToTalk((PlayerTypes)ePlayer) : false;
+}
+// BUG - Refuses to Talk - end
+
 int CyPlayer::getScoreHistory(int iTurn) const
 {
   return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn) : 0);
@@ -2326,6 +2339,14 @@ void CyPlayer::forcePeace(int iPlayer)
   if (m_pPlayer)
     m_pPlayer->forcePeace((PlayerTypes)iPlayer);
 }
+
+// BUG - Reminder Mod - start
+void CyPlayer::addReminder(int iGameTurn, std::wstring szMessage) const
+{
+  if (m_pPlayer)
+    m_pPlayer->addReminder(iGameTurn, CvWString(szMessage));
+}
+// BUG - Reminder Mod - end
 
 int CyPlayer::getSettlersMaps(int y, int x) //Rhye
 {

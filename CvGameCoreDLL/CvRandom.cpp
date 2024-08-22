@@ -22,7 +22,6 @@ CvRandom::~CvRandom()
 
 void CvRandom::init(unsigned long ulSeed)
 {
-  //GC.getGameINLINE().logMsg("random init"); //Rhye
   //--------------------------------
   // Init saved data
   reset(ulSeed);

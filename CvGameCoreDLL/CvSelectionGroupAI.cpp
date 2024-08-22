@@ -687,10 +687,8 @@ MissionAITypes CvSelectionGroupAI::AI_getMissionAIType()
 
 void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot *pNewPlot, CvUnit *pNewUnit)
 {
-  //GC.getGameINLINE().logMsg(" set mission AI Here 1 "); // 3Miro
   m_eMissionAIType = eNewMissionAI;
 
-  //GC.getGameINLINE().logMsg(" set mission AI Here 2 "); // 3Miro
   if (pNewPlot != NULL)
   {
     m_iMissionAIX = pNewPlot->getX_INLINE();
@@ -702,7 +700,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot *p
     m_iMissionAIY = INVALID_PLOT_COORD;
   }
 
-  //GC.getGameINLINE().logMsg(" set mission AI Here 3 "); // 3Miro
   if (pNewUnit != NULL)
   {
     m_missionAIUnit = pNewUnit->getIDInfo();
@@ -711,7 +708,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot *p
   {
     m_missionAIUnit.reset();
   }
-  //GC.getGameINLINE().logMsg(" set mission AI Here 4 "); // 3Miro
 }
 
 CvUnit *CvSelectionGroupAI::AI_getMissionAIUnit()

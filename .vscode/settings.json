@@ -34,5 +34,9 @@
   "todo-tree.general.tags": ["HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]"],
   "files.exclude": {
     "Autolog": true
+  },
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "cstdlib": "cpp"
   }
 }

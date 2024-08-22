@@ -135,6 +135,11 @@ void CyEnumsPythonInterface()
       .value("INTERFACEMODE_REBASE", INTERFACEMODE_REBASE)
       .value("INTERFACEMODE_PYTHON_PICK_PLOT", INTERFACEMODE_PYTHON_PICK_PLOT)
       .value("INTERFACEMODE_SAVE_PLOT_NIFS", INTERFACEMODE_SAVE_PLOT_NIFS)
+// BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+      .value("INTERFACEMODE_GO_TO_SENTRY", INTERFACEMODE_GO_TO_SENTRY)
+#endif
+      // BUG - Sentry Actions - end
       .value("NUM_INTERFACEMODE_TYPES", NUM_INTERFACEMODE_TYPES);
 
   python::enum_<InterfaceMessageTypes>("InterfaceMessageTypes")
@@ -368,11 +373,40 @@ void CyEnumsPythonInterface()
       .value("WIDGET_GLOBELAYER", WIDGET_GLOBELAYER)
       .value("WIDGET_GLOBELAYER_OPTION", WIDGET_GLOBELAYER_OPTION)
       .value("WIDGET_GLOBELAYER_TOGGLE", WIDGET_GLOBELAYER_TOGGLE)
+
       // Absinthe: new widgets have to be at the end, because the close screen is handled in the EXE which use a hardcoded value instead of the DLL's values
       .value("WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE",
              WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE)                              // Absinthe: mercenary upkeep
       .value("WIDGET_HELP_FINANCE_COLONY_UPKEEP", WIDGET_HELP_FINANCE_COLONY_UPKEEP) // Absinthe: colony upkeep
       .value("WIDGET_HELP_REMOVE", WIDGET_HELP_REMOVE)
+
+      // BUG - Min/Max Commerce Rate - start
+      .value("WIDGET_SET_PERCENT", WIDGET_SET_PERCENT)
+      // BUG - Min/Max Commerce Rate - end
+
+      // BUG - Finance Advisor - start
+      .value("WIDGET_HELP_FINANCE_DOMESTIC_TRADE", WIDGET_HELP_FINANCE_DOMESTIC_TRADE)
+      .value("WIDGET_HELP_FINANCE_FOREIGN_TRADE", WIDGET_HELP_FINANCE_FOREIGN_TRADE)
+      .value("WIDGET_HELP_FINANCE_SPECIALISTS", WIDGET_HELP_FINANCE_SPECIALISTS)
+      // BUG - Finance Advisor - end
+
+      // BUG - Trade Denial - start
+      .value("WIDGET_PEDIA_JUMP_TO_BONUS_TRADE", WIDGET_PEDIA_JUMP_TO_BONUS_TRADE)
+      .value("WIDGET_PEDIA_JUMP_TO_TECH_TRADE", WIDGET_PEDIA_JUMP_TO_TECH_TRADE)
+      // BUG - Trade Denial - end
+
+      // BUG - Foreign Advisor INFO Trade - start
+      .value("WIDGET_TRADE_ROUTES", WIDGET_TRADE_ROUTES)
+      // BUG - Foreign Advisor INFO Trade - end
+
+      // BUG - Food Rate Hover - start
+      .value("WIDGET_FOOD_MOD_HELP", WIDGET_FOOD_MOD_HELP)
+      // BUG - Food Rate Hover - end
+
+      // BUG - Leaderhead Relations - start
+      .value("WIDGET_LEADERHEAD_RELATIONS", WIDGET_LEADERHEAD_RELATIONS)
+      // BUG - Leaderhead Relations - end
+
       .value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES);
 
   python::enum_<ButtonPopupTypes>("ButtonPopupTypes")
@@ -843,6 +877,13 @@ void CyEnumsPythonInterface()
       .value("ACTIVITY_MISSION", ACTIVITY_MISSION)
       .value("ACTIVITY_PATROL", ACTIVITY_PATROL)
       .value("ACTIVITY_PLUNDER", ACTIVITY_PLUNDER)
+  // BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+      .value("ACTIVITY_SENTRY_WHILE_HEAL", ACTIVITY_SENTRY_WHILE_HEAL)
+      .value("ACTIVITY_SENTRY_NAVAL_UNITS", ACTIVITY_SENTRY_NAVAL_UNITS)
+      .value("ACTIVITY_SENTRY_LAND_UNITS", ACTIVITY_SENTRY_LAND_UNITS)
+#endif
+      // BUG - Sentry Actions - end
       .value("NUM_ACTIVITY_TYPES", NUM_ACTIVITY_TYPES);
 
   python::enum_<AutomateTypes>("AutomateTypes")
@@ -890,6 +931,14 @@ void CyEnumsPythonInterface()
       .value("MISSION_INFILTRATE", MISSION_INFILTRATE)
       .value("MISSION_LEAD", MISSION_LEAD)
       .value("MISSION_ESPIONAGE", MISSION_ESPIONAGE)
+  // BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+      .value("MISSION_SENTRY_WHILE_HEAL", MISSION_SENTRY_WHILE_HEAL)
+      .value("MISSION_SENTRY_NAVAL_UNITS", MISSION_SENTRY_NAVAL_UNITS)
+      .value("MISSION_SENTRY_LAND_UNITS", MISSION_SENTRY_LAND_UNITS)
+      .value("MISSION_MOVE_TO_SENTRY", MISSION_MOVE_TO_SENTRY)
+#endif
+      // BUG - Sentry Actions - end
       .value("MISSION_GOLDEN_AGE", MISSION_GOLDEN_AGE)
       .value("MISSION_BUILD", MISSION_BUILD)
       .value("MISSION_BEGIN_COMBAT", MISSION_BEGIN_COMBAT)

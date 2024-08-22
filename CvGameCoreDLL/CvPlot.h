@@ -124,9 +124,15 @@ public:
                           bool bPotential = false) const; // Exposed to Python
 
   bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER,
-                bool bTestVisible = false) const;                                      // Exposed to Python
-  int getBuildTime(BuildTypes eBuild) const;                                           // Exposed to Python
-  int getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra) const;       // Exposed to Python
+                bool bTestVisible = false) const; // Exposed to Python
+  int getBuildTime(BuildTypes eBuild) const;      // Exposed to Python
+
+  // BUG - Partial Builds - start
+  int getBuildTurnsLeft(BuildTypes eBuild, PlayerTypes ePlayer) const;
+  int getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra,
+                        bool bIncludeUnits = true) const; // Exposed to Python
+  // BUG - Partial Builds - end
+
   int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity **ppCity) const; // Exposed to Python
 
   DllExport CvUnit *getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER,
@@ -252,7 +258,14 @@ public:
   }
 #endif
   bool at(int iX, int iY) const; // Exposed to Python
-  int getLatitude() const;       // Exposed to Python
+
+  // BUG - Lat/Long Coordinates - start
+  int calculateMinutes(int iPlotIndex, int iPlotCount, bool bWrap, int iDegreeMin, int iDegreeMax) const;
+  int getLongitudeMinutes() const; // Exposed to Python
+  int getLatitudeMinutes() const;  // Exposed to Python
+  // BUG - Lat/Long Coordinates - end
+
+  int getLatitude() const; // Exposed to Python
   int getFOWIndex() const;
 
   CvArea *area() const; // Exposed to Python
@@ -471,6 +484,10 @@ public:
 
   int getBuildProgress(BuildTypes eBuild) const;                                       // Exposed to Python
   bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM); // Exposed to Python
+
+  // BUG - Partial Builds - start
+  bool hasAnyBuildProgress() const;
+  // BUG - Partial Builds - end
 
   void updateFeatureSymbolVisibility();
   void updateFeatureSymbol(bool bForce = false);

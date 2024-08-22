@@ -939,6 +939,10 @@ public:
   float getUnitMaxSpeed() const; // Exposed to Python
   float getUnitPadTime() const;  // Exposed to Python
 
+  // BUG - Unit Experience - start
+  bool canAcquireExperience() const; // Exposed to Python
+                                     // BUG - Unit Experience - end
+
   // Arrays
 
   int getPrereqAndTechs(int i) const;             // Exposed to Python
@@ -2257,62 +2261,62 @@ public:
   std::wstring pyGetStartingYear()
   {
     return getStartingYear();
-  }                                                 // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getLoadingTime500() const; // Exposed to Python
   std::wstring pyGetLoadingTime500()
   {
     return getLoadingTime500();
-  }                                                  // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getLoadingTime1200() const; // Exposed to Python
   std::wstring pyGetLoadingTime1200()
   {
     return getLoadingTime1200();
-  }                                      // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getUP1() const; // Exposed to Python
   std::wstring pyGetUP1()
   {
     return getUP1();
-  }                                      // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getUP2() const; // Exposed to Python
   std::wstring pyGetUP2()
   {
     return getUP2();
-  }                                       // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getUHV1() const; // Exposed to Python
   std::wstring pyGetUHV1()
   {
     return getUHV1();
-  }                                       // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getUHV2() const; // Exposed to Python
   std::wstring pyGetUHV2()
   {
     return getUHV2();
-  }                                       // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getUHV3() const; // Exposed to Python
   std::wstring pyGetUHV3()
   {
     return getUHV3();
-  }                                         // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getSTrade() const; // Exposed to Python
   std::wstring pyGetSTrade()
   {
     return getSTrade();
-  }                                              // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getSProduction() const; // Exposed to Python
   std::wstring pyGetSProduction()
   {
     return getSProduction();
-  }                                           // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getSCulture() const; // Exposed to Python
   std::wstring pyGetSCulture()
   {
     return getSCulture();
-  }                                          // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getSGrowth() const; // Exposed to Python
   std::wstring pyGetSGrowth()
   {
     return getSGrowth();
-  }                                         // Exposed to Python
+  } // Exposed to Python
   DllExport const wchar *getSStart() const; // Exposed to Python
   std::wstring pyGetSStart()
   {
@@ -5538,7 +5542,7 @@ public:
   DllExport const Response &getResponse(int iNum) const
   {
     return m_pResponses[iNum];
-  }                                      // Exposed to Python
+  } // Exposed to Python
   DllExport int getNumResponses() const; // Exposed to Python
 
   DllExport bool getCivilizationTypes(int i, int j) const;   // Exposed to Python

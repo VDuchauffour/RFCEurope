@@ -566,7 +566,6 @@ void CyGlobalContext::setStartingTurn(int iCiv, int iVal)
 		startingTurn = new int[NUM_ALL_PLAYERS_B];
 		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) startingTurn[i] = 0;
 	};*/
-  //GC.getGameINLINE().logMsg(" Set starting turn: %d  %d ",iCiv,iVal);
   startingTurn[iCiv] = iVal;
 };
 
@@ -851,8 +850,6 @@ void CyGlobalContext::setSizeNPlayers(int iMaxX, int iMaxY, int iNumPlayers, int
   for (int i = 0; i < NUM_ALL_PLAYERS_B; i++)
     for (int j = 0; j < NUM_BUILDINGS; j++)
       cityInitBuildings[i][j] = 0;
-
-  //GC.getGameINLINE().logMsg(" Num Religions is %d ",GC.getNumReligionInfos() );
 
   NUM_RELIGIONS = iNumReligions;
 
