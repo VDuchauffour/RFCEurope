@@ -118,24 +118,24 @@ void CvEventReporter::combatResult(CvUnit *pWinner, CvUnit *pLoser)
 }
 
 // BUG - Combat Events - start
-void CvEventReporter::combatRetreat(CvUnit* pAttacker, CvUnit* pDefender)
+void CvEventReporter::combatRetreat(CvUnit *pAttacker, CvUnit *pDefender)
 {
-	m_kPythonEventMgr.reportCombatRetreat(pAttacker, pDefender);
+  m_kPythonEventMgr.reportCombatRetreat(pAttacker, pDefender);
 }
 
-void CvEventReporter::combatWithdrawal(CvUnit* pAttacker, CvUnit* pDefender)
+void CvEventReporter::combatWithdrawal(CvUnit *pAttacker, CvUnit *pDefender)
 {
-	m_kPythonEventMgr.reportCombatWithdrawal(pAttacker, pDefender);
+  m_kPythonEventMgr.reportCombatWithdrawal(pAttacker, pDefender);
 }
 
-void CvEventReporter::combatLogCollateral(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
+void CvEventReporter::combatLogCollateral(CvUnit *pAttacker, CvUnit *pDefender, int iDamage)
 {
-	m_kPythonEventMgr.reportCombatLogCollateral(pAttacker, pDefender, iDamage);
+  m_kPythonEventMgr.reportCombatLogCollateral(pAttacker, pDefender, iDamage);
 }
 
-void CvEventReporter::combatLogFlanking(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
+void CvEventReporter::combatLogFlanking(CvUnit *pAttacker, CvUnit *pDefender, int iDamage)
 {
-	m_kPythonEventMgr.reportCombatLogFlanking(pAttacker, pDefender, iDamage);
+  m_kPythonEventMgr.reportCombatLogFlanking(pAttacker, pDefender, iDamage);
 }
 // BUG - Combat Events - end
 
@@ -233,16 +233,16 @@ void CvEventReporter::cityBuildingBuilding(CvCity *pCity, BuildingTypes eBuildin
 }
 
 // BUG - Project Started Event - start
-void CvEventReporter::cityBuildingProject(CvCity* pCity, ProjectTypes eProjectType)
+void CvEventReporter::cityBuildingProject(CvCity *pCity, ProjectTypes eProjectType)
 {
-	m_kPythonEventMgr.reportCityBuildingProject(pCity, eProjectType);
+  m_kPythonEventMgr.reportCityBuildingProject(pCity, eProjectType);
 }
 // BUG - Project Started Event - end
 
 // BUG - Process Started Event - start
-void CvEventReporter::cityBuildingProcess(CvCity* pCity, ProcessTypes eProcessType)
+void CvEventReporter::cityBuildingProcess(CvCity *pCity, ProcessTypes eProcessType)
 {
-	m_kPythonEventMgr.reportCityBuildingProcess(pCity, eProcessType);
+  m_kPythonEventMgr.reportCityBuildingProcess(pCity, eProcessType);
 }
 // BUG - Process Started Event - end
 
@@ -289,9 +289,9 @@ void CvEventReporter::unitKilled(CvUnit *pUnit, PlayerTypes eAttacker)
 }
 
 // BUG - Unit Captured Event - start
-void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
+void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit *pNewUnit)
 {
-	m_kPythonEventMgr.reportUnitCaptured(eFromPlayer, eUnitType, pNewUnit);
+  m_kPythonEventMgr.reportUnitCaptured(eFromPlayer, eUnitType, pNewUnit);
 }
 // BUG - Unit Captured Event - end
 
@@ -308,7 +308,7 @@ void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
 // BUG - Upgrade Unit Event - start
 void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
 {
-	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
+  m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
 // BUG - Upgrade Unit Event - end
 

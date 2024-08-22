@@ -307,20 +307,24 @@ void CvGame::setInitialItems()
 // from HOF Mod - Dianthus
 bool CvGame::canRegenerateMap() const
 {
-	if (GC.getGameINLINE().getElapsedGameTurns() != 0) return false;
-	if (GC.getGameINLINE().isGameMultiPlayer()) return false;
-	if (GC.getInitCore().getWBMapScript()) return false;
+  if (GC.getGameINLINE().getElapsedGameTurns() != 0)
+    return false;
+  if (GC.getGameINLINE().isGameMultiPlayer())
+    return false;
+  if (GC.getInitCore().getWBMapScript())
+    return false;
 
-	// EF: TODO clear contact at start of regenerateMap()?
-	for (int iI = 1; iI < MAX_CIV_TEAMS; iI++)
-	{
-		CvTeam& team=GET_TEAM((TeamTypes)iI);
-		for (int iJ = 0; iJ < iI; iJ++)
-		{
-			if (team.isHasMet((TeamTypes)iJ)) return false;
-		}
-	}
-	return true;
+  // EF: TODO clear contact at start of regenerateMap()?
+  for (int iI = 1; iI < MAX_CIV_TEAMS; iI++)
+  {
+    CvTeam &team = GET_TEAM((TeamTypes)iI);
+    for (int iJ = 0; iJ < iI; iJ++)
+    {
+      if (team.isHasMet((TeamTypes)iJ))
+        return false;
+    }
+  }
+  return true;
 }
 // BUG - MapFinder - end
 
@@ -385,13 +389,13 @@ void CvGame::regenerateMap()
 
   gDLL->getEngineIFace()->AutoSave(true);
 
-// BUG - AutoSave - start
-	gDLL->getPythonIFace()->callFunction(PYBugModule, "gameStartSave");
-// BUG - AutoSave - end
+  // BUG - AutoSave - start
+  gDLL->getPythonIFace()->callFunction(PYBugModule, "gameStartSave");
+  // BUG - AutoSave - end
 
-	// EF - This doesn't work until after the game has had time to update.
-	//      Centering on the starting location is now done by MapFinder using BugUtil.delayCall().
-	//      Must leave this here for non-BUG
+  // EF - This doesn't work until after the game has had time to update.
+  //      Centering on the starting location is now done by MapFinder using BugUtil.delayCall().
+  //      Must leave this here for non-BUG
 
   if (NO_PLAYER != getActivePlayer())
   {
@@ -679,7 +683,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
   {
     techFoundedDate[iI] = -1;
   };
-
 }
 
 void CvGame::initDiplomacy()
@@ -687,7 +690,6 @@ void CvGame::initDiplomacy()
   PROFILE_FUNC();
 
   int iI, iJ;
-
 
   for (iI = 0; iI < MAX_TEAMS; iI++)
   {
@@ -758,7 +760,6 @@ void CvGame::initFreeState()
 {
   bool bValid;
   int iI, iJ, iK;
-
 
   for (iI = 0; iI < GC.getNumTechInfos(); iI++)
   {
@@ -4897,9 +4898,9 @@ void CvGame::setGameState(GameStateTypes eNewValue)
     {
       CvEventReporter::getInstance().gameEnd();
 
-// BUG - AutoSave - start
-			gDLL->getPythonIFace()->callFunction(PYBugModule, "gameEndSave");
-// BUG - AutoSave - end
+      // BUG - AutoSave - start
+      gDLL->getPythonIFace()->callFunction(PYBugModule, "gameEndSave");
+      // BUG - AutoSave - end
 
       showEndGameSequence();
 
@@ -7745,7 +7746,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
     return false;
   }
 
-
   // Change whether this player is human
   if (bIsHuman)
   {
@@ -7888,7 +7888,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
   {
     GET_PLAYER((PlayerTypes)playerIdx).reinit((PlayerTypes)playerIdx, prevLeader, false);
   }
-
 
   return true;
 }
@@ -8586,38 +8585,39 @@ bool CvGame::hasSkippedSaveChecksum() const
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv)
 {
   // UNOFFICIAL_PATCH Start
-	// * Fixed bug with colonies who occupy recycled player slots showing the old leader or civ names.
-	CvWString szEmptyString = L"";
-	LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
-	if ( (eOldLeader != NO_LEADER) && (eOldLeader != eLeader) ) 
-	{
-		GC.getInitCore().setLeaderName(eNewPlayer, szEmptyString);
-	}
-	CivilizationTypes eOldCiv = GET_PLAYER(eNewPlayer).getCivilizationType();
-	if ( (eOldCiv != NO_CIVILIZATION) && (eOldCiv != eCiv) ) 
-	{
-		GC.getInitCore().setCivAdjective(eNewPlayer, szEmptyString);
-		GC.getInitCore().setCivDescription(eNewPlayer, szEmptyString);
-		GC.getInitCore().setCivShortDesc(eNewPlayer, szEmptyString);
-	}
-	// UNOFFICIAL_PATCH End
+  // * Fixed bug with colonies who occupy recycled player slots showing the old leader or civ names.
+  CvWString szEmptyString = L"";
+  LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
+  if ((eOldLeader != NO_LEADER) && (eOldLeader != eLeader))
+  {
+    GC.getInitCore().setLeaderName(eNewPlayer, szEmptyString);
+  }
+  CivilizationTypes eOldCiv = GET_PLAYER(eNewPlayer).getCivilizationType();
+  if ((eOldCiv != NO_CIVILIZATION) && (eOldCiv != eCiv))
+  {
+    GC.getInitCore().setCivAdjective(eNewPlayer, szEmptyString);
+    GC.getInitCore().setCivDescription(eNewPlayer, szEmptyString);
+    GC.getInitCore().setCivShortDesc(eNewPlayer, szEmptyString);
+  }
+  // UNOFFICIAL_PATCH End
   PlayerColorTypes eColor = (PlayerColorTypes)GC.getCivilizationInfo(eCiv).getDefaultPlayerColor();
 
   for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
   {
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/30/08                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original bts code
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                       12/30/08                                jdog5000      */
+    /*                                                                                              */
+    /* Bugfix                                                                                       */
+    /************************************************************************************************/
+    /* original bts code
     if (eColor == NO_PLAYERCOLOR || GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor)
 */
-		// Don't invalidate color choice if it's taken by this player
-		if (eColor == NO_PLAYERCOLOR || (GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor && (PlayerTypes)iI != eNewPlayer) )
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+    // Don't invalidate color choice if it's taken by this player
+    if (eColor == NO_PLAYERCOLOR ||
+        (GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor && (PlayerTypes)iI != eNewPlayer))
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                        END                                                  */
+    /************************************************************************************************/
     {
       for (int iK = 0; iK < GC.getNumPlayerColorInfos(); iK++)
       {
@@ -9718,15 +9718,16 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
 // BUFFY - Security Checks - start
 #ifdef _BUFFY
 // from HOF Mod - Dianthus
-int CvGame::checkCRCs(std::string fileName_, std::string expectedModCRC_, std::string expectedDLLCRC_, std::string expectedShaderCRC_, std::string expectedPythonCRC_, std::string expectedXMLCRC_) const
+int CvGame::checkCRCs(std::string fileName_, std::string expectedModCRC_, std::string expectedDLLCRC_,
+                      std::string expectedShaderCRC_, std::string expectedPythonCRC_, std::string expectedXMLCRC_) const
 {
-	return 0;
+  return 0;
 }
 
 // from HOF Mod - Denniz 3.17
 int CvGame::getWarningStatus() const
 {
-	return 0;
+  return 0;
 }
 #endif
 // BUFFY - Security Checks - end

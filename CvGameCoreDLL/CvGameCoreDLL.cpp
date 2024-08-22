@@ -97,13 +97,13 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 #endif
     //Rhye
 
-// BUG - EXE/DLL Paths - start
-		dllModule = hModule;
+    // BUG - EXE/DLL Paths - start
+    dllModule = hModule;
 
 #ifdef _DEBUG
-		MessageBox(0, "DLL attached", "Message", 0);
+    MessageBox(0, "DLL attached", "Message", 0);
 #endif
-// BUG - EXE/DLL Paths - end
+    // BUG - EXE/DLL Paths - end
 
     // The DLL is being loaded into the virtual address space of the current process as a result of the process starting up
     OutputDebugString("DLL_PROCESS_ATTACH\n");
@@ -121,9 +121,9 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
     break;
   case DLL_PROCESS_DETACH:
 
-// BUG - EXE/DLL Paths - start
-		dllModule = NULL;
-// BUG - EXE/DLL Paths - end
+    // BUG - EXE/DLL Paths - start
+    dllModule = NULL;
+    // BUG - EXE/DLL Paths - end
 
     OutputDebugString("DLL_PROCESS_DETACH\n");
     timeEndPeriod(1);

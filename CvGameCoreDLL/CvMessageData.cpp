@@ -887,7 +887,7 @@ void CvNetDoCommand::Execute()
         /* Bugfix                                                                                       */
         /************************************************************************************************/
         /* orginal bts code
-				
+
 				for (CvUnit* pLoopUnit = GET_PLAYER(m_ePlayer).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(m_ePlayer).nextUnit(&iLoop))
 				{
 					if (pLoopUnit->getUnitType() == pUnit->getUnitType())

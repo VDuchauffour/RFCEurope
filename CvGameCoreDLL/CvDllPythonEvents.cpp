@@ -229,84 +229,84 @@ void CvDllPythonEvents::reportCombatResult(CvUnit *pWinner, CvUnit *pLoser)
 }
 
 // BUG - Combat Events - start
-void CvDllPythonEvents::reportCombatRetreat(CvUnit* pAttacker, CvUnit* pDefender)
+void CvDllPythonEvents::reportCombatRetreat(CvUnit *pAttacker, CvUnit *pDefender)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("combatRetreat");				// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("combatRetreat"); // add key to lookup python handler fxn
 
-		CyUnit* pCyAttacker = new CyUnit(pAttacker);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
+    CyUnit *pCyAttacker = new CyUnit(pAttacker);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
 
-		CyUnit* pCyDefender = new CyUnit(pDefender);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
+    CyUnit *pCyDefender = new CyUnit(pDefender);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
 
-		postEvent(eventData);
-		delete pCyDefender;
-		delete pCyAttacker;
-	}
+    postEvent(eventData);
+    delete pCyDefender;
+    delete pCyAttacker;
+  }
 }
 
-void CvDllPythonEvents::reportCombatWithdrawal(CvUnit* pAttacker, CvUnit* pDefender)
+void CvDllPythonEvents::reportCombatWithdrawal(CvUnit *pAttacker, CvUnit *pDefender)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("combatWithdrawal");			// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("combatWithdrawal"); // add key to lookup python handler fxn
 
-		CyUnit* pCyAttacker = new CyUnit(pAttacker);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
+    CyUnit *pCyAttacker = new CyUnit(pAttacker);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
 
-		CyUnit* pCyDefender = new CyUnit(pDefender);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
+    CyUnit *pCyDefender = new CyUnit(pDefender);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
 
-		postEvent(eventData);
-		delete pCyDefender;
-		delete pCyAttacker;
-	}
+    postEvent(eventData);
+    delete pCyDefender;
+    delete pCyAttacker;
+  }
 }
 
-void CvDllPythonEvents::reportCombatLogCollateral(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
+void CvDllPythonEvents::reportCombatLogCollateral(CvUnit *pAttacker, CvUnit *pDefender, int iDamage)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("combatLogCollateral");		// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("combatLogCollateral"); // add key to lookup python handler fxn
 
-		CyUnit* pCyAttacker = new CyUnit(pAttacker);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
+    CyUnit *pCyAttacker = new CyUnit(pAttacker);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
 
-		CyUnit* pCyDefender = new CyUnit(pDefender);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
+    CyUnit *pCyDefender = new CyUnit(pDefender);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
 
-		eventData.add(iDamage);
+    eventData.add(iDamage);
 
-		postEvent(eventData);
-		delete pCyDefender;
-		delete pCyAttacker;
-	}
+    postEvent(eventData);
+    delete pCyDefender;
+    delete pCyAttacker;
+  }
 }
 
-void CvDllPythonEvents::reportCombatLogFlanking(CvUnit* pAttacker, CvUnit* pDefender, int iDamage)
+void CvDllPythonEvents::reportCombatLogFlanking(CvUnit *pAttacker, CvUnit *pDefender, int iDamage)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("combatLogFlanking");			// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("combatLogFlanking"); // add key to lookup python handler fxn
 
-		CyUnit* pCyAttacker = new CyUnit(pAttacker);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
+    CyUnit *pCyAttacker = new CyUnit(pAttacker);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyAttacker));
 
-		CyUnit* pCyDefender = new CyUnit(pDefender);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
+    CyUnit *pCyDefender = new CyUnit(pDefender);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyDefender));
 
-		eventData.add(iDamage);
+    eventData.add(iDamage);
 
-		postEvent(eventData);
-		delete pCyDefender;
-		delete pCyAttacker;
-	}
+    postEvent(eventData);
+    delete pCyDefender;
+    delete pCyAttacker;
+  }
 }
 // BUG - Combat Events - end
 
@@ -612,40 +612,40 @@ void CvDllPythonEvents::reportCityBuildingBuilding(CvCity *pCity, BuildingTypes 
 }
 
 // BUG - Project Started Event - start
-void CvDllPythonEvents::reportCityBuildingProject( CvCity* pCity, ProjectTypes eProjectType )
+void CvDllPythonEvents::reportCityBuildingProject(CvCity *pCity, ProjectTypes eProjectType)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("cityBuildingProject");						// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("cityBuildingProject"); // add key to lookup python handler fxn
 
-		CyCity* pCyCity = new CyCity(pCity);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyCity));
+    CyCity *pCyCity = new CyCity(pCity);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyCity));
 
-		eventData.add((int) eProjectType);
+    eventData.add((int)eProjectType);
 
-		postEvent(eventData);
-		delete pCyCity;
-	}
+    postEvent(eventData);
+    delete pCyCity;
+  }
 }
 // BUG - Project Started Event - end
 
 // BUG - Process Started Event - start
-void CvDllPythonEvents::reportCityBuildingProcess( CvCity* pCity, ProcessTypes eProcessType )
+void CvDllPythonEvents::reportCityBuildingProcess(CvCity *pCity, ProcessTypes eProcessType)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("cityBuildingProcess");						// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("cityBuildingProcess"); // add key to lookup python handler fxn
 
-		CyCity* pCyCity = new CyCity(pCity);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyCity));
+    CyCity *pCyCity = new CyCity(pCity);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyCity));
 
-		eventData.add((int) eProcessType);
+    eventData.add((int)eProcessType);
 
-		postEvent(eventData);
-		delete pCyCity;
-	}
+    postEvent(eventData);
+    delete pCyCity;
+  }
 }
 // BUG - Process Started Event - end
 
@@ -818,20 +818,20 @@ void CvDllPythonEvents::reportUnitKilled(CvUnit *pUnit, PlayerTypes eAttacker)
 }
 
 // BUG - Unit Captured Event - start
-void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
+void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit *pNewUnit)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("unitCaptured");						// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("unitCaptured"); // add key to lookup python handler fxn
 
-		eventData.add(eFromPlayer);
-		eventData.add(eUnitType);
-		CyUnit* pyNewUnit = new CyUnit(pNewUnit);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pyNewUnit));
-		postEvent(eventData);
-		delete pyNewUnit;
-	}
+    eventData.add(eFromPlayer);
+    eventData.add(eUnitType);
+    CyUnit *pyNewUnit = new CyUnit(pNewUnit);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pyNewUnit));
+    postEvent(eventData);
+    delete pyNewUnit;
+  }
 }
 // BUG - Unit Captured Event - end
 
@@ -868,22 +868,22 @@ void CvDllPythonEvents::reportUnitPromoted(CvUnit *pUnit, PromotionTypes ePromot
 }
 
 // BUG - Upgrade Unit Event - start
-void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
+void CvDllPythonEvents::reportUnitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
 {
-	if (preEvent())
-	{
-		CyArgsList eventData;
-		eventData.add("unitUpgraded");						// add key to lookup python handler fxn
+  if (preEvent())
+  {
+    CyArgsList eventData;
+    eventData.add("unitUpgraded"); // add key to lookup python handler fxn
 
-		CyUnit* pyOldUnit = new CyUnit(pOldUnit);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pyOldUnit));
-		CyUnit* pyNewUnit = new CyUnit(pNewUnit);
-		eventData.add(gDLL->getPythonIFace()->makePythonObject(pyNewUnit));
-		eventData.add(iPrice);
-		postEvent(eventData);
-		delete pyNewUnit;
-		delete pyOldUnit;
-	}
+    CyUnit *pyOldUnit = new CyUnit(pOldUnit);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pyOldUnit));
+    CyUnit *pyNewUnit = new CyUnit(pNewUnit);
+    eventData.add(gDLL->getPythonIFace()->makePythonObject(pyNewUnit));
+    eventData.add(iPrice);
+    postEvent(eventData);
+    delete pyNewUnit;
+    delete pyOldUnit;
+  }
 }
 // BUG - Upgrade Unit Event - end
 
