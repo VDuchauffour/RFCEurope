@@ -659,13 +659,13 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
   case WIDGET_COMMERCE_MOD_HELP:
     parseCommerceModHelp(widgetDataStruct, szBuffer);
     break;
-  }
 
-  // BUG - Trade Hover - start
-case WIDGET_TRADE_ROUTES:
-  parseTradeRoutes(widgetDataStruct, szBuffer);
-  break;
-  // BUG - Trade Hover - end
+    // BUG - Trade Hover - start
+  case WIDGET_TRADE_ROUTES:
+    parseTradeRoutes(widgetDataStruct, szBuffer);
+    break;
+    // BUG - Trade Hover - end
+  }
 }
 
 // Protected Functions...
@@ -3667,6 +3667,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
     szBuffer.append(NEWLINE);
     szBuffer.append(gDLL->getText("TXT_KEY_MISC_CTRL_TRADE"));
     // BUG - end
+
+    szBuffer.append(NEWLINE);
 
     //Rhye - start
     if ((int)widgetDataStruct.m_iData1 < NUM_MAJOR_PLAYERS)
