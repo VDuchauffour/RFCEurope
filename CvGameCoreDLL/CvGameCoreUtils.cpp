@@ -223,6 +223,10 @@ bool isBeforeUnitCycle(const CvUnit *pFirstUnit, const CvUnit *pSecondUnit)
   return (pFirstUnit->getID() < pSecondUnit->getID());
 }
 
+/*************************************************************************************************/
+/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
+/** BEGIN                                                                       v?.?             */
+/*************************************************************************************************/
 bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 {
   CvUnitInfo &kUnit = GC.getUnitInfo(eUnit);
@@ -328,6 +332,10 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 
   return true;
 }
+/*************************************************************************************************/
+/** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
+/** END                                                                                          */
+/*************************************************************************************************/
 
 int getPopulationAsset(int iPopulation)
 {
@@ -886,9 +894,6 @@ int getCombatOdds(CvUnit *pAttacker, CvUnit *pDefender)
       }
     }
   }
-  /************************************************************************************************/
-  /* BETTER_BTS_AI_MOD                       END                                                  */
-  /************************************************************************************************/
   // Weigh the total to the number of possible combinations of first strikes events
   // note: the integer math breaks down when #FS > 656 (with a die size of 1000)
   //////
@@ -1015,8 +1020,8 @@ float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n
                   getBinomialCoefficient(iNeededRoundsAttacker - 1 + n_A - j, iNeededRoundsAttacker - 1);
 
         } //if
-      }   //for j
-    }     //for i
+      } //for j
+    } //for i
     sum1 *= pow(P_D, (float)n_A) * pow(P_A, (float)iNeededRoundsAttacker);
     answer += sum1;
 
@@ -1066,8 +1071,8 @@ float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n
           {
             sum1 += (float)getBinomialCoefficient(i, j) * pow(P_D, (float)(j)) * pow(P_A, (float)(i - j));
           } //if (inside if) else sum += 0
-        }   //if
-      }     //for j
+        } //if
+      } //for j
 
     } //for i
     answer += sum1;
@@ -1081,8 +1086,8 @@ float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n
           sum2 += (float)getBinomialCoefficient(i, j) * pow(P_D, (float)(i - j)) *
                   getBinomialCoefficient(N_A - 1 + n_D - j, N_A - 1);
         } //if
-      }   //for j
-    }     //for i
+      } //for j
+    } //for i
     sum2 *= pow(P_A, (float)(n_D)) * pow(P_D, (float)(N_A));
     answer += sum2;
     answer = answer * (1.0f - RetreatOdds);
@@ -1106,8 +1111,8 @@ float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n
           {
             sum1 += (float)getBinomialCoefficient(i, j) * pow(P_D, (float)(j)) * pow(P_A, (float)(i - j));
           } //if (inside if) else sum += 0
-        }   //if
-      }     //for j
+        } //if
+      } //for j
 
     } //for i
     answer += sum1;
@@ -1122,8 +1127,8 @@ float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n
           sum2 += (float)getBinomialCoefficient(i, j) * pow(P_D, (float)(i - j)) *
                   getBinomialCoefficient(N_A - 1 + n_D - j, N_A - 1);
         } //if
-      }   //for j
-    }     //for i
+      } //for j
+    } //for i
     sum2 *= pow(P_A, (float)(n_D)) * pow(P_D, (float)(N_A));
     answer += sum2;
     answer = answer * RetreatOdds; //
@@ -2151,36 +2156,10 @@ int stepValid(FAStarNode *parent, FAStarNode *node, int data, const void *pointe
     return FALSE;
   }
 
-  /********************************************************************************/
-  /* 	BETTER_BTS_AI_MOD					12/12/08				jdog5000	*/
-  /* 																			*/
-  /* 	Bugfix																	*/
-  /********************************************************************************/
-  /* original BTS code
-	if (GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
-	{
-		return FALSE;
-	}
-*/
-  CvPlot *pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
-  if (pFromPlot->area() != pNewPlot->area())
+  if (GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
   {
     return FALSE;
   }
-
-  /* Absinthe: disabled this part of the BBAI code, it may mess up with RFCE's passable diagonal sea tiles
-	// Don't count diagonal hops across land isthmus
-	if (pFromPlot->isWater() && pNewPlot->isWater())
-	{
-		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
-		{
-			return FALSE;
-		}
-	}
-*/
-  /********************************************************************************/
-  /* 	BETTER_BTS_AI_MOD						END								*/
-  /********************************************************************************/
 
   return TRUE;
 }
@@ -2673,8 +2652,21 @@ void getActivityTypeString(CvWString &szString, ActivityTypes eActivityType)
   case ACTIVITY_SENTRY:
     szString = L"ACTIVITY_SENTRY";
     break;
+// BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+  case ACTIVITY_SENTRY_WHILE_HEAL:
+    szString = L"ACTIVITY_SENTRY_WHILE_HEAL";
+    break;
+  case ACTIVITY_SENTRY_NAVAL_UNITS:
+    szString = L"ACTIVITY_SENTRY_NAVAL_UNITS";
+    break;
+  case ACTIVITY_SENTRY_LAND_UNITS:
+    szString = L"ACTIVITY_SENTRY_LAND_UNITS";
+    break;
+#endif
+    // BUG - Sentry Actions - end
   case ACTIVITY_INTERCEPT:
-    szString = L"ACTIVITY_SENTRY";
+    szString = L"ACTIVITY_INTERCEPT";
     break;
   case ACTIVITY_MISSION:
     szString = L"ACTIVITY_MISSION";
@@ -2697,6 +2689,13 @@ void getMissionTypeString(CvWString &szString, MissionTypes eMissionType)
   case MISSION_MOVE_TO:
     szString = L"MISSION_MOVE_TO";
     break;
+// BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+  case MISSION_MOVE_TO_SENTRY:
+    szString = L"MISSION_MOVE_TO_SENTRY";
+    break;
+#endif
+    // BUG - Sentry Actions - end
   case MISSION_ROUTE_TO:
     szString = L"MISSION_ROUTE_TO";
     break;
@@ -2727,6 +2726,19 @@ void getMissionTypeString(CvWString &szString, MissionTypes eMissionType)
   case MISSION_SENTRY:
     szString = L"MISSION_SENTRY";
     break;
+// BUG - Sentry Actions - start
+#ifdef _MOD_SENTRY
+  case MISSION_SENTRY_WHILE_HEAL:
+    szString = L"MISSION_SENTRY_WHILE_HEAL";
+    break;
+  case MISSION_SENTRY_NAVAL_UNITS:
+    szString = L"MISSION_SENTRY_NAVAL_UNITS";
+    break;
+  case MISSION_SENTRY_LAND_UNITS:
+    szString = L"MISSION_SENTRY_LAND_UNITS";
+    break;
+#endif
+    // BUG - Sentry Actions - end
   case MISSION_AIRLIFT:
     szString = L"MISSION_AIRLIFT";
     break;
@@ -3054,3 +3066,57 @@ void getUnitAIString(CvWString &szString, UnitAITypes eUnitAI)
     break;
   }
 }
+
+// BUG - Unit Experience - start
+#include "CyArgsList.h"
+
+/*
+ * Calculates the experience needed to reach the next level after the given level.
+ */
+int calculateExperience(int iLevel, PlayerTypes ePlayer)
+{
+  FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
+  FAssertMsg(iLevel > 0, "iLevel must be greater than zero");
+
+  long lExperienceNeeded = 0;
+
+  CyArgsList argsList;
+  argsList.add(iLevel);
+  argsList.add(ePlayer);
+
+  gDLL->getPythonIFace()->callFunction(PYGameModule, "getExperienceNeeded", argsList.makeFunctionArgs(),
+                                       &lExperienceNeeded);
+
+  return (int)lExperienceNeeded;
+}
+
+/*
+ * Calculates the level for a unit with the given experience.
+ */
+int calculateLevel(int iExperience, PlayerTypes ePlayer)
+{
+  FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
+
+  if (iExperience <= 0)
+  {
+    return 1;
+  }
+
+  int iLevel = 1;
+  while (true)
+  {
+    int iNextLevelExperience = calculateExperience(iLevel, ePlayer);
+    if (iNextLevelExperience > iExperience)
+    {
+      break;
+    }
+    ++iLevel;
+    if (iNextLevelExperience == iExperience)
+    {
+      break;
+    }
+  }
+
+  return iLevel;
+}
+// BUG - Unit Experience - end

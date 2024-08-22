@@ -1706,18 +1706,15 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity *pCity) const
         iWeight /= 50;
       }
       /************************************************************************************************/
-      /* UNOFFICIAL_PATCH                       04/29/09                                jdog5000      */
+      /* UNOFFICIAL_PATCH                       03/08/10                                jdog5000      */
       /*                                                                                              */
       /* Poor behavior                                                                                */
       /************************************************************************************************/
       /* original bts code
 			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE3))
-*/
+      */
       // Slider check works for detection of whether human player is going for cultural victory
       else if (AI_isDoStrategy(AI_STRATEGY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) > 80)
-      /************************************************************************************************/
-      /* UNOFFICIAL_PATCH                        END                                                  */
-      /************************************************************************************************/
       {
         int iCultureRateRank = pCity->findCommerceRateRank(COMMERCE_CULTURE);
         int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
@@ -1732,12 +1729,19 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity *pCity) const
         {
           iWeight *= 2;
         }
+        else if (isHuman())
+        {
+          iWeight *= 2;
+        }
       }
-      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2))
+      // BUG - Unofficial Patch - start
+      // EF: copied second half of test from below
+      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) > 70)
+      // BUG - Unofficial Patch - end
       {
         iWeight *= 3;
       }
-      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1))
+      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) > 50)
       {
         iWeight *= 2;
       }
@@ -1752,17 +1756,17 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity *pCity) const
     // pCity == NULL
     else
     {
-      if (AI_isDoStrategy(AI_STRATEGY_CULTURE3))
+      if (AI_isDoStrategy(AI_STRATEGY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) > 90)
       {
         iWeight *= 3;
         iWeight /= 4;
       }
-      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2))
+      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) > 70)
       {
         iWeight *= 2;
         iWeight /= 3;
       }
-      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1))
+      else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) > 50)
       {
         iWeight /= 2;
       }
@@ -1771,12 +1775,14 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity *pCity) const
         iWeight /= 3;
       }
     }
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                        END                                                  */
+    /************************************************************************************************/
     break;
   case COMMERCE_ESPIONAGE:
   {
     int iEspMultiplier = 0;
-    //for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam) //Rhye
-    for (int iTeam = 0; iTeam < NUM_MAJOR_PLAYERS; ++iTeam) //Rhye
+    for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
     {
       CvTeam &kLoopTeam = GET_TEAM((TeamTypes)iTeam);
       if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) &&
@@ -2926,10 +2932,19 @@ int CvPlayerAI::AI_targetCityValue(CvCity *pCity, bool bRandomize, bool bIgnoreA
   }
   //Rhye - end
 
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
+  /*                                                                                              */
+  /* Bugfix                                                                                       */
+  /************************************************************************************************/
+
   if (pCity->hasActiveWorldWonder())
   {
-    iValue += 1 + pCity->getNumWorldWonders();
+    iValue += 1 + pCity->getNumActiveWorldWonders();
   }
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                        END                                                  */
+  /************************************************************************************************/
 
   if (pCity->isHolyCity())
   {
@@ -2973,7 +2988,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity *pCity, bool bRandomize, bool bIgnoreA
 
   if (pNearestCity != NULL)
   {
-    // Absinthe: modifier based on empire type, set in RFCEBalance.py -> setCityWarDistanceAI
+    // Absinthe: modifier based on empire type, set in Modifers.py -> setCityWarDistanceAI
     if (cityWarDistance[getID()] == 2)
     {
       iValue += std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) -
@@ -3646,7 +3661,7 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
     /************************************************************************************************/
     /* original BTS code
 		int iNetExpenses = calculateInflatedCosts() + std::min(0, getGoldPerTurn());
-*/
+    */
     int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                        END                                                  */
@@ -3683,7 +3698,18 @@ int CvPlayerAI::AI_goldTarget() const
 {
   int iGold = 0;
 
-  if (GC.getGameINLINE().getElapsedGameTurns() >= 40)
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                       02/24/10                                jdog5000      */
+  /*                                                                                              */
+  /* Bugfix                                                                                      */
+  /************************************************************************************************/
+  /* original bts code
+	if (GC.getGameINLINE().getElapsedGameTurns() >= 40)
+  */
+  if (GC.getGameINLINE().getElapsedGameTurns() >= 40 || getNumCities() > 3)
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                        END                                                  */
+  /************************************************************************************************/
   {
     int iMultiplier = 0;
     iMultiplier += GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
@@ -4557,7 +4583,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
                             /************************************************************************************************/
                             /* original bts code
 														iAssaultValue += (800 * (iNewCapacity - iOldCapacity)) / iOldCapacity;
-*/
+                            */
                             iAssaultValue += (800 * (iNewCapacity - iOldCapacity)) / std::max(1, iOldCapacity);
                             /************************************************************************************************/
                             /* UNOFFICIAL_PATCH                        END                                                  */
@@ -5646,93 +5672,54 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
     return m_aiAttitudeCache[ePlayer];
   }
   // Sanguo Mod Performance, end
-
-  /* // 3MiroCAR: this was the old code
-	iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
-
-	iAttitude += GC.getHandicapInfo(GET_PLAYER(ePlayer).getHandicapType()).getAttitudeChange();
-
-	//Rhye - start UP
-	// 3Miro
-	iAttitude += diplomacyModifiers[getID()][ePlayer];
-	//Rhye - end UP
-
-
-	if (!(GET_PLAYER(ePlayer).isHuman()))
-	{
-		iAttitude += (4 - abs(AI_getPeaceWeight() - GET_PLAYER(ePlayer).AI_getPeaceWeight()));
-		iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getWarmongerRespect());
-	}
-
-	iAttitude -= std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
-
-	iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
-
-	if (iRankDifference > 0)
-	{
-		iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
-	}
-	else
-	{
-		iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * -(iRankDifference)) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
-	}
-
-	if ((GC.getGameINLINE().getPlayerRank(getID()) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)) &&
-		  (GC.getGameINLINE().getPlayerRank(ePlayer) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)))
-	{
-		iAttitude++;
-	}
-
-	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getWarSuccess(getTeam()) > GET_TEAM(getTeam()).AI_getWarSuccess(GET_PLAYER(ePlayer).getTeam()))
-	{
-		iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getLostWarAttitudeChange();
-	}
-
-	iAttitude += AI_getCloseBordersAttitude(ePlayer);
-	iAttitude += AI_getWarAttitude(ePlayer);
-	iAttitude += AI_getPeaceAttitude(ePlayer);
-	iAttitude += AI_getSameReligionAttitude(ePlayer);
-	iAttitude += AI_getDifferentReligionAttitude(ePlayer);
-	iAttitude += AI_getBonusTradeAttitude(ePlayer);
-	iAttitude += AI_getOpenBordersAttitude(ePlayer);
-	iAttitude += AI_getDefensivePactAttitude(ePlayer);
-	iAttitude += AI_getRivalDefensivePactAttitude(ePlayer);
-	iAttitude += AI_getRivalVassalAttitude(ePlayer);
-	iAttitude += AI_getShareWarAttitude(ePlayer);
-	iAttitude += AI_getFavoriteCivicAttitude(ePlayer);
-	iAttitude += AI_getTradeAttitude(ePlayer);
-	iAttitude += AI_getRivalTradeAttitude(ePlayer);
-	// 3MiroFaith
-	//iAttitude += AI_getFaithAttitude(ePlayer);
-
-	for (iI = 0; iI < NUM_MEMORY_TYPES; iI++)
-	{
-		iAttitude += AI_getMemoryAttitude(ePlayer, ((MemoryTypes)iI));
-	}
-
-	iAttitude += AI_getColonyAttitude(ePlayer);
-	iAttitude += AI_getAttitudeExtra(ePlayer);
-
-	return range(iAttitude, -100, 100);*/
 }
 
-// BEGIN: Show Hidden Attitude Mod - implemented by Absinthe, based on SoI
+// BEGIN: Show Hidden Attitude Mod 01/22/2009
+bool isShowPersonalityModifiers()
+{
+#ifdef _MOD_SHAM_SPOILER
+  return true;
+#else
+  return !GC.getGameINLINE().isOption(GAMEOPTION_RANDOM_PERSONALITIES) || GC.getGameINLINE().isDebugMode();
+#endif
+}
+
+bool isShowSpoilerModifiers()
+{
+#ifdef _MOD_SHAM_SPOILER
+  return true;
+#else
+  return GC.getGameINLINE().isDebugMode();
+#endif
+}
+
 int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const
 {
+  bool bShowPersonalityAttitude = isShowPersonalityModifiers();
   CvPlayerAI &kPlayer = GET_PLAYER(ePlayer);
   int iAttitude = GC.getHandicapInfo(kPlayer.getHandicapType()).getAttitudeChange();
 
-  iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
-
-  if (GC.getGameINLINE().isDebugMode())
+  if (bShowPersonalityAttitude)
   {
+    iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
     if (!kPlayer.isHuman())
     {
-      iAttitude += (4 - abs(AI_getPeaceWeight() - kPlayer.AI_getPeaceWeight())); // edead: this spoiler is OK
+      if (isShowSpoilerModifiers())
+      {
+        // iBasePeaceWeight + iPeaceWeightRand
+        iAttitude += (4 - abs(AI_getPeaceWeight() - kPlayer.AI_getPeaceWeight()));
+      }
+      else
+      {
+        // iBasePeaceWeight
+        iAttitude += (4 - abs(GC.getLeaderHeadInfo(getPersonalityType()).getBasePeaceWeight() -
+                              GC.getLeaderHeadInfo(kPlayer.getPersonalityType()).getBasePeaceWeight()));
+      }
       iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(),
                             GC.getLeaderHeadInfo(kPlayer.getPersonalityType()).getWarmongerRespect());
     }
   }
+
   return iAttitude;
 }
 
@@ -5753,7 +5740,7 @@ int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
 
   TeamTypes eActiveTeam = GC.getGameINLINE().getActiveTeam();
   int iRank = 0;
-  for (int iI = 0; iI < NUM_MAJOR_PLAYERS; iI++) // edead: MAX_CIV_PLAYERS -> NUM_MAJOR_PLAYERS
+  for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
   {
     PlayerTypes eRankPlayer = GC.getGameINLINE().getRankPlayer(iI);
     if (eRankPlayer != NO_PLAYER)
@@ -5776,8 +5763,13 @@ int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const
 {
+  if (!isShowPersonalityModifiers())
+  {
+    return 0;
+  }
+
   int iRankDifference;
-  if (GC.getGameINLINE().isDebugMode())
+  if (isShowSpoilerModifiers())
   {
     iRankDifference = GC.getGameINLINE().getPlayerRank(ePlayer) - GC.getGameINLINE().getPlayerRank(getID());
   }
@@ -5797,8 +5789,13 @@ int CvPlayerAI::AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const
 {
+  if (!isShowPersonalityModifiers())
+  {
+    return 0;
+  }
+
   int iRankDifference;
-  if (GC.getGameINLINE().isDebugMode())
+  if (isShowSpoilerModifiers())
   {
     iRankDifference = GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer);
   }
@@ -5820,7 +5817,7 @@ int CvPlayerAI::AI_getLowRankAttitude(PlayerTypes ePlayer) const
 {
   int iThisPlayerRank;
   int iPlayerRank;
-  if (GC.getGameINLINE().isDebugMode())
+  if (isShowSpoilerModifiers())
   {
     iThisPlayerRank = GC.getGameINLINE().getPlayerRank(getID());
     iPlayerRank = GC.getGameINLINE().getPlayerRank(ePlayer);
@@ -5837,8 +5834,13 @@ int CvPlayerAI::AI_getLowRankAttitude(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getLostWarAttitude(PlayerTypes ePlayer) const
 {
+  if (!isShowPersonalityModifiers())
+  {
+    return 0;
+  }
+
   TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
-  if (!GC.getGameINLINE().isDebugMode() && NO_PLAYER != GC.getGameINLINE().getActivePlayer())
+  if (!isShowSpoilerModifiers() && NO_PLAYER != GC.getGameINLINE().getActivePlayer())
   {
     // Hide war success for wars you are not involved in
     if (GC.getGameINLINE().getActiveTeam() != getTeam() && GC.getGameINLINE().getActiveTeam() != eTeam)
@@ -7051,7 +7053,18 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
       {
         iGoldData = iGoldWeight * 100;
         iGoldData /= iGoldValuePercent;
-        if ((iGoldData * iGoldValuePercent) < iGoldWeight)
+        /************************************************************************************************/
+        /* UNOFFICIAL_PATCH                       09/17/09                     dilandau & jdog5000      */
+        /*                                                                                              */
+        /* Bugfix				                                                                                */
+        /************************************************************************************************/
+        /* original bts code
+				if ((iGoldData * iGoldValuePercent) < iGoldWeight)
+        */
+        if ((iGoldData * iGoldValuePercent) < iGoldWeight * 100)
+        /************************************************************************************************/
+        /* UNOFFICIAL_PATCH                        END                                                  */
+        /************************************************************************************************/
         {
           iGoldData++;
         }
@@ -9333,7 +9346,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea *pArea
           /************************************************************************************************/
           /* UNOFFICIAL_PATCH                       06/03/09                                jdog5000      */
           /*                                                                                              */
-          /* Bugfix				                                                                         */
+          /* Bugfix				                                                                                */
           /************************************************************************************************/
           // Fix potential crash, probably would only happen in mods
           if (pArea != NULL)
@@ -9418,6 +9431,19 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea *pArea
     {
       iValue += 200;
     }
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                       06/03/09                                jdog5000      */
+    /*                                                                                              */
+    /* General AI                                                                                   */
+    /************************************************************************************************/
+    // Boats which can't be seen don't play defense, don't make good escorts
+    if (GC.getUnitInfo(eUnit).getInvisibleType() != NO_INVISIBLE)
+    {
+      iValue /= 2;
+    }
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                        END                                                  */
+    /************************************************************************************************/
     break;
 
   case UNITAI_EXPLORE_SEA:
@@ -9844,7 +9870,7 @@ int CvPlayerAI::AI_missionaryValue(CvArea *pArea, ReligionTypes eReligion, Playe
 			}
 		}
 	}
-*/
+  */
   // Obvious copy & paste bug
   if (AI_isDoStrategy(AI_STRATEGY_CULTURE1))
   {
@@ -10461,6 +10487,20 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
   FAssertMsg(eCivic < GC.getNumCivicInfos(), "eCivic is expected to be within maximum bounds (invalid Index)");
   FAssertMsg(eCivic >= 0, "eCivic is expected to be non-negative (invalid Index)");
 
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                       10/05/09                                jdog5000      */
+  /*                                                                                              */
+  /* Bugfix                                                                                       */
+  /************************************************************************************************/
+  // Circumvents crash bug in simultaneous turns MP games
+  if (eCivic == NO_CIVIC)
+  {
+    return 1;
+  }
+  /************************************************************************************************/
+  /* UNOFFICIAL_PATCH                        END                                                  */
+  /************************************************************************************************/
+
   CvCivicInfo &kCivic = GC.getCivicInfo(eCivic);
 
   bWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
@@ -10576,7 +10616,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
     /************************************************************************************************/
     /* orginal bts code
 		iValue += (getNumCities() * 6 * AI_getHealthWeight(isCivic(eCivic) ? -kCivic.getExtraHealth() : kCivic.getExtraHealth(), 1)) / 100;
-*/
+    */
     iValue += (getNumCities() * 6 * AI_getHealthWeight(kCivic.getExtraHealth(), 1)) / 100;
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                        END                                                  */
@@ -10586,8 +10626,18 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
   iTempValue = kCivic.getHappyPerMilitaryUnit() * 3;
   if (iTempValue != 0)
   {
-    //iValue += (getNumCities() * 9 * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100; //Rhye
-    iValue += (getNumCities() * 8 * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100; //Rhye
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                       10/21/09                                jdog5000      */
+    /*                                                                                              */
+    /* Bugfix                                                                                       */
+    /************************************************************************************************/
+    /* orginal bts code
+		iValue += (getNumCities() * 9 * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100;
+    */
+    iValue += (getNumCities() * 6 * AI_getHappinessWeight(iTempValue, 1)) / 100; // Rhye
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                        END                                                  */
+    /************************************************************************************************/
   }
 
   iTempValue = kCivic.getLargestCityHappiness();
@@ -10600,7 +10650,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
     /************************************************************************************************/
     /* orginal bts code
 		iValue += (12 * std::min(getNumCities(), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()) * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100;
-*/
+    */
     iValue += (12 * std::min(getNumCities(), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()) *
                AI_getHappinessWeight(iTempValue, 1)) /
               100;
@@ -10625,7 +10675,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
       /************************************************************************************************/
       /* orginal bts code
 			iValue += (11 * getNumCities() * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100;
-*/
+      */
       iValue += (11 * getNumCities() * AI_getHappinessWeight(iTempValue, 1)) / 100;
       /************************************************************************************************/
       /* UNOFFICIAL_PATCH                        END                                                  */
@@ -11134,7 +11184,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot *pSpyPlot, PlayerT
       /************************************************************************************************/
       /* original BTS code
 			if (!AI_isDoStrategy(AI_STRATEGY_BIG_ESPIONAGE) && (GET_TEAM(getTeam()).AI_getWarPlan(pSpyPlot->getTeam()) != NO_WARPLAN || AI_getAttitudeWeight(pSpyPlot->getOwner()) < (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 50 : 1)))
-*/
+      */
       // Attitude weight < 50 is equivalent to < 1, < 51 is clearly what was intended
       if (!AI_isDoStrategy(AI_STRATEGY_BIG_ESPIONAGE) &&
           (GET_TEAM(getTeam()).AI_getWarPlan(pSpyPlot->getTeam()) != NO_WARPLAN ||
@@ -11179,7 +11229,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot *pSpyPlot, PlayerT
         /************************************************************************************************/
         /* original BTS code
 				if (AI_getAttitudeWeight(pSpyPlot->getOwner()) < (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 50 : 1))
-*/
+        */
         // Attitude weight < 50 is equivalent to < 1, < 51 is clearly what was intended
         if (AI_getAttitudeWeight(pSpyPlot->getOwner()) <
             (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1))
@@ -11804,7 +11854,25 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
           {
             if (GET_TEAM((TeamTypes)iI).AI_getWorstEnemy() == getTeam())
             {
-              GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeTradeValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              /************************************************************************************************/
+              /* UNOFFICIAL_PATCH                       03/02/10                                Sephi         */
+              /*                                                                                              */
+              /* Bug fix                                                                                      */
+              /************************************************************************************************/
+              /* orig bts code
+							GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeTradeValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              */
+              //make sure that if A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
+              //A = this
+              //B = eIndex
+              //C = (TeamTypes)iI
+              if (GET_TEAM((TeamTypes)iI).isHasMet(GET_PLAYER(eIndex).getTeam()))
+              {
+                GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeTradeValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              }
+              /************************************************************************************************/
+              /* UNOFFICIAL_PATCH                        END                                                  */
+              /************************************************************************************************/
             }
           }
         }
@@ -11846,7 +11914,25 @@ void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
           {
             if (GET_TEAM((TeamTypes)iI).AI_getWorstEnemy() == getTeam())
             {
-              GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeGrantValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              /************************************************************************************************/
+              /* UNOFFICIAL_PATCH                       03/02/10                                Sephi         */
+              /*                                                                                              */
+              /* Bug fix                                                                                      */
+              /************************************************************************************************/
+              /* orig bts code
+							GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeGrantValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              */
+              //make sure that if A trades with B and A is C's worst enemy, C is only mad at B if C has met B before
+              //A = this
+              //B = eIndex
+              //C = (TeamTypes)iI
+              if (GET_TEAM((TeamTypes)iI).isHasMet(GET_PLAYER(eIndex).getTeam()))
+              {
+                GET_TEAM((TeamTypes)iI).AI_changeEnemyPeacetimeGrantValue(GET_PLAYER(eIndex).getTeam(), iChange);
+              }
+              /************************************************************************************************/
+              /* UNOFFICIAL_PATCH                        END                                                  */
+              /************************************************************************************************/
             }
           }
         }
@@ -11944,6 +12030,12 @@ void CvPlayerAI::AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, 
   FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
   FAssertMsg(eIndex2 < NUM_MEMORY_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
   m_aaiMemoryCount[eIndex1][eIndex2] += iChange;
+  // BUG - Update Attitude Icons - start
+  if (eIndex1 == GC.getGameINLINE().getActivePlayer())
+  {
+    gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
+  }
+  // BUG - Update Attitude Icons - end
   FAssert(AI_getMemoryCount(eIndex1, eIndex2) >= 0);
 }
 
@@ -13326,7 +13418,7 @@ void CvPlayerAI::AI_doDiplo()
                     /************************************************************************************************/
                     /* original bts code
 										if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) && !GET_TEAM(getTeam()).AI_isSneakAttackPreparing(GET_PLAYER((PlayerTypes)iI).getTeam()))
-*/
+                    */
                     // Bug fix: when team was sneak attack ready but hadn't declared, could demand tribute
                     // If other team accepted, it blocked war declaration for 10 turns but AI didn't react.
                     if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) &&
@@ -13391,7 +13483,7 @@ void CvPlayerAI::AI_doDiplo()
                     /************************************************************************************************/
                     /* original bts code
 										if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) && !GET_TEAM(getTeam()).AI_isSneakAttackPreparing(GET_PLAYER((PlayerTypes)iI).getTeam()))
-*/
+                    */
                     // Bug fix: when team was sneak attack ready but hadn't declared, could demand tribute
                     // If other team accepted, it blocked war declaration for 10 turns but AI didn't react.
                     if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) &&
@@ -13451,7 +13543,7 @@ void CvPlayerAI::AI_doDiplo()
                     /************************************************************************************************/
                     /* original bts code
 										if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) && !GET_TEAM(getTeam()).AI_isSneakAttackPreparing(GET_PLAYER((PlayerTypes)iI).getTeam()))
-*/
+                    */
                     // Bug fix: when team was sneak attack ready but hadn't declared, could demand tribute
                     // If other team accepted, it blocked war declaration for 10 turns but AI didn't react.
                     if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) &&
@@ -13534,7 +13626,7 @@ void CvPlayerAI::AI_doDiplo()
                     /************************************************************************************************/
                     /* original bts code
 										if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) && !GET_TEAM(getTeam()).AI_isSneakAttackPreparing(GET_PLAYER((PlayerTypes)iI).getTeam()))
-*/
+                    */
                     // Bug fix: when team was sneak attack ready but hadn't declared, could demand tribute
                     // If other team accepted, it blocked war declaration for 10 turns but AI didn't react.
                     if (GET_TEAM(getTeam()).canDeclareWar(GET_PLAYER((PlayerTypes)iI).getTeam()) &&
@@ -15708,11 +15800,11 @@ int CvPlayerAI::AI_getStrategyHash() const
           /************************************************************************************************/
           /* UNOFFICIAL_PATCH                       09/10/08                                jdog5000      */
           /*                                                                                              */
-          /* Bugfix				                                                                         */
+          /* Bugfix				                                                                                */
           /************************************************************************************************/
           /* original BTS code
 					if (kLoopUnit.getMoves() > 1)
-*/
+          */
           // Mobile anti-air and artillery flags only meant for land units
           if (kLoopUnit.getDomainType() == DOMAIN_LAND && kLoopUnit.getMoves() > 1)
           /************************************************************************************************/
@@ -15995,7 +16087,18 @@ int CvPlayerAI::AI_getStrategyHash() const
 
     for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
     {
-      if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getID()))
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                       02/14/10                        denev & jdog5000      */
+      /*                                                                                              */
+      /* Bugfix                                                                                       */
+      /************************************************************************************************/
+      /* original bts code
+			if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getID()))
+      */
+      if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getTeam()))
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                        END                                                  */
+      /************************************************************************************************/
       {
         if (GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
         {
@@ -16020,9 +16123,22 @@ int CvPlayerAI::AI_getStrategyHash() const
           if ((GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) == WARPLAN_DOGPILE) &&
               (GET_TEAM(getTeam()).AI_getWarPlanStateCounter((TeamTypes)iI) < 20))
           {
-            for (iJ = 0; iJ < MAX_TEAMS; iJ++)
+            /************************************************************************************************/
+            /* UNOFFICIAL_PATCH                       02/14/10                             jdog5000         */
+            /*                                                                                              */
+            /* Bugfix                                                                                       */
+            /************************************************************************************************/
+            /* original bts code
+						for (iJ = 0; iJ < MAX_TEAMS; iJ++)
+						{
+							if ((iJ != iI) && iJ != getID())
+            */
+            for (iJ = 0; iJ < MAX_CIV_TEAMS; iJ++)
             {
-              if ((iJ != iI) && iJ != getID())
+              if ((iJ != iI) && iJ != getTeam() && GET_TEAM((TeamTypes)iJ).isAlive())
+              /************************************************************************************************/
+              /* UNOFFICIAL_PATCH                        END                                                  */
+              /************************************************************************************************/
               {
                 if ((atWar((TeamTypes)iI, (TeamTypes)iJ)) && !GET_TEAM((TeamTypes)iI).isAVassal())
                 {
@@ -16048,7 +16164,18 @@ int CvPlayerAI::AI_getStrategyHash() const
 
     for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
     {
-      if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getID()))
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                       02/14/10                             jdog5000         */
+      /*                                                                                              */
+      /* Bugfix                                                                                       */
+      /************************************************************************************************/
+      /* original bts code
+			if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getID()))
+      */
+      if ((GET_TEAM((TeamTypes)iI).isAlive()) && (iI != getTeam()))
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                        END                                                  */
+      /************************************************************************************************/
       {
         CvTeamAI &kOtherTeam = GET_TEAM((TeamTypes)iI);
         iTheirVictoryCountdown = std::min(iTheirVictoryCountdown, kOtherTeam.AI_getLowestVictoryCountdown());
@@ -16929,7 +17056,7 @@ int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(CvArea *pArea) const
       /* original BTS code
 			//Defend offshore islands only lightly.
 			iDefenders = std::min(iDefenders, iAreaCities * iAreaCities - 1);
-*/
+      */
       // Lessen defensive requirements only if not being attacked locally
       if (pArea->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE)
       {
@@ -18075,7 +18202,7 @@ int CvPlayerAI::AI_getMinFoundValue() const
   /************************************************************************************************/
   /* original BTS code
 	int iNetExpenses = calculateInflatedCosts() + std::min(0, getGoldPerTurn());
-*/
+  */
   int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
   /************************************************************************************************/
   /* UNOFFICIAL_PATCH                        END                                                  */
@@ -18577,7 +18704,7 @@ int CvPlayerAI::AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDo
     /************************************************************************************************/
     /* original BTS code
 		CvUnitInfo& kUnitInfo = GC.getUnitInfo((UnitTypes)iI);
-*/
+    */
     CvUnitInfo &kUnitInfo = GC.getUnitInfo(eLoopUnit);
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                        END                                                  */
@@ -18869,7 +18996,7 @@ int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
       /************************************************************************************************/
       /* orginal bts code
 			iValue += std::max(0, -iTempValue);
-*/
+      */
       // Negative happy changes should produce a negative value, not the same value as positive
       iValue += std::min(0, iTempValue);
       /************************************************************************************************/
@@ -18925,7 +19052,7 @@ int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
       /************************************************************************************************/
       /* orginal bts code
 			iValue += std::max(0, -iTempValue);
-*/
+      */
       // Negative health changes should produce a negative value, not the same value as positive
       iValue += std::min(0, iTempValue);
       /************************************************************************************************/
@@ -18946,7 +19073,7 @@ int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
   /************************************************************************************************/
   /* orginal bts code
 	return (0 == iCount) ? 50 : iValue / iCount;
-*/
+  */
   // Mirror happiness valuation code
   return (0 == iCount) ? 50 * iHealth : iValue / iCount;
   /************************************************************************************************/

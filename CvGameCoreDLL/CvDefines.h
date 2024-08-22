@@ -99,6 +99,9 @@
 #define ENDCOLR L"</color>"
 #define NEWLINE L"\n"
 #define SEPARATOR L"\n-----------------------"
+// BUG - start
+#define DOUBLE_SEPARATOR L"\n======================="
+// BUG - end
 #define TEXT_COLOR(szColor)                                                                                            \
   ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().r * 255)),                           \
       ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().g * 255)),                       \

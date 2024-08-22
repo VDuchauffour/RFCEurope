@@ -1336,11 +1336,12 @@ void CvUnitAI::AI_settleMove()
     /*                                                                                              */
     /* Bugfix, settler AI                                                                           */
     /************************************************************************************************/
-    /*// original bts code
+    /* original bts code
 		if (pCitySitePlot->getArea() == getArea())
-*/
+    */
     // Only count city sites we can get to
-    if (pCitySitePlot->getArea() == getArea() && generatePath(pCitySitePlot, MOVE_SAFE_TERRITORY, true))
+    if ((pCitySitePlot->getArea() == getArea() || canMoveAllTerrain()) &&
+        generatePath(pCitySitePlot, MOVE_SAFE_TERRITORY, true))
     /************************************************************************************************/
     /* UNOFFICIAL_PATCH                        END                                                  */
     /************************************************************************************************/
@@ -5454,20 +5455,21 @@ void CvUnitAI::AI_assaultSeaMove()
           //Release any Warships to finish the job.
           getGroup()->AI_seperateAI(UNITAI_ATTACK_SEA);
           getGroup()->AI_seperateAI(UNITAI_RESERVE_SEA);
+
           /************************************************************************************************/
           /* UNOFFICIAL_PATCH                       05/11/09                                jdog5000      */
           /*                                                                                              */
           /* Bugfix                                                                                       */
           /************************************************************************************************/
-          /*// original bts code
+          /* original bts code
 					if (pOldGroup == getGroup() && getUnitType() == UNITAI_ASSAULT_SEA)
 					{
 						if (AI_retreatToCity(true))
 						{
 							bMissionPushed = true;
 						}
-					}*/
-
+					}
+          */
           // Fixed bug in next line with checking unit type instead of unit AI
           if (pOldGroup == getGroup() && AI_getUnitAIType() == UNITAI_ASSAULT_SEA)
           {
@@ -10423,6 +10425,7 @@ bool CvUnitAI::AI_paradrop(int iRange)
 
             PlayerTypes eTargetPlayer = pLoopPlot->getOwnerINLINE();
             FAssert(NO_PLAYER != eTargetPlayer);
+
             /************************************************************************************************/
             /* UNOFFICIAL_PATCH                       08/01/08                                jdog5000      */
             /*                                                                                              */
@@ -10433,7 +10436,7 @@ bool CvUnitAI::AI_paradrop(int iRange)
 						{
 							iValue += GET_PLAYER(eTargetPlayer).AI_bonusVal(pLoopPlot->getBonusType()) - 10;
 						}
-*/
+            */
             // Bonus values for bonuses the AI has are less than 10 for non-strategic resources... since this is
             // in the AI territory they probably have it
             if (NO_BONUS != pLoopPlot->getNonObsoleteBonusType(getTeam()))
@@ -13101,7 +13104,7 @@ bool CvUnitAI::AI_found_map(int modifier)
                       iValue *= 1000;
 
                       iValue /=
-                          (iPathTurns + 2); //Rhye - più aumenta il valore (default +1) più preferisce fondare lontano
+                          (iPathTurns + 2); //Rhye - piï¿½ aumenta il valore (default +1) piï¿½ preferisce fondare lontano
 
                       if (iValue > iBestValue)
                       {
@@ -13925,7 +13928,18 @@ bool CvUnitAI::AI_specialSeaTransportMissionary()
 
                 if (iPathTurns == 1)
                 {
-                  iValue *= 2;
+                  /************************************************************************************************/
+                  /* UNOFFICIAL_PATCH                       02/22/10                                jdog5000      */
+                  /*                                                                                              */
+                  /* Bugfix                                                                                       */
+                  /************************************************************************************************/
+                  /* original bts code
+									iValue *= 2;
+                  */
+                  iCorpValue *= 2;
+                  /************************************************************************************************/
+                  /* UNOFFICIAL_PATCH                        END                                                  */
+                  /************************************************************************************************/
                 }
 
                 iValue *= 1000;

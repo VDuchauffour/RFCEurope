@@ -30,6 +30,10 @@
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 
+// BUG - start
+#include "BugMod.h"
+// BUG - end
+
 #include "CvRhyes.h" //Rhye
 
 // Public Functions...
@@ -98,7 +102,6 @@ void CvGame::init(HandicapTypes eHandicap)
   int iStartTurn;
   int iEstimateEndTurn;
   int iI;
-  //logMsg("game init"); //Rhye
   //--------------------------------
   // Init saved data
   reset(eHandicap);
@@ -271,7 +274,6 @@ void CvGame::init(HandicapTypes eHandicap)
   AI_init();
 
   doUpdateCacheOnTurn();
-  //logMsg("Init Out");
 
   // 3Miro: tech date restriction
   for (iI = 0; iI < 120; iI++)
@@ -286,7 +288,6 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::setInitialItems()
 {
   PROFILE_FUNC();
-  //logMsg("setInitialItems"); //Rhye
   initFreeState();
   assignStartingPlots();
   normalizeStartingPlots();
@@ -300,13 +301,32 @@ void CvGame::setInitialItems()
       kPlayer.AI_updateFoundValues();
     }
   }
-  //logMsg("setInitialItems Out");
 }
+
+// BUG - MapFinder - start
+// from HOF Mod - Dianthus
+bool CvGame::canRegenerateMap() const
+{
+	if (GC.getGameINLINE().getElapsedGameTurns() != 0) return false;
+	if (GC.getGameINLINE().isGameMultiPlayer()) return false;
+	if (GC.getInitCore().getWBMapScript()) return false;
+
+	// EF: TODO clear contact at start of regenerateMap()?
+	for (int iI = 1; iI < MAX_CIV_TEAMS; iI++)
+	{
+		CvTeam& team=GET_TEAM((TeamTypes)iI);
+		for (int iJ = 0; iJ < iI; iJ++)
+		{
+			if (team.isHasMet((TeamTypes)iJ)) return false;
+		}
+	}
+	return true;
+}
+// BUG - MapFinder - end
 
 void CvGame::regenerateMap()
 {
   int iI;
-  //logMsg("regenerateMap"); //Rhye
   if (GC.getInitCore().getWBMapScript())
   {
     return;
@@ -365,6 +385,14 @@ void CvGame::regenerateMap()
 
   gDLL->getEngineIFace()->AutoSave(true);
 
+// BUG - AutoSave - start
+	gDLL->getPythonIFace()->callFunction(PYBugModule, "gameStartSave");
+// BUG - AutoSave - end
+
+	// EF - This doesn't work until after the game has had time to update.
+	//      Centering on the starting location is now done by MapFinder using BugUtil.delayCall().
+	//      Must leave this here for non-BUG
+
   if (NO_PLAYER != getActivePlayer())
   {
     CvPlot *pPlot = GET_PLAYER(getActivePlayer()).getStartingPlot();
@@ -378,7 +406,6 @@ void CvGame::regenerateMap()
 
 void CvGame::uninit()
 {
-  //logMsg(" uninit ");
   SAFE_DELETE_ARRAY(m_aiShrineBuilding);
   SAFE_DELETE_ARRAY(m_aiShrineReligion);
   SAFE_DELETE_ARRAY(m_paiUnitCreatedCount);
@@ -417,7 +444,6 @@ void CvGame::uninit()
   m_aPlotExtraCosts.clear();
   m_mapVoteSourceReligions.clear();
   m_aeInactiveTriggers.clear();
-  //logMsg(" uninit out");
 }
 
 // FUNCTION: reset()
@@ -425,7 +451,6 @@ void CvGame::uninit()
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
   int iI;
-  //logMsg(" reset ");
 
   //--------------------------------
   // Uninit class
@@ -655,7 +680,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
     techFoundedDate[iI] = -1;
   };
 
-  //logMsg(" reset out ");
 }
 
 void CvGame::initDiplomacy()
@@ -664,26 +688,21 @@ void CvGame::initDiplomacy()
 
   int iI, iJ;
 
-  //logMsg(" 3Miro, init diplomacy BARBS= %d,  MAX_TEAMS= %d,  BARB_PL= %d ",BARBARIAN_TEAM,MAX_TEAMS,BARBARIAN_PLAYER);
 
   for (iI = 0; iI < MAX_TEAMS; iI++)
   {
-    //logMsg(" in team iI: %d ",iI );
 
     GET_TEAM((TeamTypes)iI).meet(((TeamTypes)iI), false);
 
-    //logMsg(" has meet iI: %d ",iI );
     // 3Miro: war between barbs and all others
     //if (GET_TEAM((TeamTypes)iI).isBarbarian() || GET_TEAM((TeamTypes)iI).isMinorCiv())
     if (GET_TEAM((TeamTypes)iI).isBarbarian())
     {
       // 3Miro: above is war between the civs, Byzantines, Celts and so on, otherwise peace
-      //logMsg(" Barb Player in %d   MAX_CIV_TEAMS= %d ",iI,MAX_CIV_TEAMS );
       for (iJ = 0; iJ < MAX_CIV_TEAMS; iJ++)
       {
         if (iI != iJ)
         {
-          //logMsg(" declare war false: i,j %d  %d ",iI,iJ);
           GET_TEAM((TeamTypes)iI).declareWar(((TeamTypes)iJ), false, NO_WARPLAN);
         }
       }
@@ -733,7 +752,6 @@ void CvGame::initDiplomacy()
       }
     }
   }
-  //logMsg("Diplomacy Out");
 }
 
 void CvGame::initFreeState()
@@ -741,7 +759,6 @@ void CvGame::initFreeState()
   bool bValid;
   int iI, iJ, iK;
 
-  //logMsg(" initFreeState ");
 
   for (iI = 0; iI < GC.getNumTechInfos(); iI++)
   {
@@ -796,13 +813,11 @@ void CvGame::initFreeState()
       GET_PLAYER((PlayerTypes)iI).initFreeState();
     }
   }
-  //logMsg(" initFreeState out");
 }
 
 void CvGame::initFreeUnits()
 {
   int iI;
-  //logMsg(" initFreeUnits ");
 
   for (iI = 0; iI < MAX_PLAYERS; iI++)
   {
@@ -814,7 +829,6 @@ void CvGame::initFreeUnits()
       }
     }
   }
-  //logMsg(" initFreeUnits out");
 }
 
 void CvGame::assignStartingPlots()
@@ -2171,7 +2185,6 @@ int CvGame::getTeamClosenessScore(int **aaiDistances, int *aiStartingLocs)
 void CvGame::update()
 {
   PROFILE("CvGame::update");
-  //logMsg("Update in"); //Rhye
   if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
   {
     sendPlayerOptions();
@@ -2234,7 +2247,6 @@ void CvGame::update()
     }
     /* Absinthe: disabling old code start
 		//Rhye - start switch - Version B (late human starts)
-		//logMsg("Update in Here 4.1"); //3Miro
 		int iHuman = MAX_PLAYERS;
 		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
 		{
@@ -2247,7 +2259,6 @@ void CvGame::update()
 				}
 			}
 		}
-		//logMsg("Update in Here 5 iHuman %d",iHuman); //3Miro
 		// 3Miro
 		if ( (iHuman > -1) && (iHuman <NUM_ALL_PLAYERS_B) ){
 			if ( startingTurn[iHuman] > 0 ){
@@ -4886,6 +4897,10 @@ void CvGame::setGameState(GameStateTypes eNewValue)
     {
       CvEventReporter::getInstance().gameEnd();
 
+// BUG - AutoSave - start
+			gDLL->getPythonIFace()->callFunction(PYBugModule, "gameEndSave");
+// BUG - AutoSave - end
+
       showEndGameSequence();
 
       for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
@@ -5768,7 +5783,6 @@ void CvGame::addGreatPersonBornName(const CvWString &szName)
 void CvGame::doTurn()
 {
   PROFILE_BEGIN("CvGame::doTurn()");
-  //logMsg(" Begin doTurn in CvGame"); //Rhye
   int aiShuffle[MAX_PLAYERS];
   int iLoopPlayer;
   int iI;
@@ -7712,31 +7726,25 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
 
   if (playerIdx >= GC.getMAX_CIV_PLAYERS())
   {
-    //logMsg("Creating new player ... failed, invalid player index");
     return false;
   }
   if (!GET_PLAYER((PlayerTypes)playerIdx).isEverAlive())
   {
-    //logMsg("Changing player ... failed, player id never alive");
     return false;
   }
   if (newCivType >= GC.getNumCivilizationInfos())
   {
-    //logMsg("Creating new player ... failed, invalid civ type");
     return false;
   }
   if (newLeader >= GC.getNumLeaderHeadInfos())
   {
-    //logMsg("Creating new player ... failed, invalid leader type");
     return false;
   }
   if (teamIdx >= GC.getMAX_TEAMS()) //( teamIdx >= GC.getMAX_CIV_TEAMS() )
   {
-    //logMsg("Creating new player ... failed, invalid team index");
     return false;
   }
 
-  //logMsg("Changing player ...");
 
   // Change whether this player is human
   if (bIsHuman)
@@ -7753,7 +7761,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
   // Change civ type
   if ((CivilizationTypes)newCivType != GC.getInitCore().getCiv((PlayerTypes)playerIdx))
   {
-    //logMsg("Changing civType");
 
     GC.getInitCore().setCiv((PlayerTypes)playerIdx, (CivilizationTypes)newCivType);
 
@@ -7763,7 +7770,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
   // Change Leader Head
   if ((LeaderHeadTypes)newLeader != GC.getInitCore().getLeader((PlayerTypes)playerIdx))
   {
-    //logMsg("Changeing Leader");
     prevLeader = GC.getInitCore().getLeader((PlayerTypes)playerIdx);
 
     if (!GC.getCivilizationInfo((CivilizationTypes)newCivType).isLeaders((LeaderHeadTypes)newLeader))
@@ -7810,7 +7816,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
   // Current challenge is getting existing units to change their flag ...
   if (bChangeGraphics)
   {
-    //logMsg("Changing player graphics");
     CivilizationTypes civType = GET_PLAYER((PlayerTypes)playerIdx).getCivilizationType();
     GC.getInitCore().setFlagDecal((PlayerTypes)playerIdx, (CvWString)GC.getCivilizationInfo(civType).getFlagTexture());
     GC.getInitCore().setColor((PlayerTypes)playerIdx,
@@ -7870,7 +7875,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
 
       char cArray[99];
       sprintf(cArray, "Converting unit type: %d", pNewUnit->getUnitType());
-      //logMsg(cArray);
 
       // Without this, is infinite loop ...
       i++;
@@ -7885,7 +7889,6 @@ bool CvGame::changePlayer(int playerIdx, int newCivType, int newLeader, int team
     GET_PLAYER((PlayerTypes)playerIdx).reinit((PlayerTypes)playerIdx, prevLeader, false);
   }
 
-  //logMsg("Player change complete");
 
   return true;
 }
@@ -7911,7 +7914,6 @@ void CvGame::convertUnits(int playerIdx)
 
     char cArray[99];
     sprintf(cArray, "Converting unit type: %d", pNewUnit->getUnitType());
-    //logMsg(cArray);
 
     // Without this, is infinite loop ...
     i++;
@@ -8583,11 +8585,39 @@ bool CvGame::hasSkippedSaveChecksum() const
 
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv)
 {
+  // UNOFFICIAL_PATCH Start
+	// * Fixed bug with colonies who occupy recycled player slots showing the old leader or civ names.
+	CvWString szEmptyString = L"";
+	LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
+	if ( (eOldLeader != NO_LEADER) && (eOldLeader != eLeader) ) 
+	{
+		GC.getInitCore().setLeaderName(eNewPlayer, szEmptyString);
+	}
+	CivilizationTypes eOldCiv = GET_PLAYER(eNewPlayer).getCivilizationType();
+	if ( (eOldCiv != NO_CIVILIZATION) && (eOldCiv != eCiv) ) 
+	{
+		GC.getInitCore().setCivAdjective(eNewPlayer, szEmptyString);
+		GC.getInitCore().setCivDescription(eNewPlayer, szEmptyString);
+		GC.getInitCore().setCivShortDesc(eNewPlayer, szEmptyString);
+	}
+	// UNOFFICIAL_PATCH End
   PlayerColorTypes eColor = (PlayerColorTypes)GC.getCivilizationInfo(eCiv).getDefaultPlayerColor();
 
   for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
   {
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       12/30/08                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+/* original bts code
     if (eColor == NO_PLAYERCOLOR || GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor)
+*/
+		// Don't invalidate color choice if it's taken by this player
+		if (eColor == NO_PLAYERCOLOR || (GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor && (PlayerTypes)iI != eNewPlayer) )
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
     {
       for (int iK = 0; iK < GC.getNumPlayerColorInfos(); iK++)
       {
@@ -9685,6 +9715,22 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
   return false;
 }
 
+// BUFFY - Security Checks - start
+#ifdef _BUFFY
+// from HOF Mod - Dianthus
+int CvGame::checkCRCs(std::string fileName_, std::string expectedModCRC_, std::string expectedDLLCRC_, std::string expectedShaderCRC_, std::string expectedPythonCRC_, std::string expectedXMLCRC_) const
+{
+	return 0;
+}
+
+// from HOF Mod - Denniz 3.17
+int CvGame::getWarningStatus() const
+{
+	return 0;
+}
+#endif
+// BUFFY - Security Checks - end
+
 // Absinthe: get the largest city (beside the one given as the input, which is needed in equal population situations), and passing the coordinates and population as an int
 // Absinthe: efficiency is not a factor here, as this will only be called for the human player on the Victory screen, on demand
 // Absinthe: note, that it returns the data for the first city among the best ones (in case there are more with equal size)
@@ -9786,7 +9832,6 @@ bool CvGame::isTopCultureCity(int x, int y)
         {
           if (pCity->getCulture(pCity->getOwner()) >= iCulture)
           {
-            //logMsg("better city is: %d %d ",pCity ->getX(),pCity ->getY());
             return false;
           };
         };

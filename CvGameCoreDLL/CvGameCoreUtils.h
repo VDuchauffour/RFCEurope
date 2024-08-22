@@ -277,7 +277,7 @@ int getCombatOdds(CvUnit *pAttacker, CvUnit *pDefender); // Exposed to Python
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
 /////////////////////////////////////////////////////////////////
-DllExport float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n_D);
+float getCombatOddsSpecific(CvUnit *pAttacker, CvUnit *pDefender, int n_A, int n_D);
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // END                                                         //
@@ -399,5 +399,13 @@ void getActivityTypeString(CvWString &szString, ActivityTypes eActivityType);
 void getMissionTypeString(CvWString &szString, MissionTypes eMissionType);
 void getMissionAIString(CvWString &szString, MissionAITypes eMissionAI);
 void getUnitAIString(CvWString &szString, UnitAITypes eUnitAI);
+
+// BUG - Unit Experience - start
+/*
+ * Calculates the experience needed to reach the next level after the given level.
+ */
+int calculateExperience(int iLevel, PlayerTypes ePlayer); // Exposed to Python
+int calculateLevel(int iExperience, PlayerTypes ePlayer); // Exposed to Python
+// BUG - Unit Experience - end
 
 #endif

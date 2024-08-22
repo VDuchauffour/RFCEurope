@@ -665,6 +665,19 @@ void CvTeam::addTeam(TeamTypes eTeam)
                                                      GET_TEAM((TeamTypes)iI).AI_getEnemyPeacetimeGrantValue(eTeam)) /
                                                     2));
 
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                       09/17/09                                jdog5000      */
+      /*                                                                                              */
+      /* Bugfix				                                                                         */
+      /************************************************************************************************/
+      GET_TEAM((TeamTypes)iI)
+          .setEspionagePointsAgainstTeam(getID(),
+                                         std::max(GET_TEAM((TeamTypes)iI).getEspionagePointsAgainstTeam(getID()),
+                                                  GET_TEAM((TeamTypes)iI).getEspionagePointsAgainstTeam(eTeam)));
+      /************************************************************************************************/
+      /* UNOFFICIAL_PATCH                        END                                                  */
+      /************************************************************************************************/
+
       if (GET_TEAM((TeamTypes)iI).isAlive())
       {
         GET_TEAM((TeamTypes)iI).AI_setWarPlan(getID(), NO_WARPLAN, false);
@@ -852,15 +865,41 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 
   for (iI = 0; iI < GC.getNumTechInfos(); iI++)
   {
-    if (GET_TEAM(eTeam).getResearchProgress((TechTypes)iI) > getResearchProgress((TechTypes)iI))
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                       04/29/10                                jdog5000      */
+    /*                                                                                              */
+    /* Bugfix                                                                                       */
+    /************************************************************************************************/
+    /* original bts code
+		if (GET_TEAM(eTeam).getResearchProgress((TechTypes)iI) > getResearchProgress((TechTypes)iI))
+		{
+			setResearchProgress(((TechTypes)iI), GET_TEAM(eTeam).getResearchProgress((TechTypes)iI), getLeaderID());
+		}
+		if (GET_TEAM(eTeam).isNoTradeTech((TechTypes)iI))
+		{
+			setNoTradeTech(((TechTypes)iI), true);
+		}
+    */
+    // Overflow from techs this team already has can cause bugged behavior
+    if (!isHasTech((TechTypes)iI))
     {
-      setResearchProgress(((TechTypes)iI), GET_TEAM(eTeam).getResearchProgress((TechTypes)iI), getLeaderID());
+      if (GET_TEAM(eTeam).getResearchProgress((TechTypes)iI) > getResearchProgress((TechTypes)iI))
+      {
+        setResearchProgress(((TechTypes)iI), GET_TEAM(eTeam).getResearchProgress((TechTypes)iI), getLeaderID());
+      }
     }
 
-    if (GET_TEAM(eTeam).isNoTradeTech((TechTypes)iI))
+    // Clear no tech trade if it is false for other team
+    // Fixes bug where if, with no tech brokering, team A trades a tech to team B, then later joins B in
+    // a permanent alliance.  Previous code would block the AB alliance from "brokering" the tech, even
+    // though A had researched it on their own.
+    if (GET_TEAM(eTeam).isHasTech((TechTypes)iI) && !(GET_TEAM(eTeam).isNoTradeTech((TechTypes)iI)))
     {
-      setNoTradeTech(((TechTypes)iI), true);
+      setNoTradeTech(((TechTypes)iI), false);
     }
+    /************************************************************************************************/
+    /* UNOFFICIAL_PATCH                        END                                                  */
+    /************************************************************************************************/
   }
 }
 
@@ -909,7 +948,19 @@ void CvTeam::doTurn()
 
         for (iJ = 0; iJ < MAX_CIV_TEAMS; iJ++)
         {
-          if (GET_TEAM((TeamTypes)iJ).isAlive())
+          /************************************************************************************************/
+          /* UNOFFICIAL_PATCH                       03/01/10                     Mongoose & jdog5000      */
+          /*                                                                                              */
+          /* Bugfix                                                                                       */
+          /************************************************************************************************/
+          /* original bts code
+					if (GET_TEAM((TeamTypes)iJ).isAlive())
+          */
+          // From Mongoose SDK, BarbarianPassiveTechFix
+          if (GET_TEAM((TeamTypes)iJ).isAlive() && !GET_TEAM((TeamTypes)iJ).isBarbarian())
+          /************************************************************************************************/
+          /* UNOFFICIAL_PATCH                        END                                                  */
+          /************************************************************************************************/
           {
             if (GET_TEAM((TeamTypes)iJ).isHasTech((TechTypes)iI))
             {
@@ -924,11 +975,24 @@ void CvTeam::doTurn()
         {
           FAssertMsg(iPossibleCount > 0, "iPossibleCount is expected to be greater than 0");
 
-          changeResearchProgress(((TechTypes)iI),
-                                 ((getResearchCost((TechTypes)iI) *
-                                   ((GC.getDefineINT("BARBARIAN_FREE_TECH_PERCENT") * iCount) / iPossibleCount)) /
-                                  100),
-                                 getLeaderID());
+          /************************************************************************************************/
+          /* UNOFFICIAL_PATCH                       03/01/10                     Mongoose & jdog5000      */
+          /*                                                                                              */
+          /* Bugfix                                                                                       */
+          /************************************************************************************************/
+          /* original bts code
+					changeResearchProgress(((TechTypes)iI), ((getResearchCost((TechTypes)iI) * ((GC.getDefineINT("BARBARIAN_FREE_TECH_PERCENT") * iCount) / iPossibleCount)) / 100), getLeaderID());
+          */
+          // From Mongoose SDK, BarbarianPassiveTechFix
+          changeResearchProgress(
+              (TechTypes)iI,
+              std::max((getResearchCost((TechTypes)iI) * GC.getDefineINT("BARBARIAN_FREE_TECH_PERCENT") * iCount) /
+                           (100 * iPossibleCount),
+                       1),
+              getLeaderID());
+          /************************************************************************************************/
+          /* UNOFFICIAL_PATCH                        END                                                  */
+          /************************************************************************************************/
         }
       }
     }

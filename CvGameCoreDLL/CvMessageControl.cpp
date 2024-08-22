@@ -206,3 +206,10 @@ void CvMessageControl::sendPing(int iX, int iY)
     gDLL->sendMessageData(new CvNetPing(GC.getGameINLINE().getActivePlayer(), iX, iY));
   }
 }
+
+// BUG - Reminder Mod - start
+void CvMessageControl::sendAddReminder(PlayerTypes ePlayer, int iGameTurn, CvWString szMessage)
+{
+  gDLL->sendMessageData(new CvNetAddReminder(ePlayer, iGameTurn, szMessage));
+}
+// BUG - Reminder Mod - end
