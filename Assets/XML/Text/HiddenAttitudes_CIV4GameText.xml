@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Text strings for Show Hidden Attitudes Mod
+	Author: DaveMcW
+	Forum: http://forums.civfanatics.com/showthread.php?t=335966
+  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_FIRST_IMPRESSION</Tag>
+		<English>%D1: "A first impression is a lasting one."</English>
+		<French>%D1: "C'est la premi&#195;&#168;re impression qui compte."</French>
+		<German>%D1: "Der erste Eindruck z&#195;&#164;hlt."</German>
+		<Italian>%D1: "La prima impressione &#195;&#168; quella che conta."</Italian>
+		<Spanish>%D1: "La primera impresi&#195;&#179;n es la que cuenta."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_TEAM_SIZE</Tag>
+		<English>%D1: "Your team is too big."</English>
+		<French>%D1: "Votre &#195;&#169;quipe est d&#195;&#169;j&#195;&#160; trop grande."</French>
+		<German>%D1: "Ihr habt zu viele Verb&#195;&#188;ndete."</German>
+		<Italian>%D1: "La tua squadra &#195;&#168; troppo grande."</Italian>
+		<Spanish>%D1: "Tu equipo es demasiado grande."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_BETTER_RANK</Tag>
+		<English>%D1: "Your small civilization is no threat to us."</English>
+		<French>%D1: "Votre mis&#195;&#169;rable civilisation ne nous pose aucune menace."</French>
+		<German>%D1: "Eure kleine Zivilisation ist keine Bedrohung f&#195;&#188;r uns."</German>
+		<Italian>%D1: "La tua insignificante civilt&#195;&#160; non ci pone alcuna minaccia."</Italian>
+		<Spanish>%D1: "Tu peque&#195;&#177;a civilizaci&#195;&#179;n no supone ninguna amenaza para nosotros."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_WORSE_RANK</Tag>
+		<English>%D1: "We feel threatened by your large civilization."</English>
+		<French>%D1: "Nous nous sentons menac&#195;&#169;s par votre grande civilisation."</French>
+		<German>%D1: "Wir f&#195;&#188;hlen uns von Eurer gro&#195;&#159;en Zivilisation bedroht."</German>
+		<Italian>%D1: "Ci sentiamo minacciati dalla tua grande civilt&#195;&#160;."</Italian>
+		<Spanish>%D1: "Nos sentimos amenazados por tu gran civilizaci&#195;&#179;n."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_LOW_RANK</Tag>
+		<English>%D1: "Developing nations should work together to catch up."</English>
+		<French>%D1: "Les nations arri&#195;&#169;r&#195;&#169;es devraient travailler ensemble pour se rattraper."</French>
+		<German>%D1: "Zur&#195;&#188;ckliegende Nationen sollten kooperieren um voranzukommen."</German>
+		<Italian>%D1: "Le nazioni pi&#195;&#185; arretrate dovrebbero cooperare tra loro per progredire."</Italian>
+		<Spanish>%D1: "Las naciones atrasadas deber&#195;&#173;an cooperar para salir adelante."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_LOST_WAR</Tag>
+		<English>%D1: "The war is going badly for us."</English>
+		<French>%D1: "Nous perdons la guerre."</French>
+		<German>%D1: "Dieser Krieg verl&#195;&#164;uft ung&#195;&#188;nstig f&#195;&#188;r uns."</German>
+		<Italian>%D1: "La guerra sta andando male per noi."</Italian>
+		<Spanish>%D1: "Nos va mal en esta guerra."</Spanish>
+	</TEXT>
+</Civ4GameText>

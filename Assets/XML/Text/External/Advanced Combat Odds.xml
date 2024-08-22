@@ -4,10 +4,10 @@
 	<TEXT>
 		<Tag>TXT_ACO_VS</Tag>
 		<English>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
-		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
+		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contre [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] gegen [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
+		<Italian>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contro [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contra [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_BarbFreeWinsLeft</Tag>
@@ -29,7 +29,7 @@
 		<Tag>TXT_ACO_SurvivalOdds</Tag>
 		<English>Survival odds:[SPACE]</English>
 		<French>Chances de survie:[SPACE]</French>
-		<German>&#220;berlebenswahrscheinlichkeit:[SPACE]</German>
+		<German>&#220;berlebenschance:[SPACE]</German>
 		<Italian>Probabilit&#224; di sopravvivenza:[SPACE]</Italian>
 		<Spanish>Probabilidad de sobrevivencia:[SPACE]</Spanish>
 	</TEXT>
@@ -85,7 +85,7 @@
 		<Tag>TXT_ACO_Unharmed</Tag>
 		<English>[NEWLINE]Unharmed:[SPACE]</English>
 		<French>[NEWLINE]Indemne:[SPACE]</French>
-		<German>[NEWLINE]Unverletzt:[SPACE]</German>
+		<German>[NEWLINE]Unversehrt:[SPACE]</German>
 		<Italian>[NEWLINE]Disarmato:[SPACE]</Italian>
 		<Spanish>[NEWLINE]Ileso:[SPACE]</Spanish>
 	</TEXT>
@@ -101,7 +101,7 @@
 		<Tag>TXT_ACO_TotalDefenseModifier</Tag>
 		<English>[NEWLINE]Total defense modifier:[SPACE]</English>
 		<French>[NEWLINE]Modificateur Total de defense:[SPACE]</French>
-		<German>[NEWLINE]Verteidigungsmodifikator gesamt:[SPACE]</German>
+		<German>[NEWLINE]Verteidigungsmodifikator absolut:[SPACE]</German>
 		<Italian>[NEWLINE]Modificatore difensivo totale:[SPACE]</Italian>
 		<Spanish>[NEWLINE]Modificador defensivo total:[SPACE]</Spanish>
 	</TEXT>
@@ -125,7 +125,7 @@
 		<Tag>TXT_ACO_GuaranteedNoDefenderHit</Tag>
 		<English>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Guaranteed! Defender cannot score a hit.[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_HIGHLIGHT_TEXT]C'est garantie! L'unit&#233; d&#233;fensive ne peut marquer de coup.[COLOR_REVERT]</French>
-		<German>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Sicher! Verteidiger wird keinen Treffer landen.[COLOR_REVERT]</German>
+		<German>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Sicher! Der Verteidiger kann keinen Treffer landen.[COLOR_REVERT]</German>
 		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Certa! I difensori non possono colpire neppure una volta.[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][COLOR_HIGHLIGHT_TEXT]&#161;Garantizado! El defensor no puede dar en el blanco.[COLOR_REVERT]</Spanish>
 	</TEXT>
