@@ -37,7 +37,6 @@
 from CvPythonExtensions import CyGame
 import BugUtil
 import cPickle as pickle
-from StoredData import data
 
 
 ## Data Access
@@ -97,7 +96,6 @@ def initGameData():
 
 def onGameStart(argsList):
     initGameData()
-    data.setup()
 
 
 def onGameLoad(argsList):
