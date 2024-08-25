@@ -3,7 +3,7 @@
 import StoredData
 import Locations
 
-import ScreensHandler
+import ScreenHandler
 
 import LocationsData
 import CityMapData
@@ -17,7 +17,6 @@ import Modifiers
 # import AIParameters
 
 # import Scenarios
-# import ScreensHandler
 
 import AIWars
 import Barbs

@@ -9,7 +9,7 @@ import CvCameraControls
 import CvUtil
 import Popup as PyPopup
 
-from CoreFunctions import get_data_from_upside_down_map, text
+from Core import get_data_from_upside_down_map, text
 from MiscData import MODNET_EVENTS
 from CityMapData import CITIES_MAP
 
