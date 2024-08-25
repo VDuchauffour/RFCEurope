@@ -21,7 +21,7 @@ import CvEventManager
 import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
-from PyUtils import rand, percentage_chance
+from PyUtils import percentage_chance
 
 from StoredData import data
 import RiseAndFall
@@ -210,38 +210,6 @@ class CvRFCEventHandler:
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        Locations.setup()
-        Modifiers.setup()
-        Civilizations.setup()
-
-        data.setup()
-        self.provinces.setup()
-        self.rnf.setup()
-        self.rel.setup()
-        self.pla.setup()
-        self.sta.setup()
-        self.aiw.setup()
-        self.company.setup()  # Absinthe: initial company setup for the 1200AD scenario
-
-        # 3Miro: WarOnSpawn
-        self.rnf.setWarOnSpawn()
-        self.vic.setup()
-
-        # Absinthe: generate and store randomized turn modifiers
-        data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
-        data.lEventRandomness[iByzantiumVikingAttack] = rand(10)
-
-        # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
-        #             some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
-        #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
-        if get_scenario() == Scenario.i1200AD:
-            for city in cities().owner(Civ.HUNGARY).entities():
-                self.cnm.renameCities(city, Civ.HUNGARY)
-
-        # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
-        for iPlayer in civilizations().majors().ids():
-            gc.getPlayer(iPlayer).processCivNames()
-
         return 0
 
     def onPreSave(self, argsList):

@@ -20,12 +20,12 @@ from CoreTypes import (
     Wonder,
 )
 from PyUtils import percentage_chance, rand
-
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
 import RiseAndFall
 import Provinces
 from Secession import revoltCity
+from Events import handler
 
 rnf = RiseAndFall.RiseAndFall()
 pm = Provinces.ProvinceManager()
@@ -35,101 +35,146 @@ gc = CyGlobalContext()
 tStabilityPenalty = (-5, -2, 0, 0, 0)  # province type: unstable, border, potential, historic, core
 
 
+@handler("GameStart")
+def setup():
+    for iPlayer in civilizations().majors().ids():
+        pPlayer = gc.getPlayer(iPlayer)
+        for iCath in range(4):
+            pPlayer.changeStabilityBase(iCath, -pPlayer.getStabilityBase(iCath))
+            pPlayer.setStabilityVary(iCath, 0)
+        pPlayer.setStabilitySwing(0)
+    # Absinthe: bonus stability for the human player based on difficulty level
+    iHandicap = gc.getGame().getHandicapType()
+    if iHandicap == 0:
+        gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 6)
+    elif iHandicap == 1:
+        gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 2)
+
+    # Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
+    for iPlayer in civilizations().majors().ids():
+        pPlayer = gc.getPlayer(iPlayer)
+        teamPlayer = gc.getTeam(pPlayer.getTeam())
+        iCounter = 0
+        for pCity in cities().owner(iPlayer).entities():
+            iCounter += 1
+            iOldStab = pPlayer.getStability()
+
+            # Province stability
+            iProv = PROVINCES_MAP[pCity.getY()][pCity.getX()]
+            iProvinceType = pPlayer.getProvinceType(iProv)
+            if iProvinceType == ProvinceType.CORE:
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+            elif not gc.hasUP(
+                iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
+            ):  # no instability with the Settler UP
+                if iProvinceType == ProvinceType.CONTESTED:
+                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
+                elif iProvinceType == ProvinceType.NONE:
+                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
+
+            # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
+            if pCity.hasBuilding(
+                getUniqueBuilding(iPlayer, Building.MANOR_HOUSE)
+            ) and percentage_chance(70, strict=True):
+                pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
+            if pCity.hasBuilding(
+                getUniqueBuilding(iPlayer, Building.CASTLE)
+            ) and percentage_chance(70, strict=True):
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+            if pCity.hasBuilding(
+                getUniqueBuilding(iPlayer, Building.NIGHT_WATCH)
+            ) and percentage_chance(70, strict=True):
+                pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
+            if pCity.hasBuilding(
+                getUniqueBuilding(iPlayer, Building.COURTHOUSE)
+            ) and percentage_chance(70, strict=True):
+                pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
+
+        # Small boost for small civs
+        if iCounter < 6:  # instead of the additional boost for the first few cities
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, (6 - iCounter) / 2 + 1)
+
+        # Known techs which otherwise give instability should also give the penalty here
+        for iTech in [
+            Technology.FEUDALISM,
+            Technology.GUILDS,
+            Technology.GUNPOWDER,
+            Technology.PROFESSIONAL_ARMY,
+            Technology.NATIONALISM,
+            Technology.CIVIL_SERVICE,
+            Technology.ECONOMICS,
+            Technology.MACHINERY,
+            Technology.ARISTOCRACY,
+        ]:
+            if teamPlayer.isHasTech(iTech):
+                gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
+
+        # Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
+        if pPlayer.isAlive():
+            pm.updatePotential(iPlayer)
+
+    # Absinthe: AI stability bonus - for civs that have a hard time at the beginning
+    # 			for example France, Arabia, Bulgaria, Cordoba, Ottomans
+    for iPlayer in civilizations().main().ids():
+        pPlayer = gc.getPlayer(iPlayer)
+        if iPlayer != human():
+            pPlayer.changeStabilityBase(
+                StabilityCategory.EXPANSION, civilization(iPlayer).ai.stability_bonus
+            )
+
+    # Absinthe: update Byzantine stability on the start of the game
+    if get_scenario() == Scenario.i500AD:
+        # small stability boost for the human player for the first UHV
+        if Civ.BYZANTIUM == human():
+            pByzantium = gc.getPlayer(Civ.BYZANTIUM)
+            pByzantium.changeStabilityBase(StabilityCategory.EXPANSION, 4)
+        recalcEpansion(Civ.BYZANTIUM)
+
+
+def recalcEpansion(iPlayer):
+    pPlayer = gc.getPlayer(iPlayer)
+    iExpStability = 0
+    iCivic5 = pPlayer.getCivics(5)
+    bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND)
+    iCivicBonus = 0
+    iUPBonus = 0
+    for pCity in cities().owner(iPlayer).entities():
+        iProvType = pPlayer.getProvinceType(pCity.getProvince())
+        iProvNum = pCity.getProvince()
+        CityName = pCity.getNameKey()
+        assert 0 <= iProvType < len(tStabilityPenalty), (
+            "Bad ProvinceType value for CityName (%s)" % CityName
+        )
+
+        iExpStability += tStabilityPenalty[iProvType]
+        if iProvType <= ProvinceType.CONTESTED:
+            if iCivic5 == Civic.IMPERIALISM:  # Imperialism
+                iCivicBonus += 1
+            if bIsUPLandStability:  # French UP
+                iUPBonus += 1
+    iExpStability += iCivicBonus  # Imperialism
+    iExpStability += iUPBonus  # French UP
+    if pPlayer.getCivics(5) != Civic.OCCUPATION:
+        iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType(
+            ProvinceType.CORE
+        )  # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
+        iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType(
+            ProvinceType.HISTORICAL
+        )  # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
+    if pPlayer.getMaster() > -1:
+        iExpStability += 8
+    if iCivic5 == Civic.VASSALAGE:
+        iExpStability += 3 * pPlayer.countVassals()
+    else:
+        iExpStability += pPlayer.countVassals()
+    iNumCities = pPlayer.getNumCities()
+    if iPlayer in [Civ.OTTOMAN, Civ.MOSCOW]:  # five free cities for those two
+        iNumCities = max(0, iNumCities - 5)
+    iExpStability -= iNumCities * iNumCities / 40
+    pPlayer.setStabilityVary(StabilityCategory.EXPANSION, iExpStability)
+
+
 class Stability:
-    def setup(self):  # Sets starting stability
-        for iPlayer in civilizations().majors().ids():
-            pPlayer = gc.getPlayer(iPlayer)
-            for iCath in range(4):
-                pPlayer.changeStabilityBase(iCath, -pPlayer.getStabilityBase(iCath))
-                pPlayer.setStabilityVary(iCath, 0)
-            pPlayer.setStabilitySwing(0)
-        # Absinthe: bonus stability for the human player based on difficulty level
-        iHandicap = gc.getGame().getHandicapType()
-        if iHandicap == 0:
-            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 6)
-        elif iHandicap == 1:
-            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION, 2)
-
-        # Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
-        for iPlayer in civilizations().majors().ids():
-            pPlayer = gc.getPlayer(iPlayer)
-            teamPlayer = gc.getTeam(pPlayer.getTeam())
-            iCounter = 0
-            for pCity in cities().owner(iPlayer).entities():
-                iCounter += 1
-                iOldStab = pPlayer.getStability()
-
-                # Province stability
-                iProv = PROVINCES_MAP[pCity.getY()][pCity.getX()]
-                iProvinceType = pPlayer.getProvinceType(iProv)
-                if iProvinceType == ProvinceType.CORE:
-                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-                elif not gc.hasUP(
-                    iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
-                ):  # no instability with the Settler UP
-                    if iProvinceType == ProvinceType.CONTESTED:
-                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
-                    elif iProvinceType == ProvinceType.NONE:
-                        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
-
-                # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
-                if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.MANOR_HOUSE)
-                ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
-                if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.CASTLE)
-                ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-                if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.NIGHT_WATCH)
-                ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
-                if pCity.hasBuilding(
-                    getUniqueBuilding(iPlayer, Building.COURTHOUSE)
-                ) and percentage_chance(70, strict=True):
-                    pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
-
-            # Small boost for small civs
-            if iCounter < 6:  # instead of the additional boost for the first few cities
-                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, (6 - iCounter) / 2 + 1)
-
-            # Known techs which otherwise give instability should also give the penalty here
-            for iTech in [
-                Technology.FEUDALISM,
-                Technology.GUILDS,
-                Technology.GUNPOWDER,
-                Technology.PROFESSIONAL_ARMY,
-                Technology.NATIONALISM,
-                Technology.CIVIL_SERVICE,
-                Technology.ECONOMICS,
-                Technology.MACHINERY,
-                Technology.ARISTOCRACY,
-            ]:
-                if teamPlayer.isHasTech(iTech):
-                    gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
-
-            # Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
-            if pPlayer.isAlive():
-                pm.updatePotential(iPlayer)
-
-        # Absinthe: AI stability bonus - for civs that have a hard time at the beginning
-        # 			for example France, Arabia, Bulgaria, Cordoba, Ottomans
-        for iPlayer in civilizations().main().ids():
-            pPlayer = gc.getPlayer(iPlayer)
-            if iPlayer != human():
-                pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION, civilization(iPlayer).ai.stability_bonus
-                )
-
-        # Absinthe: update Byzantine stability on the start of the game
-        if get_scenario() == Scenario.i500AD:
-            # small stability boost for the human player for the first UHV
-            if Civ.BYZANTIUM == human():
-                pByzantium = gc.getPlayer(Civ.BYZANTIUM)
-                pByzantium.changeStabilityBase(StabilityCategory.EXPANSION, 4)
-            self.recalcEpansion(Civ.BYZANTIUM)
-
     def checkTurn(self, iGameTurn):
         # Absinthe: logging AI stability levels
         if iGameTurn % 9 == 2:
@@ -170,7 +215,7 @@ class Stability:
         # 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CvPlayer::revolution and CvPlayer::convert
         if pPlayer.getAnarchyTurns() - 1 > 0:
             self.recalcCivicCombos(iPlayer)
-            self.recalcEpansion(iPlayer)
+            recalcEpansion(iPlayer)
             iNumCities = pPlayer.getNumCities()
 
             if iPlayer != Civ.PRUSSIA:  # Absinthe: Prussian UP
@@ -241,7 +286,7 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
 
         self.recalcCivicCombos(iPlayer)
-        self.recalcEpansion(iPlayer)
+        recalcEpansion(iPlayer)
         self.recalcEconomy(iPlayer)
         self.recalcCity(iPlayer)
 
@@ -264,7 +309,7 @@ class Stability:
                 pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
         if pPlayer.getNumCities() < 5:  # early boost to small civs
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-        self.recalcEpansion(iPlayer)
+        recalcEpansion(iPlayer)
         self.recalcCivicCombos(iPlayer)
 
     def onCityAcquired(self, iOwner, playerType, city, bConquest, bTrade):
@@ -328,8 +373,8 @@ class Stability:
             else:
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION, -10)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 10)
-        self.recalcEpansion(iOwner)
-        self.recalcEpansion(playerType)
+        recalcEpansion(iOwner)
+        recalcEpansion(playerType)
 
     def onCityRazed(self, iOwner, iPlayer, city):
         # Sedna17: Not sure what difference between iOwner and iPlayer is here
@@ -374,7 +419,7 @@ class Stability:
         # temporary, 3 for everyone but Norway
         if iPlayer != Civ.NORWAY:
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
-        self.recalcEpansion(iPlayer)
+        recalcEpansion(iPlayer)
 
     def onImprovementDestroyed(self, owner):
         pPlayer = gc.getPlayer(owner)
@@ -402,7 +447,7 @@ class Stability:
             self.recalcEconomy(iPlayer)
         elif iBuilding == getUniqueBuilding(iPlayer, Building.CASTLE):
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-            self.recalcEpansion(iPlayer)
+            recalcEpansion(iPlayer)
         elif iBuilding == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
             pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
             self.recalcCivicCombos(iPlayer)
@@ -422,10 +467,10 @@ class Stability:
         elif iBuilding == Building.PALACE:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
-            self.recalcEpansion(iPlayer)
+            recalcEpansion(iPlayer)
         elif iBuilding == Building.RELIQUARY:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-            self.recalcEpansion(iPlayer)
+            recalcEpansion(iPlayer)
 
     def onProjectBuilt(self, iPlayer, iProject):
         pPlayer = gc.getPlayer(iPlayer)
@@ -438,7 +483,7 @@ class Stability:
                 pPlayer.changeStabilityBase(
                     StabilityCategory.EXPANSION, 1
                 )  # one less stability penalty if civ is in Colonialism
-        self.recalcEpansion(iPlayer)
+        recalcEpansion(iPlayer)
 
     def onCombatResult(self, argsList):
         pass
@@ -968,45 +1013,3 @@ class Stability:
             )
         else:
             pPlayer.setStabilityVary(StabilityCategory.ECONOMY, 0)
-
-    def recalcEpansion(self, iPlayer):
-        pPlayer = gc.getPlayer(iPlayer)
-        iExpStability = 0
-        iCivic5 = pPlayer.getCivics(5)
-        bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND)
-        iCivicBonus = 0
-        iUPBonus = 0
-        for pCity in cities().owner(iPlayer).entities():
-            iProvType = pPlayer.getProvinceType(pCity.getProvince())
-            iProvNum = pCity.getProvince()
-            CityName = pCity.getNameKey()
-            assert 0 <= iProvType < len(tStabilityPenalty), (
-                "Bad ProvinceType value for CityName (%s)" % CityName
-            )
-
-            iExpStability += tStabilityPenalty[iProvType]
-            if iProvType <= ProvinceType.CONTESTED:
-                if iCivic5 == Civic.IMPERIALISM:  # Imperialism
-                    iCivicBonus += 1
-                if bIsUPLandStability:  # French UP
-                    iUPBonus += 1
-        iExpStability += iCivicBonus  # Imperialism
-        iExpStability += iUPBonus  # French UP
-        if pPlayer.getCivics(5) != Civic.OCCUPATION:
-            iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType(
-                ProvinceType.CORE
-            )  # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
-            iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType(
-                ProvinceType.HISTORICAL
-            )  # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
-        if pPlayer.getMaster() > -1:
-            iExpStability += 8
-        if iCivic5 == Civic.VASSALAGE:
-            iExpStability += 3 * pPlayer.countVassals()
-        else:
-            iExpStability += pPlayer.countVassals()
-        iNumCities = pPlayer.getNumCities()
-        if iPlayer in [Civ.OTTOMAN, Civ.MOSCOW]:  # five free cities for those two
-            iNumCities = max(0, iNumCities - 5)
-        iExpStability -= iNumCities * iNumCities / 40
-        pPlayer.setStabilityVary(StabilityCategory.EXPANSION, iExpStability)

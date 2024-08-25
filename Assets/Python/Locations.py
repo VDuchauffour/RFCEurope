@@ -15,6 +15,7 @@ from CityMapData import CITIES_MAP
 from ProvinceMapData import PROVINCES_MAP
 from SettlerMapData import SETTLERS_MAP
 from WarMapData import WARS_MAP
+from Events import handler
 
 gc = CyGlobalContext()
 
@@ -26,6 +27,7 @@ def init():
     set_province_type_parameters()
 
 
+@handler("GameStart")
 def setup():
     init_player_maps()
     update_province_id()

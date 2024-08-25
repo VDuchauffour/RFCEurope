@@ -41,7 +41,7 @@ from RFCUtils import calculateDistance, countAchievedGoals, getNumberCargoShips,
 import UniquePowers
 from StoredData import data
 import random
-
+from Events import handler
 from Consts import MessageData
 
 up = UniquePowers.UniquePowers()
@@ -477,6 +477,23 @@ tDenmarkControlIII = [
 totalLand = gc.getMap().getLandPlots()
 
 
+@handler("GameStart")
+def setup():
+    # ignore AI goals
+    bIgnoreAI = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
+    data.bIgnoreAIUHV = bIgnoreAI
+    if bIgnoreAI:
+        for iPlayer in civilizations().majors().ids():
+            if human() != iPlayer:
+                setAllUHVFailed(iPlayer)
+
+
+def setAllUHVFailed(iCiv):
+    pPlayer = gc.getPlayer(iCiv)
+    for i in range(3):
+        pPlayer.setUHV(i, 0)
+
+
 class Victory:
     def __init__(self):
         self.switchConditionsPerCiv = {
@@ -514,20 +531,8 @@ class Victory:
     ### Secure storage & retrieval of script data ###
     ################################################
 
-    def setup(self):
-        # ignore AI goals
-        bIgnoreAI = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
-        self.setIgnoreAI(bIgnoreAI)
-        if bIgnoreAI:
-            for iPlayer in civilizations().majors().ids():
-                if human() != iPlayer:
-                    self.setAllUHVFailed(iPlayer)
-
     def isIgnoreAI(self):
         return data.bIgnoreAIUHV
-
-    def setIgnoreAI(self, bVal):
-        data.bIgnoreAIUHV = bVal
 
     #######################################
     ### Main methods (Event-Triggered) ###
@@ -2039,17 +2044,12 @@ class Victory:
                 sText = "third"
             show(text("TXT_KEY_VICTORY_UHV_GOAL_LOST", sText))
 
-    def setAllUHVFailed(self, iCiv):
-        pPlayer = gc.getPlayer(iCiv)
-        for i in range(3):
-            pPlayer.setUHV(i, 0)
-
     def switchUHV(self, iNewCiv, iOldCiv):
         pPlayer = gc.getPlayer(iNewCiv)
         for i in range(3):
             pPlayer.setUHV(i, -1)
         if self.isIgnoreAI():
-            self.setAllUHVFailed(iOldCiv)
+            setAllUHVFailed(iOldCiv)
 
     def isPossibleUHV(self, iCiv, iUHV, bAlreadyAIChecked):
         pCiv = gc.getPlayer(iCiv)

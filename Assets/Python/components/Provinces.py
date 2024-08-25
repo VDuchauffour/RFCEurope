@@ -2,21 +2,34 @@ from Core import get_scenario, civilization, civilizations, player, year, cities
 from RFCUtils import refreshStabilityOverlay
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import Province, Event, Scenario, ProvinceType
+from Events import handler
+
+
+@handler("GameStart")
+def setup():
+    # set the initial situation for all players
+    for civ in civilizations().main():
+        for type, provinces in civ.location.provinces.items():
+            for province in provinces:
+                civ.player.setProvinceType(province, type)
+    # update provinces for the 1200 AD Scenario
+    if get_scenario() == Scenario.i1200AD:
+        for civ in civilizations().main():
+            if civ.date.birth < year(1200):
+                onSpawn(civ.id)
+
+
+def onSpawn(iPlayer):
+    # when a new nations spawns, old nations in the region should lose some of their provinces
+    events = civilization(iPlayer).event.provinces.get(Event.ON_SPAWN)
+    if events is not None:
+        for civ, province, province_type in events:
+            player(civ).setProvinceType(province, province_type)
+
+    refreshStabilityOverlay()
 
 
 class ProvinceManager:
-    def setup(self):
-        # set the initial situation for all players
-        for civ in civilizations().main():
-            for type, provinces in civ.location.provinces.items():
-                for province in provinces:
-                    civ.player.setProvinceType(province, type)
-        # update provinces for the 1200 AD Scenario
-        if get_scenario() == Scenario.i1200AD:
-            for civ in civilizations().main():
-                if civ.date.birth < year(1200):
-                    self.onSpawn(civ.id)
-
     def checkTurn(self, iGameTurn):
         for civ in civilizations():
             events = civ.event.provinces.get(Event.ON_DATETURN)
@@ -77,12 +90,3 @@ class ProvinceManager:
         for type, provinces in civ.location.provinces.items():
             for province in provinces:
                 civ.player.setProvinceType(province, type)
-
-    def onSpawn(self, iPlayer):
-        # when a new nations spawns, old nations in the region should lose some of their provinces
-        events = civilization(iPlayer).event.provinces.get(Event.ON_SPAWN)
-        if events is not None:
-            for civ, province, province_type in events:
-                player(civ).setProvinceType(province, province_type)
-
-        refreshStabilityOverlay()

@@ -84,6 +84,7 @@ from CoreTypes import (
 )
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from Wonders import leaning_tower_effect
+from Events import handler
 
 gc = CyGlobalContext()
 rel = Religions.Religions()
@@ -95,6 +96,72 @@ iBetrayalPeriod = 8
 iBetrayalThreshold = 66
 iRebellionDelay = 15
 iEscapePeriod = 30
+
+
+@handler("GameStart")
+def setup():
+    setEarlyLeaders()
+    setupRespawnTurns()
+
+    iHuman = human()
+    if get_scenario() == Scenario.i500AD:
+        create_starting_units_500AD()
+        for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
+            reveal_areas(civ)
+            set_initial_contacts(civ)
+
+    else:
+        create_starting_units_1200AD()
+        for civ in (
+            civilizations()
+            .main()
+            .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
+            .ids()
+        ):
+            reveal_areas(civ)
+            set_initial_contacts(civ, False)
+            # Temporarily all civs get the same starting techs as Aragon
+            set_starting_techs_1200AD(civ)
+
+        set_starting_faith()
+        set_starting_diplomacy_1200AD()
+        leaning_tower_effect()
+        rel.spread1200ADJews()  # Spread Jews to some random cities
+        vic.set1200UHVDone(iHuman)
+        # Temporarily all civs get the same starting techs as Aragon
+        set_starting_techs_1200AD(Civ.POPE)
+        cru.do1200ADCrusades()
+
+    set_starting_gold()
+    set_war_on_spawn()
+
+
+def set_war_on_spawn():
+    for civ in civilizations():
+        wars = civ.scenario.get("wars")
+        if wars is not None:
+            for other, war_threshold in wars.items():
+                if percentage_chance(war_threshold, strict=True) and not civ.at_war(other):
+                    civ.set_war(other)
+
+
+def setSpecialRespawnTurn(iCiv, iNewValue):
+    data.lSpecialRespawnTurn[iCiv] = iNewValue
+
+
+def setupRespawnTurns():
+    """Uniform spawns within +/- 10 turns of desired turn."""
+    for iCiv in civilizations().majors().ids():
+        setSpecialRespawnTurn(
+            iCiv, civilization(iCiv).date.respawning + (rand(21) - 10) + (rand(21) - 10)
+        )
+
+
+def setEarlyLeaders():
+    for civ in civilizations().majors().ai():
+        if civ.leaders[LeaderType.EARLY] != civ.leaders[LeaderType.PRIMARY]:
+            leader = civ.leaders[LeaderType.EARLY]
+            civ.player.setLeader(leader)
 
 
 class RiseAndFall:
@@ -195,13 +262,6 @@ class RiseAndFall:
 
     def setDeleteMode(self, i, iNewValue):
         data.lDeleteMode[i] = iNewValue
-
-    # Sedna17 Respawn
-    def setSpecialRespawnTurn(self, iCiv, iNewValue):
-        data.lSpecialRespawnTurn[iCiv] = iNewValue
-
-    def getSpecialRespawnTurns(self):
-        return data.lSpecialRespawnTurn
 
     ###############
     ### Popups ###
@@ -393,43 +453,6 @@ class RiseAndFall:
     ### Main methods (Event-Triggered) ###
     #####################################
 
-    def setup(self):
-        self.setEarlyLeaders()
-
-        # Sedna17 Respawn setup special respawn turns
-        self.setupRespawnTurns()
-
-        iHuman = human()
-        if get_scenario() == Scenario.i500AD:
-            create_starting_units_500AD()
-            for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
-                reveal_areas(civ)
-                set_initial_contacts(civ)
-
-        else:
-            create_starting_units_1200AD()
-            for civ in (
-                civilizations()
-                .main()
-                .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
-                .ids()
-            ):
-                reveal_areas(civ)
-                set_initial_contacts(civ, False)
-                # Temporarily all civs get the same starting techs as Aragon
-                set_starting_techs_1200AD(civ)
-
-            set_starting_faith()
-            set_starting_diplomacy_1200AD()
-            leaning_tower_effect()
-            rel.spread1200ADJews()  # Spread Jews to some random cities
-            vic.set1200UHVDone(iHuman)
-            # Temporarily all civs get the same starting techs as Aragon
-            set_starting_techs_1200AD(Civ.POPE)
-            cru.do1200ADCrusades()
-
-        set_starting_gold()
-
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
         x, y = tCity
@@ -502,27 +525,6 @@ class RiseAndFall:
 
     def onCityRazed(self, iOwner, iPlayer, city):
         self.pm.onCityRazed(iOwner, iPlayer, city)  # Province Manager
-
-    # Sedna17 Respawn
-    def setupRespawnTurns(self):
-        for iCiv in civilizations().majors().ids():
-            self.setSpecialRespawnTurn(
-                iCiv, civilization(iCiv).date.respawning + (rand(21) - 10) + (rand(21) - 10)
-            )  # bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
-
-    def setEarlyLeaders(self):
-        for civ in civilizations().majors().ai():
-            if civ.leaders[LeaderType.EARLY] != civ.leaders[LeaderType.PRIMARY]:
-                leader = civ.leaders[LeaderType.EARLY]
-                civ.player.setLeader(leader)
-
-    def setWarOnSpawn(self):
-        for civ in civilizations():
-            wars = civ.scenario.get("wars")
-            if wars is not None:
-                for other, war_threshold in wars.items():
-                    if percentage_chance(war_threshold, strict=True) and not civ.at_war(other):
-                        civ.set_war(other)
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode

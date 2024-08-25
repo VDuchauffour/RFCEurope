@@ -1,8 +1,8 @@
 # ruff: noqa: F401
 
 import StoredData
+import Setup
 import Locations
-
 import ScreenHandler
 
 import LocationsData
@@ -13,43 +13,21 @@ import WarMapData
 import CityNameManager
 import Civilizations
 import Modifiers
-
-# import AIParameters
-
-# import Scenarios
+import Provinces
 
 import AIWars
 import Barbs
-
-# import Civics
-# import Collapse
-# import Communications
 import Companies
 import Crusades
 import Mercenaries
-
-# import DynamicCivs
-# import EventSigns
-# import GreatPeople
 import History
-
-# import Logging
-# import Messages
-# import Periods
 import Plague
 import Religions
 import Resources
-
-# import Resurrection
-# import Rise
 import RiseAndFall
-
-# import Rules
-# import Shortcuts
 import Stability
 import UniquePowers
-
-# import Victories
-# import Wonders
+import Victory
+import Wonders
 
 Locations.init()

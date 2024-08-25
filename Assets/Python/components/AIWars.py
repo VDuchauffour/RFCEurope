@@ -26,6 +26,7 @@ from RFCUtils import (
 )
 from StoredData import data
 from WarMapData import WARS_MAP
+from Events import handler
 
 gc = CyGlobalContext()
 
@@ -37,16 +38,18 @@ iThreshold = 100
 iMinValue = 30
 
 
+@handler("GameStart")
+def setup():
+    iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
+    data.iNextTurnAIWar = iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly)
+
+
 class AIWars:
     def getAttackingCivsArray(self, iCiv):
         return data.lAttackingCivsArray[iCiv]
 
     def setAttackingCivsArray(self, iCiv, iNewValue):
         data.lAttackingCivsArray[iCiv] = iNewValue
-
-    def setup(self):
-        iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
-        data.iNextTurnAIWar = iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly)
 
     def checkTurn(self, iGameTurn):
         if iGameTurn > 20:

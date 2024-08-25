@@ -15,10 +15,12 @@ from CoreTypes import Area, Civ, InitialCondition, Technology, Unit
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from MiscData import REVEAL_DATE_TECHNOLOGY
 from RFCUtils import change_attitude_extra_between_civ
+from Events import handler
 
 gc = CyGlobalContext()
 
 
+@handler("GameStart")
 def setup():
     set_starting_turns()
 

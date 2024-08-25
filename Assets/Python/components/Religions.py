@@ -38,8 +38,8 @@ from RFCUtils import getBaseBuilding, prosecute
 from ReligionData import RELIGIOUS_BUILDINGS
 from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
-
 from ReligionData import RELIGIOUS_WONDERS
+from Events import handler
 
 gc = CyGlobalContext()
 
@@ -168,6 +168,12 @@ tHungary = [
 ]
 
 
+@handler("GameStart")
+def setup():
+    gc.getPlayer(Civ.BYZANTIUM).changeFaith(10)
+    gc.getPlayer(Civ.OTTOMAN).changeFaith(20)
+
+
 class Religions:
 
     ##################################################
@@ -198,10 +204,6 @@ class Religions:
     #######################################
     ### Main methods (Event-Triggered) ###
     #####################################
-
-    def setup(self):
-        gc.getPlayer(Civ.BYZANTIUM).changeFaith(10)
-        gc.getPlayer(Civ.OTTOMAN).changeFaith(20)
 
     def checkTurn(self, iGameTurn):
         # Absinthe: Spreading religion in a couple preset dates

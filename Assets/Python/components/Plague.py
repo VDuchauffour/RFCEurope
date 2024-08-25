@@ -20,12 +20,11 @@ from Core import (
 )
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
-
 from RFCUtils import calculateDistance, getPlagueCountdown, isMortalUnit, setPlagueCountdown
 from StoredData import data
-import random
-
 from MiscData import PLAGUE_IMMUNITY
+from Events import handler
+import random
 
 gc = CyGlobalContext()
 
@@ -38,12 +37,27 @@ iConstantinople = 0
 iBlackDeath = 1
 
 
+@handler("GameStart")
+def setup():
+    for i in civilizations().majors().ids():
+        setPlagueCountdown(i, -PLAGUE_IMMUNITY)
+
+    # Sedna17: Set number of GenericPlagues in StoredData
+    # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
+    setGenericPlagueDates(0, 28 + rand(5) - 10)  # Plagues of Constantinople
+    setGenericPlagueDates(1, 247 + rand(40) - 20)  # 1341 Black Death
+    setGenericPlagueDates(2, 300 + rand(40) - 20)  # Generic recurrence of plague
+    setGenericPlagueDates(3, 375 + rand(40) - 30)  # 1650 Great Plague
+    setGenericPlagueDates(4, 440 + rand(40) - 30)  # 1740 Small Pox
+
+
+def setGenericPlagueDates(i, iNewValue):
+    data.lGenericPlagueDates[i] = iNewValue
+
+
 class Plague:
     def getGenericPlagueDates(self, i):
         return data.lGenericPlagueDates[i]
-
-    def setGenericPlagueDates(self, i, iNewValue):
-        data.lGenericPlagueDates[i] = iNewValue
 
     def getBadPlague(self):
         return data.bBadPlague
@@ -60,19 +74,6 @@ class Plague:
     #######################################
     ### Main methods (Event-Triggered) ###
     #####################################
-
-    def setup(self):
-
-        for i in civilizations().majors().ids():
-            setPlagueCountdown(i, -PLAGUE_IMMUNITY)
-
-        # Sedna17: Set number of GenericPlagues in StoredData
-        # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
-        self.setGenericPlagueDates(0, 28 + rand(5) - 10)  # Plagues of Constantinople
-        self.setGenericPlagueDates(1, 247 + rand(40) - 20)  # 1341 Black Death
-        self.setGenericPlagueDates(2, 300 + rand(40) - 20)  # Generic recurrence of plague
-        self.setGenericPlagueDates(3, 375 + rand(40) - 30)  # 1650 Great Plague
-        self.setGenericPlagueDates(4, 440 + rand(40) - 30)  # 1740 Small Pox
 
     def checkTurn(self, iGameTurn):
 

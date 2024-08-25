@@ -27,10 +27,12 @@ from MiscData import (
 )
 from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
 from LocationsData import CITIES
+from Events import handler
 
 gc = CyGlobalContext()
 
 
+@handler("GameStart")
 def setup():
     set_modifiers()
     set_diplomacy_modifier()
