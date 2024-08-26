@@ -2,7 +2,6 @@
 
 from CvPythonExtensions import *
 from Core import get_scenario, civilization, civilizations, message, human, cities, text
-
 from Consts import MessageData
 from CoreTypes import (
     Building,
@@ -23,13 +22,11 @@ from PyUtils import percentage_chance, rand
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
 import RiseAndFall
-import Provinces
+from Provinces import updatePotential
 from Secession import revoltCity
 from Events import handler
 
 rnf = RiseAndFall.RiseAndFall()
-pm = Provinces.ProvinceManager()
-
 gc = CyGlobalContext()
 
 tStabilityPenalty = (-5, -2, 0, 0, 0)  # province type: unstable, border, potential, historic, core
@@ -111,7 +108,7 @@ def setup():
 
         # Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
         if pPlayer.isAlive():
-            pm.updatePotential(iPlayer)
+            updatePotential(iPlayer)
 
     # Absinthe: AI stability bonus - for civs that have a hard time at the beginning
     # 			for example France, Arabia, Bulgaria, Cordoba, Ottomans

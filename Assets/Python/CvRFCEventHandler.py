@@ -190,7 +190,6 @@ class CvRFCEventHandler:
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
-        self.provinces = Provinces.ProvinceManager()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
         self.company = Companies.Companies()  # Absinthe
 
@@ -619,7 +618,7 @@ class CvRFCEventHandler:
         self.vic.checkTurn(iGameTurn)
         self.sta.checkTurn(iGameTurn)
         self.crusade.checkTurn(iGameTurn)
-        self.provinces.checkTurn(iGameTurn)
+        Provinces.checkTurn(iGameTurn)
         self.company.checkTurn(iGameTurn)
 
         return 0

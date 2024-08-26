@@ -165,14 +165,6 @@ def setEarlyLeaders():
 
 
 class RiseAndFall:
-    def __init__(self):
-        self.pm = Provinces.ProvinceManager()
-        # Init the Province Manager
-
-    ##################################################
-    ### Secure storage & retrieval of script data ###
-    ################################################
-
     def getNewCiv(self):
         return data.iNewCiv
 
@@ -456,7 +448,7 @@ class RiseAndFall:
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
         x, y = tCity
-        self.pm.onCityBuilt(iPlayer, pCity.getX(), pCity.getY())
+        Provinces.onCityBuilt(iPlayer, pCity.getX(), pCity.getY())
         # Absinthe: We can add free buildings for new cities here
         # 			Note that it will add the building every time a city is founded on the plot, not just on the first time
         # 			Venice (56, 35), Augsburg (55, 41), Porto (23, 31), Prague (60, 44), Riga (74, 58), Perekop (87, 36)
@@ -468,7 +460,7 @@ class RiseAndFall:
                 pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
-        self.pm.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
+        Provinces.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
         # Constantinople -> Istanbul
         if iPlayer == Civ.OTTOMAN:
             cityList = cities().owner(iPlayer).entities()
@@ -524,7 +516,7 @@ class RiseAndFall:
                         )
 
     def onCityRazed(self, iOwner, iPlayer, city):
-        self.pm.onCityRazed(iOwner, iPlayer, city)  # Province Manager
+        Provinces.onCityRazed(iOwner, iPlayer, city)  # Province Manager
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode
@@ -1367,7 +1359,7 @@ class RiseAndFall:
 
     def createStartingUnits(self, iCiv, tPlot):
         # set the provinces
-        self.pm.onSpawn(iCiv)
+        Provinces.onSpawn(iCiv)
 
         units = civilization(iCiv).initial.get("units")
         if units is not None:

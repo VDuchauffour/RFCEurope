@@ -29,64 +29,69 @@ def onSpawn(iPlayer):
     refreshStabilityOverlay()
 
 
-class ProvinceManager:
-    def checkTurn(self, iGameTurn):
-        for civ in civilizations():
-            events = civ.event.provinces.get(Event.ON_DATETURN)
-            if events is not None:
-                for dateturn, provinces in events.items():
-                    if iGameTurn == year(dateturn):
-                        for province, province_type in provinces:
-                            civ.player.setProvinceType(province, province_type)
+def checkTurn(iGameTurn):
+    for civ in civilizations():
+        events = civ.event.provinces.get(Event.ON_DATETURN)
+        if events is not None:
+            for dateturn, provinces in events.items():
+                if iGameTurn == year(dateturn):
+                    for province, province_type in provinces:
+                        civ.player.setProvinceType(province, province_type)
 
-    def onCityBuilt(self, iPlayer, x, y):
-        if iPlayer not in civilizations().main().ids():
-            return
-        civ = civilization(iPlayer)
-        province = PROVINCES_MAP[y][x]
-        if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
-            civ.player.setProvinceType(province, ProvinceType.HISTORICAL)
-            refreshStabilityOverlay()
 
-    def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
-        if iPlayer not in civilizations().main().ids():
-            return
-        civ = civilization(iPlayer)
+def onCityBuilt(iPlayer, x, y):
+    if iPlayer not in civilizations().main().ids():
+        return
+    civ = civilization(iPlayer)
+    province = PROVINCES_MAP[y][x]
+    if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
+        civ.player.setProvinceType(province, ProvinceType.HISTORICAL)
+        refreshStabilityOverlay()
+
+
+def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
+    if iPlayer not in civilizations().main().ids():
+        return
+    civ = civilization(iPlayer)
+    province = city.getProvince()
+    if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
+        civ.player.setProvinceType(province, ProvinceType.HISTORICAL)
+        refreshStabilityOverlay()
+
+
+def onCityRazed(iOwner, iPlayer, city):
+    pass
+
+
+def updatePotential(iPlayer):
+    civ = civilization(iPlayer)
+    for city in cities().owner(iPlayer).entities():
         province = city.getProvince()
         if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
             civ.player.setProvinceType(province, ProvinceType.HISTORICAL)
-            refreshStabilityOverlay()
+    refreshStabilityOverlay()
 
-    def onCityRazed(self, iOwner, iPlayer, city):
-        pass
 
-    def updatePotential(self, iPlayer):
-        civ = civilization(iPlayer)
-        for city in cities().owner(iPlayer).entities():
-            province = city.getProvince()
-            if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
-                civ.player.setProvinceType(province, ProvinceType.HISTORICAL)
-        refreshStabilityOverlay()
+def onRespawn(iPlayer):
+    # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
+    civ = civilization(iPlayer)
+    for province in civ.location.provinces[ProvinceType.HISTORICAL]:
+        if civ.player.getProvinceType(province) == ProvinceType.HISTORICAL:
+            civ.player.setProvinceType(province, ProvinceType.POTENTIAL)
 
-    def onRespawn(self, iPlayer):
-        # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
-        civ = civilization(iPlayer)
-        for province in civ.location.provinces[ProvinceType.HISTORICAL]:
-            if civ.player.getProvinceType(province) == ProvinceType.HISTORICAL:
-                civ.player.setProvinceType(province, ProvinceType.POTENTIAL)
+    # Absinthe: special respawn conditions
+    events = civ.event.provinces.get(Event.ON_RESPAWN)
+    if events is not None:
+        for province, province_type in events:
+            civ.player.setProvinceType(province, province_type)
 
-        # Absinthe: special respawn conditions
-        events = civ.event.provinces.get(Event.ON_RESPAWN)
-        if events is not None:
-            for province, province_type in events:
-                civ.player.setProvinceType(province, province_type)
 
-    def resetProvinces(self, iPlayer):
-        # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
-        civ = civilization(iPlayer)
-        for province in Province:
-            civ.player.setProvinceType(province, ProvinceType.NONE)
+def resetProvinces(iPlayer):
+    # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
+    civ = civilization(iPlayer)
+    for province in Province:
+        civ.player.setProvinceType(province, ProvinceType.NONE)
 
-        for type, provinces in civ.location.provinces.items():
-            for province in provinces:
-                civ.player.setProvinceType(province, type)
+    for type, provinces in civ.location.provinces.items():
+        for province in provinces:
+            civ.player.setProvinceType(province, type)

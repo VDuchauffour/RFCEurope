@@ -46,10 +46,9 @@ from RFCUtils import (
     setTempFlippingCity,
 )
 from StoredData import data
-import Provinces
+from Provinces import onRespawn
 
 gc = CyGlobalContext()
-pm = Provinces.ProvinceManager()
 
 
 def resurrection(iGameTurn, iDeadCiv):
@@ -223,9 +222,8 @@ def resurectCiv(iDeadCiv):
     setLastRespawnTurn(iDeadCiv, iGameTurn)
 
     # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
-    pm.onRespawn(
-        iDeadCiv
-    )  # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
+    # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
+    onRespawn(iDeadCiv)
 
     # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
     # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
