@@ -21,12 +21,10 @@ from CoreTypes import (
 from PyUtils import percentage_chance, rand
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
-import RiseAndFall
 from Provinces import updatePotential
 from Secession import revoltCity
 from Events import handler
 
-rnf = RiseAndFall.RiseAndFall()
 gc = CyGlobalContext()
 
 tStabilityPenalty = (-5, -2, 0, 0, 0)  # province type: unstable, border, potential, historic, core

@@ -69,7 +69,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
         # --> INSERT EVENT HANDLER INITIALIZATION HERE <--
         CvRFCEventHandler.CvRFCEventHandler(self)
-        self.rnf = RiseAndFall.RiseAndFall()
         self.crus = Crusades.Crusades()
         self.rel = Religions.Religions()
         self.barb = Barbs.Barbs()
@@ -219,13 +218,13 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def rnfEventApply7614(self, playerID, netUserData, popupReturn):
-        self.rnf.eventApply7614(popupReturn)
+        RiseAndFall.eventApply7614(popupReturn)
 
     def rnfEventBegin7615(self):
         pass
 
     def rnfEventApply7615(self, playerID, netUserData, popupReturn):  # 3Miro: flip
-        self.rnf.eventApply7615(popupReturn)
+        RiseAndFall.eventApply7615(popupReturn)
 
     def crusadeBegin7616(self):
         pass
@@ -267,7 +266,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def rnfEventApply7622(self, playerID, netUserData, popupReturn):  # 3Miro: rebel
-        self.rnf.eventApply7622(popupReturn)
+        RiseAndFall.eventApply7622(popupReturn)
 
     ### Begin Reformation ###
     def relEventBegin7624(self):

@@ -180,7 +180,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.rnf = RiseAndFall.RiseAndFall()
         self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
         self.res = Resources.Resources()
@@ -226,7 +225,7 @@ class CvRFCEventHandler:
         owner, playerType, city, bConquest, bTrade = argsList
         # CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
 
-        self.rnf.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+        RiseAndFall.onCityAcquired(owner, playerType, city, bConquest, bTrade)
         renameCities(city, playerType)
 
         tCity = (city.getX(), city.getY())
@@ -367,7 +366,7 @@ class CvRFCEventHandler:
         if iPreviousOwner == iPlayer and city.getPreviousOwner() != -1:
             iPreviousOwner = city.getPreviousOwner()
 
-        self.rnf.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
+        RiseAndFall.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
         self.sta.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
         self.company.onCityRazed(iPreviousOwner, iPlayer, city)
         self.vic.onCityRazed(iPlayer, city)  # Victory
@@ -384,7 +383,7 @@ class CvRFCEventHandler:
 
         iOwner = city.getOwner()
 
-        self.rnf.onCityBuilt(iOwner, city)
+        RiseAndFall.onCityBuilt(iOwner, city)
         tCity = (city.getX(), city.getY())
 
         if iOwner < civilizations().majors().len():
@@ -609,7 +608,7 @@ class CvRFCEventHandler:
                         )
 
         self.barb.checkTurn(iGameTurn)
-        self.rnf.checkTurn(iGameTurn)
+        RiseAndFall.checkTurn(iGameTurn)
         self.rel.checkTurn(iGameTurn)
         self.res.checkTurn(iGameTurn)
         self.up.checkTurn(iGameTurn)
@@ -626,8 +625,8 @@ class CvRFCEventHandler:
     def onBeginPlayerTurn(self, argsList):
         iGameTurn, iPlayer = argsList
         iHuman = human()
-        if self.rnf.getDeleteMode(0) != -1:
-            self.rnf.deleteMode(iPlayer)
+        if RiseAndFall.getDeleteMode(0) != -1:
+            RiseAndFall.deleteMode(iPlayer)
         # Absinthe: refresh Dynamic Civ Names
         if iPlayer < civilizations().majors().len():
             gc.getPlayer(iPlayer).processCivNames()
@@ -751,7 +750,7 @@ class CvRFCEventHandler:
 
             # for the AI only, leader switch and cheats
             if iPlayer != iHuman:
-                self.rnf.checkPlayerTurn(iGameTurn, iPlayer)
+                RiseAndFall.checkPlayerTurn(iGameTurn, iPlayer)
 
             # not really needed, we set it on collapse anyway
             # setLastTurnAlive( iPlayer, iGameTurn )
@@ -776,7 +775,7 @@ class CvRFCEventHandler:
     def onFirstContact(self, argsList):
 
         iTeamX, iHasMetTeamY = argsList
-        self.rnf.onFirstContact(iTeamX, iHasMetTeamY)
+        RiseAndFall.onFirstContact(iTeamX, iHasMetTeamY)
 
     # Absinthe: Python Event for civic changes
     def onPlayerChangeAllCivics(self, argsList):
