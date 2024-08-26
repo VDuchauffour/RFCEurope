@@ -180,7 +180,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
         self.res = Resources.Resources()
         self.up = UniquePowers.UniquePowers()
@@ -543,7 +542,7 @@ class CvRFCEventHandler:
         pPlot = CyMap().plot(iPlotX, iPlotY)
         if pPlot.countTotalCulture() == 0:
             if iImprovement >= Improvement.COTTAGE and iImprovement <= Improvement.TOWN:
-                self.barb.onImprovementDestroyed(iPlotX, iPlotY)
+                Barbs.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
         if iVictim > -1 and iVictim < civilizations().majors().len():
             self.sta.onImprovementDestroyed(iVictim)
@@ -563,7 +562,7 @@ class CvRFCEventHandler:
         if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack]:
             if human() == Civ.BYZANTIUM:
                 for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
-                    self.barb.spawnUnits(
+                    Barbs.spawnUnits(
                         Civ.BARBARIAN,
                         (80, 24),
                         (80, 25),
@@ -607,7 +606,7 @@ class CvRFCEventHandler:
                             color=MessageData.RED,
                         )
 
-        self.barb.checkTurn(iGameTurn)
+        Barbs.checkTurn(iGameTurn)
         RiseAndFall.checkTurn(iGameTurn)
         self.rel.checkTurn(iGameTurn)
         self.res.checkTurn(iGameTurn)

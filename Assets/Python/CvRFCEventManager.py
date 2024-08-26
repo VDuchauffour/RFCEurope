@@ -71,7 +71,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         CvRFCEventHandler.CvRFCEventHandler(self)
         self.crus = Crusades.Crusades()
         self.rel = Religions.Religions()
-        self.barb = Barbs.Barbs()
 
     def setPopupHandler(self, eventType, handler):
         """Removes all previously installed popup handlers for the given
@@ -293,7 +292,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def barbEventApply7627(self, playerID, netUserData, popupReturn):
-        self.barb.eventApply7627(popupReturn)
+        Barbs.eventApply7627(popupReturn)
 
     # Absinthe: persecution popup
     def relEventBegin7628(self):
