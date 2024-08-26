@@ -189,7 +189,6 @@ class CvRFCEventHandler:
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
-        self.company = Companies.Companies()  # Absinthe
 
         # Mercenaries - start
 
@@ -338,7 +337,7 @@ class CvRFCEventHandler:
 
         self.pla.onCityAcquired(owner, playerType, city)  # Plague
         self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
-        self.company.onCityAcquired(owner, playerType, city)
+        Companies.onCityAcquired(owner, playerType, city)
 
         # Remove Silk resource near Constantinople if it is conquered
         if tCity == (81, 24):
@@ -367,7 +366,7 @@ class CvRFCEventHandler:
 
         RiseAndFall.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
         self.sta.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
-        self.company.onCityRazed(iPreviousOwner, iPlayer, city)
+        Companies.onCityRazed(iPreviousOwner, iPlayer, city)
         self.vic.onCityRazed(iPlayer, city)  # Victory
         self.pla.onCityRazed(city, iPlayer)  # Plague
 
@@ -520,7 +519,7 @@ class CvRFCEventHandler:
         self.vic.onBuildingBuilt(iOwner, iBuildingType)
         if city.getOwner() < civilizations().majors().len():
             self.sta.onBuildingBuilt(iOwner, iBuildingType)
-            self.company.onBuildingBuilt(iOwner, iBuildingType)
+            Companies.onBuildingBuilt(iOwner, iBuildingType)
         # Absinthe: Faith, Kazimierz, Mont Saint-Michel
         self.rel.onBuildingBuilt(iOwner, iBuildingType)
 
@@ -617,7 +616,7 @@ class CvRFCEventHandler:
         self.sta.checkTurn(iGameTurn)
         self.crusade.checkTurn(iGameTurn)
         Provinces.checkTurn(iGameTurn)
-        self.company.checkTurn(iGameTurn)
+        Companies.checkTurn(iGameTurn)
 
         return 0
 
@@ -803,7 +802,7 @@ class CvRFCEventHandler:
         iPlayer, iNewReligion, iOldReligion = argsList
 
         if iPlayer < civilizations().majors().len():
-            self.company.onPlayerChangeStateReligion(argsList)
+            Companies.onPlayerChangeStateReligion(argsList)
 
     def onTechAcquired(self, argsList):
         iPlayer = argsList[2]

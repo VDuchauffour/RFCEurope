@@ -592,192 +592,194 @@ def addCompany(iCompany, iNumber):
                 break
 
 
-class Companies:
-    def checkTurn(self, iGameTurn):
+def checkTurn(iGameTurn):
 
-        # check if it's not too early
-        iCompany = iGameTurn % companies.len()
-        if iGameTurn < year(companies[iCompany].birthdate):
-            return
+    # check if it's not too early
+    iCompany = iGameTurn % companies.len()
+    if iGameTurn < year(companies[iCompany].birthdate):
+        return
 
-        # check if it's not too late
-        elif iGameTurn > year(companies[iCompany].deathdate) + rand(companies.len()):
+    # check if it's not too late
+    elif iGameTurn > year(companies[iCompany].deathdate) + rand(companies.len()):
+        iMaxCompanies = 0
+        # do not dissolve the Templars while Jerusalem is under Catholic control
+        if iCompany == Company.TEMPLARS:
+            plot = gc.getMap().plot(*CITIES[City.JERUSALEM])
+            if plot.isCity():
+                if (
+                    gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
+                    == Religion.CATHOLICISM
+                ):
+                    iMaxCompanies = companies[iCompany].limit
+
+    # set the company limit
+    else:
+        iMaxCompanies = companies[iCompany].limit
+
+    # modified limit for Hospitallers and Teutons after the Crusades
+    if iGameTurn > year(companies[Company.TEMPLARS].deathdate):
+        if iCompany == Company.HOSPITALLERS and iGameTurn < year(companies[iCompany].deathdate):
+            iMaxCompanies -= 1
+        elif iCompany == Company.TEUTONS and iGameTurn < year(companies[iCompany].deathdate):
+            iMaxCompanies += 2
+    # increased limit for Hansa after their first general Diet in 1356
+    if iCompany == Company.HANSA:
+        if year(1356) < iGameTurn < year(companies[iCompany].deathdate):
+            iMaxCompanies += 3
+
+    # Templars are Teutons are gone after the Protestant reformation
+    if iCompany in [Company.TEMPLARS, Company.TEUTONS]:
+        if gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
             iMaxCompanies = 0
-            # do not dissolve the Templars while Jerusalem is under Catholic control
-            if iCompany == Company.TEMPLARS:
-                plot = gc.getMap().plot(*CITIES[City.JERUSALEM])
-                if plot.isCity():
-                    if (
-                        gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
-                        == Religion.CATHOLICISM
-                    ):
-                        iMaxCompanies = companies[iCompany].limit
+    # Order of Calatrava is only active if Cordoba or Morocco is alive
+    # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
+    if iCompany == Company.CALATRAVA:
+        if not (gc.getPlayer(Civ.CORDOBA).isAlive() or gc.getPlayer(Civ.MOROCCO).isAlive()):
+            iMaxCompanies = 0
+    # Order of the Dragon is only active if the Ottomans are alive
+    if iCompany == Company.DRAGON:
+        if not gc.getPlayer(Civ.OTTOMAN).isAlive():
+            iMaxCompanies = 0
 
-        # set the company limit
-        else:
-            iMaxCompanies = companies[iCompany].limit
-
-        # modified limit for Hospitallers and Teutons after the Crusades
-        if iGameTurn > year(companies[Company.TEMPLARS].deathdate):
-            if iCompany == Company.HOSPITALLERS and iGameTurn < year(
-                companies[iCompany].deathdate
-            ):
-                iMaxCompanies -= 1
-            elif iCompany == Company.TEUTONS and iGameTurn < year(companies[iCompany].deathdate):
-                iMaxCompanies += 2
-        # increased limit for Hansa after their first general Diet in 1356
-        if iCompany == Company.HANSA:
-            if year(1356) < iGameTurn < year(companies[iCompany].deathdate):
-                iMaxCompanies += 3
-
-        # Templars are Teutons are gone after the Protestant reformation
-        if iCompany in [Company.TEMPLARS, Company.TEUTONS]:
-            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
-                iMaxCompanies = 0
-        # Order of Calatrava is only active if Cordoba or Morocco is alive
-        # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
-        if iCompany == Company.CALATRAVA:
-            if not (gc.getPlayer(Civ.CORDOBA).isAlive() or gc.getPlayer(Civ.MOROCCO).isAlive()):
-                iMaxCompanies = 0
-        # Order of the Dragon is only active if the Ottomans are alive
-        if iCompany == Company.DRAGON:
-            if not gc.getPlayer(Civ.OTTOMAN).isAlive():
-                iMaxCompanies = 0
-
-        # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
-        cityValueList = []
-        for iPlayer in civilizations().majors().ids():
-            for city in cities().owner(iPlayer).entities():
-                iValue = self.getCityValue(city, iCompany)
-                if iValue > 0:
-                    sCityName = city.getName()
-                    bPresent = False
-                    if city.isHasCorporation(iCompany):
-                        bPresent = True
-                    cityValueList.append((city, iValue * 10 + rand(10)))
-                elif city.isHasCorporation(
-                    iCompany
-                ):  # remove company from cities with a negative value
-                    city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
-                    sCityName = city.getName()
-                    # interface message for the human player
-                    self.announceHuman(iCompany, city, True)
-
-        # sort cities from highest to lowest value
-        cityValueList.sort(key=itemgetter(1), reverse=True)
-
-        # count the number of companies
-        iCompanyCount = 0
-        for civ in civilizations().majors():
-            if civ.player.isAlive():
-                iCompanyCount += civ.player.countCorporations(iCompany)
-
-        # spread the company
-        for i in range(len(cityValueList)):
-            city, iValue = cityValueList[i]
-            if city.isHasCorporation(iCompany):
-                continue
-            if (
-                i >= iMaxCompanies
-            ):  # the goal is to have the company in the first iMaxCompanies number of cities
-                break
-            city.setHasCorporation(iCompany, True, True, True)
-            city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], True)
-            iCompanyCount += 1
-            sCityName = city.getName()
-            # interface message for the human player
-            self.announceHuman(iCompany, city)
-            # spread the religion if it wasn't present before
-            if iCompany in [
-                Company.HOSPITALLERS,
-                Company.TEMPLARS,
-                Company.TEUTONS,
-                Company.CALATRAVA,
-            ]:
-                if not city.isHasReligion(Religion.CATHOLICISM):
-                    city.setHasReligion(Religion.CATHOLICISM, True, True, False)
-            # one change at a time, only add the highest ranked city (which didn't have the company before)
-            break
-
-        # if the limit was exceeded, remove company from it's worst city
-        if iCompanyCount > iMaxCompanies:
-            for (city, iValue) in reversed(cityValueList):  # loop backwards in the ordered list
-                if city.isHasCorporation(iCompany):
-                    city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
-                    sCityName = city.getName()
-                    # interface message for the human player
-                    self.announceHuman(iCompany, city, True)
-                    # one change at a time, only add the lowest ranked city
-                    break
-
-    def onPlayerChangeStateReligion(self, argsList):
-        iPlayer, iNewReligion, iOldReligion = argsList
-
+    # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
+    cityValueList = []
+    for iPlayer in civilizations().majors().ids():
         for city in cities().owner(iPlayer).entities():
-            for iCompany in companies.ids():
+            iValue = getCityValue(city, iCompany)
+            if iValue > 0:
+                sCityName = city.getName()
+                bPresent = False
                 if city.isHasCorporation(iCompany):
-                    if self.getCityValue(city, iCompany) < 0:
-                        city.setHasCorporation(iCompany, False, True, True)
-                        city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
-                        sCityName = city.getName()
-                        # interface message for the human player
-                        self.announceHuman(iCompany, city, True)
+                    bPresent = True
+                cityValueList.append((city, iValue * 10 + rand(10)))
+            elif city.isHasCorporation(
+                iCompany
+            ):  # remove company from cities with a negative value
+                city.setHasCorporation(iCompany, False, True, True)
+                city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
+                sCityName = city.getName()
+                # interface message for the human player
+                announceHuman(iCompany, city, True)
 
-    def onBuildingBuilt(self, iPlayer, iBuilding):
+    # sort cities from highest to lowest value
+    cityValueList.sort(key=itemgetter(1), reverse=True)
 
-        # Galata Tower ownership
-        pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == Wonder.GALATA_TOWER:
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
+    # count the number of companies
+    iCompanyCount = 0
+    for civ in civilizations().majors():
+        if civ.player.isAlive():
+            iCompanyCount += civ.player.countCorporations(iCompany)
 
-    def onCityAcquired(self, iOldOwner, iNewOwner, city):
+    # spread the company
+    for i in range(len(cityValueList)):
+        city, iValue = cityValueList[i]
+        if city.isHasCorporation(iCompany):
+            continue
+        if (
+            i >= iMaxCompanies
+        ):  # the goal is to have the company in the first iMaxCompanies number of cities
+            break
+        city.setHasCorporation(iCompany, True, True, True)
+        city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], True)
+        iCompanyCount += 1
+        sCityName = city.getName()
+        # interface message for the human player
+        announceHuman(iCompany, city)
+        # spread the religion if it wasn't present before
+        if iCompany in [
+            Company.HOSPITALLERS,
+            Company.TEMPLARS,
+            Company.TEUTONS,
+            Company.CALATRAVA,
+        ]:
+            if not city.isHasReligion(Religion.CATHOLICISM):
+                city.setHasReligion(Religion.CATHOLICISM, True, True, False)
+        # one change at a time, only add the highest ranked city (which didn't have the company before)
+        break
 
+    # if the limit was exceeded, remove company from it's worst city
+    if iCompanyCount > iMaxCompanies:
+        for (city, iValue) in reversed(cityValueList):  # loop backwards in the ordered list
+            if city.isHasCorporation(iCompany):
+                city.setHasCorporation(iCompany, False, True, True)
+                city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
+                sCityName = city.getName()
+                # interface message for the human player
+                announceHuman(iCompany, city, True)
+                # one change at a time, only add the lowest ranked city
+                break
+
+
+def onPlayerChangeStateReligion(argsList):
+    iPlayer, iNewReligion, iOldReligion = argsList
+
+    for city in cities().owner(iPlayer).entities():
         for iCompany in companies.ids():
             if city.isHasCorporation(iCompany):
-                if self.getCityValue(city, iCompany) < 0:
+                if getCityValue(city, iCompany) < 0:
                     city.setHasCorporation(iCompany, False, True, True)
                     city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
                     sCityName = city.getName()
                     # interface message for the human player
-                    self.announceHuman(iCompany, city, True)
+                    announceHuman(iCompany, city, True)
 
-        # Galata Tower ownership
-        pOldOwner = gc.getPlayer(iOldOwner)
-        pNewOwner = gc.getPlayer(iNewOwner)
-        if city.isHasBuilding(Wonder.GALATA_TOWER):
-            pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
-            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
 
-    def onCityRazed(self, iOldOwner, iPlayer, city):
+def onBuildingBuilt(iPlayer, iBuilding):
 
-        # Galata Tower ownership
-        pOldOwner = gc.getPlayer(iOldOwner)
-        pPlayer = gc.getPlayer(iPlayer)
-        if city.isHasBuilding(Wonder.GALATA_TOWER):
-            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
-            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+    # Galata Tower ownership
+    pPlayer = gc.getPlayer(iPlayer)
+    if iBuilding == Wonder.GALATA_TOWER:
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
 
-    def announceHuman(self, iCompany, city, bRemove=False):
-        iHuman = human()
-        iHumanTeam = gc.getPlayer(iHuman).getTeam()
-        if not player().isExisting() or not city.isRevealed(iHumanTeam, False):
-            return
 
-        sCityName = city.getName()
-        sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
+def onCityAcquired(iOldOwner, iNewOwner, city):
 
-        if bRemove:
-            sText = text("TXT_KEY_MISC_CORPORATION_REMOVED", sCompanyName, sCityName)
-        else:
-            sText = text("TXT_KEY_MISC_CORPORATION_SPREAD", sCompanyName, sCityName)
-        message(
-            iHuman,
-            sText,
-            sound=gc.getCorporationInfo(iCompany).getSound(),
-            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-            button=gc.getCorporationInfo(iCompany).getButton(),
-            color=MessageData.WHITE,
-            location=city,
-        )
+    for iCompany in companies.ids():
+        if city.isHasCorporation(iCompany):
+            if getCityValue(city, iCompany) < 0:
+                city.setHasCorporation(iCompany, False, True, True)
+                city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
+                sCityName = city.getName()
+                # interface message for the human player
+                announceHuman(iCompany, city, True)
+
+    # Galata Tower ownership
+    pOldOwner = gc.getPlayer(iOldOwner)
+    pNewOwner = gc.getPlayer(iNewOwner)
+    if city.isHasBuilding(Wonder.GALATA_TOWER):
+        pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
+        pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+
+
+def onCityRazed(iOldOwner, iPlayer, city):
+
+    # Galata Tower ownership
+    pOldOwner = gc.getPlayer(iOldOwner)
+    pPlayer = gc.getPlayer(iPlayer)
+    if city.isHasBuilding(Wonder.GALATA_TOWER):
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+        pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+
+
+def announceHuman(iCompany, city, bRemove=False):
+    iHuman = human()
+    iHumanTeam = gc.getPlayer(iHuman).getTeam()
+    if not player().isExisting() or not city.isRevealed(iHumanTeam, False):
+        return
+
+    sCityName = city.getName()
+    sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
+
+    if bRemove:
+        sText = text("TXT_KEY_MISC_CORPORATION_REMOVED", sCompanyName, sCityName)
+    else:
+        sText = text("TXT_KEY_MISC_CORPORATION_SPREAD", sCompanyName, sCityName)
+    message(
+        iHuman,
+        sText,
+        sound=gc.getCorporationInfo(iCompany).getSound(),
+        event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+        button=gc.getCorporationInfo(iCompany).getButton(),
+        color=MessageData.WHITE,
+        location=city,
+    )
