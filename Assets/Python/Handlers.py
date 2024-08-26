@@ -1,30 +1,28 @@
 # ruff: noqa: F401
 
-import StoredData
-import Setup
-import Locations
 import ScreenHandler
 
-import LocationsData
-import CityMapData
-import ProvinceMapData
-import SettlerMapData
-import WarMapData
 import CityNameManager
 import Civilizations
+import History
+import Locations
 import Modifiers
-import Provinces
+import Setup
+import StoredData
 
 import AIWars
 import Barbs
+import Collapse
 import Companies
 import Crusades
 import Mercenaries
-import History
 import Plague
+import Provinces
 import Religions
 import Resources
+import Resurrection
 import RiseAndFall
+import Secession
 import Stability
 import UniquePowers
 import Victory
