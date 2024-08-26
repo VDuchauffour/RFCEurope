@@ -184,8 +184,8 @@ class CvRFCEventHandler:
         self.rel = Religions.Religions()
         self.res = Resources.Resources()
         self.up = UniquePowers.UniquePowers()
-        self.aiw = AIWars.AIWars()
         self.vic = Victory.Victory()
+
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
@@ -612,7 +612,7 @@ class CvRFCEventHandler:
         self.rel.checkTurn(iGameTurn)
         self.res.checkTurn(iGameTurn)
         self.up.checkTurn(iGameTurn)
-        self.aiw.checkTurn(iGameTurn)
+        AIWars.checkTurn(iGameTurn)
         self.pla.checkTurn(iGameTurn)
         self.vic.checkTurn(iGameTurn)
         self.sta.checkTurn(iGameTurn)
