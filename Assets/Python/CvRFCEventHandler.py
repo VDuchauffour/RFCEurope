@@ -28,7 +28,7 @@ import RiseAndFall
 import Barbs
 import Religions
 import Resources
-import CityNameManager
+from CityNameManager import assignName, renameCities
 import UniquePowers
 import AIWars
 from RFCUtils import (
@@ -184,7 +184,6 @@ class CvRFCEventHandler:
         self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
         self.res = Resources.Resources()
-        self.cnm = CityNameManager.CityNameManager()
         self.up = UniquePowers.UniquePowers()
         self.aiw = AIWars.AIWars()
         self.vic = Victory.Victory()
@@ -229,7 +228,7 @@ class CvRFCEventHandler:
         # CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
 
         self.rnf.onCityAcquired(owner, playerType, city, bConquest, bTrade)
-        self.cnm.renameCities(city, playerType)
+        renameCities(city, playerType)
 
         tCity = (city.getX(), city.getY())
 
@@ -390,7 +389,7 @@ class CvRFCEventHandler:
         tCity = (city.getX(), city.getY())
 
         if iOwner < civilizations().majors().len():
-            self.cnm.assignName(city)
+            assignName(city)
 
         # Absinthe: merc notifications, after the city is named
         self.mercs.onCityBuilt(iOwner, city)

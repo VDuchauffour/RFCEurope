@@ -1,5 +1,5 @@
 from CvPythonExtensions import CyGlobalContext
-import CityNameManager
+from CityNameManager import renameCities
 from Core import civilizations, get_scenario, cities
 from CoreTypes import Civ, Scenario
 from PyUtils import rand
@@ -7,7 +7,6 @@ from StoredData import data
 from Events import handler
 
 gc = CyGlobalContext()
-cnm = CityNameManager.CityNameManager()
 
 
 @handler("GameStart")
@@ -34,7 +33,7 @@ def misc():
     #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
     if get_scenario() == Scenario.i1200AD:
         for city in cities().owner(Civ.HUNGARY).entities():
-            cnm.renameCities(city, Civ.HUNGARY)
+            renameCities(city, Civ.HUNGARY)
 
     # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
     for iPlayer in civilizations().majors().ids():

@@ -21,7 +21,7 @@ from Core import (
 )
 from PyUtils import percentage, percentage_chance, rand, choice
 from ProvinceMapData import PROVINCES_MAP
-import CityNameManager
+from CityNameManager import lookupName
 from RFCUtils import convertPlotCulture, getMaster, getUniqueUnit, isAVassal
 from StoredData import data
 import random
@@ -31,7 +31,6 @@ from MiscData import NUM_CRUSADES
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
-cnm = CityNameManager.CityNameManager()
 
 
 # Can call defensive crusade to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
@@ -1143,9 +1142,9 @@ class Crusades:
         if iTargetPlayer == iHuman:
             self.underCrusadeAttackPopup(pTargetCity.getName(), iLeader)
         elif player().isExisting():
-            sCityName = cnm.lookupName(pTargetCity, Civ.POPE)
+            sCityName = lookupName(pTargetCity, Civ.POPE)
             if sCityName == "Unknown":
-                sCityName = cnm.lookupName(pTargetCity, iLeader)
+                sCityName = lookupName(pTargetCity, iLeader)
             sText = text(
                 "TXT_KEY_CRUSADE_START",
                 gc.getPlayer(iLeader).getCivilizationAdjectiveKey(),
@@ -1259,9 +1258,9 @@ class Crusades:
             self.crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
             if human() == iLeader:
                 pTargetCity = gc.getMap().plot(iTX, iTY).getPlotCity()
-                sCityName = cnm.lookupName(pTargetCity, Civ.POPE)
+                sCityName = lookupName(pTargetCity, Civ.POPE)
                 if sCityName == "Unknown":
-                    sCityName = cnm.lookupName(pTargetCity, iLeader)
+                    sCityName = lookupName(pTargetCity, iLeader)
                 message(
                     human(),
                     text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",
