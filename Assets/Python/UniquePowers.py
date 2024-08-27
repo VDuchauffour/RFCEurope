@@ -1,12 +1,11 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
-
 from CvPythonExtensions import *
-from Core import message, human, make_unit, cities, plots, text
+from Core import player, human, turn, year, message, text, make_unit, cities, plots, infos
 from CoreTypes import Building, Civ, SpecialParameter, Religion, UniquePower, Unit
-from PyUtils import choice
-from Events import handler
 from RFCUtils import getMaster, getUniqueUnit
 from Consts import MessageData
+from PyUtils import choice
+from Events import handler
 
 gc = CyGlobalContext()
 
@@ -35,6 +34,16 @@ def aragon_up(owner, player_id, city, bConquest, bTrade):
         confederationUP(owner)
     if player_id == Civ.ARAGON:
         confederationUP(player_id)
+
+
+@handler("combatResult")
+def norway_up(winning_unit, losing_unit):
+    if winning_unit.getOwner() == Civ.NORWAY and turn() < year(1066) + 2:
+        if infos().unit(losing_unit).getDomainType() == DomainTypes.DOMAIN_SEA:
+            if losing_unit.getUnitType() != Unit.WORKBOAT:
+                player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)
+            else:
+                player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
 
 def checkTurn(iGameTurn):

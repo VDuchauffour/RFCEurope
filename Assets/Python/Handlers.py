@@ -8,6 +8,7 @@ import History
 import Locations
 import Messages
 import Modifiers
+import Rules
 import Setup
 import StoredData
 

@@ -489,10 +489,6 @@ def onProjectBuilt(iPlayer, iProject):
     recalcEpansion(iPlayer)
 
 
-def onCombatResult(argsList):
-    pass
-
-
 def onReligionFounded(iPlayer):
     pass
 

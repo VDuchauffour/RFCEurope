@@ -324,8 +324,7 @@ class CvRFCEventHandler:
             Stability.onCityBuilt(iOwner, city.getX(), city.getY())
 
     def onCombatResult(self, argsList):
-        Victory.onCombatResult(argsList)
-        Stability.onCombatResult(argsList)
+        return 0
 
     def onReligionFounded(self, argsList):
         "Religion Founded"

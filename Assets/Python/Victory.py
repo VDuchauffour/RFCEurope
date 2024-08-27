@@ -29,13 +29,11 @@ from CoreTypes import (
     Religion,
     Improvement,
     Technology,
-    Unit,
     Bonus,
     Wonder,
     Province,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
-import PyHelpers
 from PyUtils import rand
 from RFCUtils import calculateDistance, countAchievedGoals, getNumberCargoShips, getMostAdvancedCiv
 import UniquePowers
@@ -646,20 +644,6 @@ def onPillageImprovement(iPillager, iVictim, iImprovement, iRoute, iX, iY):
     if iPillager == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + 2:
         if gc.getMap().plot(iX, iY).getOwner() != Civ.NORWAY:
             player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
-
-
-def onCombatResult(argsList):
-    pWinningUnit, pLosingUnit = argsList
-    cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
-
-    # Norway UHV 1: Going Viking
-    if pWinningUnit.getOwner() == Civ.NORWAY and turn() < year(1066) + 2:
-        if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
-            # Absinthe: only 1 Viking point for Work Boats
-            if pLosingUnit.getUnitType() != Unit.WORKBOAT:
-                player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)
-            else:
-                player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
 
 def onTechAcquired(iTech, iPlayer):
