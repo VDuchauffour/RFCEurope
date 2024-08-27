@@ -89,7 +89,6 @@ from Events import handler
 gc = CyGlobalContext()
 rel = Religions.Religions()
 vic = Victory.Victory()
-cru = Crusades.Crusades()
 
 iCheatersPeriod = 12
 iBetrayalPeriod = 8
@@ -130,7 +129,7 @@ def setup():
         vic.set1200UHVDone(iHuman)
         # Temporarily all civs get the same starting techs as Aragon
         set_starting_techs_1200AD(Civ.POPE)
-        cru.do1200ADCrusades()
+        Crusades.do1200ADCrusades()
 
     set_starting_gold()
     set_war_on_spawn()

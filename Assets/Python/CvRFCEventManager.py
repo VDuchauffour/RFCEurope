@@ -69,7 +69,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
         # --> INSERT EVENT HANDLER INITIALIZATION HERE <--
         CvRFCEventHandler.CvRFCEventHandler(self)
-        self.crus = Crusades.Crusades()
         self.rel = Religions.Religions()
 
     def setPopupHandler(self, eventType, handler):
@@ -229,7 +228,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def crusadeApply7616(self, playerID, netUserData, popupReturn):
-        self.crus.eventApply7616(popupReturn)
+        Crusades.eventApply7616(popupReturn)
 
     def crusadeBegin7617(self):
         pass
@@ -241,19 +240,19 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def crusadeApply7618(self, playerID, netUserData, popupReturn):
-        self.crus.eventApply7618(popupReturn)
+        Crusades.eventApply7618(popupReturn)
 
     def crusadeBegin7619(self):
         pass
 
     def crusadeApply7619(self, playerID, netUserData, popupReturn):
-        self.crus.eventApply7619(popupReturn)
+        Crusades.eventApply7619(popupReturn)
 
     def crusadeBegin7620(self):
         pass
 
     def crusadeApply7620(self, playerID, netUserData, popupReturn):
-        self.crus.eventApply7620(popupReturn)
+        Crusades.eventApply7620(popupReturn)
 
     def crusadeBegin7621(self):
         pass
@@ -286,7 +285,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def crusadeApply7625(self, playerID, netUserData, popupReturn):
-        self.crus.eventApply7625(popupReturn)
+        Crusades.eventApply7625(popupReturn)
 
     def barbEventBegin7627(self):
         pass

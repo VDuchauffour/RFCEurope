@@ -36,7 +36,6 @@ from CoreTypes import (
     Wonder,
 )
 
-crus = Crusades.Crusades()
 gc = CyGlobalContext()
 
 
@@ -147,7 +146,7 @@ def getCityValue(city, iCompany):
 
     # bonus for civs whom actively participate (with units) in the actual Crusade:
     if iOwner < civilizations().majors().len():
-        if crus.getNumUnitsSent(iOwner) > 0:
+        if Crusades.getNumUnitsSent(iOwner) > 0:
             if iCompany in [
                 Company.HOSPITALLERS,
                 Company.TEMPLARS,

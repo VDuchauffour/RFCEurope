@@ -187,7 +187,6 @@ class CvRFCEventHandler:
 
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
-        self.crusade = Crusades.Crusades()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
 
         # Mercenaries - start
@@ -300,7 +299,7 @@ class CvRFCEventHandler:
                 # Absinthe: spread Catholicism if not present already
                 if not city.isHasReligion(Religion.CATHOLICISM):
                     self.rel.spreadReligion(tCity, Religion.CATHOLICISM)
-                self.crusade.success(playerType)
+                Crusades.success(playerType)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
             #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
@@ -510,7 +509,7 @@ class CvRFCEventHandler:
 
         # 3Miro: end Crusades for the Holy Land after the Reformation
         if iReligion == Religion.PROTESTANTISM:
-            self.crusade.endCrusades()
+            Crusades.endCrusades()
 
     def onBuildingBuilt(self, argsList):
         city, iBuildingType = argsList
@@ -614,7 +613,7 @@ class CvRFCEventHandler:
         self.pla.checkTurn(iGameTurn)
         self.vic.checkTurn(iGameTurn)
         self.sta.checkTurn(iGameTurn)
-        self.crusade.checkTurn(iGameTurn)
+        Crusades.checkTurn(iGameTurn)
         Provinces.checkTurn(iGameTurn)
         Companies.checkTurn(iGameTurn)
 
@@ -753,7 +752,7 @@ class CvRFCEventHandler:
             # not really needed, we set it on collapse anyway
             # setLastTurnAlive( iPlayer, iGameTurn )
 
-        self.crusade.checkPlayerTurn(iGameTurn, iPlayer)
+        Crusades.checkPlayerTurn(iGameTurn, iPlayer)
 
     def onEndPlayerTurn(self, argsList):
         """Called at the end of a players turn"""
