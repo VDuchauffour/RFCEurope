@@ -15,6 +15,11 @@ def setup():
     misc()
 
 
+@handler("OnPreSave")
+def save_data():
+    data.save()
+
+
 def reset_stored_data():
     data.setup()
 
