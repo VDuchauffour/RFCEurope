@@ -10,7 +10,6 @@ import Stability  # Absinthe
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
-sta = Stability.Stability()  # Absinthe
 
 
 class CvGameUtils:
@@ -1012,8 +1011,8 @@ class CvGameUtils:
     def doAnarchyInstability(self, argsList):
         iPlayer = argsList[0]
         pPlayer = gc.getPlayer(iPlayer)
-        sta.recalcCivicCombos(iPlayer)
-        sta.recalcEpansion(iPlayer)
+        Stability.recalcCivicCombos(iPlayer)
+        Stability.recalcEpansion(iPlayer)
         iNumCities = pPlayer.getNumCities()
         # anarchy instability should appear right on revolution / converting, not one turn later
         if iPlayer != Civ.PRUSSIA:  # Prussian UP
@@ -1022,7 +1021,7 @@ class CvGameUtils:
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 8)
                 pPlayer.setStabSwingAnarchy(
                     8
-                )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
+                )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of Stability.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
                     StabilityCategory.CIVICS, min(0, max(-2, (-iNumCities + 4) / 7))
@@ -1033,7 +1032,7 @@ class CvGameUtils:
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 4)  # reduced for the AI
                 pPlayer.setStabSwingAnarchy(
                     4
-                )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
+                )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of Stability.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
                     StabilityCategory.CIVICS, min(0, max(-1, (-iNumCities + 6) / 7))

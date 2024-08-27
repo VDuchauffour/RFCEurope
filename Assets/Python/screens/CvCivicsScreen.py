@@ -5,8 +5,6 @@ import CvScreenEnums
 import CvScreensInterface
 import Stability
 
-sta = Stability.Stability()
-
 # Globals
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -532,7 +530,7 @@ class CvCivicsScreen:
 
             sName = "CivicName" + str(iCivic)
             sText = gc.getCivicInfo(iCivic).getDescription()
-            iCombovalue = sta.getCivicCombinationStability(iHoverCivic, iCivic)
+            iCombovalue = Stability.getCivicCombinationStability(iHoverCivic, iCivic)
             bGood = iCombovalue > 0
             bBad = iCombovalue < 0
 

@@ -183,8 +183,6 @@ class CvRFCEventHandler:
         self.up = UniquePowers.UniquePowers()
         self.vic = Victory.Victory()
 
-        self.sta = Stability.Stability()
-
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
             CvScreenEnums.MERCENARY_MANAGER
         )
@@ -275,7 +273,7 @@ class CvRFCEventHandler:
         if playerType < civilizations().majors().len():
             spreadMajorCulture(playerType, city.getX(), city.getY())
 
-        self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+        Stability.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 
         # 3Miro: Jerusalem's Golden Age Incentive
         if tCity == CITIES[City.JERUSALEM]:
@@ -358,7 +356,7 @@ class CvRFCEventHandler:
             iPreviousOwner = city.getPreviousOwner()
 
         RiseAndFall.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
-        self.sta.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
+        Stability.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
         Companies.onCityRazed(iPreviousOwner, iPlayer, city)
         self.vic.onCityRazed(iPlayer, city)  # Victory
         Plague.onCityRazed(city, iPlayer)  # Plague
@@ -463,11 +461,11 @@ class CvRFCEventHandler:
                     Religions.setReformationHitMatrix(neighbour, 1)
 
         if iOwner < civilizations().majors().len():
-            self.sta.onCityBuilt(iOwner, city.getX(), city.getY())
+            Stability.onCityBuilt(iOwner, city.getX(), city.getY())
 
     def onCombatResult(self, argsList):
         self.vic.onCombatResult(argsList)
-        self.sta.onCombatResult(argsList)
+        Stability.onCombatResult(argsList)
 
     def onReligionFounded(self, argsList):
         "Religion Founded"
@@ -499,7 +497,7 @@ class CvRFCEventHandler:
         self.vic.onReligionFounded(iReligion, iFounder)
 
         if iFounder < civilizations().majors().len():
-            self.sta.onReligionFounded(iFounder)
+            Stability.onReligionFounded(iFounder)
 
         # 3Miro: end Crusades for the Holy Land after the Reformation
         if iReligion == Religion.PROTESTANTISM:
@@ -511,7 +509,7 @@ class CvRFCEventHandler:
 
         self.vic.onBuildingBuilt(iOwner, iBuildingType)
         if city.getOwner() < civilizations().majors().len():
-            self.sta.onBuildingBuilt(iOwner, iBuildingType)
+            Stability.onBuildingBuilt(iOwner, iBuildingType)
             Companies.onBuildingBuilt(iOwner, iBuildingType)
         # Absinthe: Faith, Kazimierz, Mont Saint-Michel
         Religions.onBuildingBuilt(iOwner, iBuildingType)
@@ -525,7 +523,7 @@ class CvRFCEventHandler:
         city, iProjectType = argsList
         self.vic.onProjectBuilt(city.getOwner(), iProjectType)
         if city.getOwner() < civilizations().majors().len():
-            self.sta.onProjectBuilt(city.getOwner(), iProjectType)
+            Stability.onProjectBuilt(city.getOwner(), iProjectType)
 
     def onUnitPillage(self, argsList):
         pUnit, iImprovement, iRoute, iOwner = argsList
@@ -537,7 +535,7 @@ class CvRFCEventHandler:
                 Barbs.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
         if iVictim > -1 and iVictim < civilizations().majors().len():
-            self.sta.onImprovementDestroyed(iVictim)
+            Stability.onImprovementDestroyed(iVictim)
 
         self.vic.onPillageImprovement(
             pUnit.getOwner(), iVictim, iImprovement, iRoute, iPlotX, iPlotY
@@ -606,7 +604,7 @@ class CvRFCEventHandler:
         AIWars.checkTurn(iGameTurn)
         Plague.checkTurn(iGameTurn)
         self.vic.checkTurn(iGameTurn)
-        self.sta.checkTurn(iGameTurn)
+        Stability.checkTurn(iGameTurn)
         Crusades.checkTurn(iGameTurn)
         Provinces.checkTurn(iGameTurn)
         Companies.checkTurn(iGameTurn)
@@ -737,7 +735,7 @@ class CvRFCEventHandler:
 
         if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
             if gc.getPlayer(iPlayer).getNumCities() > 0:
-                self.sta.updateBaseStability(iGameTurn, iPlayer)
+                Stability.updateBaseStability(iGameTurn, iPlayer)
 
             # for the AI only, leader switch and cheats
             if iPlayer != iHuman:
@@ -755,12 +753,12 @@ class CvRFCEventHandler:
 
     def onEndGameTurn(self, argsList):
         iGameTurn = argsList[0]
-        self.sta.checkImplosion(iGameTurn)
+        Stability.checkImplosion(iGameTurn)
         Mercenaries.doMercsTurn(iGameTurn)
 
     def onReligionSpread(self, argsList):
         iReligion, iOwner, pSpreadCity = argsList
-        self.sta.onReligionSpread(iReligion, iOwner)
+        Stability.onReligionSpread(iReligion, iOwner)
         Religions.onReligionSpread(iReligion, iOwner)
 
     def onFirstContact(self, argsList):
@@ -807,7 +805,7 @@ class CvRFCEventHandler:
             and iPlayer < civilizations().majors().len()
         ):
             Religions.onTechAcquired(argsList[0], argsList[2])
-            self.sta.onTechAcquired(argsList[0], argsList[2])
+            Stability.onTechAcquired(argsList[0], argsList[2])
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
