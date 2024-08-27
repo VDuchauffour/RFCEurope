@@ -180,7 +180,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.res = Resources.Resources()
         self.up = UniquePowers.UniquePowers()
         self.vic = Victory.Victory()
 
@@ -335,12 +334,12 @@ class CvRFCEventHandler:
 
         # Remove Silk resource near Constantinople if it is conquered
         if tCity == (81, 24):
-            self.res.removeResource(80, 24)
+            Resources.removeResource(80, 24)
 
         # Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
         if get_scenario() == Scenario.i1200AD:
             if tCity == (76, 25) or tCity == (81, 24):
-                self.res.removeResource(77, 24)
+                Resources.removeResource(77, 24)
 
         return 0
 
@@ -602,7 +601,7 @@ class CvRFCEventHandler:
         Barbs.checkTurn(iGameTurn)
         RiseAndFall.checkTurn(iGameTurn)
         Religions.checkTurn(iGameTurn)
-        self.res.checkTurn(iGameTurn)
+        Resources.checkTurn(iGameTurn)
         self.up.checkTurn(iGameTurn)
         AIWars.checkTurn(iGameTurn)
         Plague.checkTurn(iGameTurn)
