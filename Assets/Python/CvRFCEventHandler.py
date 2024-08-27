@@ -179,9 +179,6 @@ class CvRFCEventHandler:
         eventManager.addEventHandler("playerChangeStateReligion", self.onPlayerChangeStateReligion)
 
         self.eventManager = eventManager
-
-        self.vic = Victory.Victory()
-
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
             CvScreenEnums.MERCENARY_MANAGER
         )
@@ -326,7 +323,7 @@ class CvRFCEventHandler:
         # Sedna17, end
 
         Plague.onCityAcquired(owner, playerType, city)  # Plague
-        self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
+        Victory.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
         Companies.onCityAcquired(owner, playerType, city)
 
         # Remove Silk resource near Constantinople if it is conquered
@@ -357,7 +354,7 @@ class CvRFCEventHandler:
         RiseAndFall.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
         Stability.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
         Companies.onCityRazed(iPreviousOwner, iPlayer, city)
-        self.vic.onCityRazed(iPlayer, city)  # Victory
+        Victory.onCityRazed(iPlayer, city)  # Victory
         Plague.onCityRazed(city, iPlayer)  # Plague
 
         # Absinthe: Aragonese UP
@@ -394,7 +391,7 @@ class CvRFCEventHandler:
             spreadMajorCulture(iOwner, city.getX(), city.getY())
 
             if iOwner == Civ.PORTUGAL:
-                self.vic.onCityBuilt(city, iOwner)  # needed in Victory.py
+                Victory.onCityBuilt(city, iOwner)  # needed in Victory.py
 
                 if gc.getTeam(gc.getPlayer(Civ.PORTUGAL).getTeam()).isHasTech(
                     Technology.ASTRONOMY
@@ -463,7 +460,7 @@ class CvRFCEventHandler:
             Stability.onCityBuilt(iOwner, city.getX(), city.getY())
 
     def onCombatResult(self, argsList):
-        self.vic.onCombatResult(argsList)
+        Victory.onCombatResult(argsList)
         Stability.onCombatResult(argsList)
 
     def onReligionFounded(self, argsList):
@@ -493,7 +490,7 @@ class CvRFCEventHandler:
                         city.setHasRealBuilding(iTemple, True)
                     break
 
-        self.vic.onReligionFounded(iReligion, iFounder)
+        Victory.onReligionFounded(iReligion, iFounder)
 
         if iFounder < civilizations().majors().len():
             Stability.onReligionFounded(iFounder)
@@ -506,7 +503,7 @@ class CvRFCEventHandler:
         city, iBuildingType = argsList
         iOwner = city.getOwner()
 
-        self.vic.onBuildingBuilt(iOwner, iBuildingType)
+        Victory.onBuildingBuilt(iOwner, iBuildingType)
         if city.getOwner() < civilizations().majors().len():
             Stability.onBuildingBuilt(iOwner, iBuildingType)
             Companies.onBuildingBuilt(iOwner, iBuildingType)
@@ -520,7 +517,7 @@ class CvRFCEventHandler:
 
     def onProjectBuilt(self, argsList):
         city, iProjectType = argsList
-        self.vic.onProjectBuilt(city.getOwner(), iProjectType)
+        Victory.onProjectBuilt(city.getOwner(), iProjectType)
         if city.getOwner() < civilizations().majors().len():
             Stability.onProjectBuilt(city.getOwner(), iProjectType)
 
@@ -536,7 +533,7 @@ class CvRFCEventHandler:
         if iVictim > -1 and iVictim < civilizations().majors().len():
             Stability.onImprovementDestroyed(iVictim)
 
-        self.vic.onPillageImprovement(
+        Victory.onPillageImprovement(
             pUnit.getOwner(), iVictim, iImprovement, iRoute, iPlotX, iPlotY
         )
 
@@ -602,7 +599,7 @@ class CvRFCEventHandler:
         UniquePowers.checkTurn(iGameTurn)
         AIWars.checkTurn(iGameTurn)
         Plague.checkTurn(iGameTurn)
-        self.vic.checkTurn(iGameTurn)
+        Victory.checkTurn(iGameTurn)
         Stability.checkTurn(iGameTurn)
         Crusades.checkTurn(iGameTurn)
         Provinces.checkTurn(iGameTurn)
@@ -730,7 +727,7 @@ class CvRFCEventHandler:
             UniquePowers.janissaryDraftUP(iPlayer)
 
         Plague.checkPlayerTurn(iGameTurn, iPlayer)
-        self.vic.checkPlayerTurn(iGameTurn, iPlayer)
+        Victory.checkPlayerTurn(iGameTurn, iPlayer)
 
         if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
             if gc.getPlayer(iPlayer).getNumCities() > 0:
@@ -796,7 +793,7 @@ class CvRFCEventHandler:
 
     def onTechAcquired(self, argsList):
         iPlayer = argsList[2]
-        self.vic.onTechAcquired(argsList[0], argsList[2])
+        Victory.onTechAcquired(argsList[0], argsList[2])
 
         if (
             gc.getPlayer(iPlayer).isAlive()

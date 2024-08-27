@@ -87,7 +87,6 @@ from Wonders import leaning_tower_effect
 from Events import handler
 
 gc = CyGlobalContext()
-vic = Victory.Victory()
 
 iCheatersPeriod = 12
 iBetrayalPeriod = 8
@@ -125,7 +124,7 @@ def setup():
         set_starting_diplomacy_1200AD()
         leaning_tower_effect()
         Religions.spread1200ADJews()  # Spread Jews to some random cities
-        vic.set1200UHVDone(iHuman)
+        Victory.set1200UHVDone(iHuman)
         # Temporarily all civs get the same starting techs as Aragon
         set_starting_techs_1200AD(Civ.POPE)
         Crusades.do1200ADCrusades()
@@ -296,7 +295,7 @@ def eventApply7614(popupReturn):
     if popupReturn.getButtonClicked() == 0:  # 1st button
         iOldHandicap = gc.getActivePlayer().getHandicapType()
         iNewCiv = getNewCiv()
-        vic.switchUHV(iNewCiv, human())
+        Victory.switchUHV(iNewCiv, human())
         gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
         gc.getGame().setActivePlayer(iNewCiv, False)
         gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
