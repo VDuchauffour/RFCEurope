@@ -1,5 +1,6 @@
 from Core import civilizations, player
 from CoreTypes import Civ
+from Events import handler
 import cPickle as pickle
 from MiscData import NUM_CRUSADES
 
@@ -180,3 +181,8 @@ def set_data(key, value, subkey=None):
 
 def mod_data(key, value=1, subkey=None):
     set_data(key, get_data(key, subkey) + value, subkey)
+
+
+@handler("OnPreSave")
+def save_data():
+    data.save()

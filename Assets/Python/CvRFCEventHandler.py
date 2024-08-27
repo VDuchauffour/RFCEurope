@@ -190,7 +190,7 @@ class CvRFCEventHandler:
 
     def onPreSave(self, argsList):
         "called before a game is actually saved"
-        data.save()  # edead: pickle & save script data
+        return 0
 
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
