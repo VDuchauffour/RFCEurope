@@ -26,7 +26,6 @@ import RiseAndFall
 import Barbs
 import Religions
 import Resources
-from CityNameManager import assignName
 import UniquePowers
 import AIWars
 from RFCUtils import (
@@ -234,9 +233,6 @@ class CvRFCEventHandler:
 
         RiseAndFall.onCityBuilt(iOwner, city)
         tCity = (city.getX(), city.getY())
-
-        if iOwner < civilizations().majors().len():
-            assignName(city)
 
         # Absinthe: merc notifications, after the city is named
         Mercenaries.onCityBuilt(iOwner, city)

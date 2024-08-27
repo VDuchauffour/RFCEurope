@@ -8,6 +8,16 @@ from Events import handler
 gc = CyGlobalContext()
 
 
+@handler("cityBuilt")
+def onCityBuilt(city):
+    assignName(city)
+
+
+@handler("cityAcquired")
+def onCityAcquired(iOwner, iNewOwner, city):
+    renameCities(city, iNewOwner)
+
+
 def assignName(city):
     """Names a city depending on its plot"""
     iOwner = city.getOwner()
@@ -17,7 +27,6 @@ def assignName(city):
             city.setName(unicode(cityName), False)
 
 
-@handler("cityAcquired")
 def renameCities(city, iNewOwner):
     """Renames a city depending on its owner"""
     if iNewOwner < civilizations().majors().len():
