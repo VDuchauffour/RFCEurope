@@ -205,9 +205,7 @@ class CvRFCEventHandler:
 
     def onCityAcquiredAndKept(self, argsList):
         "City Acquired and Kept"
-        iOwner, pCity = argsList
-
-        Mercenaries.onCityAcquiredAndKept(iOwner, pCity)
+        return 0
 
     def onCityRazed(self, argsList):
         "City Razed"

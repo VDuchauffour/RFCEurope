@@ -13,10 +13,7 @@ from Core import (
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 from PyUtils import percentage_chance, rand, choice
-
-# import cPickle as pickle
 from StoredData import data
-
 from Consts import MessageData
 
 gc = CyGlobalContext()
@@ -2954,23 +2951,6 @@ def desertMercs(iPlayer):
             fireMerc(choice(lHiredMercs))
         else:
             break
-
-
-def onCityAcquiredAndKept(iCiv, pCity):
-    # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
-    iProvince = pCity.getProvince()
-    getMercLists()  # load the current mercenary pool
-    for lMerc in lGlobalPool:
-        if lMerc[4] == iProvince:
-            if iCiv == human():
-                message(
-                    iCiv,
-                    text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
-                    button=ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                    color=MessageData.LIME,
-                    location=pCity,
-                )
-                break
 
 
 def onCityBuilt(iCiv, pCity):

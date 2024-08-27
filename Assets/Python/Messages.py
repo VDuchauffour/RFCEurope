@@ -1,6 +1,10 @@
+from CvPythonExtensions import CyArtFileMgr
 from Consts import MessageData
 from Core import human, message, player, text
 from Events import handler
+import Mercenaries
+
+ArtFileMgr = CyArtFileMgr()
 
 
 @handler("cityAcquired")
@@ -22,3 +26,22 @@ def announce_last_conquered_city(owner, player_id, city, is_conquest, is_trade):
             + text("TXT_KEY_STABILITY_CONQUEST_LAST_CITY"),
             color=MessageData.RED,
         )
+
+
+@handler("cityAcquiredAndKept")
+def announce_available_mercs_in_new_city(iCiv, pCity):
+    # Absinthe: if there are mercs available in the new city's province,
+    # interface message about it to the human player
+    iProvince = pCity.getProvince()
+    Mercenaries.getMercLists()  # load the current mercenary pool
+    for lMerc in Mercenaries.lGlobalPool:
+        if lMerc[4] == iProvince:
+            if iCiv == human():
+                message(
+                    iCiv,
+                    text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
+                    button=ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
+                    color=MessageData.LIME,
+                    location=pCity,
+                )
+                break
