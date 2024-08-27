@@ -187,9 +187,6 @@ class CvRFCEventHandler:
 
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
-        self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
-
-        # Mercenaries - start
 
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
             CvScreenEnums.MERCENARY_MANAGER
@@ -353,7 +350,7 @@ class CvRFCEventHandler:
         "City Acquired and Kept"
         iOwner, pCity = argsList
 
-        self.mercs.onCityAcquiredAndKept(iOwner, pCity)
+        Mercenaries.onCityAcquiredAndKept(iOwner, pCity)
 
     def onCityRazed(self, argsList):
         "City Razed"
@@ -387,7 +384,7 @@ class CvRFCEventHandler:
             assignName(city)
 
         # Absinthe: merc notifications, after the city is named
-        self.mercs.onCityBuilt(iOwner, city)
+        Mercenaries.onCityBuilt(iOwner, city)
 
         # Absinthe: Aragonese UP
         #             UP tile yields should be recalculated on city foundation
@@ -762,7 +759,7 @@ class CvRFCEventHandler:
     def onEndGameTurn(self, argsList):
         iGameTurn = argsList[0]
         self.sta.checkImplosion(iGameTurn)
-        self.mercs.doMercsTurn(iGameTurn)
+        Mercenaries.doMercsTurn(iGameTurn)
 
     def onReligionSpread(self, argsList):
         iReligion, iOwner, pSpreadCity = argsList
@@ -820,19 +817,19 @@ class CvRFCEventHandler:
     def onUnitPromoted(self, argsList):
         "Unit Promoted"
 
-        self.mercs.onUnitPromoted(argsList)
+        Mercenaries.onUnitPromoted(argsList)
 
     # This method will remove a mercenary unit from the game if it is killed
     def onUnitKilled(self, argsList):
         "Unit Killed"
 
-        self.mercs.onUnitKilled(argsList)
+        Mercenaries.onUnitKilled(argsList)
 
     # This method will remove a mercenary unit from the game if it is lost
     def onUnitLost(self, argsList):
         "Unit Lost"
 
-        self.mercs.onUnitLost(argsList)
+        Mercenaries.onUnitLost(argsList)
 
     # This method handles the key input and will bring up the mercenary manager screen if the
     # player has at least one city and presses 'ctrl' and the 'M' key.

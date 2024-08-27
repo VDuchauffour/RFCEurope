@@ -31,7 +31,6 @@ localText = CyTranslator()
 # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 # 3Miro: this class will provide the needed interface for the RFCE Merc mechanics
-GMU = Mercenaries.GlobalMercenaryUtils()
 lMercList = Mercenaries.lMercList
 
 # Change this to True if hiring mercenaries should only be allowed if one or more of
@@ -130,7 +129,7 @@ class CvMercenaryManager:
     def populateAvailableMercenariesPanel(self, screen):
         ## 3Miro: draw the available merc info
         # read in the available mercs
-        lAvailableMercs = GMU.getMercGlobalPool()
+        lAvailableMercs = Mercenaries.getMercGlobalPool()
 
         # Get the ID for the current active player
         iPlayer = gc.getGame().getActivePlayer()
@@ -140,7 +139,7 @@ class CvMercenaryManager:
         iGold = pPlayer.getGold()
 
         # get a list of the provinces controlled by the player
-        lProvList = GMU.getOwnedProvinces(iPlayer)
+        lProvList = Mercenaries.getOwnedProvinces(iPlayer)
         # lProvList = Set( lProvList ) # set as in set-theory
 
         mercenaryCount = 0
@@ -200,8 +199,8 @@ class CvMercenaryManager:
                     PanelStyles.PANEL_STYLE_EMPTY,
                 )
 
-            iHireCost = GMU.getModifiedCostPerPlayer(lMerc[2], iPlayer)
-            iUpkeepCost = GMU.getModifiedCostPerPlayer(lMerc[3], iPlayer)
+            iHireCost = Mercenaries.getModifiedCostPerPlayer(lMerc[2], iPlayer)
+            iUpkeepCost = Mercenaries.getModifiedCostPerPlayer(lMerc[3], iPlayer)
 
             strHCost = u"%d%c" % (
                 iHireCost,
@@ -296,7 +295,7 @@ class CvMercenaryManager:
 
     def clearAvailableMercs(self, screen):
 
-        lGlobalMercPool = GMU.getMercGlobalPool()
+        lGlobalMercPool = Mercenaries.getMercGlobalPool()
 
         for iI in range(len(lGlobalMercPool)):
             screen.deleteWidget(
@@ -1089,13 +1088,13 @@ class CvMercenaryManager:
         szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
         # screen.deleteWidget(szUniqueInternalName)
 
-        lGlobalMercPool = GMU.getMercGlobalPool()
+        lGlobalMercPool = Mercenaries.getMercGlobalPool()
 
         for iI in range(len(lGlobalMercPool)):
             if lGlobalMercPool[iI][0] == iMerc:
                 lMerc = lGlobalMercPool[iI]
 
-        GMU.hireMerc(lMerc, iPlayer)
+        Mercenaries.hireMerc(lMerc, iPlayer)
 
         # Draw the gold information for the screen
         self.drawGoldInformation(screen)
@@ -1118,7 +1117,7 @@ class CvMercenaryManager:
 
         for pUnit in unitList:
             if pUnit.getMercID() == iMerc:
-                GMU.fireMerc(pUnit)
+                Mercenaries.fireMerc(pUnit)
                 screen.deleteWidget(
                     "HiredMercID" + self.numToStr(iMerc)
                 )  # it is OK to delete non-existent widgets
@@ -1247,7 +1246,7 @@ class CvMercenaryManager:
                 iMerc = self.strToNum(iMerc)
                 iPlayer = gc.getGame().getActivePlayer()
 
-                lGlobalMercPool = GMU.getMercGlobalPool()
+                lGlobalMercPool = Mercenaries.getMercGlobalPool()
 
                 for iI in range(len(lGlobalMercPool)):
                     if lGlobalMercPool[iI][0] == iMerc:
@@ -1259,8 +1258,8 @@ class CvMercenaryManager:
                 self.calculateScreenWidgetData(screen)
 
                 # Absinthe: we need to make sure this is applied only once
-                iModifiedCost = GMU.getModifiedCostPerPlayer(lMerc[2], iPlayer)
-                iModifiedUpkeep = GMU.getModifiedCostPerPlayer(lMerc[3], iPlayer)
+                iModifiedCost = Mercenaries.getModifiedCostPerPlayer(lMerc[2], iPlayer)
+                iModifiedUpkeep = Mercenaries.getModifiedCostPerPlayer(lMerc[3], iPlayer)
 
                 lModifiedMerc = [lMerc[0], lMerc[1], iModifiedCost, iModifiedUpkeep, lMerc[4]]
 
