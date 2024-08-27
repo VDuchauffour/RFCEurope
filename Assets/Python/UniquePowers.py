@@ -6,12 +6,10 @@ from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
 
 from RFCUtils import getMaster, getUniqueUnit
-import Religions
 
 from Consts import MessageData
 
 gc = CyGlobalContext()
-religion = Religions.Religions()
 
 
 class UniquePowers:

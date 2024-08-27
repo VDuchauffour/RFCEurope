@@ -180,7 +180,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.rel = Religions.Religions()
         self.res = Resources.Resources()
         self.up = UniquePowers.UniquePowers()
         self.vic = Victory.Victory()
@@ -260,18 +259,18 @@ class CvRFCEventHandler:
             gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
                 Building.PROTESTANT_SHRINE, 1
             )
-            self.rel.setReformationActive(True)
-            self.rel.reformationchoice(Civ.DUTCH)
-            self.rel.reformationOther(Civ.INDEPENDENT)
-            self.rel.reformationOther(Civ.INDEPENDENT_2)
-            self.rel.reformationOther(Civ.INDEPENDENT_3)
-            self.rel.reformationOther(Civ.INDEPENDENT_4)
-            self.rel.reformationOther(Civ.BARBARIAN)
-            self.rel.setReformationHitMatrix(Civ.DUTCH, 2)
+            Religions.setReformationActive(True)
+            Religions.reformationchoice(Civ.DUTCH)
+            Religions.reformationOther(Civ.INDEPENDENT)
+            Religions.reformationOther(Civ.INDEPENDENT_2)
+            Religions.reformationOther(Civ.INDEPENDENT_3)
+            Religions.reformationOther(Civ.INDEPENDENT_4)
+            Religions.reformationOther(Civ.BARBARIAN)
+            Religions.setReformationHitMatrix(Civ.DUTCH, 2)
 
             for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
-                if self.rel.getReformationHitMatrix(neighbour) == 0:
-                    self.rel.setReformationHitMatrix(neighbour, 1)
+                if Religions.getReformationHitMatrix(neighbour) == 0:
+                    Religions.setReformationHitMatrix(neighbour, 1)
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
         if playerType < civilizations().majors().len():
@@ -294,7 +293,7 @@ class CvRFCEventHandler:
                     )
                 # Absinthe: spread Catholicism if not present already
                 if not city.isHasReligion(Religion.CATHOLICISM):
-                    self.rel.spreadReligion(tCity, Religion.CATHOLICISM)
+                    Religions.spreadReligion(tCity, Religion.CATHOLICISM)
                 Crusades.success(playerType)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
@@ -451,18 +450,18 @@ class CvRFCEventHandler:
             gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
                 Building.PROTESTANT_SHRINE, 1
             )
-            self.rel.setReformationActive(True)
-            self.rel.reformationchoice(Civ.DUTCH)
-            self.rel.reformationOther(Civ.INDEPENDENT)
-            self.rel.reformationOther(Civ.INDEPENDENT_2)
-            self.rel.reformationOther(Civ.INDEPENDENT_3)
-            self.rel.reformationOther(Civ.INDEPENDENT_4)
-            self.rel.reformationOther(Civ.BARBARIAN)
-            self.rel.setReformationHitMatrix(Civ.DUTCH, 2)
+            Religions.setReformationActive(True)
+            Religions.reformationchoice(Civ.DUTCH)
+            Religions.reformationOther(Civ.INDEPENDENT)
+            Religions.reformationOther(Civ.INDEPENDENT_2)
+            Religions.reformationOther(Civ.INDEPENDENT_3)
+            Religions.reformationOther(Civ.INDEPENDENT_4)
+            Religions.reformationOther(Civ.BARBARIAN)
+            Religions.setReformationHitMatrix(Civ.DUTCH, 2)
 
             for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
-                if self.rel.getReformationHitMatrix(neighbour) == 0:
-                    self.rel.setReformationHitMatrix(neighbour, 1)
+                if Religions.getReformationHitMatrix(neighbour) == 0:
+                    Religions.setReformationHitMatrix(neighbour, 1)
 
         if iOwner < civilizations().majors().len():
             self.sta.onCityBuilt(iOwner, city.getX(), city.getY())
@@ -516,7 +515,7 @@ class CvRFCEventHandler:
             self.sta.onBuildingBuilt(iOwner, iBuildingType)
             Companies.onBuildingBuilt(iOwner, iBuildingType)
         # Absinthe: Faith, Kazimierz, Mont Saint-Michel
-        self.rel.onBuildingBuilt(iOwner, iBuildingType)
+        Religions.onBuildingBuilt(iOwner, iBuildingType)
 
         # Absinthe: Aragonese UP
         # UP tile yields should be recalculated right away if a new Palace was built
@@ -602,7 +601,7 @@ class CvRFCEventHandler:
 
         Barbs.checkTurn(iGameTurn)
         RiseAndFall.checkTurn(iGameTurn)
-        self.rel.checkTurn(iGameTurn)
+        Religions.checkTurn(iGameTurn)
         self.res.checkTurn(iGameTurn)
         self.up.checkTurn(iGameTurn)
         AIWars.checkTurn(iGameTurn)
@@ -763,7 +762,7 @@ class CvRFCEventHandler:
     def onReligionSpread(self, argsList):
         iReligion, iOwner, pSpreadCity = argsList
         self.sta.onReligionSpread(iReligion, iOwner)
-        self.rel.onReligionSpread(iReligion, iOwner)
+        Religions.onReligionSpread(iReligion, iOwner)
 
     def onFirstContact(self, argsList):
 
@@ -785,7 +784,7 @@ class CvRFCEventHandler:
             argsList[12],
         ]
         if iPlayer < civilizations().majors().len():
-            self.rel.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
+            Religions.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
 
     def onPlayerChangeSingleCivic(self, argsList):
         # note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)
@@ -808,7 +807,7 @@ class CvRFCEventHandler:
             and turn() > civilization(iPlayer).date.birth
             and iPlayer < civilizations().majors().len()
         ):
-            self.rel.onTechAcquired(argsList[0], argsList[2])
+            Religions.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
 
     # This method will redraw the main interface once a unit is promoted. This way the

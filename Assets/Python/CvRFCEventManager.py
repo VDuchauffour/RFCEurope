@@ -69,7 +69,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
         # --> INSERT EVENT HANDLER INITIALIZATION HERE <--
         CvRFCEventHandler.CvRFCEventHandler(self)
-        self.rel = Religions.Religions()
 
     def setPopupHandler(self, eventType, handler):
         """Removes all previously installed popup handlers for the given
@@ -271,13 +270,13 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def relEventApply7624(self, playerID, netUserData, popupReturn):
-        self.rel.eventApply7624(popupReturn)
+        Religions.eventApply7624(popupReturn)
 
     def relEventBegin7626(self):
         pass
 
     def relEventApply7626(self, playerID, netUserData, popupReturn):
-        self.rel.eventApply7626(popupReturn)
+        Religions.eventApply7626(popupReturn)
 
     ### End Reformation ###
 
@@ -298,7 +297,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def relEventApply7628(self, playerID, netUserData, popupReturn):
-        self.rel.eventApply7628(popupReturn)
+        Religions.eventApply7628(popupReturn)
 
     # Absinthe: end
 
@@ -307,6 +306,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         pass
 
     def relEventApply7629(self, playerID, netUserData, popupReturn):
-        self.rel.eventApply7629(playerID, popupReturn)
+        Religions.eventApply7629(playerID, popupReturn)
 
     # Absinthe: end

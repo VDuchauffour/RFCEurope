@@ -87,7 +87,6 @@ from Wonders import leaning_tower_effect
 from Events import handler
 
 gc = CyGlobalContext()
-rel = Religions.Religions()
 vic = Victory.Victory()
 
 iCheatersPeriod = 12
@@ -125,7 +124,7 @@ def setup():
         set_starting_faith()
         set_starting_diplomacy_1200AD()
         leaning_tower_effect()
-        rel.spread1200ADJews()  # Spread Jews to some random cities
+        Religions.spread1200ADJews()  # Spread Jews to some random cities
         vic.set1200UHVDone(iHuman)
         # Temporarily all civs get the same starting techs as Aragon
         set_starting_techs_1200AD(Civ.POPE)
