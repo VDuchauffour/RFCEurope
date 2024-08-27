@@ -528,6 +528,7 @@ def onReligionFounded(iReligion, iFounder):
             lostUHV(Civ.GERMANY, 1)
 
 
+@handler("cityAcquired")
 def onCityAcquired(owner, iNewOwner, city, bConquest, bTrade):
     if not gc.getGame().isVictoryValid(7):  # Victory 7 == historical
         return

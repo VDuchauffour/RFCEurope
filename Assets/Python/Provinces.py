@@ -49,6 +49,7 @@ def onCityBuilt(iPlayer, x, y):
         refreshStabilityOverlay()
 
 
+@handler("cityAcquired")
 def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
     if iPlayer not in civilizations().main().ids():
         return

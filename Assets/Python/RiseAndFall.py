@@ -25,7 +25,6 @@ from Core import (
     make_unit,
     make_units,
     message,
-    message_if_human,
     player,
     text,
     turn,
@@ -56,6 +55,7 @@ from RFCUtils import (
     outerInvasion,
     ownedCityPlots,
     setPlagueCountdown,
+    spreadMajorCulture,
     squareSearch,
     updateMinorTechs,
 )
@@ -76,14 +76,11 @@ from CoreTypes import (
     LeaderType,
     PlayerType,
     Scenario,
-    Religion,
     Terrain,
     Feature,
     Improvement,
-    StabilityCategory,
     Unit,
 )
-from LocationsData import CIV_CAPITAL_LOCATIONS
 from Wonders import leaning_tower_effect
 from Events import handler
 
@@ -132,6 +129,14 @@ def setup():
 
     set_starting_gold()
     set_war_on_spawn()
+
+
+@handler("cityAcquired")
+def spread_culture_to_new_acquired_city(owner, player, city, bConquest, bTrade):
+    # Absinthe: Spread some culture to the newly acquired city, this is for nearby indy cities,
+    # so should be applied in all cases (conquest, flip, trade)
+    if player < civilizations().majors().len():
+        spreadMajorCulture(player, city.getX(), city.getY())
 
 
 def set_war_on_spawn():
@@ -480,62 +485,6 @@ def onCityBuilt(iPlayer, pCity):
     elif tCity == (75, 53):  # Vilnius - important for AI Lithuania against Prussia
         if not gc.getPlayer(Civ.LITHUANIA).isHuman():
             pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
-
-
-def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
-    Provinces.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
-    # Constantinople -> Istanbul
-    if iPlayer == Civ.OTTOMAN:
-        cityList = cities().owner(iPlayer).entities()
-        if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]:
-            for loopCity in cityList:
-                if loopCity != city:
-                    loopCity.setHasRealBuilding((Building.PALACE), False)
-            city.setHasRealBuilding(Building.PALACE, True)
-            if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
-                city.setHasReligion(Religion.ISLAM, True, True, False)
-            # some stability boost and flavour message
-            player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
-            message_if_human(
-                iPlayer,
-                text("TXT_KEY_GLORY_ON_CONQUEST"),
-                force=True,
-                color=MessageData.GREEN,
-            )
-
-        # Absinthe: Edirne becomes capital if conquered before Constantinople
-        else:
-            if (city.getX(), city.getY()) == (76, 25):
-                bHasIstanbul = False
-                IstanbulPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM])
-                if IstanbulPlot.isCity():
-                    if IstanbulPlot.getPlotCity().getOwner() == iPlayer:
-                        bHasIstanbul = True
-                if not bHasIstanbul:
-                    gc.getPlayer(iPlayer).getCapitalCity().setHasRealBuilding(
-                        Building.PALACE, False
-                    )
-                    city.setHasRealBuilding(Building.PALACE, True)
-                if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
-                    city.setHasReligion(Religion.ISLAM, True, True, False)
-
-    # Absinthe: Message for the human player, if the last city of a known civ is conquered
-    iOriginalOwner = owner
-    pOriginalOwner = gc.getPlayer(iOriginalOwner)
-    if not pOriginalOwner.isHuman():
-        iNumCities = pOriginalOwner.getNumCities()
-        if iNumCities == 0:
-            # all collapses operate with flips, so if the last city was conquered, we are good to go (this message won't come after a collapse message)
-            if bConquest:
-                iHuman = human()
-                if gc.getPlayer(iHuman).canContact(iOriginalOwner):
-                    message(
-                        iHuman,
-                        pOriginalOwner.getCivilizationDescription(0)
-                        + " "
-                        + text("TXT_KEY_STABILITY_CONQUEST_LAST_CITY"),
-                        color=MessageData.RED,
-                    )
 
 
 def onCityRazed(iOwner, iPlayer, city):

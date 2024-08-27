@@ -28,6 +28,7 @@ from CoreTypes import (
     StabilityCategory,
     Religion,
     Technology,
+    UniquePower,
     Unit,
     Wonder,
 )
@@ -40,6 +41,7 @@ from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
 from ReligionData import RELIGIOUS_WONDERS
 from Events import handler
+import UniquePowers
 
 gc = CyGlobalContext()
 
@@ -172,6 +174,46 @@ tHungary = [
 def setup():
     gc.getPlayer(Civ.BYZANTIUM).changeFaith(10)
     gc.getPlayer(Civ.OTTOMAN).changeFaith(20)
+
+
+@handler("cityAcquired")
+def arabia_should_found_islam(owner, player_id, city, bConquest, bTrade):
+    # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method
+    # (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
+    if player_id == Civ.ARABIA and not gc.getGame().isReligionFounded(Religion.ISLAM):
+        # has to be done before the Arab UP is triggered
+        gc.getPlayer(Civ.ARABIA).foundReligion(Religion.ISLAM, Religion.ISLAM, False)
+        gc.getGame().getHolyCity(Religion.ISLAM).setNumRealBuilding(Building.ISLAMIC_SHRINE, 1)
+
+    # TODO when possible move this in UP.py and use firstCity event from DOC?
+    # Arab UP
+    if gc.hasUP(player, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
+        UniquePowers.faithUP(player, city)
+
+
+@handler("cityAcquired")
+def dutch_should_found_protestantism(owner, player_id, city, bConquest, bTrade):
+    # Absinthe: If Protestantism has not been founded by the time the Dutch spawn,
+    # then the Dutch should found it with their first city
+    if player == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
+        gc.getPlayer(Civ.DUTCH).foundReligion(
+            Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
+        )
+        gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
+            Building.PROTESTANT_SHRINE, 1
+        )
+        setReformationActive(True)
+        reformationchoice(Civ.DUTCH)
+        reformationOther(Civ.INDEPENDENT)
+        reformationOther(Civ.INDEPENDENT_2)
+        reformationOther(Civ.INDEPENDENT_3)
+        reformationOther(Civ.INDEPENDENT_4)
+        reformationOther(Civ.BARBARIAN)
+        setReformationHitMatrix(Civ.DUTCH, 2)
+
+        for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
+            if getReformationHitMatrix(neighbour) == 0:
+                setReformationHitMatrix(neighbour, 1)
 
 
 def getReformationActive():

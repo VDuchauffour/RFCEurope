@@ -1,5 +1,95 @@
-from Core import make_units
-from CoreTypes import Unit
+from CvPythonExtensions import *
+from Consts import MessageData
+from Core import (
+    civilization,
+    civilizations,
+    human,
+    make_units,
+    cities,
+    message_if_human,
+    player,
+    text,
+)
+from CoreTypes import Building, City, Civ, Religion, StabilityCategory, Unit
+import Crusades
+from Events import handler
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
+from PyUtils import percentage_chance
+import Religions
+
+gc = CyGlobalContext()
+
+
+@handler("cityAcquired")
+def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
+    # Constantinople -> Istanbul
+    if iPlayer == Civ.OTTOMAN:
+        cityList = cities().owner(iPlayer).entities()
+        if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]:
+            for loopCity in cityList:
+                if loopCity != city:
+                    loopCity.setHasRealBuilding((Building.PALACE), False)
+            city.setHasRealBuilding(Building.PALACE, True)
+            if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
+                city.setHasReligion(Religion.ISLAM, True, True, False)
+            # some stability boost and flavour message
+            player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
+            message_if_human(
+                iPlayer,
+                text("TXT_KEY_GLORY_ON_CONQUEST"),
+                force=True,
+                color=MessageData.GREEN,
+            )
+        # Absinthe: Edirne becomes capital if conquered before Constantinople
+        else:
+            if (city.getX(), city.getY()) == (76, 25):
+                bHasIstanbul = False
+                IstanbulPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM])
+                if IstanbulPlot.isCity():
+                    if IstanbulPlot.getPlotCity().getOwner() == iPlayer:
+                        bHasIstanbul = True
+                if not bHasIstanbul:
+                    gc.getPlayer(iPlayer).getCapitalCity().setHasRealBuilding(
+                        Building.PALACE, False
+                    )
+                    city.setHasRealBuilding(Building.PALACE, True)
+                if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
+                    city.setHasReligion(Religion.ISLAM, True, True, False)
+
+
+@handler("cityAcquired")
+def jerusalem_incentive(owner, player, city, bConquest, bTrade):
+    # 3Miro: Jerusalem's Golden Age Incentive
+
+    tCity = (city.getX(), city.getY())
+    if tCity == CITIES[City.JERUSALEM]:
+        pPlayer = gc.getPlayer(player)
+        if pPlayer.getStateReligion() == Religion.CATHOLICISM:
+            # Absinthe: spread Catholicism if not present already
+            if not city.isHasReligion(Religion.CATHOLICISM):
+                Religions.spreadReligion(tCity, Religion.CATHOLICISM)
+            Crusades.success(player)
+            message_if_human(
+                human(),
+                text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
+                force=True,
+                color=MessageData.GREEN,
+            )
+
+        # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
+        #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
+        if (
+            percentage_chance(15, strict=True)
+            and player in civilizations().majors().ids()
+            and pPlayer.getStateReligion() != -1
+        ):
+            pPlayer.initUnit(
+                Unit.HOLY_RELIC,
+                CITIES[City.JERUSALEM][0],
+                CITIES[City.JERUSALEM][1],
+                UnitAITypes.NO_UNITAI,
+                DirectionTypes.DIRECTION_SOUTH,
+            )
 
 
 def ottoman_invasion(iCiv, tPlot):

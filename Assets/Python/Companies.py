@@ -731,6 +731,7 @@ def onBuildingBuilt(iPlayer, iBuilding):
         pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
 
 
+@handler("cityAcquired")
 def onCityAcquired(iOldOwner, iNewOwner, city):
 
     for iCompany in companies.ids():

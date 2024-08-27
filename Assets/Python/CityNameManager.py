@@ -3,6 +3,7 @@
 from CvPythonExtensions import *
 from Core import civilizations, get_data_from_upside_down_map
 from CityMapData import CITIES_MAP
+from Events import handler
 
 gc = CyGlobalContext()
 
@@ -16,6 +17,7 @@ def assignName(city):
             city.setName(unicode(cityName), False)
 
 
+@handler("cityAcquired")
 def renameCities(city, iNewOwner):
     """Renames a city depending on its owner"""
     if iNewOwner < civilizations().majors().len():

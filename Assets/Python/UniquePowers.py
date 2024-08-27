@@ -2,14 +2,39 @@
 
 from CvPythonExtensions import *
 from Core import message, human, make_unit, cities, plots, text
-from CoreTypes import Building, SpecialParameter, Religion, Unit
+from CoreTypes import Building, Civ, SpecialParameter, Religion, UniquePower, Unit
 from PyUtils import choice
-
+from Events import handler
 from RFCUtils import getMaster, getUniqueUnit
-
 from Consts import MessageData
 
 gc = CyGlobalContext()
+
+
+@handler("cityAcquired")
+def ottoman_up(owner, player_id, city, bConquest, bTrade):
+    if gc.hasUP(player_id, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
+        janissaryNewCityUP(player_id, city, bConquest)
+
+
+@handler("cityAcquired")
+def scottish_up(owner, player_id, city, bConquest, bTrade):
+    # against all players (including indies and barbs), but only on conquest
+    # only in cities with at least 20% Scottish culture
+    if owner == Civ.SCOTLAND and bConquest:
+        iTotalCulture = city.countTotalCultureTimes100()
+        if iTotalCulture == 0 or (city.getCulture(owner) * 10000) / iTotalCulture > 20:
+            defianceUP(owner)
+
+
+@handler("cityAcquired")
+def aragon_up(owner, player_id, city, bConquest, bTrade):
+    # Absinthe: Aragonese UP
+    # UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
+    if owner == Civ.ARAGON:
+        confederationUP(owner)
+    if player_id == Civ.ARAGON:
+        confederationUP(player_id)
 
 
 def checkTurn(iGameTurn):

@@ -6,6 +6,7 @@ import CityNameManager
 import Civilizations
 import History
 import Locations
+import Messages
 import Modifiers
 import Setup
 import StoredData

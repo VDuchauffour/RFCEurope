@@ -309,6 +309,7 @@ def onCityBuilt(iPlayer, x, y):
     recalcCivicCombos(iPlayer)
 
 
+@handler("cityAcquired")
 def onCityAcquired(iOwner, playerType, city, bConquest, bTrade):
     pOwner = gc.getPlayer(iOwner)
     pConq = gc.getPlayer(playerType)

@@ -1,14 +1,30 @@
-# Rhye's and Fall of Civilization: Europe - Dynamic resources
-# Based on SoI version, added by Absinthe
-
 from CvPythonExtensions import *
-
 from Consts import MessageData
-from Core import text, message, year
-from CoreTypes import Improvement, Bonus
+from Core import get_scenario, text, message, year
+from CoreTypes import Improvement, Bonus, Scenario
+from Events import handler
 
 # globals
 gc = CyGlobalContext()
+
+
+@handler("cityAcquired")
+def remove_silk_near_constantinople(owner, player, city, bConquest, bTrade):
+    # Remove Silk resource near Constantinople if it is conquered
+    # TODO should we specify which civ is the conqueror?
+    tCity = (city.getX(), city.getY())
+    if tCity == (81, 24):
+        removeResource(80, 24)
+
+
+@handler("cityAcquired")
+def remove_horse_near_constantinople(owner, player, city, bConquest, bTrade):
+    # Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
+    # TODO should we specify which civ is the conqueror?
+    tCity = (city.getX(), city.getY())
+    if get_scenario() == Scenario.i1200AD:
+        if tCity == (76, 25) or tCity == (81, 24):
+            removeResource(77, 24)
 
 
 def createResource(iX, iY, iBonus, textKey="TXT_KEY_RESOURCE_DISCOVERED"):

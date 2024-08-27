@@ -596,6 +596,7 @@ def stopPlague(iPlayer):
         city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
 
+@handler("cityAcquired")
 def onCityAcquired(iOldOwner, iNewOwner, city):
     if city.isHasRealBuilding(PlagueType.PLAGUE):
         # TODO when plague will not kill units anymore, remove this
