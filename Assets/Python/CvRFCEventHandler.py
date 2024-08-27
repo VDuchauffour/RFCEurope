@@ -186,7 +186,6 @@ class CvRFCEventHandler:
         self.vic = Victory.Victory()
 
         self.sta = Stability.Stability()
-        self.pla = Plague.Plague()
 
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
             CvScreenEnums.MERCENARY_MANAGER
@@ -331,7 +330,7 @@ class CvRFCEventHandler:
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         # Sedna17, end
 
-        self.pla.onCityAcquired(owner, playerType, city)  # Plague
+        Plague.onCityAcquired(owner, playerType, city)  # Plague
         self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
         Companies.onCityAcquired(owner, playerType, city)
 
@@ -364,7 +363,7 @@ class CvRFCEventHandler:
         self.sta.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
         Companies.onCityRazed(iPreviousOwner, iPlayer, city)
         self.vic.onCityRazed(iPlayer, city)  # Victory
-        self.pla.onCityRazed(city, iPlayer)  # Plague
+        Plague.onCityRazed(city, iPlayer)  # Plague
 
         # Absinthe: Aragonese UP
         #             UP tile yields should be recalculated if your new city is razed
@@ -607,7 +606,7 @@ class CvRFCEventHandler:
         self.res.checkTurn(iGameTurn)
         self.up.checkTurn(iGameTurn)
         AIWars.checkTurn(iGameTurn)
-        self.pla.checkTurn(iGameTurn)
+        Plague.checkTurn(iGameTurn)
         self.vic.checkTurn(iGameTurn)
         self.sta.checkTurn(iGameTurn)
         Crusades.checkTurn(iGameTurn)
@@ -735,7 +734,7 @@ class CvRFCEventHandler:
         if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
             self.up.janissaryDraftUP(iPlayer)
 
-        self.pla.checkPlayerTurn(iGameTurn, iPlayer)
+        Plague.checkPlayerTurn(iGameTurn, iPlayer)
         self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
         if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
