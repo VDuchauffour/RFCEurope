@@ -3,6 +3,7 @@ from Core import (
     civilization,
     civilizations,
     human,
+    message_if_human,
     text,
     message,
     player,
@@ -514,19 +515,18 @@ class CvEventManager(object):
                         pPlot.setImprovementType(-1)
                     # Absinthe: message for the human player if it was inside it's territory
                     iOwner = pPlot.getOwner()
-                    if iOwner == human():
-                        message(
-                            iOwner,
-                            text(
-                                "TXT_KEY_NO_FOREST_NO_RESOURCE",
-                                gc.getBonusInfo(iBonusType).getTextKey(),
-                            ),
-                            sound="AS2D_DISCOVERBONUS",
-                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            button=gc.getBonusInfo(iBonusType).getButton(),
-                            color=MessageData.LIME,
-                            location=pPlot,
-                        )
+                    message_if_human(
+                        iOwner,
+                        text(
+                            "TXT_KEY_NO_FOREST_NO_RESOURCE",
+                            gc.getBonusInfo(iBonusType).getTextKey(),
+                        ),
+                        sound="AS2D_DISCOVERBONUS",
+                        event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                        button=gc.getBonusInfo(iBonusType).getButton(),
+                        color=MessageData.LIME,
+                        location=pPlot,
+                    )
 
     def onPlotPicked(self, argsList):
         "Plot Picked"
@@ -684,12 +684,11 @@ class CvEventManager(object):
                     UnitAITypes.NO_UNITAI,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-            if human() == iPlayer:
-                message(
-                    iPlayer,
-                    text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
-                    color=MessageData.LIGHT_BLUE,
-                )
+            message_if_human(
+                iPlayer,
+                text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
+                color=MessageData.LIGHT_BLUE,
+            )
         # Absinthe: St. Catherine's Monastery end
 
         # Absinthe: Al-Azhar University start
@@ -847,12 +846,11 @@ class CvEventManager(object):
                 # 70% chance for a 3 turn Golden Age
                 if percentage_chance(70, strict=True):
                     pPlayer.changeGoldenAgeTurns(3)
-                    if human() == iPlayer:
-                        message(
-                            iPlayer,
-                            text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
-                            color=MessageData.GREEN,
-                        )
+                    message_if_human(
+                        iPlayer,
+                        text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
+                        color=MessageData.GREEN,
+                    )
                 # Absinthe: Torre del Oro end
                 popupInfo.addPopup(pCity.getOwner())
 
@@ -2052,12 +2050,11 @@ class CvEventManager(object):
                     and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET) > 0
                 ):
                     pPlayer.changeGoldenAgeTurns(3)
-                    if human() == iPlayer:
-                        message(
-                            iPlayer,
-                            text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
-                            color=MessageData.LIGHT_BLUE,
-                        )
+                    message_if_human(
+                        iPlayer,
+                        text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
+                        color=MessageData.LIGHT_BLUE,
+                    )
             # Absinthe: Imperial Diet end
             CvUtil.pyPrint("Team %d becomes a Vassal State of Team %d" % (iVassal, iMaster))
         else:

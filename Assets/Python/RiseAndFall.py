@@ -24,9 +24,10 @@ from Core import (
     location,
     make_unit,
     make_units,
+    message,
+    message_if_human,
     player,
     text,
-    message,
     turn,
     year,
     cities,
@@ -495,13 +496,12 @@ def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
                 city.setHasReligion(Religion.ISLAM, True, True, False)
             # some stability boost and flavour message
             player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
-            if human() == iPlayer:
-                message(
-                    iPlayer,
-                    text("TXT_KEY_GLORY_ON_CONQUEST"),
-                    force=True,
-                    color=MessageData.GREEN,
-                )
+            message_if_human(
+                iPlayer,
+                text("TXT_KEY_GLORY_ON_CONQUEST"),
+                force=True,
+                color=MessageData.GREEN,
+            )
 
         # Absinthe: Edirne becomes capital if conquered before Constantinople
         else:

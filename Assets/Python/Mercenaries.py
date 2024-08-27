@@ -1,5 +1,15 @@
 from CvPythonExtensions import *
-from Core import civilization, civilizations, message, human, text, turn, cities, units
+from Core import (
+    civilization,
+    civilizations,
+    message,
+    human,
+    message_if_human,
+    text,
+    turn,
+    cities,
+    units,
+)
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 from PyUtils import percentage_chance, rand, choice
@@ -2936,13 +2946,10 @@ def doMercsTurn(iGameTurn):
 
 
 def desertMercs(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
-    if iPlayer == human():
-        message(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
+    message_if_human(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
 
     while True:
         lHiredMercs = units().owner(iPlayer).mercenaries().entities()
-
         if lHiredMercs:
             fireMerc(choice(lHiredMercs))
         else:

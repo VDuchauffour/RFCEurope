@@ -2262,6 +2262,11 @@ def event_popup(id, title, message, labels=None):
     popup.launch(not labels)
 
 
+def message_if_human(player, text, **settings):
+    if human() == player:
+        message(player, text, **settings)
+
+
 def message(player, text, **settings):
     force = settings.get("force", False)
     duration = settings.get("duration", MessageData.DURATION)

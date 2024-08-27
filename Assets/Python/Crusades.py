@@ -8,6 +8,7 @@ from Core import (
     location,
     make_crusade_unit,
     make_crusade_units,
+    message_if_human,
     player,
     team,
     teamtype,
@@ -908,13 +909,12 @@ def sendUnit(pUnit):
     changeNumUnitsSent(iOwner, 1)  # Absinthe: counter for sent units per civ
     # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
     player(iOwner).changeFaith(1)
-    if iOwner == human():
-        message(
-            human(),
-            text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
-            sound="AS2D_BUILD_CATHOLIC",
-            color=MessageData.ORANGE,
-        )
+    message_if_human(
+        human(),
+        text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
+        sound="AS2D_BUILD_CATHOLIC",
+        color=MessageData.ORANGE,
+    )
     pUnit.kill(0, -1)
 
 
@@ -1627,13 +1627,12 @@ def checkPlayerTurn(iGameTurn, iPlayer):
                     1 + pCity.getPopulation()
                 ) <= iRandom:  # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
                     pCity.changePopulation(1)
-                    if iPlayer == human():
-                        message(
-                            iPlayer,
-                            text("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS"),
-                            color=MessageData.GREEN,
-                            location=pCity,
-                        )
+                    message_if_human(
+                        iPlayer,
+                        text("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS"),
+                        color=MessageData.GREEN,
+                        location=pCity,
+                    )
                     # spread Catholicism if not present
                     if not pCity.isHasReligion(Religion.CATHOLICISM):
                         pCity.setHasReligion(Religion.CATHOLICISM, True, True, False)
