@@ -180,7 +180,6 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
-        self.up = UniquePowers.UniquePowers()
         self.vic = Victory.Victory()
 
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
@@ -227,11 +226,11 @@ class CvRFCEventHandler:
 
         # 3Miro: Arab UP
         if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
-            self.up.faithUP(playerType, city)
+            UniquePowers.faithUP(playerType, city)
 
         # Absinthe: Ottoman UP
         if gc.hasUP(playerType, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
-            self.up.janissaryNewCityUP(playerType, city, bConquest)
+            UniquePowers.janissaryNewCityUP(playerType, city, bConquest)
 
         # Absinthe: Scottish UP
         #             against all players (including indies and barbs), but only on conquest
@@ -239,14 +238,14 @@ class CvRFCEventHandler:
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(owner) * 10000) / iTotalCulture > 20:
-                self.up.defianceUP(owner)
+                UniquePowers.defianceUP(owner)
 
         # Absinthe: Aragonese UP
         #             UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
         if owner == Civ.ARAGON:
-            self.up.confederationUP(owner)
+            UniquePowers.confederationUP(owner)
         if playerType == Civ.ARAGON:
-            self.up.confederationUP(playerType)
+            UniquePowers.confederationUP(playerType)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
         if playerType == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
@@ -364,7 +363,7 @@ class CvRFCEventHandler:
         # Absinthe: Aragonese UP
         #             UP tile yields should be recalculated if your new city is razed
         if iPlayer == Civ.ARAGON:
-            self.up.confederationUP(iPlayer)
+            UniquePowers.confederationUP(iPlayer)
 
     def onCityBuilt(self, argsList):
         "City Built"
@@ -384,7 +383,7 @@ class CvRFCEventHandler:
         # Absinthe: Aragonese UP
         #             UP tile yields should be recalculated on city foundation
         if iOwner == Civ.ARAGON:
-            self.up.confederationUP(iOwner)
+            UniquePowers.confederationUP(iOwner)
 
         # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
         pCurrent = gc.getMap().plot(city.getX(), city.getY())
@@ -437,7 +436,7 @@ class CvRFCEventHandler:
 
         # 3MiroUP: spread religion on city foundation
         if gc.hasUP(iOwner, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
-            self.up.faithUP(iOwner, city)
+            UniquePowers.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
         if iOwner == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
@@ -517,7 +516,7 @@ class CvRFCEventHandler:
         # Absinthe: Aragonese UP
         # UP tile yields should be recalculated right away if a new Palace was built
         if iOwner == Civ.ARAGON and iBuildingType == Building.PALACE:
-            self.up.confederationUP(iOwner)
+            UniquePowers.confederationUP(iOwner)
 
     def onProjectBuilt(self, argsList):
         city, iProjectType = argsList
@@ -600,7 +599,7 @@ class CvRFCEventHandler:
         RiseAndFall.checkTurn(iGameTurn)
         Religions.checkTurn(iGameTurn)
         Resources.checkTurn(iGameTurn)
-        self.up.checkTurn(iGameTurn)
+        UniquePowers.checkTurn(iGameTurn)
         AIWars.checkTurn(iGameTurn)
         Plague.checkTurn(iGameTurn)
         self.vic.checkTurn(iGameTurn)
@@ -719,16 +718,16 @@ class CvRFCEventHandler:
 
         # Absinthe: Denmark UP
         if iPlayer == Civ.DENMARK:
-            self.up.soundUP(iPlayer)
+            UniquePowers.soundUP(iPlayer)
 
         # Absinthe: Aragonese UP
         # safety check: probably redundant, calls from onBuildingBuilt, onCityBuilt, onCityAcquired and onCityRazed should be enough
         elif iPlayer == Civ.ARAGON:
-            self.up.confederationUP(iPlayer)
+            UniquePowers.confederationUP(iPlayer)
 
         # Ottoman UP
         if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
-            self.up.janissaryDraftUP(iPlayer)
+            UniquePowers.janissaryDraftUP(iPlayer)
 
         Plague.checkPlayerTurn(iGameTurn, iPlayer)
         self.vic.checkPlayerTurn(iGameTurn, iPlayer)

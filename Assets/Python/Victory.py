@@ -44,7 +44,6 @@ import random
 from Events import handler
 from Consts import MessageData
 
-up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
 
 
@@ -1974,7 +1973,7 @@ class Victory:
         # UHV 3: Control every coastal city on the Baltic Sea in 1750
         elif iGameTurn == year(1750):
             if self.isPossibleUHV(Civ.SWEDEN, 2, True):
-                if up.getNumForeignCitiesOnBaltic(Civ.SWEDEN, True) > 0:
+                if UniquePowers.getNumForeignCitiesOnBaltic(Civ.SWEDEN, True) > 0:
                     self.lostUHV(Civ.SWEDEN, 2)
                 else:
                     self.wonUHV(Civ.SWEDEN, 2)

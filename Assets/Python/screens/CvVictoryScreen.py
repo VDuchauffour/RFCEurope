@@ -35,7 +35,6 @@ import UniquePowers
 
 PyPlayer = PyHelpers.PyPlayer
 
-up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 
@@ -3137,7 +3136,7 @@ class CvVictoryScreen:
         iCounter = pPlayer.getUHVCounter(1)
         sText2 += self.getCounterString(iCounter, 5)
         # UHV3
-        iCounter = up.getNumForeignCitiesOnBaltic(iPlayer, True)
+        iCounter = UniquePowers.getNumForeignCitiesOnBaltic(iPlayer, True)
         sText3 += self.getCounterString(iCounter, 0, True)
         sText3 += " " + text("TXT_KEY_UHV_BALTIC_CITIES")
         lHelpTexts = [sText1, sText2, sText3]
