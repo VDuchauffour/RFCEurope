@@ -207,27 +207,27 @@ class CvRFCEventHandler:
 
     def onCityAcquired(self, argsList):
         "City Acquired"
-        owner, playerType, city, bConquest, bTrade = argsList
+        owner, player, city, bConquest, bTrade = argsList
         # CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
 
-        RiseAndFall.onCityAcquired(owner, playerType, city, bConquest, bTrade)
-        renameCities(city, playerType)
+        RiseAndFall.onCityAcquired(owner, player, city, bConquest, bTrade)
+        renameCities(city, player)
 
         tCity = (city.getX(), city.getY())
 
         # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
-        if playerType == Civ.ARABIA and not gc.getGame().isReligionFounded(Religion.ISLAM):
+        if player == Civ.ARABIA and not gc.getGame().isReligionFounded(Religion.ISLAM):
             # has to be done before the Arab UP is triggered
             gc.getPlayer(Civ.ARABIA).foundReligion(Religion.ISLAM, Religion.ISLAM, False)
             gc.getGame().getHolyCity(Religion.ISLAM).setNumRealBuilding(Building.ISLAMIC_SHRINE, 1)
 
         # 3Miro: Arab UP
-        if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
-            UniquePowers.faithUP(playerType, city)
+        if gc.hasUP(player, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
+            UniquePowers.faithUP(player, city)
 
         # Absinthe: Ottoman UP
-        if gc.hasUP(playerType, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
-            UniquePowers.janissaryNewCityUP(playerType, city, bConquest)
+        if gc.hasUP(player, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
+            UniquePowers.janissaryNewCityUP(player, city, bConquest)
 
         # Absinthe: Scottish UP
         #             against all players (including indies and barbs), but only on conquest
@@ -241,11 +241,11 @@ class CvRFCEventHandler:
         #             UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
         if owner == Civ.ARAGON:
             UniquePowers.confederationUP(owner)
-        if playerType == Civ.ARAGON:
-            UniquePowers.confederationUP(playerType)
+        if player == Civ.ARAGON:
+            UniquePowers.confederationUP(player)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if playerType == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
+        if player == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
             gc.getPlayer(Civ.DUTCH).foundReligion(
                 Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
             )
@@ -266,14 +266,14 @@ class CvRFCEventHandler:
                     Religions.setReformationHitMatrix(neighbour, 1)
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
-        if playerType < civilizations().majors().len():
-            spreadMajorCulture(playerType, city.getX(), city.getY())
+        if player < civilizations().majors().len():
+            spreadMajorCulture(player, city.getX(), city.getY())
 
-        Stability.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+        Stability.onCityAcquired(owner, player, city, bConquest, bTrade)
 
         # 3Miro: Jerusalem's Golden Age Incentive
         if tCity == CITIES[City.JERUSALEM]:
-            pPlayer = gc.getPlayer(playerType)
+            pPlayer = gc.getPlayer(player)
             if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                 # Absinthe: interface message for the player
                 if pPlayer.isHuman():
@@ -287,13 +287,13 @@ class CvRFCEventHandler:
                 # Absinthe: spread Catholicism if not present already
                 if not city.isHasReligion(Religion.CATHOLICISM):
                     Religions.spreadReligion(tCity, Religion.CATHOLICISM)
-                Crusades.success(playerType)
+                Crusades.success(player)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
             #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
             if (
                 percentage_chance(15, strict=True)
-                and playerType in civilizations().majors().ids()
+                and player in civilizations().majors().ids()
                 and pPlayer.getStateReligion() != -1
             ):
                 pPlayer.initUnit(
@@ -322,9 +322,9 @@ class CvRFCEventHandler:
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION, 1)
         # Sedna17, end
 
-        Plague.onCityAcquired(owner, playerType, city)  # Plague
-        Victory.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
-        Companies.onCityAcquired(owner, playerType, city)
+        Plague.onCityAcquired(owner, player, city)  # Plague
+        Victory.onCityAcquired(owner, player, city, bConquest, bTrade)  # Victory
+        Companies.onCityAcquired(owner, player, city)
 
         # Remove Silk resource near Constantinople if it is conquered
         if tCity == (81, 24):
