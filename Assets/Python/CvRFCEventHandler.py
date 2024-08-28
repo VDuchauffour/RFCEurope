@@ -46,7 +46,6 @@ from CoreTypes import (
     Building,
     Civ,
     Improvement,
-    Religion,
     UniquePower,
     Unit,
     Wonder,
@@ -212,39 +211,7 @@ class CvRFCEventHandler:
 
     def onReligionFounded(self, argsList):
         "Religion Founded"
-        iReligion, iFounder = argsList
-
-        if iReligion != Religion.JUDAISM:
-            for city in cities().owner(iFounder).entities():
-                if city.isHolyCityByType(
-                    iReligion
-                ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
-                    if iReligion == Religion.PROTESTANTISM:
-                        iTemple = Building.PROTESTANT_TEMPLE
-                        iShrine = Building.PROTESTANT_SHRINE
-                    elif iReligion == Religion.ISLAM:
-                        iTemple = Building.ISLAMIC_TEMPLE
-                        iShrine = Building.ISLAMIC_SHRINE
-                    elif iReligion == Religion.CATHOLICISM:
-                        iTemple = Building.CATHOLIC_TEMPLE
-                        iShrine = Building.CATHOLIC_SHRINE
-                    elif iReligion == Religion.ORTHODOXY:
-                        iTemple = Building.ORTHODOX_TEMPLE
-                        iShrine = Building.ORTHODOX_SHRINE
-                    if not city.isHasRealBuilding(iShrine):
-                        city.setHasRealBuilding(iShrine, True)
-                    if not city.isHasRealBuilding(iTemple):
-                        city.setHasRealBuilding(iTemple, True)
-                    break
-
-        Victory.onReligionFounded(iReligion, iFounder)
-
-        if iFounder < civilizations().majors().len():
-            Stability.onReligionFounded(iFounder)
-
-        # 3Miro: end Crusades for the Holy Land after the Reformation
-        if iReligion == Religion.PROTESTANTISM:
-            Crusades.endCrusades()
+        return 0
 
     def onBuildingBuilt(self, argsList):
         city, iBuildingType = argsList

@@ -494,10 +494,6 @@ def onProjectBuilt(iPlayer, iProject):
     recalcEpansion(iPlayer)
 
 
-def onReligionFounded(iPlayer):
-    pass
-
-
 def onReligionSpread(iReligion, iPlayer):
     pass
 

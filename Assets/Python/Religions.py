@@ -233,6 +233,32 @@ def spread_religion_on_city_built(city):
         UniquePowers.faithUP(iOwner, city)
 
 
+@handler("religionFounded")
+def onReligionFounded(iReligion, iFounder):
+    if iReligion != Religion.JUDAISM:
+        for city in cities().owner(iFounder).entities():
+            if city.isHolyCityByType(
+                iReligion
+            ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
+                if iReligion == Religion.PROTESTANTISM:
+                    iTemple = Building.PROTESTANT_TEMPLE
+                    iShrine = Building.PROTESTANT_SHRINE
+                elif iReligion == Religion.ISLAM:
+                    iTemple = Building.ISLAMIC_TEMPLE
+                    iShrine = Building.ISLAMIC_SHRINE
+                elif iReligion == Religion.CATHOLICISM:
+                    iTemple = Building.CATHOLIC_TEMPLE
+                    iShrine = Building.CATHOLIC_SHRINE
+                elif iReligion == Religion.ORTHODOXY:
+                    iTemple = Building.ORTHODOX_TEMPLE
+                    iShrine = Building.ORTHODOX_SHRINE
+                if not city.isHasRealBuilding(iShrine):
+                    city.setHasRealBuilding(iShrine, True)
+                if not city.isHasRealBuilding(iTemple):
+                    city.setHasRealBuilding(iTemple, True)
+                break
+
+
 def getReformationActive():
     return data.bReformationActive
 

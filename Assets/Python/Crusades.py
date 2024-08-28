@@ -20,6 +20,7 @@ from Core import (
     plots,
     units,
 )
+from Events import handler
 from PyUtils import percentage, percentage_chance, rand, choice
 from ProvinceMapData import PROVINCES_MAP
 from CityNameManager import lookupName
@@ -467,13 +468,16 @@ def underCrusadeAttackPopup(sCityName, iLeader):
     )
 
 
-def endCrusades():
-    for i in range(NUM_CRUSADES):
-        if getCrusadeInit(i) < 0:
-            setCrusadeInit(i, 0)
-    # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
-    for iPlayer in civilizations().majors().ids():
-        setNumUnitsSent(iPlayer, 0)
+@handler("religionFounded")
+def endCrusades(iReligion, iFounder):
+    # 3Miro: end Crusades for the Holy Land after the Reformation
+    if iReligion == Religion.PROTESTANTISM:
+        for i in range(NUM_CRUSADES):
+            if getCrusadeInit(i) < 0:
+                setCrusadeInit(i, 0)
+        # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
+        for iPlayer in civilizations().majors().ids():
+            setNumUnitsSent(iPlayer, 0)
 
 
 def checkTurn(iGameTurn):

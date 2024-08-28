@@ -519,6 +519,7 @@ def portugal_uhv_1(city):
                 player(Civ.PORTUGAL).setUHVCounter(0, iAfrica * 100 + iIslands)
 
 
+@handler("religionFounded")
 def onReligionFounded(iReligion, iFounder):
     # Germany UHV 2: Start the Reformation (Found Protestantism)
     if iReligion == Religion.PROTESTANTISM:
