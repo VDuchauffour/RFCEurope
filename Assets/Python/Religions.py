@@ -192,7 +192,16 @@ def arabia_should_found_islam(owner, player_id, city, bConquest, bTrade):
 
 
 @handler("cityAcquired")
-def dutch_should_found_protestantism(owner, player_id, city, bConquest, bTrade):
+def dutch_should_found_protestantism_on_city_acquired(owner, player_id, city, bConquest, bTrade):
+    dutch_should_found_protestantism(player_id)
+
+
+@handler("cityBuilt")
+def dutch_should_found_protestantism_on_city_built(city):
+    dutch_should_found_protestantism(city.getOwner())
+
+
+def dutch_should_found_protestantism(player_id):
     # Absinthe: If Protestantism has not been founded by the time the Dutch spawn,
     # then the Dutch should found it with their first city
     if player_id == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
@@ -214,6 +223,14 @@ def dutch_should_found_protestantism(owner, player_id, city, bConquest, bTrade):
         for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
             if getReformationHitMatrix(neighbour) == 0:
                 setReformationHitMatrix(neighbour, 1)
+
+
+@handler("cityBuilt")
+def spread_religion_on_city_built(city):
+    # 3MiroUP: spread religion on city foundation
+    iOwner = city.getOwner()
+    if gc.hasUP(iOwner, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
+        UniquePowers.faithUP(iOwner, city)
 
 
 def getReformationActive():

@@ -11,6 +11,7 @@ from Core import (
     units,
 )
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
+from Events import handler
 from LocationsData import REGIONS
 from PyUtils import percentage_chance, rand, choice
 from StoredData import data
@@ -2953,8 +2954,10 @@ def desertMercs(iPlayer):
             break
 
 
-def onCityBuilt(iCiv, pCity):
+@handler("cityBuilt")
+def onCityBuilt(pCity):
     # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
+    iCiv = pCity.getOwner()
     iProvince = pCity.getProvince()
     getMercLists()  # load the current mercenary pool
     for lMerc in lGlobalPool:

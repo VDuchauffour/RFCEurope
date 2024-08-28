@@ -289,24 +289,28 @@ def continentsNormalization(iGameTurn):  # Sedna17
     pass
 
 
-def onCityBuilt(iPlayer, x, y):
-    iProv = PROVINCES_MAP[y][x]
-    pPlayer = gc.getPlayer(iPlayer)
-    # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
-    iProvinceType = pPlayer.getProvinceType(iProv)
-    if iProvinceType == ProvinceType.CORE:
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-    elif not gc.hasUP(
-        iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
-    ):  # no instability with the Settler UP
-        if iProvinceType == ProvinceType.CONTESTED:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
-        elif iProvinceType == ProvinceType.NONE:
-            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
-    if pPlayer.getNumCities() < 5:  # early boost to small civs
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-    recalcEpansion(iPlayer)
-    recalcCivicCombos(iPlayer)
+@handler("cityBuilt")
+def onCityBuilt(city):
+    iPlayer = city.getOwner()
+    if iPlayer < civilizations().majors().len():
+        x, y = city.getX(), city.getY()
+        iProv = PROVINCES_MAP[y][x]
+        pPlayer = gc.getPlayer(iPlayer)
+        # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
+        iProvinceType = pPlayer.getProvinceType(iProv)
+        if iProvinceType == ProvinceType.CORE:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+        elif not gc.hasUP(
+            iPlayer, UniquePower.STABILITY_BONUS_FOUNDING
+        ):  # no instability with the Settler UP
+            if iProvinceType == ProvinceType.CONTESTED:
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -1)
+            elif iProvinceType == ProvinceType.NONE:
+                pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
+        if pPlayer.getNumCities() < 5:  # early boost to small civs
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+        recalcEpansion(iPlayer)
+        recalcCivicCombos(iPlayer)
 
 
 @handler("cityAcquired")

@@ -16,7 +16,6 @@ from Core import (
     cities,
 )
 import CvUtil
-import CvEventManager
 import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
@@ -28,12 +27,7 @@ import Religions
 import Resources
 import UniquePowers
 import AIWars
-from RFCUtils import (
-    forcedInvasion,
-    getProvinceStabilityLevel,
-    spreadMajorCulture,
-    getUniqueBuilding,
-)
+from RFCUtils import forcedInvasion, getProvinceStabilityLevel
 
 import Victory
 import Stability
@@ -54,7 +48,6 @@ from CoreTypes import (
     Improvement,
     Religion,
     UniquePower,
-    Technology,
     Unit,
     Wonder,
 )
@@ -212,97 +205,7 @@ class CvRFCEventHandler:
 
     def onCityBuilt(self, argsList):
         "City Built"
-        city = argsList[0]
-
-        iOwner = city.getOwner()
-
-        RiseAndFall.onCityBuilt(iOwner, city)
-        tCity = (city.getX(), city.getY())
-
-        # Absinthe: merc notifications, after the city is named
-        Mercenaries.onCityBuilt(iOwner, city)
-
-        # Absinthe: Aragonese UP
-        #             UP tile yields should be recalculated on city foundation
-        if iOwner == Civ.ARAGON:
-            UniquePowers.confederationUP(iOwner)
-
-        # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
-        pCurrent = gc.getMap().plot(city.getX(), city.getY())
-        for civ in civilizations().minors().ids():
-            pCurrent.setCulture(civ, 0, True)
-
-        if iOwner < civilizations().majors().len():
-            spreadMajorCulture(iOwner, city.getX(), city.getY())
-
-            if iOwner == Civ.PORTUGAL:
-                Victory.onCityBuilt(city, iOwner)  # needed in Victory.py
-
-                if gc.getTeam(gc.getPlayer(Civ.PORTUGAL).getTeam()).isHasTech(
-                    Technology.ASTRONOMY
-                ):
-                    city.setHasRealBuilding(Building.PORTUGAL_FEITORIA, True)
-
-        # Absinthe: Free buildings if city is built on a tile improvement
-        #             The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
-        #             Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
-        #             If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
-        #             (only problem might be if currently there is no improvement on the city-founding tile, but the last destroyed improvement in the game
-        #                 was a fort on the exact same plot some turns ago - but IMO that's not much of a stress of reality, there was a fort there after all)
-        #             Note that CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
-        #                 adding an improvement in the scenario map to one of the preplaced Byzantine cities won't work perfectly:
-        #                 while the improvement will be autorazed on the beginning of the 1st players turn when starting in 500AD, does nothing if you load a saved game
-        iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
-        iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
-        iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
-        # Absinthe: free walls if built on fort
-        if iImpBeforeCityType == Improvement.FORT and (iImpBeforeCityX, iImpBeforeCityY) == tCity:
-            city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.WALLS), True)
-        # Absinthe: free granary if built on hamlet
-        if (
-            iImpBeforeCityType == Improvement.HAMLET
-            and (iImpBeforeCityX, iImpBeforeCityY) == tCity
-        ):
-            city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.GRANARY), True)
-        # Absinthe: free granary and +1 population if built on village or town
-        if iImpBeforeCityType in [Improvement.TOWN, Improvement.VILLAGE]:
-            if (iImpBeforeCityX, iImpBeforeCityY) == tCity:
-                city.changePopulation(1)
-                city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.GRANARY), True)
-
-        # Absinthe: Some initial food for all cities on foundation
-        #             So Leon and Roskilde for example don't lose a population in the first couple turns
-        #             Nor the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
-        #             Currently 1/5 of the treshold of the next population growth
-        city.setFood(city.growthThreshold() / 5)
-
-        # 3MiroUP: spread religion on city foundation
-        if gc.hasUP(iOwner, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
-            UniquePowers.faithUP(iOwner, city)
-
-        # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if iOwner == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
-            gc.getPlayer(Civ.DUTCH).foundReligion(
-                Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
-            )
-            gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
-                Building.PROTESTANT_SHRINE, 1
-            )
-            Religions.setReformationActive(True)
-            Religions.reformationchoice(Civ.DUTCH)
-            Religions.reformationOther(Civ.INDEPENDENT)
-            Religions.reformationOther(Civ.INDEPENDENT_2)
-            Religions.reformationOther(Civ.INDEPENDENT_3)
-            Religions.reformationOther(Civ.INDEPENDENT_4)
-            Religions.reformationOther(Civ.BARBARIAN)
-            Religions.setReformationHitMatrix(Civ.DUTCH, 2)
-
-            for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
-                if Religions.getReformationHitMatrix(neighbour) == 0:
-                    Religions.setReformationHitMatrix(neighbour, 1)
-
-        if iOwner < civilizations().majors().len():
-            Stability.onCityBuilt(iOwner, city.getX(), city.getY())
+        return 0
 
     def onCombatResult(self, argsList):
         return 0

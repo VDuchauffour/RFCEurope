@@ -1,7 +1,19 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 from CvPythonExtensions import *
-from Core import player, human, turn, year, message, text, make_unit, cities, plots, infos
-from CoreTypes import Building, Civ, SpecialParameter, Religion, UniquePower, Unit
+from Core import (
+    civilization,
+    player,
+    human,
+    turn,
+    year,
+    message,
+    text,
+    make_unit,
+    cities,
+    plots,
+    infos,
+)
+from CoreTypes import Building, Civ, SpecialParameter, Religion, Technology, UniquePower, Unit
 from RFCUtils import getMaster, getUniqueUnit
 from Consts import MessageData
 from PyUtils import choice
@@ -42,6 +54,21 @@ def aragon_up_on_city_razed(city, iPlayer):
     # UP tile yields should be recalculated if your new city is razed
     if iPlayer == Civ.ARAGON:
         confederationUP(iPlayer)
+
+
+@handler("cityBuilt")
+def aragon_up_on_city_built(city):
+    # UP tile yields should be recalculated on city foundation
+    iPlayer = city.getOwner()
+    if iPlayer == Civ.ARAGON:
+        confederationUP(iPlayer)
+
+
+@handler("cityBuilt")
+def portugal_up_on_city_built(city):
+    iPlayer = city.getOwner()
+    if iPlayer == Civ.PORTUGAL and civilization(Civ.PORTUGAL).has_tech(Technology.ASTRONOMY):
+        city.setHasRealBuilding(Building.PORTUGAL_FEITORIA, True)
 
 
 @handler("combatResult")

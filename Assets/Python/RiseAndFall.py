@@ -472,9 +472,10 @@ def eventApply7622(popupReturn):
     resurectCiv(getRebelCiv())
 
 
-def onCityBuilt(iPlayer, pCity):
+@handler("cityBuilt")
+def onCityBuilt(pCity):
+    iPlayer = pCity.getOwner()
     tCity = (pCity.getX(), pCity.getY())
-    x, y = tCity
     Provinces.onCityBuilt(iPlayer, pCity.getX(), pCity.getY())
     # Absinthe: We can add free buildings for new cities here
     # 			Note that it will add the building every time a city is founded on the plot, not just on the first time

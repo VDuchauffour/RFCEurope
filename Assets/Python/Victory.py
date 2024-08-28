@@ -499,8 +499,10 @@ def checkTurn(iGameTurn):
     pass
 
 
-def onCityBuilt(city, iPlayer):  # see onCityBuilt in CvRFCEventHandler
+@handler("cityBuilt")
+def portugal_uhv_1(city):
     # Portugal UHV 1: Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran
+    iPlayer = city.getOwner()
     if iPlayer == Civ.PORTUGAL:
         if isPossibleUHV(iPlayer, 0, False):
             iProv = city.getProvince()
