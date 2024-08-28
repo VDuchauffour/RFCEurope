@@ -27,10 +27,10 @@ LOCAL_PATHS=(
 	"$SCRIPT_DIR/Assets/Python/data/maps"
 	"$SCRIPT_DIR/Assets/Python/utils"
 	"$SCRIPT_DIR/Assets/Python/models"
-	"$SCRIPT_DIR/Assets/Python/components"
 	"$SCRIPT_DIR/Assets/Python/EntryPoints"
 	"$SCRIPT_DIR/Assets/Python/pyWB"
 	"$SCRIPT_DIR/Assets/Python/screens"
+	"$SCRIPT_DIR/Assets/Python/BUG"
 )
 
 CURRENT_PYTHONPATHS=(
