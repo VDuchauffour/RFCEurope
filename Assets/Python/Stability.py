@@ -483,18 +483,21 @@ def onBuildingBuilt(city, building):
             recalcEpansion(iPlayer)
 
 
-def onProjectBuilt(iPlayer, iProject):
-    pPlayer = gc.getPlayer(iPlayer)
-    iCivic5 = pPlayer.getCivics(5)
-    if iProject >= len(Project):
-        pPlayer.changeStabilityBase(
-            StabilityCategory.EXPANSION, -2
-        )  # -2 stability for each colony
-        if iCivic5 == Civic.COLONIALISM:
+@handler("projectBuilt")
+def onProjectBuilt(city, project):
+    if city.getOwner() < civilizations().majors().len():
+        iPlayer = city.getOwner()
+        pPlayer = gc.getPlayer(iPlayer)
+        iCivic5 = pPlayer.getCivics(5)
+        if project >= len(Project):
             pPlayer.changeStabilityBase(
-                StabilityCategory.EXPANSION, 1
-            )  # one less stability penalty if civ is in Colonialism
-    recalcEpansion(iPlayer)
+                StabilityCategory.EXPANSION, -2
+            )  # -2 stability for each colony
+            if iCivic5 == Civic.COLONIALISM:
+                pPlayer.changeStabilityBase(
+                    StabilityCategory.EXPANSION, 1
+                )  # one less stability penalty if civ is in Colonialism
+        recalcEpansion(iPlayer)
 
 
 def onReligionSpread(iReligion, iPlayer):

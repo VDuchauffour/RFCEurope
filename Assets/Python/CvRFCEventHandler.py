@@ -216,10 +216,7 @@ class CvRFCEventHandler:
         return 0
 
     def onProjectBuilt(self, argsList):
-        city, iProjectType = argsList
-        Victory.onProjectBuilt(city.getOwner(), iProjectType)
-        if city.getOwner() < civilizations().majors().len():
-            Stability.onProjectBuilt(city.getOwner(), iProjectType)
+        return 0
 
     def onUnitPillage(self, argsList):
         pUnit, iImprovement, iRoute, iOwner = argsList

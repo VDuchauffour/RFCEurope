@@ -743,14 +743,17 @@ def onBuildingBuilt(iPlayer, iBuilding):
                 lostUHV(Civ.OTTOMAN, 1)
 
 
-def onProjectBuilt(iPlayer, iProject):
-    bColony = isProjectAColony(iProject)
-    # Absinthe: note that getProjectCount (thus getNumRealColonies too) won't count the latest project/colony (which was currently built) if called from this function
-    # 			way more straightforward, and also faster to use the UHVCounters for the UHV checks
+@handler("projectBuilt")
+def onProjectBuilt(city, project):
+    iPlayer = city.getOwner()
+    bColony = isProjectAColony(project)
+    # Absinthe: note that getProjectCount (thus getNumRealColonies too) won't count the latest project/colony
+    # (which was currently built) if called from this function
+    # way more straightforward, and also faster to use the UHVCounters for the UHV checks
 
     # Venice UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
     if isPossibleUHV(Civ.VENECIA, 2, False):
-        if iProject != Colony.VINLAND:
+        if project != Colony.VINLAND:
             if bColony:
                 if iPlayer == Civ.VENECIA:
                     wonUHV(Civ.VENECIA, 2)
@@ -795,8 +798,8 @@ def onProjectBuilt(iPlayer, iProject):
                 iWestCompany = team(Civ.DUTCH).getProjectCount(Project.WEST_INDIA_COMPANY)
                 iEastCompany = team(Civ.DUTCH).getProjectCount(Project.EAST_INDIA_COMPANY)
                 # if the companies are already built previously, or currently being built (one of them is the current project)
-                if iProject == Project.WEST_INDIA_COMPANY or iWestCompany >= 1:
-                    if iProject == Project.EAST_INDIA_COMPANY or iEastCompany >= 1:
+                if project == Project.WEST_INDIA_COMPANY or iWestCompany >= 1:
+                    if project == Project.EAST_INDIA_COMPANY or iEastCompany >= 1:
                         wonUHV(Civ.DUTCH, 1)
 
     # Denmark UHV 3: Build 3 Colonies and complete both Trading Companies
@@ -808,8 +811,8 @@ def onProjectBuilt(iPlayer, iProject):
                 iWestCompany = team(Civ.DENMARK).getProjectCount(Project.WEST_INDIA_COMPANY)
                 iEastCompany = team(Civ.DENMARK).getProjectCount(Project.EAST_INDIA_COMPANY)
                 # if the companies are already built previously, or currently being built (one of them is the current project)
-                if iProject == Project.WEST_INDIA_COMPANY or iWestCompany == 1:
-                    if iProject == Project.EAST_INDIA_COMPANY or iEastCompany == 1:
+                if project == Project.WEST_INDIA_COMPANY or iWestCompany == 1:
+                    if project == Project.EAST_INDIA_COMPANY or iEastCompany == 1:
                         wonUHV(Civ.DENMARK, 2)
 
 
