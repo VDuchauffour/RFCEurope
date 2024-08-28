@@ -64,6 +64,14 @@ def aragon_up_on_city_built(city):
         confederationUP(iPlayer)
 
 
+@handler("buildingBuilt")
+def aragon_up_on_building_built(city, building):
+    # UP tile yields should be recalculated right away if a new Palace was built
+    iPlayer = city.getOwner()
+    if iPlayer == Civ.ARAGON and building == Building.PALACE:
+        confederationUP(iPlayer)
+
+
 @handler("cityBuilt")
 def portugal_up_on_city_built(city):
     iPlayer = city.getOwner()

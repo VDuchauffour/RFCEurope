@@ -663,6 +663,7 @@ def onTechAcquired(iTech, iPlayer):
                 lostUHV(Civ.ENGLAND, 2)
 
 
+@handler("buildingBuilt")
 def onBuildingBuilt(iPlayer, iBuilding):
     if not gc.getGame().isVictoryValid(7):  # 7 == historical
         return

@@ -447,37 +447,40 @@ def onTechAcquired(iTech, iPlayer):
     pass
 
 
-def onBuildingBuilt(iPlayer, iBuilding):
-    pPlayer = gc.getPlayer(iPlayer)
-    if iBuilding == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE):
-        pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
-        recalcEconomy(iPlayer)
-    elif iBuilding == getUniqueBuilding(iPlayer, Building.CASTLE):
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-        recalcEpansion(iPlayer)
-    elif iBuilding == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
-        pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
-        recalcCivicCombos(iPlayer)
-    elif iBuilding == getUniqueBuilding(iPlayer, Building.COURTHOUSE):
-        pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
-        recalcCity(iPlayer)
-    elif iBuilding == Wonder.ESCORIAL:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
-    elif iBuilding == Wonder.STEPHANSDOM:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
-    elif iBuilding == Wonder.SHRINE_OF_UPPSALA:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
-    elif iBuilding == Wonder.KOUTOUBIA_MOSQUE:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
-    elif iBuilding == Wonder.MAGNA_CARTA:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
-    elif iBuilding == Building.PALACE:
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
-        pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
-        recalcEpansion(iPlayer)
-    elif iBuilding == Building.RELIQUARY:
-        pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
-        recalcEpansion(iPlayer)
+@handler("buildingBuilt")
+def onBuildingBuilt(city, building):
+    iPlayer = city.getOwner()
+    if iPlayer < civilizations().majors().len():
+        pPlayer = gc.getPlayer(iPlayer)
+        if building == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE):
+            pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
+            recalcEconomy(iPlayer)
+        elif building == getUniqueBuilding(iPlayer, Building.CASTLE):
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+            recalcEpansion(iPlayer)
+        elif building == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
+            pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
+            recalcCivicCombos(iPlayer)
+        elif building == getUniqueBuilding(iPlayer, Building.COURTHOUSE):
+            pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
+            recalcCity(iPlayer)
+        elif building == Wonder.ESCORIAL:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
+        elif building == Wonder.STEPHANSDOM:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
+        elif building == Wonder.SHRINE_OF_UPPSALA:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
+        elif building == Wonder.KOUTOUBIA_MOSQUE:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
+        elif building == Wonder.MAGNA_CARTA:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
+        elif building == Building.PALACE:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
+            pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
+            recalcEpansion(iPlayer)
+        elif building == Building.RELIQUARY:
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+            recalcEpansion(iPlayer)
 
 
 def onProjectBuilt(iPlayer, iProject):

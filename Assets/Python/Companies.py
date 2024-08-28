@@ -723,12 +723,14 @@ def onPlayerChangeStateReligion(argsList):
                     announceHuman(iCompany, city, True)
 
 
-def onBuildingBuilt(iPlayer, iBuilding):
-
+@handler("buildingBuilt")
+def onBuildingBuilt(city, building):
     # Galata Tower ownership
-    pPlayer = gc.getPlayer(iPlayer)
-    if iBuilding == Wonder.GALATA_TOWER:
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
+    if city.getOwner() < civilizations().majors().len():
+        iPlayer = city.getOwner()
+        pPlayer = gc.getPlayer(iPlayer)
+        if building == Wonder.GALATA_TOWER:
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 1)
 
 
 @handler("cityAcquired")

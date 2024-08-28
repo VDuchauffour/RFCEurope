@@ -43,7 +43,6 @@ import Mercenaries
 from Consts import MessageData
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
-    Building,
     Civ,
     Improvement,
     UniquePower,
@@ -214,20 +213,7 @@ class CvRFCEventHandler:
         return 0
 
     def onBuildingBuilt(self, argsList):
-        city, iBuildingType = argsList
-        iOwner = city.getOwner()
-
-        Victory.onBuildingBuilt(iOwner, iBuildingType)
-        if city.getOwner() < civilizations().majors().len():
-            Stability.onBuildingBuilt(iOwner, iBuildingType)
-            Companies.onBuildingBuilt(iOwner, iBuildingType)
-        # Absinthe: Faith, Kazimierz, Mont Saint-Michel
-        Religions.onBuildingBuilt(iOwner, iBuildingType)
-
-        # Absinthe: Aragonese UP
-        # UP tile yields should be recalculated right away if a new Palace was built
-        if iOwner == Civ.ARAGON and iBuildingType == Building.PALACE:
-            UniquePowers.confederationUP(iOwner)
+        return 0
 
     def onProjectBuilt(self, argsList):
         city, iProjectType = argsList

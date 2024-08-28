@@ -571,7 +571,9 @@ def onReligionSpread(iReligion, iPlayer):
         pPlayer.changeFaith(-1)
 
 
+@handler("buildingBuilt")
 def onBuildingBuilt(iPlayer, iBuilding):
+    # Absinthe: Faith, Kazimierz, Mont Saint-Michel
     pPlayer = gc.getPlayer(iPlayer)
     iStateReligion = pPlayer.getStateReligion()
     if iStateReligion != -1:
