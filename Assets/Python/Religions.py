@@ -187,15 +187,15 @@ def arabia_should_found_islam(owner, player_id, city, bConquest, bTrade):
 
     # TODO when possible move this in UP.py and use firstCity event from DOC?
     # Arab UP
-    if gc.hasUP(player, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
-        UniquePowers.faithUP(player, city)
+    if gc.hasUP(player_id, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES):
+        UniquePowers.faithUP(player_id, city)
 
 
 @handler("cityAcquired")
 def dutch_should_found_protestantism(owner, player_id, city, bConquest, bTrade):
     # Absinthe: If Protestantism has not been founded by the time the Dutch spawn,
     # then the Dutch should found it with their first city
-    if player == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
+    if player_id == Civ.DUTCH and not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
         gc.getPlayer(Civ.DUTCH).foundReligion(
             Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
         )
