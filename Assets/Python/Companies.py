@@ -751,14 +751,19 @@ def onCityAcquired(iOldOwner, iNewOwner, city):
         pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
 
 
-def onCityRazed(iOldOwner, iPlayer, city):
+@handler("cityRazed")
+def onCityRazed(city, iPlayer):
+    iPreviousOwner = city.getOwner()
+    if iPreviousOwner == iPlayer and city.getPreviousOwner() != -1:
+        iPreviousOwner = city.getPreviousOwner()
 
+    # TODO move to Wonders.py?
     # Galata Tower ownership
-    pOldOwner = gc.getPlayer(iOldOwner)
+    pPreviousOwner = gc.getPlayer(iPreviousOwner)
     pPlayer = gc.getPlayer(iPlayer)
     if city.isHasBuilding(Wonder.GALATA_TOWER):
         pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
-        pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER, 0)
 
 
 def announceHuman(iCompany, city, bRemove=False):

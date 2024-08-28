@@ -60,10 +60,6 @@ def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
         refreshStabilityOverlay()
 
 
-def onCityRazed(iOwner, iPlayer, city):
-    pass
-
-
 def updatePotential(iPlayer):
     civ = civilization(iPlayer)
     for city in cities().owner(iPlayer).entities():

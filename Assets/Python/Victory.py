@@ -626,7 +626,8 @@ def onCityAcquired(owner, iNewOwner, city, bConquest, bTrade):
                 player(Civ.PRUSSIA).setUHVCounter(1, iConqRaw)
 
 
-def onCityRazed(iPlayer, city):
+@handler("cityRazed")
+def onCityRazed(city, iPlayer):
     # Sweden UHV 2: Raze 5 Catholic cities while being Protestant by 1660
     if iPlayer == Civ.SWEDEN:
         if isPossibleUHV(iPlayer, 1, False):

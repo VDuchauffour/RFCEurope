@@ -375,30 +375,31 @@ def onCityAcquired(iOwner, playerType, city, bConquest, bTrade):
     recalcEpansion(playerType)
 
 
-def onCityRazed(iOwner, iPlayer, city):
-    # Sedna17: Not sure what difference between iOwner and iPlayer is here
-    # 3Miro: iOwner owns the city (victim) and I think iPlayer is the one razing the city
-    # 		On second thought, if iOwner (the previous owner) doesn't have enough culture, then iOwner == playerType
-    # AbsintheRed: iPlayer is the one razing city, iOwner is the previous owner of the city (right before iPlayer)
+@handler("cityRazed")
+def onCityRazed(city, iPlayer):
+    iPreviousOwner = city.getOwner()
+    if iPreviousOwner == iPlayer and city.getPreviousOwner() != -1:
+        iPreviousOwner = city.getPreviousOwner()
+
     pPlayer = gc.getPlayer(iPlayer)
-    pOwner = gc.getPlayer(iOwner)
+    pPreviousOwner = gc.getPlayer(iPreviousOwner)
     if city.hasBuilding(Wonder.ESCORIAL):
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
-        pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 0)
     if city.hasBuilding(Wonder.STEPHANSDOM):
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
-        pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 0)
     if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA):
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
-        pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 0)
     if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE):
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
-        pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 0)
     if city.hasBuilding(Wonder.MAGNA_CARTA):
-        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
-        pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
+        pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
+        pPreviousOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 0)
     recalcCivicCombos(iPlayer)
-    recalcCivicCombos(iOwner)
+    recalcCivicCombos(iPreviousOwner)
 
     # Absinthe: city razing penalty - permanent, based on city population
     # note that the city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size

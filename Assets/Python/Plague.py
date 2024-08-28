@@ -641,7 +641,3 @@ def onCityAcquired(iOldOwner, iNewOwner, city):
                     city.setHasRealBuilding(PlagueType.PLAGUE, False)
         else:
             city.setHasRealBuilding(PlagueType.PLAGUE, False)
-
-
-def onCityRazed(city, iNewOwner):
-    pass

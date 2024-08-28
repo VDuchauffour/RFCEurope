@@ -487,10 +487,6 @@ def onCityBuilt(iPlayer, pCity):
             pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
 
 
-def onCityRazed(iOwner, iPlayer, city):
-    Provinces.onCityRazed(iOwner, iPlayer, city)  # Province Manager
-
-
 def checkTurn(iGameTurn):
     # Trigger betrayal mode
     if getBetrayalTurns() > 0:

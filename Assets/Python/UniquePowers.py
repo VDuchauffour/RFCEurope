@@ -27,13 +27,21 @@ def scottish_up(owner, player_id, city, bConquest, bTrade):
 
 
 @handler("cityAcquired")
-def aragon_up(owner, player_id, city, bConquest, bTrade):
+def aragon_up_on_city_acquired(owner, player_id, city, bConquest, bTrade):
     # Absinthe: Aragonese UP
     # UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
     if owner == Civ.ARAGON:
         confederationUP(owner)
     if player_id == Civ.ARAGON:
         confederationUP(player_id)
+
+
+@handler("cityRazed")
+def aragon_up_on_city_razed(city, iPlayer):
+    # Absinthe: Aragonese UP
+    # UP tile yields should be recalculated if your new city is razed
+    if iPlayer == Civ.ARAGON:
+        confederationUP(iPlayer)
 
 
 @handler("combatResult")

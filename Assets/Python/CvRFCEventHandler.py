@@ -208,22 +208,7 @@ class CvRFCEventHandler:
 
     def onCityRazed(self, argsList):
         "City Razed"
-        city, iPlayer = argsList
-
-        iPreviousOwner = city.getOwner()
-        if iPreviousOwner == iPlayer and city.getPreviousOwner() != -1:
-            iPreviousOwner = city.getPreviousOwner()
-
-        RiseAndFall.onCityRazed(iPreviousOwner, iPlayer, city)  # Rise and Fall
-        Stability.onCityRazed(iPreviousOwner, iPlayer, city)  # Stability
-        Companies.onCityRazed(iPreviousOwner, iPlayer, city)
-        Victory.onCityRazed(iPlayer, city)  # Victory
-        Plague.onCityRazed(city, iPlayer)  # Plague
-
-        # Absinthe: Aragonese UP
-        #             UP tile yields should be recalculated if your new city is razed
-        if iPlayer == Civ.ARAGON:
-            UniquePowers.confederationUP(iPlayer)
+        return 0
 
     def onCityBuilt(self, argsList):
         "City Built"
