@@ -3037,9 +3037,10 @@ def onUnitKilled(pUnit, iAttacker):
         setMercHiredBy(lHiredByList)
 
 
-def onUnitLost(argsList):
+@handler("unitLost")
+def onUnitLost(pUnit):
+    # This method will remove a mercenary unit from the game if it is lost
     # this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
-    pUnit = argsList[0]
     iMerc = pUnit.getMercID()
 
     if iMerc > -1:

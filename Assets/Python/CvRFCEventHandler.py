@@ -32,7 +32,6 @@ import Companies
 import Locations
 import Modifiers
 import Civilizations
-import Mercenaries
 
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
@@ -365,11 +364,9 @@ class CvRFCEventHandler:
         "Unit Killed"
         return 0
 
-    # This method will remove a mercenary unit from the game if it is lost
     def onUnitLost(self, argsList):
         "Unit Lost"
-
-        Mercenaries.onUnitLost(argsList)
+        return 0
 
     # This method handles the key input and will bring up the mercenary manager screen if the
     # player has at least one city and presses 'ctrl' and the 'M' key.
