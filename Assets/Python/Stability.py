@@ -505,6 +505,7 @@ def onReligionSpread(iReligion, iPlayer):
     pass
 
 
+@handler("EndGameTurn")
 def checkImplosion(iGameTurn):
     if iGameTurn > 14 and iGameTurn % 6 == 3:
         for iPlayer in civilizations().main().ids():

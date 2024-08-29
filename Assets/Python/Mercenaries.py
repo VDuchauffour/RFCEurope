@@ -2901,6 +2901,7 @@ def processNewMercs(iGameTurn):
             addNewMerc(iMerc)
 
 
+@handler("EndGameTurn")
 def doMercsTurn(iGameTurn):
     # this is called at the end of the game turn
     # thus the AI gets the advantage to make the Merc "decision" with the most up-to-date political data and they can get the mercs instantly

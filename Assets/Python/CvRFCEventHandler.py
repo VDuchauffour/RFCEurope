@@ -306,8 +306,7 @@ class CvRFCEventHandler:
 
     def onEndGameTurn(self, argsList):
         iGameTurn = argsList[0]
-        Stability.checkImplosion(iGameTurn)
-        Mercenaries.doMercsTurn(iGameTurn)
+        return 0
 
     def onReligionSpread(self, argsList):
         iReligion, iOwner, pSpreadCity = argsList
