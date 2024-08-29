@@ -15,6 +15,7 @@ from Core import (
     player,
     text,
     message,
+    turn,
     year,
     cities,
     units,
@@ -769,25 +770,31 @@ def eventApply7624(popupReturn):
         reformationno(iHuman)
 
 
-def onTechAcquired(iTech, iPlayer):
-    if iTech == Technology.PRINTING_PRESS:
-        if gc.getPlayer(iPlayer).getStateReligion() == Religion.CATHOLICISM:
-            if not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
-                gc.getPlayer(iPlayer).foundReligion(
-                    Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
-                )
-                gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
-                    Building.PROTESTANT_SHRINE, 1
-                )
-                setReformationActive(True)
-                reformationchoice(iPlayer)
-                reformationOther(Civ.INDEPENDENT)
-                reformationOther(Civ.INDEPENDENT_2)
-                reformationOther(Civ.INDEPENDENT_3)
-                reformationOther(Civ.INDEPENDENT_4)
-                reformationOther(Civ.BARBARIAN)
-                setReformationHitMatrix(iPlayer, 2)
-                spread_reform_to_neighbour(iPlayer)
+@handler("techAcquired")
+def onTechAcquired(iTech, iTeam, iPlayer):
+    if (
+        gc.getPlayer(iPlayer).isAlive()
+        and turn() > civilization(iPlayer).date.birth
+        and iPlayer < civilizations().majors().len()
+    ):
+        if iTech == Technology.PRINTING_PRESS:
+            if gc.getPlayer(iPlayer).getStateReligion() == Religion.CATHOLICISM:
+                if not gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
+                    gc.getPlayer(iPlayer).foundReligion(
+                        Religion.PROTESTANTISM, Religion.PROTESTANTISM, False
+                    )
+                    gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
+                        Building.PROTESTANT_SHRINE, 1
+                    )
+                    setReformationActive(True)
+                    reformationchoice(iPlayer)
+                    reformationOther(Civ.INDEPENDENT)
+                    reformationOther(Civ.INDEPENDENT_2)
+                    reformationOther(Civ.INDEPENDENT_3)
+                    reformationOther(Civ.INDEPENDENT_4)
+                    reformationOther(Civ.BARBARIAN)
+                    setReformationHitMatrix(iPlayer, 2)
+                    spread_reform_to_neighbour(iPlayer)
 
 
 def spread_reform_to_neighbour(player_id):

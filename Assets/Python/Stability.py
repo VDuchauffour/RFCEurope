@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from Core import get_scenario, civilization, civilizations, message, human, cities, text
+from Core import get_scenario, civilization, civilizations, message, human, cities, text, turn
 from Consts import MessageData
 from CoreTypes import (
     Building,
@@ -432,20 +432,25 @@ def onImprovementDestroyed(owner):
     pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 2)
 
 
-def onTechAcquired(iTech, iPlayer):
-    if iTech in [
-        Technology.FEUDALISM,
-        Technology.GUILDS,
-        Technology.GUNPOWDER,
-        Technology.PROFESSIONAL_ARMY,
-        Technology.NATIONALISM,
-        Technology.CIVIL_SERVICE,
-        Technology.ECONOMICS,
-        Technology.MACHINERY,
-        Technology.ARISTOCRACY,
-    ]:
-        gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
-    pass
+@handler("techAcquired")
+def onTechAcquired(iTech, iTeam, iPlayer):
+    if (
+        gc.getPlayer(iPlayer).isAlive()
+        and turn() > civilization(iPlayer).date.birth
+        and iPlayer < civilizations().majors().len()
+    ):
+        if iTech in [
+            Technology.FEUDALISM,
+            Technology.GUILDS,
+            Technology.GUNPOWDER,
+            Technology.PROFESSIONAL_ARMY,
+            Technology.NATIONALISM,
+            Technology.CIVIL_SERVICE,
+            Technology.ECONOMICS,
+            Technology.MACHINERY,
+            Technology.ARISTOCRACY,
+        ]:
+            gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY, -1)
 
 
 @handler("buildingBuilt")

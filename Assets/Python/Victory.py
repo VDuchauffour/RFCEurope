@@ -646,7 +646,8 @@ def onPillageImprovement(iPillager, iVictim, iImprovement, iRoute, iX, iY):
             player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
 
-def onTechAcquired(iTech, iPlayer):
+@handler("techAcquired")
+def onTechAcquired(iTech, iTeam, iPlayer):
     if not gc.getGame().isVictoryValid(7):  # 7 == historical
         return
 

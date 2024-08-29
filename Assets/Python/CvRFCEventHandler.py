@@ -2,7 +2,6 @@
 
 from CvPythonExtensions import *
 from Core import (
-    civilization,
     civilizations,
     human,
     make_unit,
@@ -345,16 +344,7 @@ class CvRFCEventHandler:
             Companies.onPlayerChangeStateReligion(argsList)
 
     def onTechAcquired(self, argsList):
-        iPlayer = argsList[2]
-        Victory.onTechAcquired(argsList[0], argsList[2])
-
-        if (
-            gc.getPlayer(iPlayer).isAlive()
-            and turn() > civilization(iPlayer).date.birth
-            and iPlayer < civilizations().majors().len()
-        ):
-            Religions.onTechAcquired(argsList[0], argsList[2])
-            Stability.onTechAcquired(argsList[0], argsList[2])
+        return 0
 
     def onUnitPromoted(self, argsList):
         "Unit Promoted"
