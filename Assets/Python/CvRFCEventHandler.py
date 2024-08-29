@@ -26,7 +26,6 @@ import Victory
 import Stability
 import Plague
 import Crusades
-import Companies
 import Locations
 import Modifiers
 import Civilizations
@@ -323,10 +322,7 @@ class CvRFCEventHandler:
 
     def onPlayerChangeStateReligion(self, argsList):
         "Player changes his state religion"
-        iPlayer, iNewReligion, iOldReligion = argsList
-
-        if iPlayer < civilizations().majors().len():
-            Companies.onPlayerChangeStateReligion(argsList)
+        return 0
 
     def onTechAcquired(self, argsList):
         return 0

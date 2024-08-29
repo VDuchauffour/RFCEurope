@@ -709,18 +709,17 @@ def checkTurn(iGameTurn):
                 break
 
 
+@handler("playerChangeStateReligion")
 def onPlayerChangeStateReligion(argsList):
     iPlayer, iNewReligion, iOldReligion = argsList
-
-    for city in cities().owner(iPlayer).entities():
-        for iCompany in companies.ids():
-            if city.isHasCorporation(iCompany):
-                if getCityValue(city, iCompany) < 0:
-                    city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
-                    sCityName = city.getName()
-                    # interface message for the human player
-                    announceHuman(iCompany, city, True)
+    if iPlayer < civilizations().majors().len():
+        for city in cities().owner(iPlayer).entities():
+            for iCompany in companies.ids():
+                if city.isHasCorporation(iCompany):
+                    if getCityValue(city, iCompany) < 0:
+                        city.setHasCorporation(iCompany, False, True, True)
+                        city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
+                        announceHuman(iCompany, city, True)
 
 
 @handler("buildingBuilt")
