@@ -18,7 +18,6 @@ import CvScreenEnums  # Mercenaries
 
 from StoredData import data
 import RiseAndFall
-import Barbs
 import UniquePowers
 from RFCUtils import getProvinceStabilityLevel
 
@@ -33,7 +32,6 @@ import Civilizations
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
     Civ,
-    Improvement,
     UniquePower,
     Unit,
 )
@@ -141,20 +139,7 @@ class CvRFCEventHandler:
         return 0
 
     def onUnitPillage(self, argsList):
-        pUnit, iImprovement, iRoute, iOwner = argsList
-        iPlotX = pUnit.getX()
-        iPlotY = pUnit.getY()
-        pPlot = CyMap().plot(iPlotX, iPlotY)
-        if pPlot.countTotalCulture() == 0:
-            if iImprovement >= Improvement.COTTAGE and iImprovement <= Improvement.TOWN:
-                Barbs.onImprovementDestroyed(iPlotX, iPlotY)
-        iVictim = pPlot.getOwner()
-        if iVictim > -1 and iVictim < civilizations().majors().len():
-            Stability.onImprovementDestroyed(iVictim)
-
-        Victory.onPillageImprovement(
-            pUnit.getOwner(), iVictim, iImprovement, iRoute, iPlotX, iPlotY
-        )
+        return 0
 
     def onBeginGameTurn(self, argsList):
         iGameTurn = argsList[0]

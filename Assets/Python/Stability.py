@@ -427,11 +427,6 @@ def onCityRazed(city, iPlayer):
     recalcEpansion(iPlayer)
 
 
-def onImprovementDestroyed(owner):
-    pPlayer = gc.getPlayer(owner)
-    pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 2)
-
-
 @handler("techAcquired")
 def onTechAcquired(iTech, iTeam, iPlayer):
     if (

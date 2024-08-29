@@ -6,6 +6,7 @@ from Core import (
     message,
     human,
     player,
+    plot,
     show,
     team,
     text,
@@ -639,10 +640,11 @@ def onCityRazed(city, iPlayer):
                     wonUHV(Civ.SWEDEN, 1)
 
 
-def onPillageImprovement(iPillager, iVictim, iImprovement, iRoute, iX, iY):
+@handler("unitPillage")
+def onPillageImprovement(pUnit, iImprovement, iRoute, iOwner):
     # Norway UHV 1: Going Viking
-    if iPillager == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + 2:
-        if gc.getMap().plot(iX, iY).getOwner() != Civ.NORWAY:
+    if pUnit.getOwner() == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + 2:
+        if plot(pUnit).getOwner() != Civ.NORWAY:
             player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
 
