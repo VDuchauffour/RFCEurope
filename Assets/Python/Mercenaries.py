@@ -2974,8 +2974,10 @@ def onCityBuilt(pCity):
                 break
 
 
-def onUnitPromoted(argsList):
-    pUnit, iNewPromotion = argsList
+@handler("unitPromoted")
+def onUnitPromoted(pUnit, iNewPromotion):
+    # This method will redraw the main interface once a unit is promoted. This way the
+    # gold/turn information will be updated.
     iMerc = pUnit.getMercID()
     if iMerc > -1:
         # redraw the main screen to update the upkeep info

@@ -357,12 +357,9 @@ class CvRFCEventHandler:
             Religions.onTechAcquired(argsList[0], argsList[2])
             Stability.onTechAcquired(argsList[0], argsList[2])
 
-    # This method will redraw the main interface once a unit is promoted. This way the
-    # gold/turn information will be updated.
     def onUnitPromoted(self, argsList):
         "Unit Promoted"
-
-        Mercenaries.onUnitPromoted(argsList)
+        return 0
 
     # This method will remove a mercenary unit from the game if it is killed
     def onUnitKilled(self, argsList):
