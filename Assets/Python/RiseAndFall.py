@@ -1162,16 +1162,6 @@ def findSeaPlots(tCoords, iRange):
     return None
 
 
-def giveColonists(iCiv, tBroaderAreaTL, tBroaderAreaBR):
-    # 3Miro: Conquistador event
-    pass
-
-
-def onFirstContact(iTeamX, iHasMetTeamY):
-    # 3Miro: Conquistador event
-    pass
-
-
 def getSpecialRespawn(
     iGameTurn,
 ):  # Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here

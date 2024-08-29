@@ -313,9 +313,8 @@ class CvRFCEventHandler:
         return 0
 
     def onFirstContact(self, argsList):
-
         iTeamX, iHasMetTeamY = argsList
-        RiseAndFall.onFirstContact(iTeamX, iHasMetTeamY)
+        return 0
 
     # Absinthe: Python Event for civic changes
     def onPlayerChangeAllCivics(self, argsList):
