@@ -19,7 +19,6 @@ import CvScreenEnums  # Mercenaries
 from StoredData import data
 import RiseAndFall
 import Barbs
-import Religions
 import UniquePowers
 from RFCUtils import getProvinceStabilityLevel
 
@@ -314,22 +313,8 @@ class CvRFCEventHandler:
         iTeamX, iHasMetTeamY = argsList
         return 0
 
-    # Absinthe: Python Event for civic changes
     def onPlayerChangeAllCivics(self, argsList):
-        # note that this only reports civic change if it happened via normal revolution
-        "Player changes his civics"
-        iPlayer = argsList[0]
-        lNewCivics = [argsList[1], argsList[2], argsList[3], argsList[4], argsList[5], argsList[6]]
-        lOldCivics = [
-            argsList[7],
-            argsList[8],
-            argsList[9],
-            argsList[10],
-            argsList[11],
-            argsList[12],
-        ]
-        if iPlayer < civilizations().majors().len():
-            Religions.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
+        return 0
 
     def onPlayerChangeSingleCivic(self, argsList):
         # note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)

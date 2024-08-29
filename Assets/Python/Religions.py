@@ -680,61 +680,68 @@ def buildInRandomCity(iPlayer, iBuilding, iReligion):
             )
 
 
-# Absinthe: free religious revolution
-def onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics):
+@handler("playerChangeAllCivics")
+def onPlayerChangeAllCivics(argsList):
     # free religion change when switching away from Paganism
-    if lOldCivics[4] == Civic.PAGANISM:
-        if lNewCivics[4] in [
-            Civic.STATE_RELIGION,
-            Civic.THEOCRACY,
-            Civic.ORGANIZED_RELIGION,
-        ]:
-            if iPlayer == human():
-                # check the available religions
-                religionList = []
-                for city in cities().owner(iPlayer).entities():
-                    for iReligion in range(gc.getNumReligionInfos()):
-                        if iReligion not in religionList:
-                            if city.isHasReligion(iReligion):
-                                religionList.append(iReligion)
-                                if (
-                                    len(religionList) == gc.getNumReligionInfos()
-                                ):  # no need to check any further, if we already have all religions in the list
-                                    break
-                    if (
-                        len(religionList) == gc.getNumReligionInfos()
-                    ):  # no need to check any further, if we already have all religions in the list
-                        break
-                data.lReligionChoices = religionList
-                # no popup if no available religions
-                if religionList:
-                    showFreeRevolutionPopup(iPlayer, religionList)
-            elif iPlayer < civilizations().main().len():
-                iBestReligionPoint = 0
-                iBestReligion = Religion.CATHOLICISM
-                # loop through all religions
-                for iReligion in range(gc.getNumReligionInfos()):
-                    iReligionPoint = 0
-                    # check cities for religions and holy cities
+    iPlayer = argsList[0]
+    lNewCivics = [argsList[1], argsList[2], argsList[3], argsList[4], argsList[5], argsList[6]]
+    lOldCivics = [argsList[7], argsList[8], argsList[9], argsList[10], argsList[11], argsList[12]]
+
+    if iPlayer < civilizations().majors().len():
+        if lOldCivics[4] == Civic.PAGANISM:
+            if lNewCivics[4] in [
+                Civic.STATE_RELIGION,
+                Civic.THEOCRACY,
+                Civic.ORGANIZED_RELIGION,
+            ]:
+                if iPlayer == human():
+                    # check the available religions
+                    religionList = []
                     for city in cities().owner(iPlayer).entities():
-                        if city.isHasReligion(iReligion):
-                            iReligionPoint += 10
-                        if city.isHolyCityByType(iReligion):
-                            iReligionPoint += 1000
-                    spread_factor = civilization(iPlayer).religion.spreading_threshold[iReligion]
-                    if spread_factor < 60:
-                        iReligionPoint = (iReligionPoint * 5) / 10
-                    elif spread_factor < 100:
-                        iReligionPoint = (iReligionPoint * 8) / 10
-                    elif spread_factor > 200:
-                        iReligionPoint = (iReligionPoint * 12) / 10
-                    # update if better
-                    if iReligionPoint > iBestReligionPoint:
-                        iBestReligionPoint = iReligionPoint
-                        iBestReligion = iReligion
-                # convert to the best religion
-                pPlayer = gc.getPlayer(iPlayer)
-                pPlayer.convertForFree(iBestReligion)
+                        for iReligion in range(gc.getNumReligionInfos()):
+                            if iReligion not in religionList:
+                                if city.isHasReligion(iReligion):
+                                    religionList.append(iReligion)
+                                    if (
+                                        len(religionList) == gc.getNumReligionInfos()
+                                    ):  # no need to check any further, if we already have all religions in the list
+                                        break
+                        if (
+                            len(religionList) == gc.getNumReligionInfos()
+                        ):  # no need to check any further, if we already have all religions in the list
+                            break
+                    data.lReligionChoices = religionList
+                    # no popup if no available religions
+                    if religionList:
+                        showFreeRevolutionPopup(iPlayer, religionList)
+                elif iPlayer < civilizations().main().len():
+                    iBestReligionPoint = 0
+                    iBestReligion = Religion.CATHOLICISM
+                    # loop through all religions
+                    for iReligion in range(gc.getNumReligionInfos()):
+                        iReligionPoint = 0
+                        # check cities for religions and holy cities
+                        for city in cities().owner(iPlayer).entities():
+                            if city.isHasReligion(iReligion):
+                                iReligionPoint += 10
+                            if city.isHolyCityByType(iReligion):
+                                iReligionPoint += 1000
+                        spread_factor = civilization(iPlayer).religion.spreading_threshold[
+                            iReligion
+                        ]
+                        if spread_factor < 60:
+                            iReligionPoint = (iReligionPoint * 5) / 10
+                        elif spread_factor < 100:
+                            iReligionPoint = (iReligionPoint * 8) / 10
+                        elif spread_factor > 200:
+                            iReligionPoint = (iReligionPoint * 12) / 10
+                        # update if better
+                        if iReligionPoint > iBestReligionPoint:
+                            iBestReligionPoint = iReligionPoint
+                            iBestReligion = iReligion
+                    # convert to the best religion
+                    pPlayer = gc.getPlayer(iPlayer)
+                    pPlayer.convertForFree(iBestReligion)
 
 
 # Absinthe: free religion change popup
