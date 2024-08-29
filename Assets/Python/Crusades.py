@@ -1617,8 +1617,9 @@ def success(iPlayer):
             convertPlotCulture(plot, iPlayer, 100, False)
 
 
-# Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
+@handler("BeginPlayerTurn")
 def checkPlayerTurn(iGameTurn, iPlayer):
+    # Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
     if iGameTurn % 3 == 1:  # checked every 3rd turn
         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
         if pCity.getOwner() == iPlayer:

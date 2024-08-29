@@ -1,30 +1,13 @@
 # Rhye's and Fall of Civilization: Europe - Event handler
 
 from CvPythonExtensions import *
-from Core import (
-    civilizations,
-    human,
-    make_unit,
-    make_units,
-    player,
-    show,
-    text,
-    turn,
-    year,
-)
-import CvUtil
+from Core import human, make_unit, player, turn
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
 
 from StoredData import data
-import RiseAndFall
-import UniquePowers
 from RFCUtils import getProvinceStabilityLevel
 
-import Victory
-import Stability
-import Plague
-import Crusades
 import Locations
 import Modifiers
 import Civilizations
@@ -32,7 +15,6 @@ import Civilizations
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
     Civ,
-    UniquePower,
     Unit,
 )
 
@@ -146,139 +128,7 @@ class CvRFCEventHandler:
         return 0
 
     def onBeginPlayerTurn(self, argsList):
-        iGameTurn, iPlayer = argsList
-        iHuman = human()
-        if RiseAndFall.getDeleteMode(0) != -1:
-            RiseAndFall.deleteMode(iPlayer)
-        # Absinthe: refresh Dynamic Civ Names
-        if iPlayer < civilizations().majors().len():
-            gc.getPlayer(iPlayer).processCivNames()
-
-        # Absinthe: Byzantine conqueror army
-        if iGameTurn == year(520):
-            if iPlayer == Civ.BYZANTIUM:
-                pByzantium = gc.getPlayer(Civ.BYZANTIUM)
-                tStartingPlot = (59, 16)
-                pByzantium.initUnit(
-                    Unit.GALLEY,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_ASSAULT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pByzantium.initUnit(
-                    Unit.GALLEY,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_ASSAULT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pByzantium.initUnit(
-                    Unit.GALLEY,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_ASSAULT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pByzantium.initUnit(
-                    Unit.GALLEY,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_ASSAULT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pByzantium.initUnit(
-                    Unit.GALLEY,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_ASSAULT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pByzantium.initUnit(
-                    Unit.GREAT_GENERAL,
-                    tStartingPlot[0],
-                    tStartingPlot[1],
-                    UnitAITypes.UNITAI_GENERAL,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                pPlot = CyMap().plot(tStartingPlot[0], tStartingPlot[1])
-                for iUnitLoop in range(pPlot.getNumUnits()):
-                    pUnit = pPlot.getUnit(iUnitLoop)
-                    if pUnit.getUnitType() == CvUtil.findInfoTypeNum(
-                        gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
-                    ):
-                        pUnit.setName(text("TXT_KEY_GREAT_PERSON_BELISARIUS"))
-                make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
-                make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
-                make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
-                if iPlayer == iHuman:
-                    show(text("TXT_KEY_EVENT_CONQUEROR_BELISARIUS"))
-
-        # Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
-        if iPlayer == iHuman:
-            # Seljuks
-            if iGameTurn == year(1064) - 7:
-                if iPlayer == Civ.BYZANTIUM:
-                    show(("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
-            elif iGameTurn == year(1094) + 1:
-                if iPlayer == Civ.BYZANTIUM:
-                    sText = "Seljuk"
-                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
-            # Mongols
-            elif iGameTurn == year(1236) - 7:
-                if iPlayer in [
-                    Civ.KIEV,
-                    Civ.HUNGARY,
-                    Civ.POLAND,
-                    Civ.BULGARIA,
-                ]:
-                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
-            elif iGameTurn == year(1288) + 1:
-                if iPlayer in [
-                    Civ.KIEV,
-                    Civ.HUNGARY,
-                    Civ.POLAND,
-                    Civ.BULGARIA,
-                ]:
-                    sText = "Tatar"
-                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
-            # Timurids
-            elif iGameTurn == year(1380) - 7:
-                if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
-                    show(text("TXT_KEY_EVENT_TIMURID_INVASION_START"))
-            elif iGameTurn == year(1431) + 1:
-                if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
-                    sText = "Timurid"
-                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
-
-        # Absinthe: Denmark UP
-        if iPlayer == Civ.DENMARK:
-            UniquePowers.soundUP(iPlayer)
-
-        # Absinthe: Aragonese UP
-        # safety check: probably redundant, calls from onBuildingBuilt, onCityBuilt, onCityAcquired and onCityRazed should be enough
-        elif iPlayer == Civ.ARAGON:
-            UniquePowers.confederationUP(iPlayer)
-
-        # Ottoman UP
-        if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
-            UniquePowers.janissaryDraftUP(iPlayer)
-
-        Plague.checkPlayerTurn(iGameTurn, iPlayer)
-        Victory.checkPlayerTurn(iGameTurn, iPlayer)
-
-        if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
-            if gc.getPlayer(iPlayer).getNumCities() > 0:
-                Stability.updateBaseStability(iGameTurn, iPlayer)
-
-            # for the AI only, leader switch and cheats
-            if iPlayer != iHuman:
-                RiseAndFall.checkPlayerTurn(iGameTurn, iPlayer)
-
-            # not really needed, we set it on collapse anyway
-            # setLastTurnAlive( iPlayer, iGameTurn )
-
-        Crusades.checkPlayerTurn(iGameTurn, iPlayer)
+        return 0
 
     def onEndPlayerTurn(self, argsList):
         """Called at the end of a players turn"""

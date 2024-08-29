@@ -183,96 +183,95 @@ def checkTurn(iGameTurn):
                 )
 
 
-def updateBaseStability(
-    iGameTurn, iPlayer
-):  # Base stability is temporary (i.e. turn-based) stability
+@handler("BeginPlayerTurn")
+def updateBaseStability(iGameTurn, iPlayer):
+    # Base stability is temporary (i.e. turn-based) stability
     # 3Miro: this is called for every player
+    if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
+        if gc.getPlayer(iPlayer).getNumCities() > 0:
+            pPlayer = gc.getPlayer(iPlayer)
+            # Swing stability converges to zero very fast
+            iStabilitySwing = pPlayer.getStabilitySwing()
+            if iStabilitySwing < -3 or iStabilitySwing > 3:
+                pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() / 2)
+            elif iStabilitySwing < 0:
+                pPlayer.setStabilitySwing(min(0, pPlayer.getStabilitySwing() + 2))
+            elif iStabilitySwing > 0:
+                pPlayer.setStabilitySwing(max(0, pPlayer.getStabilitySwing() - 2))
 
-    pPlayer = gc.getPlayer(iPlayer)
-    teamPlayer = gc.getTeam(pPlayer.getTeam())
+            # Absinthe: Anarchy swing stability gets halved every turn
+            iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+            if iStabSwingAnarchy > 1:
+                pPlayer.setStabSwingAnarchy(pPlayer.getStabSwingAnarchy() / 2)
+            elif iStabSwingAnarchy == 1:
+                pPlayer.setStabSwingAnarchy(0)
 
-    # Swing stability converges to zero very fast
-    iStabilitySwing = pPlayer.getStabilitySwing()
-    if iStabilitySwing < -3 or iStabilitySwing > 3:
-        pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() / 2)
-    elif iStabilitySwing < 0:
-        pPlayer.setStabilitySwing(min(0, pPlayer.getStabilitySwing() + 2))
-    elif iStabilitySwing > 0:
-        pPlayer.setStabilitySwing(max(0, pPlayer.getStabilitySwing() - 2))
+            # Absinthe: anarchy timer refreshes later in the turn, so it should be reduced by 1 if we want to have it on the correct turns (if nothing else then for the human player)
+            # 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CvPlayer::revolution and CvPlayer::convert
+            if pPlayer.getAnarchyTurns() - 1 > 0:
+                recalcCivicCombos(iPlayer)
+                recalcEpansion(iPlayer)
+                iNumCities = pPlayer.getNumCities()
 
-    # Absinthe: Anarchy swing stability gets halved every turn
-    iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
-    if iStabSwingAnarchy > 1:
-        pPlayer.setStabSwingAnarchy(pPlayer.getStabSwingAnarchy() / 2)
-    elif iStabSwingAnarchy == 1:
-        pPlayer.setStabSwingAnarchy(0)
+                if iPlayer != Civ.PRUSSIA:  # Absinthe: Prussian UP
+                    if pPlayer.isHuman():
+                        # Absinthe: anarchy base instability
+                        pPlayer.changeStabilityBase(
+                            StabilityCategory.CIVICS, min(0, max(-2, (-iNumCities + 4) / 7))
+                        )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
-    # Absinthe: anarchy timer refreshes later in the turn, so it should be reduced by 1 if we want to have it on the correct turns (if nothing else then for the human player)
-    # 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CvPlayer::revolution and CvPlayer::convert
-    if pPlayer.getAnarchyTurns() - 1 > 0:
-        recalcCivicCombos(iPlayer)
-        recalcEpansion(iPlayer)
-        iNumCities = pPlayer.getNumCities()
+                        # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
+                        iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+                        if (
+                            iStabSwingAnarchy > 0
+                        ):  # half of it is already included in the swing, we only add the other half
+                            pPlayer.setStabSwingAnarchy(4)
+                        else:  # safety net (should be positive, as we add it before the first check)
+                            pPlayer.setStabSwingAnarchy(8)
+                        pPlayer.setStabilitySwing(
+                            pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy()
+                        )
 
-        if iPlayer != Civ.PRUSSIA:  # Absinthe: Prussian UP
-            if pPlayer.isHuman():
-                # Absinthe: anarchy base instability
-                pPlayer.changeStabilityBase(
-                    StabilityCategory.CIVICS, min(0, max(-2, (-iNumCities + 4) / 7))
-                )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
+                    else:
+                        # Absinthe: anarchy base instability
+                        pPlayer.changeStabilityBase(
+                            StabilityCategory.CIVICS, min(0, max(-1, (-iNumCities + 6) / 7))
+                        )  # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
-                # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
-                iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
-                if (
-                    iStabSwingAnarchy > 0
-                ):  # half of it is already included in the swing, we only add the other half
-                    pPlayer.setStabSwingAnarchy(4)
-                else:  # safety net (should be positive, as we add it before the first check)
-                    pPlayer.setStabSwingAnarchy(8)
-                pPlayer.setStabilitySwing(
-                    pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy()
-                )
+                        # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
+                        iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+                        if (
+                            iStabSwingAnarchy > 0
+                        ):  # half of it is already included in the swing, we only add the other half
+                            pPlayer.setStabSwingAnarchy(2)
+                        else:  # safety net (should be positive, as we add it before the first check)
+                            pPlayer.setStabSwingAnarchy(4)
+                        pPlayer.setStabilitySwing(
+                            pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy()
+                        )
 
-            else:
-                # Absinthe: anarchy base instability
-                pPlayer.changeStabilityBase(
-                    StabilityCategory.CIVICS, min(0, max(-1, (-iNumCities + 6) / 7))
-                )  # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
+            if (
+                pPlayer.getWarPeaceChange() == -1
+            ):  # Whenever your nation switches from peace to the state of war (with a major nation)
+                gc.getPlayer(iPlayer).changeStabilityBase(
+                    StabilityCategory.CITIES, -1
+                )  # 1 permanent stability loss, since your people won't appreciate leaving the state of peace
+                pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
 
-                # Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
-                iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
-                if (
-                    iStabSwingAnarchy > 0
-                ):  # half of it is already included in the swing, we only add the other half
-                    pPlayer.setStabSwingAnarchy(2)
-                else:  # safety net (should be positive, as we add it before the first check)
-                    pPlayer.setStabSwingAnarchy(4)
-                pPlayer.setStabilitySwing(
-                    pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy()
-                )
+            if (iGameTurn + iPlayer) % 3 == 0:  # Economy Check every 3 turns
+                recalcEconomy(iPlayer)
 
-    if (
-        pPlayer.getWarPeaceChange() == -1
-    ):  # Whenever your nation switches from peace to the state of war (with a major nation)
-        gc.getPlayer(iPlayer).changeStabilityBase(
-            StabilityCategory.CITIES, -1
-        )  # 1 permanent stability loss, since your people won't appreciate leaving the state of peace
-        pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
+            recalcCity(iPlayer)  # update city stability
 
-    if (iGameTurn + iPlayer) % 3 == 0:  # Economy Check every 3 turns
-        recalcEconomy(iPlayer)
-
-    recalcCity(iPlayer)  # update city stability
-
-    # Absinthe: Collapse dates for AI nations
-    if (
-        iGameTurn > civilization(iPlayer).date.collapse
-        and iPlayer != human()
-        and pPlayer.isAlive()
-    ):
-        # Absinthe: -1 stability every 4 turns up to a total of -15 stability
-        if iGameTurn % 4 == 0 and iGameTurn <= civilization(iPlayer).date.collapse + 60:
-            pPlayer.changeStabilityBase(StabilityCategory.CITIES, -1)
+            # Absinthe: Collapse dates for AI nations
+            if (
+                iGameTurn > civilization(iPlayer).date.collapse
+                and iPlayer != human()
+                and pPlayer.isAlive()
+            ):
+                # Absinthe: -1 stability every 4 turns up to a total of -15 stability
+                if iGameTurn % 4 == 0 and iGameTurn <= civilization(iPlayer).date.collapse + 60:
+                    pPlayer.changeStabilityBase(StabilityCategory.CITIES, -1)
 
 
 def refreshBaseStability(iPlayer):  # Base stability is temporary (i.e. turn-based) stability

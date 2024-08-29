@@ -1979,6 +1979,7 @@ def set1200UHVDone(iCiv):
         player(Civ.SCOTLAND).setUHVCounter(1, 100)
 
 
+@handler("BeginPlayerTurn")
 def checkPlayerTurn(iGameTurn, iPlayer):
     switchConditionsPerCiv = {
         Civ.BYZANTIUM: checkByzantium,

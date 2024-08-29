@@ -2,6 +2,7 @@
 from CvPythonExtensions import *
 from Core import (
     civilization,
+    message_if_human,
     player,
     human,
     turn,
@@ -23,9 +24,67 @@ gc = CyGlobalContext()
 
 
 @handler("cityAcquired")
-def ottoman_up(owner, player_id, city, bConquest, bTrade):
+def ottoman_up_1(owner, player_id, city, bConquest, bTrade):
     if gc.hasUP(player_id, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
         janissaryNewCityUP(player_id, city, bConquest)
+
+
+@handler("BeginPlayerTurn")
+def ottoman_up_2(iGameTurn, iPlayer):
+    # janissaryDraftUP
+    if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS):
+        pPlayer = gc.getPlayer(iPlayer)
+        iStateReligion = pPlayer.getStateReligion()
+
+        iNewPoints = 0
+        for city in cities().owner(iPlayer).entities():
+            for iReligion in range(len(Religion)):
+                if iReligion != iStateReligion and city.isHasReligion(iReligion):
+                    iNewPoints += city.getPopulation()
+                    break
+
+        iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS)
+
+        iNextJanissary = 200
+        if pPlayer.isHuman():
+            iNextJanissary = 300
+
+        iTotalPoints = iOldPoints + iNewPoints
+        while iTotalPoints >= iNextJanissary:
+            pCity = cities().owner(iPlayer).random_entry()
+            if pCity is not None:
+                iTotalPoints -= iNextJanissary
+                make_unit(iPlayer, Unit.JANISSARY, pCity)
+                message_if_human(
+                    iPlayer,
+                    text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!",
+                    sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                    button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
+                    color=MessageData.GREEN,
+                    location=pCity,
+                )
+        pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS, iTotalPoints)
+
+
+@handler("BeginPlayerTurn")
+def danish_up(iGameTurn, iPlayer):
+    if iPlayer == Civ.DENMARK:
+        lSoundCoords = [(60, 57), (60, 58)]
+
+        # Check if we control the Sound
+        bControlsSound = False
+        for tCoord in lSoundCoords:
+            pPlot = gc.getMap().plot(tCoord[0], tCoord[1])
+            if pPlot.calculateCulturalOwner() == iPlayer:
+                bControlsSound = True
+                break
+        if not bControlsSound:
+            return
+
+        iCities = getNumForeignCitiesOnBaltic(iPlayer)
+        iGold = iCities * 2
+        gc.getPlayer(iPlayer).changeGold(iGold)
+        message(iPlayer, text("TXT_KEY_UP_SOUND_TOLL", iGold), color=MessageData.GREEN)
 
 
 @handler("cityAcquired")
@@ -50,7 +109,6 @@ def aragon_up_on_city_acquired(owner, player_id, city, bConquest, bTrade):
 
 @handler("cityRazed")
 def aragon_up_on_city_razed(city, iPlayer):
-    # Absinthe: Aragonese UP
     # UP tile yields should be recalculated if your new city is razed
     if iPlayer == Civ.ARAGON:
         confederationUP(iPlayer)
@@ -60,6 +118,13 @@ def aragon_up_on_city_razed(city, iPlayer):
 def aragon_up_on_city_built(city):
     # UP tile yields should be recalculated on city foundation
     iPlayer = city.getOwner()
+    if iPlayer == Civ.ARAGON:
+        confederationUP(iPlayer)
+
+
+@handler("BeginPlayerTurn")
+def aragon_up_on_begin_player_turn(iGameTurn, iPlayer):
+    # safety check: probably redundant, calls from onBuildingBuilt, onCityBuilt, onCityAcquired and onCityRazed should be enough
     if iPlayer == Civ.ARAGON:
         confederationUP(iPlayer)
 
@@ -113,45 +178,6 @@ def faithUP(iPlayer, city):
             pFaithful.changeFaith(1)
 
 
-# Absinthe: Ottoman UP
-def janissaryDraftUP(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
-    iStateReligion = pPlayer.getStateReligion()
-
-    iNewPoints = 0
-    for city in cities().owner(iPlayer).entities():
-        for iReligion in range(len(Religion)):
-            if iReligion != iStateReligion and city.isHasReligion(iReligion):
-                iNewPoints += city.getPopulation()
-                break
-
-    iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS)
-
-    iNextJanissary = 200
-    if pPlayer.isHuman():
-        iNextJanissary = 300
-
-    iTotalPoints = iOldPoints + iNewPoints
-    while iTotalPoints >= iNextJanissary:
-        pCity = cities().owner(iPlayer).random_entry()
-        if pCity is not None:
-            make_unit(iPlayer, Unit.JANISSARY, pCity)
-            # interface message for the human player
-            if iPlayer == human():
-                text_string = text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!"
-                message(
-                    iPlayer,
-                    text_string,
-                    sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                    button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
-                    color=MessageData.GREEN,
-                    location=pCity,
-                )
-            iTotalPoints -= iNextJanissary
-
-    pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS, iTotalPoints)
-
-
 def janissaryNewCityUP(iPlayer, city, bConquest):
     pPlayer = gc.getPlayer(iPlayer)
     iStateReligion = pPlayer.getStateReligion()
@@ -183,27 +209,6 @@ def janissaryNewCityUP(iPlayer, city, bConquest):
                 color=MessageData.GREEN,
                 location=city,
             )
-
-
-# Absinthe: Danish UP
-def soundUP(iPlayer):
-    lSoundCoords = [(60, 57), (60, 58)]
-
-    # Check if we control the Sound
-    bControlsSound = False
-    for tCoord in lSoundCoords:
-        pPlot = gc.getMap().plot(tCoord[0], tCoord[1])
-        if pPlot.calculateCulturalOwner() == iPlayer:
-            bControlsSound = True
-            break
-    if not bControlsSound:
-        return
-
-    iCities = getNumForeignCitiesOnBaltic(iPlayer)
-
-    iGold = iCities * 2
-    gc.getPlayer(iPlayer).changeGold(iGold)
-    message(iPlayer, text("TXT_KEY_UP_SOUND_TOLL", iGold), color=MessageData.GREEN)
 
 
 def getNumForeignCitiesOnBaltic(iPlayer, bVassal=False):

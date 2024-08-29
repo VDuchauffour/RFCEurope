@@ -605,48 +605,54 @@ def reduceCity(tPlot):
         pPlot.setRouteType(0)  # Also adding a road there
 
 
+@handler("BeginPlayerTurn")
 def checkPlayerTurn(iGameTurn, iPlayer):
     # Absinthe & Merijn: leader switching with any number of leaders
-    late_leaders = civilization(iPlayer).leaders[LeaderType.LATE]
-    if late_leaders:
-        for tLeader in reversed(late_leaders):
-            if iGameTurn >= year(tLeader[1]):
-                switchLateLeaders(iPlayer, tLeader)
-                break
+    # for the AI only, leader switch and cheats
+    if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
+        if iPlayer != human():
+            late_leaders = civilization(iPlayer).leaders[LeaderType.LATE]
+            if late_leaders:
+                for tLeader in reversed(late_leaders):
+                    if iGameTurn >= year(tLeader[1]):
+                        switchLateLeaders(iPlayer, tLeader)
+                        break
 
-    # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
-    # 			if in 1300AD Dublin is still Barbarian, it will flip to England
-    if (
-        iGameTurn == year(1300)
-        and human() != Civ.ENGLAND
-        and iPlayer == Civ.ENGLAND
-        and player(Civ.ENGLAND).isAlive()
-    ):
-        tDublin = (32, 58)
-        pPlot = gc.getMap().plot(tDublin[0], tDublin[1])
-        if pPlot.isCity():
-            if pPlot.getPlotCity().getOwner() == Civ.BARBARIAN:
-                pDublin = pPlot.getPlotCity()
-                cultureManager(tDublin, 50, Civ.ENGLAND, Civ.BARBARIAN, False, True, True)
-                flipUnitsInCityBefore(tDublin, Civ.ENGLAND, Civ.BARBARIAN)
-                setTempFlippingCity(tDublin)
-                flipCity(
-                    tDublin, 0, 0, Civ.ENGLAND, [Civ.BARBARIAN]
-                )  # by trade because by conquest may raze the city
-                flipUnitsInCityAfter(tDublin, Civ.ENGLAND)
+            # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
+            # 			if in 1300AD Dublin is still Barbarian, it will flip to England
+            if (
+                iGameTurn == year(1300)
+                and human() != Civ.ENGLAND
+                and iPlayer == Civ.ENGLAND
+                and player(Civ.ENGLAND).isAlive()
+            ):
+                tDublin = (32, 58)
+                pPlot = gc.getMap().plot(tDublin[0], tDublin[1])
+                if pPlot.isCity():
+                    if pPlot.getPlotCity().getOwner() == Civ.BARBARIAN:
+                        pDublin = pPlot.getPlotCity()
+                        cultureManager(tDublin, 50, Civ.ENGLAND, Civ.BARBARIAN, False, True, True)
+                        flipUnitsInCityBefore(tDublin, Civ.ENGLAND, Civ.BARBARIAN)
+                        setTempFlippingCity(tDublin)
+                        flipCity(
+                            tDublin, 0, 0, Civ.ENGLAND, [Civ.BARBARIAN]
+                        )  # by trade because by conquest may raze the city
+                        flipUnitsInCityAfter(tDublin, Civ.ENGLAND)
 
-    # Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
-    if (
-        iGameTurn == year(1066) + 3
-        and human() != Civ.ENGLAND
-        and iPlayer == Civ.ENGLAND
-        and player(Civ.ENGLAND).isAlive()
-    ):
-        for city in plots().rectangle((39, 46), (45, 50)).cities().owner(Civ.ENGLAND).entities():
-            make_unit(Civ.ENGLAND, Unit.GUISARME, city)
-            make_unit(Civ.ENGLAND, Unit.ARBALEST, city)
-            city.setHasRealBuilding(Building.WALLS, True)
-            city.setHasRealBuilding(Building.CASTLE, True)
+            # Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
+            if (
+                iGameTurn == year(1066) + 3
+                and human() != Civ.ENGLAND
+                and iPlayer == Civ.ENGLAND
+                and player(Civ.ENGLAND).isAlive()
+            ):
+                for city in (
+                    plots().rectangle((39, 46), (45, 50)).cities().owner(Civ.ENGLAND).entities()
+                ):
+                    make_unit(Civ.ENGLAND, Unit.GUISARME, city)
+                    make_unit(Civ.ENGLAND, Unit.ARBALEST, city)
+                    city.setHasRealBuilding(Building.WALLS, True)
+                    city.setHasRealBuilding(Building.CASTLE, True)
 
 
 def switchLateLeaders(iPlayer, tLeader):
@@ -829,32 +835,32 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
             newCivPopup(iCiv)
 
 
-def deleteMode(iCurrentPlayer):
+@handler("BeginPlayerTurn")
+def deleteMode(iGameTurn, iCurrentPlayer):
     iCiv = getDeleteMode(0)
-    tCapital = civilization(iCiv).location.capital
-    if iCurrentPlayer == iCiv:
-        for plot in plots().surrounding(tCapital, radius=2).entities():
-            plot.setCulture(iCiv, 300, True)
+    if iCiv != -1:
+        tCapital = civilization(iCiv).location.capital
+        if iCurrentPlayer == iCiv:
+            for plot in plots().surrounding(tCapital, radius=2).entities():
+                plot.setCulture(iCiv, 300, True)
+            for plot in plots().surrounding(tCapital).entities():
+                convertPlotCulture(plot, iCiv, 100, True)
+                if plot.getCulture(iCiv) < 3000:
+                    # 2000 in vanilla/warlords, cos here Portugal is choked by Spanish culture
+                    plot.setCulture(iCiv, 3000, True)
+                plot.setOwner(iCiv)
+            setDeleteMode(0, -1)
+            return
+
+        if iCurrentPlayer != iCiv - 1:
+            return
+
         for plot in plots().surrounding(tCapital).entities():
-            convertPlotCulture(plot, iCiv, 100, True)
-            if plot.getCulture(iCiv) < 3000:
-                # 2000 in vanilla/warlords, cos here Portugal is choked by Spanish culture
-                plot.setCulture(iCiv, 3000, True)
-            plot.setOwner(iCiv)
-        setDeleteMode(0, -1)
-        return
-
-    if iCurrentPlayer != iCiv - 1:
-        return
-
-    for plot in plots().surrounding(tCapital).entities():
-        if plot.isOwned():
-            for iLoopCiv in civilizations().ids():
-                if iLoopCiv != iCiv:
-                    plot.setCulture(iLoopCiv, 0, True)
-            plot.setOwner(iCiv)
-
-    # Absinthe: what's this +-11? do we really want to move all flipped units in the initial turn to the starting plot??
+            if plot.isOwned():
+                for iLoopCiv in civilizations().ids():
+                    if iLoopCiv != iCiv:
+                        plot.setCulture(iLoopCiv, 0, True)
+                plot.setOwner(iCiv)
 
 
 def birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight):

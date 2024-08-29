@@ -1,6 +1,7 @@
 from CvPythonExtensions import CyArtFileMgr
 from Consts import MessageData
-from Core import human, message, player, text, year
+from Core import human, message, player, show, text, year
+from CoreTypes import Civ
 from Events import handler
 import Mercenaries
 
@@ -54,3 +55,42 @@ def announce_schism(iGameTurn):
         if player().isExisting():
             sText = text("TXT_KEY_GREAT_SCHISM")
             message(human(), sText, color=MessageData.DARK_PINK)
+
+
+@handler("BeginPlayerTurn")
+def announce_invaders(iGameTurn, iPlayer):
+    if iPlayer == human():
+        # Seljuks
+        if iGameTurn == year(1064) - 7:
+            if iPlayer == Civ.BYZANTIUM:
+                show(("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
+        elif iGameTurn == year(1094) + 1:
+            if iPlayer == Civ.BYZANTIUM:
+                sText = "Seljuk"
+                show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
+        # Mongols
+        elif iGameTurn == year(1236) - 7:
+            if iPlayer in [
+                Civ.KIEV,
+                Civ.HUNGARY,
+                Civ.POLAND,
+                Civ.BULGARIA,
+            ]:
+                show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
+        elif iGameTurn == year(1288) + 1:
+            if iPlayer in [
+                Civ.KIEV,
+                Civ.HUNGARY,
+                Civ.POLAND,
+                Civ.BULGARIA,
+            ]:
+                sText = "Tatar"
+                show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
+        # Timurids
+        elif iGameTurn == year(1380) - 7:
+            if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
+                show(text("TXT_KEY_EVENT_TIMURID_INVASION_START"))
+        elif iGameTurn == year(1431) + 1:
+            if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
+                sText = "Timurid"
+                show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))

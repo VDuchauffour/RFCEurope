@@ -2241,6 +2241,11 @@ def font_symbol(iSymbol, fontsize=2):
     return font_text(symbol(iSymbol), fontsize)
 
 
+def show_if_human(player, message, *format):
+    if human() == player:
+        show(message, *format)
+
+
 def show(message, *format):
     if format:
         message = message % tuple(format)
