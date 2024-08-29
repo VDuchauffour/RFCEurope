@@ -495,10 +495,6 @@ def isIgnoreAI():
     return data.bIgnoreAIUHV
 
 
-def checkTurn(iGameTurn):
-    pass
-
-
 @handler("cityBuilt")
 def portugal_uhv_1(city):
     # Portugal UHV 1: Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran

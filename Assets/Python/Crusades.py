@@ -480,9 +480,8 @@ def endCrusades(iReligion, iFounder):
             setNumUnitsSent(iPlayer, 0)
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-    # informPopup()
-
     if getCrusadeToReturn() > -1:
         freeCrusaders(getCrusadeToReturn())
         setCrusadeToReturn(-1)

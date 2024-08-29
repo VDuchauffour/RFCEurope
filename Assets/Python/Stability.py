@@ -169,6 +169,7 @@ def recalcEpansion(iPlayer):
     pPlayer.setStabilityVary(StabilityCategory.EXPANSION, iExpStability)
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Absinthe: logging AI stability levels
     if iGameTurn % 9 == 2:

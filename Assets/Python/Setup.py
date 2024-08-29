@@ -5,6 +5,7 @@ from CoreTypes import Civ, Scenario
 from PyUtils import rand
 from StoredData import data
 from Events import handler
+from Consts import iLighthouseEarthQuake, iByzantiumVikingAttack
 
 gc = CyGlobalContext()
 
@@ -25,10 +26,6 @@ def reset_stored_data():
 
 
 def misc():
-    # Absinthe: Turn Randomization constants
-    iLighthouseEarthQuake = 0
-    iByzantiumVikingAttack = 1
-
     # Absinthe: generate and store randomized turn modifiers
     data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
     data.lEventRandomness[iByzantiumVikingAttack] = rand(10)

@@ -1,9 +1,11 @@
 from CvPythonExtensions import *
-from Core import city
-from CoreTypes import Building, Specialist, StabilityCategory, Wonder
+from Core import city, civilizations, human, message, text, year, cities
+from CoreTypes import Building, Civ, Specialist, StabilityCategory, Wonder
 from PyUtils import rand
 from RFCUtils import getUniqueBuilding
 from Events import handler
+from StoredData import data
+from Consts import MessageData, iLighthouseEarthQuake
 
 gc = CyGlobalContext()
 
@@ -26,6 +28,28 @@ def krak_des_chevaliers_acquired(owner, player, city, bConquest, bTrade):
             ):
                 city.setHasRealBuilding(getUniqueBuilding(iNewOwner, Building.CASTLE), True)
                 pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION, 1)
+
+
+@handler("BeginGameTurn")
+def remove_lighthouse(iGameTurn):
+    # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
+    if iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
+        for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
+            bFound = 0
+            for city in cities().owner(iPlayer).entities():
+                if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE):
+                    city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE, False)
+                    GLcity = city
+                    bFound = 1
+            if bFound and human() == iPlayer:
+                pPlayer = gc.getPlayer(iPlayer)
+                iTeam = pPlayer.getTeam()
+                if GLcity.isRevealed(iTeam, False):
+                    message(
+                        iPlayer,
+                        text("TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED"),
+                        color=MessageData.RED,
+                    )
 
 
 def leaning_tower_effect():

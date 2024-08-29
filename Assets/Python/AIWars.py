@@ -50,6 +50,7 @@ def setAttackingCivsArray(iCiv, iNewValue):
     data.lAttackingCivsArray[iCiv] = iNewValue
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     if iGameTurn > 20:
         # Absinthe: automatically turn peace on between independent cities and all the major civs

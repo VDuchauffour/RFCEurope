@@ -16,6 +16,7 @@ from Core import (
     plots,
 )
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
+from Events import handler
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 from RFCUtils import (
     cultureManager,
@@ -801,6 +802,7 @@ def setNationRevoltIndex(iNationIndex, iRevoltIndex):
     data.lRevoltinNationRevoltIndex = [iNationIndex, iRevoltIndex]
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Handicap level modifier
     iHandicap = gc.getGame().getHandicapType() - 1

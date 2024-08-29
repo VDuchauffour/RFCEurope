@@ -488,6 +488,7 @@ def onCityBuilt(pCity):
             pCity.setHasRealBuilding(getUniqueBuilding(iPlayer, Building.WALLS), True)
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Trigger betrayal mode
     if getBetrayalTurns() > 0:

@@ -75,11 +75,7 @@ def setFirstPlague(bFirst):
     data.bFirstPlague = bFirst
 
 
-#######################################
-### Main methods (Event-Triggered) ###
-#####################################
-
-
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
 
     for iPlayer in civilizations().ids():

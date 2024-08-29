@@ -1,6 +1,6 @@
 from CvPythonExtensions import CyArtFileMgr
 from Consts import MessageData
-from Core import human, message, player, text
+from Core import human, message, player, text, year
 from Events import handler
 import Mercenaries
 
@@ -45,3 +45,12 @@ def announce_available_mercs_in_new_city(iCiv, pCity):
                     location=pCity,
                 )
                 break
+
+
+@handler("BeginGameTurn")
+def announce_schism(iGameTurn):
+    # Absinthe: Message for the human player about the Schism
+    if iGameTurn == year(1053):
+        if player().isExisting():
+            sText = text("TXT_KEY_GREAT_SCHISM")
+            message(human(), sText, color=MessageData.DARK_PINK)

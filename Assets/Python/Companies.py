@@ -591,8 +591,8 @@ def addCompany(iCompany, iNumber):
                 break
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-
     # check if it's not too early
     iCompany = iGameTurn % companies.len()
     if iGameTurn < year(companies[iCompany].birthdate):

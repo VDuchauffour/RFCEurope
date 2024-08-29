@@ -287,6 +287,7 @@ def setCounterReformationActive(bNewValue):
     data.bCounterReformationActive = bNewValue
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Absinthe: Spreading religion in a couple preset dates
     if iGameTurn == year(700) - 2:

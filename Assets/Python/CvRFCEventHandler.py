@@ -4,7 +4,6 @@ from CvPythonExtensions import *
 from Core import (
     civilization,
     civilizations,
-    message,
     human,
     make_unit,
     make_units,
@@ -13,7 +12,6 @@ from Core import (
     text,
     turn,
     year,
-    cities,
 )
 import CvUtil
 import PyHelpers
@@ -24,10 +22,8 @@ from StoredData import data
 import RiseAndFall
 import Barbs
 import Religions
-import Resources
 import UniquePowers
-import AIWars
-from RFCUtils import forcedInvasion, getProvinceStabilityLevel
+from RFCUtils import getProvinceStabilityLevel
 
 import Victory
 import Stability
@@ -36,25 +32,18 @@ import Crusades
 import Companies
 import Locations
 import Modifiers
-import Provinces
 import Civilizations
 import Mercenaries
 
-from Consts import MessageData
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
     Civ,
     Improvement,
     UniquePower,
     Unit,
-    Wonder,
 )
 
 gc = CyGlobalContext()
-
-# Absinthe: Turn Randomization constants
-iLighthouseEarthQuake = 0
-iByzantiumVikingAttack = 1
 
 # Absinthe: all of this Mercenary stuff is unused
 # Mercenaries - start
@@ -236,72 +225,6 @@ class CvRFCEventHandler:
 
     def onBeginGameTurn(self, argsList):
         iGameTurn = argsList[0]
-
-        # Absinthe: 868AD Viking attack on Constantinople
-        if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack] - 2:
-            if human() == Civ.BYZANTIUM:
-                show(text("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS"))
-
-        if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack]:
-            if human() == Civ.BYZANTIUM:
-                for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
-                    Barbs.spawnUnits(
-                        Civ.BARBARIAN,
-                        (80, 24),
-                        (80, 25),
-                        unit,
-                        number,
-                        iGameTurn,
-                        1,
-                        0,
-                        forcedInvasion,
-                        UnitAITypes.UNITAI_ATTACK,
-                        text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
-                    )
-                message(
-                    Civ.BYZANTIUM,
-                    text("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE"),
-                    color=MessageData.RED,
-                )
-
-        # Absinthe: Message for the human player about the Schism
-        elif iGameTurn == year(1053):
-            if player().isExisting():
-                sText = text("TXT_KEY_GREAT_SCHISM")
-                message(human(), sText, color=MessageData.DARK_PINK)
-
-        # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
-        elif iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
-            for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
-                bFound = 0
-                for city in cities().owner(iPlayer).entities():
-                    if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE):
-                        city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE, False)
-                        GLcity = city
-                        bFound = 1
-                if bFound and human() == iPlayer:
-                    pPlayer = gc.getPlayer(iPlayer)
-                    iTeam = pPlayer.getTeam()
-                    if GLcity.isRevealed(iTeam, False):
-                        message(
-                            iPlayer,
-                            text("TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED"),
-                            color=MessageData.RED,
-                        )
-
-        Barbs.checkTurn(iGameTurn)
-        RiseAndFall.checkTurn(iGameTurn)
-        Religions.checkTurn(iGameTurn)
-        Resources.checkTurn(iGameTurn)
-        UniquePowers.checkTurn(iGameTurn)
-        AIWars.checkTurn(iGameTurn)
-        Plague.checkTurn(iGameTurn)
-        Victory.checkTurn(iGameTurn)
-        Stability.checkTurn(iGameTurn)
-        Crusades.checkTurn(iGameTurn)
-        Provinces.checkTurn(iGameTurn)
-        Companies.checkTurn(iGameTurn)
-
         return 0
 
     def onBeginPlayerTurn(self, argsList):

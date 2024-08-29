@@ -89,10 +89,6 @@ def norway_up(winning_unit, losing_unit):
                 player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
 
-def checkTurn(iGameTurn):
-    pass
-
-
 # Absinthe: Arabian UP
 def faithUP(iPlayer, city):
     pFaithful = gc.getPlayer(iPlayer)

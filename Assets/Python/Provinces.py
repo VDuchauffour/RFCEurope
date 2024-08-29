@@ -29,6 +29,7 @@ def onSpawn(iPlayer):
     refreshStabilityOverlay()
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     for civ in civilizations():
         events = civ.event.provinces.get(Event.ON_DATETURN)

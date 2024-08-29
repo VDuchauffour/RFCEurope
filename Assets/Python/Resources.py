@@ -89,6 +89,7 @@ def removeResource(iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):
             gc.getMap().plot(iX, iY).setImprovementType(-1)
 
 
+@handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Absinthe: note that all actions are taken place in the end of the turn, so actually the resources will appear/disappear for the next turn
     if iGameTurn == year(552):
