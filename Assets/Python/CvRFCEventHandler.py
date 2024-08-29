@@ -310,8 +310,7 @@ class CvRFCEventHandler:
 
     def onReligionSpread(self, argsList):
         iReligion, iOwner, pSpreadCity = argsList
-        Stability.onReligionSpread(iReligion, iOwner)
-        Religions.onReligionSpread(iReligion, iOwner)
+        return 0
 
     def onFirstContact(self, argsList):
 

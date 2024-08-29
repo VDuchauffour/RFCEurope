@@ -564,6 +564,7 @@ def update_pope_techs(catholic_civs):
                         break
 
 
+@handler("religionSpread")
 def onReligionSpread(iReligion, iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
     if pPlayer.getStateReligion() == iReligion:
