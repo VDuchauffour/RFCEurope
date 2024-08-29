@@ -361,11 +361,9 @@ class CvRFCEventHandler:
         "Unit Promoted"
         return 0
 
-    # This method will remove a mercenary unit from the game if it is killed
     def onUnitKilled(self, argsList):
         "Unit Killed"
-
-        Mercenaries.onUnitKilled(argsList)
+        return 0
 
     # This method will remove a mercenary unit from the game if it is lost
     def onUnitLost(self, argsList):

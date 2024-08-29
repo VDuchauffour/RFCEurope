@@ -3011,9 +3011,9 @@ def onUnitPromoted(pUnit, iNewPromotion):
         )
 
 
-def onUnitKilled(argsList):
-    pUnit, iAttacker = argsList
-
+@handler("unitKilled")
+def onUnitKilled(pUnit, iAttacker):
+    # This method will remove a mercenary unit from the game if it is killed
     iMerc = pUnit.getMercID()
 
     if iMerc > -1:
