@@ -14,7 +14,6 @@ from Core import (
     year,
 )
 import CvUtil
-import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
 
@@ -44,61 +43,6 @@ from CoreTypes import (
 )
 
 gc = CyGlobalContext()
-
-# Absinthe: all of this Mercenary stuff is unused
-# Mercenaries - start
-
-PyGame = PyHelpers.PyGame()
-PyInfo = PyHelpers.PyInfo
-
-# Set g_bGameTurnMercenaryCreation to True if mercenary creation should happen during the
-# onBeginGameTurn method, False if it should happen during the onBeginPlayerTurn method
-# Default value is True
-g_bGameTurnMercenaryCreation = True
-
-# Set g_bDisplayMercenaryManagerOnBeginPlayerTurn to True if the "Mercenary Manager"
-# screen should be displayed at the beginning of every player turn.
-# Default value is False
-g_bDisplayMercenaryManagerOnBeginPlayerTurn = False
-
-# This value also controls the "Mercenary Manager" button and when it should be displayed.
-# Default value is "ERA_ANCIENT"
-# Rhye - start (was causing an assert)
-# g_iStartingEra = gc.getInfoTypeForString("ERA_ANCIENT")
-g_iStartingEra = 0
-# Rhye - end
-
-# Change this to False if mercenaries should be removed from the global mercenary pool
-# at the beginning of the game turn. When set to True a number of mercenaries will
-# wander away from the global mercenary pool. This is another variable used to control
-# the load time for the "Mercenary Manager" screen.
-# Default valus is True
-g_bWanderlustMercenaries = True
-
-# Change this to increase the max number of mercenaries that may wander away from the
-# global mercenary pool.
-# Default valus is 3
-g_iWanderlustMercenariesMaximum = 7  # Rhye
-
-# Default valus is 0
-g_iWanderlustMercenariesMinimum = 2  # Rhye
-
-# Change this to False to supress the mercenary messages.
-# Default value is True
-g_bDisplayMercenaryMessages = False  # Rhye
-
-# Set to True to print out debug messages in the logs
-g_bDebug = True
-
-# Default valus is 1
-g_bUpdatePeriod = 5  # Rhye
-
-# Default valus is 1
-g_bAIThinkPeriod = 6  # Rhye (5 in Warlords, 4 in vanilla)
-
-# globals
-
-# Mercenaries - end
 
 
 class CvRFCEventHandler:
@@ -155,13 +99,6 @@ class CvRFCEventHandler:
         self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(
             CvScreenEnums.MERCENARY_MANAGER
         )
-
-        global g_bGameTurnMercenaryCreation
-        global g_bDisplayMercenaryManagerOnBeginPlayerTurn
-        global g_iStartingEra
-        global g_bWanderlustMercenaries
-        global g_iWanderlustMercenariesMaximum
-        global g_bDisplayMercenaryMessages
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
