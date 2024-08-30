@@ -2772,14 +2772,14 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getReligionProvinceString(Victory.tSpainConvert, Religion.CATHOLICISM, 2)
         # UHV2
-        iSpainColonies = Victory().getNumRealColonies(iPlayer)
+        iSpainColonies = Victory.getNumRealColonies(iPlayer)
         iOtherColonies = 0
         iColonyPlayer = -1
         for iCiv in civilizations().majors().ids():
             if iCiv == iPlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():
-                iTempNumColonies = Victory().getNumRealColonies(iCiv)
+                iTempNumColonies = Victory.getNumRealColonies(iCiv)
                 if iTempNumColonies > iOtherColonies:
                     iOtherColonies = iTempNumColonies
                     iColonyPlayer = iCiv
@@ -3198,7 +3198,7 @@ class CvVictoryScreen:
         iCulture = pPlayer.getUHVCounter(0)
         sText1 += self.getCounterString(iCulture, 2500)
         # UHV2
-        iCount, iTotal = Victory().getTerritoryPercentEurope(iPlayer, True)
+        iCount, iTotal = Victory.getTerritoryPercentEurope(iPlayer, True)
         iOtherCount = 0
         iMostPlayer = -1
         for iLoopPlayer in civilizations().majors().ids():
@@ -3206,7 +3206,7 @@ class CvVictoryScreen:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             if pLoopPlayer.isAlive():
-                iTempCount = Victory().getTerritoryPercentEurope(iLoopPlayer)
+                iTempCount = Victory.getTerritoryPercentEurope(iLoopPlayer)
                 if iTempCount > iOtherCount:
                     iOtherCount = iTempCount
                     iMostPlayer = iLoopPlayer
@@ -3605,7 +3605,7 @@ class CvVictoryScreen:
         return sString
 
     def getNumColoniesString(self, iRequired, bTradingCompanies=False):
-        iCount = Victory().getNumRealColonies(self.iActivePlayer)
+        iCount = Victory.getNumRealColonies(self.iActivePlayer)
         sString = (
             text("TXT_KEY_UHV_COLONIES") + ": " + self.determineColor(iCount >= iRequired, iCount)
         )
