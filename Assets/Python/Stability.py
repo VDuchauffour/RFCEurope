@@ -448,37 +448,37 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 
 
 @handler("buildingBuilt")
-def onBuildingBuilt(city, building):
+def onBuildingBuilt(city, building_type):
     iPlayer = city.getOwner()
     if iPlayer < civilizations().majors().len():
         pPlayer = gc.getPlayer(iPlayer)
-        if building == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE):
+        if building_type == getUniqueBuilding(iPlayer, Building.MANOR_HOUSE):
             pPlayer.changeStabilityBase(StabilityCategory.ECONOMY, 1)
             recalcEconomy(iPlayer)
-        elif building == getUniqueBuilding(iPlayer, Building.CASTLE):
+        elif building_type == getUniqueBuilding(iPlayer, Building.CASTLE):
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
             recalcEpansion(iPlayer)
-        elif building == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
+        elif building_type == getUniqueBuilding(iPlayer, Building.NIGHT_WATCH):
             pPlayer.changeStabilityBase(StabilityCategory.CIVICS, 1)
             recalcCivicCombos(iPlayer)
-        elif building == getUniqueBuilding(iPlayer, Building.COURTHOUSE):
+        elif building_type == getUniqueBuilding(iPlayer, Building.COURTHOUSE):
             pPlayer.changeStabilityBase(StabilityCategory.CITIES, 1)
             recalcCity(iPlayer)
-        elif building == Wonder.ESCORIAL:
+        elif building_type == Wonder.ESCORIAL:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL, 1)
-        elif building == Wonder.STEPHANSDOM:
+        elif building_type == Wonder.STEPHANSDOM:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM, 1)
-        elif building == Wonder.SHRINE_OF_UPPSALA:
+        elif building_type == Wonder.SHRINE_OF_UPPSALA:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE, 1)
-        elif building == Wonder.KOUTOUBIA_MOSQUE:
+        elif building_type == Wonder.KOUTOUBIA_MOSQUE:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE, 1)
-        elif building == Wonder.MAGNA_CARTA:
+        elif building_type == Wonder.MAGNA_CARTA:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA, 1)
-        elif building == Building.PALACE:
+        elif building_type == Building.PALACE:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, -2)
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
             recalcEpansion(iPlayer)
-        elif building == Building.RELIQUARY:
+        elif building_type == Building.RELIQUARY:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION, 1)
             recalcEpansion(iPlayer)
 

@@ -130,10 +130,10 @@ def aragon_up_on_begin_player_turn(iGameTurn, iPlayer):
 
 
 @handler("buildingBuilt")
-def aragon_up_on_building_built(city, building):
+def aragon_up_on_building_built(city, building_type):
     # UP tile yields should be recalculated right away if a new Palace was built
     iPlayer = city.getOwner()
-    if iPlayer == Civ.ARAGON and building == Building.PALACE:
+    if iPlayer == Civ.ARAGON and building_type == Building.PALACE:
         confederationUP(iPlayer)
 
 

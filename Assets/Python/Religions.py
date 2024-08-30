@@ -575,14 +575,14 @@ def onReligionSpread(iReligion, iPlayer):
 
 
 @handler("buildingBuilt")
-def onBuildingBuilt(city, iBuilding):
+def onBuildingBuilt(city, building_type):
     # Absinthe: Faith, Kazimierz, Mont Saint-Michel
     pPlayer = player(city)
     iStateReligion = pPlayer.getStateReligion()
     if iStateReligion != -1:
-        if iBuilding in RELIGIOUS_BUILDINGS[iStateReligion]:
+        if building_type in RELIGIOUS_BUILDINGS[iStateReligion]:
             pPlayer.changeFaith(1)
-            if iBuilding in [
+            if building_type in [
                 Building.CATHOLIC_CATHEDRAL,
                 Building.ORTHODOX_CATHEDRAL,
                 Building.ISLAMIC_CATHEDRAL,
@@ -594,14 +594,14 @@ def onBuildingBuilt(city, iBuilding):
                 pPlayer.changeFaith(1)
 
         # Absinthe: Wonders: Mont Saint-Michel wonder effect
-        if getBaseBuilding(iBuilding) in [Building.WALLS, Building.CASTLE]:
+        if getBaseBuilding(building_type) in [Building.WALLS, Building.CASTLE]:
             if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL) > 0:
                 pPlayer.changeFaith(1)
-    if iBuilding in RELIGIOUS_WONDERS:
+    if building_type in RELIGIOUS_WONDERS:
         pPlayer.changeFaith(4)
         if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES) > 0:
             pPlayer.changeFaith(1)
-    if iStateReligion != Religion.JUDAISM and iBuilding == Wonder.KAZIMIERZ:
+    if iStateReligion != Religion.JUDAISM and building_type == Wonder.KAZIMIERZ:
         pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
         # Kazimierz tries to spread Judaism to a couple new cities
         cityList = cities().owner(pPlayer).entities()

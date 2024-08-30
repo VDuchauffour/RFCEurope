@@ -663,7 +663,7 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 
 
 @handler("buildingBuilt")
-def onBuildingBuilt(city, iBuilding):
+def onBuildingBuilt(city, building_type):
     if not gc.getGame().isVictoryValid(7):  # 7 == historical
         return
 
@@ -671,14 +671,14 @@ def onBuildingBuilt(city, iBuilding):
     # Kiev UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
     if iPlayer == Civ.KIEV:
         if isPossibleUHV(iPlayer, 0, False):
-            if iBuilding in [
+            if building_type in [
                 Building.ORTHODOX_MONASTERY,
                 Building.ORTHODOX_CATHEDRAL,
             ]:
                 iBuildSoFar = player(Civ.KIEV).getUHVCounter(0)
                 iCathedralCounter = iBuildSoFar % 100
                 iMonasteryCounter = iBuildSoFar / 100
-                if iBuilding == Building.ORTHODOX_MONASTERY:
+                if building_type == Building.ORTHODOX_MONASTERY:
                     iMonasteryCounter += 1
                 else:
                     iCathedralCounter += 1
@@ -697,21 +697,21 @@ def onBuildingBuilt(city, iBuilding):
                 Building.JEWISH_QUARTER,
                 Wonder.KAZIMIERZ,
             ]
-            if iBuilding in lBuildingList:
+            if building_type in lBuildingList:
                 iCounter = player(Civ.POLAND).getUHVCounter(2)
                 iCathCath = (iCounter / 10000) % 10
                 iOrthCath = (iCounter / 1000) % 10
                 iProtCath = (iCounter / 100) % 10
                 iJewishQu = iCounter % 100
-                if iBuilding == Building.CATHOLIC_CATHEDRAL and iCathCath < 9:
+                if building_type == Building.CATHOLIC_CATHEDRAL and iCathCath < 9:
                     iCathCath += 1
-                elif iBuilding == Building.ORTHODOX_CATHEDRAL and iOrthCath < 9:
+                elif building_type == Building.ORTHODOX_CATHEDRAL and iOrthCath < 9:
                     iOrthCath += 1
-                elif iBuilding == Building.PROTESTANT_CATHEDRAL and iProtCath < 9:
+                elif building_type == Building.PROTESTANT_CATHEDRAL and iProtCath < 9:
                     iProtCath += 1
-                elif iBuilding == Wonder.KAZIMIERZ:
+                elif building_type == Wonder.KAZIMIERZ:
                     iJewishQu = 99
-                elif iBuilding == Building.JEWISH_QUARTER and iJewishQu < 99:
+                elif building_type == Building.JEWISH_QUARTER and iJewishQu < 99:
                     iJewishQu += 1
                 if iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2:
                     wonUHV(Civ.POLAND, 2)
@@ -719,7 +719,7 @@ def onBuildingBuilt(city, iBuilding):
                 player(Civ.POLAND).setUHVCounter(2, iCounter)
 
     # Cordoba UHV 2: Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309
-    if iBuilding in tCordobaWonders:
+    if building_type in tCordobaWonders:
         if isPossibleUHV(Civ.CORDOBA, 1, False):
             if iPlayer == Civ.CORDOBA:
                 iWondersBuilt = player(Civ.CORDOBA).getUHVCounter(1)
@@ -730,7 +730,7 @@ def onBuildingBuilt(city, iBuilding):
                 lostUHV(Civ.CORDOBA, 1)
 
     # Ottoman UHV 2: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616
-    if iBuilding in tOttomanWonders:
+    if building_type in tOttomanWonders:
         if isPossibleUHV(Civ.OTTOMAN, 1, False):
             if iPlayer == Civ.OTTOMAN:
                 iWondersBuilt = player(Civ.OTTOMAN).getUHVCounter(1)
