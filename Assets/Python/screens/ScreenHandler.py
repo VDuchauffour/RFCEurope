@@ -292,7 +292,7 @@ def __eventWBCityScriptPopupApply(playerID, userData, popupReturn):
     return
 
 
-def __eventWBScriptPopupBegin(self):
+def __eventWBScriptPopupBegin():
     return
 
 

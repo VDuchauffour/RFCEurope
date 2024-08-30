@@ -10,6 +10,7 @@ import Messages
 import Modifiers
 import Rules
 import Setup
+import Shortcuts
 import StoredData
 
 import AIWars
