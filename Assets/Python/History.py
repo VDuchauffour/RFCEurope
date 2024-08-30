@@ -24,7 +24,6 @@ from RFCUtils import forcedInvasion
 from StoredData import data
 import Religions
 from Consts import iByzantiumVikingAttack
-import CvUtil
 
 gc = CyGlobalContext()
 
@@ -144,20 +143,14 @@ def byzantine_conqueror_army(iGameTurn, iPlayer):
                 UnitAITypes.UNITAI_ASSAULT_SEA,
                 DirectionTypes.DIRECTION_SOUTH,
             )
-        pByzantium.initUnit(
+        great_general = pByzantium.initUnit(
             Unit.GREAT_GENERAL,
             tStartingPlot[0],
             tStartingPlot[1],
             UnitAITypes.UNITAI_GENERAL,
             DirectionTypes.DIRECTION_SOUTH,
         )
-        pPlot = CyMap().plot(tStartingPlot[0], tStartingPlot[1])
-        for iUnitLoop in range(pPlot.getNumUnits()):
-            pUnit = pPlot.getUnit(iUnitLoop)
-            if pUnit.getUnitType() == CvUtil.findInfoTypeNum(
-                gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
-            ):
-                pUnit.setName(text("TXT_KEY_GREAT_PERSON_BELISARIUS"))
+        great_general.setName(text("TXT_KEY_GREAT_PERSON_BELISARIUS"))
         make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
         make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
         make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
