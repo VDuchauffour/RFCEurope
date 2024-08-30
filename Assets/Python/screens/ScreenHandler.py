@@ -26,8 +26,6 @@ gc = CyGlobalContext()
 
 @handler("kbdEvent")
 def onKbdEvent(eventType, key, mx, my, px, py):
-    game = gc.getGame()
-
     if events.bAllowCheats:
         # notify debug tools of input to allow it to override the control
         argsList = (
@@ -46,54 +44,54 @@ def onKbdEvent(eventType, key, mx, my, px, py):
             return 0
 
     if eventType == events.EventKeyDown:
-        theKey = int(key)
+        key = int(key)
 
-        CvCameraControls.g_CameraControls.handleInput(theKey)
+        CvCameraControls.g_CameraControls.handleInput(key)
 
         if events.bAllowCheats:
             # Shift - T (Debug - No MP)
-            if theKey == int(InputTypes.KB_T):
+            if key == int(InputTypes.KB_T):
                 if events.bShift:
                     events.beginEvent(CvUtil.EventAwardTechsAndGold)
                     # events.beginEvent(CvUtil.EventCameraControlPopup)
                     return 1
 
-            elif theKey == int(InputTypes.KB_W):
+            elif key == int(InputTypes.KB_W):
                 if events.bShift and events.bCtrl:
                     events.beginEvent(CvUtil.EventShowWonder)
                     return 1
 
             # Shift - ] (Debug - currently mouse-overd unit, health += 10
-            elif theKey == int(InputTypes.KB_LBRACKET) and events.bShift:
+            elif key == int(InputTypes.KB_LBRACKET) and events.bShift:
                 unit = CyMap().plot(px, py).getUnit(0)
                 if not unit.isNone():
                     d = min(unit.maxHitPoints() - 1, unit.getDamage() + 10)
                     unit.setDamage(d, PlayerTypes.NO_PLAYER)
 
             # Shift - [ (Debug - currently mouse-overd unit, health -= 10
-            elif theKey == int(InputTypes.KB_RBRACKET) and events.bShift:
+            elif key == int(InputTypes.KB_RBRACKET) and events.bShift:
                 unit = CyMap().plot(px, py).getUnit(0)
                 if not unit.isNone():
                     d = max(0, unit.getDamage() - 10)
                     unit.setDamage(d, PlayerTypes.NO_PLAYER)
 
-            elif theKey == int(InputTypes.KB_F1):
+            elif key == int(InputTypes.KB_F1):
                 if events.bShift:
                     CvScreensInterface.replayScreen.showScreen(False)
                     return 1
                 # don't return 1 unless you want the input consumed
 
-            elif theKey == int(InputTypes.KB_F2):
+            elif key == int(InputTypes.KB_F2):
                 if events.bShift:
                     CvScreensInterface.showDebugInfoScreen()
                     return 1
 
-            elif theKey == int(InputTypes.KB_F3):
+            elif key == int(InputTypes.KB_F3):
                 if events.bShift:
                     CvScreensInterface.showDanQuayleScreen(())
                     return 1
 
-            elif theKey == int(InputTypes.KB_F4):
+            elif key == int(InputTypes.KB_F4):
                 if events.bShift:
                     CvScreensInterface.showUnVictoryScreen(())
                     return 1
