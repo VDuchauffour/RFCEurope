@@ -21,6 +21,13 @@ def save_data():
     data.save()
 
 
+# Don't work before apply before GameStart, therefore load barbs data isn't possible
+# TODO rewrite the StoredData
+# @handler("OnLoad")
+# def load_data(args):
+#     data.load()
+
+
 def reset_stored_data():
     data.setup()
 

@@ -1,5 +1,4 @@
 import CvEventManager
-import CvRFCEventHandler
 import RiseAndFall
 import Crusades
 import Religions
@@ -66,9 +65,6 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
             7628: ("Religious Persecution", self.relEventApply7628, self.relEventBegin7628),
             7629: ("Free Religious Revolution", self.relEventApply7629, self.relEventBegin7629),
         }
-
-        # --> INSERT EVENT HANDLER INITIALIZATION HERE <--
-        CvRFCEventHandler.CvRFCEventHandler(self)
 
     def setPopupHandler(self, eventType, handler):
         """Removes all previously installed popup handlers for the given
