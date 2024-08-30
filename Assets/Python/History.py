@@ -161,7 +161,7 @@ def byzantine_conqueror_army(iGameTurn, iPlayer):
         make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
         make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
         make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
-        show_if_human(text("TXT_KEY_EVENT_CONQUEROR_BELISARIUS"))
+        show_if_human(iPlayer, text("TXT_KEY_EVENT_CONQUEROR_BELISARIUS"))
 
 
 def ottoman_invasion(iCiv, tPlot):
