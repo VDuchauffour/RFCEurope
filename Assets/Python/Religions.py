@@ -575,9 +575,9 @@ def onReligionSpread(iReligion, iPlayer):
 
 
 @handler("buildingBuilt")
-def onBuildingBuilt(iPlayer, iBuilding):
+def onBuildingBuilt(city, iBuilding):
     # Absinthe: Faith, Kazimierz, Mont Saint-Michel
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(city)
     iStateReligion = pPlayer.getStateReligion()
     if iStateReligion != -1:
         if iBuilding in RELIGIOUS_BUILDINGS[iStateReligion]:
@@ -604,7 +604,7 @@ def onBuildingBuilt(iPlayer, iBuilding):
     if iStateReligion != Religion.JUDAISM and iBuilding == Wonder.KAZIMIERZ:
         pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
         # Kazimierz tries to spread Judaism to a couple new cities
-        cityList = cities().owner(iPlayer).entities()
+        cityList = cities().owner(pPlayer).entities()
         iJewCityNum = int(max((len(cityList) + 2) / 3 + 1, 3))
         # number of tries are based on number of cities, but at least 3
         for i in range(iJewCityNum):
@@ -681,15 +681,25 @@ def buildInRandomCity(iPlayer, iBuilding, iReligion):
 
 
 @handler("playerChangeAllCivics")
-def onPlayerChangeAllCivics(argsList):
+def onPlayerChangeAllCivics(
+    iPlayer,
+    new_civic_1,
+    new_civic_2,
+    new_civic_3,
+    new_civic_4,
+    new_civic_5,
+    new_civic_6,
+    old_civic_1,
+    old_civic_2,
+    old_civic_3,
+    old_civic_4,
+    old_civic_5,
+    old_civic_6,
+):
     # free religion change when switching away from Paganism
-    iPlayer = argsList[0]
-    lNewCivics = [argsList[1], argsList[2], argsList[3], argsList[4], argsList[5], argsList[6]]
-    lOldCivics = [argsList[7], argsList[8], argsList[9], argsList[10], argsList[11], argsList[12]]
-
     if iPlayer < civilizations().majors().len():
-        if lOldCivics[4] == Civic.PAGANISM:
-            if lNewCivics[4] in [
+        if old_civic_5 == Civic.PAGANISM:
+            if new_civic_5 in [
                 Civic.STATE_RELIGION,
                 Civic.THEOCRACY,
                 Civic.ORGANIZED_RELIGION,

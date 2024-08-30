@@ -663,12 +663,11 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 
 
 @handler("buildingBuilt")
-def onBuildingBuilt(iPlayer, iBuilding):
+def onBuildingBuilt(city, iBuilding):
     if not gc.getGame().isVictoryValid(7):  # 7 == historical
         return
 
-    iGameTurn = turn()
-
+    iPlayer = player(city)
     # Kiev UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
     if iPlayer == Civ.KIEV:
         if isPossibleUHV(iPlayer, 0, False):
