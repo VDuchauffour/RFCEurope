@@ -200,6 +200,8 @@ class BugEventManager(CvEventManager.CvEventManager):
         self.addEvent("combatLogFlanking")
         self.addEvent("playerRevolution")
 
+        self.CustomEvents = {}
+
     def setLogging(self, logging):
         if logging is not None:
             self.logging = bool(logging)

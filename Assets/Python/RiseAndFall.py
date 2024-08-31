@@ -81,7 +81,7 @@ from CoreTypes import (
     Improvement,
     Unit,
 )
-from Wonders import leaning_tower_effect
+from Wonders import leaning_tower_effect_1200AD
 from Events import handler
 
 gc = CyGlobalContext()
@@ -120,7 +120,7 @@ def setup():
 
         set_starting_faith()
         set_starting_diplomacy_1200AD()
-        leaning_tower_effect()
+        leaning_tower_effect_1200AD()
         Religions.spread1200ADJews()  # Spread Jews to some random cities
         Victory.set1200UHVDone(iHuman)
         # Temporarily all civs get the same starting techs as Aragon

@@ -3,7 +3,8 @@ from Core import civilizations, location, player, plot
 from CoreTypes import Building, Improvement
 from Events import handler
 from RFCUtils import getUniqueBuilding, spreadMajorCulture
-import CvEventManager
+
+iImpBeforeCity = 0
 
 
 @handler("cityBuilt")
@@ -18,6 +19,15 @@ def remove_minor_cultures(city):
     # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
     for civ in civilizations().minors().ids():
         plot(city).setCulture(civ, 0, True)
+
+
+@handler("improvementDestroyed")
+def onImprovementDestroyed(iImprovement, iOwner, iX, iY):
+    # Absinthe: Free walls if city is built on a fort
+    # This is a hack for it, checking what was the improvement before the city was built
+    # Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
+    global iImpBeforeCity
+    iImpBeforeCity = 10000 * iImprovement + 100 * iX + 1 * iY
 
 
 @handler("cityBuilt")
@@ -35,9 +45,9 @@ def free_building_when_city_built_over_improvement(city):
 
     iOwner = city.getOwner()
     tCity = (city.getX(), city.getY())
-    iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
-    iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
-    iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
+    iImpBeforeCityType = (iImpBeforeCity / 10000) % 100
+    iImpBeforeCityX = (iImpBeforeCity / 100) % 100
+    iImpBeforeCityY = iImpBeforeCity % 100
     # Absinthe: free walls if built on fort
     if iImpBeforeCityType == Improvement.FORT and (iImpBeforeCityX, iImpBeforeCityY) == tCity:
         city.setHasRealBuilding(getUniqueBuilding(iOwner, Building.WALLS), True)

@@ -1,11 +1,122 @@
-from CvPythonExtensions import CyArtFileMgr
+from CvPythonExtensions import CyArtFileMgr, CyGlobalContext, InterfaceMessageTypes
 from Consts import MessageData
-from Core import human, message, player, show, text, year
-from CoreTypes import Civ
+from Core import human, message, player, show, team, text, year
+from CoreTypes import Building, Civ, Wonder
 from Events import handler
 import Mercenaries
 
 ArtFileMgr = CyArtFileMgr()
+gc = CyGlobalContext()
+
+
+@handler("cityAcquiredAndKept")
+def announce_wonder_captered_when_city_acquired_and_kept(iPlayer, city):
+    if city.getNumWorldWonders() > 0:
+        ConquerPlayer = gc.getPlayer(city.getOwner())
+        ConquerTeam = ConquerPlayer.getTeam()
+        if city.getPreviousOwner() != -1:
+            PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
+            PreviousTeam = PreviousPlayer.getTeam()
+        HumanTeam = team()
+        if ConquerPlayer.isHuman() or (
+            player().isExisting()
+            and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
+        ):
+            # Absinthe: collect all wonders, including shrines
+            lAllWonders = [w for w in Wonder] + [
+                Building.CATHOLIC_SHRINE,
+                Building.ORTHODOX_SHRINE,
+                Building.ISLAMIC_SHRINE,
+                Building.PROTESTANT_SHRINE,
+            ]
+            for iWonder in lAllWonders:
+                if city.getNumBuilding(iWonder) > 0:
+                    sWonderName = gc.getBuildingInfo(iWonder).getDescription()
+                    if ConquerPlayer.isHuman():
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_CAPTURED_1", sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.BLUE,
+                            location=city,
+                        )
+                    elif HumanTeam.isHasMet(ConquerTeam):
+                        ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_CAPTURED_2", ConquerName, sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.CYAN,
+                            location=city,
+                        )
+                    elif HumanTeam.isHasMet(PreviousTeam):
+                        PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_CAPTURED_3", PreviousName, sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.CYAN,
+                            location=city,
+                        )
+
+
+@handler("cityRazed")
+def announce_wonder_destroyed_when_city_razed(city, iPlayer):
+    if city.getNumWorldWonders() > 0:
+        ConquerPlayer = gc.getPlayer(city.getOwner())
+        ConquerTeam = ConquerPlayer.getTeam()
+        if city.getPreviousOwner() != -1:
+            PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
+            PreviousTeam = PreviousPlayer.getTeam()
+        HumanTeam = team()
+        if ConquerPlayer.isHuman() or (
+            player().isExisting()
+            and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
+        ):
+            # Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
+            lAllWonders = [w for w in Wonder]
+            for iWonder in [
+                Building.CATHOLIC_SHRINE,
+                Building.ORTHODOX_SHRINE,
+                Building.ISLAMIC_SHRINE,
+                Building.PROTESTANT_SHRINE,
+            ]:
+                lAllWonders.append(iWonder)
+            for iWonder in lAllWonders:
+                if city.getNumBuilding(iWonder) > 0:
+                    sWonderName = gc.getBuildingInfo(iWonder).getDescription()
+                    if ConquerPlayer.isHuman():
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_DESTROYED_1", sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.LIGHT_RED,
+                            location=city,
+                        )
+                    elif HumanTeam.isHasMet(ConquerTeam):
+                        ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_DESTROYED_2", ConquerName, sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.LIGHT_RED,
+                            location=city,
+                        )
+                    elif HumanTeam.isHasMet(PreviousTeam):
+                        PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+                        message(
+                            human(),
+                            text("TXT_KEY_MISC_WONDER_DESTROYED_3", PreviousName, sWonderName),
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBuildingInfo(iWonder).getButton(),
+                            color=MessageData.LIGHT_RED,
+                            location=city,
+                        )
 
 
 @handler("cityAcquired")

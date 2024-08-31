@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
-from Core import get_scenario, text, message, year
-from CoreTypes import Improvement, Bonus, Scenario
+from Core import get_scenario, message_if_human, text, message, year
+from CoreTypes import Feature, Improvement, Bonus, Scenario
 from Events import handler
 
 # globals
@@ -29,7 +29,6 @@ def remove_horse_near_constantinople(owner, player, city, bConquest, bTrade):
 
 def createResource(iX, iY, iBonus, textKey="TXT_KEY_RESOURCE_DISCOVERED"):
     """Creates a bonus resource and alerts the plot owner"""
-
     if (
         gc.getMap().plot(iX, iY).getBonusType(-1) == -1 or iBonus == -1
     ):  # Absinthe: only proceed if there isn't any bonus resources on the plot, or if we're removing the bonus
@@ -72,7 +71,6 @@ def createResource(iX, iY, iBonus, textKey="TXT_KEY_RESOURCE_DISCOVERED"):
 
 def removeResource(iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):
     """Removes a bonus resource and alerts the plot owner"""
-
     if (
         gc.getMap().plot(iX, iY).getBonusType(-1) != -1
     ):  # only proceed if there is a bonus resource on the plot
@@ -116,5 +114,36 @@ def checkTurn(iGameTurn):
         createResource(59, 61, Bonus.ACCESS)  # Atlantic Access in Scandinavia
 
 
-def onTechAcquired(iTech, iPlayer):
-    pass
+@handler("plotFeatureRemoved")
+def remove_resource_with_forest_cut_down(pPlot, pCity, iFeatureType):
+    # Absinthe: remove specific resources if the forest/dense forest/palm forest was cut down:
+    # only proceed if there is a bonus resource on the plot
+    if pPlot.getBonusType(-1) != -1:
+        if (
+            iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST")
+            or iFeatureType == Feature.DENSEFOREST
+            or iFeatureType == Feature.PALMFOREST
+        ):
+            iBonusType = pPlot.getBonusType(-1)
+            if iBonusType in [Bonus.TIMBER, Bonus.DEER, Bonus.FUR]:
+                pPlot.setBonusType(-1)
+                # also remove corresponding improvements
+                iImprovementType = pPlot.getImprovementType()
+                if (
+                    iImprovementType == Improvement.CAMP
+                ):  # camp is only buildable on resources, while lumbermills are removed by default on forest removal
+                    pPlot.setImprovementType(-1)
+                # Absinthe: message for the human player if it was inside it's territory
+                iOwner = pPlot.getOwner()
+                message_if_human(
+                    iOwner,
+                    text(
+                        "TXT_KEY_NO_FOREST_NO_RESOURCE",
+                        gc.getBonusInfo(iBonusType).getTextKey(),
+                    ),
+                    sound="AS2D_DISCOVERBONUS",
+                    event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                    button=gc.getBonusInfo(iBonusType).getButton(),
+                    color=MessageData.LIME,
+                    location=pPlot,
+                )
