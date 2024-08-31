@@ -11,8 +11,10 @@
 #
 import BugEventManager
 from CvPythonExtensions import *
+from Init import init
 
 eventManager = BugEventManager.BugEventManager()
+init()
 
 import Handlers  # noqa: E402, F401
 

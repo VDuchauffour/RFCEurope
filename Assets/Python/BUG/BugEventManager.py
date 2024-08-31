@@ -103,7 +103,6 @@ import CvEventManager
 import BugCore
 import BugData
 import BugUtil
-import Init
 import Modifiers
 import InputUtil
 import types
@@ -433,7 +432,6 @@ class BugEventManager(CvEventManager.CvEventManager):
         import BugInit
 
         BugInit.init()
-        Init.init()
         Modifiers.setup()
         self._handleDefaultEvent(eventType, argsList)
 

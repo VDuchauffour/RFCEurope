@@ -1,5 +1,4 @@
 # ruff: noqa: F401
-import Init
 import ScreenHandler
 
 import CityNameManager

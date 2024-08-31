@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from Core import civilization, civilizations, year
+from Core import civilization, civilizations
 from CoreTypes import (
     Modifier,
     Building,
@@ -25,7 +25,7 @@ from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
+from TimelineData import DateTurn
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -43,7 +43,6 @@ def setup():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
-    set_tech_timeline_date()
 
 
 def set_modifiers():
@@ -145,11 +144,6 @@ def set_tech_timeline_modifier():
     # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
     # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
     # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
-
-
-def set_tech_timeline_date():
-    for tech, turn in TIMELINE_TECH_MODIFIER:
-        gc.setTimelineTechDateForTech(tech, year(turn))
 
 
 def set_initial_building():

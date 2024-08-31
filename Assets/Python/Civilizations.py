@@ -16,6 +16,7 @@ from LocationsData import CIV_CAPITAL_LOCATIONS
 from MiscData import REVEAL_DATE_TECHNOLOGY
 from RFCUtils import change_attitude_extra_between_civ
 from Events import handler
+from TimelineData import TIMELINE_TECH_MODIFIER
 
 gc = CyGlobalContext()
 
@@ -23,11 +24,17 @@ gc = CyGlobalContext()
 @handler("GameStart")
 def setup():
     set_starting_turns()
+    set_tech_timeline_date()
 
 
 def set_starting_turns():
     for civ in civilizations().drop(Civ.BARBARIAN):
         gc.setStartingTurn(civ.id, civ.date.birth)
+
+
+def set_tech_timeline_date():
+    for tech, turn in TIMELINE_TECH_MODIFIER:
+        gc.setTimelineTechDateForTech(tech, year(turn))
 
 
 def set_starting_gold():
