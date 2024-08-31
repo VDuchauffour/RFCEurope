@@ -12,27 +12,6 @@ gc = CyGlobalContext()
 
 @handler("GameStart")
 def setup():
-    reset_stored_data()
-    misc()
-
-
-@handler("OnPreSave")
-def save_data():
-    data.save()
-
-
-# Don't work before apply before GameStart, therefore load barbs data isn't possible
-# TODO rewrite the StoredData
-# @handler("OnLoad")
-# def load_data(args):
-#     data.load()
-
-
-def reset_stored_data():
-    data.setup()
-
-
-def misc():
     # Absinthe: generate and store randomized turn modifiers
     data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
     data.lEventRandomness[iByzantiumVikingAttack] = rand(10)

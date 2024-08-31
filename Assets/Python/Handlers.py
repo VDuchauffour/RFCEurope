@@ -1,5 +1,5 @@
 # ruff: noqa: F401
-
+import Init
 import ScreenHandler
 
 import CityNameManager
@@ -30,5 +30,3 @@ import Stability
 import UniquePowers
 import Victory
 import Wonders
-
-Locations.init()
