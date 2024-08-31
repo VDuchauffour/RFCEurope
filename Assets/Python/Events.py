@@ -17,3 +17,15 @@ def handler(event):
         return handler_func
 
     return handler_decorator
+
+
+def noop(*args, **kwargs):
+    pass
+
+
+def popup_handler(event_id):
+    def handler_decorator(func):
+        events.addCustomEvent(event_id, func.__name__, func, noop)
+        return func
+
+    return handler_decorator

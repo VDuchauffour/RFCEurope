@@ -82,7 +82,7 @@ from CoreTypes import (
     Unit,
 )
 from Wonders import leaning_tower_effect_1200AD
-from Events import handler
+from Events import handler, popup_handler
 
 gc = CyGlobalContext()
 
@@ -297,7 +297,8 @@ def newCivPopup(iCiv):
     setNewCiv(iCiv)
 
 
-def eventApply7614(popupReturn):
+@popup_handler(7614)
+def RiseAndFallPopupEvent(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:  # 1st button
         iOldHandicap = gc.getActivePlayer().getHandicapType()
         iNewCiv = getNewCiv()
@@ -339,7 +340,8 @@ def flipPopup(iNewCiv, tTopLeft, tBottomRight):
     setTempBottomRight(tBottomRight)
 
 
-def eventApply7615(popupReturn):
+@popup_handler(7615)
+def FlipPopupEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     tTopLeft = getTempTopLeft()
     tBottomRight = getTempBottomRight()
@@ -410,8 +412,9 @@ def eventApply7615(popupReturn):
                     initBetrayal()
 
 
-# resurrection when some human controlled cities are also included
-def eventApply7622(popupReturn):
+@popup_handler(7622)
+def ResurrectionEvent(playerID, netUserData, popupReturn):
+    # resurrection when some human controlled cities are also included
     iHuman = human()
     iRebelCiv = getRebelCiv()
     iChoice = popupReturn.getButtonClicked()

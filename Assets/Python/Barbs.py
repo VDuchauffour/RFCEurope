@@ -16,7 +16,7 @@ from Core import (
     plots,
 )
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
-from Events import handler
+from Events import handler, popup_handler
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 from RFCUtils import (
     cultureManager,
@@ -3455,7 +3455,8 @@ def doRevoltAI(iPlayer, iGameTurn, lNation, iRevoltIndex):
             flipUnitsInCityAfter(getTempFlippingCity(), iNewCiv)
 
 
-def eventApply7627(popupReturn):
+@popup_handler(7627)
+def CounterReformationEvent(playerID, netUserData, popupReturn):
     iDecision = popupReturn.getButtonClicked()
     iNationIndex, iRevoltIndex = getNationRevoltIndex()
     lNation = lMinorNations[iNationIndex]

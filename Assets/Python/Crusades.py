@@ -20,7 +20,7 @@ from Core import (
     plots,
     units,
 )
-from Events import handler
+from Events import handler, popup_handler
 from PyUtils import percentage, percentage_chance, rand, choice
 from ProvinceMapData import PROVINCES_MAP
 from CityNameManager import lookupName
@@ -596,7 +596,8 @@ def anyParticipate():
     return False
 
 
-def eventApply7616(popupReturn):
+@popup_handler(7616)
+def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     if popupReturn.getButtonClicked() == 0:
         setParticipate(True)
@@ -669,14 +670,16 @@ def eventApply7616(popupReturn):
         gc.getPlayer(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1)
 
 
-def eventApply7618(popupReturn):
+@popup_handler(7618)
+def HumanVotePopup(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:
         setVotesGatheredFavorite(getVotesGatheredFavorite() + getVotingPower(human()))
     else:
         setVotesGatheredPowerful(getVotesGatheredPowerful() + getVotingPower(human()))
 
 
-def eventApply7619(popupReturn):
+@popup_handler(7619)
+def HumanDeviate(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:
         player().changeGold(-player().getGold() / 3)
         setLeader(human())
@@ -687,7 +690,8 @@ def eventApply7619(popupReturn):
         startCrusade()
 
 
-def eventApply7620(popupReturn):
+@popup_handler(7620)
+def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
     iDecision = popupReturn.getButtonClicked()
     if iDecision == 0:
         setTarget(*CITIES[City.JERUSALEM])
@@ -1730,14 +1734,12 @@ def callDefensiveCrusadeAI(iPlayer):
     player(iPlayer).changeFaith(-min(2, player(iPlayer).getFaith()))
 
 
-def eventApply7625(popupReturn):
+@popup_handler(7625)
+def DefensiveCrusadeEvent(playerID, netUserData, popupReturn):
     iDecision = popupReturn.getButtonClicked()
     if iDecision == 0:
         makeDefensiveCrusadeUnits(human())
         player().changeFaith(-min(2, player().getFaith()))
-    # else:
-    # #pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
-    # pass
 
 
 def makeDefensiveCrusadeUnits(iPlayer):

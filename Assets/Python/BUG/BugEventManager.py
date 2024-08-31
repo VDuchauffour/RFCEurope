@@ -202,6 +202,9 @@ class BugEventManager(CvEventManager.CvEventManager):
 
         self.CustomEvents = {}
 
+    def addCustomEvent(self, iCustomEventID, eventName, applyFunction, beginFunction):
+        self.CustomEvents[iCustomEventID] = (eventName, applyFunction, beginFunction)
+
     def setLogging(self, logging):
         if logging is not None:
             self.logging = bool(logging)

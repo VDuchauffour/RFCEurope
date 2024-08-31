@@ -41,7 +41,7 @@ from ReligionData import RELIGIOUS_BUILDINGS
 from StoredData import data
 from PyUtils import choice, percentage, percentage_chance, rand
 from ReligionData import RELIGIOUS_WONDERS
-from Events import handler
+from Events import handler, popup_handler
 import UniquePowers
 
 gc = CyGlobalContext()
@@ -769,9 +769,10 @@ def showFreeRevolutionPopup(iPlayer, religionList):
     popup.launch(False)
 
 
-# Absinthe: event of the free religion change popup
-def eventApply7629(playerID, popupReturn):
+@popup_handler(7629)
+def FreeReligiousRevolutionEvent(playerID, netUserData, popupReturn):
     """Free religious revolution."""
+    # Absinthe: event of the free religion change popup
     # the last option is the no change option
     player(playerID).convertForFree(data.lReligionChoices[popupReturn.getButtonClicked()])
 
@@ -779,7 +780,8 @@ def eventApply7629(playerID, popupReturn):
 # REFORMATION
 
 
-def eventApply7624(popupReturn):
+@popup_handler(7624)
+def ReformationEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     if popupReturn.getButtonClicked() == 0:
         reformationyes(iHuman)
@@ -1114,7 +1116,8 @@ def showCounterPopup(popupID, title, message, labels):
     popup.launch(False)
 
 
-def eventApply7626(popupReturn):
+@popup_handler(7626)
+def CounterReformationEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     if popupReturn.getButtonClicked() == 0:
         doCounterReformationYes(iHuman)
@@ -1122,7 +1125,8 @@ def eventApply7626(popupReturn):
         doCounterReformationNo(iHuman)
 
 
-def eventApply7628(popupReturn):  # Absinthe: persecution popup
+@popup_handler(7628)
+def PersecutionEvent(playerID, netUserData, popupReturn):
     """Persecution popup event."""
     iPlotX, iPlotY, iUnitID = data.lPersecutionData
     iChosenReligion = data.lPersecutionReligions[popupReturn.getButtonClicked()]
