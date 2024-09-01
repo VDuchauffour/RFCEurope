@@ -376,6 +376,11 @@ def initVotePopup():
         )
 
 
+@popup_handler(7617)
+def event7617(playerID, netUserData, popupReturn):
+    pass
+
+
 def informLeaderPopup():
     event_popup(
         7617,
@@ -383,6 +388,14 @@ def informLeaderPopup():
         player(getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
         [text("TXT_KEY_CRUSADE_OK")],
     )
+
+
+@popup_handler(7618)
+def HumanVotePopup(playerID, netUserData, popupReturn):
+    if popupReturn.getButtonClicked() == 0:
+        setVotesGatheredFavorite(getVotesGatheredFavorite() + getVotingPower(human()))
+    else:
+        setVotesGatheredPowerful(getVotesGatheredPowerful() + getVotingPower(human()))
 
 
 def voteHumanPopup():
@@ -406,6 +419,18 @@ def voteHumanPopup():
     )
 
 
+@popup_handler(7619)
+def HumanDeviate(playerID, netUserData, popupReturn):
+    if popupReturn.getButtonClicked() == 0:
+        player().changeGold(-player().getGold() / 3)
+        setLeader(human())
+        setCrusadePower(getCrusadePower() / 2)
+        deviateNewTargetPopup()
+    else:
+        setTarget(*CITIES[City.JERUSALEM])
+        startCrusade()
+
+
 def deviateHumanPopup():
     iCost = gc.getPlayer(human()).getGold() / 3
     sString = (
@@ -425,6 +450,25 @@ def deviateHumanPopup():
         sString,
         [text("TXT_KEY_CRUSADE_DECIDE_WEALTH"), text("TXT_KEY_CRUSADE_DECIDE_FAITH")],
     )
+
+
+@popup_handler(7620)
+def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
+    iDecision = popupReturn.getButtonClicked()
+    if iDecision == 0:
+        setTarget(*CITIES[City.JERUSALEM])
+        startCrusade()
+        return
+    iTargets = 0
+    for i in civilizations().majors().ids():
+        if getIsTarget(i):
+            iTargets += 1
+        if iTargets == iDecision:
+            pTargetCity = gc.getPlayer(i).getCapitalCity()
+            setTarget(pTargetCity.getX(), pTargetCity.getY())
+            iDecision = -2
+
+    startCrusade()
 
 
 def deviateNewTargetPopup():
@@ -454,6 +498,11 @@ def deviateNewTargetPopup():
                 + ")"
             )
     event_popup(7620, text("TXT_KEY_CRUSADE_CORRUPT"), text("TXT_KEY_CRUSADE_TARGET"), lTargetList)
+
+
+@popup_handler(7621)
+def event7621(playerID, netUserData, popupReturn):
+    pass
 
 
 def underCrusadeAttackPopup(sCityName, iLeader):
@@ -668,45 +717,6 @@ def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
         pPope.changeGold(iBribe)
         pPlayer.changeGold(-iBribe)
         gc.getPlayer(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1)
-
-
-@popup_handler(7618)
-def HumanVotePopup(playerID, netUserData, popupReturn):
-    if popupReturn.getButtonClicked() == 0:
-        setVotesGatheredFavorite(getVotesGatheredFavorite() + getVotingPower(human()))
-    else:
-        setVotesGatheredPowerful(getVotesGatheredPowerful() + getVotingPower(human()))
-
-
-@popup_handler(7619)
-def HumanDeviate(playerID, netUserData, popupReturn):
-    if popupReturn.getButtonClicked() == 0:
-        player().changeGold(-player().getGold() / 3)
-        setLeader(human())
-        setCrusadePower(getCrusadePower() / 2)
-        deviateNewTargetPopup()
-    else:
-        setTarget(*CITIES[City.JERUSALEM])
-        startCrusade()
-
-
-@popup_handler(7620)
-def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
-    iDecision = popupReturn.getButtonClicked()
-    if iDecision == 0:
-        setTarget(*CITIES[City.JERUSALEM])
-        startCrusade()
-        return
-    iTargets = 0
-    for i in civilizations().majors().ids():
-        if getIsTarget(i):
-            iTargets += 1
-        if iTargets == iDecision:
-            pTargetCity = gc.getPlayer(i).getCapitalCity()
-            setTarget(pTargetCity.getX(), pTargetCity.getY())
-            iDecision = -2
-
-    startCrusade()
 
 
 def doParticipation(iGameTurn):
@@ -1710,6 +1720,14 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
     return False
 
 
+@popup_handler(7625)
+def DefensiveCrusadeEvent(playerID, netUserData, popupReturn):
+    iDecision = popupReturn.getButtonClicked()
+    if iDecision == 0:
+        makeDefensiveCrusadeUnits(human())
+        player().changeFaith(-min(2, player().getFaith()))
+
+
 def callDefensiveCrusadeHuman():
     event_popup(
         7625,
@@ -1732,14 +1750,6 @@ def callDefensiveCrusadeAI(iPlayer):
             message(human(), sText, force=True, color=MessageData.LIGHT_RED)
     makeDefensiveCrusadeUnits(iPlayer)
     player(iPlayer).changeFaith(-min(2, player(iPlayer).getFaith()))
-
-
-@popup_handler(7625)
-def DefensiveCrusadeEvent(playerID, netUserData, popupReturn):
-    iDecision = popupReturn.getButtonClicked()
-    if iDecision == 0:
-        makeDefensiveCrusadeUnits(human())
-        player().changeFaith(-min(2, player().getFaith()))
 
 
 def makeDefensiveCrusadeUnits(iPlayer):

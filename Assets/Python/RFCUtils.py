@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from Core import (
+    event_popup,
     get_scenario,
     city,
     civilization,
@@ -44,7 +45,6 @@ from CoreTypes import (
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES
-import Popup
 from PyUtils import percentage, percentage_chance, rand
 from ReligionData import RELIGION_PERSECUTION_ORDER
 from SettlerMapData import SETTLERS_MAP
@@ -995,19 +995,17 @@ def collapseImmune(iCiv):
     return False
 
 
-# Absinthe: chooseable persecution popup
 def showPersecutionPopup():
     """Asks the human player to select a religion to persecute."""
-
-    popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
-    popup.setHeaderString("Religious Persecution")
-    popup.setBodyString("Choose a religious minority to deal with...")
+    labels = []
     for iReligion in data.lPersecutionReligions:
         strIcon = gc.getReligionInfo(iReligion).getType()
         strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
         strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())
-        popup.addButton(strButtonText)
-    popup.launch(False)
+        labels.append(strButtonText)
+    event_popup(
+        7628, "Religious Persecution", "Choose a religious minority to deal with...", labels
+    )
 
 
 # Absinthe: persecution
