@@ -710,8 +710,7 @@ def checkTurn(iGameTurn):
 
 
 @handler("playerChangeStateReligion")
-def onPlayerChangeStateReligion(argsList):
-    iPlayer, iNewReligion, iOldReligion = argsList
+def onPlayerChangeStateReligion(iPlayer, iNewReligion, iOldReligion):
     if iPlayer < civilizations().majors().len():
         for city in cities().owner(iPlayer).entities():
             for iCompany in companies.ids():
