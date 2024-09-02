@@ -661,7 +661,7 @@ def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
         )
         gc.getPlayer(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2)
         # Absinthe: some units from Chivalric Orders might leave you nevertheless
-        for pUnit in units().owner(iHuman).entities():
+        for pUnit in units.owner(iHuman).entities():
             iUnitType = pUnit.getUnitType()
             if iUnitType in [
                 Unit.KNIGHT_OF_ST_JOHNS,
@@ -1270,8 +1270,7 @@ def crusadeArrival(iActiveCrusade):
     lFreeLandPlots = []
     lLandPlots = []
     for plot in (
-        plots()
-        .surrounding((iTX, iTY))
+        plots.surrounding((iTX, iTY))
         .filter(lambda p: (p.isHills() or p.isFlatlands()) and not p.isCity())
         .entities()
     ):
@@ -1489,7 +1488,7 @@ def freeCrusaders(iPlayer):
         iPrevGameTurn
     )  # Absinthe: the Crusader units are called back before the next Crusade is initialized
     iHuman = human()
-    for pUnit in units().owner(iPlayer).entities():
+    for pUnit in units.owner(iPlayer).entities():
         if pUnit.getMercID() == (
             -5 - iActiveCrusade
         ):  # Absinthe: so this is a Crusader Unit of the active Crusade
@@ -1627,7 +1626,7 @@ def success(iPlayer):
     if not hasSucceeded():
         pPlayer.changeGoldenAgeTurns(gc.getPlayer(iPlayer).getGoldenAgeLength())
         setSucceeded()
-        for plot in plots().surrounding(CITIES[City.JERUSALEM]).entities():
+        for plot in plots.surrounding(CITIES[City.JERUSALEM]).entities():
             convertPlotCulture(plot, iPlayer, 100, False)
 
 
@@ -1714,7 +1713,7 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
         ):
             if isOrMasterChristian(iEnemy):
                 continue
-            for pCity in cities().owner(iEnemy).entities():
+            for pCity in cities.owner(iEnemy).entities():
                 if PROVINCES_MAP[pCity.getY()][pCity.getX()] in tPlayerDCMap:
                     return True
     return False
@@ -1762,7 +1761,7 @@ def makeDefensiveCrusadeUnits(iPlayer):
         iX = pCapital.getX()
         iY = pCapital.getY()
     else:
-        city = cities().owner(iPlayer).random_entry()
+        city = cities.owner(iPlayer).random_entry()
         if city is not None:
             iX = city.getX()
             iY = city.getY()

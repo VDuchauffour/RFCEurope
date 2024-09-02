@@ -82,8 +82,7 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
             tile_max = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX]
 
             for city in (
-                plots()
-                .rectangle(tile_min, tile_max)
+                plots.rectangle(tile_min, tile_max)
                 .filter(
                     lambda p: p
                     not in civilization(iDeadCiv).location.area[AreaType.NORMAL][
@@ -395,7 +394,7 @@ def resurectCiv(iDeadCiv):
 
 
 def moveBackCapital(iCiv):
-    cityList = cities().owner(iCiv).entities()
+    cityList = cities.owner(iCiv).entities()
     tiles = civilization(iCiv).location.get(
         lambda c: c.new_capital, [civilization(iCiv).location.capital]
     )
@@ -440,15 +439,14 @@ def convertBackCulture(iCiv):
     # Sedna17: restored to be normal areas, not core
     # collect all the cities in the region
     for city in (
-        plots()
-        .rectangle(
+        plots.rectangle(
             civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MIN],
             civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MAX],
         )
         .cities()
         .entities()
     ):
-        for plot in plots().surrounding(location(city)).entities():
+        for plot in plots.surrounding(location(city)).entities():
             iCivCulture = plot.getCulture(iCiv)
             iLoopCivCulture = 0
             for civ in civilizations().minors().ids():

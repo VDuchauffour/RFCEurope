@@ -226,7 +226,7 @@ def checkGrid(iCiv):
         if pLoopPlayer.isAlive() and pTeam.isHasMet(iLoopTeam):
             lTargetCivs[iLoopPlayer] = 1
 
-    for plot in plots().all().not_owner(iCiv).not_owner(Civ.BARBARIAN).entities():
+    for plot in plots.all().not_owner(iCiv).not_owner(Civ.BARBARIAN).entities():
         if lTargetCivs[plot.getOwner()] > 0:
             iValue = get_data_from_upside_down_map(WARS_MAP, iCiv, plot)
             if plot.getOwner() in INDEPENDENT_CIVS:

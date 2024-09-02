@@ -237,7 +237,7 @@ def spread_religion_on_city_built(city):
 @handler("religionFounded")
 def onReligionFounded(iReligion, iFounder):
     if iReligion != Religion.JUDAISM:
-        for city in cities().owner(iFounder).entities():
+        for city in cities.owner(iFounder).entities():
             if city.isHolyCityByType(
                 iReligion
             ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
@@ -345,7 +345,7 @@ def checkTurn(iGameTurn):
     # General 6% chance to spread Jews to a random city in every third turn
     if year(800) < iGameTurn < year(1700) and iGameTurn % 3 == 0:
         if percentage_chance(6, strict=True):
-            tCity = cities().all().random_entry()
+            tCity = cities.all().random_entry()
             if tCity is not None:
                 spreadReligion(tCity, Religion.JUDAISM)
 
@@ -604,7 +604,7 @@ def onBuildingBuilt(city, building_type):
     if iStateReligion != Religion.JUDAISM and building_type == Wonder.KAZIMIERZ:
         pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
         # Kazimierz tries to spread Judaism to a couple new cities
-        cityList = cities().owner(pPlayer).entities()
+        cityList = cities.owner(pPlayer).entities()
         iJewCityNum = int(max((len(cityList) + 2) / 3 + 1, 3))
         # number of tries are based on number of cities, but at least 3
         for i in range(iJewCityNum):
@@ -622,7 +622,7 @@ def selectRandomCityRegion(tProvinces, iReligionToSpread, bNoSpreadWithReligion=
     for iPlayer in civilizations().ids():
         if not gc.getPlayer(iPlayer).isAlive():
             continue
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             if PROVINCES_MAP[city.getY()][city.getX()] in tProvinces:
                 # do not try to spread to cities which already have the desired religion
                 if not city.isHasReligion(iReligionToSpread):
@@ -654,7 +654,7 @@ def spreadReligion(tPlot, iReligion):
 
 def buildInRandomCity(iPlayer, iBuilding, iReligion):
     cityList = []
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         if not city.hasBuilding(iBuilding) and city.isHasReligion(iReligion):
             cityList.append(city)
     if cityList:
@@ -707,7 +707,7 @@ def onPlayerChangeAllCivics(
                 if iPlayer == human():
                     # check the available religions
                     religionList = []
-                    for city in cities().owner(iPlayer).entities():
+                    for city in cities.owner(iPlayer).entities():
                         for iReligion in range(gc.getNumReligionInfos()):
                             if iReligion not in religionList:
                                 if city.isHasReligion(iReligion):
@@ -731,7 +731,7 @@ def onPlayerChangeAllCivics(
                     for iReligion in range(gc.getNumReligionInfos()):
                         iReligionPoint = 0
                         # check cities for religions and holy cities
-                        for city in cities().owner(iPlayer).entities():
+                        for city in cities.owner(iPlayer).entities():
                             if city.isHasReligion(iReligion):
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
@@ -864,13 +864,13 @@ def reformationchoice(iCiv):
 
 def reformationyes(iCiv):
     iFaith = 0
-    for city in cities().owner(iCiv).entities():
+    for city in cities.owner(iCiv).entities():
         if city.isHasReligion(Religion.CATHOLICISM):
             iFaith += reformationReformCity(city, iCiv)
 
     # disband catholic missionaries of the AI civs on reformation
     if iCiv != human():
-        for pUnit in units().owner(iCiv).entities():
+        for pUnit in units.owner(iCiv).entities():
             iUnitType = pUnit.getUnitType()
             if iUnitType == Unit.CATHOLIC_MISSIONARY:
                 pUnit.kill(0, -1)
@@ -886,7 +886,7 @@ def reformationyes(iCiv):
 def reformationno(iCiv):
     iLostFaith = 0
     pPlayer = gc.getPlayer(iCiv)
-    for city in cities().owner(iCiv).entities():
+    for city in cities.owner(iCiv).entities():
         if city.isHasReligion(Religion.CATHOLICISM) and not city.isHasReligion(
             Religion.PROTESTANTISM
         ):
@@ -907,7 +907,7 @@ def reformationno(iCiv):
 
 
 def reformationOther(iCiv):
-    for city in cities().owner(iCiv).entities():
+    for city in cities.owner(iCiv).entities():
         if city.isHasReligion(Religion.CATHOLICISM):
             reformationOtherCity(city, iCiv)
 
@@ -1140,7 +1140,7 @@ def doCounterReformationYes(iPlayer):
     iY = pCapital.getY()
     if not pCapital.isNone():
         if pPlayer.getNumCities() > 0:
-            pCapital = cities().owner(iPlayer).random_entry()
+            pCapital = cities.owner(iPlayer).random_entry()
             iX = pCapital.getX()
             iY = pCapital.getY()
         else:
@@ -1159,7 +1159,7 @@ def doCounterReformationYes(iPlayer):
         civ = civilization(neighbour)
         if civ.is_alive() and civ.is_protestant():
             if not civ.player.getCapitalCity().isNone() and civ.player.getNumCities() > 0:
-                capital = cities().owner(neighbour).random_entry()
+                capital = cities.owner(neighbour).random_entry()
             else:
                 return
 
@@ -1227,7 +1227,7 @@ def migrateJews(iPlayer):
 
     lCityList = [
         city
-        for city in cities().owner(iPlayer).entities()
+        for city in cities.owner(iPlayer).entities()
         if not city.isHasReligion(Religion.JUDAISM)
     ]
 

@@ -154,7 +154,7 @@ def set_initial_contacts(iCiv, bMeet=True):
 
 
 def reveal_rectangle(iCiv, area):
-    for plot in plots().rectangle(area[Area.TILE_MIN], area[Area.TILE_MAX]).entities():
+    for plot in plots.rectangle(area[Area.TILE_MIN], area[Area.TILE_MAX]).entities():
         plot.setRevealed(teamtype(iCiv), True, False, -1)
 
 

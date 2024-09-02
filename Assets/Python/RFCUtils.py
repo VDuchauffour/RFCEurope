@@ -145,7 +145,7 @@ def isMortalUnit(unit):
 
 # AIWars
 def checkUnitsInEnemyTerritory(iCiv1, iCiv2):
-    unitList = units().owner(iCiv1).entities()
+    unitList = units.owner(iCiv1).entities()
     if unitList:
         for unit in unitList:
             iX = unit.getX()
@@ -200,7 +200,7 @@ def restorePeaceHuman(iMinorCiv):
 # AIWars
 def minorWars(iMinorCiv, iGameTurn):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-    for city in cities().owner(iMinorCiv).entities():
+    for city in cities.owner(iMinorCiv).entities():
         x = city.getX()
         y = city.getY()
         for iActiveCiv in civilizations().majors().ids():
@@ -229,7 +229,7 @@ def minorWars(iMinorCiv, iGameTurn):
 # Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
 def minorCoreWars(iMinorCiv, iGameTurn):
     teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-    for city in cities().owner(iMinorCiv).entities():
+    for city in cities.owner(iMinorCiv).entities():
         x = city.getX()
         y = city.getY()
         for iActiveCiv in civilizations().majors().ids():
@@ -383,7 +383,7 @@ def flipUnitsInCityAfter(tCityPlot, iCiv):
 
 
 def killAllUnitsInArea(tTopLeft, tBottomRight):
-    for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+    for plot in plots.rectangle(tTopLeft, tBottomRight).entities():
         iNumUnitsInAPlot = plot.getNumUnits()
         if iNumUnitsInAPlot > 0:
             for i in range(iNumUnitsInAPlot):
@@ -419,7 +419,7 @@ def flipUnitsInArea(tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity,
         for i in range(iNumUnitsInAPlot):
             unit = killPlot.getUnit(0)
             unit.kill(False, Civ.BARBARIAN)
-    for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+    for plot in plots.rectangle(tTopLeft, tBottomRight).entities():
         iNumUnitsInAPlot = plot.getNumUnits()
         if iNumUnitsInAPlot > 0:
             bRevealedZero = False
@@ -528,7 +528,7 @@ def flipCity(tCityPlot, bConquest, bKillUnits, iNewOwner, lOldOwners):
         if not lOldOwners or iOldOwner in lOldOwners:
 
             if bKillUnits:
-                for unit in units().at(x, y).filter(lambda unit: not unit.isCargo()).entities():
+                for unit in units.at(x, y).filter(lambda unit: not unit.isCargo()).entities():
                     unit.kill(False, iNewOwner)
 
             pNewOwner.acquireCity(flipCity, bConquest, not bConquest)
@@ -599,7 +599,7 @@ def cultureManager(
     # halve barbarian culture in a broader area
     if bBarbarian2x2Decay or bBarbarian2x2Conversion:
         if iNewOwner not in MINOR_CIVS:
-            for plot in plots().surrounding(tCityPlot, radius=2).entities():
+            for plot in plots.surrounding(tCityPlot, radius=2).entities():
                 for iMinor in MINOR_CIVS:
                     iPlotMinorCulture = plot.getCulture(iMinor)
                     if iPlotMinorCulture > 0:
@@ -612,7 +612,7 @@ def cultureManager(
                                 plot.changeCulture(iNewOwner, iPlotMinorCulture, True)
 
     # plot
-    for plot in plots().surrounding(tCityPlot).entities():
+    for plot in plots.surrounding(tCityPlot).entities():
         iCurrentPlotCulture = plot.getCulture(iOldOwner)
 
         if plot.isCity():
@@ -641,7 +641,7 @@ def cultureManager(
 # RFCEventHandler
 def spreadMajorCulture(iMajorCiv, iX, iY):
     # Absinthe: spread some of the major civ's culture to the nearby indy cities
-    for city in plots().surrounding((iX, iY), radius=4).cities().entities():
+    for city in plots.surrounding((iX, iY), radius=4).cities().entities():
         previous_owner = city.getPreviousOwner()
         if previous_owner in MINOR_CIVS:
             iDen = 25
@@ -685,7 +685,7 @@ def convertPlotCulture(pCurrent, iCiv, iPercent, bOwner):
 def pushOutGarrisons(tCityPlot, iOldOwner):
     tDestination = (-1, -1)
     for plot in (
-        plots().surrounding(tCityPlot, radius=2).passable().land().owner(iOldOwner).entities()
+        plots.surrounding(tCityPlot, radius=2).passable().land().owner(iOldOwner).entities()
     ):
         tDestination = location(plot)
         break
@@ -704,12 +704,12 @@ def pushOutGarrisons(tCityPlot, iOldOwner):
 # RiseAndFall
 def relocateSeaGarrisons(tCityPlot, iOldOwner):
     tDestination = (-1, -1)
-    for city in cities().owner(iOldOwner).entities():
+    for city in cities.owner(iOldOwner).entities():
         if city.isCoastalOld():
             tDestination = (city.getX(), city.getY())
             break
     if tDestination == (-1, -1):
-        for plot in plots().surrounding(tCityPlot, radius=12).water().entities():
+        for plot in plots.surrounding(tCityPlot, radius=12).water().entities():
             tDestination = location(plot)
             break
     if tDestination != (-1, -1):
@@ -750,7 +750,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
     clearPlague(iCiv)
     iNumLoyalCities = 0
     iCounter = rand(6)
-    for city in cities().owner(iCiv).entities():
+    for city in cities.owner(iCiv).entities():
         tCoords = (city.getX(), city.getY())
         iX, iY = tCoords
         pCurrent = gc.getMap().plot(iX, iY)
@@ -831,7 +831,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
             flipUnitsInArea((iX - 1, iY - 1), (iX + 1, iY + 1), iNewCiv, iCiv, False, True)
     if not bAssignOneCity:
         # flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
-        for unit in units().owner(iCiv).entities():
+        for unit in units.owner(iCiv).entities():
             unit.kill(False, Civ.BARBARIAN)
         resetUHV(iCiv)
 
@@ -852,7 +852,7 @@ def resetUHV(iPlayer):
 
 
 def clearPlague(iCiv):
-    for city in cities().owner(iCiv).building(PlagueType.PLAGUE).entities():
+    for city in cities.owner(iCiv).building(PlagueType.PLAGUE).entities():
         city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
 
@@ -876,7 +876,7 @@ def getMaster(iCiv):
 def squareSearch(tTopLeft, tBottomRight, function, argsList):  # by LOQ
     """Searches all tiles in the square from tTopLeft to tBottomRight and calls function for every tile, passing argsList."""
     tPaintedList = []
-    for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+    for plot in plots.rectangle(tTopLeft, tBottomRight).entities():
         bPaintPlot = function(location(plot), argsList)
         if bPaintPlot:
             tPaintedList.append(location(plot))
@@ -910,7 +910,7 @@ def outerSeaSpawn(tCoords, argsList):
     if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST:
         if not pCurrent.isUnit():
             if pCurrent.countTotalCulture() == 0:
-                for plot in plots().surrounding(tCoords).entities():
+                for plot in plots.surrounding(tCoords).entities():
                     if plot.isUnit():
                         return False
                 return True
@@ -922,7 +922,7 @@ def innerSeaSpawn(tCoords, argsList):
     pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
     if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST:
         if not pCurrent.isUnit():
-            for plot in plots().surrounding(tCoords).entities():
+            for plot in plots.surrounding(tCoords).entities():
                 if plot.isUnit():
                     return False
             return True
@@ -936,7 +936,7 @@ def outerSpawn(tCoords, argsList):
         if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 if pCurrent.countTotalCulture() == 0:
-                    for plot in plots().surrounding(tCoords).entities():
+                    for plot in plots.surrounding(tCoords).entities():
                         if plot.isUnit():
                             return False
                     return True
@@ -950,7 +950,7 @@ def innerSpawn(tCoords, argsList):
         if pCurrent.getFeatureType() not in [Feature.MARSH, Feature.JUNGLE]:
             if not pCurrent.isCity() and not pCurrent.isUnit():
                 if pCurrent.getOwner() in argsList:
-                    for plot in plots().surrounding(tCoords).entities():
+                    for plot in plots.surrounding(tCoords).entities():
                         if plot.isUnit():
                             return False
                     return True
@@ -1132,7 +1132,7 @@ def prosecute(iPlotX, iPlotY, iUnitID, iReligion=-1):
         # Jews may spread to another random city
         if iReligion == Religion.JUDAISM:
             if percentage_chance(80, strict=True):
-                pSpreadCity = cities().majors().random_entry()
+                pSpreadCity = cities.majors().random_entry()
                 spreadJews(location(pSpreadCity), Religion.JUDAISM)
                 if pSpreadCity.getOwner() == iOwner:
                     message(
@@ -1440,7 +1440,7 @@ def StabilityOverlayCiv(iChoice):
             iMaxTextWidth = iTextWidth
 
     # apply the highlight
-    for plot in plots().all().land().entities():
+    for plot in plots.all().land().entities():
         if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
             if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 szColor = "COLOR_GREY"
@@ -1522,7 +1522,7 @@ def getMostAdvancedCiv():
 
 
 def getNumberCargoShips(iPlayer):
-    return units().owner(iPlayer).filter(lambda u: u.cargoSpace() > 0).len()
+    return units.owner(iPlayer).filter(lambda u: u.cargoSpace() > 0).len()
 
 
 def isWonder(iBuilding):

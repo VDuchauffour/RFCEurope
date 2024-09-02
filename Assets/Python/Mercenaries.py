@@ -2841,7 +2841,7 @@ def addNewMerc(iMerc):
             )
         else:
             # Absinthe: normal message
-            for city in cities().owner(iHuman).entities():
+            for city in cities.owner(iHuman).entities():
                 if city.getProvince() == iCurrentProvince:
                     if city.getCultureLevel() >= 2:
                         szProvName = "TXT_KEY_PROVINCE_NAME_%i" % iCurrentProvince
@@ -2948,7 +2948,7 @@ def desertMercs(iPlayer):
     message_if_human(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
 
     while True:
-        lHiredMercs = units().owner(iPlayer).mercenaries().entities()
+        lHiredMercs = units.owner(iPlayer).mercenaries().entities()
         if lHiredMercs:
             fireMerc(choice(lHiredMercs))
         else:
@@ -3131,7 +3131,7 @@ def processMercAI(iPlayer):
 
 def FireMercAI(iPlayer):
     iGameTurn = turn()
-    lMercs = units().owner(iPlayer).mercenaries().entities()
+    lMercs = units.owner(iPlayer).mercenaries().entities()
 
     if lMercs:
         # we have mercs, so fire someone
@@ -3203,7 +3203,7 @@ def getNumDefendersAtPlot(pPlot):
 
 def getOwnedProvinces(iPlayer):
     lProvList = []  # all available cities that the Merc can appear in
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         iProvince = city.getProvince()
         if iProvince not in lProvList:
             lProvList.append(iProvince)
@@ -3212,7 +3212,7 @@ def getOwnedProvinces(iPlayer):
 
 def getCulturedProvinces(iPlayer):
     lProvList = []  # all available cities that the Merc can appear in
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         iProvince = city.getProvince()
         if iProvince not in lProvList and city.getCultureLevel() >= 2:
             lProvList.append(iProvince)
@@ -3221,7 +3221,7 @@ def getCulturedProvinces(iPlayer):
 
 def playerMakeUpkeepSane(iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
-    lMercs = units().owner(iPlayer).mercenaries().entities()
+    lMercs = units.owner(iPlayer).mercenaries().entities()
 
     iTotalUpkeep = 0
     for pUnit in lMercs:
@@ -3281,7 +3281,7 @@ def hireMerc(lMerc, iPlayer):
         return
 
     lCityList = []  # all available cities that the Merc can appear in
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         if city.getProvince() == lMerc[4]:
             # Absinthe: note that naval mercs can appear in all coastal cities if we have enough culture in the province (at least one cultured enough city)
             iMercType = lMercList[lMerc[0]][0]

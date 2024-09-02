@@ -2817,7 +2817,7 @@ class CvVictoryScreen:
             Civ.INDEPENDENT_3,
             Civ.INDEPENDENT_4,
         ]:
-            for pCity in cities().owner(iIndyCiv).entities():
+            for pCity in cities.owner(iIndyCiv).entities():
                 pIndyCiv = gc.getPlayer(iIndyCiv)
                 iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
                 if pCity.getReligionCount() == 0:
@@ -2994,7 +2994,7 @@ class CvVictoryScreen:
         sText2 += self.getCompetition(iGenoaTrade, iOtherTrade, iBiggestTrader, sTextTmp, sUnit)
         # UHV3
         iBankCount = 0
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             if (
                 city.getNumRealBuilding(Building.BANK) > 0
                 or city.getNumRealBuilding(Building.GENOA_BANK) > 0

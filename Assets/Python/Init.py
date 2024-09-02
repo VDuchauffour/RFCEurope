@@ -28,7 +28,7 @@ def init_player_variables():
 
 
 def init_provinces():
-    # for plot in plots().all().filter(lambda p: get_data_from_province_map(p) > -1).entities():
+    # for plot in plots.all().filter(lambda p: get_data_from_province_map(p) > -1).entities():
     for y in range(WORLD_HEIGHT):
         for x in range(WORLD_WIDTH):
             if PROVINCES_MAP[y][x] > -1:

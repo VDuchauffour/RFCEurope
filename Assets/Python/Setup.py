@@ -48,26 +48,26 @@ def setup():
 
 def init_player_maps():
     for civ in civilizations().majors():
-        for plot in plots().all().entities():
+        for plot in plots.all().entities():
             x, y = location(plot)
             gc.setSettlersMap(civ.id, y, x, SETTLERS_MAP[civ.key][y][x])
             gc.setWarsMap(civ.id, y, x, WARS_MAP[civ.key][y][x])
 
 
 def update_province_id():
-    for plot in plots().all().entities():
+    for plot in plots.all().entities():
         plot.setProvinceID(get_data_from_province_map(plot))
 
 
 def update_city_name():
     for civ in civilizations().main():
-        for plot in plots().all().entities():
+        for plot in plots.all().entities():
             value = get_data_from_upside_down_map(CITIES_MAP, civ.id, plot)
             _plot(plot).setCityNameMap(civ.id, value)
 
 
 def update_lake_id():
-    for plot in plots().all().entities():
+    for plot in plots.all().entities():
         for name, locations in LAKE_LOCATIONS.items():
             if _location(plot) in locations:
                 value = name
@@ -123,7 +123,7 @@ def rename_cities_1200AD():
     #             some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
     #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
     if get_scenario() == Scenario.i1200AD:
-        for city in cities().owner(Civ.HUNGARY).entities():
+        for city in cities.owner(Civ.HUNGARY).entities():
             renameCities(city, Civ.HUNGARY)
 
 

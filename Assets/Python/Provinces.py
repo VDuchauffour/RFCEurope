@@ -63,7 +63,7 @@ def onCityAcquired(owner, iPlayer, city, bConquest, bTrade):
 
 def updatePotential(iPlayer):
     civ = civilization(iPlayer)
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         province = city.getProvince()
         if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
             civ.player.setProvinceType(province, ProvinceType.HISTORICAL)

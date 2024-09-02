@@ -37,7 +37,7 @@ def ottoman_up_2(iGameTurn, iPlayer):
         iStateReligion = pPlayer.getStateReligion()
 
         iNewPoints = 0
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             for iReligion in range(len(Religion)):
                 if iReligion != iStateReligion and city.isHasReligion(iReligion):
                     iNewPoints += city.getPopulation()
@@ -51,7 +51,7 @@ def ottoman_up_2(iGameTurn, iPlayer):
 
         iTotalPoints = iOldPoints + iNewPoints
         while iTotalPoints >= iNextJanissary:
-            pCity = cities().owner(iPlayer).random_entry()
+            pCity = cities.owner(iPlayer).random_entry()
             if pCity is not None:
                 iTotalPoints -= iNextJanissary
                 make_unit(iPlayer, Unit.JANISSARY, pCity)
@@ -147,7 +147,7 @@ def portugal_up_on_city_built(city):
 @handler("combatResult")
 def norway_up(winning_unit, losing_unit):
     if winning_unit.getOwner() == Civ.NORWAY and turn() < year(1066) + 2:
-        if infos().unit(losing_unit).getDomainType() == DomainTypes.DOMAIN_SEA:
+        if infos.unit(losing_unit).getDomainType() == DomainTypes.DOMAIN_SEA:
             if losing_unit.getUnitType() != Unit.WORKBOAT:
                 player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)
             else:
@@ -222,9 +222,7 @@ def getNumForeignCitiesOnBaltic(iPlayer, bVassal=False):
     # Count foreign coastal cities
     iCities = 0
     for start, end in lBalticRects:
-        for city in (
-            plots().rectangle(start, end).cities().coastal(5).not_owner(iPlayer).entities()
-        ):
+        for city in plots.rectangle(start, end).cities().coastal(5).not_owner(iPlayer).entities():
             if not bVassal or city.getOwner() != getMaster(city.getOwner()) != iPlayer:
                 iCities += 1
     return iCities
@@ -239,7 +237,7 @@ def confederationUP(iPlayer):
 
     # Collect all provinces
     cityProvinces = []
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         pProvince = city.getProvince()
         cityProvinces.append(pProvince)
     # Calculate unique provinces
@@ -305,7 +303,7 @@ def defianceUP(iPlayer):
             PolearmClass = getUniqueUnit(iPlayer, iUnit)
             break
 
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         # only in cities with at least 20% Scottish culture
         iTotalCulture = city.countTotalCultureTimes100()
         if iTotalCulture == 0 or (city.getCulture(iPlayer) * 10000) / iTotalCulture > 20:

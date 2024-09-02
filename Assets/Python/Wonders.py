@@ -58,7 +58,7 @@ def remove_lighthouse(iGameTurn):
     if iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
         for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
             bFound = 0
-            for city in cities().owner(iPlayer).entities():
+            for city in cities.owner(iPlayer).entities():
                 if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE):
                     city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE, False)
                     GLcity = city
@@ -343,7 +343,7 @@ def sistine_chapel_effect(city, building_type):
     iPlayer = city.getOwner()
     pPlayer = gc.getPlayer(iPlayer)
     if building_type == Wonder.SISTINE_CHAPEL:
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             if city.getNumWorldWonders() > 0:
                 city.changeFreeSpecialistCount(gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1)
     elif isWorldWonderClass(gc.getBuildingInfo(building_type).getBuildingClassType()):
@@ -358,12 +358,12 @@ def sistine_chapel_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bCo
     pPreviousOwner = gc.getPlayer(iPreviousOwner)
     pNewOwner = gc.getPlayer(iNewOwner)
     if pCity.getNumActiveBuilding(Wonder.SISTINE_CHAPEL):
-        for loopCity in cities().owner(iPreviousOwner).entities():
+        for loopCity in cities.owner(iPreviousOwner).entities():
             if loopCity.getNumWorldWonders() > 0:
                 loopCity.changeFreeSpecialistCount(
                     gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1
                 )
-        for loopCity in cities().owner(iNewOwner).entities():
+        for loopCity in cities.owner(iNewOwner).entities():
             if loopCity.getNumWorldWonders() > 0 and not loopCity.getNumActiveBuilding(
                 Wonder.SISTINE_CHAPEL
             ):
@@ -378,7 +378,7 @@ def sistine_chapel_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bCo
 @handler("cityRazed")
 def remove_sistine_chapel_effect_on_city_razed(city, iPlayer):
     if city.getNumActiveBuilding(Wonder.SISTINE_CHAPEL):
-        for loopCity in cities().owner(iPlayer).entities():
+        for loopCity in cities.owner(iPlayer).entities():
             if loopCity.getNumWorldWonders() > 0:
                 loopCity.changeFreeSpecialistCount(
                     gc.getInfoTypeForString("SPECIALIST_ARTIST"), -1
@@ -389,7 +389,7 @@ def remove_sistine_chapel_effect_on_city_razed(city, iPlayer):
 def jasna_gora_effect_on_building_built(city, building_type):
     iPlayer = city.getOwner()
     if building_type == Wonder.JASNA_GORA:
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             jasna_gora_effect(city)
 
 
@@ -407,9 +407,9 @@ def jasna_gora_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConque
     pNewOwner = gc.getPlayer(iNewOwner)
 
     if pCity.getNumActiveBuilding(Wonder.JASNA_GORA):
-        for city in cities().owner(iPreviousOwner).entities():
+        for city in cities.owner(iPreviousOwner).entities():
             remove_jasna_gora_effect(city)
-        for city in cities().owner(iNewOwner).entities():
+        for city in cities.owner(iNewOwner).entities():
             jasna_gora_effect(city)
     elif pPreviousOwner.countNumBuildings(Wonder.JASNA_GORA) > 0:
         remove_jasna_gora_effect(pCity)
@@ -420,7 +420,7 @@ def jasna_gora_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConque
 @handler("cityRazed")
 def remove_jasna_gora_effect_on_city_razed(city, iPlayer):
     if city.getNumActiveBuilding(Wonder.JASNA_GORA):
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             remove_jasna_gora_effect(city)
 
 
@@ -454,7 +454,7 @@ def _jasna_gora_effect(city, apply):
 def kizil_kule_effect_on_building_built(city, building_type):
     iPlayer = city.getOwner()
     if building_type == Wonder.KIZIL_KULE:
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             kizil_kule_effect(city)
 
 
@@ -471,9 +471,9 @@ def kizil_kule_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConque
     pPreviousOwner = gc.getPlayer(iPreviousOwner)
     pNewOwner = gc.getPlayer(iNewOwner)
     if pCity.getNumActiveBuilding(Wonder.KIZIL_KULE):
-        for _city in cities().owner(iPreviousOwner).entities():
+        for _city in cities.owner(iPreviousOwner).entities():
             remove_kizil_kule_effect(_city)
-        for _city in cities().owner(iNewOwner).entities():
+        for _city in cities.owner(iNewOwner).entities():
             kizil_kule_effect(_city)
     elif pPreviousOwner.countNumBuildings(Wonder.KIZIL_KULE) > 0:
         remove_kizil_kule_effect(pCity)
@@ -484,7 +484,7 @@ def kizil_kule_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConque
 @handler("cityRazed")
 def remove_kizil_kule_effect_on_city_razed(city, iPlayer):
     if city.getNumActiveBuilding(Wonder.KIZIL_KULE):
-        for _city in cities().owner(iPlayer).entities():
+        for _city in cities.owner(iPlayer).entities():
             remove_kizil_kule_effect(_city)
 
 
@@ -506,7 +506,7 @@ def _kizil_kule_effect(city, value):
 def samogitian_alkas_effect_on_building_built(city, building_type):
     iPlayer = city.getOwner()
     if building_type == Wonder.SAMOGITIAN_ALKAS:
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             samogitian_alkas_effect(city)
 
 
@@ -523,9 +523,9 @@ def samogitian_alkas_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, b
     pPreviousOwner = gc.getPlayer(iPreviousOwner)
     pNewOwner = gc.getPlayer(iNewOwner)
     if pCity.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS):
-        for _city in cities().owner(iPreviousOwner).entities():
+        for _city in cities.owner(iPreviousOwner).entities():
             remove_samogitian_alkas_effect(_city)
-        for _city in cities().owner(iNewOwner).entities():
+        for _city in cities.owner(iNewOwner).entities():
             samogitian_alkas_effect(_city)
     elif pPreviousOwner.countNumBuildings(Wonder.SAMOGITIAN_ALKAS) > 0:
         remove_samogitian_alkas_effect(pCity)
@@ -536,7 +536,7 @@ def samogitian_alkas_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, b
 @handler("cityRazed")
 def remove_samogitian_alkas_effect_on_city_razed(city, iPlayer):
     if city.getNumActiveBuilding(Wonder.SAMOGITIAN_ALKAS):
-        for _city in cities().owner(iPlayer).entities():
+        for _city in cities.owner(iPlayer).entities():
             remove_samogitian_alkas_effect(_city)
 
 
@@ -560,7 +560,7 @@ def _samogitian_alkas_effect(city, value):
 def magna_carta_effect_on_building_built(city, building_type):
     iPlayer = city.getOwner()
     if building_type == Wonder.MAGNA_CARTA:
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             magna_carta_effect(city)
 
 
@@ -577,9 +577,9 @@ def magna_carta_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConqu
     pPreviousOwner = gc.getPlayer(iPreviousOwner)
     pNewOwner = gc.getPlayer(iNewOwner)
     if pCity.getNumActiveBuilding(Wonder.MAGNA_CARTA):
-        for _city in cities().owner(iPreviousOwner).entities():
+        for _city in cities.owner(iPreviousOwner).entities():
             remove_magna_carta_effect(_city)
-        for _city in cities().owner(iNewOwner).entities():
+        for _city in cities.owner(iNewOwner).entities():
             magna_carta_effect(_city)
     elif pPreviousOwner.countNumBuildings(Wonder.MAGNA_CARTA) > 0:
         remove_magna_carta_effect(pCity)
@@ -590,7 +590,7 @@ def magna_carta_effect_on_city_acquired(iPreviousOwner, iNewOwner, pCity, bConqu
 @handler("cityRazed")
 def remove_magna_carta_effect_on_city_razed(city, iPlayer):
     if city.getNumActiveBuilding(Wonder.MAGNA_CARTA):
-        for _city in cities().owner(iPlayer).entities():
+        for _city in cities.owner(iPlayer).entities():
             remove_magna_carta_effect(_city)
 
 
@@ -710,7 +710,7 @@ def selimiye_mosque_effect(city, unit):
 def louvre_effect(pUnit, iPlayer, pCity):
     pPlayer = gc.getPlayer(iPlayer)
     if pPlayer.countNumBuildings(Wonder.LOUVRE) > 0:
-        for loopCity in cities().owner(iPlayer).entities():
+        for loopCity in cities.owner(iPlayer).entities():
             # bigger boost for the GP city and the Louvre city
             if loopCity.getNumActiveBuilding(Wonder.LOUVRE) or pCity == loopCity:
                 loopCity.changeCulture(iPlayer, min(300, loopCity.getCultureThreshold() / 5), True)

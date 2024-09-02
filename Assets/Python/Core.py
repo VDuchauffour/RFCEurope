@@ -2435,8 +2435,8 @@ civilizations_1200AD = (
     .collect()
 )
 
-techs = TechFactory
-units = UnitFactory
-plots = PlotFactory
-cities = CityFactory
-infos = Infos
+techs = TechFactory()
+units = UnitFactory()
+plots = PlotFactory()
+cities = CityFactory()
+infos = Infos()

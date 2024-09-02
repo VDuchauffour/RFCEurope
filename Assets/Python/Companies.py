@@ -575,7 +575,7 @@ def addCompany(iCompany, iNumber):
     cityValueList = []
     iCompaniesAdded = 0
     for iPlayer in civilizations().majors().ids():
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             iValue = getCityValue(city, iCompany)
             if iValue > 0:
                 cityValueList.append((city, iValue * 10 + rand(10)))
@@ -643,7 +643,7 @@ def checkTurn(iGameTurn):
     # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
     cityValueList = []
     for iPlayer in civilizations().majors().ids():
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             iValue = getCityValue(city, iCompany)
             if iValue > 0:
                 sCityName = city.getName()
@@ -712,7 +712,7 @@ def checkTurn(iGameTurn):
 @handler("playerChangeStateReligion")
 def onPlayerChangeStateReligion(iPlayer, iNewReligion, iOldReligion):
     if iPlayer < civilizations().majors().len():
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             for iCompany in companies.ids():
                 if city.isHasCorporation(iCompany):
                     if getCityValue(city, iCompany) < 0:

@@ -50,7 +50,7 @@ def setup():
         pPlayer = gc.getPlayer(iPlayer)
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         iCounter = 0
-        for pCity in cities().owner(iPlayer).entities():
+        for pCity in cities.owner(iPlayer).entities():
             iCounter += 1
             iOldStab = pPlayer.getStability()
 
@@ -133,7 +133,7 @@ def recalcEpansion(iPlayer):
     bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND)
     iCivicBonus = 0
     iUPBonus = 0
-    for pCity in cities().owner(iPlayer).entities():
+    for pCity in cities.owner(iPlayer).entities():
         iProvType = pPlayer.getProvinceType(pCity.getProvince())
         iProvNum = pCity.getProvince()
         CityName = pCity.getNameKey()
@@ -668,7 +668,7 @@ def recalcCity(iPlayer):
     iCivicReligionInstability = 0
     iCultureStability = 0
 
-    for pCity in cities().owner(iPlayer).entities():
+    for pCity in cities.owner(iPlayer).entities():
         # Absinthe: if your civ is healthy, bonus stability
         # 			if one of your is cities is unhealthy, -1 stability
         iCivHealthStability += pCity.goodHealth()
@@ -979,7 +979,7 @@ def recalcEconomy(iPlayer):
     iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 
     iLargeCities = 0
-    for pCity in cities().owner(iPlayer).entities():
+    for pCity in cities.owner(iPlayer).entities():
         # Absinthe: production penalty removed - was a mistake to add a city-based modifier to the financial stability which is based on average per population
         # if pCity.isProductionUnit():
         # 	iUnit = pCity.getProductionUnit()

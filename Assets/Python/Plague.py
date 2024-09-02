@@ -143,7 +143,7 @@ def startPlague(iPlagueCount):
     if iWorstCiv == -1:
         iWorstCiv = civilizations().majors().alive().random().unwrap().id
 
-    city = cities().owner(iWorstCiv).random_entry()
+    city = cities.owner(iWorstCiv).random_entry()
     if city is not None:
         spreadPlague(iWorstCiv, city)
         infectCity(city)
@@ -247,7 +247,7 @@ def infectCity(city):
             location=location(city),
         )
 
-    for plot in plots().surrounding(city, radius=2).entities():
+    for plot in plots.surrounding(city, radius=2).entities():
         iImprovement = plot.getImprovementType()
         # Absinthe: chance for reducing the improvement vs. only resetting the process towards the next level to 0
         if iImprovement == Improvement.TOWN:  # 100% chance to reduce towns
@@ -382,8 +382,8 @@ def processPlague(iPlayer):
             pPlayer = gc.getPlayer(iPlayer)
             iHuman = human()
 
-            lInfectedCities = cities().owner(iPlayer).building(PlagueType.PLAGUE).entities()
-            lNotInfectedCities = cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
+            lInfectedCities = cities.owner(iPlayer).building(PlagueType.PLAGUE).entities()
+            lNotInfectedCities = cities.owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
 
             # first spread to close locations
             for city in lInfectedCities:
@@ -440,8 +440,7 @@ def processPlague(iPlayer):
                 # spread plague in 2 distance around the city
                 if getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                     for plot in (
-                        plots()
-                        .surrounding(city, radius=2)
+                        plots.surrounding(city, radius=2)
                         .filter(lambda p: p.isOwned())
                         .without(city)
                         .entities()
@@ -457,7 +456,7 @@ def processPlague(iPlayer):
                                 spreadPlague(plot.getOwner(), -1)
                                 infectCitiesNear(plot.getOwner(), *location(plot))
                 # kill units around the city
-                for plot in plots().surrounding(city, radius=3).entities():
+                for plot in plots.surrounding(city, radius=3).entities():
                     iDistance = calculateDistance(city.getX(), city.getY(), *location(plot))
                     if iDistance == 0:  # City
                         killUnitsByPlague(city, plot, 20, 40, 2)
@@ -546,7 +545,7 @@ def processPlague(iPlayer):
                     else:
                         iMaxNumInfections = 1
                     iInfections = 0
-                    _cities = cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
+                    _cities = cities.owner(iPlayer).not_building(PlagueType.PLAGUE).entities()
                     # TODO fix shuffle
                     random.shuffle(_cities)
                     for city in _cities:
@@ -558,13 +557,13 @@ def processPlague(iPlayer):
 
 
 def infectCitiesNear(iPlayer, startingX, startingY):
-    for city in cities().owner(iPlayer).not_building(PlagueType.PLAGUE).entities():
+    for city in cities.owner(iPlayer).not_building(PlagueType.PLAGUE).entities():
         if calculateDistance(city.getX(), city.getY(), startingX, startingY) <= 3:
             infectCity(city)
 
 
 def preStopPlague(iPlayer, iPlagueCountDown):
-    cityList = cities().owner(iPlayer).building(PlagueType.PLAGUE).entities()
+    cityList = cities.owner(iPlayer).building(PlagueType.PLAGUE).entities()
     if cityList:
         iRemoveModifier = 0
         iTimeModifier = iPlagueCountDown * 15
@@ -585,7 +584,7 @@ def preStopPlague(iPlayer, iPlagueCountDown):
 
 def stopPlague(iPlayer):
     setPlagueCountdown(iPlayer, -PLAGUE_IMMUNITY)
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         city.setHasRealBuilding(PlagueType.PLAGUE, False)
 
 
@@ -605,7 +604,7 @@ def onCityAcquired(iOldOwner, iNewOwner, city):
                 # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague
                 if getPlagueCountdown(iNewOwner) <= 0:
                     spreadPlague(iNewOwner, -1)
-                    for cityNear in cities().owner(iNewOwner).entities():
+                    for cityNear in cities.owner(iNewOwner).entities():
                         if not cityNear.isHasRealBuilding(PlagueType.PLAGUE):
                             if (
                                 calculateDistance(
@@ -620,7 +619,7 @@ def onCityAcquired(iOldOwner, iNewOwner, city):
                 # if > 0 do nothing, if < 0 keep immunity and remove plague from the city, if == 0 start the plague
                 if getPlagueCountdown(iNewOwner) == 0:
                     spreadPlague(iNewOwner, -1)
-                    for cityNear in cities().owner(iNewOwner).entities():
+                    for cityNear in cities.owner(iNewOwner).entities():
                         if not cityNear.isHasRealBuilding(PlagueType.PLAGUE):
                             if (
                                 calculateDistance(

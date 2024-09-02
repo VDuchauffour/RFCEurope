@@ -32,7 +32,7 @@ gc = CyGlobalContext()
 def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
     # Constantinople -> Istanbul
     if iPlayer == Civ.OTTOMAN:
-        cityList = cities().owner(iPlayer).entities()
+        cityList = cities.owner(iPlayer).entities()
         if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]:
             for loopCity in cityList:
                 if loopCity != city:

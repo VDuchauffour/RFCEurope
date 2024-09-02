@@ -868,7 +868,7 @@ def getNumRealColonies(iPlayer):
 def getTerritoryPercentEurope(iPlayer, bReturnTotal=False):
     iTotal = 0
     iCount = 0
-    for plot in plots().all().land().not_provinces(*REGIONS[Region.NOT_EUROPE]).entities():
+    for plot in plots.all().land().not_provinces(*REGIONS[Region.NOT_EUROPE]).entities():
         iTotal += 1
         if plot.getOwner() == iPlayer:
             iCount += 1
@@ -1344,7 +1344,7 @@ def checkSpain(iGameTurn):
                     Civ.INDEPENDENT_3,
                     Civ.INDEPENDENT_4,
                 ]:
-                    for pCity in cities().owner(iIndyCiv).entities():
+                    for pCity in cities.owner(iIndyCiv).entities():
                         pIndyCiv = gc.getPlayer(iIndyCiv)
                         iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
                         if pCity.getReligionCount() == 0:
@@ -1519,7 +1519,7 @@ def checkGenoa(iGameTurn):
     elif iGameTurn == year(1625):
         if isPossibleUHV(Civ.GENOA, 2, True):
             iBanks = 0
-            for city in cities().owner(Civ.GENOA).entities():
+            for city in cities.owner(Civ.GENOA).entities():
                 if (
                     city.getNumRealBuilding(Building.BANK) > 0
                     or city.getNumRealBuilding(Building.GENOA_BANK) > 0
@@ -1547,7 +1547,7 @@ def checkMorocco(iGameTurn):
     elif iGameTurn == year(1465):
         if isPossibleUHV(Civ.MOROCCO, 1, True):
             iGoodCities = 0
-            for city in cities().owner(Civ.MOROCCO).entities():
+            for city in cities.owner(Civ.MOROCCO).entities():
                 if city.getCulture(Civ.MOROCCO) >= 5000:
                     iGoodCities += 1
             if iGoodCities >= 3:

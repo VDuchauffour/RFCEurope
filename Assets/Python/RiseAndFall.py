@@ -318,8 +318,7 @@ def flipPopup(iNewCiv, tTopLeft, tBottomRight):
     flipText = text("TXT_KEY_FLIPMESSAGE1")
 
     for city in (
-        plots()
-        .rectangle(tTopLeft, tBottomRight)
+        plots.rectangle(tTopLeft, tBottomRight)
         .add(civilization(iNewCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
         .cities()
         .filter(lambda c: c.getOwner() == iHuman and not c.isCapital())
@@ -350,8 +349,7 @@ def FlipPopupEvent(playerID, netUserData, popupReturn):
     humanCityList = []
 
     for city in (
-        plots()
-        .rectangle(tTopLeft, tBottomRight)
+        plots.rectangle(tTopLeft, tBottomRight)
         .add(civilization(iNewCivFlip).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
         .cities()
         .filter(lambda c: c.getOwner() == iHuman and not c.isCapital())
@@ -372,7 +370,7 @@ def FlipPopupEvent(playerID, netUserData, popupReturn):
                 flipUnitsInCityAfter(tCity, iNewCivFlip)
 
         # same code as Betrayal - done just once to make sure human player doesn't hold a stack just outside of the cities
-        for plot in plots().rectangle(tTopLeft, tBottomRight).entities():
+        for plot in plots.rectangle(tTopLeft, tBottomRight).entities():
             iNumUnitsInAPlot = plot.getNumUnits()
             if iNumUnitsInAPlot > 0:
                 for i in range(iNumUnitsInAPlot):
@@ -650,7 +648,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
                 and player(Civ.ENGLAND).isAlive()
             ):
                 for city in (
-                    plots().rectangle((39, 46), (45, 50)).cities().owner(Civ.ENGLAND).entities()
+                    plots.rectangle((39, 46), (45, 50)).cities().owner(Civ.ENGLAND).entities()
                 ):
                     make_unit(Civ.ENGLAND, Unit.GUISARME, city)
                     make_unit(Civ.ENGLAND, Unit.ARBALEST, city)
@@ -707,7 +705,7 @@ def fragmentIndependents():
                     iSmall = iIndep1
                 iDivideCounter = 0
                 iCounter = 0
-                for city in cities().owner(iBig).entities():
+                for city in cities.owner(iBig).entities():
                     iDivideCounter += 1
                     if iDivideCounter % 2 == 1:
                         tCity = (city.getX(), city.getY())
@@ -735,8 +733,7 @@ def fragmentBarbarians(iGameTurn):
             lCities = [
                 location(city)
                 for city in (
-                    plots()
-                    .rectangle(
+                    plots.rectangle(
                         civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MIN],
                         civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX],
                     )
@@ -795,7 +792,7 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
                     bDeleteEverything = True
                 else:
                     bDeleteEverything = True
-                    if plots().surrounding(tCapital).cities().owner(iHuman).entities():
+                    if plots.surrounding(tCapital).cities().owner(iHuman).entities():
                         bDeleteEverything = False
 
             if not gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
@@ -806,7 +803,7 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
                 killAllUnitsInArea(
                     (tCapital[0] - 1, tCapital[1] - 1), (tCapital[0] + 1, tCapital[1] + 1)
                 )
-                for plot in plots().surrounding(tCapital).entities():
+                for plot in plots.surrounding(tCapital).entities():
                     if plot.isCity():
                         plot.eraseAIDevelopment()  # new function, similar to erase but won't delete rivers, resources and features
                     for civ in civilizations().ids():
@@ -844,9 +841,9 @@ def deleteMode(iGameTurn, iCurrentPlayer):
     if iCiv != -1:
         tCapital = civilization(iCiv).location.capital
         if iCurrentPlayer == iCiv:
-            for plot in plots().surrounding(tCapital, radius=2).entities():
+            for plot in plots.surrounding(tCapital, radius=2).entities():
                 plot.setCulture(iCiv, 300, True)
-            for plot in plots().surrounding(tCapital).entities():
+            for plot in plots.surrounding(tCapital).entities():
                 convertPlotCulture(plot, iCiv, 100, True)
                 if plot.getCulture(iCiv) < 3000:
                     # 2000 in vanilla/warlords, cos here Portugal is choked by Spanish culture
@@ -858,7 +855,7 @@ def deleteMode(iGameTurn, iCurrentPlayer):
         if iCurrentPlayer != iCiv - 1:
             return
 
-        for plot in plots().surrounding(tCapital).entities():
+        for plot in plots.surrounding(tCapital).entities():
             if plot.isOwned():
                 for iLoopCiv in civilizations().ids():
                     if iLoopCiv != iCiv:
@@ -887,14 +884,13 @@ def birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight):
             # if inside the core rectangle and extra plots, and in 4 (barb) or 2 (indy) distance from the starting plot, append to barb or indy flip zone
 
             lSurroundingPlots4 = [
-                location(plot) for plot in plots().surrounding(tCapital, radius=4).entities()
+                location(plot) for plot in plots.surrounding(tCapital, radius=4).entities()
             ]
             lSurroundingPlots2 = [
-                location(plot) for plot in plots().surrounding(tCapital, radius=2).entities()
+                location(plot) for plot in plots.surrounding(tCapital, radius=2).entities()
             ]
             for tPlot in (
-                plots()
-                .rectangle(tTopLeft, tBottomRight)
+                plots.rectangle(tTopLeft, tBottomRight)
                 .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
                 .apply(location)  # TODO  fix this with _keyify by default
             ):
@@ -1090,8 +1086,7 @@ def convertSurroundingCities(iCiv, tTopLeft, tBottomRight):
 
     # collect all the cities in the spawn region
     for city in (
-        plots()
-        .rectangle(tTopLeft, tBottomRight)
+        plots.rectangle(tTopLeft, tBottomRight)
         .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
         .cities()
         .not_owner(iCiv)
@@ -1143,8 +1138,7 @@ def convertSurroundingCities(iCiv, tTopLeft, tBottomRight):
 
 def convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight):
     for plot in (
-        plots()
-        .rectangle(tTopLeft, tBottomRight)
+        plots.rectangle(tTopLeft, tBottomRight)
         .add(civilization(iCiv).location.area[AreaType.CORE][Area.ADDITIONAL_TILES])
         .filter(lambda p: not p.isCity())
         .entities()
@@ -1158,8 +1152,7 @@ def findSeaPlots(tCoords, iRange):
     seaPlotList = [
         location(plot)
         for plot in (
-            plots()
-            .surrounding(tCoords, radius=iRange)
+            plots.surrounding(tCoords, radius=iRange)
             .water()
             .filter(lambda p: not p.isUnit())
             .entities()
@@ -1316,7 +1309,7 @@ def unitsBetrayal(iNewOwner, iOldOwner, tTopLeft, tBottomRight, tPlot):
         message(getOldCivFlip(), text("TXT_KEY_FLIP_BETRAYAL"), color=MessageData.RED)
     elif gc.getPlayer(getNewCivFlip()).isHuman():
         message(getNewCivFlip(), text("TXT_KEY_FLIP_BETRAYAL_NEW"), color=MessageData.GREEN)
-    for unit in plots().rectangle(tTopLeft, tBottomRight).units().owner(iOldOwner).entities():
+    for unit in plots.rectangle(tTopLeft, tBottomRight).units().owner(iOldOwner).entities():
         if percentage_chance(iBetrayalThreshold, reverse=True):
             if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
                 iUnitType = unit.getUnitType()

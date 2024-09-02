@@ -71,7 +71,7 @@ def revoltCity(iPlayer, bForce):
 
     cityListInCore = []
     cityListInNotCore = []
-    for city in cities().owner(iPlayer).entities():
+    for city in cities.owner(iPlayer).entities():
         tCity = (city.getX(), city.getY())
         x, y = tCity
         pCurrent = gc.getMap().plot(city.getX(), city.getY())

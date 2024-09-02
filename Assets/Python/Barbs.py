@@ -3243,7 +3243,7 @@ def checkRegion(tCoords):
             return False
 
     # checks the surroundings for cities
-    if plots().surrounding(tCoords).cities().entities():
+    if plots.surrounding(tCoords).cities().entities():
         return False
     return True
 
@@ -3324,7 +3324,7 @@ def spawnPirate(
 
 def killNeighbours(tCoords):
     "Kills all units in the neigbbouring tiles of plot (as well as plot it) so late starters have some space."
-    for unit in plots().surrounding(tCoords).units().entities():
+    for unit in plots.surrounding(tCoords).units().entities():
         unit.kill(False, Civ.BARBARIAN)
 
 
@@ -3410,7 +3410,7 @@ def doMinorNations(iGameTurn):
 
 
 def doRevoltAI(iPlayer, iGameTurn, lNation, iRevoltIndex):
-    cityList = cities().owner(iPlayer).province(lNation[0]).entities()
+    cityList = cities.owner(iPlayer).province(lNation[0]).entities()
 
     iNumGarrison = 0
     for iI in range(len(cityList)):
@@ -3462,7 +3462,7 @@ def CounterReformationEvent(playerID, netUserData, popupReturn):
     lNation = lMinorNations[iNationIndex]
     iPlayer = human()
 
-    cityList = cities().owner(iPlayer).province(lNation[0]).entities()
+    cityList = cities.owner(iPlayer).province(lNation[0]).entities()
 
     iNumGarrison = 0
     iBribeGold = 0
@@ -3552,7 +3552,7 @@ def CounterReformationEvent(playerID, netUserData, popupReturn):
 def doRevoltHuman(iPlayer, iGameTurn, lNation, iRevoltIndex):
     setNationRevoltIndex(lMinorNations.index(lNation), iRevoltIndex)
 
-    cityList = cities().owner(iPlayer).province(lNation[0]).entities()
+    cityList = cities.owner(iPlayer).province(lNation[0]).entities()
 
     iNumGarrison = 0
     iBribeGold = 0
@@ -3630,8 +3630,7 @@ def makeRebels(pCity, iUnit, iCount, szName):
     lAvailableFreeTiles = []
     lAvailableTiles = []
     for plot in (
-        plots()
-        .surrounding(pCity)
+        plots.surrounding(pCity)
         .filter(lambda p: p.isHills() or p.isFlatlands())
         .filter(lambda p: not p.isCity())
         .entities()
