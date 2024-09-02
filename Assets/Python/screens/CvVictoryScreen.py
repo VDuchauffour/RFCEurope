@@ -30,12 +30,11 @@ import CvUtil
 from LocationsData import CITIES, COLONY_LOCATIONS
 import PyHelpers
 from RFCUtils import getNumberCargoShips, getMostAdvancedCiv
-import Victory as vic
+import Victory
 import UniquePowers
 
 PyPlayer = PyHelpers.PyPlayer
 
-up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 
@@ -2440,7 +2439,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tProvsToCheck = vic.tByzantiumControl
+        tProvsToCheck = Victory.tByzantiumControl
         iNumCities = 0
         for iProv in tProvsToCheck:
             iNumCities += pPlayer.getProvinceCityCount(iProv)
@@ -2450,7 +2449,7 @@ class CvVictoryScreen:
             + self.determineColor(iNumCities >= 6, str(iNumCities))
         )
         # UHV2
-        sText2 += self.getProvinceString(vic.tByzantiumControlII)
+        sText2 += self.getProvinceString(Victory.tByzantiumControlII)
         # UHV3
         tConstantinople = civilization(iPlayer).location.capital
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
@@ -2512,7 +2511,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tFrankControl)
+        sText1 += self.getProvinceString(Victory.tFrankControl)
         # UHV2
         tPlot = CITIES[City.JERUSALEM]
         sText2 += self.checkCity(tPlot, iPlayer, text("TXT_KEY_UHV_JERUSALEM"), True)
@@ -2526,7 +2525,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tArabiaControlI)
+        sText1 += self.getProvinceString(Victory.tArabiaControlI)
         # sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, year(955)), (vic.tArabiaControlII, year(1291))])
         # UHV2
         iMostAdvancedCiv = getMostAdvancedCiv()
@@ -2544,7 +2543,7 @@ class CvVictoryScreen:
                 + ": "
                 + u"<color=255,54,6>%s</color>" % (text("TXT_KEY_UHV_NO_MOST_ADVANCED_CIV"))
             )
-        sText2 += "\n" + self.getProvinceString(vic.tArabiaControlII)
+        sText2 += "\n" + self.getProvinceString(Victory.tArabiaControlII)
         # UHV3
         iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM)
         sPerc = str(iPerc) + "%"
@@ -2557,7 +2556,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tBulgariaControl)
+        sText1 += self.getProvinceString(Victory.tBulgariaControl)
         # UHV2
         iFaith = pPlayer.getFaith()
         sText2 += (
@@ -2611,9 +2610,9 @@ class CvVictoryScreen:
         else:
             sText1 += self.checkCity(tCordoba, iPlayer, sCordobaName)
         # UHV2
-        sText2 += self.getWonderString(vic.tCordobaWonders)
+        sText2 += self.getWonderString(Victory.tCordobaWonders)
         # UHV3
-        sText3 += self.getReligionProvinceString(vic.tCordobaIslamize, Religion.ISLAM, 1)
+        sText3 += self.getReligionProvinceString(Victory.tCordobaIslamize, Religion.ISLAM, 1)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2622,13 +2621,13 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tVenetianControl)
+        sText1 += self.getProvinceString(Victory.tVenetianControl)
         # UHV2
         tConstantinople = civilization(Civ.BYZANTIUM).location.capital
         sText2 += self.checkCity(
             tConstantinople, iPlayer, text("TXT_KEY_CITY_NAME_CONSTANTINOPLE"), True
         )
-        sText2 += "\n" + self.getProvinceString(vic.tVenetianControlII)
+        sText2 += "\n" + self.getProvinceString(Victory.tVenetianControlII)
         # UHV3
         sText3 = (
             "\n"
@@ -2654,9 +2653,9 @@ class CvVictoryScreen:
             + self.determineColor(iCulture >= 12000, str(iCulture))
         )
         # UHV2
-        sText2 += self.getProvinceString(vic.tBurgundyControl)
+        sText2 += self.getProvinceString(Victory.tBurgundyControl)
         # UHV3
-        sText3 += self.checkScores(vic.tBurgundyOutrank)
+        sText3 += self.checkScores(Victory.tBurgundyOutrank)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2665,7 +2664,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tGermanyControl)
+        sText1 += self.getProvinceString(Victory.tGermanyControl)
         # UHV2
         iGoal = pPlayer.getUHV(1)
         sTextGood = text("TXT_KEY_UHV_NOT_FOUND_YET")
@@ -2674,7 +2673,7 @@ class CvVictoryScreen:
             gc.getReligionInfo(Religion.PROTESTANTISM).getDescription() + " " + sTextGood,
         )
         # UHV3
-        sText3 += self.getProvinceString(vic.tGermanyControlII)
+        sText3 += self.getProvinceString(Victory.tGermanyControlII)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2683,7 +2682,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tNovgorodControl)
+        sText1 += self.getProvinceString(Victory.tNovgorodControl)
         # UHV2
         sText2 = (
             "\n"
@@ -2724,9 +2723,9 @@ class CvVictoryScreen:
             )
         )
         # UHV2
-        sText2 += self.getProvinceString(vic.tNorwayControl)
+        sText2 += self.getProvinceString(Victory.tNorwayControl)
         # UHV3
-        sText3 += self.checkScores(vic.tNorwayOutrank)
+        sText3 += self.checkScores(Victory.tNorwayOutrank)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2742,7 +2741,7 @@ class CvVictoryScreen:
         sText1 += sKievCath + self.determineColor(iKievCath >= 2, str(iKievCath))
         sText1 += "\n" + sKievMona + self.determineColor(iKievMona >= 8, str(iKievMona))
         # UHV2
-        sText2 += self.getProvinceString(vic.tKievControl, (True, 10))
+        sText2 += self.getProvinceString(Victory.tKievControl, (True, 10))
         # UHV3
         iFood = pPlayer.getUHVCounter(2)
         sText3 += self.getCounterString(iFood, 25000)
@@ -2754,10 +2753,12 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tHungaryControl)
+        sText1 += self.getProvinceString(Victory.tHungaryControl)
         # UHV2
         sEnemyString = "The Ottomans"
-        sText2 += self.getNotCivProvinceString(Civ.OTTOMAN, sEnemyString, vic.tHungaryControlII)
+        sText2 += self.getNotCivProvinceString(
+            Civ.OTTOMAN, sEnemyString, Victory.tHungaryControlII
+        )
         # UHV3
         iGoal = pPlayer.getUHV(2)
         sText3 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_ADOPTION_YET"))
@@ -2769,16 +2770,16 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getReligionProvinceString(vic.tSpainConvert, Religion.CATHOLICISM, 2)
+        sText1 += self.getReligionProvinceString(Victory.tSpainConvert, Religion.CATHOLICISM, 2)
         # UHV2
-        iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
+        iSpainColonies = Victory.getNumRealColonies(iPlayer)
         iOtherColonies = 0
         iColonyPlayer = -1
         for iCiv in civilizations().majors().ids():
             if iCiv == iPlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():
-                iTempNumColonies = vic.Victory().getNumRealColonies(iCiv)
+                iTempNumColonies = Victory.getNumRealColonies(iCiv)
                 if iTempNumColonies > iOtherColonies:
                     iOtherColonies = iTempNumColonies
                     iColonyPlayer = iCiv
@@ -2816,7 +2817,7 @@ class CvVictoryScreen:
             Civ.INDEPENDENT_3,
             Civ.INDEPENDENT_4,
         ]:
-            for pCity in cities().owner(iIndyCiv).entities():
+            for pCity in cities.owner(iIndyCiv).entities():
                 pIndyCiv = gc.getPlayer(iIndyCiv)
                 iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
                 if pCity.getReligionCount() == 0:
@@ -2863,9 +2864,9 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tDenmarkControlI)
+        sText1 += self.getProvinceString(Victory.tDenmarkControlI)
         # UHV2
-        sText2 += self.getProvinceString(vic.tDenmarkControlIII)
+        sText2 += self.getProvinceString(Victory.tDenmarkControlIII)
         # UHV3
         sText3 += self.getNumColoniesString(3, True)
         lHelpTexts = [sText1, sText2, sText3]
@@ -2897,7 +2898,7 @@ class CvVictoryScreen:
         iScore = pPlayer.getUHVCounter(1)
         sText2 += self.getCounterString(iScore, 1500)
         # UHV3
-        sText3 += self.getProvinceString(vic.tScotlandControl)
+        sText3 += self.getProvinceString(Victory.tScotlandControl)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2924,7 +2925,7 @@ class CvVictoryScreen:
         sUnit = "%s" % (u"<font=5>%c</font>" % (gc.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()))
         sText1 += self.getCompetition(iPolandFood, iOtherFood, iFoodPlayer, sText, sUnit)
         # UHV2
-        tProvsToCheck = vic.tPolishControl
+        tProvsToCheck = Victory.tPolishControl
         iNumCities = 0
         for iProv in tProvsToCheck:
             iNumCities += pPlayer.getProvinceCityCount(iProv)
@@ -2960,7 +2961,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tGenoaControl)
+        sText1 += self.getProvinceString(Victory.tGenoaControl)
         # UHV2
         sText2 = (
             "\n"
@@ -2993,7 +2994,7 @@ class CvVictoryScreen:
         sText2 += self.getCompetition(iGenoaTrade, iOtherTrade, iBiggestTrader, sTextTmp, sUnit)
         # UHV3
         iBankCount = 0
-        for city in cities().owner(iPlayer).entities():
+        for city in cities.owner(iPlayer).entities():
             if (
                 city.getNumRealBuilding(Building.BANK) > 0
                 or city.getNumRealBuilding(Building.GENOA_BANK) > 0
@@ -3022,7 +3023,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tMoroccoControl)
+        sText1 += self.getProvinceString(Victory.tMoroccoControl)
         # UHV2
         victory = gc.getVictoryInfo(4)  # Cultural victory
         ourBestCities = self.getListCultureCities(self.iActivePlayer)[
@@ -3047,7 +3048,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tEnglandControl)
+        sText1 += self.getProvinceString(Victory.tEnglandControl)
         # UHV2
         sText2 += self.getNumColoniesString(7)
         # UHV3
@@ -3095,7 +3096,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tAragonControlI)
+        sText1 += self.getProvinceString(Victory.tAragonControlI)
         # UHV2
         sText2 = (
             "\n"
@@ -3120,7 +3121,7 @@ class CvVictoryScreen:
             + text("TXT_KEY_UHV_TRADE_SHIPS")
         )
         # UHV3
-        sText3 += self.getProvinceString(vic.tAragonControlII)
+        sText3 += self.getProvinceString(Victory.tAragonControlII)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3130,14 +3131,14 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         iCounter = 0
-        for iProv in vic.tSwedenControl:
+        for iProv in Victory.tSwedenControl:
             iCounter += pPlayer.getProvinceCityCount(iProv)
         sText1 += self.getCounterString(iCounter, 6)
         # UHV2
         iCounter = pPlayer.getUHVCounter(1)
         sText2 += self.getCounterString(iCounter, 5)
         # UHV3
-        iCounter = up.getNumForeignCitiesOnBaltic(iPlayer, True)
+        iCounter = UniquePowers.getNumForeignCitiesOnBaltic(iPlayer, True)
         sText3 += self.getCounterString(iCounter, 0, True)
         sText3 += " " + text("TXT_KEY_UHV_BALTIC_CITIES")
         lHelpTexts = [sText1, sText2, sText3]
@@ -3148,13 +3149,13 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tPrussiaControlI)
+        sText1 += self.getProvinceString(Victory.tPrussiaControlI)
         # UHV2
         if turn() >= year(1650):
             iConqRaw = gc.getPlayer(Civ.PRUSSIA).getUHVCounter(1)
-            for iI in range(len(vic.tPrussiaDefeat)):
+            for iI in range(len(Victory.tPrussiaDefeat)):
                 iNumConq = (iConqRaw / pow(10, iI)) % 10
-                pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
+                pVictim = gc.getPlayer(Victory.tPrussiaDefeat[iI])
                 if iNumConq < 9:
                     szNumConq = " %d" % iNumConq
                 else:
@@ -3197,7 +3198,7 @@ class CvVictoryScreen:
         iCulture = pPlayer.getUHVCounter(0)
         sText1 += self.getCounterString(iCulture, 2500)
         # UHV2
-        iCount, iTotal = vic.Victory().getTerritoryPercentEurope(iPlayer, True)
+        iCount, iTotal = Victory.getTerritoryPercentEurope(iPlayer, True)
         iOtherCount = 0
         iMostPlayer = -1
         for iLoopPlayer in civilizations().majors().ids():
@@ -3205,7 +3206,7 @@ class CvVictoryScreen:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             if pLoopPlayer.isAlive():
-                iTempCount = vic.Victory().getTerritoryPercentEurope(iLoopPlayer)
+                iTempCount = Victory.getTerritoryPercentEurope(iLoopPlayer)
                 if iTempCount > iOtherCount:
                     iOtherCount = iTempCount
                     iMostPlayer = iLoopPlayer
@@ -3229,7 +3230,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tAustriaControl)
+        sText1 += self.getProvinceString(Victory.tAustriaControl)
         # UHV2
         iCount = 0
         for iLoopPlayer in civilizations().majors().ids():
@@ -3255,11 +3256,11 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getProvinceString(vic.tOttomanControlI)
+        sText1 += self.getProvinceString(Victory.tOttomanControlI)
         # UHV2
-        sText2 += self.getWonderString(vic.tOttomanWonders)
+        sText2 += self.getWonderString(Victory.tOttomanWonders)
         # UHV3
-        sText3 += self.getProvinceString(vic.tOttomanControlII)
+        sText3 += self.getProvinceString(Victory.tOttomanControlII)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3269,7 +3270,7 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         sEnemyString = "Barbarians"
-        sText1 += self.getNotCivProvinceString(Civ.BARBARIAN, sEnemyString, vic.tMoscowControl)
+        sText1 += self.getNotCivProvinceString(Civ.BARBARIAN, sEnemyString, Victory.tMoscowControl)
         # UHV2
         totalLand = gc.getMap().getLandPlots()
         RussianLand = pPlayer.getTotalLand()
@@ -3604,7 +3605,7 @@ class CvVictoryScreen:
         return sString
 
     def getNumColoniesString(self, iRequired, bTradingCompanies=False):
-        iCount = vic.Victory().getNumRealColonies(self.iActivePlayer)
+        iCount = Victory.getNumRealColonies(self.iActivePlayer)
         sString = (
             text("TXT_KEY_UHV_COLONIES") + ": " + self.determineColor(iCount >= iRequired, iCount)
         )

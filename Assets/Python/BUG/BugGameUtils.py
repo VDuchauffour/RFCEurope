@@ -373,9 +373,7 @@ class Callback:
     def __call__(self, argsList=None):
         for handler in self.handlers:
             if self.log:
-                BugUtil.debug(
-                    "BugGameUtils - %s - dispatching to %s handler", self.name, handler.__module__
-                )
+                BugUtil.debug("BugGameUtils - %s - dispatching to %s handler", self.name, handler.__module__)
             result = self.callHandler(handler, argsList)
             if result is not None and result != self.default:
                 break
@@ -391,14 +389,11 @@ class Callback:
         if result is not None:
             for listener in self.listeners:
                 if self.log:
-                    BugUtil.debug(
-                        "BugGameUtils - %s - calling %s listener", self.name, listener.__module__
-                    )
+                    BugUtil.debug("BugGameUtils - %s - calling %s listener", self.name, listener.__module__)
                 self.callListener(listener, argsList, result)
         else:
             BugUtil.error("BugGameUtils - %s - no handler returned a value", self.name)
         return result
-
 
 ## Config Parser Handler
 

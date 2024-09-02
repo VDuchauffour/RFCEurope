@@ -10,15 +10,13 @@ import CvScreenEnums
 import BugDll
 import BugUtil
 import PlayerUtil
-from Stability import Stability
+import Stability
 import TradeUtil
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
-
-stab = Stability()
 
 
 class BugFinanceAdvisor:
@@ -170,7 +168,7 @@ class BugFinanceAdvisor:
                     )
 
         # Absinthe: update all stability values for the active player
-        stab.refreshBaseStability(self.iActiveLeader)
+        Stability.refreshBaseStability(self.iActiveLeader)
 
         # draw the contents
         self.drawContents()

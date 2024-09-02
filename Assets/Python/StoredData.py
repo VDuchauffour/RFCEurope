@@ -1,33 +1,13 @@
-from Core import civilizations, player
-from CoreTypes import Civ
-import cPickle as pickle
+from Core import civilizations
 from MiscData import NUM_CRUSADES
-
-
-class CivData:
-    def __init__(self, civ):
-        self._civ = civ
-        self.setup()
-        self.save()
-
-    def load(self):
-        self.__dict__.update(pickle.loads(player(self._civ).getScriptData()))
-
-    def save(self):
-        player(self._civ).setScriptData(pickle.dumps(self.__dict__))
 
 
 class GameData:
     def __init__(self):
         self.setup()
 
-    def load(self):
-        """Loads and unpickles script data"""
-        self.__dict__.update(pickle.loads(player(Civ.BARBARIAN).getScriptData()))
-
-    def save(self):
-        """Pickles and saves script data"""
-        player(Civ.BARBARIAN).setScriptData(pickle.dumps(self.__dict__))
+    def update(self, data):
+        self.__dict__.update(data)
 
     def setup(self):
         """Initialise the global script data for usage."""
@@ -158,25 +138,5 @@ class GameData:
 
         self.lBaseStabilityLastTurn = [0] * civilizations().majors().len()
 
-        self.save()
-
 
 data = GameData()
-
-
-def get_data(key, subkey=None):
-    if subkey is None:
-        return data.__dict__[key]
-    else:
-        return data.__dict__[key][subkey]
-
-
-def set_data(key, value, subkey=None):
-    if subkey is None:
-        data.__dict__[key] = value
-    else:
-        data.__dict__[key][subkey] = value
-
-
-def mod_data(key, value=1, subkey=None):
-    set_data(key, get_data(key, subkey) + value, subkey)

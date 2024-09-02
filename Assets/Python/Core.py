@@ -1,5 +1,3 @@
-# from BugEventManager import g_eventManager as events
-
 from CivilizationsData import (
     CIV_ADDITIONAL_UNITS,
     CIV_AI_MODIFIERS,
@@ -22,6 +20,7 @@ from CivilizationsData import (
 )
 from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH, MessageData
 from CoreTypes import Civ, Scenario
+import CvUtil
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
@@ -2241,6 +2240,11 @@ def font_symbol(iSymbol, fontsize=2):
     return font_text(symbol(iSymbol), fontsize)
 
 
+def show_if_human(player, message, *format):
+    if human() == player:
+        show(message, *format)
+
+
 def show(message, *format):
     if format:
         message = message % tuple(format)
@@ -2260,6 +2264,11 @@ def event_popup(id, title, message, labels=None):
     for label in labels:
         popup.addButton(label)
     popup.launch(not labels)
+
+
+def message_if_human(player, text, **settings):
+    if human() == player:
+        message(player, text, **settings)
 
 
 def message(player, text, **settings):
@@ -2289,6 +2298,10 @@ def message(player, text, **settings):
         True,
         True,
     )
+
+
+def log(message):
+    CvUtil.pyPrint(message)
 
 
 def get_data_from_province_map(plot):
@@ -2422,8 +2435,8 @@ civilizations_1200AD = (
     .collect()
 )
 
-techs = TechFactory
-units = UnitFactory
-plots = PlotFactory
-cities = CityFactory
-infos = Infos
+techs = TechFactory()
+units = UnitFactory()
+plots = PlotFactory()
+cities = CityFactory()
+infos = Infos()

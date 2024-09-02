@@ -46,10 +46,9 @@ from RFCUtils import (
     setTempFlippingCity,
 )
 from StoredData import data
-import Provinces
+from Provinces import onRespawn
 
 gc = CyGlobalContext()
-pm = Provinces.ProvinceManager()
 
 
 def resurrection(iGameTurn, iDeadCiv):
@@ -83,8 +82,7 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
             tile_max = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX]
 
             for city in (
-                plots()
-                .rectangle(tile_min, tile_max)
+                plots.rectangle(tile_min, tile_max)
                 .filter(
                     lambda p: p
                     not in civilization(iDeadCiv).location.area[AreaType.NORMAL][
@@ -223,9 +221,8 @@ def resurectCiv(iDeadCiv):
     setLastRespawnTurn(iDeadCiv, iGameTurn)
 
     # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
-    pm.onRespawn(
-        iDeadCiv
-    )  # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
+    # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
+    onRespawn(iDeadCiv)
 
     # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
     # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
@@ -397,7 +394,7 @@ def resurectCiv(iDeadCiv):
 
 
 def moveBackCapital(iCiv):
-    cityList = cities().owner(iCiv).entities()
+    cityList = cities.owner(iCiv).entities()
     tiles = civilization(iCiv).location.get(
         lambda c: c.new_capital, [civilization(iCiv).location.capital]
     )
@@ -442,15 +439,14 @@ def convertBackCulture(iCiv):
     # Sedna17: restored to be normal areas, not core
     # collect all the cities in the region
     for city in (
-        plots()
-        .rectangle(
+        plots.rectangle(
             civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MIN],
             civilization(iCiv).location.area[AreaType.NORMAL][Area.TILE_MAX],
         )
         .cities()
         .entities()
     ):
-        for plot in plots().surrounding(location(city)).entities():
+        for plot in plots.surrounding(location(city)).entities():
             iCivCulture = plot.getCulture(iCiv)
             iLoopCivCulture = 0
             for civ in civilizations().minors().ids():

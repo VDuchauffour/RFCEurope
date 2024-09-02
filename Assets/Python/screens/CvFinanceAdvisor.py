@@ -5,16 +5,8 @@ from Core import font_text, text
 from CoreTypes import SpecialParameter, StabilityCategory
 import CvUtil
 import CvScreenEnums
-
-
 from RFCUtils import *  # getArrow comes from RFC classic
-import Stability  # Absinthe
-
-# Mercenary Upkeep
-# import MercenaryUtils
-# objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-
-stab = Stability.Stability()  # Absinthe
+import Stability
 
 # globals
 gc = CyGlobalContext()
@@ -172,7 +164,7 @@ class CvFinanceAdvisor:
 
         # Absinthe: update all stability values for the active player
         # iGameTurn = turn()
-        stab.refreshBaseStability(self.iActiveLeader)
+        Stability.refreshBaseStability(self.iActiveLeader)
 
         # draw the contents
         self.drawContents()

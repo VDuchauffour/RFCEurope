@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from CvPlatyBuilderSettings import *
 from CityMapData import CITIES_MAP
 from Core import (
     get_data_from_upside_down_map,
@@ -33,20 +34,6 @@ import CvEventManager
 import Popup
 
 gc = CyGlobalContext()
-iChange = 1
-bPython = True
-bHideInactive = True
-Activities = [
-    "AWAKE",
-    "HOLD",
-    "SLEEP",
-    "HEAL",
-    "SENTRY",
-    "INTERCEPT",
-    "MISSION",
-    "PATROL",
-    "PLUNDER",
-]
 
 
 class CvWorldBuilderScreen:

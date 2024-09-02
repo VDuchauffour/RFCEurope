@@ -8,6 +8,9 @@ WORLD_HEIGHT = 73
 INDEPENDENT_CIVS = [Civ.INDEPENDENT, Civ.INDEPENDENT_2, Civ.INDEPENDENT_3, Civ.INDEPENDENT_4]
 MINOR_CIVS = INDEPENDENT_CIVS + [Civ.BARBARIAN]
 
+# Absinthe: Turn Randomization constants
+iLighthouseEarthQuake = 0
+iByzantiumVikingAttack = 1
 
 # Used for messages
 class MessageData(object):

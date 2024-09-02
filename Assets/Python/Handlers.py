@@ -1,54 +1,30 @@
 # ruff: noqa: F401
+import ScreenHandler
 
-import StoredData
-import Locations
-
-import LocationsData
-import CityMapData
-import ProvinceMapData
-import SettlerMapData
-import WarMapData
 import CityNameManager
 import Civilizations
+import History
+import Messages
 import Modifiers
-
-# import AIParameters
-
-# import Scenarios
-# import ScreensHandler
+import Rules
+import Setup
+import Shortcuts
+import StoredData
 
 import AIWars
 import Barbs
-
-# import Civics
-# import Collapse
-# import Communications
+import Collapse
 import Companies
 import Crusades
 import Mercenaries
-
-# import DynamicCivs
-# import EventSigns
-# import GreatPeople
-import History
-
-# import Logging
-# import Messages
-# import Periods
 import Plague
+import Provinces
 import Religions
 import Resources
-
-# import Resurrection
-# import Rise
+import Resurrection
 import RiseAndFall
-
-# import Rules
-# import Shortcuts
+import Secession
 import Stability
 import UniquePowers
-
-# import Victories
-# import Wonders
-
-Locations.init()
+import Victory
+import Wonders
