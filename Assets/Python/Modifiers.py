@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from Core import civilization, civilizations
+from Core import civilization, civilizations, log
 from CoreTypes import (
     Modifier,
     Building,
@@ -43,6 +43,7 @@ def setup():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
+    log("RFCE: Modifiers.setup()")
 
 
 def set_modifiers():

@@ -1,6 +1,6 @@
 from CvPythonExtensions import CyGlobalContext
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
-from Core import civilizations
+from Core import civilizations, log
 from CoreTypes import Civ, PlagueType, ProvinceType, Religion, Technology
 from ProvinceMapData import PROVINCES_MAP
 
@@ -11,6 +11,7 @@ def init():
     init_player_variables()
     init_provinces()
     set_province_type_parameters()
+    log("RFCE: Init.init()")
 
 
 def init_player_variables():

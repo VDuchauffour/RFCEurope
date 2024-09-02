@@ -11,6 +11,7 @@ from Core import (
     get_data_from_upside_down_map,
     get_data_from_province_map,
     location,
+    log,
     plot as _plot,
     location as _location,
     plots,
@@ -44,6 +45,7 @@ def setup():
     set_random_event()
     rename_cities_1200AD()
     refresh_dynamic_civ_name()
+    log("RFCE: Setup.setup()")
 
 
 def init_player_maps():
