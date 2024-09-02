@@ -1,5 +1,3 @@
-# from BugEventManager import g_eventManager as events
-
 from CivilizationsData import (
     CIV_ADDITIONAL_UNITS,
     CIV_AI_MODIFIERS,
@@ -22,6 +20,7 @@ from CivilizationsData import (
 )
 from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH, MessageData
 from CoreTypes import Civ, Scenario
+import CvUtil
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
@@ -2299,6 +2298,10 @@ def message(player, text, **settings):
         True,
         True,
     )
+
+
+def log(message):
+    CvUtil.pyPrint(message)
 
 
 def get_data_from_province_map(plot):
