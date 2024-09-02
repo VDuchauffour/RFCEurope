@@ -4,8 +4,8 @@ This repository contains a fork of the mod `RFCEurope` for Civilization IV: Beyo
 
 This fork enhances the original mod with some changes:
 
-- add [BUG Mod](https://forums.civfanatics.com/forums/civ4-bts-unaltered-gameplay-bug-bat-and-bull.268/) mod (v4.4)
-- add [BULL Mod](https://sourceforge.net/projects/civ4bull/) mod (v1.2)
+- add [BUG Mod](https://forums.civfanatics.com/forums/civ4-bts-unaltered-gameplay-bug-bat-and-bull.268/) (v4.4)
+- add [BULL Mod](https://sourceforge.net/projects/civ4bull/) (v1.2)
 - add [Blue Marble](https://www.civfanatics.net/bluemarble/content/index.php) mod (v4.50)
 - add [RFC DoC soundtrack](https://github.com/dguenms/DoC-Soundtrack/) for middle east civilizations
 

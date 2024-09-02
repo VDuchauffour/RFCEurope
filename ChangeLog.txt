@@ -14,6 +14,16 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE enhancements:
 
+v1.6.5: This release adds BUG and BULL mod
+
+- add BUG mod (v4.4)
+- add BULL mod (v1.2)
+- improve main interface with new icons (prosecutor, stability etc...)
+- date is revealed with calendar
+- improve the income warning color to signify if current research is fully funded
+- lots of chore tasks over the codebase
+- fix the duplication of era and wonders screens
+
 v1.6.4: This release fix a major issue with savegame
 
 - The game modifiers injected at the start of the game have been corrected, allowing existing saves to be loaded
