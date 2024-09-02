@@ -41,6 +41,7 @@
 from CvPythonExtensions import *
 import BugConfig
 import BugUtil
+from Core import text
 
 gc = CyGlobalContext()
 
@@ -134,6 +135,15 @@ def getWidgetHelp(argsList):
     if eWidgetType == WidgetTypes.WIDGET_HELP_RELIGION:
         if iData1 == -1:
             return CyTranslator().getText("TXT_KEY_CULTURELEVEL_NONE", ())
+
+    elif iData1 == 666:
+        return text("TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER")
+    elif iData1 == 1618:
+        return text("TXT_KEY_FAITH_SAINT")
+    elif iData1 == 1919:
+        return text("TXT_KEY_MERCENARY_HELP")
+    elif iData1 == 1920:
+        return text("TXT_KEY_BARBONLY_HELP")
 
     ## Platy WorldBuilder ##
     elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
