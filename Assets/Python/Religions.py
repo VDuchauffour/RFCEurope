@@ -1,48 +1,47 @@
-from CvPythonExtensions import (
-    CyGlobalContext,
-    EventContextTypes,
-    InterfaceMessageTypes,
-    UnitAITypes,
-    DirectionTypes,
-)
+import Popup
+import UniquePowers
 from Consts import MessageData
 from Core import (
+    cities,
     civilization,
     civilizations,
     event_popup,
     human,
     location,
+    message,
     player,
     text,
-    message,
     turn,
-    year,
-    cities,
     units,
+    year,
 )
 from CoreTypes import (
     Building,
-    Civ,
     City,
+    Civ,
     Civic,
     Province,
-    StabilityCategory,
     Religion,
+    StabilityCategory,
     Technology,
     UniquePower,
     Unit,
     Wonder,
 )
-from LocationsData import CITIES
-import Popup
-from ProvinceMapData import PROVINCES_MAP
-from RFCUtils import getBaseBuilding, prosecute
-from ReligionData import RELIGIOUS_BUILDINGS
-from StoredData import data
-from PyUtils import choice, percentage, percentage_chance, rand
-from ReligionData import RELIGIOUS_WONDERS
+from CvPythonExtensions import (
+    CyGlobalContext,
+    DirectionTypes,
+    EventContextTypes,
+    InterfaceMessageTypes,
+    UnitAITypes,
+)
 from Events import handler, popup_handler
-import UniquePowers
+from LocationsData import CITIES
+from ProvinceMapData import PROVINCES_MAP
+from PyUtils import choice, percentage, percentage_chance, rand
+from ReligionData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
+from RFCUtils import getBaseBuilding, prosecute
+from StoredData import data
 
 gc = CyGlobalContext()
 
@@ -484,12 +483,9 @@ def checkTurn(iGameTurn):
                 # Faith points are the deciding factor for buildings
                 iCatholicFaith += civ.player.getFaith()
                 iCatholicFaith += 2 * max(0, player(Civ.POPE).AI_getAttitude(civ.id))
-                if (
-                    civ.id == iJerusalemOwner
-                ):  # The Catholic owner of Jerusalem has a greatly improved chance
+                if civ.id == iJerusalemOwner:
                     iCatholicFaith += 30
-                if iCatholicFaith > 0:
-                    weights.append(iCatholicFaith)
+                weights.append(iCatholicFaith)
 
             if catholic_civs:
                 iChosenPlayer = choice(catholic_civs, weights)
