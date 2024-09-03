@@ -613,6 +613,7 @@ class CvGameUtils:
         bCanUpgradeAnywhere = 0
         return bCanUpgradeAnywhere
 
+    # Leoreth: also update BUG/WidgetUtil.py
     def getWidgetHelp(self, argsList):
         # 3Miro and sedna17, saint and prosecutor Info
         eWidgetType, iData1, iData2, bOption = argsList
