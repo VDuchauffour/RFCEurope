@@ -211,18 +211,18 @@ def dutch_should_found_protestantism(player_id):
         gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
             Building.PROTESTANT_SHRINE, 1
         )
-        setReformationActive(True)
+        data.is_reformation_active = True
         reformationchoice(Civ.DUTCH)
         reformationOther(Civ.INDEPENDENT)
         reformationOther(Civ.INDEPENDENT_2)
         reformationOther(Civ.INDEPENDENT_3)
         reformationOther(Civ.INDEPENDENT_4)
         reformationOther(Civ.BARBARIAN)
-        setReformationHitMatrix(Civ.DUTCH, 2)
+        data.players[Civ.DUTCH].reformation_hit = 2
 
         for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
-            if getReformationHitMatrix(neighbour) == 0:
-                setReformationHitMatrix(neighbour, 1)
+            if data.players[neighbour].reformation_hit == 0:
+                data.players[neighbour].reformation_hit = 1
 
 
 @handler("cityBuilt")
@@ -257,34 +257,6 @@ def onReligionFounded(iReligion, iFounder):
                 if not city.isHasRealBuilding(iTemple):
                     city.setHasRealBuilding(iTemple, True)
                 break
-
-
-def getReformationActive():
-    return data.bReformationActive
-
-
-def setReformationActive(bNewValue):
-    data.bReformationActive = bNewValue
-
-
-def getReformationHitMatrix(iCiv):
-    return data.players[iCiv].reformation_hit
-
-
-def setReformationHitMatrix(iCiv, bNewValue):
-    data.players[iCiv].reformation_hit = bNewValue
-
-
-def getReformationHitMatrixAll():
-    return [player.reformation_hit for player in data.players.values()]
-
-
-def getCounterReformationActive():
-    return data.bCounterReformationActive
-
-
-def setCounterReformationActive(bNewValue):
-    data.bCounterReformationActive = bNewValue
 
 
 @handler("BeginGameTurn")
@@ -537,13 +509,13 @@ def checkTurn(iGameTurn):
         update_pope_techs(catholic_civs)
 
     # Absinthe: Reformation
-    if getCounterReformationActive():
+    if data.is_counter_reformation_active:
         doCounterReformation()
-    if getReformationActive():
+    if data.is_reformation_active:
         reformationArrayChoice()
-        if getReformationActive():
+        if data.is_reformation_active:
             reformationArrayChoice()
-            if getReformationActive():
+            if data.is_reformation_active:
                 reformationArrayChoice()
 
 
@@ -801,28 +773,28 @@ def onTechAcquired(iTech, iTeam, iPlayer):
                     gc.getGame().getHolyCity(Religion.PROTESTANTISM).setNumRealBuilding(
                         Building.PROTESTANT_SHRINE, 1
                     )
-                    setReformationActive(True)
+                    data.is_reformation_active = True
                     reformationchoice(iPlayer)
                     reformationOther(Civ.INDEPENDENT)
                     reformationOther(Civ.INDEPENDENT_2)
                     reformationOther(Civ.INDEPENDENT_3)
                     reformationOther(Civ.INDEPENDENT_4)
                     reformationOther(Civ.BARBARIAN)
-                    setReformationHitMatrix(iPlayer, 2)
+                    data.players[iPlayer].reformation_hit = 2
                     spread_reform_to_neighbour(iPlayer)
 
 
 def spread_reform_to_neighbour(player_id):
     for neighbour in civilization(player_id).location.reformation_neighbours:
-        if getReformationHitMatrix(neighbour) == 0:
-            setReformationHitMatrix(neighbour, 1)
+        if data.players[neighbour].reformation_hit == 0:
+            data.players[neighbour].reformation_hit = 1
 
 
 def reformationArrayChoice():
     civ = (
         civilizations()
         .majors()
-        .filter(lambda c: getReformationHitMatrix(c.id) == 1)
+        .filter(lambda c: data.players[c.key].reformation_hit == 1)
         .random_entry()
     )
     if civ is not None:
@@ -830,13 +802,16 @@ def reformationArrayChoice():
             reformationchoice(civ.id)
         else:
             reformationOther(civ.id)
-        setReformationHitMatrix(civ.id, 2)
+        data.players[civ.id].reformation_hit = 2
         spread_reform_to_neighbour(civ.id)
 
-        if sum(getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
-            setReformationActive(False)
+        if (
+            sum([player.reformation_hit for player in data.players.values()])
+            == 2 * civilizations().majors().len()
+        ):
+            data.is_reformation_active = False
             # after all players have been hit by the Reformation
-            setCounterReformationActive(True)
+            data.is_counter_reformation_active = True
 
 
 def reformationchoice(iCiv):
@@ -1080,7 +1055,7 @@ def doCounterReformation():
                 doCounterReformationYes(iPlayer)
             else:
                 doCounterReformationNo(iPlayer)
-    setCounterReformationActive(False)
+    data.is_counter_reformation_active = False
 
 
 def doCounterReformationHuman(iPlayer):

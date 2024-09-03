@@ -129,8 +129,8 @@ class GameData(BaseData):
         ]  # first is a bool, the other values are capital coordinates
 
     def init_reformation(self):
-        self.bReformationActive = False
-        self.bCounterReformationActive = False
+        self.is_reformation_active = False
+        self.is_counter_reformation_active = False
 
     def init_persecution(self):
         self.lPersecutionData = [-1, -1, -1]
