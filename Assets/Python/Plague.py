@@ -43,26 +43,6 @@ def setup():
         setPlagueCountdown(i, -PLAGUE_IMMUNITY)
 
 
-def getGenericPlagueDates(i):
-    return data.plagues[i]
-
-
-def getBadPlague():
-    return data.bBadPlague
-
-
-def setBadPlague(bBad):
-    data.bBadPlague = bBad
-
-
-def getFirstPlague():
-    return data.bFirstPlague
-
-
-def setFirstPlague(bFirst):
-    data.bFirstPlague = bFirst
-
-
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     for iPlayer in civilizations().ids():
@@ -85,8 +65,7 @@ def checkTurn(iGameTurn):
         # if the plague has stopped too quickly, restart
         if iGameTurn == plague_turn + 4:
             # not on the first one, that's mostly for one civ anyway
-            bFirstPlague = getFirstPlague()
-            if not bFirstPlague:
+            if not data.is_first_plague:
                 iInfectedCounter = 0
                 for iPlayer in civilizations().ids():
                     if gc.getPlayer(iPlayer).isAlive() and getPlagueCountdown(iPlayer) > 0:
@@ -103,16 +82,16 @@ def startPlague(plague_index):
     # Plague of Constantinople (that started at Alexandria)
     if plague_index == iConstantinople:
         iWorstCiv = Civ.BYZANTIUM
-        setFirstPlague(True)
-        setBadPlague(False)
+        data.is_first_plague = True
+        data.is_a_bad_plague = False
     # Black Death in the 14th century
     elif plague_index == iBlackDeath:
-        setFirstPlague(False)
-        setBadPlague(True)
+        data.is_first_plague = False
+        data.is_a_bad_plague = True
     # all the others
     else:
-        setFirstPlague(False)
-        setBadPlague(False)
+        data.is_first_plague = False
+        data.is_a_bad_plague = False
 
     # try to find the most unhealthy civ
     if iWorstCiv == -1:
@@ -155,7 +134,7 @@ def isVulnerable(iPlayer):
     else:
         if getPlagueCountdown(iPlayer) == 0:
             # Absinthe: health doesn't matter for the Black Death, everyone is vulnerable
-            if getBadPlague():
+            if data.is_a_bad_plague:
                 return True
             else:
                 iHealth = calcHealth(iPlayer)
@@ -260,8 +239,7 @@ def infectCity(city):
 
     # Absinthe: plagues won't kill units instantly on spread anymore
     # 			Plague of Justinian deals even less initial damage
-    bFirstPlague = getFirstPlague()
-    if bFirstPlague:
+    if data.is_first_plague:
         killUnitsByPlague(city, _plot(city), 0, 80, 0)
     else:
         killUnitsByPlague(city, _plot(city), 0, 90, 0)
@@ -363,8 +341,6 @@ def killUnitsByPlague(city, plot, iThreshold, iDamage, iPreserveDefenders):
 def processPlague(iPlayer):
     if iPlayer < civilizations().len():
         if getPlagueCountdown(iPlayer) > 0:
-            bBadPlague = getBadPlague()
-            bFirstPlague = getFirstPlague()
             pPlayer = gc.getPlayer(iPlayer)
             iHuman = human()
 
@@ -382,10 +358,12 @@ def processPlague(iPlayer):
 
                     iRandom = percentage()
                     iPopSize = city.getPopulation()
-                    if bBadPlague:  # if it's the Black Death, bigger chance for population loss
+                    if (
+                        data.is_a_bad_plague
+                    ):  # if it's the Black Death, bigger chance for population loss
                         bKill = iRandom < 10 + 10 * (iPopSize - 4) - 5 * iHealthRate
                     elif (
-                        bFirstPlague
+                        data.is_first_plague
                     ):  # if it's the Plague of Justinian, smaller chance for population loss
                         bKill = iRandom < 10 * (iPopSize - 4) - 5 * iHealthRate
                     else:

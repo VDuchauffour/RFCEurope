@@ -107,8 +107,8 @@ class GameData(BaseData):
             375 + rand(40) - 30,  # 1650 Great Plague
             440 + rand(40) - 30,  # 1740 Small Pox
         ]
-        self.bBadPlague = False
-        self.bFirstPlague = False
+        self.is_a_bad_plague = False
+        self.is_first_plague = False
 
     def init_rise_and_fall(self):
         # RiseAndFall
