@@ -164,7 +164,6 @@ tNorwayOutrank = [
     Civ.GERMANY,
     Civ.FRANCE,
 ]
-# tNorseControl = [ Province.SICILY, Province.ICELAND, Province.NORTHUMBRIA, Province.SCOTLAND, Province.NORMANDY, Province.IRELAND, Province.NOVGOROD ]
 tVenetianControl = [
     Province.EPIRUS,
     Province.DALMATIA,
@@ -379,8 +378,6 @@ tMoscowControl = [
     Province.MOSCOW,
     Province.MUROM,
 ]
-# tSwedenControlI = [ Province.GOTALAND, Province.SVEALAND, Province.NORRLAND, Province.SKANELAND, Province.GOTLAND, Province.OSTERLAND ]
-# tSwedenControlII = [ Province.SAXONY, Province.BRANDENBURG, Province.HOLSTEIN, Province.POMERANIA, Province.PRUSSIA, Province.GREATER_POLAND, Province.MASOVIA, Province.SUVALKIJA, Province.LITHUANIA, Province.LIVONIA, Province.ESTONIA, Province.SMOLENSK, Province.POLOTSK, Province.MINSK, Province.MUROM, Province.CHERNIGOV, Province.MOSCOW, Province.NOVGOROD, Province.ROSTOV ]
 tSwedenControl = [Province.NORRLAND, Province.OSTERLAND, Province.KARELIA]
 tNovgorodControl = [
     Province.NOVGOROD,
@@ -391,7 +388,6 @@ tNovgorodControl = [
     Province.VOLOGDA,
     Province.OSTERLAND,
 ]
-# tNovgorodControlII = [ Province.KARELIA, Province.VOLOGDA ]
 tMoroccoControl = [
     Province.MOROCCO,
     Province.MARRAKESH,
@@ -456,7 +452,6 @@ tDenmarkControlI = [
     Province.EAST_ANGLIA,
     Province.NORTHUMBRIA,
 ]
-# tDenmarkControlII = [ Province.BRANDENBURG, Province.POMERANIA, Province.ESTONIA ]
 tDenmarkControlIII = [
     Province.DENMARK,
     Province.NORWAY,
@@ -471,7 +466,6 @@ tDenmarkControlIII = [
     Province.ICELAND,
 ]
 
-# tHugeHungaryControl = ( 0, 23, 99, 72 )
 totalLand = gc.getMap().getLandPlots()
 
 
