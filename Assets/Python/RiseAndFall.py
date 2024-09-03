@@ -192,19 +192,19 @@ def setOldCivFlip(iNewValue):
 
 
 def getTempTopLeft():
-    return data.iTempTopLeft
+    return data.temp_top_left
 
 
 def setTempTopLeft(tNewValue):
-    data.iTempTopLeft = tNewValue
+    data.temp_top_left = tNewValue
 
 
 def getTempBottomRight():
-    return data.iTempBottomRight
+    return data.temp_bottom_right
 
 
 def setTempBottomRight(tNewValue):
-    data.iTempBottomRight = tNewValue
+    data.temp_bottom_right = tNewValue
 
 
 def getSpawnWar():
@@ -264,11 +264,11 @@ def setRebelSuppress(lSuppressList):
 
 
 def getTempFlippingCity():
-    return data.iTempFlippingCity
+    return data.temp_flipping_city
 
 
 def setTempFlippingCity(tNewValue):
-    data.iTempFlippingCity = tNewValue
+    data.temp_flipping_city = tNewValue
 
 
 def getCheatersCheck(i):

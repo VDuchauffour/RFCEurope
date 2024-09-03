@@ -787,11 +787,11 @@ def setRevolDates(lNextMinorRevolt):
 
 
 def getTempFlippingCity():
-    return data.iTempFlippingCity
+    return data.temp_flipping_city
 
 
 def setTempFlippingCity(tNewValue):
-    data.iTempFlippingCity = tNewValue
+    data.temp_flipping_city = tNewValue
 
 
 def getNationRevoltIndex():

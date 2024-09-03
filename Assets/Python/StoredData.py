@@ -63,9 +63,9 @@ class GameData(BaseData):
             civ.update(data)
 
     def init_temp_values(self):
-        self.iTempTopLeft = -1
-        self.iTempBottomRight = -1
-        self.iTempFlippingCity = -1
+        self.temp_top_left = -1
+        self.temp_bottom_right = -1
+        self.temp_flipping_city = -1
 
     def init_random_values(self):
         self.random_events = {}
