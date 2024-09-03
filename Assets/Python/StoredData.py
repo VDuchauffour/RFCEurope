@@ -154,9 +154,6 @@ class GameData(BaseData):
         self.bDCEnabled = False
         self.iDCLast = 0
 
-        # Absinthe: Event Turn Randomization
-        self.lEventRandomness = [0] * 10
-
         # 3Miro: Minor Nations
         self.lNextMinorRevolt = [-1, -1, -1, -1, -1, -1, -1]
         self.lRevoltinNationRevoltIndex = [-1, -1, -1, -1, -1, -1, -1]
