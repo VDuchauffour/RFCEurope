@@ -103,11 +103,11 @@ def setProsecutionCount(iCiv, iNewValue):
 
 # Plague
 def getPlagueCountdown(iCiv):
-    return data.players[iCiv].plague_countdown
+    return data.civs[iCiv].plague_countdown
 
 
 def setPlagueCountdown(iCiv, iNewValue):
-    data.players[iCiv].plague_countdown = iNewValue
+    data.civs[iCiv].plague_countdown = iNewValue
 
 
 # Victory

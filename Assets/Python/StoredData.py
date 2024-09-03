@@ -4,13 +4,24 @@ from MiscData import NUM_CRUSADES
 from PyUtils import rand
 
 
-class PlayerData(object):
+class BaseData(object):
+    def update(self, data):
+        self.__dict__.update(data)
+
+
+class CivData(BaseData):
     def __init__(self, player_id):
         self.id = player_id
         self.setup()
 
-    def update(self, data):
-        self.__dict__.update(data)
+    def setup(self):
+        self.plague_countdown = 0
+
+
+class PlayerData(BaseData):
+    def __init__(self, player_id):
+        self.id = player_id
+        self.setup()
 
     def setup(self):
         # RiseAndFall
@@ -23,9 +34,6 @@ class PlayerData(object):
         # Reformation
         self.reformation_hit = 0
 
-        # Plague
-        self.plague_countdown = 0
-
         # Crusades
         self.voting_power = 0
         self.deviate_targets = False
@@ -37,12 +45,9 @@ class PlayerData(object):
         self.last_respawn_turn = 0
 
 
-class GameData(object):
+class GameData(BaseData):
     def __init__(self):
         self.setup()
-
-    def update(self, data):
-        self.__dict__.update(data)
 
     def init_random_values(self):
         self.random_events = {}
@@ -52,6 +57,7 @@ class GameData(object):
     def setup(self):
         """Initialise the global script data for usage."""
         self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
+        self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
 
         # Temporary variables
         self.iTempTopLeft = -1
