@@ -49,6 +49,19 @@ class GameData(BaseData):
     def __init__(self):
         self.setup()
 
+    def update(self, data):
+        self.__dict__.update(data)
+
+        for player in self.players:
+            data = player.__dict__.copy()
+            player.setup()
+            player.update(data)
+
+        for civ in self.civs:
+            data = civ.__dict__.copy()
+            civ.setup()
+            civ.update(data)
+
     def init_temp_values(self):
         self.iTempTopLeft = -1
         self.iTempBottomRight = -1
