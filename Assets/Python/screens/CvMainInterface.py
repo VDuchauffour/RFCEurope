@@ -9755,8 +9755,8 @@ class CvMainInterface:
                             g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID()
                         )
                     elif len(religionList) > 1:
-                        data.lPersecutionReligions = religionList
-                        data.lPersecutionData = [
+                        data.persecution_religions = religionList
+                        data.persecution_data = [
                             g_pSelectedUnit.getX(),
                             g_pSelectedUnit.getY(),
                             g_pSelectedUnit.getID(),

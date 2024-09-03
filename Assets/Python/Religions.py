@@ -688,7 +688,7 @@ def onPlayerChangeAllCivics(
                             len(religionList) == gc.getNumReligionInfos()
                         ):  # no need to check any further, if we already have all religions in the list
                             break
-                    data.lReligionChoices = religionList
+                    data.free_religion_choices = religionList
                     # no popup if no available religions
                     if religionList:
                         showFreeRevolutionPopup(iPlayer, religionList)
@@ -742,7 +742,7 @@ def FreeReligiousRevolutionEvent(playerID, netUserData, popupReturn):
     """Free religious revolution."""
     # Absinthe: event of the free religion change popup
     # the last option is the no change option
-    player(playerID).convertForFree(data.lReligionChoices[popupReturn.getButtonClicked()])
+    player(playerID).convertForFree(data.free_religion_choices[popupReturn.getButtonClicked()])
 
 
 # REFORMATION
@@ -1099,9 +1099,8 @@ def CounterReformationEvent(playerID, netUserData, popupReturn):
 @popup_handler(7628)
 def PersecutionEvent(playerID, netUserData, popupReturn):
     """Persecution popup event."""
-    iPlotX, iPlotY, iUnitID = data.lPersecutionData
-    iChosenReligion = data.lPersecutionReligions[popupReturn.getButtonClicked()]
-    prosecute(iPlotX, iPlotY, iUnitID, iChosenReligion)
+    iPlotX, iPlotY, iUnitID = data.persecution_data
+    prosecute(iPlotX, iPlotY, iUnitID, data.persecution_religions[popupReturn.getButtonClicked()])
 
 
 def doCounterReformationYes(iPlayer):

@@ -998,7 +998,7 @@ def collapseImmune(iCiv):
 def showPersecutionPopup():
     """Asks the human player to select a religion to persecute."""
     labels = []
-    for iReligion in data.lPersecutionReligions:
+    for iReligion in data.persecution_religions:
         strIcon = gc.getReligionInfo(iReligion).getType()
         strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
         strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())

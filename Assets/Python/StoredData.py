@@ -133,10 +133,8 @@ class GameData(BaseData):
         self.is_counter_reformation_active = False
 
     def init_persecution(self):
-        self.lPersecutionData = [-1, -1, -1]
-        self.lPersecutionReligions = []
-        # Absinthe: Free religious revolution
-        self.lReligionChoices = []
+        self.persecution_data = [-1, -1, -1]
+        self.persecution_religions = []
 
     def init_ai_wars(self):
         self.lAttackingCivsArray = [
@@ -182,6 +180,9 @@ class GameData(BaseData):
             -1
         ] * 500  # must be at least as long as lMercList (currently allow for 500)
 
+    def init_civics_values(self):
+        self.free_religion_choices = []
+
     def setup(self):
         """Initialise the global script data for usage."""
         self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
@@ -196,6 +197,7 @@ class GameData(BaseData):
         self.init_ai_wars()
         self.init_minor_nations()
         self.init_mercenaries()
+        self.init_civics_values()
 
         self.bIgnoreAIUHV = True
 
