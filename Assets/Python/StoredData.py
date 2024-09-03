@@ -199,7 +199,7 @@ class GameData(BaseData):
         self.init_mercenaries()
         self.init_civics_values()
 
-        self.bIgnoreAIUHV = True
+        self.ignore_ai_uhv = True
 
 
 data = GameData()

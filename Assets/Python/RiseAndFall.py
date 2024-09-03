@@ -414,7 +414,6 @@ def FlipPopupEvent(playerID, netUserData, popupReturn):
 def ResurrectionEvent(playerID, netUserData, popupReturn):
     # resurrection when some human controlled cities are also included
     iHuman = human()
-    iRebelCiv = getRebelCiv()
     iChoice = popupReturn.getButtonClicked()
     iHumanCity = 0
     lCityList = getRebelCities()
