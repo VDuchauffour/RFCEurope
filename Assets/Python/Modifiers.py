@@ -408,6 +408,7 @@ def set_historical_enemies():
     # 	so this should be a "last resort" solution, other methods are always preferable
     for civ1, civ2, value in HISTORICAL_ENEMIES:
         gc.setHistoricalEnemyAICheat(civ1, civ2, value)
+        gc.setHistoricalEnemyAICheat(civ2, civ1, -value)
 
 
 def set_other_parameters():
