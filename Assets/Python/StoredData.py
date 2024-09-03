@@ -49,6 +49,11 @@ class GameData(BaseData):
     def __init__(self):
         self.setup()
 
+    def init_temp_values(self):
+        self.iTempTopLeft = -1
+        self.iTempBottomRight = -1
+        self.iTempFlippingCity = -1
+
     def init_random_values(self):
         self.random_events = {}
         self.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE] = rand(40)
@@ -92,16 +97,7 @@ class GameData(BaseData):
         self.bBadPlague = False
         self.bFirstPlague = False
 
-    def setup(self):
-        """Initialise the global script data for usage."""
-        self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
-        self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
-
-        # Temporary variables
-        self.iTempTopLeft = -1
-        self.iTempBottomRight = -1
-        self.iTempFlippingCity = -1
-
+    def init_rise_and_fall(self):
         # RiseAndFall
         self.iNewCiv = -1
         self.iNewCivFlip = -1
@@ -119,17 +115,17 @@ class GameData(BaseData):
             -1,
         ]  # first is a bool, the other values are capital coordinates
 
-        # Absinthe: Reformation
+    def init_reformation(self):
         self.bReformationActive = False
         self.bCounterReformationActive = False
 
-        # Absinthe: Persecution
+    def init_persecution(self):
         self.lPersecutionData = [-1, -1, -1]
         self.lPersecutionReligions = []
         # Absinthe: Free religious revolution
         self.lReligionChoices = []
 
-        # AIWars
+    def init_ai_wars(self):
         self.lAttackingCivsArray = [
             0,
             0,
@@ -163,21 +159,32 @@ class GameData(BaseData):
         ]  # major players only
         self.iNextTurnAIWar = -1
 
-        # 3Miro: Minor Nations
+    def init_minor_nations(self):
         self.lNextMinorRevolt = [-1, -1, -1, -1, -1, -1, -1]
         self.lRevoltinNationRevoltIndex = [-1, -1, -1, -1, -1, -1, -1]
 
-        # 3Miro: Mercenaries
+    def init_mercenaries(self):
         self.lMercGlobalPool = []
         self.lMercsHiredBy = [
             -1
         ] * 500  # must be at least as long as lMercList (currently allow for 500)
-        # Merijn: AI UHV
-        self.bIgnoreAIUHV = True
 
+    def setup(self):
+        """Initialise the global script data for usage."""
+        self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
+        self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
+        self.init_temp_values()
         self.init_random_values()
         self.init_crusade()
         self.init_plagues()
+        self.init_rise_and_fall()
+        self.init_reformation()
+        self.init_persecution()
+        self.init_ai_wars()
+        self.init_minor_nations()
+        self.init_mercenaries()
+
+        self.bIgnoreAIUHV = True
 
 
 data = GameData()
