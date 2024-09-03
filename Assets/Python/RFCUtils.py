@@ -72,16 +72,8 @@ def getLastTurnAlive(iCiv):
     return data.players[iCiv].last_turn_alive
 
 
-def setLastTurnAlive(iCiv, iNewValue):
-    data.players[iCiv].last_turn_alive = iNewValue
-
-
 def getLastRespawnTurn(iCiv):
     return data.players[iCiv].last_respawn_turn
-
-
-def setLastRespawnTurn(iCiv, iNewValue):
-    data.players[iCiv].last_respawn_turn = iNewValue
 
 
 # Stability
@@ -91,14 +83,6 @@ def getTempFlippingCity():
 
 def setTempFlippingCity(tNewValue):
     data.iTempFlippingCity = tNewValue
-
-
-def getProsecutionCount(iCiv):
-    return gc.getProsecutionCount(iCiv)
-
-
-def setProsecutionCount(iCiv, iNewValue):
-    gc.setProsecutionCount(iCiv, iNewValue)
 
 
 # Plague
@@ -835,7 +819,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
             unit.kill(False, Civ.BARBARIAN)
         resetUHV(iCiv)
 
-        setLastTurnAlive(iCiv, turn())
+        data.players[iCiv].last_turn_alive = turn()
         # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
         gc.getPlayer(iCiv).setAlive(False)
         # Absinthe: respawn status

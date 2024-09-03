@@ -41,7 +41,6 @@ from RFCUtils import (
     getLastTurnAlive,
     pushOutGarrisons,
     relocateSeaGarrisons,
-    setLastRespawnTurn,
     setPlagueCountdown,
     setTempFlippingCity,
 )
@@ -218,7 +217,7 @@ def resurectCiv(iDeadCiv):
 
     # Absinthe: store the turn of the latest respawn for each civ
     iGameTurn = turn()
-    setLastRespawnTurn(iDeadCiv, iGameTurn)
+    data.players[iDeadCiv].last_respawn_turn = iGameTurn
 
     # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
     # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
