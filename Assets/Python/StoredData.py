@@ -4,6 +4,39 @@ from MiscData import NUM_CRUSADES
 from PyUtils import rand
 
 
+class PlayerData(object):
+    def __init__(self, player_id):
+        self.id = player_id
+        self.setup()
+
+    def update(self, data):
+        self.__dict__.update(data)
+
+    def setup(self):
+        # RiseAndFall
+        self.num_cities = 0
+        self.spawn_delay = 0
+        self.flips_Delay = 0
+        self.latest_rebellion_turn = 0
+        self.rebel_suppress = 0
+
+        # Reformation
+        self.reformation_hit = 0
+
+        # Plague
+        self.plague_countdown = 0
+
+        # Crusades
+        self.voting_power = 0
+        self.deviate_targets = False
+        self.num_units_sent = 0
+
+        # Respawns
+        self.special_respawn_turn = 0
+        self.last_turn_alive = 0
+        self.last_respawn_turn = 0
+
+
 class GameData(object):
     def __init__(self):
         self.setup()
@@ -11,8 +44,14 @@ class GameData(object):
     def update(self, data):
         self.__dict__.update(data)
 
+    def init_random_values(self):
+        self.random_events = {}
+        self.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE] = rand(40)
+        self.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] = rand(10)
+
     def setup(self):
         """Initialise the global script data for usage."""
+        self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
 
         # Temporary variables
         self.iTempTopLeft = -1
@@ -25,13 +64,9 @@ class GameData(object):
         self.iOldCivFlip = -1
         self.iSpawnWar = 0  # if 1, add units and declare war. If >=2, do nothing
         self.bAlreadySwitched = False
-        self.lNumCities = [0] * civilizations().majors().len()
-        self.lSpawnDelay = [0] * civilizations().majors().len()
-        self.lFlipsDelay = [0] * civilizations().majors().len()
         self.iBetrayalTurns = 0
-        self.lLatestRebellionTurn = [0] * civilizations().majors().len()
         self.iRebelCiv = 0
-        self.lRebelCities = []  # 3Miro: store the rebelling cities
+        self.lRebelCities = []
         self.lRebelSuppress = [0] * civilizations().majors().len()
         self.lCheatersCheck = [0, -1]
         self.lDeleteMode = [
@@ -42,7 +77,6 @@ class GameData(object):
 
         # Absinthe: Reformation
         self.bReformationActive = False
-        self.lReformationHitMatrix = [0] * civilizations().majors().len()
         self.bCounterReformationActive = False
         # Absinthe: Persecution
         self.lPersecutionData = [-1, -1, -1]
@@ -85,7 +119,6 @@ class GameData(object):
         self.iNextTurnAIWar = -1
 
         # Absinthe: Plagues
-        self.lPlagueCountdown = [0] * civilizations().len()
         self.lGenericPlagueDates = [-1, -1, -1, -1, -1]
         self.bBadPlague = False
         self.bFirstPlague = False
@@ -93,13 +126,11 @@ class GameData(object):
         # Crusades
         self.lCrusadeInit = [-2] * NUM_CRUSADES
         self.bParticipate = False
-        self.lVotingPower = [0] * civilizations().majors().len()
         self.iFavorite = 0
         self.iPowerful = 0
         self.iLeader = 0
         self.lVotesGathered = [0, 0]
         self.iRichestCatholic = 0
-        self.lDeviateTargets = [False] * civilizations().majors().len()
         self.tTarget = (0, 0)
         self.iCrusadePower = 0
         self.iCrusadeSucceeded = 0
@@ -114,14 +145,8 @@ class GameData(object):
             0,
             0,
         ]  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
-        self.lNumUnitsSent = [0] * civilizations().majors().len()
         self.bDCEnabled = False
         self.iDCLast = 0
-
-        # Absinthe: Respawns
-        self.lSpecialRespawnTurn = [0] * civilizations().majors().len()
-        self.lLastTurnAlive = [0] * civilizations().majors().len()
-        self.lLastRespawnTurn = [0] * civilizations().majors().len()
 
         # Absinthe: Event Turn Randomization
         self.lEventRandomness = [0] * 10
@@ -138,14 +163,7 @@ class GameData(object):
         # Merijn: AI UHV
         self.bIgnoreAIUHV = True
 
-        self.lBaseStabilityLastTurn = [0] * civilizations().majors().len()
-
         self.init_random_values()
-
-    def init_random_values(self):
-        self.random_events = {}
-        self.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE] = rand(40)
-        self.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] = rand(10)
 
 
 data = GameData()

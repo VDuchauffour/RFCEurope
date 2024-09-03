@@ -268,15 +268,15 @@ def setReformationActive(bNewValue):
 
 
 def getReformationHitMatrix(iCiv):
-    return data.lReformationHitMatrix[iCiv]
+    return data.players[iCiv].reformation_hit
 
 
 def setReformationHitMatrix(iCiv, bNewValue):
-    data.lReformationHitMatrix[iCiv] = bNewValue
+    data.players[iCiv].reformation_hit = bNewValue
 
 
 def getReformationHitMatrixAll():
-    return data.lReformationHitMatrix
+    return [player.reformation_hit for player in data.players.values()]
 
 
 def getCounterReformationActive():

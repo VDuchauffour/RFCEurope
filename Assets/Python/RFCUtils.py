@@ -69,19 +69,19 @@ bStabilityOverlay = False
 
 # RiseAndFall, Stability
 def getLastTurnAlive(iCiv):
-    return data.lLastTurnAlive[iCiv]
+    return data.players[iCiv].last_turn_alive
 
 
 def setLastTurnAlive(iCiv, iNewValue):
-    data.lLastTurnAlive[iCiv] = iNewValue
+    data.players[iCiv].last_turn_alive = iNewValue
 
 
 def getLastRespawnTurn(iCiv):
-    return data.lLastRespawnTurn[iCiv]
+    return data.players[iCiv].last_respawn_turn
 
 
 def setLastRespawnTurn(iCiv, iNewValue):
-    data.lLastRespawnTurn[iCiv] = iNewValue
+    data.players[iCiv].last_respawn_turn = iNewValue
 
 
 # Stability
@@ -103,11 +103,11 @@ def setProsecutionCount(iCiv, iNewValue):
 
 # Plague
 def getPlagueCountdown(iCiv):
-    return data.lPlagueCountdown[iCiv]
+    return data.players[iCiv].plague_countdown
 
 
 def setPlagueCountdown(iCiv, iNewValue):
-    data.lPlagueCountdown[iCiv] = iNewValue
+    data.players[iCiv].plague_countdown = iNewValue
 
 
 # Victory

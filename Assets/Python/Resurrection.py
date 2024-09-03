@@ -239,7 +239,7 @@ def resurectCiv(iDeadCiv):
         if iCiv != iDeadCiv:
             if teamDeadCiv.isAtWar(iCiv):
                 teamDeadCiv.makePeace(iCiv)
-    data.lNumCities[iDeadCiv] = 0  # reset collapse condition
+    data.players[iDeadCiv].num_cities = 0  # reset collapse condition
 
     # Absinthe: reset vassalage and update dynamic civ names
     for iOtherCiv in civilizations().majors().ids():
@@ -255,9 +255,9 @@ def resurectCiv(iDeadCiv):
     # Absinthe: no vassalization in the first 10 turns after resurrection?
 
     iNewUnits = 2
-    if data.lLatestRebellionTurn[iDeadCiv] > 0:
+    if data.players[iDeadCiv].latest_rebellion_turn > 0:
         iNewUnits = 4
-    data.lLatestRebellionTurn[iDeadCiv] = turn()
+    data.players[iDeadCiv].latest_rebellion_turn = turn()
     bHuman = False
     for (x, y) in lCityList:
         if gc.getMap().plot(x, y).getPlotCity().getOwner() == iHuman:

@@ -204,15 +204,15 @@ def getSelectedUnit(iUnitPlace):
 
 
 def changeNumUnitsSent(iPlayer, iChange):
-    data.lNumUnitsSent[iPlayer] += iChange
+    data.players[iPlayer].num_units_sent += iChange
 
 
 def setNumUnitsSent(iPlayer, iNewNumber):
-    data.lNumUnitsSent[iPlayer] = iNewNumber
+    data.players[iPlayer].num_units_sent = iNewNumber
 
 
 def getNumUnitsSent(iPlayer):
-    return data.lNumUnitsSent[iPlayer]
+    return data.players[iPlayer].num_units_sent
 
 
 def getActiveCrusade(iGameTurn):
@@ -232,11 +232,11 @@ def setParticipate(bVal):
 
 
 def getVotingPower(iCiv):
-    return data.lVotingPower[iCiv]
+    return data.players[iCiv].voting_power
 
 
 def setVotingPower(iCiv, iVotes):
-    data.lVotingPower[iCiv] = iVotes
+    data.players[iCiv].voting_power = iVotes
 
 
 def getCrusadePower():
@@ -296,11 +296,11 @@ def setRichestCatholic(iPlayer):
 
 
 def getIsTarget(iCiv):
-    return data.lDeviateTargets[iCiv]
+    return data.players[iCiv].deviate_targets
 
 
 def setIsTarget(iCiv, bTarget):
-    data.lDeviateTargets[iCiv] = bTarget
+    data.players[iCiv].deviate_targets = bTarget
 
 
 def getTargetPlot():

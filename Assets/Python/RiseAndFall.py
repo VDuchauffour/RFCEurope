@@ -149,7 +149,7 @@ def set_war_on_spawn():
 
 
 def setSpecialRespawnTurn(iCiv, iNewValue):
-    data.lSpecialRespawnTurn[iCiv] = iNewValue
+    data.players[iCiv].special_respawn_turn = iNewValue
 
 
 def setupRespawnTurns():
@@ -224,19 +224,19 @@ def setAlreadySwitched(bNewValue):
 
 
 def getSpawnDelay(iCiv):
-    return data.lSpawnDelay[iCiv]
+    return data.players[iCiv].spawn_delay
 
 
 def setSpawnDelay(iCiv, iNewValue):
-    data.lSpawnDelay[iCiv] = iNewValue
+    data.players[iCiv].spawn_delay = iNewValue
 
 
 def getFlipsDelay(iCiv):
-    return data.lFlipsDelay[iCiv]
+    return data.players[iCiv].flips_Delay
 
 
 def setFlipsDelay(iCiv, iNewValue):
-    data.lFlipsDelay[iCiv] = iNewValue
+    data.players[iCiv].flips_Delay = iNewValue
 
 
 def getBetrayalTurns():

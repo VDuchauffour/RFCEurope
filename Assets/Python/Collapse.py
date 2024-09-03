@@ -56,9 +56,9 @@ def collapseGeneric(iGameTurn):
         pCiv = gc.getPlayer(iCiv)
         teamCiv = gc.getTeam(pCiv.getTeam())
         if pCiv.isAlive():
-            lNumCitiesLastTime[iCiv] = data.lNumCities[iCiv]
+            lNumCitiesLastTime[iCiv] = data.players[iCiv].num_cities
             iNumCitiesCurrently = pCiv.getNumCities()
-            data.lNumCities[iCiv] = iNumCitiesCurrently
+            data.players[iCiv].num_cities = iNumCitiesCurrently
             # Absinthe: no generic collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
             iRespawnTurn = getLastRespawnTurn(iCiv)
             if (
