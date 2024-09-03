@@ -1256,3 +1256,8 @@ class City(IntEnum):
     TANAIS = 102
     REYKJAVIK = 103
     VALLETTA = 104
+
+
+class RandomEvent(IntEnum):
+    LIGHTHOUSE_EARTHQUAKE = 0
+    BYZANTIUM_VIKING_ATTACK = 1

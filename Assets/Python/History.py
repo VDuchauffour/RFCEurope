@@ -14,7 +14,7 @@ from Core import (
     text,
     year,
 )
-from CoreTypes import Building, City, Civ, Religion, StabilityCategory, Unit
+from CoreTypes import Building, City, Civ, RandomEvent, Religion, StabilityCategory, Unit
 import Crusades
 from Events import handler
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
@@ -22,7 +22,6 @@ from PyUtils import percentage_chance
 from RFCUtils import forcedInvasion
 from StoredData import data
 import Religions
-from Consts import iByzantiumVikingAttack
 
 gc = CyGlobalContext()
 
@@ -102,11 +101,11 @@ def jerusalem_incentive(owner, player_id, city, bConquest, bTrade):
 @handler("BeginGameTurn")
 def viking_attack_on_constantinople(iGameTurn):
     # Absinthe: 868AD Viking attack on Constantinople
-    if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack] - 2:
+    if iGameTurn == year(860) + data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] - 2:
         if human() == Civ.BYZANTIUM:
             show(text("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS"))
 
-    if iGameTurn == year(860) + data.lEventRandomness[iByzantiumVikingAttack]:
+    if iGameTurn == year(860) + data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK]:
         if human() == Civ.BYZANTIUM:
             for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
                 Barbs.spawnUnits(

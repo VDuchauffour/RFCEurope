@@ -1,8 +1,10 @@
 from Core import civilizations
+from CoreTypes import RandomEvent
 from MiscData import NUM_CRUSADES
+from PyUtils import rand
 
 
-class GameData:
+class GameData(object):
     def __init__(self):
         self.setup()
 
@@ -137,6 +139,13 @@ class GameData:
         self.bIgnoreAIUHV = True
 
         self.lBaseStabilityLastTurn = [0] * civilizations().majors().len()
+
+        self.init_random_values()
+
+    def init_random_values(self):
+        self.random_events = {}
+        self.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE] = rand(40)
+        self.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] = rand(10)
 
 
 data = GameData()

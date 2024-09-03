@@ -1,10 +1,7 @@
 from CvPythonExtensions import CyGlobalContext
 from CityNameManager import renameCities
 from CoreTypes import Civ, Scenario, Area, AreaType
-from PyUtils import rand
-from StoredData import data
 from Events import handler
-from Consts import iLighthouseEarthQuake, iByzantiumVikingAttack
 from Core import (
     civilizations,
     get_scenario,
@@ -21,17 +18,21 @@ from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
 from SettlerMapData import SETTLERS_MAP
 from WarMapData import WARS_MAP
+from StoredData import data
 
 gc = CyGlobalContext()
 
 
 @handler("GameStart")
 def setup_gamestart():
+    log("RFCE: GameStart")
     setup()
+    data.setup()
 
 
 @handler("OnLoad")
 def setup_on_load():
+    log("RFCE: OnLoad")
     setup()
 
 
@@ -42,7 +43,6 @@ def setup():
     update_province_id()
     update_city_name()
     update_lake_id()
-    set_random_event()
     rename_cities_1200AD()
     refresh_dynamic_civ_name()
     log("RFCE: Setup.setup()")
@@ -112,12 +112,6 @@ def set_vizualization_areas():
     # hold down the alt key, and hover over the map
     gc.setCoreToPlot(gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
     gc.setNormalToPlot(gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
-
-
-def set_random_event():
-    # Absinthe: generate and store randomized turn modifiers
-    data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
-    data.lEventRandomness[iByzantiumVikingAttack] = rand(10)
 
 
 def rename_cities_1200AD():

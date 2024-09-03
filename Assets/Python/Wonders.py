@@ -17,6 +17,7 @@ from CoreTypes import (
     Improvement,
     Project,
     Promotion,
+    RandomEvent,
     Specialist,
     StabilityCategory,
     Unit,
@@ -26,7 +27,7 @@ from PyUtils import choice, percentage_chance, rand
 from RFCUtils import getBaseUnit, getUniqueBuilding, getUniqueUnit
 from Events import handler
 from StoredData import data
-from Consts import MessageData, iLighthouseEarthQuake
+from Consts import MessageData
 
 gc = CyGlobalContext()
 
@@ -54,7 +55,7 @@ def krak_des_chevaliers_acquired(owner, player, city, bConquest, bTrade):
 @handler("BeginGameTurn")
 def remove_lighthouse(iGameTurn):
     # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
-    if iGameTurn == year(1323) - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
+    if iGameTurn == year(1323) - 40 + data.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE]:
         for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
             bFound = 0
             for city in cities.owner(iPlayer).entities():
