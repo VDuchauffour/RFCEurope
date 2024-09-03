@@ -54,6 +54,44 @@ class GameData(BaseData):
         self.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE] = rand(40)
         self.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] = rand(10)
 
+    def init_crusade(self):
+        self.lCrusadeInit = [-2] * NUM_CRUSADES
+        self.bParticipate = False
+        self.iFavorite = 0
+        self.iPowerful = 0
+        self.iLeader = 0
+        self.lVotesGathered = [0, 0]
+        self.iRichestCatholic = 0
+        self.tTarget = (0, 0)
+        self.iCrusadePower = 0
+        self.iCrusadeSucceeded = 0
+        self.iCrusadeToReturn = -1
+        self.lSelectedUnits = [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+        ]  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
+        self.bDCEnabled = False
+        self.iDCLast = 0
+
+    def init_plagues(self):
+        # Sedna17: Set number of GenericPlagues in StoredData
+        # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
+        self.plagues = [
+            28 + rand(5) - 10,  # Plagues of Constantinople
+            247 + rand(40) - 20,  # 1341 Black Death
+            300 + rand(40) - 20,  # Generic recurrence of plague
+            375 + rand(40) - 30,  # 1650 Great Plague
+            440 + rand(40) - 30,  # 1740 Small Pox
+        ]
+        self.bBadPlague = False
+        self.bFirstPlague = False
+
     def setup(self):
         """Initialise the global script data for usage."""
         self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
@@ -84,6 +122,7 @@ class GameData(BaseData):
         # Absinthe: Reformation
         self.bReformationActive = False
         self.bCounterReformationActive = False
+
         # Absinthe: Persecution
         self.lPersecutionData = [-1, -1, -1]
         self.lPersecutionReligions = []
@@ -124,36 +163,6 @@ class GameData(BaseData):
         ]  # major players only
         self.iNextTurnAIWar = -1
 
-        # Absinthe: Plagues
-        self.lGenericPlagueDates = [-1, -1, -1, -1, -1]
-        self.bBadPlague = False
-        self.bFirstPlague = False
-
-        # Crusades
-        self.lCrusadeInit = [-2] * NUM_CRUSADES
-        self.bParticipate = False
-        self.iFavorite = 0
-        self.iPowerful = 0
-        self.iLeader = 0
-        self.lVotesGathered = [0, 0]
-        self.iRichestCatholic = 0
-        self.tTarget = (0, 0)
-        self.iCrusadePower = 0
-        self.iCrusadeSucceeded = 0
-        self.iCrusadeToReturn = -1
-        self.lSelectedUnits = [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-        ]  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
-        self.bDCEnabled = False
-        self.iDCLast = 0
-
         # 3Miro: Minor Nations
         self.lNextMinorRevolt = [-1, -1, -1, -1, -1, -1, -1]
         self.lRevoltinNationRevoltIndex = [-1, -1, -1, -1, -1, -1, -1]
@@ -167,6 +176,8 @@ class GameData(BaseData):
         self.bIgnoreAIUHV = True
 
         self.init_random_values()
+        self.init_crusade()
+        self.init_plagues()
 
 
 data = GameData()

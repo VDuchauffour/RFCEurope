@@ -42,21 +42,9 @@ def setup():
     for i in civilizations().majors().ids():
         setPlagueCountdown(i, -PLAGUE_IMMUNITY)
 
-    # Sedna17: Set number of GenericPlagues in StoredData
-    # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
-    setGenericPlagueDates(0, 28 + rand(5) - 10)  # Plagues of Constantinople
-    setGenericPlagueDates(1, 247 + rand(40) - 20)  # 1341 Black Death
-    setGenericPlagueDates(2, 300 + rand(40) - 20)  # Generic recurrence of plague
-    setGenericPlagueDates(3, 375 + rand(40) - 30)  # 1650 Great Plague
-    setGenericPlagueDates(4, 440 + rand(40) - 30)  # 1740 Small Pox
-
-
-def setGenericPlagueDates(i, iNewValue):
-    data.lGenericPlagueDates[i] = iNewValue
-
 
 def getGenericPlagueDates(i):
-    return data.lGenericPlagueDates[i]
+    return data.plagues[i]
 
 
 def getBadPlague():
@@ -77,7 +65,6 @@ def setFirstPlague(bFirst):
 
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-
     for iPlayer in civilizations().ids():
         if gc.getPlayer(iPlayer).isAlive():
             if getPlagueCountdown(iPlayer) > 0:
@@ -92,12 +79,11 @@ def checkTurn(iGameTurn):
             elif getPlagueCountdown(iPlayer) < 0:
                 setPlagueCountdown(iPlayer, getPlagueCountdown(iPlayer) + 1)
 
-    for iPlague in range(iNumPlagues):
-        if iGameTurn == getGenericPlagueDates(iPlague):
-            startPlague(iPlague)
-
+    for plague_index, plague_turn in enumerate(data.plagues):
+        if iGameTurn == plague_turn:
+            startPlague(plague_index)
         # if the plague has stopped too quickly, restart
-        if iGameTurn == getGenericPlagueDates(iPlague) + 4:
+        if iGameTurn == plague_turn + 4:
             # not on the first one, that's mostly for one civ anyway
             bFirstPlague = getFirstPlague()
             if not bFirstPlague:
@@ -106,21 +92,21 @@ def checkTurn(iGameTurn):
                     if gc.getPlayer(iPlayer).isAlive() and getPlagueCountdown(iPlayer) > 0:
                         iInfectedCounter += 1
                 if iInfectedCounter <= 1:
-                    startPlague(iPlague)
+                    startPlague(plague_index)
 
 
-def startPlague(iPlagueCount):
+def startPlague(plague_index):
     iWorstCiv = -1
     iWorstHealth = 100
 
     # Absinthe: specific plagues
     # Plague of Constantinople (that started at Alexandria)
-    if iPlagueCount == iConstantinople:
+    if plague_index == iConstantinople:
         iWorstCiv = Civ.BYZANTIUM
         setFirstPlague(True)
         setBadPlague(False)
     # Black Death in the 14th century
-    elif iPlagueCount == iBlackDeath:
+    elif plague_index == iBlackDeath:
         setFirstPlague(False)
         setBadPlague(True)
     # all the others
