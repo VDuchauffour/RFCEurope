@@ -471,9 +471,8 @@ totalLand = gc.getMap().getLandPlots()
 
 @handler("GameStart")
 def setup():
-    ignore_ai_uhv = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
-    data.ignore_ai_uhv = ignore_ai_uhv
-    if ignore_ai_uhv:
+    data.ignore_ai_uhv = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
+    if data.ignore_ai_uhv:
         for iPlayer in civilizations().majors().ids():
             if human() != iPlayer:
                 setAllUHVFailed(iPlayer)
