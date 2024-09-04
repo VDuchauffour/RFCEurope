@@ -1,6 +1,5 @@
 from Core import civilizations
-from CoreTypes import RandomEvent
-from DataStructures import CivDataMapper
+from CoreTypes import Civ, RandomEvent
 from MiscData import NUM_CRUSADES
 from PyUtils import rand
 
@@ -24,7 +23,50 @@ class PlayerData(BaseData):
         self.id = player_id
         self.setup()
 
+    def init_ai_wars(self):
+        data_mapper = {
+            0: [
+                Civ.BYZANTIUM,
+                Civ.FRANCE,
+                Civ.CORDOBA,
+                Civ.VENECIA,
+                Civ.BURGUNDY,
+                Civ.NOVGOROD,
+                Civ.SCOTLAND,
+                Civ.POLAND,
+                Civ.GENOA,
+                Civ.PORTUGAL,
+                Civ.ARAGON,
+                Civ.PRUSSIA,
+                Civ.LITHUANIA,
+                Civ.DUTCH,
+                Civ.POPE,
+            ],
+            -1: [
+                Civ.ARABIA,
+                Civ.BULGARIA,
+                Civ.GERMANY,
+                Civ.NORWAY,
+                Civ.KIEV,
+                Civ.HUNGARY,
+                Civ.CASTILE,
+                Civ.DENMARK,
+                Civ.MOROCCO,
+                Civ.ENGLAND,
+                Civ.SWEDEN,
+                Civ.AUSTRIA,
+                Civ.OTTOMAN,
+                Civ.MOSCOW,
+            ],
+        }
+        for threshold, civs in data_mapper.items():
+            if self.id in civs:
+                self.attacking_threshold = threshold
+                break
+
     def setup(self):
+        self.init_ai_wars()
+
         # RiseAndFall
         self.num_cities = 0
         self.spawn_delay = 0
@@ -137,40 +179,6 @@ class GameData(BaseData):
         self.persecution_data = [-1, -1, -1]
         self.persecution_religions = []
 
-    def init_ai_wars(self):
-        self.lAttackingCivsArray = [
-            0,
-            0,
-            -1,
-            -1,
-            0,
-            0,
-            0,
-            -1,
-            0,
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,
-            0,
-            0,
-            0,
-            -1,
-            -1,
-            0,
-            0,
-            -1,
-            0,
-            0,
-            -1,
-            -1,
-            -1,
-            0,
-            0,
-        ]  # major players only
-        self.iNextTurnAIWar = -1
-
     def init_minor_nations(self):
         self.minor_revolt_dates = [-1, -1, -1, -1, -1, -1, -1]
         self.revolut_nation_index = [-1, -1, -1, -1, -1, -1, -1]
@@ -186,10 +194,8 @@ class GameData(BaseData):
 
     def setup(self):
         """Initialise the global script data for usage."""
-        self.players = CivDataMapper(
-            dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
-        )
-        self.civs = CivDataMapper(dict((civ.key, CivData(civ.id)) for civ in civilizations()))
+        self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
+        self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
         self.init_temp_values()
         self.init_random_values()
         self.init_crusade()
@@ -197,12 +203,12 @@ class GameData(BaseData):
         self.init_rise_and_fall()
         self.init_reformation()
         self.init_persecution()
-        self.init_ai_wars()
         self.init_minor_nations()
         self.init_mercenaries()
         self.init_civics_values()
 
         self.ignore_ai_uhv = True
+        self.next_turn_ai_war = -1
 
 
 data = GameData()

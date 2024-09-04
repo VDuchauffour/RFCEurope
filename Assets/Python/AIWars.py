@@ -39,15 +39,7 @@ iMinValue = 30
 @handler("GameStart")
 def setup():
     iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
-    data.iNextTurnAIWar = iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly)
-
-
-def getAttackingCivsArray(iCiv):
-    return data.lAttackingCivsArray[iCiv]
-
-
-def setAttackingCivsArray(iCiv, iNewValue):
-    data.lAttackingCivsArray[iCiv] = iNewValue
+    data.next_turn_ai_war = iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly)
 
 
 @handler("BeginGameTurn")
@@ -124,7 +116,7 @@ def checkTurn(iGameTurn):
                     teamHungary = gc.getTeam(pHungary.getTeam())
                     teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
 
-    if iGameTurn == data.iNextTurnAIWar:
+    if iGameTurn == data.next_turn_ai_war:
         iMinInterval = iMinIntervalEarly
         iMaxInterval = iMaxIntervalEarly
 
@@ -134,7 +126,7 @@ def checkTurn(iGameTurn):
             if iTargetCiv != Civ.POPE and iCiv != Civ.POPE and iCiv != iTargetCiv:
                 initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                 return
-        data.iNextTurnAIWar = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
+        data.next_turn_ai_war = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
 
 
 def pickCivs():
@@ -152,10 +144,10 @@ def initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval):
     teamAgressor = gc.getTeam(gc.getPlayer(iCiv).getTeam())
     if teamAgressor.canDeclareWar(iTargetCiv):
         gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1)
-        data.iNextTurnAIWar = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
+        data.next_turn_ai_war = iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval)
     # Absinthe: if not, next try will come the 1/2 of this time later
     else:
-        data.iNextTurnAIWar = iGameTurn + (iMinInterval + rand(iMaxInterval - iMinInterval) / 2)
+        data.next_turn_ai_war = iGameTurn + (iMinInterval + rand(iMaxInterval - iMinInterval) / 2)
 
 
 def chooseAttackingPlayer():
@@ -180,7 +172,7 @@ def chooseAttackingPlayer():
                 if (
                     getPlagueCountdown(iLoopCiv) >= -10 and getPlagueCountdown(iLoopCiv) <= 0
                 ):  # civ is not under plague or quit recently from it
-                    iAlreadyAttacked = getAttackingCivsArray(iLoopCiv)
+                    iAlreadyAttacked = data.players[iLoopCiv].attacking_threshold
                     if isAVassal(iLoopCiv):
                         iAlreadyAttacked += 1  # less likely to attack
                     # check if a world war is already in place:
@@ -198,7 +190,7 @@ def chooseAttackingPlayer():
                         iMin = iAlreadyAttacked
                         iCiv = iLoopCiv
         if iAlreadyAttacked != -100:
-            setAttackingCivsArray(iCiv, iAlreadyAttacked + 1)
+            data.players[iCiv].attacking_threshold = iAlreadyAttacked + 1
             return iCiv
         else:
             return -1
