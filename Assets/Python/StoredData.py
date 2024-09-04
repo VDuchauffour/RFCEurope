@@ -172,8 +172,8 @@ class GameData(BaseData):
         self.iNextTurnAIWar = -1
 
     def init_minor_nations(self):
-        self.lNextMinorRevolt = [-1, -1, -1, -1, -1, -1, -1]
-        self.lRevoltinNationRevoltIndex = [-1, -1, -1, -1, -1, -1, -1]
+        self.minor_revolt_dates = [-1, -1, -1, -1, -1, -1, -1]
+        self.revolut_nation_index = [-1, -1, -1, -1, -1, -1, -1]
 
     def init_mercenaries(self):
         self.lMercGlobalPool = []

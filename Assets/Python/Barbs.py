@@ -778,28 +778,12 @@ lMinorNations = [
 # 3Miro: Jerusalem and Syria were added here, so the Crusaders will not be able to control it for too long
 
 
-def getRevolDates():
-    return data.lNextMinorRevolt
-
-
-def setRevolDates(lNextMinorRevolt):
-    data.lNextMinorRevolt = lNextMinorRevolt
-
-
 def getTempFlippingCity():
     return data.temp_flipping_city
 
 
 def setTempFlippingCity(tNewValue):
     data.temp_flipping_city = tNewValue
-
-
-def getNationRevoltIndex():
-    return data.lRevoltinNationRevoltIndex
-
-
-def setNationRevoltIndex(iNationIndex, iRevoltIndex):
-    data.lRevoltinNationRevoltIndex = [iNationIndex, iRevoltIndex]
 
 
 @handler("BeginGameTurn")
@@ -3355,24 +3339,17 @@ def onImprovementDestroyed(iX, iY):
 
 
 def setupMinorNation():
-    lNextMinorRevolt = getRevolDates()
-
     for lNation in lMinorNations:
         iNextRevolt = lNation[3][0]
-        while iNextRevolt in lNextMinorRevolt:
+        while iNextRevolt in data.minor_revolt_dates:
             iNextRevolt = lNation[3][0] - 3 + rand(6)
         iNationIndex = lMinorNations.index(lNation)
-        lNextMinorRevolt[iNationIndex] = iNextRevolt
-
-    setRevolDates(lNextMinorRevolt)
+        data.minor_revolt_dates[iNationIndex] = iNextRevolt
 
 
 def doMinorNations(iGameTurn):
-    lNextMinorRevolt = getRevolDates()
-
-    if iGameTurn in lNextMinorRevolt:
-        # iNation = lNextMinorRevolt.index( iGameTurn )
-        lNation = lMinorNations[lNextMinorRevolt.index(iGameTurn)]
+    if iGameTurn in data.minor_revolt_dates:
+        lNation = lMinorNations[data.minor_revolt_dates.index(iGameTurn)]
         lRevolts = lNation[3]
         for iRevoltDate in lRevolts:
             if (iRevoltDate - 3 <= iGameTurn) and (iRevoltDate + 3 >= iGameTurn):
@@ -3403,10 +3380,9 @@ def doMinorNations(iGameTurn):
         iRevoltIndex += 1
         if iRevoltIndex < len(lNation[3]):
             iNextRevolt = lNation[3][iRevoltIndex] - 3 + rand(6)
-            while iNextRevolt in lNextMinorRevolt:
+            while iNextRevolt in data.minor_revolt_dates:
                 iNextRevolt = lNation[3][iRevoltIndex] - 3 + rand(6)
-            lNextMinorRevolt[lNextMinorRevolt.index(iGameTurn)] = iNextRevolt
-            setRevolDates(lNextMinorRevolt)
+            data.minor_revolt_dates[data.minor_revolt_dates.index(iGameTurn)] = iNextRevolt
 
 
 def doRevoltAI(iPlayer, iGameTurn, lNation, iRevoltIndex):
@@ -3458,7 +3434,7 @@ def doRevoltAI(iPlayer, iGameTurn, lNation, iRevoltIndex):
 @popup_handler(7627)
 def CounterReformationEvent(playerID, netUserData, popupReturn):
     iDecision = popupReturn.getButtonClicked()
-    iNationIndex, iRevoltIndex = getNationRevoltIndex()
+    iNationIndex, iRevoltIndex = data.revolut_nation_index
     lNation = lMinorNations[iNationIndex]
     iPlayer = human()
 
@@ -3550,7 +3526,7 @@ def CounterReformationEvent(playerID, netUserData, popupReturn):
 # suppress with force: + base chance + military strength in the city. revolt +1 turn, unhappy +1 for 10 turns
 # bribe the lords: + financial chance: costs 10 gold per population, suppression depends on the government Divine Monarchy (30%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
 def doRevoltHuman(iPlayer, iGameTurn, lNation, iRevoltIndex):
-    setNationRevoltIndex(lMinorNations.index(lNation), iRevoltIndex)
+    data.revolut_nation_index = [lMinorNations.index(lNation), iRevoltIndex]
 
     cityList = cities.owner(iPlayer).province(lNation[0]).entities()
 
