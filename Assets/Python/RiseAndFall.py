@@ -45,7 +45,6 @@ from RFCUtils import (
     flipUnitsInCityBefore,
     flipUnitsInPlots,
     forcedInvasion,
-    getLastTurnAlive,
     getPlagueCountdown,
     getUniqueBuilding,
     goodPlots,
@@ -1240,7 +1239,7 @@ def canSpecialRespawn(iPlayer, iGameTurn, iLastAliveInterval=10):
         return False
     if iGameTurn <= civilization(iPlayer).date.birth + 25:
         return False
-    if iGameTurn <= (getLastTurnAlive(iPlayer) + iLastAliveInterval):
+    if iGameTurn <= data.players[iPlayer].last_turn_alive + iLastAliveInterval:
         return False
     return True
 

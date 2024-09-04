@@ -20,9 +20,10 @@ from CoreTypes import (
 )
 from PyUtils import percentage_chance, rand
 from ProvinceMapData import PROVINCES_MAP
-from RFCUtils import collapseImmune, getLastRespawnTurn, getUniqueBuilding, killAndFragmentCiv
+from RFCUtils import collapseImmune, getUniqueBuilding, killAndFragmentCiv
 from Provinces import updatePotential
 from Secession import revoltCity
+from StoredData import data
 from Events import handler
 
 gc = CyGlobalContext()
@@ -506,11 +507,10 @@ def checkImplosion(iGameTurn):
         for iPlayer in civilizations().main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
-            iRespawnTurn = getLastRespawnTurn(iPlayer)
             if (
                 pPlayer.isAlive()
                 and iGameTurn >= civilization(iPlayer).date.birth + 15
-                and iGameTurn >= iRespawnTurn + 10
+                and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
             ):
                 iStability = pPlayer.getStability()
                 # Absinthe: human player with very bad stability should have a much bigger chance for collapse

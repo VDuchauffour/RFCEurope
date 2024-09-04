@@ -38,7 +38,6 @@ from RFCUtils import (
     flipUnitsInArea,
     flipUnitsInCityAfter,
     flipUnitsInCityBefore,
-    getLastTurnAlive,
     pushOutGarrisons,
     relocateSeaGarrisons,
     setPlagueCountdown,
@@ -75,7 +74,7 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
         if (
             not gc.getPlayer(iDeadCiv).isAlive()
             and iGameTurn > civilization(iDeadCiv).date.birth + 25
-            and iGameTurn > getLastTurnAlive(iDeadCiv) + 10
+            and iGameTurn > data.players[iDeadCiv].last_turn_alive + 10
         ):  # Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
             tile_min = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MIN]
             tile_max = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX]

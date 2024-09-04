@@ -67,16 +67,6 @@ iSelectedCivID = -1
 bStabilityOverlay = False
 
 
-# RiseAndFall, Stability
-def getLastTurnAlive(iCiv):
-    return data.players[iCiv].last_turn_alive
-
-
-def getLastRespawnTurn(iCiv):
-    return data.players[iCiv].last_respawn_turn
-
-
-# Stability
 def getTempFlippingCity():
     return data.temp_flipping_city
 

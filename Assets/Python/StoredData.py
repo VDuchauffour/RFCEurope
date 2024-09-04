@@ -116,18 +116,23 @@ class GameData(BaseData):
         self.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] = rand(10)
 
     def init_crusade(self):
-        self.lCrusadeInit = [-2] * NUM_CRUSADES
-        self.bParticipate = False
-        self.iFavorite = 0
-        self.iPowerful = 0
-        self.iLeader = 0
-        self.lVotesGathered = [0, 0]
-        self.iRichestCatholic = 0
-        self.tTarget = (0, 0)
-        self.iCrusadePower = 0
-        self.iCrusadeSucceeded = 0
-        self.iCrusadeToReturn = -1
-        self.lSelectedUnits = [
+        # status are:
+        # -2, no crusade yet
+        # -1 crusade is active but waiting to start (Holy City is Christian and/or another Crusade in progress)
+        # 0 or more, the turn when it was initialized
+        self.crusade_status = [-2] * NUM_CRUSADES
+        self.is_participate_to_crusade = False
+        self.favorite_crusader = 0
+        self.powerful_crusader = 0
+        self.leader_of_crusade = 0
+        self.votes_for_favorite = 0
+        self.votes_for_powerful = 0
+        self.richest_catholic = 0
+        self.target = (0, 0)
+        self.crusade_power = 0
+        self.is_succesful_crusade = 0
+        self.crusade_to_return = -1
+        self.crusade_selected_units = [
             0,
             0,
             0,
@@ -137,8 +142,8 @@ class GameData(BaseData):
             0,
             0,
         ]  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
-        self.bDCEnabled = False
-        self.iDCLast = 0
+        self.is_defending_crusade_active = False
+        self.last_defensive_crusade = 0
 
     def init_plagues(self):
         # Sedna17: Set number of GenericPlagues in StoredData
