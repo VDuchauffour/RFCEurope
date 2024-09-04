@@ -1,5 +1,6 @@
 from Core import civilizations
 from CoreTypes import RandomEvent
+from DataStructures import CivDataMapper
 from MiscData import NUM_CRUSADES
 from PyUtils import rand
 
@@ -52,12 +53,12 @@ class GameData(BaseData):
     def update(self, data):
         self.__dict__.update(data)
 
-        for player in self.players:
+        for player in self.players.values():
             data = player.__dict__.copy()
             player.setup()
             player.update(data)
 
-        for civ in self.civs:
+        for civ in self.civs.values():
             data = civ.__dict__.copy()
             civ.setup()
             civ.update(data)
@@ -185,8 +186,10 @@ class GameData(BaseData):
 
     def setup(self):
         """Initialise the global script data for usage."""
-        self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
-        self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
+        self.players = CivDataMapper(
+            dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
+        )
+        self.civs = CivDataMapper(dict((civ.key, CivData(civ.id)) for civ in civilizations()))
         self.init_temp_values()
         self.init_random_values()
         self.init_crusade()
