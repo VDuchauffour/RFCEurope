@@ -58,6 +58,8 @@ from RFCUtils import (
     spreadMajorCulture,
     squareSearch,
     updateMinorTechs,
+    getTempFlippingCity,
+    setTempFlippingCity,
 )
 import Religions
 from Collapse import collapseByBarbs, collapseGeneric, collapseMotherland
@@ -261,14 +263,6 @@ def getRebelSuppress():
 
 def setRebelSuppress(lSuppressList):
     data.lRebelSuppress = lSuppressList
-
-
-def getTempFlippingCity():
-    return data.temp_flipping_city
-
-
-def setTempFlippingCity(tNewValue):
-    data.temp_flipping_city = tNewValue
 
 
 def getCheatersCheck(i):

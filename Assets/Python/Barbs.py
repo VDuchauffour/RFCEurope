@@ -27,6 +27,8 @@ from RFCUtils import (
     outerInvasion,
     outerSeaSpawn,
     squareSearch,
+    getTempFlippingCity,
+    setTempFlippingCity,
 )
 from TimelineData import DateTurn
 from StoredData import data
@@ -776,14 +778,6 @@ lMinorNations = [
     ],
 ]
 # 3Miro: Jerusalem and Syria were added here, so the Crusaders will not be able to control it for too long
-
-
-def getTempFlippingCity():
-    return data.temp_flipping_city
-
-
-def setTempFlippingCity(tNewValue):
-    data.temp_flipping_city = tNewValue
 
 
 @handler("BeginGameTurn")
