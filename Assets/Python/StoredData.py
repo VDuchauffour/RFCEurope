@@ -130,7 +130,7 @@ class GameData(BaseData):
         self.richest_catholic = 0
         self.target = (0, 0)
         self.crusade_power = 0
-        self.is_succesful_crusade = 0
+        self.is_succesful_crusade = False
         self.crusade_to_return = -1
         self.crusade_selected_units = [
             0,
