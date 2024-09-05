@@ -10,6 +10,7 @@ from CoreTypes import Civ, Company, Technology
 # Important event Spawn UHV
 class DateTurn:
     i500AD = 0
+    i504AD = 1
     i508AD = 2
     i520AD = 5
     i540AD = 10  # Gothic wars: Ravenna reconquered
