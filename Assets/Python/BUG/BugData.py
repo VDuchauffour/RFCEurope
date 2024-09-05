@@ -36,6 +36,7 @@
 
 from CvPythonExtensions import CyGame
 import BugUtil
+from Core import log
 import cPickle as pickle
 from StoredData import data
 
@@ -99,6 +100,8 @@ def initGameData():
 
 def onGameStart(argsList):
     initGameData()
+    log("RFCE: data.setup()")
+    data.setup()
 
 
 def onGameLoad(argsList):
