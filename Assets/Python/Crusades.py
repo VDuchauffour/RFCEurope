@@ -29,7 +29,6 @@ from StoredData import data
 import random
 
 from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
-from MiscData import NUM_CRUSADES
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -194,9 +193,8 @@ def getSelectedUnit(iUnitPlace):
 
 
 def getActiveCrusade(iGameTurn):
-    for i in range(NUM_CRUSADES):
-        iInit = data.crusade_status[i]
-        if iInit > -1 and iInit + 9 > iGameTurn:
+    for i, _ in enumerate(data.crusade_status):
+        if data.crusade_status[i] > -1 and data.crusade_status[i] + 9 > iGameTurn:
             return i
     return -1
 
@@ -206,11 +204,9 @@ def getVotingPower(iCiv):
 
 
 def initVotePopup():
-    iHuman = human()
-    pHuman = player(iHuman)
     iActiveCrusade = getActiveCrusade(turn())
     iBribe = 200 + 50 * iActiveCrusade
-    if pHuman.getGold() >= iBribe:
+    if player().getGold() >= iBribe:
         event_popup(
             7616,
             text("TXT_KEY_CRUSADE_INIT_POPUP"),
@@ -332,11 +328,9 @@ def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
 def deviateNewTargetPopup():
     lTargetList = []
     lTargetList.append(
-        gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getName()
+        city(*CITIES[City.JERUSALEM]).getName()
         + " ("
-        + player(
-            gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
-        ).getCivilizationAdjective(0)
+        + player(city(*CITIES[City.JERUSALEM])).getCivilizationAdjective(0)
         + ")"
     )
     for iPlayer in civilizations().majors().ids():
@@ -379,7 +373,7 @@ def underCrusadeAttackPopup(sCityName, iLeader):
 def endCrusades(iReligion, iFounder):
     # 3Miro: end Crusades for the Holy Land after the Reformation
     if iReligion == Religion.PROTESTANTISM:
-        for i in range(NUM_CRUSADES):
+        for i, _ in enumerate(data.crusade_status):
             if data.crusade_status[i] < 0:
                 data.crusade_status[i] = 0
         # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
@@ -476,7 +470,7 @@ def checkTurn(iGameTurn):
 def checkToStart(iGameTurn):
     # if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
     pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
-    for i in range(NUM_CRUSADES):  # check the Crusades
+    for i, _ in enumerate(data.crusade_status):
         if data.crusade_status[i] == -1:  # if this one is to start
             if (
                 pJPlot.isCity() and anyCatholic()
@@ -1464,11 +1458,9 @@ def freeCrusaders(iPlayer):
                                 )
 
 
-# Absinthe: called from CvRFCEventHandler.onCityAcquired
 def success(iPlayer):
-    pPlayer = player(iPlayer)
     if not data.is_succesful_crusade:
-        pPlayer.changeGoldenAgeTurns(player(iPlayer).getGoldenAgeLength())
+        player(iPlayer).changeGoldenAgeTurns(player(iPlayer).getGoldenAgeLength())
         data.is_succesful_crusade = True
         for plot in plots.surrounding(CITIES[City.JERUSALEM]).entities():
             convertPlotCulture(plot, iPlayer, 100, False)
@@ -1548,7 +1540,8 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
         return False
 
     tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
-    # Can defensive crusade if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the defensive crusade map
+    # Can defensive crusade if at war with a non-catholic/orthodox enemy, enemy is not a vassal
+    # of a catholic/orthodox civ and has a city in the defensive crusade map
     for iEnemy in civilizations().main().ids():
         pEnemy = player(iEnemy)
         if (
