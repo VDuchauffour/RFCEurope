@@ -18,6 +18,7 @@ from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
 from SettlerMapData import SETTLERS_MAP
 from WarMapData import WARS_MAP
+from StoredData import data
 
 gc = CyGlobalContext()
 
@@ -26,6 +27,7 @@ gc = CyGlobalContext()
 def setup_gamestart():
     log("RFCE: GameStart")
     setup()
+    data.setup()
 
 
 @handler("OnLoad")
