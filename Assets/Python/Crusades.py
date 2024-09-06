@@ -9,6 +9,7 @@ from Core import (
     location,
     make_crusade_unit,
     make_crusade_units,
+    make_unit,
     player,
     team,
     teamtype,
@@ -453,7 +454,7 @@ def checkTurn(iGameTurn):
             selectVoteWinner()
             decideTheRichestCatholic(iActiveCrusade)
             if data.richest_catholic == human():
-                decideDeviateHuman()
+                deviateHumanPopup()
             else:
                 decideDeviateAI()
 
@@ -944,10 +945,6 @@ def decideTheRichestCatholic(iActiveCrusade):
         data.richest_catholic = -1
 
 
-def decideDeviateHuman():
-    deviateHumanPopup()
-
-
 def decideDeviateAI():
     iRichest = data.richest_catholic
     bStolen = False
@@ -1370,41 +1367,19 @@ def freeCrusaders(iPlayer):
                     pPlayer = player(pCity.getOwner())
                     if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                         pCiv.changeFaith(1 * iUnitNumber)
-                        # add relics in the capital
-                        capital = pCiv.getCapitalCity()
-                        iCapitalX = capital.getX()
-                        iCapitalY = capital.getY()
-                        pCiv.initUnit(
-                            Unit.HOLY_RELIC,
-                            iCapitalX,
-                            iCapitalY,
-                            UnitAITypes.NO_UNITAI,
-                            DirectionTypes.DIRECTION_SOUTH,
-                        )
+                        return_relic(pCiv)
                         message(
                             iCiv,
                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
                             sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
                             button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                             color=MessageData.GREEN,
-                            location=(iCapitalX, iCapitalY),
+                            location=location(pCiv.getCapitalCity()),
                         )
                         if iUnitNumber > 3 and percentage_chance(80, strict=True):
-                            pCiv.initUnit(
-                                Unit.HOLY_RELIC,
-                                iCapitalX,
-                                iCapitalY,
-                                UnitAITypes.NO_UNITAI,
-                                DirectionTypes.DIRECTION_SOUTH,
-                            )
+                            return_relic(pCiv)
                         if iUnitNumber > 9 and percentage_chance(80, strict=True):
-                            pCiv.initUnit(
-                                Unit.HOLY_RELIC,
-                                iCapitalX,
-                                iCapitalY,
-                                UnitAITypes.NO_UNITAI,
-                                DirectionTypes.DIRECTION_SOUTH,
-                            )
+                            return_relic(pCiv)
                 # all other civs get experience points as well
                 else:
                     message(
@@ -1420,50 +1395,22 @@ def freeCrusaders(iPlayer):
                         pCiv.changeFaith(1 * iUnitNumber)
                         # add relics in the capital
                         capital = pCiv.getCapitalCity()
-                        iCapitalX = capital.getX()
-                        iCapitalY = capital.getY()
                         # safety check, game crashes if it wants to create a unit in a non-existing city
                         if capital.getName():
                             if percentage_chance(80, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
+                                return_relic(pCiv)
                                 message(
                                     iCiv,
                                     text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                     sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                     button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                                     color=MessageData.GREEN,
-                                    location=(iCapitalX, iCapitalY),
+                                    location=location(pCiv.getCapitalCity()),
                                 )
                             if iUnitNumber > 3 and percentage_chance(60, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
+                                return_relic(pCiv)
                             if iUnitNumber > 9 and percentage_chance(60, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
-
-
-def success(iPlayer):
-    if not data.is_succesful_crusade:
-        player(iPlayer).changeGoldenAgeTurns(player(iPlayer).getGoldenAgeLength())
-        data.is_succesful_crusade = True
-        for plot in plots.surrounding(CITIES[City.JERUSALEM]).entities():
-            convertPlotCulture(plot, iPlayer, 100, False)
+                                return_relic(pCiv)
 
 
 @handler("BeginPlayerTurn")
@@ -1756,3 +1703,33 @@ def isOrMasterChristian(iPlayer):
         if iMasterReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
             return True
     return False
+
+
+@handler("cityAcquired")
+def jerusalem_conquered(owner, player_id, city, bConquest, bTrade):
+    if location(city) == CITIES[City.JERUSALEM]:
+        if player(player_id).getStateReligion() == Religion.CATHOLICISM:
+            city.setHasReligion(Religion.CATHOLICISM, True, True, False)
+            if not data.is_succesful_crusade:
+                data.is_succesful_crusade = True
+                player(player_id).changeGoldenAgeTurns(player(player_id).getGoldenAgeLength())
+                for plot in plots.surrounding(location(city)).entities():
+                    convertPlotCulture(plot, player_id, 100, False)
+
+            message_if_human(
+                human(),
+                text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
+                force=True,
+                color=MessageData.GREEN,
+            )
+        # Acquiring Jerusalem with any faith give chance to find a relic
+        if (
+            percentage_chance(15, strict=True)
+            and player_id in civilizations().majors().ids()
+            and player(player_id).getStateReligion() != -1
+        ):
+            make_unit(player_id, Unit.HOLY_RELIC, city)
+
+
+def return_relic(player_id):
+    make_unit(player_id, Unit.HOLY_RELIC, player(player_id).getCapitalCity())

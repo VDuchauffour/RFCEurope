@@ -3,7 +3,6 @@ import Barbs
 from Consts import MessageData
 from Core import (
     civilization,
-    civilizations,
     human,
     make_units,
     cities,
@@ -14,14 +13,11 @@ from Core import (
     text,
     year,
 )
-from CoreTypes import Building, City, Civ, RandomEvent, Religion, StabilityCategory, Unit
-import Crusades
+from CoreTypes import Building, Civ, RandomEvent, Religion, StabilityCategory, Unit
 from Events import handler
-from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
-from PyUtils import percentage_chance
+from LocationsData import CIV_CAPITAL_LOCATIONS
 from RFCUtils import forcedInvasion
 from StoredData import data
-import Religions
 
 gc = CyGlobalContext()
 
@@ -61,41 +57,6 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
                     city.setHasRealBuilding(Building.PALACE, True)
                 if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
                     city.setHasReligion(Religion.ISLAM, True, True, False)
-
-
-@handler("cityAcquired")
-def jerusalem_incentive(owner, player_id, city, bConquest, bTrade):
-    # 3Miro: Jerusalem's Golden Age Incentive
-
-    tCity = (city.getX(), city.getY())
-    if tCity == CITIES[City.JERUSALEM]:
-        pPlayer = gc.getPlayer(player_id)
-        if pPlayer.getStateReligion() == Religion.CATHOLICISM:
-            # Absinthe: spread Catholicism if not present already
-            if not city.isHasReligion(Religion.CATHOLICISM):
-                Religions.spreadReligion(tCity, Religion.CATHOLICISM)
-            Crusades.success(player_id)
-            message(
-                player_id,
-                text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
-                force=True,
-                color=MessageData.GREEN,
-            )
-
-        # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
-        #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
-        if (
-            percentage_chance(15, strict=True)
-            and player_id in civilizations().majors().ids()
-            and pPlayer.getStateReligion() != -1
-        ):
-            pPlayer.initUnit(
-                Unit.HOLY_RELIC,
-                CITIES[City.JERUSALEM][0],
-                CITIES[City.JERUSALEM][1],
-                UnitAITypes.NO_UNITAI,
-                DirectionTypes.DIRECTION_SOUTH,
-            )
 
 
 @handler("BeginGameTurn")
