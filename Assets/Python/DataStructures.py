@@ -164,7 +164,3 @@ class CivDataMapper(EnumDataMapper):
 
     BASE_CLASS = CoreTypes.Civ
     SIDE_CLASS = int
-
-
-def sort(iterable, key=lambda x: x, reverse=False):
-    return sorted(iterable, key=key, reverse=reverse)

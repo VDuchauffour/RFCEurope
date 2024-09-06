@@ -55,7 +55,6 @@ from DataStructures import (
     CivDataMapper,
     CompanyDataMapper,
     Attributes,
-    sort,
 )
 from Errors import NotTypeExpectedError, NotACallableError
 from Enum import Enum
@@ -2193,6 +2192,10 @@ class FindResult(object):
         self.result = result
         self.index = index
         self.value = value
+
+
+def sort(iterable, key=lambda x: x, reverse=False):
+    return sorted(iterable, key=key, reverse=reverse)
 
 
 def find(list, metric=lambda x: x, reverse=True):
