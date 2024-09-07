@@ -199,16 +199,14 @@ def janissaryNewCityUP(iPlayer, city, bConquest):
     iIsHasForeignReligion = 0
     if iIsHasForeignReligion:
         make_unit(iPlayer, Unit.JANISSARY, city)
-        if iPlayer == human():
-            text_string = text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!"
-            message(
-                iPlayer,
-                text_string,
-                sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
-                color=MessageData.GREEN,
-                location=city,
-            )
+        message_if_human(
+            iPlayer,
+            text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!",
+            sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+            button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
+            color=MessageData.GREEN,
+            location=city,
+        )
 
 
 def getNumForeignCitiesOnBaltic(iPlayer, bVassal=False):

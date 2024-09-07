@@ -78,7 +78,7 @@ def jerusalem_incentive(owner, player, city, bConquest, bTrade):
                 Religions.spreadReligion(tCity, Religion.CATHOLICISM)
             Crusades.success(player)
             message_if_human(
-                human(),
+                player,
                 text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
                 force=True,
                 color=MessageData.GREEN,

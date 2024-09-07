@@ -927,7 +927,7 @@ def sendUnit(pUnit):
     # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
     player(iOwner).changeFaith(1)
     message_if_human(
-        human(),
+        iOwner,
         text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
         sound="AS2D_BUILD_CATHOLIC",
         color=MessageData.ORANGE,
@@ -1313,7 +1313,7 @@ def crusadeArrival(iActiveCrusade):
             if sCityName == "Unknown":
                 sCityName = lookupName(pTargetCity, iLeader)
             message(
-                human(),
+                iLeader,
                 text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",
                 color=MessageData.GREEN,
                 location=(iChosenX, iChosenY),
