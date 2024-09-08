@@ -65,19 +65,19 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
 
 
 @handler("cityAcquired")
-def jerusalem_incentive(owner, player, city, bConquest, bTrade):
+def jerusalem_incentive(owner, player_id, city, bConquest, bTrade):
     # 3Miro: Jerusalem's Golden Age Incentive
 
     tCity = (city.getX(), city.getY())
     if tCity == CITIES[City.JERUSALEM]:
-        pPlayer = gc.getPlayer(player)
+        pPlayer = gc.getPlayer(player_id)
         if pPlayer.getStateReligion() == Religion.CATHOLICISM:
             # Absinthe: spread Catholicism if not present already
             if not city.isHasReligion(Religion.CATHOLICISM):
                 Religions.spreadReligion(tCity, Religion.CATHOLICISM)
-            Crusades.success(player)
+            Crusades.success(player_id)
             message(
-                player,
+                player_id,
                 text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
                 force=True,
                 color=MessageData.GREEN,
@@ -87,7 +87,7 @@ def jerusalem_incentive(owner, player, city, bConquest, bTrade):
         #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
         if (
             percentage_chance(15, strict=True)
-            and player in civilizations().majors().ids()
+            and player_id in civilizations().majors().ids()
             and pPlayer.getStateReligion() != -1
         ):
             pPlayer.initUnit(
