@@ -1716,8 +1716,8 @@ def jerusalem_conquered(owner, player_id, city, bConquest, bTrade):
                 for plot in plots.surrounding(location(city)).entities():
                     convertPlotCulture(plot, player_id, 100, False)
 
-            message_if_human(
-                human(),
+            message(
+                player_id,
                 text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
                 force=True,
                 color=MessageData.GREEN,
