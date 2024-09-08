@@ -1881,6 +1881,33 @@ void CvInitCore::resetAdvancedStartPoints()
   setNumAdvancedStartPoints(iPoints);
 }
 
+const CvWString &CvInitCore::getGameName() const
+{
+  return m_szGameName;
+}
+
+void CvInitCore::setGameName(const CvWString &szGameName)
+{
+  static CvWString szAppliedGameName = szGameName;
+  static CvWString szModVersion = GC.getDefineSTRING("RFCE_MOD_VERSION");
+  static CvWString szLeft = " (v";
+  static CvWString szRight = ")";
+
+  if (szModVersion != NULL && !szModVersion.empty())
+  {
+    int iSuffixIndex = szAppliedGameName.find(szLeft);
+    if (iSuffixIndex != std::string::npos)
+    {
+      szAppliedGameName = szAppliedGameName.substr(0, iSuffixIndex);
+    }
+
+    m_szGameName = szAppliedGameName + szLeft + szModVersion + szRight;
+    return;
+  }
+
+  m_szGameName = szGameName;
+}
+
 void CvInitCore::read(FDataStreamBase *pStream)
 {
   uint uiSaveFlag = 0;

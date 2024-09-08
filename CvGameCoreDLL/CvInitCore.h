@@ -76,14 +76,8 @@ public:
   // **************************
   // Member access
   // **************************
-  DllExport const CvWString &getGameName() const
-  {
-    return m_szGameName;
-  }
-  DllExport void setGameName(const CvWString &szGameName)
-  {
-    m_szGameName = szGameName;
-  }
+  DllExport const CvWString &getGameName() const;
+  DllExport void setGameName(const CvWString &szGameName);
 
   DllExport const CvWString &getGamePassword() const
   {

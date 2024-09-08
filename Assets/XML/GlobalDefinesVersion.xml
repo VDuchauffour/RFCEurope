@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Civ4Defines xmlns="x-schema:CIV4GlobalDefinesSchema.xml">
+	<Define>
+		<DefineName>RFCE_MOD_VERSION</DefineName>
+		<DefineTextVal>1.6.5-1</DefineTextVal>
+	</Define>
+</Civ4Defines>
