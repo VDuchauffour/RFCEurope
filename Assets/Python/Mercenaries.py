@@ -4,7 +4,6 @@ from Core import (
     civilizations,
     message,
     human,
-    message_if_human,
     text,
     turn,
     cities,
@@ -2945,7 +2944,7 @@ def doMercsTurn(iGameTurn):
 
 
 def desertMercs(iPlayer):
-    message_if_human(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
+    message(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
 
     while True:
         lHiredMercs = units.owner(iPlayer).mercenaries().entities()

@@ -8,7 +8,6 @@ from Core import (
     make_units,
     cities,
     message,
-    message_if_human,
     player,
     show,
     show_if_human,
@@ -42,7 +41,7 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
                 city.setHasReligion(Religion.ISLAM, True, True, False)
             # some stability boost and flavour message
             player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
-            message_if_human(
+            message(
                 iPlayer,
                 text("TXT_KEY_GLORY_ON_CONQUEST"),
                 force=True,
@@ -77,7 +76,7 @@ def jerusalem_incentive(owner, player, city, bConquest, bTrade):
             if not city.isHasReligion(Religion.CATHOLICISM):
                 Religions.spreadReligion(tCity, Religion.CATHOLICISM)
             Crusades.success(player)
-            message_if_human(
+            message(
                 player,
                 text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
                 force=True,
