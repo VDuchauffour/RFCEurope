@@ -8,7 +8,6 @@ from Core import (
     make_units,
     cities,
     message,
-    message_if_human,
     player,
     show,
     show_if_human,
@@ -42,7 +41,7 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
                 city.setHasReligion(Religion.ISLAM, True, True, False)
             # some stability boost and flavour message
             player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION, 6)
-            message_if_human(
+            message(
                 iPlayer,
                 text("TXT_KEY_GLORY_ON_CONQUEST"),
                 force=True,
@@ -66,19 +65,19 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
 
 
 @handler("cityAcquired")
-def jerusalem_incentive(owner, player, city, bConquest, bTrade):
+def jerusalem_incentive(owner, player_id, city, bConquest, bTrade):
     # 3Miro: Jerusalem's Golden Age Incentive
 
     tCity = (city.getX(), city.getY())
     if tCity == CITIES[City.JERUSALEM]:
-        pPlayer = gc.getPlayer(player)
+        pPlayer = gc.getPlayer(player_id)
         if pPlayer.getStateReligion() == Religion.CATHOLICISM:
             # Absinthe: spread Catholicism if not present already
             if not city.isHasReligion(Religion.CATHOLICISM):
                 Religions.spreadReligion(tCity, Religion.CATHOLICISM)
-            Crusades.success(player)
-            message_if_human(
-                human(),
+            Crusades.success(player_id)
+            message(
+                player_id,
                 text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
                 force=True,
                 color=MessageData.GREEN,
@@ -88,7 +87,7 @@ def jerusalem_incentive(owner, player, city, bConquest, bTrade):
         #             maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
         if (
             percentage_chance(15, strict=True)
-            and player in civilizations().majors().ids()
+            and player_id in civilizations().majors().ids()
             and pPlayer.getStateReligion() != -1
         ):
             pPlayer.initUnit(

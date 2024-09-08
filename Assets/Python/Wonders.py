@@ -6,7 +6,6 @@ from Core import (
     civilizations,
     human,
     message,
-    message_if_human,
     player,
     text,
     year,
@@ -257,7 +256,7 @@ def st_catherine_monastery_effect(city, building_type):
                 UnitAITypes.NO_UNITAI,
                 DirectionTypes.DIRECTION_SOUTH,
             )
-        message_if_human(
+        message(
             iPlayer,
             text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
             color=MessageData.LIGHT_BLUE,
@@ -619,7 +618,7 @@ def onProjectBuilt(pCity, iProjectType):
             # 70% chance for a 3 turn Golden Age
             if percentage_chance(70, strict=True):
                 pPlayer.changeGoldenAgeTurns(3)
-                message_if_human(
+                message(
                     iPlayer,
                     text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
                     color=MessageData.GREEN,
@@ -750,7 +749,7 @@ def onVassalState(iMaster, iVassal, bVassal):
                 and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET) > 0
             ):
                 pPlayer.changeGoldenAgeTurns(3)
-                message_if_human(
+                message(
                     iPlayer,
                     text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
                     color=MessageData.LIGHT_BLUE,

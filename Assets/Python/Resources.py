@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from Consts import MessageData
-from Core import get_scenario, message_if_human, text, message, year
+from Core import get_scenario, text, message, year
 from CoreTypes import Feature, Improvement, Bonus, Scenario
 from Events import handler
 
@@ -135,7 +135,7 @@ def remove_resource_with_forest_cut_down(pPlot, pCity, iFeatureType):
                     pPlot.setImprovementType(-1)
                 # Absinthe: message for the human player if it was inside it's territory
                 iOwner = pPlot.getOwner()
-                message_if_human(
+                message(
                     iOwner,
                     text(
                         "TXT_KEY_NO_FOREST_NO_RESOURCE",

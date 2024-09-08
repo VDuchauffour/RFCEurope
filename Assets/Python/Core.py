@@ -2266,12 +2266,7 @@ def event_popup(id, title, message, labels=None):
     popup.launch(not labels)
 
 
-def message_if_human(player, text, **settings):
-    if human() == player:
-        message(player, text, **settings)
-
-
-def message(player, text, **settings):
+def message(player_id, text, **settings):
     force = settings.get("force", False)
     duration = settings.get("duration", MessageData.DURATION)
     sound = settings.get("sound", "")
@@ -2285,7 +2280,7 @@ def message(player, text, **settings):
         x, y = location(tile)
 
     interface.addMessage(
-        int(player),
+        player(player_id).getID(),
         force,
         duration,
         text,

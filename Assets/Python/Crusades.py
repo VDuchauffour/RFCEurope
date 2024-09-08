@@ -8,7 +8,6 @@ from Core import (
     location,
     make_crusade_unit,
     make_crusade_units,
-    message_if_human,
     player,
     team,
     teamtype,
@@ -926,11 +925,12 @@ def sendUnit(pUnit):
     changeNumUnitsSent(iOwner, 1)  # Absinthe: counter for sent units per civ
     # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
     player(iOwner).changeFaith(1)
-    message_if_human(
-        human(),
+    message(
+        pUnit,
         text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
         sound="AS2D_BUILD_CATHOLIC",
         color=MessageData.ORANGE,
+        location=location(pUnit),
     )
     pUnit.kill(0, -1)
 
@@ -1313,7 +1313,7 @@ def crusadeArrival(iActiveCrusade):
             if sCityName == "Unknown":
                 sCityName = lookupName(pTargetCity, iLeader)
             message(
-                human(),
+                iLeader,
                 text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",
                 color=MessageData.GREEN,
                 location=(iChosenX, iChosenY),
@@ -1509,12 +1509,11 @@ def freeCrusaders(iPlayer):
 
             if percentage_chance(iOdds, strict=True):
                 pUnit.kill(0, -1)
-                if iHuman == iPlayer:
-                    message(
-                        iHuman,
-                        text("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME") + " " + pUnit.getName(),
-                        color=MessageData.LIME,
-                    )
+                message(
+                    iPlayer,
+                    text("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME") + " " + pUnit.getName(),
+                    color=MessageData.LIME,
+                )
 
     # benefits for the other participants on Crusade return - Faith points, GG points, Relics
     for iCiv in civilizations().main().ids():
@@ -1540,15 +1539,14 @@ def freeCrusaders(iPlayer):
                             UnitAITypes.NO_UNITAI,
                             DirectionTypes.DIRECTION_SOUTH,
                         )
-                        if iCiv == iHuman:
-                            message(
-                                iHuman,
-                                text("TXT_KEY_CRUSADE_NEW_RELIC"),
-                                sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
-                                color=MessageData.GREEN,
-                                location=(iCapitalX, iCapitalY),
-                            )
+                        message(
+                            iCiv,
+                            text("TXT_KEY_CRUSADE_NEW_RELIC"),
+                            sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                            button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
+                            color=MessageData.GREEN,
+                            location=(iCapitalX, iCapitalY),
+                        )
                         if iUnitNumber > 3 and percentage_chance(80, strict=True):
                             pCiv.initUnit(
                                 Unit.HOLY_RELIC,
@@ -1567,12 +1565,11 @@ def freeCrusaders(iPlayer):
                             )
                 # all other civs get experience points as well
                 else:
-                    if iCiv == iHuman:
-                        message(
-                            iHuman,
-                            text("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME"),
-                            color=MessageData.GREEN,
-                        )
+                    message(
+                        iCiv,
+                        text("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME"),
+                        color=MessageData.GREEN,
+                    )
                     pCiv.changeCombatExperience(12 * iUnitNumber)
                     # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                     pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
@@ -1593,15 +1590,14 @@ def freeCrusaders(iPlayer):
                                     UnitAITypes.NO_UNITAI,
                                     DirectionTypes.DIRECTION_SOUTH,
                                 )
-                                if iCiv == iHuman:
-                                    message(
-                                        iHuman,
-                                        text("TXT_KEY_CRUSADE_NEW_RELIC"),
-                                        sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                        button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
-                                        color=MessageData.GREEN,
-                                        location=(iCapitalX, iCapitalY),
-                                    )
+                                message(
+                                    iCiv,
+                                    text("TXT_KEY_CRUSADE_NEW_RELIC"),
+                                    sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                                    button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
+                                    color=MessageData.GREEN,
+                                    location=(iCapitalX, iCapitalY),
+                                )
                             if iUnitNumber > 3 and percentage_chance(60, strict=True):
                                 pCiv.initUnit(
                                     Unit.HOLY_RELIC,
@@ -1644,7 +1640,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
                     1 + pCity.getPopulation()
                 ) <= iRandom:  # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
                     pCity.changePopulation(1)
-                    message_if_human(
+                    message(
                         iPlayer,
                         text("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS"),
                         color=MessageData.GREEN,

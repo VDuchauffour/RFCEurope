@@ -2,7 +2,6 @@
 from CvPythonExtensions import *
 from Core import (
     civilization,
-    message_if_human,
     player,
     human,
     turn,
@@ -55,7 +54,7 @@ def ottoman_up_2(iGameTurn, iPlayer):
             if pCity is not None:
                 iTotalPoints -= iNextJanissary
                 make_unit(iPlayer, Unit.JANISSARY, pCity)
-                message_if_human(
+                message(
                     iPlayer,
                     text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!",
                     sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
@@ -199,16 +198,14 @@ def janissaryNewCityUP(iPlayer, city, bConquest):
     iIsHasForeignReligion = 0
     if iIsHasForeignReligion:
         make_unit(iPlayer, Unit.JANISSARY, city)
-        if iPlayer == human():
-            text_string = text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!"
-            message(
-                iPlayer,
-                text_string,
-                sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
-                color=MessageData.GREEN,
-                location=city,
-            )
+        message(
+            iPlayer,
+            text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!",
+            sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+            button=gc.getUnitInfo(Unit.JANISSARY).getButton(),
+            color=MessageData.GREEN,
+            location=city,
+        )
 
 
 def getNumForeignCitiesOnBaltic(iPlayer, bVassal=False):

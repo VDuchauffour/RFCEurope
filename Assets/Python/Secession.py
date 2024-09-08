@@ -1,7 +1,7 @@
 from CvPythonExtensions import CyGlobalContext, WarPlanTypes
 
 from Consts import MessageData
-from Core import civilization, civilizations, cities, message_if_human, text
+from Core import civilization, civilizations, cities, message, text
 from CoreTypes import ProvinceType, StabilityCategory, UniquePower
 from PyUtils import chance, rand, choice
 from RFCUtils import (
@@ -232,7 +232,7 @@ def revoltCity(iPlayer, bForce):
 
         tCity = (splittingCity.getX(), splittingCity.getY())
         sCityName = splittingCity.getName()
-        message_if_human(
+        message(
             iPlayer,
             sCityName + " " + text("TXT_KEY_STABILITY_SECESSION"),
             force=True,
