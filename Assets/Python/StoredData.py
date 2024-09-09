@@ -159,18 +159,17 @@ class GameData(BaseData):
         self.is_first_plague = False
 
     def init_rise_and_fall(self):
-        # RiseAndFall
-        self.iNewCiv = -1
-        self.iNewCivFlip = -1
-        self.iOldCivFlip = -1
-        self.iSpawnWar = 0  # if 1, add units and declare war. If >=2, do nothing
-        self.bAlreadySwitched = False
-        self.iBetrayalTurns = 0
-        self.iRebelCiv = 0
-        self.lRebelCities = []
+        self.new_civ = -1
+        self.new_civ_flip = -1
+        self.old_civ_flip = -1
+        self.spawn_war = 0  # if 1, add units and declare war. If >=2, do nothing
+        self.already_switched = False
+        self.betrayal_turns = 0
+        self.rebel_civ = 0
+        self.rebel_cities = []
         self.lRebelSuppress = [0] * civilizations().majors().len()
-        self.lCheatersCheck = [0, -1]
-        self.lDeleteMode = [
+        self.cheaters_check = [0, -1]
+        self.delete_mode = [
             -1,
             -1,
             -1,

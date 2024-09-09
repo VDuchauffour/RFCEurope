@@ -169,27 +169,27 @@ def setEarlyLeaders():
 
 
 def getNewCiv():
-    return data.iNewCiv
+    return data.new_civ
 
 
 def setNewCiv(iNewValue):
-    data.iNewCiv = iNewValue
+    data.new_civ = iNewValue
 
 
 def getNewCivFlip():
-    return data.iNewCivFlip
+    return data.new_civ_flip
 
 
 def setNewCivFlip(iNewValue):
-    data.iNewCivFlip = iNewValue
+    data.new_civ_flip = iNewValue
 
 
 def getOldCivFlip():
-    return data.iOldCivFlip
+    return data.old_civ_flip
 
 
 def setOldCivFlip(iNewValue):
-    data.iOldCivFlip = iNewValue
+    data.old_civ_flip = iNewValue
 
 
 def getTempTopLeft():
@@ -209,19 +209,19 @@ def setTempBottomRight(tNewValue):
 
 
 def getSpawnWar():
-    return data.iSpawnWar
+    return data.spawn_war
 
 
 def setSpawnWar(iNewValue):
-    data.iSpawnWar = iNewValue
+    data.spawn_war = iNewValue
 
 
 def getAlreadySwitched():
-    return data.bAlreadySwitched
+    return data.already_switched
 
 
 def setAlreadySwitched(bNewValue):
-    data.bAlreadySwitched = bNewValue
+    data.already_switched = bNewValue
 
 
 def getSpawnDelay(iCiv):
@@ -241,19 +241,19 @@ def setFlipsDelay(iCiv, iNewValue):
 
 
 def getBetrayalTurns():
-    return data.iBetrayalTurns
+    return data.betrayal_turns
 
 
 def setBetrayalTurns(iNewValue):
-    data.iBetrayalTurns = iNewValue
+    data.betrayal_turns = iNewValue
 
 
 def getRebelCiv():
-    return data.iRebelCiv
+    return data.rebel_civ
 
 
 def getRebelCities():
-    return data.lRebelCities
+    return data.rebel_cities
 
 
 def getRebelSuppress():
@@ -265,19 +265,19 @@ def setRebelSuppress(lSuppressList):
 
 
 def getCheatersCheck(i):
-    return data.lCheatersCheck[i]
+    return data.cheaters_check[i]
 
 
 def setCheatersCheck(i, iNewValue):
-    data.lCheatersCheck[i] = iNewValue
+    data.cheaters_check[i] = iNewValue
 
 
 def getDeleteMode(i):
-    return data.lDeleteMode[i]
+    return data.delete_mode[i]
 
 
 def setDeleteMode(i, iNewValue):
-    data.lDeleteMode[i] = iNewValue
+    data.delete_mode[i] = iNewValue
 
 
 def newCivPopup(iCiv):

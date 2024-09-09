@@ -137,15 +137,15 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
                 if bSpecialRespawn or percentage_chance(
                     civilization(iDeadCiv).location.respawning_threshold, strict=True
                 ):
-                    data.lRebelCities = cityList
-                    data.iRebelCiv = iDeadCiv  # for popup and CollapseCapitals()
+                    data.rebel_cities = cityList
+                    data.rebel_civ = iDeadCiv  # for popup and CollapseCapitals()
                     return iDeadCiv
     return -1
 
 
 def suppressResurection(iDeadCiv):
     lSuppressList = data.lRebelSuppress
-    lCityList = data.lRebelCities
+    lCityList = data.rebel_cities
     lCityCount = [0] * civilizations().majors().len()
 
     for (x, y) in lCityList:
@@ -177,7 +177,7 @@ def suppressResurection(iDeadCiv):
 
 
 def resurectCiv(iDeadCiv):
-    lCityList = data.lRebelCities
+    lCityList = data.rebel_cities
     lSuppressList = data.lRebelSuppress
     bSuppressed = True
     iHuman = human()
