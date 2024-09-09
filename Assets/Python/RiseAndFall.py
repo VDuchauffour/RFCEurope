@@ -272,14 +272,6 @@ def setCheatersCheck(i, iNewValue):
     data.cheaters_check[i] = iNewValue
 
 
-def getDeleteMode(i):
-    return data.delete_mode[i]
-
-
-def setDeleteMode(i, iNewValue):
-    data.delete_mode[i] = iNewValue
-
-
 def newCivPopup(iCiv):
     event_popup(
         7614,
@@ -790,7 +782,7 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
             if not gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
                 birthInFreeRegion(iCiv, tCapital, core_tile_min, core_tile_max)
             elif bDeleteEverything:
-                setDeleteMode(0, iCiv)
+                data.delete_civ = iCiv
                 # Absinthe: kill off units near the starting plot
                 killAllUnitsInArea(
                     (tCapital[0] - 1, tCapital[1] - 1), (tCapital[0] + 1, tCapital[1] + 1)
@@ -829,30 +821,29 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
 
 @handler("BeginPlayerTurn")
 def deleteMode(iGameTurn, iCurrentPlayer):
-    iCiv = getDeleteMode(0)
-    if iCiv != -1:
-        tCapital = civilization(iCiv).location.capital
-        if iCurrentPlayer == iCiv:
+    if data.delete_civ != -1:
+        tCapital = civilization(data.delete_civ).location.capital
+        if iCurrentPlayer == data.delete_civ:
             for plot in plots.surrounding(tCapital, radius=2).entities():
-                plot.setCulture(iCiv, 300, True)
+                plot.setCulture(data.delete_civ, 300, True)
             for plot in plots.surrounding(tCapital).entities():
-                convertPlotCulture(plot, iCiv, 100, True)
-                if plot.getCulture(iCiv) < 3000:
+                convertPlotCulture(plot, data.delete_civ, 100, True)
+                if plot.getCulture(data.delete_civ) < 3000:
                     # 2000 in vanilla/warlords, cos here Portugal is choked by Spanish culture
-                    plot.setCulture(iCiv, 3000, True)
-                plot.setOwner(iCiv)
-            setDeleteMode(0, -1)
+                    plot.setCulture(data.delete_civ, 3000, True)
+                plot.setOwner(data.delete_civ)
+            data.delete_civ = -1
             return
 
-        if iCurrentPlayer != iCiv - 1:
+        if iCurrentPlayer != data.delete_civ - 1:
             return
 
         for plot in plots.surrounding(tCapital).entities():
             if plot.isOwned():
                 for iLoopCiv in civilizations().ids():
-                    if iLoopCiv != iCiv:
+                    if iLoopCiv != data.delete_civ:
                         plot.setCulture(iLoopCiv, 0, True)
-                plot.setOwner(iCiv)
+                plot.setOwner(data.delete_civ)
 
 
 def birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight):

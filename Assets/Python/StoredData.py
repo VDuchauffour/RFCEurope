@@ -169,11 +169,7 @@ class GameData(BaseData):
         self.rebel_cities = []
         self.lRebelSuppress = [0] * civilizations().majors().len()
         self.cheaters_check = [0, -1]
-        self.delete_mode = [
-            -1,
-            -1,
-            -1,
-        ]  # first is a bool, the other values are capital coordinates
+        self.delete_civ = -1
 
     def init_reformation(self):
         self.is_reformation_active = False
