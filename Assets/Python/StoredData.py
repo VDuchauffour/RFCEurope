@@ -69,10 +69,11 @@ class PlayerData(BaseData):
 
         # RiseAndFall
         self.num_cities = 0
-        self.spawn_delay = 0
         self.flips_Delay = 0
         self.latest_rebellion_turn = 0
-        self.rebel_suppress = 0
+        self.resurrect_suppress = 0
+        self.last_turn_alive = 0
+        self.last_respawn_turn = 0
 
         # Reformation
         self.reformation_hit = 0
@@ -81,11 +82,6 @@ class PlayerData(BaseData):
         self.voting_power = 0
         self.deviate_targets = False
         self.num_units_sent = 0
-
-        # Respawns
-        self.special_respawn_turn = 0
-        self.last_turn_alive = 0
-        self.last_respawn_turn = 0
 
 
 class GameData(BaseData):
@@ -165,9 +161,8 @@ class GameData(BaseData):
         self.spawn_war = 0  # if 1, add units and declare war. If >=2, do nothing
         self.already_switched = False
         self.betrayal_turns = 0
-        self.rebel_civ = 0
-        self.rebel_cities = []
-        self.lRebelSuppress = [0] * civilizations().majors().len()
+        self.civ_to_resurrect = 0
+        self.cities_to_resurrect = []
         self.cheaters_check = [0, -1]
         self.delete_civ = -1
 

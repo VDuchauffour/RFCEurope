@@ -288,6 +288,7 @@ CIV_COLLAPSE_DATE = CivDataMapper(
     }
 ).fill_missing_members(999)
 
+# TODO unused
 CIV_RESPAWNING_DATE = CivDataMapper(
     {
         Civ.FRANCE: DateTurn.i1600AD,

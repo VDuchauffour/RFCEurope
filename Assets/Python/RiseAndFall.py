@@ -90,16 +90,12 @@ gc = CyGlobalContext()
 iCheatersPeriod = 12
 iBetrayalPeriod = 8
 iBetrayalThreshold = 66
-iRebellionDelay = 15
-iEscapePeriod = 30
 
 
 @handler("GameStart")
 def setup():
     setEarlyLeaders()
-    setupRespawnTurns()
 
-    iHuman = human()
     if get_scenario() == Scenario.i500AD:
         create_starting_units_500AD()
         for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
@@ -123,7 +119,7 @@ def setup():
         set_starting_diplomacy_1200AD()
         leaning_tower_effect_1200AD()
         Religions.spread1200ADJews()  # Spread Jews to some random cities
-        Victory.set1200UHVDone(iHuman)
+        Victory.set1200UHVDone(human())
         # Temporarily all civs get the same starting techs as Aragon
         set_starting_techs_1200AD(Civ.POPE)
         Crusades.do1200ADCrusades()
@@ -149,127 +145,11 @@ def set_war_on_spawn():
                     civ.set_war(other)
 
 
-def setSpecialRespawnTurn(iCiv, iNewValue):
-    data.players[iCiv].special_respawn_turn = iNewValue
-
-
-def setupRespawnTurns():
-    """Uniform spawns within +/- 10 turns of desired turn."""
-    for iCiv in civilizations().majors().ids():
-        setSpecialRespawnTurn(
-            iCiv, civilization(iCiv).date.respawning + (rand(21) - 10) + (rand(21) - 10)
-        )
-
-
 def setEarlyLeaders():
     for civ in civilizations().majors().ai():
         if civ.leaders[LeaderType.EARLY] != civ.leaders[LeaderType.PRIMARY]:
             leader = civ.leaders[LeaderType.EARLY]
             civ.player.setLeader(leader)
-
-
-def getNewCiv():
-    return data.new_civ
-
-
-def setNewCiv(iNewValue):
-    data.new_civ = iNewValue
-
-
-def getNewCivFlip():
-    return data.new_civ_flip
-
-
-def setNewCivFlip(iNewValue):
-    data.new_civ_flip = iNewValue
-
-
-def getOldCivFlip():
-    return data.old_civ_flip
-
-
-def setOldCivFlip(iNewValue):
-    data.old_civ_flip = iNewValue
-
-
-def getTempTopLeft():
-    return data.temp_top_left
-
-
-def setTempTopLeft(tNewValue):
-    data.temp_top_left = tNewValue
-
-
-def getTempBottomRight():
-    return data.temp_bottom_right
-
-
-def setTempBottomRight(tNewValue):
-    data.temp_bottom_right = tNewValue
-
-
-def getSpawnWar():
-    return data.spawn_war
-
-
-def setSpawnWar(iNewValue):
-    data.spawn_war = iNewValue
-
-
-def getAlreadySwitched():
-    return data.already_switched
-
-
-def setAlreadySwitched(bNewValue):
-    data.already_switched = bNewValue
-
-
-def getSpawnDelay(iCiv):
-    return data.players[iCiv].spawn_delay
-
-
-def setSpawnDelay(iCiv, iNewValue):
-    data.players[iCiv].spawn_delay = iNewValue
-
-
-def getFlipsDelay(iCiv):
-    return data.players[iCiv].flips_Delay
-
-
-def setFlipsDelay(iCiv, iNewValue):
-    data.players[iCiv].flips_Delay = iNewValue
-
-
-def getBetrayalTurns():
-    return data.betrayal_turns
-
-
-def setBetrayalTurns(iNewValue):
-    data.betrayal_turns = iNewValue
-
-
-def getRebelCiv():
-    return data.rebel_civ
-
-
-def getRebelCities():
-    return data.rebel_cities
-
-
-def getRebelSuppress():
-    return data.lRebelSuppress
-
-
-def setRebelSuppress(lSuppressList):
-    data.lRebelSuppress = lSuppressList
-
-
-def getCheatersCheck(i):
-    return data.cheaters_check[i]
-
-
-def setCheatersCheck(i, iNewValue):
-    data.cheaters_check[i] = iNewValue
 
 
 def newCivPopup(iCiv):
@@ -279,23 +159,22 @@ def newCivPopup(iCiv):
         text("TXT_KEY_NEWCIV_MESSAGE", player(iCiv).getCivilizationAdjectiveKey()),
         [text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO")],
     )
-    setNewCiv(iCiv)
+    data.new_civ = iCiv
 
 
 @popup_handler(7614)
 def RiseAndFallPopupEvent(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:  # 1st button
         iOldHandicap = gc.getActivePlayer().getHandicapType()
-        iNewCiv = getNewCiv()
-        Victory.switchUHV(iNewCiv, human())
-        gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
-        gc.getGame().setActivePlayer(iNewCiv, False)
-        gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
+        Victory.switchUHV(data.new_civ, human())
+        gc.getActivePlayer().setHandicapType(gc.getPlayer(data.new_civ).getHandicapType())
+        gc.getGame().setActivePlayer(data.new_civ, False)
+        gc.getPlayer(data.new_civ).setHandicapType(iOldHandicap)
         for iMaster in civilizations().majors().ids():
-            if gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).isVassal(iMaster):
-                gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).setVassal(iMaster, False, False)
-        setAlreadySwitched(True)
-        gc.getPlayer(iNewCiv).setPlayable(True)
+            if gc.getTeam(gc.getPlayer(data.new_civ).getTeam()).isVassal(iMaster):
+                gc.getTeam(gc.getPlayer(data.new_civ).getTeam()).setVassal(iMaster, False, False)
+        data.already_switched = True
+        gc.getPlayer(data.new_civ).setPlayable(True)
 
 
 def flipPopup(iNewCiv, tTopLeft, tBottomRight):
@@ -318,18 +197,18 @@ def flipPopup(iNewCiv, tTopLeft, tBottomRight):
         flipText,
         [text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO")],
     )
-    setNewCivFlip(iNewCiv)
-    setOldCivFlip(iHuman)
-    setTempTopLeft(tTopLeft)
-    setTempBottomRight(tBottomRight)
+    data.new_civ_flip = iNewCiv
+    data.old_civ_flip = iHuman
+    data.temp_top_left = tTopLeft
+    data.temp_bottom_right = tBottomRight
 
 
 @popup_handler(7615)
 def FlipPopupEvent(playerID, netUserData, popupReturn):
     iHuman = human()
-    tTopLeft = getTempTopLeft()
-    tBottomRight = getTempBottomRight()
-    iNewCivFlip = getNewCivFlip()
+    tTopLeft = data.temp_top_left
+    tBottomRight = data.temp_bottom_right
+    iNewCivFlip = data.new_civ_flip
 
     humanCityList = []
 
@@ -369,9 +248,9 @@ def FlipPopupEvent(playerID, netUserData, popupReturn):
                                 make_unit(iNewCivFlip, iUnitType, location(plot))
                                 i = i - 1
 
-        if getCheatersCheck(0) == 0:
-            setCheatersCheck(0, iCheatersPeriod)
-            setCheatersCheck(1, getNewCivFlip())
+        if data.cheaters_check[0] == 0:
+            data.cheaters_check[0] = iCheatersPeriod
+            data.cheaters_check[1] = data.new_civ_flip
 
     elif popupReturn.getButtonClicked() == 1:  # 2nd button
         message(iHuman, text("TXT_KEY_FLIP_REFUSED"), force=True, color=MessageData.RED)
@@ -383,15 +262,14 @@ def FlipPopupEvent(playerID, netUserData, popupReturn):
                 # Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
                 pCurrent.changeCulture(iNewCivFlip, oldCulture / 2, True)
                 pCurrent.setCulture(iHuman, oldCulture / 2, True)
-                iWar = getSpawnWar() + 1
-                setSpawnWar(iWar)
-                if getSpawnWar() == 1:
+                data.spawn_war += 1
+                if data.spawn_war == 1:
                     # safety check - don't want to use canDeclareWar, as here we want to always declare war
                     if not gc.getTeam(gc.getPlayer(iNewCivFlip).getTeam()).isAtWar(iHuman):
                         gc.getTeam(gc.getPlayer(iNewCivFlip).getTeam()).declareWar(
                             iHuman, False, -1
                         )
-                    setBetrayalTurns(iBetrayalPeriod)
+                    data.betrayal_turns = iBetrayalPeriod
                     initBetrayal()
 
 
@@ -401,60 +279,43 @@ def ResurrectionEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     iChoice = popupReturn.getButtonClicked()
     iHumanCity = 0
-    lCityList = getRebelCities()
-    for (x, y) in lCityList:
+    for (x, y) in data.cities_to_resurrect:
         iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
         if iOwner == iHuman:
             iHumanCity += 1
 
     if iChoice == 1:
-        lList = getRebelSuppress()
-        lList[iHuman] = 2  # let go + war
-        setRebelSuppress(lList)
+        data.players[iHuman].resurrect_suppress = 2  # let go + war
     elif iChoice == 2:
         if percentage_chance(40, strict=True):
-            lCityList = getRebelCities()
-            for (x, y) in lCityList:
+            for (x, y) in data.cities_to_resurrect:
                 pCity = gc.getMap().plot(x, y).getPlotCity()
                 if pCity.getOwner() == iHuman:
                     pCity.changeOccupationTimer(2)
                     pCity.changeHurryAngerTimer(10)
-            lList = getRebelSuppress()
-            lList[iHuman] = 3  # keep cities + war
-            setRebelSuppress(lList)
+            data.players[iHuman].resurrect_suppress = 3  # keep cities + war
         else:
-            lList = getRebelSuppress()
-            lList[iHuman] = 4  # let go + war
-            setRebelSuppress(lList)
+            data.players[iHuman].resurrect_suppress = 4  # let go + war
     elif iChoice == 3:
         iLoyalPrice = min((10 * gc.getPlayer(iHuman).getGold()) / 100, 50 * iHumanCity)
         gc.getPlayer(iHuman).setGold(gc.getPlayer(iHuman).getGold() - iLoyalPrice)
         if percentage_chance(iLoyalPrice / iHumanCity, strict=True):
-            lList = getRebelSuppress()
-            lList[iHuman] = 1  # keep + no war
-            setRebelSuppress(lList)
+            data.players[iHuman].resurrect_suppress = 1  # keep + no war
         else:
-            lList = getRebelSuppress()
-            lList[iHuman] = 4  # let go + war
-            setRebelSuppress(lList)
+            data.players[iHuman].resurrect_suppress = 4  # let go + war
     elif iChoice == 4:
         iLoyalPrice = min((10 * gc.getPlayer(iHuman).getGold()) / 100, 50 * iHumanCity)
         gc.getPlayer(iHuman).setGold(gc.getPlayer(iHuman).getGold() - iLoyalPrice)
         if percentage_chance(iLoyalPrice / iHumanCity + 40, strict=True):
-            lCityList = getRebelCities()
-            for (x, y) in lCityList:
+            for (x, y) in data.cities_to_resurrect:
                 pCity = gc.getMap().plot(x, y).getPlotCity()
                 if pCity.getOwner() == iHuman:
                     pCity.changeOccupationTimer(2)
                     pCity.changeHurryAngerTimer(10)
-            lList = getRebelSuppress()
-            lList[iHuman] = 3  # keep + war
-            setRebelSuppress(lList)
+            data.players[iHuman].resurrect_suppress = 3  # keep + war
         else:
-            lList = getRebelSuppress()
-            lList[iHuman] = 2  # let go + war
-            setRebelSuppress(lList)
-    resurectCiv(getRebelCiv())
+            data.players[iHuman].resurrect_suppress = 2  # let go + war
+    resurectCiv(data.civ_to_resurrect)
 
 
 @handler("cityBuilt")
@@ -476,17 +337,17 @@ def onCityBuilt(pCity):
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Trigger betrayal mode
-    if getBetrayalTurns() > 0:
+    if data.betrayal_turns > 0:
         initBetrayal()
 
-    if getCheatersCheck(0) > 0:
+    if data.cheaters_check[0] > 0:
         teamPlayer = gc.getTeam(gc.getPlayer(human()).getTeam())
-        if teamPlayer.isAtWar(getCheatersCheck(1)):
-            initMinorBetrayal(getCheatersCheck(1))
-            setCheatersCheck(0, 0)
-            setCheatersCheck(1, -1)
+        if teamPlayer.isAtWar(data.cheaters_check[1]):
+            initMinorBetrayal(data.cheaters_check[1])
+            data.cheaters_check[0] = 0
+            data.cheaters_check[1] = -1
         else:
-            setCheatersCheck(0, getCheatersCheck(0) - 1)
+            data.cheaters_check[0] -= 1
 
     if iGameTurn % 20 == 0:
         for civ in civilizations().independents().alive():
@@ -748,13 +609,13 @@ def fragmentBarbarians(iGameTurn):
 
 def initBirth(iCurrentTurn, iBirthYear, iCiv):
     iHuman = human()
-    if iCurrentTurn == iBirthYear - 1 + getSpawnDelay(iCiv) + getFlipsDelay(iCiv):
+    if iCurrentTurn == iBirthYear - 1 + data.players[iCiv].flips_Delay:
         tCapital = civilization(iCiv).location.capital
         core_tile_min = civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MIN]
         core_tile_max = civilization(iCiv).location.area[AreaType.CORE][Area.TILE_MAX]
         broader_tile_min = civilization(iCiv).location.area[AreaType.BROADER][Area.TILE_MIN]
         broader_tile_max = civilization(iCiv).location.area[AreaType.BROADER][Area.TILE_MAX]
-        if getFlipsDelay(iCiv) == 0:  # city hasn't already been founded
+        if data.players[iCiv].flips_Delay == 0:  # city hasn't already been founded
 
             # Absinthe: for the human player, kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
             if iCiv == iHuman:
@@ -809,10 +670,10 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
 
     # 3MiroCrusader modification. Crusaders cannot change nations.
     # Sedna17: Straight-up no switching within 40 turns of your birth
-    if iCurrentTurn == iBirthYear + getSpawnDelay(iCiv):
+    if iCurrentTurn == iBirthYear:
         if (
             gc.getPlayer(iCiv).isAlive()
-            and not getAlreadySwitched()
+            and not data.already_switched
             and iCurrentTurn > civilization(iHuman).date.birth + 40
             and not gc.getPlayer(iHuman).getIsCrusader()
         ):
@@ -847,10 +708,8 @@ def deleteMode(iGameTurn, iCurrentPlayer):
 
 
 def birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight):
-    startingPlot = gc.getMap().plot(tCapital[0], tCapital[1])
-    if getFlipsDelay(iCiv) == 0:
-        iFlipsDelay = getFlipsDelay(iCiv) + 2
-
+    if data.players[iCiv].flips_Delay == 0:
+        iFlipsDelay = data.players[iCiv].flips_Delay + 2
         if iFlipsDelay > 0:
             # Absinthe: kill off units near the starting plot
             killAllUnitsInArea(
@@ -896,7 +755,7 @@ def birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight):
             set_starting_techs(iCiv)
             setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
             clearPlague(iCiv)
-            setFlipsDelay(iCiv, iFlipsDelay)  # save
+            data.players[iCiv].flips_Delay = iFlipsDelay
 
     else:  # starting units have already been placed, now the second part
         iNumAICitiesConverted, iNumHumanCitiesToConvert = convertSurroundingCities(
@@ -1065,7 +924,7 @@ def birthInForeignBorders(
 def convertSurroundingCities(iCiv, tTopLeft, tBottomRight):
     iConvertedCitiesCount = 0
     iNumHumanCities = 0
-    setSpawnWar(0)
+    data.spawn_war = 0
 
     # collect all the cities in the spawn region
     for city in (
@@ -1256,42 +1115,40 @@ def initMinorBetrayal(iCiv):
 
 
 def initBetrayal():
-    iHuman = human()
-    turnsLeft = getBetrayalTurns()
-    plotList = squareSearch(getTempTopLeft(), getTempBottomRight(), outerInvasion, [])
+    plotList = squareSearch(data.temp_top_left, data.temp_bottom_right, outerInvasion, [])
     if not plotList:
         plotList = squareSearch(
-            getTempTopLeft(),
-            getTempBottomRight(),
+            data.temp_top_left,
+            data.temp_bottom_right,
             innerSpawn,
-            [getOldCivFlip(), getNewCivFlip()],
+            [data.old_civ_flip, data.new_civ_flip],
         )
     if not plotList:
         plotList = squareSearch(
-            getTempTopLeft(),
-            getTempBottomRight(),
+            data.temp_top_left,
+            data.temp_bottom_right,
             forcedInvasion,
-            [getOldCivFlip(), getNewCivFlip()],
+            [data.old_civ_flip, data.new_civ_flip],
         )
     if plotList:
         tPlot = choice(plotList)
-        if turnsLeft == iBetrayalPeriod:
-            createAdditionalUnits(getNewCivFlip(), tPlot)
+        if data.betrayal_turns == iBetrayalPeriod:
+            createAdditionalUnits(data.new_civ_flip, tPlot)
         unitsBetrayal(
-            getNewCivFlip(),
-            getOldCivFlip(),
-            getTempTopLeft(),
-            getTempBottomRight(),
+            data.new_civ_flip,
+            data.old_civ_flip,
+            data.temp_top_left,
+            data.temp_bottom_right,
             tPlot,
         )
-    setBetrayalTurns(turnsLeft - 1)
+    data.betrayal_turns -= 1
 
 
 def unitsBetrayal(iNewOwner, iOldOwner, tTopLeft, tBottomRight, tPlot):
-    if gc.getPlayer(getOldCivFlip()).isHuman():
-        message(getOldCivFlip(), text("TXT_KEY_FLIP_BETRAYAL"), color=MessageData.RED)
-    elif gc.getPlayer(getNewCivFlip()).isHuman():
-        message(getNewCivFlip(), text("TXT_KEY_FLIP_BETRAYAL_NEW"), color=MessageData.GREEN)
+    if gc.getPlayer(data.old_civ_flip).isHuman():
+        message(data.old_civ_flip, text("TXT_KEY_FLIP_BETRAYAL"), color=MessageData.RED)
+    elif gc.getPlayer(data.new_civ_flip).isHuman():
+        message(data.new_civ_flip, text("TXT_KEY_FLIP_BETRAYAL_NEW"), color=MessageData.GREEN)
     for unit in plots.rectangle(tTopLeft, tBottomRight).units().owner(iOldOwner).entities():
         if percentage_chance(iBetrayalThreshold, reverse=True):
             if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
