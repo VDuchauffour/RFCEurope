@@ -1,6 +1,6 @@
 import Popup
 import UniquePowers
-from Consts import MessageData
+from Consts import MINOR_CIVS, MessageData
 from Core import (
     cities,
     civilization,
@@ -213,16 +213,11 @@ def dutch_should_found_protestantism(player_id):
         )
         data.is_reformation_active = True
         reformationchoice(Civ.DUTCH)
-        reformationOther(Civ.INDEPENDENT)
-        reformationOther(Civ.INDEPENDENT_2)
-        reformationOther(Civ.INDEPENDENT_3)
-        reformationOther(Civ.INDEPENDENT_4)
-        reformationOther(Civ.BARBARIAN)
-        data.players[Civ.DUTCH].reformation_hit = 2
+        for civ in MINOR_CIVS:
+            reformationOther(civ)
 
-        for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
-            if data.players[neighbour].reformation_hit == 0:
-                data.players[neighbour].reformation_hit = 1
+        data.players[Civ.DUTCH].reformation_hit = 2
+        spread_reform_to_neighbour(Civ.DUTCH)
 
 
 @handler("cityBuilt")
@@ -775,11 +770,9 @@ def onTechAcquired(iTech, iTeam, iPlayer):
                     )
                     data.is_reformation_active = True
                     reformationchoice(iPlayer)
-                    reformationOther(Civ.INDEPENDENT)
-                    reformationOther(Civ.INDEPENDENT_2)
-                    reformationOther(Civ.INDEPENDENT_3)
-                    reformationOther(Civ.INDEPENDENT_4)
-                    reformationOther(Civ.BARBARIAN)
+                    for civ in MINOR_CIVS:
+                        reformationOther(civ)
+
                     data.players[iPlayer].reformation_hit = 2
                     spread_reform_to_neighbour(iPlayer)
 
