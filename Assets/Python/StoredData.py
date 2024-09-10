@@ -145,9 +145,11 @@ class GameData(BaseData):
         # Sedna17: Set number of GenericPlagues in StoredData
         # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
         self.plagues = [
-            28 + rand(5) - 10,  # Plagues of Constantinople
+            28
+            + rand(5)
+            - 10,  # Plagues of Constantinople 612  TODO must start at alexandria, add start city arg
             247 + rand(40) - 20,  # 1341 Black Death
-            300 + rand(40) - 20,  # Generic recurrence of plague
+            300 + rand(40) - 20,  # Generic recurrence of plague 1500
             375 + rand(40) - 30,  # 1650 Great Plague
             440 + rand(40) - 30,  # 1740 Small Pox
         ]
