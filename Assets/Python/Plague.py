@@ -338,7 +338,9 @@ def killUnitsByPlague(city, plot, iThreshold, iDamage, iPreserveDefenders):
 
 
 @handler("BeginPlayerTurn")
-def processPlague(iPlayer):
+def processPlague(iGameTurn, iPlayer):
+    # log("%s" % cities.all().building(PlagueType.PLAGUE))
+    # log("%s" % [c.plague_countdown for c in data.civs.values()])
     if iPlayer < civilizations().len():
         if getPlagueCountdown(iPlayer) > 0:
             pPlayer = gc.getPlayer(iPlayer)
