@@ -2,7 +2,6 @@ from CvPythonExtensions import *
 from Core import civilizations, log
 from CoreTypes import (
     Modifier,
-    Building,
     City,
     Civ,
     Civic,
@@ -20,6 +19,7 @@ from CoreTypes import (
     FaithPointBonusCategory,
 )
 from MiscData import (
+    BUILDING_PREFERENCES,
     DIPLOMACY_MODIFIERS,
     HISTORICAL_ENEMIES,
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -163,21 +163,8 @@ def set_building_preferences():
     # the getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
     # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
     for civ in civilizations().majors():
-        gc.setBuildingPref(civ.id, Building.WALLS, 5)
-        gc.setBuildingPref(civ.id, Building.CASTLE, 7)
-        gc.setBuildingPref(civ.id, Building.MANOR_HOUSE, 5)
-        gc.setBuildingPref(civ.id, Building.COURTHOUSE, 5)
-        gc.setBuildingPref(civ.id, Building.NIGHT_WATCH, 3)
-        gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH, 5)
-        gc.setBuildingPref(civ.id, Building.MOSCOW_KREMLIN, 7)
-        gc.setBuildingPref(civ.id, Building.HUNGARIAN_STRONGHOLD, 7)
-        gc.setBuildingPref(civ.id, Building.SPANISH_CITADEL, 7)
-        gc.setBuildingPref(civ.id, Building.FRENCH_CHATEAU, 5)
-        gc.setBuildingPref(civ.id, Building.VENICE_NAVAL_BASE, 5)
-        gc.setBuildingPref(civ.id, Building.KIEV_VECHE, 5)
-        gc.setBuildingPref(civ.id, Building.HOLY_ROMAN_RATHAUS, 5)
-        gc.setBuildingPref(civ.id, Building.LITHUANIAN_VOIVODESHIP, 5)
-        gc.setBuildingPref(civ.id, Building.SWEDISH_TENNANT, 3)
+        for building, preference in BUILDING_PREFERENCES:
+            gc.setBuildingPref(civ.id, building, preference)
 
     for civ in civilizations():
         ai_modifier = civ.ai.modifiers.get(Modifier.BUILDING_PREFERENCE)

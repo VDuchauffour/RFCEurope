@@ -147,6 +147,24 @@ HISTORICAL_ENEMIES = [
     (Civ.AUSTRIA, Civ.GERMANY, 10),
 ]
 
+BUILDING_PREFERENCES = [
+    (Building.WALLS, 5),
+    (Building.CASTLE, 7),
+    (Building.MANOR_HOUSE, 5),
+    (Building.COURTHOUSE, 5),
+    (Building.NIGHT_WATCH, 3),
+    (Building.MOROCCO_KASBAH, 5),
+    (Building.MOSCOW_KREMLIN, 7),
+    (Building.HUNGARIAN_STRONGHOLD, 7),
+    (Building.SPANISH_CITADEL, 7),
+    (Building.FRENCH_CHATEAU, 5),
+    (Building.VENICE_NAVAL_BASE, 5),
+    (Building.KIEV_VECHE, 5),
+    (Building.HOLY_ROMAN_RATHAUS, 5),
+    (Building.LITHUANIAN_VOIVODESHIP, 5),
+    (Building.SWEDISH_TENNANT, 3),
+]
+
 MODNET_EVENTS = {
     "CHANGE_COMMERCE_PERCENT": 1200,
 }
