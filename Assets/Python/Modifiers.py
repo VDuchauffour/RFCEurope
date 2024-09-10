@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from Core import civilization, civilizations, log
+from Core import civilizations, log
 from CoreTypes import (
     Modifier,
     Building,
@@ -427,7 +427,7 @@ def set_other_parameters():
 
     # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
     # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-    gc.setPsychoAICheat(Civ.OTTOMAN, *civilization(Civ.BYZANTIUM).location.capital)
+    gc.setPsychoAICheat(Civ.OTTOMAN, *CITIES[City.CONSTANTINOPLE])
 
     # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
     # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
