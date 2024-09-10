@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from Core import (
+    city,
     civilization,
     civilizations,
     event_popup,
@@ -8,6 +9,7 @@ from Core import (
     location,
     make_crusade_unit,
     make_crusade_units,
+    make_unit,
     player,
     team,
     teamtype,
@@ -28,7 +30,6 @@ from StoredData import data
 import random
 
 from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
-from MiscData import NUM_CRUSADES
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -180,177 +181,33 @@ tDefensiveCrusadeMap = [
 ]
 
 
-def getCrusadeInit(iCrusade):
-    return data.lCrusadeInit[iCrusade]
-
-
-def setCrusadeInit(iCrusade, iNewCode):
-    # codes are:	-2, no crusade yet
-    # 				-1 crusade is active but waiting to start (Holy City is Christian and/or another Crusade in progress)
-    # 				0 or more, the turn when it was initialized
-    data.lCrusadeInit[iCrusade] = iNewCode
-
-
 def addSelectedUnit(iUnitPlace):
-    data.lSelectedUnits[iUnitPlace] += 1
+    data.crusade_selected_units[iUnitPlace] += 1
 
 
 def setSelectedUnit(iUnitPlace, iNewNumber):
-    data.lSelectedUnits[iUnitPlace] = iNewNumber
+    data.crusade_selected_units[iUnitPlace] = iNewNumber
 
 
 def getSelectedUnit(iUnitPlace):
-    return data.lSelectedUnits[iUnitPlace]
-
-
-def changeNumUnitsSent(iPlayer, iChange):
-    data.lNumUnitsSent[iPlayer] += iChange
-
-
-def setNumUnitsSent(iPlayer, iNewNumber):
-    data.lNumUnitsSent[iPlayer] = iNewNumber
-
-
-def getNumUnitsSent(iPlayer):
-    return data.lNumUnitsSent[iPlayer]
+    return data.crusade_selected_units[iUnitPlace]
 
 
 def getActiveCrusade(iGameTurn):
-    for i in range(NUM_CRUSADES):
-        iInit = data.lCrusadeInit[i]
-        if iInit > -1 and iInit + 9 > iGameTurn:
+    for i, _ in enumerate(data.crusade_status):
+        if data.crusade_status[i] > -1 and data.crusade_status[i] + 9 > iGameTurn:
             return i
     return -1
 
 
-def getParticipate():
-    return data.bParticipate
-
-
-def setParticipate(bVal):
-    data.bParticipate = bVal
-
-
 def getVotingPower(iCiv):
-    return data.lVotingPower[iCiv]
-
-
-def setVotingPower(iCiv, iVotes):
-    data.lVotingPower[iCiv] = iVotes
-
-
-def getCrusadePower():
-    return data.iCrusadePower
-
-
-def setCrusadePower(iPower):
-    data.iCrusadePower = iPower
-
-
-def getFavorite():
-    return data.iFavorite
-
-
-def setFavorite(iFavorite):
-    data.iFavorite = iFavorite
-
-
-def getPowerful():
-    return data.iPowerful
-
-
-def setPowerful(iPowerful):
-    data.iPowerful = iPowerful
-
-
-def getLeader():
-    return data.iLeader
-
-
-def setLeader(iLeader):
-    data.iLeader = iLeader
-
-
-def getVotesGatheredFavorite():
-    return data.lVotesGathered[0]
-
-
-def setVotesGatheredFavorite(iVotes):
-    data.lVotesGathered[0] = iVotes
-
-
-def getVotesGatheredPowerful():
-    return data.lVotesGathered[1]
-
-
-def setVotesGatheredPowerful(iVotes):
-    data.lVotesGathered[1] = iVotes
-
-
-def getRichestCatholic():
-    return data.iRichestCatholic
-
-
-def setRichestCatholic(iPlayer):
-    data.iRichestCatholic = iPlayer
-
-
-def getIsTarget(iCiv):
-    return data.lDeviateTargets[iCiv]
-
-
-def setIsTarget(iCiv, bTarget):
-    data.lDeviateTargets[iCiv] = bTarget
-
-
-def getTargetPlot():
-    return data.tTarget
-
-
-def setTarget(iX, iY):
-    data.tTarget = (iX, iY)
-
-
-def hasSucceeded():
-    iSucc = data.iCrusadeSucceeded
-    iTest = iSucc == 1
-    return iTest
-
-
-def setSucceeded():
-    data.iCrusadeSucceeded = 1
-
-
-def getCrusadeToReturn():
-    return data.iCrusadeToReturn
-
-
-def setCrusadeToReturn(iNewValue):
-    data.iCrusadeToReturn = iNewValue
-
-
-def isDefensiveCrusadeEnabled():
-    return data.bDCEnabled
-
-
-def setDefensiveCrusadeEnabled(bNewValue):
-    data.bDCEnabled = bNewValue
-
-
-def getDefensiveCrusadeLast():
-    return data.iDCLast
-
-
-def setDefensiveCrusadeLast(iLast):
-    data.iDCLast = iLast
+    return data.players[iCiv].voting_power
 
 
 def initVotePopup():
-    iHuman = human()
-    pHuman = gc.getPlayer(iHuman)
     iActiveCrusade = getActiveCrusade(turn())
     iBribe = 200 + 50 * iActiveCrusade
-    if pHuman.getGold() >= iBribe:
+    if player().getGold() >= iBribe:
         event_popup(
             7616,
             text("TXT_KEY_CRUSADE_INIT_POPUP"),
@@ -384,7 +241,7 @@ def informLeaderPopup():
     event_popup(
         7617,
         text("TXT_KEY_CRUSADE_LEADER_POPUP"),
-        player(getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
+        player(data.leader_of_crusade).getName() + text("TXT_KEY_CRUSADE_LEAD"),
         [text("TXT_KEY_CRUSADE_OK")],
     )
 
@@ -392,22 +249,22 @@ def informLeaderPopup():
 @popup_handler(7618)
 def HumanVotePopup(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:
-        setVotesGatheredFavorite(getVotesGatheredFavorite() + getVotingPower(human()))
+        data.votes_for_favorite += getVotingPower(human())
     else:
-        setVotesGatheredPowerful(getVotesGatheredPowerful() + getVotingPower(human()))
+        data.votes_for_powerful += getVotingPower(human())
 
 
 def voteHumanPopup():
     favorite_txt = (
-        gc.getPlayer(getFavorite()).getName()
+        player(data.favorite_crusader).getName()
         + " ("
-        + gc.getPlayer(getFavorite()).getCivilizationShortDescription(0)
+        + player(data.favorite_crusader).getCivilizationShortDescription(0)
         + ")"
     )
     powerful_txt = (
-        gc.getPlayer(getPowerful()).getName()
+        player(data.powerful_crusader).getName()
         + " ("
-        + gc.getPlayer(getPowerful()).getCivilizationShortDescription(0)
+        + player(data.powerful_crusader).getCivilizationShortDescription(0)
         + ")"
     )
     event_popup(
@@ -422,16 +279,16 @@ def voteHumanPopup():
 def HumanDeviate(playerID, netUserData, popupReturn):
     if popupReturn.getButtonClicked() == 0:
         player().changeGold(-player().getGold() / 3)
-        setLeader(human())
-        setCrusadePower(getCrusadePower() / 2)
+        data.leader_of_crusade = human()
+        data.crusade_power /= 2
         deviateNewTargetPopup()
     else:
-        setTarget(*CITIES[City.JERUSALEM])
+        data.target = CITIES[City.JERUSALEM]
         startCrusade()
 
 
 def deviateHumanPopup():
-    iCost = gc.getPlayer(human()).getGold() / 3
+    iCost = player(human()).getGold() / 3
     sString = (
         text("TXT_KEY_CRUSADE_RICHEST")
         + text("TXT_KEY_CRUSADE_COST")
@@ -439,7 +296,7 @@ def deviateHumanPopup():
         + str(iCost)
         + " "
         + text("TXT_KEY_CRUSADE_GOLD")
-        + gc.getPlayer(getLeader()).getName()
+        + player(data.leader_of_crusade).getName()
         + " "
         + text("TXT_KEY_CRUSADE_CURRENT_LEADER")
     )
@@ -455,16 +312,15 @@ def deviateHumanPopup():
 def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
     iDecision = popupReturn.getButtonClicked()
     if iDecision == 0:
-        setTarget(*CITIES[City.JERUSALEM])
+        data.target = CITIES[City.JERUSALEM]
         startCrusade()
         return
     iTargets = 0
-    for i in civilizations().majors().ids():
-        if getIsTarget(i):
+    for iCiv in civilizations().majors().ids():
+        if data.players[iCiv].deviate_targets:
             iTargets += 1
         if iTargets == iDecision:
-            pTargetCity = gc.getPlayer(i).getCapitalCity()
-            setTarget(pTargetCity.getX(), pTargetCity.getY())
+            data.target = location(player(iCiv).getCapitalCity())
             iDecision = -2
 
     startCrusade()
@@ -473,23 +329,21 @@ def ChoseNewCrusadeTarget(playerID, netUserData, popupReturn):
 def deviateNewTargetPopup():
     lTargetList = []
     lTargetList.append(
-        gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getName()
+        city(*CITIES[City.JERUSALEM]).getName()
         + " ("
-        + gc.getPlayer(
-            gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
-        ).getCivilizationAdjective(0)
+        + player(city(*CITIES[City.JERUSALEM])).getCivilizationAdjective(0)
         + ")"
     )
     for iPlayer in civilizations().majors().ids():
-        pPlayer = gc.getPlayer(iPlayer)
+        pPlayer = player(iPlayer)
         if (
             iPlayer == Civ.POPE
             or pPlayer.getStateReligion() == Religion.CATHOLICISM
             or not pPlayer.isAlive()
         ):
-            setIsTarget(iPlayer, False)
+            data.players[iPlayer].deviate_targets = False
         else:
-            setIsTarget(iPlayer, True)
+            data.players[iPlayer].deviate_targets = True
             lTargetList.append(
                 pPlayer.getCapitalCity().getName()
                 + " ("
@@ -507,8 +361,8 @@ def event7621(playerID, netUserData, popupReturn):
 def underCrusadeAttackPopup(sCityName, iLeader):
     sText = text(
         "TXT_KEY_CRUSADE_UNDER_ATTACK1",
-        gc.getPlayer(iLeader).getCivilizationAdjective(0),
-        gc.getPlayer(iLeader).getName(),
+        player(iLeader).getCivilizationAdjective(0),
+        player(iLeader).getName(),
         sCityName,
     )
     event_popup(
@@ -520,61 +374,61 @@ def underCrusadeAttackPopup(sCityName, iLeader):
 def endCrusades(iReligion, iFounder):
     # 3Miro: end Crusades for the Holy Land after the Reformation
     if iReligion == Religion.PROTESTANTISM:
-        for i in range(NUM_CRUSADES):
-            if getCrusadeInit(i) < 0:
-                setCrusadeInit(i, 0)
+        for i, _ in enumerate(data.crusade_status):
+            if data.crusade_status[i] < 0:
+                data.crusade_status[i] = 0
         # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
         for iPlayer in civilizations().majors().ids():
-            setNumUnitsSent(iPlayer, 0)
+            data.players[iPlayer].num_crusader_units_sent = 0
 
 
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-    if getCrusadeToReturn() > -1:
-        freeCrusaders(getCrusadeToReturn())
-        setCrusadeToReturn(-1)
+    if data.crusade_to_return > -1:
+        freeCrusaders(data.crusade_to_return)
+        data.crusade_to_return = -1
 
     # Absinthe: crusade date - 5 means the exact time for the arrival
     if iGameTurn == year(1096) - 5:  # First Crusade arrives in 1096AD
-        setCrusadeInit(0, -1)
+        data.crusade_status[0] = -1
     elif (
-        iGameTurn >= year(1147) - 7 and getCrusadeInit(0) > 0 and getCrusadeInit(1) == -2
+        iGameTurn >= year(1147) - 7 and data.crusade_status[0] > 0 and data.crusade_status[1] == -2
     ):  # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
-        setCrusadeInit(1, -1)  # turn 176
+        data.crusade_status[1] = -1  # turn 176
     elif (
-        iGameTurn >= year(1187) - 8 and getCrusadeInit(1) > 0 and getCrusadeInit(2) == -2
+        iGameTurn >= year(1187) - 8 and data.crusade_status[1] > 0 and data.crusade_status[2] == -2
     ):  # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
-        setCrusadeInit(2, -1)  # turn 187
+        data.crusade_status[2] = -1  # turn 187
     elif (
-        iGameTurn >= year(1202) - 4 and getCrusadeInit(2) > 0 and getCrusadeInit(3) == -2
+        iGameTurn >= year(1202) - 4 and data.crusade_status[2] > 0 and data.crusade_status[3] == -2
     ):  # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
-        setCrusadeInit(3, -1)  # turn 197
+        data.crusade_status[3] = -1  # turn 197
     elif (
-        iGameTurn >= year(1229) - 3 and getCrusadeInit(3) > 0 and getCrusadeInit(4) == -2
+        iGameTurn >= year(1229) - 3 and data.crusade_status[3] > 0 and data.crusade_status[4] == -2
     ):  # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
-        setCrusadeInit(4, -1)  # turn 207
+        data.crusade_status[4] = -1  # turn 207
     elif (
-        iGameTurn >= year(1271) - 5 and getCrusadeInit(4) > 0 and getCrusadeInit(5) == -2
+        iGameTurn >= year(1271) - 5 and data.crusade_status[4] > 0 and data.crusade_status[5] == -2
     ):  # Crusade of 1270AD
-        setCrusadeInit(5, -1)  # turn 219
+        data.crusade_status[5] = -1  # turn 219
 
     # Start of Defensive Crusades: indulgences for the Reconquista given by the Catholic Church in 1000AD
     if iGameTurn == year(1000):
-        setDefensiveCrusadeEnabled(True)
+        data.is_defending_crusade_active = True
 
     # End of Defensive Crusades: no more defensive crusades after Protestantism is founded
-    if isDefensiveCrusadeEnabled():
+    if data.is_defending_crusade_active:
         if gc.getGame().isReligionFounded(Religion.PROTESTANTISM):
-            setDefensiveCrusadeEnabled(False)
+            data.is_defending_crusade_active = False
 
-    if isDefensiveCrusadeEnabled():
+    if data.is_defending_crusade_active:
         doDefensiveCrusade(iGameTurn)
 
     checkToStart(iGameTurn)
 
     iActiveCrusade = getActiveCrusade(iGameTurn)
     if iActiveCrusade > -1:
-        iStartDate = getCrusadeInit(iActiveCrusade)
+        iStartDate = data.crusade_status[iActiveCrusade]
         if iStartDate == iGameTurn:
             doParticipation(iGameTurn)
 
@@ -585,7 +439,7 @@ def checkTurn(iGameTurn):
                 setSelectedUnit(i, 0)
             for iPlayer in civilizations().majors().ids():
                 # Absinthe: first we set all civs' unit counter to 0, then send the new round of units
-                setNumUnitsSent(iPlayer, 0)
+                data.players[iPlayer].num_crusader_units_sent = 0
                 if getVotingPower(iPlayer) > 0:
                     sendUnits(iPlayer)
             if not anyParticipate():
@@ -599,8 +453,8 @@ def checkTurn(iGameTurn):
                 return
             selectVoteWinner()
             decideTheRichestCatholic(iActiveCrusade)
-            if getRichestCatholic() == human():
-                decideDeviateHuman()
+            if data.richest_catholic == human():
+                deviateHumanPopup()
             else:
                 decideDeviateAI()
 
@@ -610,16 +464,15 @@ def checkTurn(iGameTurn):
             crusadeArrival(iActiveCrusade)
 
         elif iStartDate + 8 == iGameTurn:
-            iLeader = getLeader()
-            setCrusadeToReturn(iLeader)
+            data.crusade_to_return = data.leader_of_crusade
             returnCrusaders()
 
 
 def checkToStart(iGameTurn):
     # if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
     pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
-    for i in range(NUM_CRUSADES):  # check the Crusades
-        if getCrusadeInit(i) == -1:  # if this one is to start
+    for i, _ in enumerate(data.crusade_status):
+        if data.crusade_status[i] == -1:  # if this one is to start
             if (
                 pJPlot.isCity() and anyCatholic()
             ):  # if there is Jerusalem and there are any Catholics
@@ -628,9 +481,9 @@ def checkToStart(iGameTurn):
                 if isOrMasterChristian(iVictim):
                     break
                 if i == 0 or (
-                    getCrusadeInit(i - 1) > -1 and getCrusadeInit(i - 1) + 9 < iGameTurn
+                    data.crusade_status[i - 1] > -1 and data.crusade_status[i - 1] + 9 < iGameTurn
                 ):
-                    setCrusadeInit(i, iGameTurn)
+                    data.crusade_status[i] = iGameTurn
 
 
 def anyCatholic():
@@ -648,17 +501,17 @@ def anyParticipate():
 def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
     iHuman = human()
     if popupReturn.getButtonClicked() == 0:
-        setParticipate(True)
-        gc.getPlayer(iHuman).setIsCrusader(True)
+        data.is_participate_to_crusade = True
+        player(iHuman).setIsCrusader(True)
     elif popupReturn.getButtonClicked() == 1 or popupReturn.getButtonClicked() == 2:
-        setParticipate(False)
-        pPlayer = gc.getPlayer(iHuman)
+        data.is_participate_to_crusade = False
+        pPlayer = player(iHuman)
         pPlayer.setIsCrusader(False)
         pPlayer.changeFaith(-min(5, pPlayer.getFaith()))
         message(
             iHuman, text("TXT_KEY_CRUSADE_DENY_FAITH"), force=True, color=MessageData.LIGHT_RED
         )
-        gc.getPlayer(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2)
+        player(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2)
         # Absinthe: some units from Chivalric Orders might leave you nevertheless
         for pUnit in units.owner(iHuman).entities():
             iUnitType = pUnit.getUnitType()
@@ -707,30 +560,30 @@ def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
                     pUnit.kill(0, -1)
     # Absinthe: 3rd option, only if you have enough money to make a contribution to the Crusade instead of sending units
     else:
-        setParticipate(False)
-        pPlayer = gc.getPlayer(iHuman)
+        data.is_participate_to_crusade = False
+        pPlayer = player(iHuman)
         pPlayer.setIsCrusader(False)
-        pPope = gc.getPlayer(Civ.POPE)
+        pPope = player(Civ.POPE)
         iActiveCrusade = getActiveCrusade(turn())
         iBribe = 200 + 50 * iActiveCrusade
         pPope.changeGold(iBribe)
         pPlayer.changeGold(-iBribe)
-        gc.getPlayer(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1)
+        player(Civ.POPE).AI_changeMemoryCount(iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1)
 
 
 def doParticipation(iGameTurn):
     iHuman = human()
     if civilization(iHuman).date.birth < iGameTurn:
-        pHuman = gc.getPlayer(iHuman)
+        pHuman = player(iHuman)
         if pHuman.getStateReligion() != Religion.CATHOLICISM:
-            setParticipate(False)
+            data.is_participate_to_crusade = False
             message(
                 iHuman, text("TXT_KEY_CRUSADE_CALLED"), force=True, color=MessageData.LIGHT_RED
             )
         else:
             initVotePopup()
     else:
-        setParticipate(False)
+        data.is_participate_to_crusade = False
 
 
 def chooseCandidates(iGameTurn):
@@ -748,7 +601,7 @@ def chooseCandidates(iGameTurn):
                 iFavor = gc.getRelationTowards(Civ.POPE, i)
                 iFavorite = i
                 bFound = True
-    setFavorite(iFavorite)
+    data.favorite_crusader = iFavorite
 
     iPowerful = iFavorite
     iPower = getVotingPower(iPowerful)
@@ -759,52 +612,52 @@ def chooseCandidates(iGameTurn):
             iPower = getVotingPower(iPowerful)
 
     if iPowerful == iFavorite:
-        setPowerful(-1)
+        data.powerful_crusader = -1
     else:
-        setPowerful(iPowerful)
+        data.powerful_crusader = iPowerful
 
 
 def computeVotingPower(iGameTurn):
-    iTmJerusalem = gc.getPlayer(
+    iTmJerusalem = player(
         gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
     ).getTeam()
     for iPlayer in civilizations().majors().ids():
-        pPlayer = gc.getPlayer(iPlayer)
+        pPlayer = player(iPlayer)
         if (
             civilization(iPlayer).date.birth > iGameTurn
             or not pPlayer.isAlive()
             or pPlayer.getStateReligion() != Religion.CATHOLICISM
             or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
         ):
-            setVotingPower(iPlayer, 0)
+            data.players[iPlayer].voting_power = 0
         else:
             # We use the (similarly named) getVotingPower from CvPlayer.cpp to determine a vote value for a given State Religion, but it's kinda strange
             # Will leave it this way for now, but might be a good idea to improve it at some point
-            setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM))
+            data.players[iPlayer].voting_power = pPlayer.getVotingPower(Religion.CATHOLICISM)
 
     # No votes from the human player if he/she won't participate (AI civs will always participate)
-    if not getParticipate():
-        setVotingPower(human(), 0)
+    if not data.is_participate_to_crusade:
+        data.players[human()].voting_power = 0
 
     # The Pope has more votes (Rome is small anyway)
-    setVotingPower(Civ.POPE, getVotingPower(Civ.POPE) * (5 / 4))
+    data.players[Civ.POPE].voting_power *= 5 / 4
 
     iPower = 0
     for iPlayer in civilizations().majors().ids():
         iPower += getVotingPower(iPlayer)
 
-    setCrusadePower(iPower)
+    data.crusade_power = iPower
     # Note that voting power is increased after this (but before the actual vote) for each sent unit by 2
 
 
 def setCrusaders():
     for iPlayer in civilizations().majors().ids():
         if not iPlayer == human() and getVotingPower(iPlayer) > 0:
-            gc.getPlayer(iPlayer).setIsCrusader(True)
+            player(iPlayer).setIsCrusader(True)
 
 
 def sendUnits(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     iNumUnits = pPlayer.getNumUnits()
     if civilization(iPlayer).date.birth + 10 > turn():  # in the first 10 turns
         if iNumUnits < 10:
@@ -921,8 +774,8 @@ def getNumDefendersAtPlot(pPlot):
 def sendUnit(pUnit):
     iOwner = pUnit.getOwner()
     addSelectedUnit(unitCrusadeCategory(pUnit.getUnitType()))
-    setVotingPower(iOwner, getVotingPower(iOwner) + 2)
-    changeNumUnitsSent(iOwner, 1)  # Absinthe: counter for sent units per civ
+    data.players[iOwner].voting_power += 2
+    data.players[iOwner].num_crusader_units_sent += 1  # Absinthe: counter for sent units per civ
     # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
     player(iOwner).changeFaith(1)
     message(
@@ -1012,21 +865,21 @@ def unitCrusadeCategory(iUnitType):
 
 
 def voteForCandidatesAI():
-    if getPowerful() == -1:
-        setLeader(getFavorite())
-        if getParticipate():
+    if data.powerful_crusader == -1:
+        data.leader_of_crusade = data.favorite_crusader
+        if data.is_participate_to_crusade:
             informLeaderPopup()
         elif player().isExisting():
             message(
                 human(),
-                gc.getPlayer(getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
+                player(data.leader_of_crusade).getName() + text("TXT_KEY_CRUSADE_LEAD"),
                 force=True,
                 color=MessageData.LIGHT_RED,
             )
         return
 
-    iFavorite = getFavorite()
-    iPowerful = getPowerful()
+    iFavorite = data.favorite_crusader
+    iPowerful = data.powerful_crusader
     if iFavorite == human():
         iFavorVotes = 0
     else:
@@ -1044,73 +897,63 @@ def voteForCandidatesAI():
             else:
                 iPowerVotes += iVotes
 
-    setVotesGatheredFavorite(iFavorVotes)
-    setVotesGatheredPowerful(iPowerVotes)
+    data.votes_for_favorite = iFavorVotes
+    data.votes_for_powerful = iPowerVotes
 
 
 def voteForCandidatesHuman():
-    if getParticipate() and not getPowerful() == -1:
+    if data.is_participate_to_crusade and not data.powerful_crusader == -1:
         voteHumanPopup()
 
 
 def selectVoteWinner():
-    if getVotesGatheredPowerful() > getVotesGatheredFavorite():
-        setLeader(getPowerful())
+    if data.votes_for_powerful > data.votes_for_favorite:
+        data.leader_of_crusade = data.powerful_crusader
     else:
-        setLeader(getFavorite())
+        data.leader_of_crusade = data.favorite_crusader
 
-    if getParticipate():
+    if data.is_participate_to_crusade:
         informLeaderPopup()
     elif player().isExisting():
         message(
             human(),
-            gc.getPlayer(getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
+            player(data.leader_of_crusade).getName() + text("TXT_KEY_CRUSADE_LEAD"),
             force=True,
             color=MessageData.LIGHT_RED,
         )
-
-    # not yet, check to see for deviations
-    # pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
-    # gc.getTeam( gc.getPlayer( getLeader() ) ).declareWar( pJPlot.getPlotCity().getOwner(), True, -1 )
 
 
 def decideTheRichestCatholic(iActiveCrusade):
     # The First Crusade cannot be deviated
     if iActiveCrusade == 0:
-        setRichestCatholic(-1)
+        data.richest_catholic = -1
         return
 
     iRichest = -1
     iMoney = 0
-    # iPopeMoney = gc.getPlayer( Civ.POPE ).getGold()
     for i in civilizations().main().ids():
         if getVotingPower(i) > 0:
-            pPlayer = gc.getPlayer(i)
+            pPlayer = player(i)
             iPlayerMoney = pPlayer.getGold()
-            # if ( iPlayerMoney > iMoney and iPlayerMoney > iPopeMoney ):
             if iPlayerMoney > iMoney:
                 iRichest = i
                 iMoney = iPlayerMoney
 
     if iRichest != Civ.POPE:
-        setRichestCatholic(iRichest)
+        data.richest_catholic = iRichest
     else:
-        setRichestCatholic(-1)
-
-
-def decideDeviateHuman():
-    deviateHumanPopup()
+        data.richest_catholic = -1
 
 
 def decideDeviateAI():
-    iRichest = getRichestCatholic()
+    iRichest = data.richest_catholic
     bStolen = False
     if iRichest in [Civ.VENECIA, Civ.GENOA]:
-        pByzantium = gc.getPlayer(Civ.BYZANTIUM)
+        pByzantium = player(Civ.BYZANTIUM)
         if pByzantium.isAlive():
             # Only if the potential attacker is not vassal of the target
             iTeamByzantium = pByzantium.getTeam()
-            pRichest = gc.getPlayer(iRichest)
+            pRichest = player(iRichest)
             pTeamRichest = gc.getTeam(pRichest.getTeam())
             if not pTeamRichest.isVassal(iTeamByzantium):
                 # Only if Byzantium holds Constantinople and not a vassal
@@ -1125,11 +968,11 @@ def decideDeviateAI():
                     crusadeStolenAI(iRichest, Civ.BYZANTIUM)
                     bStolen = True
     elif iRichest in [Civ.CASTILE, Civ.PORTUGAL, Civ.ARAGON]:
-        pCordoba = gc.getPlayer(Civ.CORDOBA)
+        pCordoba = player(Civ.CORDOBA)
         if pCordoba.isAlive():
             # Only if the potential attacker is not vassal of the target
             iTeamCordoba = pCordoba.getTeam()
-            pRichest = gc.getPlayer(iRichest)
+            pRichest = player(iRichest)
             pTeamRichest = gc.getTeam(pRichest.getTeam())
             if not pTeamRichest.isVassal(iTeamCordoba):
                 # Only if Cordoba is Muslim and not a vassal
@@ -1138,11 +981,11 @@ def decideDeviateAI():
                     crusadeStolenAI(iRichest, Civ.CORDOBA)
                     bStolen = True
     elif iRichest in [Civ.HUNGARY, Civ.POLAND, Civ.AUSTRIA]:
-        pTurkey = gc.getPlayer(Civ.OTTOMAN)
+        pTurkey = player(Civ.OTTOMAN)
         if pTurkey.isAlive():
             # Only if the potential attacker is not vassal of the target
             iTeamTurkey = pTurkey.getTeam()
-            pRichest = gc.getPlayer(iRichest)
+            pRichest = player(iRichest)
             pTeamRichest = gc.getTeam(pRichest.getTeam())
             if not pTeamRichest.isVassal(iTeamTurkey):
                 # Only if the Ottomans are Muslim and not a vassal
@@ -1152,40 +995,36 @@ def decideDeviateAI():
                     bStolen = True
 
     if not bStolen:
-        setTarget(*CITIES[City.JERUSALEM])
+        data.target = CITIES[City.JERUSALEM]
 
     startCrusade()
 
 
 def crusadeStolenAI(iNewLeader, iNewTarget):
-    setLeader(iNewLeader)
-    pLeader = gc.getPlayer(iNewLeader)
+    data.leader_of_crusade = iNewLeader
+    pLeader = player(iNewLeader)
     if player().isExisting():
         message(
             human(),
             pLeader.getName() + text("TXT_KEY_CRUSADE_DEVIATED"),
             color=MessageData.LIGHT_RED,
         )
-    # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Civ.POPE ).getGold() / 3 )
-    # pLeader.setGold( gc.getPlayer( Civ.POPE ).getGold() / 4 )
     pLeader.setGold(2 * pLeader.getGold() / 3)
-    pTarget = gc.getPlayer(iNewTarget).getCapitalCity()
-    setTarget(pTarget.getX(), pTarget.getY())
-    setCrusadePower(getCrusadePower() / 2)
+    data.target = location(player(iNewTarget).getCapitalCity())
+    data.crusade_power /= 2
 
 
 def startCrusade():
     iHuman = human()
-    iLeader = getLeader()
-    iX, iY = getTargetPlot()
-    pTargetCity = gc.getMap().plot(iX, iY).getPlotCity()
+    iLeader = data.leader_of_crusade
+    pTargetCity = city(data.target)
     iTargetPlayer = pTargetCity.getOwner()
     # Absinthe: in case the Crusader civ has been destroyed
-    if not gc.getPlayer(iLeader).isAlive():
+    if not player(iLeader).isAlive():
         returnCrusaders()
         return
     # Target city can change ownership during the voting
-    if gc.getPlayer(iTargetPlayer).getStateReligion() == Religion.CATHOLICISM:
+    if player(iTargetPlayer).getStateReligion() == Religion.CATHOLICISM:
         returnCrusaders()
         return
     # Absinthe: do not Crusade against themselves
@@ -1200,16 +1039,16 @@ def startCrusade():
             sCityName = lookupName(pTargetCity, iLeader)
         sText = text(
             "TXT_KEY_CRUSADE_START",
-            gc.getPlayer(iLeader).getCivilizationAdjectiveKey(),
-            gc.getPlayer(iLeader).getName(),
-            gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(),
+            player(iLeader).getCivilizationAdjectiveKey(),
+            player(iLeader).getName(),
+            player(iTargetPlayer).getCivilizationAdjectiveKey(),
             sCityName,
         )
         message(iHuman, sText, color=MessageData.LIGHT_RED)
 
     # Absinthe: proper war declaration checks
-    teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
-    iTeamTarget = gc.getPlayer(iTargetPlayer).getTeam()
+    teamLeader = gc.getTeam(player(iLeader).getTeam())
+    iTeamTarget = player(iTargetPlayer).getTeam()
     if not teamLeader.isAtWar(iTeamTarget):
         # Absinthe: add contact if they did not meet before
         if not teamLeader.isHasMet(iTeamTarget):
@@ -1223,19 +1062,19 @@ def startCrusade():
 
 
 def returnCrusaders():
-    setLeader(-1)
+    data.leader_of_crusade = -1
     for i in civilizations().majors().ids():
-        gc.getPlayer(i).setIsCrusader(False)
+        player(i).setIsCrusader(False)
 
 
 def crusadeArrival(iActiveCrusade):
-    iTX, iTY = getTargetPlot()
+    iTX, iTY = data.target
     iChosenX = -1
     iChosenY = -1
 
     # if the leader has been destroyed, cancel the Crusade
-    iLeader = getLeader()
-    if iLeader == -1 or not gc.getPlayer(iLeader).isAlive():
+    iLeader = data.leader_of_crusade
+    if iLeader == -1 or not player(iLeader).isAlive():
         returnCrusaders()
         return
 
@@ -1245,7 +1084,7 @@ def crusadeArrival(iActiveCrusade):
         if pPlot.isCity():
             iVictim = pPlot.getPlotCity().getOwner()
             if iVictim < civilizations().majors().len():
-                iReligion = gc.getPlayer(iVictim).getStateReligion()
+                iReligion = player(iVictim).getStateReligion()
                 if iReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
                     return
 
@@ -1253,9 +1092,9 @@ def crusadeArrival(iActiveCrusade):
     pPlot = gc.getMap().plot(iTX, iTY)
     if pPlot.isCity():
         iVictim = pPlot.getPlotCity().getOwner()
-        if iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != Religion.CATHOLICISM:
-            teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
-            iTeamVictim = gc.getPlayer(iVictim).getTeam()
+        if iVictim != iLeader and player(iVictim).getStateReligion() != Religion.CATHOLICISM:
+            teamLeader = gc.getTeam(player(iLeader).getTeam())
+            iTeamVictim = player(iVictim).getTeam()
             if not teamLeader.isAtWar(iTeamVictim):
                 # Absinthe: add contact if they did not meet before
                 if not teamLeader.isHasMet(iTeamVictim):
@@ -1323,9 +1162,9 @@ def crusadeArrival(iActiveCrusade):
 
 
 def crusadeMakeUnits(tPlot, iActiveCrusade):
-    iLeader = getLeader()
-    teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
-    iTX, iTY = getTargetPlot()
+    iLeader = data.leader_of_crusade
+    teamLeader = gc.getTeam(player(iLeader).getTeam())
+    iTX, iTY = data.target
     # if the target is Jerusalem
     if (iTX, iTY) == CITIES[City.JERUSALEM]:
         iRougeModifier = 100
@@ -1517,52 +1356,30 @@ def freeCrusaders(iPlayer):
 
     # benefits for the other participants on Crusade return - Faith points, GG points, Relics
     for iCiv in civilizations().main().ids():
-        pCiv = gc.getPlayer(iCiv)
+        pCiv = player(iCiv)
         if pCiv.getStateReligion() == Religion.CATHOLICISM and pCiv.isAlive():
-            iUnitNumber = getNumUnitsSent(iCiv)
+            iUnitNumber = data.players[iCiv].num_crusader_units_sent
             if iUnitNumber > 0:
                 # the leader already got exp points through the Crusade it
                 if iCiv == iPlayer:
                     # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                     pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
-                    pPlayer = gc.getPlayer(pCity.getOwner())
+                    pPlayer = player(pCity.getOwner())
                     if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                         pCiv.changeFaith(1 * iUnitNumber)
-                        # add relics in the capital
-                        capital = pCiv.getCapitalCity()
-                        iCapitalX = capital.getX()
-                        iCapitalY = capital.getY()
-                        pCiv.initUnit(
-                            Unit.HOLY_RELIC,
-                            iCapitalX,
-                            iCapitalY,
-                            UnitAITypes.NO_UNITAI,
-                            DirectionTypes.DIRECTION_SOUTH,
-                        )
+                        return_relic(pCiv)
                         message(
                             iCiv,
                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
                             sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
                             button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                             color=MessageData.GREEN,
-                            location=(iCapitalX, iCapitalY),
+                            location=location(pCiv.getCapitalCity()),
                         )
                         if iUnitNumber > 3 and percentage_chance(80, strict=True):
-                            pCiv.initUnit(
-                                Unit.HOLY_RELIC,
-                                iCapitalX,
-                                iCapitalY,
-                                UnitAITypes.NO_UNITAI,
-                                DirectionTypes.DIRECTION_SOUTH,
-                            )
+                            return_relic(pCiv)
                         if iUnitNumber > 9 and percentage_chance(80, strict=True):
-                            pCiv.initUnit(
-                                Unit.HOLY_RELIC,
-                                iCapitalX,
-                                iCapitalY,
-                                UnitAITypes.NO_UNITAI,
-                                DirectionTypes.DIRECTION_SOUTH,
-                            )
+                            return_relic(pCiv)
                 # all other civs get experience points as well
                 else:
                     message(
@@ -1573,57 +1390,27 @@ def freeCrusaders(iPlayer):
                     pCiv.changeCombatExperience(12 * iUnitNumber)
                     # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                     pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
-                    pPlayer = gc.getPlayer(pCity.getOwner())
+                    pPlayer = player(pCity.getOwner())
                     if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                         pCiv.changeFaith(1 * iUnitNumber)
                         # add relics in the capital
                         capital = pCiv.getCapitalCity()
-                        iCapitalX = capital.getX()
-                        iCapitalY = capital.getY()
                         # safety check, game crashes if it wants to create a unit in a non-existing city
                         if capital.getName():
                             if percentage_chance(80, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
+                                return_relic(pCiv)
                                 message(
                                     iCiv,
                                     text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                     sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                     button=gc.getUnitInfo(Unit.HOLY_RELIC).getButton(),
                                     color=MessageData.GREEN,
-                                    location=(iCapitalX, iCapitalY),
+                                    location=location(pCiv.getCapitalCity()),
                                 )
                             if iUnitNumber > 3 and percentage_chance(60, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
+                                return_relic(pCiv)
                             if iUnitNumber > 9 and percentage_chance(60, strict=True):
-                                pCiv.initUnit(
-                                    Unit.HOLY_RELIC,
-                                    iCapitalX,
-                                    iCapitalY,
-                                    UnitAITypes.NO_UNITAI,
-                                    DirectionTypes.DIRECTION_SOUTH,
-                                )
-
-
-# Absinthe: called from CvRFCEventHandler.onCityAcquired
-def success(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
-    if not hasSucceeded():
-        pPlayer.changeGoldenAgeTurns(gc.getPlayer(iPlayer).getGoldenAgeLength())
-        setSucceeded()
-        for plot in plots.surrounding(CITIES[City.JERUSALEM]).entities():
-            convertPlotCulture(plot, iPlayer, 100, False)
+                                return_relic(pCiv)
 
 
 @handler("BeginPlayerTurn")
@@ -1632,7 +1419,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
     if iGameTurn % 3 == 1:  # checked every 3rd turn
         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
         if pCity.getOwner() == iPlayer:
-            pPlayer = gc.getPlayer(iPlayer)
+            pPlayer = player(iPlayer)
             if pPlayer.getStateReligion() == Religion.CATHOLICISM:
                 # possible population gain, chance based on the current size
                 iRandom = rand(10)
@@ -1652,7 +1439,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
 
 
 def doDefensiveCrusade(iGameTurn):
-    if iGameTurn < getDefensiveCrusadeLast() + 15:  # wait 15 turns between defensive crusades
+    if iGameTurn < data.last_defensive_crusade + 15:  # wait 15 turns between defensive crusades
         return
     if iGameTurn % 5 != rand(5):
         return
@@ -1664,11 +1451,11 @@ def doDefensiveCrusade(iGameTurn):
         if canDefensiveCrusade(iPlayer, iGameTurn)
     ]
     if lPotentials:
-        pPope = gc.getPlayer(Civ.POPE)
+        pPope = player(Civ.POPE)
         weights = []
         for iPlayer in lPotentials:
             iCatholicFaith = 0
-            pPlayer = gc.getPlayer(iPlayer)
+            pPlayer = player(iPlayer)
             # while faith points matter more, diplomatic relations are also very important
             iCatholicFaith += pPlayer.getFaith()
             iCatholicFaith += 3 * max(0, pPope.AI_getAttitude(iPlayer))
@@ -1682,11 +1469,11 @@ def doDefensiveCrusade(iGameTurn):
             callDefensiveCrusadeHuman()
         else:
             callDefensiveCrusadeAI(iChosenPlayer)
-        setDefensiveCrusadeLast(iGameTurn)
+        data.last_defensive_crusade = iGameTurn
 
 
 def canDefensiveCrusade(iPlayer, iGameTurn):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     teamPlayer = gc.getTeam(pPlayer.getTeam())
     # only born, flipped and living Catholics can defensive crusade
     if (
@@ -1696,13 +1483,14 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
     ):
         return False
     # need to have open borders with the Pope
-    if not teamPlayer.isOpenBorders(gc.getPlayer(Civ.POPE).getTeam()):
+    if not teamPlayer.isOpenBorders(player(Civ.POPE).getTeam()):
         return False
 
     tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
-    # Can defensive crusade if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the defensive crusade map
+    # Can defensive crusade if at war with a non-catholic/orthodox enemy, enemy is not a vassal
+    # of a catholic/orthodox civ and has a city in the defensive crusade map
     for iEnemy in civilizations().main().ids():
-        pEnemy = gc.getPlayer(iEnemy)
+        pEnemy = player(iEnemy)
         if (
             teamPlayer.isAtWar(pEnemy.getTeam())
             and civilization(iEnemy).date.birth + 10 < iGameTurn
@@ -1748,7 +1536,7 @@ def callDefensiveCrusadeAI(iPlayer):
 
 
 def makeDefensiveCrusadeUnits(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     iFaith = pPlayer.getFaith()
     iBestInfantry = getDefensiveCrusadeBestInfantry(iPlayer)
     iBestCavalry = getDefensiveCrusadeBestCavalry(iPlayer)
@@ -1765,7 +1553,7 @@ def makeDefensiveCrusadeUnits(iPlayer):
             return
 
     # Absinthe: interface message for the player
-    if gc.getPlayer(iPlayer).isHuman():
+    if player(iPlayer).isHuman():
         message(
             iPlayer,
             text("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE"),
@@ -1871,7 +1659,7 @@ def makeDefensiveCrusadeUnits(iPlayer):
 
 
 def getDefensiveCrusadeBestInfantry(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     lUnits = [
         Unit.GRENADIER,
         Unit.MACEMAN,
@@ -1885,7 +1673,7 @@ def getDefensiveCrusadeBestInfantry(iPlayer):
 
 
 def getDefensiveCrusadeBestCavalry(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     lUnits = [
         Unit.CUIRASSIER,
         Unit.KNIGHT,
@@ -1899,19 +1687,49 @@ def getDefensiveCrusadeBestCavalry(iPlayer):
 
 
 def do1200ADCrusades():
-    setCrusadeInit(0, year(1096))
-    setCrusadeInit(1, year(1147))
-    setCrusadeInit(2, year(1187))
+    data.crusade_status[0] = year(1096)
+    data.crusade_status[1] = year(1147)
+    data.crusade_status[2] = year(1187)
 
 
 def isOrMasterChristian(iPlayer):
-    pPlayer = gc.getPlayer(iPlayer)
+    pPlayer = player(iPlayer)
     iReligion = pPlayer.getStateReligion()
     if iReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
         return True
     iMaster = getMaster(iPlayer)
     if iMaster != -1:
-        iMasterReligion = gc.getPlayer(iMaster).getStateReligion()
+        iMasterReligion = player(iMaster).getStateReligion()
         if iMasterReligion in [Religion.CATHOLICISM, Religion.ORTHODOXY]:
             return True
     return False
+
+
+@handler("cityAcquired")
+def jerusalem_conquered(owner, player_id, city, bConquest, bTrade):
+    if location(city) == CITIES[City.JERUSALEM]:
+        if player(player_id).getStateReligion() == Religion.CATHOLICISM:
+            city.setHasReligion(Religion.CATHOLICISM, True, True, False)
+            if not data.is_succesful_crusade:
+                data.is_succesful_crusade = True
+                player(player_id).changeGoldenAgeTurns(player(player_id).getGoldenAgeLength())
+                for plot in plots.surrounding(location(city)).entities():
+                    convertPlotCulture(plot, player_id, 100, False)
+
+            message(
+                player_id,
+                text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", city.getNameKey()),
+                force=True,
+                color=MessageData.GREEN,
+            )
+        # Acquiring Jerusalem with any faith give chance to find a relic
+        if (
+            percentage_chance(15, strict=True)
+            and player_id in civilizations().majors().ids()
+            and player(player_id).getStateReligion() != -1
+        ):
+            make_unit(player_id, Unit.HOLY_RELIC, city)
+
+
+def return_relic(player_id):
+    make_unit(player_id, Unit.HOLY_RELIC, player(player_id).getCapitalCity())

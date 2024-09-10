@@ -3,7 +3,7 @@ from CvPythonExtensions import CyGlobalContext
 from Consts import MessageData
 from Core import civilization, civilizations, message, human, text
 from CoreTypes import Civ
-from RFCUtils import collapseImmune, getLastRespawnTurn, killAndFragmentCiv
+from RFCUtils import collapseImmune, killAndFragmentCiv
 from StoredData import data
 
 gc = CyGlobalContext()
@@ -15,10 +15,9 @@ def collapseByBarbs(iGameTurn):
         pCiv = gc.getPlayer(iCiv)
         if pCiv.isAlive():
             # Absinthe: no barb collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
-            iRespawnTurn = getLastRespawnTurn(iCiv)
             if (
                 iGameTurn >= civilization(iCiv).date.birth + 20
-                and iGameTurn >= iRespawnTurn + 10
+                and iGameTurn >= data.players[iCiv].last_respawn_turn + 10
                 and not collapseImmune(iCiv)
             ):
                 iNumCities = pCiv.getNumCities()
@@ -56,14 +55,13 @@ def collapseGeneric(iGameTurn):
         pCiv = gc.getPlayer(iCiv)
         teamCiv = gc.getTeam(pCiv.getTeam())
         if pCiv.isAlive():
-            lNumCitiesLastTime[iCiv] = data.lNumCities[iCiv]
+            lNumCitiesLastTime[iCiv] = data.players[iCiv].num_cities
             iNumCitiesCurrently = pCiv.getNumCities()
-            data.lNumCities[iCiv] = iNumCitiesCurrently
+            data.players[iCiv].num_cities = iNumCitiesCurrently
             # Absinthe: no generic collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
-            iRespawnTurn = getLastRespawnTurn(iCiv)
             if (
                 iGameTurn >= civilization(iCiv).date.birth + 20
-                and iGameTurn >= iRespawnTurn + 10
+                and iGameTurn >= data.players[iCiv].last_respawn_turn + 10
                 and not collapseImmune(iCiv)
             ):
                 # Absinthe: pass for small civs, we have bad stability collapses and collapseMotherland anyway, which is better suited for the collapse of those
@@ -99,10 +97,9 @@ def collapseMotherland(iGameTurn):
         teamCiv = gc.getTeam(pCiv.getTeam())
         if pCiv.isAlive():
             # Absinthe: no motherland collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
-            iRespawnTurn = getLastRespawnTurn(iCiv)
             if (
                 iGameTurn >= civilization(iCiv).date.birth + 20
-                and iGameTurn >= iRespawnTurn + 10
+                and iGameTurn >= data.players[iCiv].last_respawn_turn + 10
                 and not collapseImmune(iCiv)
             ):
                 # Absinthe: respawned Cordoba or Aragon shouldn't collapse because not holding the original core area

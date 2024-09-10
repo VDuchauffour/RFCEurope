@@ -164,7 +164,6 @@ tNorwayOutrank = [
     Civ.GERMANY,
     Civ.FRANCE,
 ]
-# tNorseControl = [ Province.SICILY, Province.ICELAND, Province.NORTHUMBRIA, Province.SCOTLAND, Province.NORMANDY, Province.IRELAND, Province.NOVGOROD ]
 tVenetianControl = [
     Province.EPIRUS,
     Province.DALMATIA,
@@ -379,8 +378,6 @@ tMoscowControl = [
     Province.MOSCOW,
     Province.MUROM,
 ]
-# tSwedenControlI = [ Province.GOTALAND, Province.SVEALAND, Province.NORRLAND, Province.SKANELAND, Province.GOTLAND, Province.OSTERLAND ]
-# tSwedenControlII = [ Province.SAXONY, Province.BRANDENBURG, Province.HOLSTEIN, Province.POMERANIA, Province.PRUSSIA, Province.GREATER_POLAND, Province.MASOVIA, Province.SUVALKIJA, Province.LITHUANIA, Province.LIVONIA, Province.ESTONIA, Province.SMOLENSK, Province.POLOTSK, Province.MINSK, Province.MUROM, Province.CHERNIGOV, Province.MOSCOW, Province.NOVGOROD, Province.ROSTOV ]
 tSwedenControl = [Province.NORRLAND, Province.OSTERLAND, Province.KARELIA]
 tNovgorodControl = [
     Province.NOVGOROD,
@@ -391,7 +388,6 @@ tNovgorodControl = [
     Province.VOLOGDA,
     Province.OSTERLAND,
 ]
-# tNovgorodControlII = [ Province.KARELIA, Province.VOLOGDA ]
 tMoroccoControl = [
     Province.MOROCCO,
     Province.MARRAKESH,
@@ -456,7 +452,6 @@ tDenmarkControlI = [
     Province.EAST_ANGLIA,
     Province.NORTHUMBRIA,
 ]
-# tDenmarkControlII = [ Province.BRANDENBURG, Province.POMERANIA, Province.ESTONIA ]
 tDenmarkControlIII = [
     Province.DENMARK,
     Province.NORWAY,
@@ -471,16 +466,13 @@ tDenmarkControlIII = [
     Province.ICELAND,
 ]
 
-# tHugeHungaryControl = ( 0, 23, 99, 72 )
 totalLand = gc.getMap().getLandPlots()
 
 
 @handler("GameStart")
 def setup():
-    # ignore AI goals
-    bIgnoreAI = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
-    data.bIgnoreAIUHV = bIgnoreAI
-    if bIgnoreAI:
+    data.ignore_ai_uhv = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
+    if data.ignore_ai_uhv:
         for iPlayer in civilizations().majors().ids():
             if human() != iPlayer:
                 setAllUHVFailed(iPlayer)
@@ -490,10 +482,6 @@ def setAllUHVFailed(iCiv):
     pPlayer = gc.getPlayer(iCiv)
     for i in range(3):
         pPlayer.setUHV(i, 0)
-
-
-def isIgnoreAI():
-    return data.bIgnoreAIUHV
 
 
 @handler("cityBuilt")
@@ -1931,7 +1919,7 @@ def switchUHV(iNewCiv, iOldCiv):
     pPlayer = gc.getPlayer(iNewCiv)
     for i in range(3):
         pPlayer.setUHV(i, -1)
-    if isIgnoreAI():
+    if data.ignore_ai_uhv:
         setAllUHVFailed(iOldCiv)
 
 
@@ -1943,7 +1931,9 @@ def isPossibleUHV(iCiv, iUHV, bAlreadyAIChecked):
         return False
 
     if not bAlreadyAIChecked:
-        if iCiv != human() and isIgnoreAI():  # Skip calculations if no AI UHV option is enabled
+        if (
+            iCiv != human() and data.ignore_ai_uhv
+        ):  # Skip calculations if no AI UHV option is enabled
             return False
 
     return True
@@ -2012,7 +2002,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
     }
 
     pPlayer = gc.getPlayer(iPlayer)
-    if iPlayer != human() and isIgnoreAI():
+    if iPlayer != human() and data.ignore_ai_uhv:
         return
     if not gc.getGame().isVictoryValid(7):  # 7 == historical
         return

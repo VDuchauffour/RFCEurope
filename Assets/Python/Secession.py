@@ -11,9 +11,9 @@ from RFCUtils import (
     flipCity,
     flipUnitsInCityAfter,
     flipUnitsInCitySecession,
-    getLastRespawnTurn,
     setTempFlippingCity,
 )
+from StoredData import data
 
 gc = CyGlobalContext()
 
@@ -26,11 +26,10 @@ def secession(iGameTurn):
         iPlayer = (j + iRndnum) % civilizations().majors().len()
         pPlayer = gc.getPlayer(iPlayer)
         # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
-        iRespawnTurn = getLastRespawnTurn(iPlayer)
         if (
             pPlayer.isAlive()
             and iGameTurn >= civilization(iPlayer).date.birth + 15
-            and iGameTurn >= iRespawnTurn + 10
+            and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
         ):
             if chance(10, -2 - pPlayer.getStability(), strict=True):
                 # 10% at -3, increasing by 10% with each point (100% with -12 or less)
@@ -48,11 +47,10 @@ def secessionCloseCollapse(iGameTurn):
     for j in civilizations().majors().ids():
         iPlayer = (j + iRndnum) % civilizations().majors().len()
         pPlayer = gc.getPlayer(iPlayer)
-        iRespawnTurn = getLastRespawnTurn(iPlayer)
         if (
             pPlayer.isAlive()
             and iGameTurn >= civilization(iPlayer).date.birth + 20
-            and iGameTurn >= iRespawnTurn + 10
+            and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
         ):
             iStability = pPlayer.getStability()
             if (

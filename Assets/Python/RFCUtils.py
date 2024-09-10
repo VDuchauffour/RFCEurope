@@ -67,47 +67,21 @@ iSelectedCivID = -1
 bStabilityOverlay = False
 
 
-# RiseAndFall, Stability
-def getLastTurnAlive(iCiv):
-    return data.lLastTurnAlive[iCiv]
-
-
-def setLastTurnAlive(iCiv, iNewValue):
-    data.lLastTurnAlive[iCiv] = iNewValue
-
-
-def getLastRespawnTurn(iCiv):
-    return data.lLastRespawnTurn[iCiv]
-
-
-def setLastRespawnTurn(iCiv, iNewValue):
-    data.lLastRespawnTurn[iCiv] = iNewValue
-
-
-# Stability
 def getTempFlippingCity():
-    return data.iTempFlippingCity
+    return data.temp_flipping_city
 
 
 def setTempFlippingCity(tNewValue):
-    data.iTempFlippingCity = tNewValue
-
-
-def getProsecutionCount(iCiv):
-    return gc.getProsecutionCount(iCiv)
-
-
-def setProsecutionCount(iCiv, iNewValue):
-    gc.setProsecutionCount(iCiv, iNewValue)
+    data.temp_flipping_city = tNewValue
 
 
 # Plague
 def getPlagueCountdown(iCiv):
-    return data.lPlagueCountdown[iCiv]
+    return data.civs[iCiv].plague_countdown
 
 
 def setPlagueCountdown(iCiv, iNewValue):
-    data.lPlagueCountdown[iCiv] = iNewValue
+    data.civs[iCiv].plague_countdown = iNewValue
 
 
 # Victory
@@ -835,7 +809,7 @@ def killAndFragmentCiv(iCiv, bBarbs, bAssignOneCity):
             unit.kill(False, Civ.BARBARIAN)
         resetUHV(iCiv)
 
-        setLastTurnAlive(iCiv, turn())
+        data.players[iCiv].last_turn_alive = turn()
         # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
         gc.getPlayer(iCiv).setAlive(False)
         # Absinthe: respawn status
@@ -998,7 +972,7 @@ def collapseImmune(iCiv):
 def showPersecutionPopup():
     """Asks the human player to select a religion to persecute."""
     labels = []
-    for iReligion in data.lPersecutionReligions:
+    for iReligion in data.persecution_religions:
         strIcon = gc.getReligionInfo(iReligion).getType()
         strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
         strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())

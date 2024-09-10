@@ -38,10 +38,8 @@ from RFCUtils import (
     flipUnitsInArea,
     flipUnitsInCityAfter,
     flipUnitsInCityBefore,
-    getLastTurnAlive,
     pushOutGarrisons,
     relocateSeaGarrisons,
-    setLastRespawnTurn,
     setPlagueCountdown,
     setTempFlippingCity,
 )
@@ -76,7 +74,7 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
         if (
             not gc.getPlayer(iDeadCiv).isAlive()
             and iGameTurn > civilization(iDeadCiv).date.birth + 25
-            and iGameTurn > getLastTurnAlive(iDeadCiv) + 10
+            and iGameTurn > data.players[iDeadCiv].last_turn_alive + 10
         ):  # Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
             tile_min = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MIN]
             tile_max = civilization(iDeadCiv).location.area[AreaType.NORMAL][Area.TILE_MAX]
@@ -139,18 +137,16 @@ def findCivToResurect(iGameTurn, bSpecialRespawn, iDeadCiv):
                 if bSpecialRespawn or percentage_chance(
                     civilization(iDeadCiv).location.respawning_threshold, strict=True
                 ):
-                    data.lRebelCities = cityList
-                    data.iRebelCiv = iDeadCiv  # for popup and CollapseCapitals()
+                    data.cities_to_resurrect = cityList
+                    data.civ_to_resurrect = iDeadCiv
                     return iDeadCiv
     return -1
 
 
 def suppressResurection(iDeadCiv):
-    lSuppressList = data.lRebelSuppress
-    lCityList = data.lRebelCities
     lCityCount = [0] * civilizations().majors().len()
 
-    for (x, y) in lCityList:
+    for (x, y) in data.cities_to_resurrect:
         iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
         if iOwner < civilizations().majors().len():
             lCityCount[iOwner] += 1
@@ -158,19 +154,17 @@ def suppressResurection(iDeadCiv):
     iHuman = human()
     for iCiv in civilizations().majors().ids():
         # Absinthe: have to reset the suppress values
-        lSuppressList[iCiv] = 0
+        data.players[iCiv].resurrect_suppress = 0
         if iCiv != iHuman:
             if lCityCount[iCiv] > 0:
                 # Absinthe: for the AI there is 30% chance that the actual respawn does not happen (under these suppress situations), only some revolt in the corresponding cities
                 if percentage_chance(30, strict=True):
-                    lSuppressList[iCiv] = 1
-                    for (x, y) in lCityList:
+                    data.players[iCiv].resurrect_suppress = 1
+                    for (x, y) in data.cities_to_resurrect:
                         pCity = gc.getMap().plot(x, y).getPlotCity()
                         if pCity.getOwner() == iCiv:
                             pCity.changeOccupationTimer(1)
                             pCity.changeHurryAngerTimer(10)
-
-    data.lRebelSuppress = lSuppressList
 
     if lCityCount[iHuman] > 0:
         rebellionPopup(iDeadCiv, lCityCount[iHuman])
@@ -179,23 +173,21 @@ def suppressResurection(iDeadCiv):
 
 
 def resurectCiv(iDeadCiv):
-    lCityList = data.lRebelCities
-    lSuppressList = data.lRebelSuppress
     bSuppressed = True
     iHuman = human()
     lCityCount = [0] * civilizations().majors().len()
-    for (x, y) in lCityList:
+    for (x, y) in data.cities_to_resurrect:
         iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
         if iOwner < civilizations().majors().len():
             lCityCount[iOwner] += 1
 
     # Absinthe: if any of the AI civs didn't manage to suppress it, there is resurrection
     for iCiv in civilizations().majors().ids():
-        if iCiv != iHuman and lCityCount[iCiv] > 0 and lSuppressList[iCiv] == 0:
+        if iCiv != iHuman and lCityCount[iCiv] > 0 and data.players[iCiv].resurrect_suppress == 0:
             bSuppressed = False
     if lCityCount[iHuman] > 0:
         # Absinthe: if the human player didn't choose any suppress options or didn't succeed in it (so it has 0, 2 or 4 in the lSuppressList), there is resurrection
-        if lSuppressList[iHuman] in [0, 2, 4]:
+        if data.players[iHuman].resurrect_suppress in [0, 2, 4]:
             bSuppressed = False
         # Absinthe: if the human player managed to suppress it, message about it
         else:
@@ -218,7 +210,7 @@ def resurectCiv(iDeadCiv):
 
     # Absinthe: store the turn of the latest respawn for each civ
     iGameTurn = turn()
-    setLastRespawnTurn(iDeadCiv, iGameTurn)
+    data.players[iDeadCiv].last_respawn_turn = iGameTurn
 
     # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
     # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
@@ -239,7 +231,7 @@ def resurectCiv(iDeadCiv):
         if iCiv != iDeadCiv:
             if teamDeadCiv.isAtWar(iCiv):
                 teamDeadCiv.makePeace(iCiv)
-    data.lNumCities[iDeadCiv] = 0  # reset collapse condition
+    data.players[iDeadCiv].num_cities = 0  # reset collapse condition
 
     # Absinthe: reset vassalage and update dynamic civ names
     for iOtherCiv in civilizations().majors().ids():
@@ -255,18 +247,18 @@ def resurectCiv(iDeadCiv):
     # Absinthe: no vassalization in the first 10 turns after resurrection?
 
     iNewUnits = 2
-    if data.lLatestRebellionTurn[iDeadCiv] > 0:
+    if data.players[iDeadCiv].latest_rebellion_turn > 0:
         iNewUnits = 4
-    data.lLatestRebellionTurn[iDeadCiv] = turn()
+    data.players[iDeadCiv].latest_rebellion_turn = turn()
     bHuman = False
-    for (x, y) in lCityList:
+    for (x, y) in data.cities_to_resurrect:
         if gc.getMap().plot(x, y).getPlotCity().getOwner() == iHuman:
             bHuman = True
             break
 
     ownersList = []
     bAlreadyVassal = False
-    for tCity in lCityList:
+    for tCity in data.cities_to_resurrect:
         pCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
         iOwner = pCity.getOwner()
         teamOwner = gc.getTeam(gc.getPlayer(iOwner).getTeam())
@@ -288,7 +280,7 @@ def resurectCiv(iDeadCiv):
                 False,
             )
         else:
-            if lSuppressList[iOwner] in [0, 2, 4]:
+            if data.players[iOwner].resurrect_suppress in [0, 2, 4]:
                 cultureManager(tCity, 50, iDeadCiv, iOwner, False, True, True)
                 pushOutGarrisons(tCity, iOwner)
                 relocateSeaGarrisons(tCity, iOwner)
@@ -304,7 +296,7 @@ def resurectCiv(iDeadCiv):
                 iOwner != iHuman
                 and iOwner not in ownersList
                 and iOwner != iDeadCiv
-                and lSuppressList[iOwner] == 0
+                and data.players[iOwner].resurrect_suppress == 0
             ):  # declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
                 rndNum = percentage()
                 if (
@@ -356,7 +348,7 @@ def resurectCiv(iDeadCiv):
             force=True,
             color=MessageData.DARK_PINK,
         )
-    if lSuppressList[iHuman] in [2, 3, 4]:
+    if data.players[iHuman].resurrect_suppress in [2, 3, 4]:
         if not gc.getTeam(gc.getPlayer(iHuman).getTeam()).isAtWar(iDeadCiv):
             gc.getTeam(gc.getPlayer(iHuman).getTeam()).declareWar(iDeadCiv, False, -1)
     else:
