@@ -146,7 +146,7 @@ def getCityValue(city, iCompany):
 
     # bonus for civs whom actively participate (with units) in the actual Crusade:
     if iOwner < civilizations().majors().len():
-        if data.players[iOwner].num_units_sent > 0:
+        if data.players[iOwner].num_crusader_units_sent > 0:
             if iCompany in [
                 Company.HOSPITALLERS,
                 Company.TEMPLARS,

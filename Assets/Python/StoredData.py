@@ -81,7 +81,7 @@ class PlayerData(BaseData):
         # Crusades
         self.voting_power = 0
         self.deviate_targets = False
-        self.num_units_sent = 0
+        self.num_crusader_units_sent = 0
 
 
 class GameData(BaseData):

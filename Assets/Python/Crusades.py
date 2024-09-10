@@ -379,7 +379,7 @@ def endCrusades(iReligion, iFounder):
                 data.crusade_status[i] = 0
         # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
         for iPlayer in civilizations().majors().ids():
-            data.players[iPlayer].num_units_sent = 0
+            data.players[iPlayer].num_crusader_units_sent = 0
 
 
 @handler("BeginGameTurn")
@@ -439,7 +439,7 @@ def checkTurn(iGameTurn):
                 setSelectedUnit(i, 0)
             for iPlayer in civilizations().majors().ids():
                 # Absinthe: first we set all civs' unit counter to 0, then send the new round of units
-                data.players[iPlayer].num_units_sent = 0
+                data.players[iPlayer].num_crusader_units_sent = 0
                 if getVotingPower(iPlayer) > 0:
                     sendUnits(iPlayer)
             if not anyParticipate():
@@ -775,7 +775,7 @@ def sendUnit(pUnit):
     iOwner = pUnit.getOwner()
     addSelectedUnit(unitCrusadeCategory(pUnit.getUnitType()))
     data.players[iOwner].voting_power += 2
-    data.players[iOwner].num_units_sent += 1  # Absinthe: counter for sent units per civ
+    data.players[iOwner].num_crusader_units_sent += 1  # Absinthe: counter for sent units per civ
     # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
     player(iOwner).changeFaith(1)
     message(
@@ -1358,7 +1358,7 @@ def freeCrusaders(iPlayer):
     for iCiv in civilizations().main().ids():
         pCiv = player(iCiv)
         if pCiv.getStateReligion() == Religion.CATHOLICISM and pCiv.isAlive():
-            iUnitNumber = data.players[iCiv].num_units_sent
+            iUnitNumber = data.players[iCiv].num_crusader_units_sent
             if iUnitNumber > 0:
                 # the leader already got exp points through the Crusade it
                 if iCiv == iPlayer:
