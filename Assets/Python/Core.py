@@ -982,6 +982,10 @@ def since(iTurn):
     return turn() - iTurn
 
 
+def every(interval):
+    return turn() % turns(interval) == 0
+
+
 class InfoCollection(EntitiesCollection):
     def __init__(self, info_class, *infos):
         super(InfoCollection, self).__init__(*infos)
