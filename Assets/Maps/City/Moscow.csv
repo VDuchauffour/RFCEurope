@@ -1,74 +1,67 @@
-,Unnamed: 0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99
-0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Arkhangelsk,,,
-1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Onega,,,,,,,,,,,,,Arkhangelsk,,,
-2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sankt-Mikhel,Usikila,Usikila,,Onega,,,Kholmogory,,,,,,,,,,Dibozh,Dibozh,,
-3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sankt-Mikhel,,Usikila,Robolsk,Robolsk,,,Kholmogory,,,,,,,Piskoy,,Varoms,Dibozh,Dibozh,,
-4,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tavastegus,,,,,Vyborg,,,,Povenets,,Zaborskaya,,Zaborskaya,,,,,Shenkursk,,,Piskoy,Varoms,Varoms,,,
-5,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Fridrikhsgam,Vyborg,Sankt-Peterburg,,,,,Povenets,,Zaborskaya,,Pudozh,Pudozh,Kargopol,,,Shenkursk,Krasniy Bor,Krasniy Bor,Ust,Ust,,,
-6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Abo,Abo,,Gelsingfors,Gelsingfors,Fridrikhsgam,,Sankt-Peterburg,Sankt-Peterburg,,,Ladoga,,,Beloozero,Beloozero,,Pudozh,,Kargopol,Vologda,Vologda,Krasniy Bor,Krasniy Bor,Ust,Ust,,,
-7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Abo,,,,,,,Sankt-Peterburg,,Ladoga,Ladoga,Vytegra,,,,Beloozero,Beloozero,,,Vologda,Vologda,Vologda,Yarensk,Yarensk,,,,
-8,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Narva,,,Shemensk,Vytegra,Vytegra,,,,Beloozero,Beloozero,,,Vologda,Vologda,Vologda,,,,,,Cherdyn
-9,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Revel,Revel,Yuryev,Narva,Narva,Novgorod,Novgorod,Novgorod,,,Gliznets,Gliznets,,,Ustyuzhna,Ustyuzhna,Ves Yogonskaya,Yaroslavl,Yarosavl,Yarosavl,,,,,,
-10,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gapsal,Revel,Yuryev,Yuryev,,,Novgorod,Novgorod,Novgorod,Kresttsy,,Gliznets,Gliznets,,,Ustyuzhna,Ustyuzhna,Ves Yogonskaya,,Yaroslavl,Yarosavl,Ivanovo,Ivanovo,,,,
-11,11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Ezel,,Pernov,Pernov,Gdov,,,,Novgorod,,,Kresttsy,Kresttsy,,Korcheva,Korcheva,,Sukovo,Ves Yogonskaya,Ves Yogonskaya,Yaroslavl,Yaroslavl,Yaroslavl,,,Yaransk,Yaransk,,
-12,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Pernov,Gdov,Gdov,,Pskov,Lugov,,Sopki,Sopki,Vyshniy Volochok,,Vyshniy Volochok,Vyshniy Volochok,Tver,Tver,Tver,Mologa,Mologa,Rostov,Rostov,Suzdal,Shuya,Yaransk,Yaransk,,
-13,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,,,Riga,Gdov,Pskov,Pskov,Pskov,Lugov,,Sopki,Sopki,Zubtsov,Vyshniy Volochok,Vyshniy Volochok,,,Tver,Tver,Mologa,Mologa,Rostov,Suzdal,Suzdal,Shuya,Nizhniy Novgorod,Nizhniy Novgorod,Nizhniy Novgorod,
-14,14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,Vindava,Riga,Riga,Riga,Mitava,Pskov,Pskov,Staraya Russa,Staraya Russa,Novorzhev,Novorzhev,Kholm,Zubtsov,Zubtsov,Vyshniy Volochok,Vyshniy Volochok,,Tver,Mologa,Mologa,,,,Vladimir,Vladimir,Nizhniy Novgorod,Nizhniy Novgorod,Nizhniy Novgorod,
-15,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,Vindava,Kovna,Riga,Volmar,Volmar,Yakobshtadt,Yakobshtadt,Staraya Russa,Staraya Russa,Novorzhev,Novorzhev,Kholm,Kholm,Belov,Perikina,Perikina,Rzhev,Rzhev,Moskva,Moskva,Moskva,Moskva,Vladimir,Vladimir,Vladimir,Nizhniy Novgorod,Nizhniy Novgorod,Kazan,Kazan
-16,16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Memel,Memel,Kovna,Kovna,Volmar,Volmar,Yakobshtadt,Yakobshtadt,Pokrov,Polotsk,Polotsk,Vishnev,Vishnev,Vitebsk,Belov,Perikina,Perikina,Rzhev,Rzhev,Moskva,Moskva,Moskva,Moskva,Vladimir,Vladimir,Vladimir,Penza,Nizhniy Novgorod,Kazan,Kazan
-17,17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Memel,Memel,Kovna,Kovna,Vilna,Vileyka,Vileyka,Novorzhev,Pokrov,Polotsk,Polotsk,Vishnev,Vitebsk,Vitebsk,Smolensk,Smolensk,Smolensk,Kaluga,Rzhev,Moskva,Moskva,Moskva,Moskva,Ryazan,Murom,Murom,Murom,Kazan,Kazan,Kazan
-18,18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tilzit,Tilzit,Grodna,Grodna,Vilna,Vilna,Vileyka,Novorzhev,Sebezh,Sebezh,Kurilov,Kurilov,Vitebsk,Vitebsk,Smolensk,Smolensk,Smolensk,Kaluga,Belitsa,Tula,Tula,Yelets,Yelets,Ryazan,Murom,Murom,Murom,Samara,Samara,Samara
-19,19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gdansk,,Gdansk,Kyonigsberg,Kyonigsberg,Kovna,Kovna,Grodna,Vilna,Vilna,Dinaburg,Vileyka,Vileyka,Minsk,Minsk,Orsha,Orsha,Bryansk,Smolensk,Smolensk,Smolensk,Kaluga,Belitsa,Tula,Tula,Tula,Ryazan,Ryazan,Ryazan,Tambov,Petrovsk,Samara,Samara,Samara
-20,20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gdansk,Gdansk,Gdansk,Kyonigsberg,Kyonigsberg,,Kovna,Pruzhitsy,Pruzhitsy,Dinaburg,Dinaburg,Borisov,Borisov,Minsk,Minsk,Orsha,,Bryansk,Bryansk,Bryansk,Khlynov,Khlynov,Kozelsk,Kozelsk,Tula,Tula,Voronezh,Voronezh,Tambov,Tambov,Tambov,Saransk,Saransk,Volzhsk
-21,21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Belostok,Pruzhitsy,,Dinaburg,Dinaburg,Borisov,Borisov,Rogachov,Rogachov,Krichev,,,Bryansk,Bryansk,Oryol,Oryol,Kozelsk,Kozelsk,Kozelsk,Pavlovsk,Voronezh,Voronezh,Tambov,Tambov,Tambov,Saransk,Saransk,Volzhsk
-22,22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Belostok,Belostok,Belostok,,,Mogilyov,Mogilyov,Mogilyov,Rogachov,Rogachov,Krichev,Krichev,,Bryansk,Bryansk,Oryol,Oryol,Sevsk,Sevsk,Kursk,Pavlovsk,Pavlovsk,Pavlovsk,Terpinsk,Terpinsk,Terpinsk,Saransk,Saransk,Volzhsk
-23,23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Mogilyov,Cherikov,Cherikov,Novaya Belitsa,Kostovichi,Kostovtchi,Zybkaya,Zybkaya,Oryol,Oryol,Kursk,Kursk,Kursk,Boguchar,Boguchar,Boguchar,Terpinsk,Terpinsk,Kamyshin,Saratov,Saratov,Kalmykovo
-24,24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Brest-Litovsk,Pinsk,Pinsk,Belichany,,Cherikov,Cherikov,Novaya Belitsa,Kostovichi,Kostovichi,Zybkaya,Zybkaya,Chernigov,Chernigov,Kharkov,Kharkov,Kharkov,Boguchar,Markovka,Zotovskaya,Zotovskaya,Kremenskaya,Kamyshin,Saratov,Saratov,Kalmykovo
-25,25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Brest-Litovsk,Pinsk,Pinsk,,,,,Petrikov,Petrikov,Petrikov,Mozyr,Mozyr,Chernigov,Chernigov,Kharkov,Kharkov,Kharkov,Markovka,Markovka,Zotovskaya,Kremenskaya,Kremenskaya,Kamenskaya,Kamenskaya,Saratov,Kalmakova
-26,26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vulka,Vulka,Volyn,Volyn,,,Petrikov,Petrikov,Kiev,Mozyr,Mozyr,Chernigov,Chernigov,Poltava,Poltava,Belgorod,Belgorod,Beshevo,Beshevo,Beshevo,Kremenskaya,Kamenskaya,Kamenskaya,Dubovka,Dubovka
-27,27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vulka,Samosh,Manevichi,Manevichi,Ovruch,Ovruch,Ovruch,Kiev,Kiev,Kiev,Kagarlyk,Piryatin,Piryatin,Poltava,Poltava,Belgorod,Belgorod,Belgorod,Beshevo,Beshevo,Lugansk,Lugansk,Lugansk,Dubovka,Dubovka
-28,28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Samosh,Samosh,Manevichi,Manevichi,Ovruch,Ovruch,Ovruch,Kiev,Kiev,Kiev,Kagarlyk,Piryatin,Piryatin,Krylov,Krylov,Dmitrovka,Dmitrovka,Belovodsk,Belovodsk,Tsaritsyn,Lugansk,Lugansk,Lugansk,Chorniy Yar,Chorniy Yar
-29,29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Lvov,Brody,Brody,Tarnopol,Tarnopol,Ostrog,Ostrog,Zhitomir,Zhitomir,Zhitomir,Nikita,Nikita,Kremenchuk,Kremenchuk,Dmitrovka,Yuzovka,Yuzovka,Yuzovka,Tsaritsyn,Lugansk,Lugansk,Lugansk,Chorniy Yar,Chorniy Yar
-30,30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Lvov,Brody,Brody,Tarnopol,Tarnopol,Ostrog,Ostrog,Zhitomir,Zhitomir,Zhitomir,Nikita,Nikita,Yekaterinoslav,Yekaterinoslav,Vasilyevka,Yuzovka,Yuzovka,Gulyaypole,Tokmak,Lugansk,Lugansk,Orekhov,Orekhov,Chorniy Yar
-31,31,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Galich,Galich,Tarnopol,Tarnopol,Bratslav,Bratslav,Cherkassy,Cherkassy,Petrikovka,Petrikovka,Nikita,Yekaterinoslav,Yekaterinoslav,Vasilyevka,Vasilyevka,Gulyaypole,Gulyaypole,Tokmak,Tokmak,Nagavskaya,Nagavskaya,Belaya Vezha,Belaya Vezha
-32,32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galich,Galich,Kamenets,Kamenets,Bratslav,Bratslav,Cherkassy,Cherkassy,Petrikovka,Petrikovka,Krivoy Rog,Taganrog,Taganrog,Taganrog,Aksay,Aksay,Mariupol,Azov,Novocherkassk,Novocherkassk,Nagavskaya,Belaya Vezha,Belaya Vezha
-33,33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Orgeyev,Orgeyev,Kishinyov,Kishinyov,Voskresensk,Voskresensk,Krivoy Rog,Krivoy Rog,Taganrog,Taganrog,Petrovsk,Aksay,Aksay,Mariupol,Azov,Azov,Rostov-na-Donu,Rostov-na-Donu,Belaya Vezha,Belaya Vezha
-34,34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Orgeyev,Orgeyev,Kishinyov,Voskresensk,Voskresensk,Krivoy Rog,Krivoy Rog,Taganrog,Petrovsk,Petrovsk,Petrovsk,,,,,Azov,Azov,Sukresta,Sukresta
-35,35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Yassy,Berezovka,Odessa,Odessa,Kherson,Kherson,Perekop,Perekop,Perekop,Petrovsk,,,,,Akbash,Akbash,Kotelkov,Kotelkov,Sukresta,Sukresta
-36,36,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Yassy,Belgorod-Dnestrovskiy,Odessa,Odessa,,Kherson,Perekop,Perekop,,,,,,,,Akbash,Kotelkov,Kotelkov,Sukresta,Sukresta
-37,37,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galats,Galats,Belgorod-Dnestrovskiy,Belgorod-Dnestrovskiy,,,,,Kairy,Kairy,Aybar,,,,,Taman,Yekaterinodar,Stavropol,Stavropol,Georgievsk,Mozdok
-38,38,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galats,Galats,Belgorod-Dnestrovskiy,,,,,Eliagach,Eliagach,Aybar,Aybar,Kerch,Kerch,,Taman,Taman,Yekaterinodar,Stavropol,Stavropol,Georgievsk,Mozdok
-39,39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sevastopol,Yalta,Yalta,,,,,,Yekaterinodar,Maykop,Maykop,,
-40,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sevastopol,Yalta,,,,,,,,Maykop,Maykop,Kubansk,
-41,41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Kubansk,Kubansk
-42,42,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Kubansk
-43,43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-44,44,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-45,45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-46,46,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-47,47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Konstantinopol,,,,,,,,,,,,,,,,,,,
-48,48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Konstantinopol,Konstantinopol,Konstantinopol,,,,,,,,,,,,,,,,,
-49,49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-50,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-51,51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-52,52,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-53,53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-54,54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-55,55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-56,56,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-57,57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-58,58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-59,59,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-60,60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-61,61,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-62,62,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-63,63,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-64,64,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-65,65,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-66,66,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Iyerusalim,Iyerusalim,,,,,
-67,67,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Iyerusalim,,,,,,
-68,68,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-69,69,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-70,70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-71,71,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-72,72,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Onega,,,,,,,,,,,,,Arkhangelsk,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sankt-Mikhel,Usikila,Usikila,,Onega,,,Kholmogory,,,,,,,,,,Dibozh,Dibozh,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sankt-Mikhel,,Usikila,Robolsk,Robolsk,,,Kholmogory,,,,,,,Piskoy,,Varoms,Dibozh,Dibozh,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tavastegus,,,,,Vyborg,,,,Povenets,,Zaborskaya,,Zaborskaya,,,,,Shenkursk,,,Piskoy,Varoms,Varoms,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Fridrikhsgam,Vyborg,Sankt-Peterburg,,,,,Povenets,,Zaborskaya,,Pudozh,Pudozh,Kargopol,,,Shenkursk,Krasniy Bor,Krasniy Bor,Ust,Ust,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Abo,Abo,,Gelsingfors,Gelsingfors,Fridrikhsgam,,Sankt-Peterburg,Sankt-Peterburg,,,Ladoga,,,Beloozero,Beloozero,,Pudozh,,Kargopol,Vologda,Vologda,Krasniy Bor,Krasniy Bor,Ust,Ust,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Abo,,,,,,,Sankt-Peterburg,,Ladoga,Ladoga,Vytegra,,,,Beloozero,Beloozero,,,Vologda,Vologda,Vologda,Yarensk,Yarensk,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Narva,,,Shemensk,Vytegra,Vytegra,,,,Beloozero,Beloozero,,,Vologda,Vologda,Vologda,,,,,,Cherdyn
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Revel,Revel,Yuryev,Narva,Narva,Novgorod,Novgorod,Novgorod,,,Gliznets,Gliznets,,,Ustyuzhna,Ustyuzhna,Ves Yogonskaya,Yaroslavl,Yarosavl,Yarosavl,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gapsal,Revel,Yuryev,Yuryev,,,Novgorod,Novgorod,Novgorod,Kresttsy,,Gliznets,Gliznets,,,Ustyuzhna,Ustyuzhna,Ves Yogonskaya,,Yaroslavl,Yarosavl,Ivanovo,Ivanovo,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Ezel,,Pernov,Pernov,Gdov,,,,Novgorod,,,Kresttsy,Kresttsy,,Korcheva,Korcheva,,Sukovo,Ves Yogonskaya,Ves Yogonskaya,Yaroslavl,Yaroslavl,Yaroslavl,,,Yaransk,Yaransk,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Pernov,Gdov,Gdov,,Pskov,Lugov,,Sopki,Sopki,Vyshniy Volochok,,Vyshniy Volochok,Vyshniy Volochok,Tver,Tver,Tver,Mologa,Mologa,Rostov,Rostov,Suzdal,Shuya,Yaransk,Yaransk,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,,,Riga,Gdov,Pskov,Pskov,Pskov,Lugov,,Sopki,Sopki,Zubtsov,Vyshniy Volochok,Vyshniy Volochok,,,Tver,Tver,Mologa,Mologa,Rostov,Suzdal,Suzdal,Shuya,Nizhniy Novgorod,Nizhniy Novgorod,Nizhniy Novgorod,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,Vindava,Riga,Riga,Riga,Mitava,Pskov,Pskov,Staraya Russa,Staraya Russa,Novorzhev,Novorzhev,Kholm,Zubtsov,Zubtsov,Vyshniy Volochok,Vyshniy Volochok,,Tver,Mologa,Mologa,,,,Vladimir,Vladimir,Nizhniy Novgorod,Nizhniy Novgorod,Nizhniy Novgorod,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vindava,Vindava,Kovna,Riga,Volmar,Volmar,Yakobshtadt,Yakobshtadt,Staraya Russa,Staraya Russa,Novorzhev,Novorzhev,Kholm,Kholm,Belov,Perikina,Perikina,Rzhev,Rzhev,Moskva,Moskva,Moskva,Moskva,Vladimir,Vladimir,Vladimir,Nizhniy Novgorod,Nizhniy Novgorod,Kazan,Kazan
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Memel,Memel,Kovna,Kovna,Volmar,Volmar,Yakobshtadt,Yakobshtadt,Pokrov,Polotsk,Polotsk,Vishnev,Vishnev,Vitebsk,Belov,Perikina,Perikina,Rzhev,Rzhev,Moskva,Moskva,Moskva,Moskva,Vladimir,Vladimir,Vladimir,Penza,Nizhniy Novgorod,Kazan,Kazan
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Memel,Memel,Kovna,Kovna,Vilna,Vileyka,Vileyka,Novorzhev,Pokrov,Polotsk,Polotsk,Vishnev,Vitebsk,Vitebsk,Smolensk,Smolensk,Smolensk,Kaluga,Rzhev,Moskva,Moskva,Moskva,Moskva,Ryazan,Murom,Murom,Murom,Kazan,Kazan,Kazan
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tilzit,Tilzit,Grodna,Grodna,Vilna,Vilna,Vileyka,Novorzhev,Sebezh,Sebezh,Kurilov,Kurilov,Vitebsk,Vitebsk,Smolensk,Smolensk,Smolensk,Kaluga,Belitsa,Tula,Tula,Yelets,Yelets,Ryazan,Murom,Murom,Murom,Samara,Samara,Samara
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gdansk,,Gdansk,Kyonigsberg,Kyonigsberg,Kovna,Kovna,Grodna,Vilna,Vilna,Dinaburg,Vileyka,Vileyka,Minsk,Minsk,Orsha,Orsha,Bryansk,Smolensk,Smolensk,Smolensk,Kaluga,Belitsa,Tula,Tula,Tula,Ryazan,Ryazan,Ryazan,Tambov,Petrovsk,Samara,Samara,Samara
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gdansk,Gdansk,Gdansk,Kyonigsberg,Kyonigsberg,,Kovna,Pruzhitsy,Pruzhitsy,Dinaburg,Dinaburg,Borisov,Borisov,Minsk,Minsk,Orsha,,Bryansk,Bryansk,Bryansk,Khlynov,Khlynov,Kozelsk,Kozelsk,Tula,Tula,Voronezh,Voronezh,Tambov,Tambov,Tambov,Saransk,Saransk,Volzhsk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Belostok,Pruzhitsy,,Dinaburg,Dinaburg,Borisov,Borisov,Rogachov,Rogachov,Krichev,,,Bryansk,Bryansk,Oryol,Oryol,Kozelsk,Kozelsk,Kozelsk,Pavlovsk,Voronezh,Voronezh,Tambov,Tambov,Tambov,Saransk,Saransk,Volzhsk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Belostok,Belostok,Belostok,,,Mogilyov,Mogilyov,Mogilyov,Rogachov,Rogachov,Krichev,Krichev,,Bryansk,Bryansk,Oryol,Oryol,Sevsk,Sevsk,Kursk,Pavlovsk,Pavlovsk,Pavlovsk,Terpinsk,Terpinsk,Terpinsk,Saransk,Saransk,Volzhsk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Mogilyov,Cherikov,Cherikov,Novaya Belitsa,Kostovichi,Kostovtchi,Zybkaya,Zybkaya,Oryol,Oryol,Kursk,Kursk,Kursk,Boguchar,Boguchar,Boguchar,Terpinsk,Terpinsk,Kamyshin,Saratov,Saratov,Kalmykovo
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Brest-Litovsk,Pinsk,Pinsk,Belichany,,Cherikov,Cherikov,Novaya Belitsa,Kostovichi,Kostovichi,Zybkaya,Zybkaya,Chernigov,Chernigov,Kharkov,Kharkov,Kharkov,Boguchar,Markovka,Zotovskaya,Zotovskaya,Kremenskaya,Kamyshin,Saratov,Saratov,Kalmykovo
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Brest-Litovsk,Pinsk,Pinsk,,,,,Petrikov,Petrikov,Petrikov,Mozyr,Mozyr,Chernigov,Chernigov,Kharkov,Kharkov,Kharkov,Markovka,Markovka,Zotovskaya,Kremenskaya,Kremenskaya,Kamenskaya,Kamenskaya,Saratov,Kalmakova
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vulka,Vulka,Volyn,Volyn,,,Petrikov,Petrikov,Kiev,Mozyr,Mozyr,Chernigov,Chernigov,Poltava,Poltava,Belgorod,Belgorod,Beshevo,Beshevo,Beshevo,Kremenskaya,Kamenskaya,Kamenskaya,Dubovka,Dubovka
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vulka,Samosh,Manevichi,Manevichi,Ovruch,Ovruch,Ovruch,Kiev,Kiev,Kiev,Kagarlyk,Piryatin,Piryatin,Poltava,Poltava,Belgorod,Belgorod,Belgorod,Beshevo,Beshevo,Lugansk,Lugansk,Lugansk,Dubovka,Dubovka
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Samosh,Samosh,Manevichi,Manevichi,Ovruch,Ovruch,Ovruch,Kiev,Kiev,Kiev,Kagarlyk,Piryatin,Piryatin,Krylov,Krylov,Dmitrovka,Dmitrovka,Belovodsk,Belovodsk,Tsaritsyn,Lugansk,Lugansk,Lugansk,Chorniy Yar,Chorniy Yar
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Lvov,Brody,Brody,Tarnopol,Tarnopol,Ostrog,Ostrog,Zhitomir,Zhitomir,Zhitomir,Nikita,Nikita,Kremenchuk,Kremenchuk,Dmitrovka,Yuzovka,Yuzovka,Yuzovka,Tsaritsyn,Lugansk,Lugansk,Lugansk,Chorniy Yar,Chorniy Yar
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Lvov,Brody,Brody,Tarnopol,Tarnopol,Ostrog,Ostrog,Zhitomir,Zhitomir,Zhitomir,Nikita,Nikita,Yekaterinoslav,Yekaterinoslav,Vasilyevka,Yuzovka,Yuzovka,Gulyaypole,Tokmak,Lugansk,Lugansk,Orekhov,Orekhov,Chorniy Yar
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lvov,Galich,Galich,Tarnopol,Tarnopol,Bratslav,Bratslav,Cherkassy,Cherkassy,Petrikovka,Petrikovka,Nikita,Yekaterinoslav,Yekaterinoslav,Vasilyevka,Vasilyevka,Gulyaypole,Gulyaypole,Tokmak,Tokmak,Nagavskaya,Nagavskaya,Belaya Vezha,Belaya Vezha
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galich,Galich,Kamenets,Kamenets,Bratslav,Bratslav,Cherkassy,Cherkassy,Petrikovka,Petrikovka,Krivoy Rog,Taganrog,Taganrog,Taganrog,Aksay,Aksay,Mariupol,Azov,Novocherkassk,Novocherkassk,Nagavskaya,Belaya Vezha,Belaya Vezha
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Orgeyev,Orgeyev,Kishinyov,Kishinyov,Voskresensk,Voskresensk,Krivoy Rog,Krivoy Rog,Taganrog,Taganrog,Petrovsk,Aksay,Aksay,Mariupol,Azov,Azov,Rostov-na-Donu,Rostov-na-Donu,Belaya Vezha,Belaya Vezha
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mogilyov,Mogilyov,Orgeyev,Orgeyev,Kishinyov,Voskresensk,Voskresensk,Krivoy Rog,Krivoy Rog,Taganrog,Petrovsk,Petrovsk,Petrovsk,,,,,Azov,Azov,Sukresta,Sukresta
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Yassy,Berezovka,Odessa,Odessa,Kherson,Kherson,Perekop,Perekop,Perekop,Petrovsk,,,,,Akbash,Akbash,Kotelkov,Kotelkov,Sukresta,Sukresta
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Yassy,Belgorod-Dnestrovskiy,Odessa,Odessa,,Kherson,Perekop,Perekop,,,,,,,,Akbash,Kotelkov,Kotelkov,Sukresta,Sukresta
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galats,Galats,Belgorod-Dnestrovskiy,Belgorod-Dnestrovskiy,,,,,Kairy,Kairy,Aybar,,,,,Taman,Yekaterinodar,Stavropol,Stavropol,Georgievsk,Mozdok
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Galats,Galats,Belgorod-Dnestrovskiy,,,,,Eliagach,Eliagach,Aybar,Aybar,Kerch,Kerch,,Taman,Taman,Yekaterinodar,Stavropol,Stavropol,Georgievsk,Mozdok
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sevastopol,Yalta,Yalta,,,,,,Yekaterinodar,Maykop,Maykop,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sevastopol,Yalta,,,,,,,,Maykop,Maykop,Kubansk,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Kubansk,Kubansk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Kubansk
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Konstantinopol,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Konstantinopol,Konstantinopol,Konstantinopol,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Iyerusalim,Iyerusalim,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Iyerusalim,,,,,,

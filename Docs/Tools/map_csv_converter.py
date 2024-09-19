@@ -35,7 +35,7 @@ def convert_civ_dict(
             if upside_down:
                 data = data.iloc[::-1]
             data = data.replace("-1", "").replace(-1, "")
-            data.to_excel(writer, sheet_name=civ.name.capitalize())
+            data.to_excel(writer, sheet_name=civ.name.capitalize(), header=False, index=False)
     if split_into_csv:
         convert_ods_to_csv(path, split_folder_name)
 
@@ -45,10 +45,10 @@ def convert_list(path: str, object: str, filename: str, upside_down: bool = Fals
     with pd.ExcelWriter(f"Assets/Maps/{filename}.ods", engine="odf") as writer:
         module = _load(path)
         data = pd.DataFrame(getattr(module, object))
-        data = data.replace("-1", "").replace(-1, "")
+        # data = data.replace("-1", "").replace(-1, "")
         if upside_down:
             data = data.iloc[::-1]
-        data.to_excel(writer)
+        data.to_excel(writer, header=False, index=False)
 
 
 @app.command()
@@ -57,7 +57,12 @@ def convert_ods_to_csv(path: str, folder_name: str):
     for sheet, data in df.items():
         csv_destination = Path(f"Assets/Maps/{folder_name}")
         csv_destination.mkdir(exist_ok=True)
-        data.to_csv(path_or_buf=f"{csv_destination.as_posix()}/{sheet.capitalize()}.csv", sep=",")
+        data.to_csv(
+            path_or_buf=f"{csv_destination.as_posix()}/{sheet.capitalize()}.csv",
+            sep=",",
+            header=False,
+            index=False,
+        )
 
 
 if __name__ == "__main__":
