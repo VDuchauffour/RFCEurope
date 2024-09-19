@@ -52,7 +52,7 @@ optional arguments:
 The old maps data was a python list of lists for each civ in a python module. They've been converted to csv files with the following similar command:
 
 ```shell
-python Docs/Tools/map_csv_converter.py convert-civ-dict Assets/Python/data/maps/SettlerMapData.py SETTLERS_MAP
+python Docs/Tools/map_csv_converter.py convert-civ-dict Assets/Python/data/maps/CityMapData.py CITIES_MAP Cities --split-folder-name=City --split-into-csv
 ```
 
 ## Acknowledgements
