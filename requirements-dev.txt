@@ -4,3 +4,7 @@ click==8.0
 pyright==1.1.362
 numpy
 Pillow
+typer
+pandas
+openpyxl
+odfpy
