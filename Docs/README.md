@@ -15,16 +15,15 @@ The colors on the spawning maps show the following stability areas:
 - yellow: potentially stable area
 - red: outer area
 
-## How to generate maps
+## How to generate map images
 
 The Python scripts `./Tools/map_renderer.py` parse a `WBSave` and generate differents maps.
 
-This script need at least Python >= 3.9 and the dependency `Pillow`.
+This script need at least Python >= 3.9 and the dependencies located in the `requirements-dev.txt` file.
 
 Exemple of usage:
 
 ```shell
-pip install -r requirements-dev.txt
 python Docs/Tools/map_renderer.py -f ./PrivateMaps/RFCEurope\ 1200AD.CivBeyondSwordWBSave -d Docs/Maps --all
 ```
 
@@ -46,6 +45,14 @@ optional arguments:
   --provinces           Draw provinces map. Default to False
   --provinces-stability Draw provinces stability map. Default to True
   --all                 Draw all maps. Default to False.
+```
+
+## Map data converter
+
+The old maps data was a python list of lists for each civ in a python module. They've been converted to csv files with the following similar command:
+
+```shell
+python Docs/Tools/map_csv_converter.py convert-civ-dict Assets/Python/data/maps/SettlerMapData.py SETTLERS_MAP
 ```
 
 ## Acknowledgements
