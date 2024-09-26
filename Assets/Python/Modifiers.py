@@ -48,7 +48,7 @@ def setup():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
-    set_starting_workers_modifier()
+    set_starting_workers()
     set_initial_building()
     set_building_preferences()
     set_unique_powers()
@@ -146,7 +146,7 @@ def set_diplomacy_modifier():
         gc.setDiplomacyModifiers(civ1, civ2, value)
 
 
-def set_starting_workers_modifier():
+def set_starting_workers():
     for civ in civilizations().majors():
         gc.setStartingWorkers(civ.id, civ.initial.workers)
 
