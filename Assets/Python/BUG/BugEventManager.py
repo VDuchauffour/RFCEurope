@@ -103,7 +103,6 @@ import CvEventManager
 import BugCore
 import BugData
 import BugUtil
-import Modifiers
 import InputUtil
 import types
 
@@ -432,7 +431,6 @@ class BugEventManager(CvEventManager.CvEventManager):
         import BugInit
 
         BugInit.init()
-        Modifiers.setup()
         self._handleDefaultEvent(eventType, argsList)
 
     def resetActiveTurn(self, argsList=None):

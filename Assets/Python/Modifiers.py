@@ -27,8 +27,21 @@ from MiscData import (
 )
 from TimelineData import DateTurn
 from LocationsData import CITIES
+from Events import handler
 
 gc = CyGlobalContext()
+
+
+@handler("GameStart")
+def setup_gamestart():
+    log("RFCE: GameStart")
+    setup()
+
+
+@handler("OnLoad")
+def setup_on_load():
+    log("RFCE: OnLoad")
+    setup()
 
 
 def setup():
