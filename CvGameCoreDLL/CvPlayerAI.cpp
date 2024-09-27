@@ -8179,6 +8179,11 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity *pCity, PlayerTypes ePlayer) const
   }
   //Rhye - end
 
+  if (isHuman() && (pCity->getNumActiveBuilding((BuildingTypes)(BUILDING_PLAGUE)) > 0))
+  {
+    return DENIAL_NO_GAIN;
+  }
+
   // Absinthe: no city trading for the Pope and from the Pope
   if ((getID() == PAPAL_PLAYER) || (ePlayer == PAPAL_PLAYER))
   {
