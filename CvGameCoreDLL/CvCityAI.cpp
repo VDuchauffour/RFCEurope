@@ -9873,7 +9873,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
   }
 
   // 3MiroAI: make the AI aware of the incomming starting workers
-  if (isCapital() && GC.getGameINLINE().getGameTurn() < startingTurn[getOwnerINLINE()] + 3)
+  if (isCapital() && GC.getGameINLINE().getGameTurn() < GET_PLAYER(getOwnerINLINE()).getLastBirthTurn() + getTurns(3))
   {
     iWorkersHave += startingWorkers[getOwnerINLINE()];
   };

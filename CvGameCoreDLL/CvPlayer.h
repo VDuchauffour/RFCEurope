@@ -1243,6 +1243,10 @@ public:
 
   // Leoreth
   int getDomainFreeExperience(DomainTypes eDomainType) const;
+  int getInitialBirthTurn() const;
+  void setInitialBirthTurn(int iNewValue);
+  int getLastBirthTurn() const;
+  void setLastBirthTurn(int iNewValue);
 
 protected:
   // 3Miro: culture bonus to cities if the player has no StateReligion
@@ -1403,6 +1407,11 @@ protected:
   bool m_bFoundedFirstCity;
   bool m_bStrike;
   bool m_bHuman;
+
+  //Leoreth
+  int m_iInitialBirthTurn;
+  int m_iLastBirthTurn;
+
   //Rhye (jdog) -  start ---------------------
   CvWString m_szName;
   CvWString m_szCivDesc;

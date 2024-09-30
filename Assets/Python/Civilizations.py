@@ -29,7 +29,7 @@ def setup():
 
 def set_starting_turns():
     for civ in civilizations().drop(Civ.BARBARIAN):
-        gc.setStartingTurn(civ.id, civ.date.birth)
+        civ.player.setInitialBirthTurn(civ.date.birth)
 
 
 def set_tech_timeline_date():

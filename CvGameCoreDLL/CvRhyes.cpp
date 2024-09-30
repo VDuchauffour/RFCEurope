@@ -5,7 +5,6 @@
 
 // rhyes.cpp
 
-int *startingTurn = NULL;
 int *turnPlayed = NULL;
 int *civSpreadFactor = NULL;
 

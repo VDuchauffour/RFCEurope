@@ -959,6 +959,7 @@ def ownedCityPlots(tCoords, argsList):
     return False
 
 
+# TODO replace with Stability.isImmune
 def collapseImmune(iCiv):
     # 3MiroUP: Emperor
     if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS):

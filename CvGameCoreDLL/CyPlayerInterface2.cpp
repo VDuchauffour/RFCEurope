@@ -172,5 +172,11 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer> &x)
       .def("setLeader", &CyPlayer::setLeader, "void (int i)")                   //Rhye
       .def("getLeader", &CyPlayer::getLeader, "int /*LeaderHeadTypes*/ ()")     //Rhye
 
-      .def("isExisting", &CyPlayer::isExisting, "bool ()");
+      .def("isExisting", &CyPlayer::isExisting, "bool ()")
+
+      //Leoreth
+      .def("getInitialBirthTurn", &CyPlayer::getInitialBirthTurn, "int ()")
+      .def("setInitialBirthTurn", &CyPlayer::setInitialBirthTurn, "void (int iNewValue)")
+      .def("getLastBirthTurn", &CyPlayer::getLastBirthTurn, "int ()")
+      .def("setLastBirthTurn", &CyPlayer::setLastBirthTurn, "void (int iNewValue)");
 }

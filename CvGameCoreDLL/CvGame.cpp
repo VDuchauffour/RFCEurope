@@ -2198,14 +2198,14 @@ void CvGame::update()
 
     if (getTurnSlice() == 0)
     {
-      // Absinthe: disable autosave during autoplay
-      if ((GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0) ||
-          ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()])))
+      // edead: disable autosave during autoplay
+      // if (GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0 || (getGameTurn() > 0 && getAIAutoPlay() == 0))
+      // TODO
+      if (GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0 ||
+          (getGameTurn() > GET_PLAYER(getActivePlayer()).getInitialBirthTurn()))
       {
         gDLL->getEngineIFace()->AutoSave(true);
       }
-      // Absinthe: end
-      //gDLL->getEngineIFace()->AutoSave(true);
     }
 
     if (getNumGameTurnActive() == 0)
@@ -2246,32 +2246,8 @@ void CvGame::update()
       gDLL->getInterfaceIFace()->setInAdvancedStart(true);
       gDLL->getInterfaceIFace()->setWorldBuilder(true);
     }
-    /* Absinthe: disabling old code start
-		//Rhye - start switch - Version B (late human starts)
-		int iHuman = MAX_PLAYERS;
-		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).isHuman())
-				{
-					iHuman = iI;
-					break;
-				}
-			}
-		}
-		// 3Miro
-		if ( (iHuman > -1) && (iHuman <NUM_ALL_PLAYERS_B) ){
-			if ( startingTurn[iHuman] > 0 ){
-				if ( getGameTurn() == 0 ){
-					setAIAutoPlay(1);
-				}else if ( getGameTurn() <= startingTurn[iHuman] ){
-					setAIAutoPlayCatapult(1);
-				};
-			};
-		};
-		*/ //Absinthe: disabling old code end
 
+    // TODO to rewrite
     // Absinthe: identify the active scenario
     int iScenarioStartTurn = 0; // 500 AD
     if (getScenario() == SCENARIO_1200AD)
@@ -2280,14 +2256,13 @@ void CvGame::update()
     }
 
     // Absinthe: start Rhye's AIAutoPlay
-    int iHuman = getActivePlayer();
-    if (startingTurn[iHuman] > iScenarioStartTurn)
+    if (GET_PLAYER(getActivePlayer()).getInitialBirthTurn() > iScenarioStartTurn)
     {
       if (getGameTurn() == iScenarioStartTurn)
       {
         setAIAutoPlay(1);
       }
-      else if (getGameTurn() <= startingTurn[iHuman])
+      else if (getGameTurn() <= GET_PLAYER(getActivePlayer()).getInitialBirthTurn())
       {
         setAIAutoPlayCatapult(1);
       }
@@ -5533,10 +5508,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, CvCity *pNewValue, bool bAnnounce
 
           for (iI = 0; iI < MAX_PLAYERS; iI++)
           {
-            if ((GET_PLAYER((PlayerTypes)iI).isAlive()) &&
-                (GC.getGameINLINE().getGameTurn() >=
-                 startingTurn[GC.getGameINLINE()
-                                  .getActivePlayer()])) // Absinthe: no religion founded message during autoplay
+            if (GET_PLAYER((PlayerTypes)iI).isAlive())
             {
               if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
               {
@@ -5788,11 +5760,13 @@ void CvGame::doTurn()
   int iLoopPlayer;
   int iI;
 
+  // TODO rewrite this with m_bTurnPlayed
   //Rhye - start
   for (iI = 0; iI < MAX_PLAYERS; iI++)
     turnPlayed[iI] = 0;
   //Rhye - end
 
+  // TODO clean this
   // 3MiroProvinces: Culture Immune Provinces (countdown)
   for (iI = 0; iI < MAX_NUM_PROVINCES; iI++)
   {
@@ -5804,10 +5778,10 @@ void CvGame::doTurn()
 
   // 3Miro: Culture hack
   withinSpawnDate = false;
-  iI = getGameTurn();
   for (iLoopPlayer = 0; iLoopPlayer < NUM_MAJOR_PLAYERS; iLoopPlayer++)
   {
-    if ((iI >= startingTurn[iLoopPlayer] - 1) && (iI < startingTurn[iLoopPlayer] + 2))
+    if (getGameTurn() < GET_PLAYER((PlayerTypes)iLoopPlayer).getLastBirthTurn() + getTurns(2) &&
+        getGameTurn() >= GET_PLAYER((PlayerTypes)iLoopPlayer).getLastBirthTurn() - getTurns(1))
     {
       withinSpawnDate = true;
     };
@@ -5824,22 +5798,6 @@ void CvGame::doTurn()
       };
     };
   };
-
-  /*GC.getGameINLINE().logMsg(" TURN=%d ",getGameTurn() );
-	CvPlot *ppPlot = GC.getMapINLINE().plot( 76, 28 );
-	GC.getGameINLINE().logMsg("   Owner = %d ", ppPlot ->getOwnerINLINE() );
-	bool bByzB = ppPlot ->canBuild( (BuildTypes) 2, (PlayerTypes) 1, true );
-	bool bBulB = ppPlot ->canBuild( (BuildTypes) 2, (PlayerTypes) 4, true );
-	if ( bByzB ){
-		GC.getGameINLINE().logMsg("      Byz can Build " );
-	}else{
-		GC.getGameINLINE().logMsg("      Byz cannot Build " );
-	};
-	if ( bByzB ){
-		GC.getGameINLINE().logMsg("      Bul can Build " );
-	}else{
-		GC.getGameINLINE().logMsg("      Bul cannot Build " );
-	};*/
 
   // END OF TURN
   CvEventReporter::getInstance().beginGameTurn(getGameTurn());
@@ -5976,14 +5934,14 @@ void CvGame::doTurn()
 
   stopProfilingDLL();
 
-  // Absinthe: disable autosave during autoplay
-  if ((GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0) ||
-      ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()])))
+  // edead: disable autosave during autoplay
+  // if (GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0 || (getGameTurn() > 0 && getAIAutoPlay() == 0))
+  // TODO
+  if (GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0 ||
+      (getGameTurn() > GET_PLAYER(getActivePlayer()).getInitialBirthTurn()))
   {
     gDLL->getEngineIFace()->AutoSave();
   }
-  // Absinthe: end
-  //gDLL->getEngineIFace()->AutoSave();
 }
 
 void CvGame::doDeals()
@@ -10103,185 +10061,3 @@ bool CvGame::safeMotherland(int iCiv)
   //if ( (GET_PLAYER((PlayerTypes)iCiv).getEverRespawned()) && (iCitiesOwned > 0) ) return true;
   return false;
 };
-
-// Absinthe: unused in RFCE
-/*
-int CvGame::cityStabilityExpansion( int iPlayer, int iFCity ){
-	// 3Miro: Note that this is Rhye's original scheme, we use provinces for Stability
-	CvCity *pCity;
-	int pl, x, y;
-	int iExp = 0;
-	int iLoop;
-	for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
-		x = pCity ->getX();
-		y = pCity ->getY();
-		for ( pl = 0; pl < NUM_MAJOR_PLAYERS; pl++ ){
-			if ( (getGameTurn() > startingTurn[pl]) && (pl != iPlayer) ){
-				//if( MiroBelongToNormal( pl, x, y ) && (settlersMaps[iPlayer][EARTH_Y-y-1][x] < 150 ) ){
-				//if( MiroBelongToNormal( pl, x, y ) && (getSettlersMaps(iPlayer,EARTH_Y-y-1,x) < 150 ) ){
-				if( MiroBelongToNormal( pl, x, y ) && (getSettlersMaps(iPlayer,EARTH_Y-y-1,x, "cityStabilityExpansion") < 150 ) ){
-					iExp += iFCity;
-				};
-			};
-		};
-	};
-	return iExp;
-};
-
-// Absinthe: unused in RFCE
-int CvGame::cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap ){
-	int iNumCities, iLoop;
-	int iTCS=0, iCS=0;
-	int pl, rel;
-	CvCity *pCity;
-	iNumCities = GET_PLAYER((PlayerTypes)iPlayer).getNumCities();
-	for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
-		iTCS = 0;
-		if ( !( GET_PLAYER((PlayerTypes)iPlayer).isCivic((CivicTypes)28) && pCity ->isOccupation() ) ){
-			if ( pCity ->angryPopulation(0) > 0 ) iTCS += iAnger;
-			if ( pCity ->healthRate(false, 0) < 0 ) iTCS += iHealth;
-			if ( pCity ->getReligionBadHappiness() > 0 ) iTCS += iReligion;
-			if ( pCity ->getLargestCityHappiness() < 0 ) iTCS += iLarge;
-			if ( pCity ->getHurryAngerModifier() > 0 ) iTCS += iHurry;
-			if ( pCity ->getNoMilitaryPercentAnger() > 0 ) iTCS += iNoMilitary;
-			if ( pCity ->getWarWearinessPercentAnger() > 0 ) iTCS += iWarW;
-
-			// Theocracy and Org. Religion // This shouldn't be here, exceptions for religious civics
-			if ( GET_PLAYER((PlayerTypes)iPlayer).isCivic((CivicTypes)21) || GET_PLAYER((PlayerTypes)iPlayer).isCivic((CivicTypes)22) ){
-				// 3MiroUP
-				if ( UniquePowers[iPlayer * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE] > -1 ){
-					for ( rel=0; rel < NUM_RELIGIONS; rel++ ){
-						if ( pCity ->isHasReligion((ReligionTypes)rel) && ( rel != GET_PLAYER((PlayerTypes)iPlayer).getStateReligion() ) ){
-							iTCS += iFReligion;
-						};
-					};
-				};
-			};
-
-			for( pl = 0; pl<NUM_ALL_PLAYERS; pl++ ){
-				if ( pl != iPlayer ){
-					if ( pCity ->getCulture((PlayerTypes)pl) > 0 ){
-						if ( pCity ->getCulture((PlayerTypes)iPlayer) == 0 ){
-							iTCS += iFCulture;
-						}else{
-							if ( (pCity ->getCulture((PlayerTypes)pl)*100)/ (pCity ->getCulture((PlayerTypes)iPlayer) ) > 15 ){
-								iTCS += iFCulture;
-							};
-						};
-					};
-				};
-			};
-		};
-
-		iCS += std::max(iPerCityCap, iTCS);
-	};
-	return iCS;
-};
-
-// Absinthe: unused in RFCE
-void CvGame::calcLastOwned(){
-	int x, y, i;
-	if ( lOwnedCities == NULL ) lOwnedCities = new int[NUM_ALL_PLAYERS_B];
-	if ( lOwnedPlots == NULL ) lOwnedPlots = new int[NUM_ALL_PLAYERS_B];
-	for ( i=0; i<NUM_ALL_PLAYERS_B; i++ ){
-		lOwnedCities[i] = 0; // how many undesirable plots civ i owns
-		lOwnedPlots[i] = 0; // how many foreign cities in civ i's desirable normal area
-	};
-
-	CvPlot *plot;
-	int iOwner, iCityOwner;
-	for( x=0; x<EARTH_X; x++ ){
-		for( y=0; y<EARTH_Y; y++ ){
-			plot = GC.getMapINLINE().plot(x,y);
-			iOwner = plot ->getOwner();
-			if ( (iOwner >= 0)&&(iOwner<NUM_MAJOR_PLAYERS) && ( (plot ->isHills() ) || (plot ->isFlatlands() ) ) ) {
-				//if ( settlersMaps[iOwner][EARTH_Y-y-1][x] < 90 ) lOwnedPlots[iOwner]++;
-				//if ( getSettlersMaps(iOwner,EARTH_Y-y-1,x) < 90 ) lOwnedPlots[iOwner]++;
-				if ( getSettlersMaps(iOwner,EARTH_Y-y-1,x,"calcLastOwned1") < 90 ) lOwnedPlots[iOwner]++;
-				if ( plot ->isCity() ){
-					iCityOwner = plot ->getPlotCity() ->getOwner();
-					for( i = 0; i <NUM_MAJOR_PLAYERS; i++ ){
-						if ( (i!=iCityOwner) && (GET_PLAYER((PlayerTypes)i).isAlive()) && (getGameTurn()>startingTurn[i]+30) ){
-							//if ( (settlersMaps[i][EARTH_Y-x-1][x] >= 400) && MiroBelongToCore( i, x, y ) ){
-							//if ( (getSettlersMaps(i,EARTH_Y-x-1,x) >= 400) && MiroBelongToCore( i, x, y ) ){
-							if ( (getSettlersMaps(i,EARTH_Y-y-1,x,"calcLastOwned2") >= 400) && MiroBelongToCore( i, x, y ) ){
-								lOwnedCities[i]++;
-							};
-						};
-					};
-				};
-			};
-		};
-	};
-};
-
-// Absinthe: unused in RFCE
-void CvGame::damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *pPlot ){
-	int i, N;
-	CvUnit *pUnit;
-	if ( pPlot ->getOwner() == iPlayer ){
-		N = pPlot ->getNumUnits();
-		for ( i=0; i<N; i++ ){
-			pUnit = pPlot ->getUnitByIndex(i);
-			if ( GET_TEAM( GET_PLAYER((PlayerTypes)iPlayer).getTeam() ).isAtWar( pUnit ->getTeam() ) ){
-				if ( pUnit ->getOwner() == BARBARIAN ){
-					pUnit ->setDamage( pUnit->getDamage() + iBarbDamage, (PlayerTypes) iPlayer );
-				}else{
-					pUnit ->setDamage( pUnit->getDamage() + iFoeDamage, (PlayerTypes) iPlayer );
-				};
-			};
-		};
-	};
-};
-
-// Absinthe: unused in RFCE
-void CvGame::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ){
-
-	int iLoop;
-	CvCity* pCity;
-	CvPlot* pPlot;
-	int x, y, cityX, cityY;
-
-	for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
-		if ( pCity ->hasBuilding((BuildingTypes)iBuilding) ){
-			cityX = pCity ->getX();
-			cityY = pCity ->getY();
-			// do close range
-			for ( x = cityX -1; x<=cityX+1; x++ ){
-				for ( y = cityY-1; y<=cityY+1; y++ ){
-					if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y)&& ( !( (x==cityX)&&(y==cityY) ) ) ){
-						pPlot = GC.getMapINLINE().plot( x, y );
-						damagePlot( iPlayer, iFoeDamage, iBarbDamage, pPlot );
-					};
-				};
-			};
-			// do long range, top and bottom
-			for ( x = cityX -1; x<=cityX+1; x++ ){
-				y = cityY+2;
-				if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
-					pPlot = GC.getMapINLINE().plot( x, y );
-					damagePlot( iPlayer, iFoeDamage/2, iBarbDamage/2, pPlot );
-				};
-				y = cityY-2;
-				if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
-					pPlot = GC.getMapINLINE().plot( x, y );
-					damagePlot( iPlayer, iFoeDamage/2, iBarbDamage/2, pPlot );
-				};
-			};
-			// do long range, left and right
-			for ( y = cityY -1; y<=cityY+1; y++ ){
-				x = cityX+2;
-				if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
-					pPlot = GC.getMapINLINE().plot( x, y );
-					damagePlot( iPlayer, iFoeDamage/2, iBarbDamage/2, pPlot );
-				};
-				x = cityX-2;
-				if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
-					pPlot = GC.getMapINLINE().plot( x, y );
-					damagePlot( iPlayer, iFoeDamage/2, iBarbDamage/2, pPlot );
-				};
-			};
-		};
-	};
-};
-*/

@@ -2026,27 +2026,6 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
   }
   // Absinthe: terrain type needed in BFC
 
-  //Rhye - start (embassy)
-  // 3Miro: when can build embassy
-  /*if (eBuilding >= NUM_BUILDINGS_PLAGUE)
-	{
-		if (getOwnerINLINE() >= NUM_MAJOR_PLAYERS)
-			return false;
-		if (getOwnerINLINE() == (PlayerTypes)((int)eBuilding - NUM_BUILDINGS_PLAGUE))
-			return false;
-		if (!(GET_PLAYER(getOwnerINLINE()).canContact((PlayerTypes)((int)eBuilding - NUM_BUILDINGS_PLAGUE))))
-			return false;
-		if ((GET_TEAM(getTeam()).isAtWar((TeamTypes)((int)eBuilding - NUM_BUILDINGS_PLAGUE))))
-			return false;
-		if (GC.getGameINLINE().getGameTurn() <= startingTurn[eBuilding - NUM_BUILDINGS_PLAGUE] + 2)
-			return false;
-		int iEspionagePoints = GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)((int)eBuilding - NUM_BUILDINGS_PLAGUE));
-		int iCost = 10;
-		if (iEspionagePoints < iCost)
-			return false;
-	}*/
-  //Rhye - end
-
   if (!bTestVisible)
   {
     if (!bContinue)
@@ -11656,10 +11635,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 
             for (iI = 0; iI < MAX_PLAYERS; iI++)
             {
-              if ((GET_PLAYER((PlayerTypes)iI).isAlive()) &&
-                  (GC.getGameINLINE().getGameTurn() >=
-                   startingTurn[GC.getGameINLINE()
-                                    .getActivePlayer()])) // Absinthe: no wonder built message during autoplay
+              if (GET_PLAYER((PlayerTypes)iI).isAlive())
               {
                 if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
                 {

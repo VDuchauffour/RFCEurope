@@ -258,7 +258,6 @@ extern int MAX_NUM_TECHS;
 extern int NUM_BUILDINGS; // Plague is the last "building"
 #define BUILDING_PLAGUE (NUM_BUILDINGS - 1)
 
-extern int *startingTurn;
 extern int *turnPlayed;      // 3Miro: overkill but leave it
 extern int *civSpreadFactor; // 3Miro: includes major players, minor players, indeps and barbs
 

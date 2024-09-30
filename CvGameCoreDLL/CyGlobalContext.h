@@ -866,9 +866,6 @@ public:
   // BUFFY - DLL Info - end
 
   // 3Miro: set balance parameters
-  void setStartingTurn(int iCiv, int iVal);
-  int getStartingTurn(int iCiv); // for debug purposes
-
   void setGrowthModifiersAI(int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop);
   void setProductionModifiersAI(int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch);
   void setSupportModifiersAI(int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic);

@@ -262,7 +262,8 @@ void CvGameTextMgr::setDateStrPlayer(CvWString &szString, int iGameTurn, bool bS
                                      int iStartYear, GameSpeedTypes eSpeed, PlayerTypes ePlayer)
 {
   // Absinthe: this displays either the year (with calendar, which is tech O in RFCE) or the current era
-  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)CALENDAR) || iGameTurn < startingTurn[ePlayer])
+  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)CALENDAR) ||
+      iGameTurn < GET_PLAYER(ePlayer).getLastBirthTurn())
     setDateStr(szString, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
   else if (GET_PLAYER(ePlayer).getCurrentEra() >= 3)
     szString = gDLL->getText("TXT_KEY_ERA_RENAISSANCE");
