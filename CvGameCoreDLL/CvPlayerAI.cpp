@@ -12495,13 +12495,9 @@ void CvPlayerAI::AI_doCivics()
     return;
   }
   // Absinthe: end
+
   // Absinthe: AI shouldn't want a revolution in the first 7 turns of the scenario either
-  int iScenarioStartTurn = 0; // 500 AD
-  if (getScenario() == SCENARIO_1200AD)
-  {
-    iScenarioStartTurn = 200; // 1200 AD
-  }
-  if (GC.getGameINLINE().getGameTurn() < iScenarioStartTurn + 7)
+  if (GC.getGameINLINE().getGameTurn() < getScenarioStartTurn() + getTurns(7))
   {
     return;
   }

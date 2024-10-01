@@ -2247,18 +2247,9 @@ void CvGame::update()
       gDLL->getInterfaceIFace()->setWorldBuilder(true);
     }
 
-    // TODO to rewrite
-    // Absinthe: identify the active scenario
-    int iScenarioStartTurn = 0; // 500 AD
-    if (getScenario() == SCENARIO_1200AD)
+    if (GET_PLAYER(getActivePlayer()).getInitialBirthTurn() > getScenarioStartTurn())
     {
-      iScenarioStartTurn = 200; // 1200 AD
-    }
-
-    // Absinthe: start Rhye's AIAutoPlay
-    if (GET_PLAYER(getActivePlayer()).getInitialBirthTurn() > iScenarioStartTurn)
-    {
-      if (getGameTurn() == iScenarioStartTurn)
+      if (getGameTurn() == getScenarioStartTurn())
       {
         setAIAutoPlay(1);
       }

@@ -2913,14 +2913,8 @@ void CvPlayer::doTurn()
   }
 
   // Absinthe: without this check, civics are set back to a 0 state after initialization in the 1st turn - for civs before the autoplay civ
-  // identify the active scenario
-  int iScenarioStartTurn = 0; // 500 AD
-  if (getScenario() == SCENARIO_1200AD)
-  {
-    iScenarioStartTurn = 200; // 1200 AD
-  }
   // enough to check on the first turn of the scenario
-  if (GC.getGameINLINE().getGameTurn() != iScenarioStartTurn)
+  if (GC.getGameINLINE().getGameTurn() != getScenarioStartTurn())
   {
     verifyCivics();
   }
