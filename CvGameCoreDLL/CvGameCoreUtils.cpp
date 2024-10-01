@@ -2573,7 +2573,8 @@ int getGameTurnForMonth(int iTurnMonth, int iStartYear, CalendarTypes eCalendar,
 
 // edead: end
 
-// Absinthe: identify the active scenario
+// Leoreth: identify the active scenario
+
 ScenarioTypes getScenario()
 {
   int iBurgundyNumber = 6; // Burgundy is the 7th civ
@@ -2581,6 +2582,28 @@ ScenarioTypes getScenario()
     return SCENARIO_500AD;
 
   return SCENARIO_1200AD; // Burgundy is unplayable in the 1200 AD scenario
+}
+
+int getScenarioStartYear(ScenarioTypes eScenario)
+{
+  if (eScenario == NO_SCENARIO)
+  {
+    eScenario = getScenario();
+  }
+
+  if (eScenario == SCENARIO_500AD)
+  {
+    return 500;
+  }
+  else
+  {
+    return 1200;
+  }
+}
+
+int getScenarioStartTurn()
+{
+  return getTurnForYear(getScenarioStartYear());
 }
 
 // these string functions should only be used under chipotle cheat code (not internationalized)
