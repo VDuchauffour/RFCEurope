@@ -2327,7 +2327,7 @@ def get_scenario():
         return Scenario.i1200AD
 
 
-def get_scenario_start_years(scenario=None):
+def get_scenario_start_year(scenario=None):
     """Return scenario start year given a scenario."""
     if scenario is None:
         scenario = get_scenario()
