@@ -132,11 +132,6 @@ int *historicalEnemyAIcheat = NULL;
 // and then only check that in CvPlot. We will set withinSpawnDate in CvGame.cpp
 bool withinSpawnDate = false;
 
-// 3Miro: Autorun hack
-int iAutorunUnit;
-int iAutorunX;
-int iAutorunY;
-
 // 3Miro: Commerse from Building + Civic
 int iCivicBuildingCommerse1 = -1;
 int iCivicBuildingCommerse2 = -1;

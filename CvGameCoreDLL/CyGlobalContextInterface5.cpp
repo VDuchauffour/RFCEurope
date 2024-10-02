@@ -143,9 +143,6 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext> &x)
       // set AI building prefs
       .def("setBuildingPref", &CyGlobalContext::setBuildingPref, "void ( int iCiv, int iBuilding, int iPref )") // 3Miro
 
-      // 3Miro: set Autorun Hack
-      .def("setAutorunHack", &CyGlobalContext::setAutorunHack, "void ( int iUnit, int iX, int iY )") // 3Miro
-
       // 3Miro: set Building + Civic combo
       .def("setBuildingCivicCommerseCombo1", &CyGlobalContext::setBuildingCivicCommerseCombo1,
            "void ( int iCode )") // 3Miro

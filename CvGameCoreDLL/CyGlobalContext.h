@@ -971,9 +971,6 @@ public:
   // 3Miro: set building preference
   void setBuildingPref(int iCiv, int iBuilding, int iPref);
 
-  // 3Miro: set Autorun Hack
-  void setAutorunHack(int iUnit, int iX, int iY);
-
   // 3Miro: set Building + Civic combo
   void setBuildingCivicCommerseCombo1(int iCode);
   void setBuildingCivicCommerseCombo2(int iCode);

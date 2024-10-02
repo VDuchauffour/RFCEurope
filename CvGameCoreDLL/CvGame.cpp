@@ -2247,15 +2247,15 @@ void CvGame::update()
       gDLL->getInterfaceIFace()->setWorldBuilder(true);
     }
 
-    if (GET_PLAYER(getActivePlayer()).getInitialBirthTurn() > getScenarioStartTurn())
+    if (getGameTurn() == getScenarioStartTurn() &&
+        GET_PLAYER(getActivePlayer()).getInitialBirthTurn() > getScenarioStartTurn())
     {
-      if (getGameTurn() == getScenarioStartTurn())
+      int iInitialBirthTurn = GET_PLAYER(getActivePlayer()).getInitialBirthTurn();
+      int iScenarioStartTurn = getScenarioStartTurn();
+      int iTurnsUntilBirth = iInitialBirthTurn - iScenarioStartTurn;
+      if (iTurnsUntilBirth > 0)
       {
-        setAIAutoPlay(1);
-      }
-      else if (getGameTurn() <= GET_PLAYER(getActivePlayer()).getInitialBirthTurn())
-      {
-        setAIAutoPlayCatapult(1);
+        setAIAutoPlay(iTurnsUntilBirth);
       }
     }
   }
@@ -3423,9 +3423,7 @@ void CvGame::reviveActivePlayer()
     //Speed: End Modify
     //Rhye - end
 
-    GET_PLAYER(getActivePlayer())
-        .initUnit(((UnitTypes)iAutorunUnit), iAutorunX,
-                  iAutorunY); //Rhye: catapult // Absinthe: coordinates handled in RiseAndFall.py and RFCEBalance.py
+    GET_PLAYER(getActivePlayer()).verifyAlive();
   }
 }
 
@@ -3974,107 +3972,6 @@ void CvGame::setAIAutoPlay(int iNewValue)
     }
   }
 }
-
-//Rhye - start
-void CvGame::setAIAutoPlayCatapult(int iNewValue)
-{
-  int iOldValue;
-  int iX, iY;
-
-  iOldValue = getAIAutoPlay();
-
-  if (iOldValue != iNewValue)
-  {
-    m_iAIAutoPlay = std::max(0, iNewValue);
-
-    if ((iOldValue == 0) && (getAIAutoPlay() > 0))
-    {
-      CvPlot *pPlot = GC.getMapINLINE().plotINLINE(iAutorunX, iAutorunY); // 3Miro: the plot
-      if (pPlot->isUnit())
-      {
-        GC.getMapINLINE()
-            .plotINLINE(iAutorunX, iAutorunY)
-            ->getUnitByIndex(0)
-            ->kill(false); // 3Miro catapult coordinates
-        for (int iI = 0; iI < MAX_PLAYERS; iI++)
-        {
-          if (GET_PLAYER((PlayerTypes)iI).isHuman())
-          {
-            iX = iAutorunX;
-            iY = iAutorunY;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX + 1;
-            iY = iAutorunY;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX;
-            iY = iAutorunY + 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX - 1;
-            iY = iAutorunY;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX;
-            iY = iAutorunY - 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX + 1;
-            iY = iAutorunY + 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX + 1;
-            iY = iAutorunY - 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX - 1;
-            iY = iAutorunY + 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            iX = iAutorunX - 1;
-            iY = iAutorunY - 1;
-            if ((iX >= 0) && (iX < EARTH_X) && (iY >= 0) && (iY < EARTH_Y))
-            {
-              GC.getMapINLINE().plotINLINE(iX, iY)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false,
-                                                                NO_TEAM, true);
-            }
-            break; // Absinthe: if it was already set for the human player, no reason to continue
-          }
-        }
-      }
-      else
-      {
-        logMsg("NO UNIT IN %d %d!!!", iAutorunX, iAutorunY); //Rhye
-      }
-    }
-  }
-}
-//Rhye - end
 
 void CvGame::changeAIAutoPlay(int iChange)
 {

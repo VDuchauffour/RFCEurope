@@ -1196,13 +1196,6 @@ void CyGlobalContext::setBuildingPref(int iCiv, int iBuilding, int iPref)
   buildingPrefs[iCiv * NUM_BUILDINGS + iBuilding] = iPref;
 };
 
-void CyGlobalContext::setAutorunHack(int iUnit, int iX, int iY)
-{
-  iAutorunUnit = iUnit;
-  iAutorunX = iX;
-  iAutorunY = iY;
-};
-
 void CyGlobalContext::setBuildingCivicCommerseCombo1(int iCode)
 {
   iCivicBuildingCommerse1 = iCode;

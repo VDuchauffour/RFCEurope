@@ -453,7 +453,5 @@ def set_other_parameters():
     )
     gc.setPapalPlayer(Civ.POPE, Religion.CATHOLICISM)
 
-    gc.setAutorunHack(Unit.CATAPULT, 32, 0)  # Autorun hack, sync with RNF module
-
     # 3MiroMercs: set the merc promotion
     gc.setMercPromotion(Promotion.MERC)

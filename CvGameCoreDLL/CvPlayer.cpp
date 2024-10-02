@@ -10844,13 +10844,18 @@ void CvPlayer::verifyAlive()
 
   if (isAlive())
   {
+    if (!isHuman() && GC.getGameINLINE().getGameTurn() < getInitialBirthTurn())
+    {
+      return;
+    }
+
     bKill = false;
 
     if (!bKill)
     {
       if (!isBarbarian())
       {
-        if (getNumCities() == 0 && getAdvancedStartPoints() < 0)
+        if (getNumCities() == 0 /*&& getAdvancedStartPoints() < 0*/)
         {
           if ((getNumUnits() == 0) ||
               (!(GC.getGameINLINE().isOption(GAMEOPTION_COMPLETE_KILLS)) && isFoundedFirstCity()))

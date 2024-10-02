@@ -352,12 +352,6 @@ extern int FAST_TERRAIN;
 // 3Miro: hack on the culture bug, see CvRhye.cpp
 extern bool withinSpawnDate;
 
-// 3Miro: autorun hack (a unit is created and destroyed every turn for the Human player)
-// we need a place to put the unit and a unit index
-extern int iAutorunUnit;
-extern int iAutorunX;
-extern int iAutorunY;
-
 // 3Miro: Commerce from Building + Civic
 extern int iCivicBuildingCommerse1;
 extern int iCivicBuildingCommerse2;
