@@ -612,9 +612,7 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
     {
       for (int iI = 0; iI < MAX_PLAYERS; iI++)
       {
-        // Absinthe: only if the player is also alive (no message in autoplay)
-        if ((GET_PLAYER((PlayerTypes)iI).isAlive()) &&
-            (GC.getGameINLINE().getGameTurn() >= GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getLastBirthTurn()))
+        if (GET_PLAYER((PlayerTypes)iI).isAlive())
         {
           szBuffer = gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey());
           gDLL->getInterfaceIFace()->addHumanMessage(

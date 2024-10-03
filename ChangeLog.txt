@@ -18,6 +18,7 @@ v1.6.5:
 
 - Can't trade city with plague
 - No financial trouble in the first 5 turns after spawn
+- Autoplay standby look has been improved
 
 v1.6.5: This release adds BUG and BULL mod
 
