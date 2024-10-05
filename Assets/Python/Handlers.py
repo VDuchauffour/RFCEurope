@@ -22,6 +22,7 @@ import Provinces
 import Religions
 import Resources
 import Resurrection
+import Rise
 import RiseAndFall
 import Secession
 import Stability
