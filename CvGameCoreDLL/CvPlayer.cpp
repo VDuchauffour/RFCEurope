@@ -10844,10 +10844,11 @@ void CvPlayer::verifyAlive()
 
   if (isAlive())
   {
-    if (!isHuman() && GC.getGameINLINE().getGameTurn() < getInitialBirthTurn())
-    {
-      return;
-    }
+    // TODO see https://github.com/dguenms/Dawn-of-Civilization/commit/50cda761aaebbc77c3d32b1b76085bf022ba7a9a
+    // if (!isHuman() && GC.getGameINLINE().getGameTurn() < getInitialBirthTurn())
+    // {
+    //   return;
+    // }
 
     bKill = false;
 
