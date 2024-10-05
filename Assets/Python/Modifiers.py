@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from Core import civilizations, log
+from Core import civilizations, log, year
 from CoreTypes import (
     Modifier,
     City,
@@ -25,7 +25,7 @@ from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from TimelineData import DateTurn
+from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
 from LocationsData import CITIES
 from Events import handler
 
@@ -48,6 +48,7 @@ def setup():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
+    set_tech_timeline_date()
     set_starting_workers()
     set_initial_building()
     set_building_preferences()
@@ -352,6 +353,11 @@ def set_religion_spread_factor():
     for civ in civilizations():
         for religion, threshold in civ.religion.spreading_threshold.items():
             gc.setReligionSpread(civ.id, religion, threshold)
+
+
+def set_tech_timeline_date():
+    for tech, turn in TIMELINE_TECH_MODIFIER:
+        gc.setTimelineTechDateForTech(tech, year(turn))
 
 
 def set_religion_benefit():
