@@ -1,5 +1,5 @@
 # ruff: noqa: F401
-import ScreenHandler
+import ScreensHandler
 
 import CityNameManager
 import Civilizations
