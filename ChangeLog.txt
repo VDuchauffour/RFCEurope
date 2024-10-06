@@ -19,6 +19,7 @@ v1.6.6:
 - Can't trade city with plague
 - No financial trouble in the first 5 turns after spawn for AI
 - Autoplay standby behavior and look has been improved (no more flashing when autoplay is actived)
+- Improve Dawn of Man screen
 
 v1.6.5: This release adds BUG and BULL mod
 
