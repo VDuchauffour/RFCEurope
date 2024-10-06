@@ -2,6 +2,7 @@
 import ScreensHandler
 
 import CityNameManager
+import DynamicCivs
 import Civilizations
 import History
 import Messages

@@ -44,7 +44,6 @@ def setup():
     update_city_name()
     update_lake_id()
     rename_cities_1200AD()
-    refresh_dynamic_civ_name()
     log("RFCE: Setup.setup()")
 
 
@@ -121,9 +120,3 @@ def rename_cities_1200AD():
     if get_scenario() == Scenario.i1200AD:
         for city in cities.owner(Civ.HUNGARY).entities():
             renameCities(city, Civ.HUNGARY)
-
-
-def refresh_dynamic_civ_name():
-    # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
-    for iPlayer in civilizations().majors().ids():
-        gc.getPlayer(iPlayer).processCivNames()
