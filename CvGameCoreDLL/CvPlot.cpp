@@ -7314,31 +7314,6 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
     }
     else
     {
-      // 3Miro: Nasty bug expelling units from territory on flip,
-      //			now if a plot is in someone's core, nobody gets culture there for 3 turns after spawn
-      /*if ( withinSpawnDate ){
-				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
-					int iI;
-					bool inBirthAndCore = false;
-					for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
-						if ( (startingTurn[iI]>=GC.getGameINLINE().getGameTurn()) && (startingTurn[iI]<=GC.getGameINLINE().getGameTurn()+3) && (getSettlersMaps( iI, getX_INLINE(), getX_INLINE(), NULL ) > 600) ){
-							inBirthAndCore = true;
-							break;
-						}
-					};
-					if ( inBirthAndCore ){
-						m_aiCulture[eIndex] = 0;
-
-					}else{
-						m_aiCulture[eIndex] = iNewValue;
-					};
-				}else{
-					m_aiCulture[eIndex] = iNewValue;
-				};
-			}else{
-				m_aiCulture[eIndex] = iNewValue;
-			};*/
-      //m_aiCulture[eIndex] = iNewValue;
       if (withinSpawnDate && iNewValue > getCulture(eIndex))
       {
         if ((eIndex >= NUM_MAJOR_PLAYERS) || (!MiroBelongToCore(eIndex, getX_INLINE(), getX_INLINE())))
@@ -7348,7 +7323,8 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
           int iGameTurn = GC.getGameINLINE().getGameTurn();
           for (iI = 0; iI < NUM_MAJOR_PLAYERS; iI++)
           {
-            if ((iGameTurn >= startingTurn[iI] - 1) && (iGameTurn < startingTurn[iI] + 2) &&
+            if ((iGameTurn >= GET_PLAYER((PlayerTypes)iI).getLastBirthTurn() - getTurns(1)) &&
+                (iGameTurn < GET_PLAYER((PlayerTypes)iI).getLastBirthTurn() + getTurns(2)) &&
                 (MiroBelongToCore(iI, getX_INLINE(), getX_INLINE())))
             {
               return;

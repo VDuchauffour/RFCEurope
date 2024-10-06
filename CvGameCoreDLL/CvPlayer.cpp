@@ -577,6 +577,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
   /* UNOFFICIAL_PATCH                        END                                                  */
   /************************************************************************************************/
 
+  //Leoreth
+  m_iInitialBirthTurn = 0;
+  m_iLastBirthTurn = 0;
+
   m_eID = eID;
   updateTeamType();
   updateHuman();
@@ -2909,15 +2913,8 @@ void CvPlayer::doTurn()
   }
 
   // Absinthe: without this check, civics are set back to a 0 state after initialization in the 1st turn - for civs before the autoplay civ
-  // identify the active scenario
-  int iScenarioStartTurn = 0; // 500 AD
-  if (getScenario() == SCENARIO_1200AD)
-  {
-    iScenarioStartTurn = 200; // 1200 AD
-  }
   // enough to check on the first turn of the scenario
-  //if ( GC.getGameINLINE().getGameTurn() >= startingTurn[getID()] )
-  if (GC.getGameINLINE().getGameTurn() != iScenarioStartTurn)
+  if (GC.getGameINLINE().getGameTurn() != getScenarioStartTurn())
   {
     verifyCivics();
   }
@@ -4324,7 +4321,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
     if (getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER)
     {
       // Absinthe: Don't even show city trading for the human player in the first 5 turns after spawn (avoid exploit with city gifting before the flip for additional units)
-      if (startingTurn[getID()] + 5 < GC.getGamePointer()->getGameTurn())
+      if (GC.getGameINLINE().getGameTurn() - getLastBirthTurn() > getTurns(5))
       {
         CvCity *pCityTraded = getCity(item.m_iData);
 
@@ -4632,8 +4629,9 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
     {
       return DENIAL_ATTITUDE;
     };
+    // Leoreth: recently spawned civs cannot become vassals
     // 3Miro: no vassals for 20 turns after spawn
-    if (startingTurn[getID()] + 20 < GC.getGamePointer()->getGameTurn())
+    if (GC.getGameINLINE().getGameTurn() - getLastBirthTurn() > getTurns(20))
     {
       return GET_TEAM(getTeam()).AI_vassalTrade(GET_PLAYER(eWhoTo).getTeam());
     }
@@ -10824,7 +10822,7 @@ void CvPlayer::setAlive(bool bNewValue)
 
 					for (iI = 0; iI < MAX_PLAYERS; iI++)
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive() && (GC.getGameINLINE().getGameTurn() >= startingTurn[GC.getGameINLINE().getActivePlayer()])) // Absinthe: no civ destroyed message during autoplay
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
 							gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVDESTROYED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 						}
@@ -10846,13 +10844,19 @@ void CvPlayer::verifyAlive()
 
   if (isAlive())
   {
+    // TODO see https://github.com/dguenms/Dawn-of-Civilization/commit/50cda761aaebbc77c3d32b1b76085bf022ba7a9a
+    // if (!isHuman() && GC.getGameINLINE().getGameTurn() < getInitialBirthTurn())
+    // {
+    //   return;
+    // }
+
     bKill = false;
 
     if (!bKill)
     {
       if (!isBarbarian())
       {
-        if (getNumCities() == 0 && getAdvancedStartPoints() < 0)
+        if (getNumCities() == 0 /*&& getAdvancedStartPoints() < 0*/)
         {
           if ((getNumUnits() == 0) ||
               (!(GC.getGameINLINE().isOption(GAMEOPTION_COMPLETE_KILLS)) && isFoundedFirstCity()))
@@ -17343,6 +17347,11 @@ void CvPlayer::read(FDataStreamBase *pStream)
   //pStream->ReadString(m_szCivShort);
   //pStream->ReadString(m_szCivAdj);
   //Rhye (jdog) -  end -----------------------
+
+  //Leoreth
+  pStream->Read(&m_iInitialBirthTurn);
+  pStream->Read(&m_iLastBirthTurn);
+
   pStream->Read((int *)&m_eID);
   pStream->Read((int *)&m_ePersonalityType);
   pStream->Read((int *)&m_eCurrentEra);
@@ -17853,6 +17862,11 @@ void CvPlayer::write(FDataStreamBase *pStream)
   //pStream->WriteString(m_szCivShort);
   //pStream->WriteString(m_szCivAdj);
   //Rhye (jdog) -  end -----------------------
+
+  //Leoreth
+  pStream->Write(m_iInitialBirthTurn);
+  pStream->Write(m_iLastBirthTurn);
+
   pStream->Write(m_eID);
   pStream->Write(m_ePersonalityType);
   pStream->Write(m_eCurrentEra);
@@ -24445,3 +24459,25 @@ void CvPlayer::addReminder(int iGameTurn, CvWString szMessage) const
   CvMessageControl::getInstance().sendAddReminder(getID(), iGameTurn, szMessage);
 }
 // BUG - Reminder Mod - end
+
+int CvPlayer::getInitialBirthTurn() const
+{
+  return m_iInitialBirthTurn;
+}
+
+void CvPlayer::setInitialBirthTurn(int iNewValue)
+{
+  m_iInitialBirthTurn = iNewValue;
+
+  setLastBirthTurn(iNewValue);
+}
+
+int CvPlayer::getLastBirthTurn() const
+{
+  return m_iLastBirthTurn;
+}
+
+void CvPlayer::setLastBirthTurn(int iNewValue)
+{
+  m_iLastBirthTurn = iNewValue;
+}

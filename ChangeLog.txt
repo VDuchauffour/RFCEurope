@@ -14,6 +14,12 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE enhancements:
 
+v1.6.6:
+
+- Can't trade city with plague
+- No financial trouble in the first 5 turns after spawn for AI
+- Autoplay standby behavior and look has been improved (no more flashing when autoplay is actived)
+
 v1.6.5: This release adds BUG and BULL mod
 
 - add BUG mod (v4.4)

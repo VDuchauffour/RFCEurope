@@ -633,6 +633,10 @@ public:
 
   //Leoreth
   int getDomainFreeExperience(int iDomainType);
+  int getInitialBirthTurn();
+  void setInitialBirthTurn(int iNewValue);
+  int getLastBirthTurn();
+  void setLastBirthTurn(int iNewValue);
 
 private:
   CvPlayer *m_pPlayer;

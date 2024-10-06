@@ -1,8 +1,7 @@
 from CvPythonExtensions import *
-from Core import civilization, civilizations, log
+from Core import civilizations, log, year
 from CoreTypes import (
     Modifier,
-    Building,
     City,
     Civ,
     Civic,
@@ -20,22 +19,37 @@ from CoreTypes import (
     FaithPointBonusCategory,
 )
 from MiscData import (
+    BUILDING_PREFERENCES,
     DIPLOMACY_MODIFIERS,
     HISTORICAL_ENEMIES,
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from TimelineData import DateTurn
+from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
 from LocationsData import CITIES
+from Events import handler
 
 gc = CyGlobalContext()
+
+
+@handler("GameStart")
+def setup_gamestart():
+    log("RFCE: GameStart")
+    setup()
+
+
+@handler("OnLoad")
+def setup_on_load():
+    log("RFCE: OnLoad")
+    setup()
 
 
 def setup():
     set_modifiers()
     set_diplomacy_modifier()
     set_tech_timeline_modifier()
-    set_starting_workers_modifier()
+    set_tech_timeline_date()
+    set_starting_workers()
     set_initial_building()
     set_building_preferences()
     set_unique_powers()
@@ -133,7 +147,7 @@ def set_diplomacy_modifier():
         gc.setDiplomacyModifiers(civ1, civ2, value)
 
 
-def set_starting_workers_modifier():
+def set_starting_workers():
     for civ in civilizations().majors():
         gc.setStartingWorkers(civ.id, civ.initial.workers)
 
@@ -163,21 +177,8 @@ def set_building_preferences():
     # the getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
     # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
     for civ in civilizations().majors():
-        gc.setBuildingPref(civ.id, Building.WALLS, 5)
-        gc.setBuildingPref(civ.id, Building.CASTLE, 7)
-        gc.setBuildingPref(civ.id, Building.MANOR_HOUSE, 5)
-        gc.setBuildingPref(civ.id, Building.COURTHOUSE, 5)
-        gc.setBuildingPref(civ.id, Building.NIGHT_WATCH, 3)
-        gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH, 5)
-        gc.setBuildingPref(civ.id, Building.MOSCOW_KREMLIN, 7)
-        gc.setBuildingPref(civ.id, Building.HUNGARIAN_STRONGHOLD, 7)
-        gc.setBuildingPref(civ.id, Building.SPANISH_CITADEL, 7)
-        gc.setBuildingPref(civ.id, Building.FRENCH_CHATEAU, 5)
-        gc.setBuildingPref(civ.id, Building.VENICE_NAVAL_BASE, 5)
-        gc.setBuildingPref(civ.id, Building.KIEV_VECHE, 5)
-        gc.setBuildingPref(civ.id, Building.HOLY_ROMAN_RATHAUS, 5)
-        gc.setBuildingPref(civ.id, Building.LITHUANIAN_VOIVODESHIP, 5)
-        gc.setBuildingPref(civ.id, Building.SWEDISH_TENNANT, 3)
+        for building, preference in BUILDING_PREFERENCES:
+            gc.setBuildingPref(civ.id, building, preference)
 
     for civ in civilizations():
         ai_modifier = civ.ai.modifiers.get(Modifier.BUILDING_PREFERENCE)
@@ -354,6 +355,11 @@ def set_religion_spread_factor():
             gc.setReligionSpread(civ.id, religion, threshold)
 
 
+def set_tech_timeline_date():
+    for tech, turn in TIMELINE_TECH_MODIFIER:
+        gc.setTimelineTechDateForTech(tech, year(turn))
+
+
 def set_religion_benefit():
     # gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
     # 	note that for powers iParameter = -1 means that this religion doesn't have this power (-1 is the default)
@@ -427,7 +433,7 @@ def set_other_parameters():
 
     # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
     # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-    gc.setPsychoAICheat(Civ.OTTOMAN, *civilization(Civ.BYZANTIUM).location.capital)
+    gc.setPsychoAICheat(Civ.OTTOMAN, *CITIES[City.CONSTANTINOPLE])
 
     # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
     # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
@@ -452,8 +458,6 @@ def set_other_parameters():
         Civ.BARBARIAN,
     )
     gc.setPapalPlayer(Civ.POPE, Religion.CATHOLICISM)
-
-    gc.setAutorunHack(Unit.CATAPULT, 32, 0)  # Autorun hack, sync with RNF module
 
     # 3MiroMercs: set the merc promotion
     gc.setMercPromotion(Promotion.MERC)

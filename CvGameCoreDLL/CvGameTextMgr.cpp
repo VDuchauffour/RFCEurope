@@ -261,8 +261,7 @@ void CvGameTextMgr::setDateStr(CvWString &szString, int iGameTurn, bool bSave, C
 void CvGameTextMgr::setDateStrPlayer(CvWString &szString, int iGameTurn, bool bSave, CalendarTypes eCalendar,
                                      int iStartYear, GameSpeedTypes eSpeed, PlayerTypes ePlayer)
 {
-  // Absinthe: this displays either the year (with calendar, which is tech O in RFCE) or the current era
-  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)CALENDAR) || iGameTurn < startingTurn[ePlayer])
+  if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)CALENDAR) || GC.getGameINLINE().getAIAutoPlay() > 0)
     setDateStr(szString, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
   else if (GET_PLAYER(ePlayer).getCurrentEra() >= 3)
     szString = gDLL->getText("TXT_KEY_ERA_RENAISSANCE");
@@ -274,10 +273,6 @@ void CvGameTextMgr::setDateStrPlayer(CvWString &szString, int iGameTurn, bool bS
     szString = gDLL->getText("TXT_KEY_ERA_EARLY_MEDIEVAL");
   if (bSave)
     szString = szString + " " + gDLL->getText("TXT_KEY_SAVEGAME_TURN", (iGameTurn));
-  /*if (gDLL->getCurrentLanguage() == 0)
-				szString = szString + " " + gDLL->getText("TXT_KEY_SAVEGAME_TURN", (iGameTurn));
-		else
-				szString = gDLL->getText("TXT_KEY_SAVEGAME_TURN", (iGameTurn));*/
 }
 
 void CvGameTextMgr::setTimeStr(CvWString &szString, int iGameTurn, bool bSave)

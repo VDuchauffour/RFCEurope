@@ -2837,6 +2837,8 @@ enum CivilopediaWidgetShowTypes
 // Absinthe: scenario types and identification
 enum ScenarioTypes
 {
+  NO_SCENARIO = -1,
+
   SCENARIO_500AD,
   SCENARIO_1200AD,
   NUM_SCENARIO_TYPES,

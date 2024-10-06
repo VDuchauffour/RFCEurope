@@ -390,8 +390,9 @@ int getGameTurnForMonth(int iTurnMonth, int iStartYear, CalendarTypes eCalendar,
 int getTurns(int iTurns);
 // edead: end
 
-// Absinthe: scenario types and identification
-ScenarioTypes getScenario();
+ScenarioTypes getScenario();                                     // Leoreth
+int getScenarioStartYear(ScenarioTypes eScenario = NO_SCENARIO); // Leoreth
+int getScenarioStartTurn();                                      // Leoreth
 
 void getDirectionTypeString(CvWString &szString, DirectionTypes eDirectionType);
 void getCardinalDirectionTypeString(CvWString &szString, CardinalDirectionTypes eDirectionType);

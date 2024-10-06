@@ -3640,18 +3640,13 @@ bool CvPlayerAI::AI_avoidScience() const
 // XXX
 bool CvPlayerAI::AI_isFinancialTrouble() const
 {
-  //if (getCommercePercent(COMMERCE_GOLD) > 50)
   {
-    //Rhye - start
-    int iGameTurn = GC.getGameINLINE().getGameTurn();
-    if (iGameTurn == startingTurn[getID()] || iGameTurn == startingTurn[getID()] + 1 ||
-        iGameTurn == startingTurn[getID()] + 2)
+    // Leoreth: be generous with recently started civs
+    if (GC.getGameINLINE().getGameTurn() < getLastBirthTurn() + getTurns(5))
+    {
       return false;
-    // 3Miro
-    /*if (!GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) //late start condition
-			if (iGameTurn <= 153)
-				return false;*/
-    //Rhye - end
+    }
+
     int iNetCommerce =
         1 + getCommerceRate(COMMERCE_GOLD) + getCommerceRate(COMMERCE_RESEARCH) + std::max(0, getGoldPerTurn());
     /************************************************************************************************/
@@ -8179,6 +8174,11 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity *pCity, PlayerTypes ePlayer) const
   }
   //Rhye - end
 
+  if (isHuman() && (pCity->getNumActiveBuilding((BuildingTypes)(BUILDING_PLAGUE)) > 0))
+  {
+    return DENIAL_NO_GAIN;
+  }
+
   // Absinthe: no city trading for the Pope and from the Pope
   if ((getID() == PAPAL_PLAYER) || (ePlayer == PAPAL_PLAYER))
   {
@@ -8186,8 +8186,8 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity *pCity, PlayerTypes ePlayer) const
   }
 
   // Absinthe: don't enable city trading/gifting in the first 5 turns after spawn (avoid exploit for additional units with city gifting before the flip)
-  if (startingTurn[ePlayer] + 5 > GC.getGamePointer()->getGameTurn() &&
-      startingTurn[ePlayer] <= GC.getGamePointer()->getGameTurn())
+  if ((GC.getGameINLINE().getGameTurn() - GET_PLAYER(ePlayer).getLastBirthTurn() < getTurns(5)) &&
+      (GET_PLAYER(ePlayer).getLastBirthTurn() <= GC.getGameINLINE().getGameTurn()))
   {
     return DENIAL_NO_GAIN;
   }
@@ -12490,18 +12490,14 @@ void CvPlayerAI::AI_doCivics()
   }
 
   // Absinthe: AI shouldn't want a revolution in the first 10 turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
-  if (GC.getGameINLINE().getGameTurn() < startingTurn[getID()] + 10)
+  if (GC.getGameINLINE().getGameTurn() < getLastBirthTurn() + getTurns(10))
   {
     return;
   }
   // Absinthe: end
+
   // Absinthe: AI shouldn't want a revolution in the first 7 turns of the scenario either
-  int iScenarioStartTurn = 0; // 500 AD
-  if (getScenario() == SCENARIO_1200AD)
-  {
-    iScenarioStartTurn = 200; // 1200 AD
-  }
-  if (GC.getGameINLINE().getGameTurn() < iScenarioStartTurn + 7)
+  if (GC.getGameINLINE().getGameTurn() < getScenarioStartTurn() + getTurns(7))
   {
     return;
   }
@@ -15250,7 +15246,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
   }
 
   // Absinthe: prevent AI units from being disbanded for 20 turns after spawn - idea from SoI
-  if (getID() < NUM_MAJOR_PLAYERS && GC.getGame().getGameTurn() < startingTurn[getID()] + 20)
+  // TODO clean NUM_MAJOR_PLAYERS
+  if (getID() < NUM_MAJOR_PLAYERS && GC.getGame().getGameTurn() < getLastBirthTurn() + getTurns(20))
   {
     return false;
   }

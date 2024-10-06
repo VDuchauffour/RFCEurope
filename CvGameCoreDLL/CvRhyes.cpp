@@ -5,7 +5,6 @@
 
 // rhyes.cpp
 
-int *startingTurn = NULL;
 int *turnPlayed = NULL;
 int *civSpreadFactor = NULL;
 
@@ -132,11 +131,6 @@ int *historicalEnemyAIcheat = NULL;
 // once a turn we will check if we are within 3 turns of someone's spawn, if so, then set withinSpawnDate = true
 // and then only check that in CvPlot. We will set withinSpawnDate in CvGame.cpp
 bool withinSpawnDate = false;
-
-// 3Miro: Autorun hack
-int iAutorunUnit;
-int iAutorunX;
-int iAutorunY;
 
 // 3Miro: Commerse from Building + Civic
 int iCivicBuildingCommerse1 = -1;

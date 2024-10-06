@@ -24,7 +24,7 @@ from Core import (
 from Events import handler, popup_handler
 from PyUtils import percentage, percentage_chance, rand, choice
 from ProvinceMapData import PROVINCES_MAP
-from CityNameManager import lookupName
+from CityNameManager import lookup_name
 from RFCUtils import convertPlotCulture, getMaster, getUniqueUnit, isAVassal
 from StoredData import data
 import random
@@ -1034,9 +1034,9 @@ def startCrusade():
     if iTargetPlayer == iHuman:
         underCrusadeAttackPopup(pTargetCity.getName(), iLeader)
     elif player().isExisting():
-        sCityName = lookupName(pTargetCity, Civ.POPE)
+        sCityName = lookup_name(pTargetCity, Civ.POPE)
         if sCityName == "Unknown":
-            sCityName = lookupName(pTargetCity, iLeader)
+            sCityName = lookup_name(pTargetCity, iLeader)
         sText = text(
             "TXT_KEY_CRUSADE_START",
             player(iLeader).getCivilizationAdjectiveKey(),
@@ -1148,9 +1148,9 @@ def crusadeArrival(iActiveCrusade):
         crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
         if human() == iLeader:
             pTargetCity = gc.getMap().plot(iTX, iTY).getPlotCity()
-            sCityName = lookupName(pTargetCity, Civ.POPE)
+            sCityName = lookup_name(pTargetCity, Civ.POPE)
             if sCityName == "Unknown":
-                sCityName = lookupName(pTargetCity, iLeader)
+                sCityName = lookup_name(pTargetCity, iLeader)
             message(
                 iLeader,
                 text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",

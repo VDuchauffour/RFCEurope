@@ -1,10 +1,8 @@
 from CvPythonExtensions import CyGlobalContext
-from CityNameManager import renameCities
-from CoreTypes import Civ, Scenario, Area, AreaType
+from CoreTypes import Area, AreaType
 from Events import handler
 from Core import (
     civilizations,
-    get_scenario,
     get_data_from_upside_down_map,
     get_data_from_province_map,
     location,
@@ -12,7 +10,6 @@ from Core import (
     plot as _plot,
     location as _location,
     plots,
-    cities,
 )
 from LocationsData import LAKE_LOCATIONS
 from CityMapData import CITIES_MAP
@@ -43,8 +40,6 @@ def setup():
     update_province_id()
     update_city_name()
     update_lake_id()
-    rename_cities_1200AD()
-    refresh_dynamic_civ_name()
     log("RFCE: Setup.setup()")
 
 
@@ -112,18 +107,3 @@ def set_vizualization_areas():
     # hold down the alt key, and hover over the map
     gc.setCoreToPlot(gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
     gc.setNormalToPlot(gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
-
-
-def rename_cities_1200AD():
-    # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
-    #             some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
-    #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
-    if get_scenario() == Scenario.i1200AD:
-        for city in cities.owner(Civ.HUNGARY).entities():
-            renameCities(city, Civ.HUNGARY)
-
-
-def refresh_dynamic_civ_name():
-    # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
-    for iPlayer in civilizations().majors().ids():
-        gc.getPlayer(iPlayer).processCivNames()

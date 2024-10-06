@@ -560,15 +560,6 @@ CvTurnTimerInfo *CyGlobalContext::getTurnTimerInfo(int i) const
 }
 
 // 3Miro: Balancing functions
-void CyGlobalContext::setStartingTurn(int iCiv, int iVal)
-{
-  /*if ( startingTurn == NULL ){
-		startingTurn = new int[NUM_ALL_PLAYERS_B];
-		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) startingTurn[i] = 0;
-	};*/
-  startingTurn[iCiv] = iVal;
-};
-
 void CyGlobalContext::setCityClusterAI(int iCiv, int iTop, int iBottom, int iMinus)
 {
   /*if ( cityClusterTop == NULL || cityClusterBottom == NULL || cityClusterMinus == NULL ){
@@ -714,9 +705,6 @@ void CyGlobalContext::setSizeNPlayers(int iMaxX, int iMaxY, int iNumPlayers, int
     NormalAreasMinus[i] = NULL;
     //ProsecutionCount[i] = 0;
   };
-  startingTurn = new int[NUM_ALL_PLAYERS_B];
-  for (int i = 0; i < NUM_ALL_PLAYERS_B; i++)
-    startingTurn[i] = 0;
 
   growthThresholdAI = new int[NUM_ALL_PLAYERS_B];
   for (int i = 0; i < NUM_ALL_PLAYERS_B; i++)
@@ -1137,11 +1125,6 @@ void CyGlobalContext::setIndependnets(int iIndyStart, int iIndyEnd, int iBarb)
   AI_INDEP_HUNT = new bool[INDEP_END - INDEP_START + 1];
 };
 
-int CyGlobalContext::getStartingTurn(int iCiv)
-{
-  return startingTurn[iCiv];
-};
-
 void CyGlobalContext::setPapalPlayer(int iCiv, int iReligion)
 {
   PAPAL_PLAYER = iCiv;
@@ -1211,13 +1194,6 @@ void CyGlobalContext::setFastTerrain(int iFastTerrain)
 void CyGlobalContext::setBuildingPref(int iCiv, int iBuilding, int iPref)
 {
   buildingPrefs[iCiv * NUM_BUILDINGS + iBuilding] = iPref;
-};
-
-void CyGlobalContext::setAutorunHack(int iUnit, int iX, int iY)
-{
-  iAutorunUnit = iUnit;
-  iAutorunX = iX;
-  iAutorunY = iY;
 };
 
 void CyGlobalContext::setBuildingCivicCommerseCombo1(int iCode)

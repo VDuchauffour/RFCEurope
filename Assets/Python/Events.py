@@ -19,13 +19,28 @@ def handler(event):
     return handler_decorator
 
 
-def noop(*args, **kwargs):
-    pass
-
-
 def popup_handler(event_id):
     def handler_decorator(func):
         events.addCustomEvent(event_id, func.__name__, func, noop)
         return func
 
     return handler_decorator
+
+
+def noop(*args, **kwargs):
+    pass
+
+
+events.addEvent("firstCity")
+
+
+@handler("cityAcquiredAndKept")
+def firstCityOnCityAcquiredAndKept(iPlayer, city):
+    if city.isCapital():
+        events.fireEvent("firstCity", city)
+
+
+@handler("cityBuilt")
+def firstCityOnCityBuilt(city):
+    if city.isCapital():
+        events.fireEvent("firstCity", city)

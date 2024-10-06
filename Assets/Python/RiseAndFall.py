@@ -10,6 +10,7 @@ from Civilizations import (
     create_starting_workers,
     set_starting_diplomacy_1200AD,
     set_starting_faith,
+    set_starting_turns,
 )
 from Consts import MessageData
 from Core import (
@@ -94,6 +95,7 @@ iBetrayalThreshold = 66
 
 @handler("GameStart")
 def setup():
+    set_starting_turns()
     setEarlyLeaders()
 
     if get_scenario() == Scenario.i500AD:

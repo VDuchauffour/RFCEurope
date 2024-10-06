@@ -258,7 +258,6 @@ extern int MAX_NUM_TECHS;
 extern int NUM_BUILDINGS; // Plague is the last "building"
 #define BUILDING_PLAGUE (NUM_BUILDINGS - 1)
 
-extern int *startingTurn;
 extern int *turnPlayed;      // 3Miro: overkill but leave it
 extern int *civSpreadFactor; // 3Miro: includes major players, minor players, indeps and barbs
 
@@ -352,12 +351,6 @@ extern int FAST_TERRAIN;
 
 // 3Miro: hack on the culture bug, see CvRhye.cpp
 extern bool withinSpawnDate;
-
-// 3Miro: autorun hack (a unit is created and destroyed every turn for the Human player)
-// we need a place to put the unit and a unit index
-extern int iAutorunUnit;
-extern int iAutorunX;
-extern int iAutorunY;
 
 // 3Miro: Commerce from Building + Civic
 extern int iCivicBuildingCommerse1;

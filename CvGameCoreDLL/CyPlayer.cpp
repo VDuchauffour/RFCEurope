@@ -2623,3 +2623,29 @@ int CyPlayer::getDomainFreeExperience(int iDomainType)
 {
   return m_pPlayer ? m_pPlayer->getDomainFreeExperience((DomainTypes)iDomainType) : -1;
 }
+
+int CyPlayer::getInitialBirthTurn()
+{
+  return m_pPlayer ? m_pPlayer->getInitialBirthTurn() : -1;
+}
+
+void CyPlayer::setInitialBirthTurn(int iNewValue)
+{
+  if (m_pPlayer)
+  {
+    m_pPlayer->setInitialBirthTurn(iNewValue);
+  }
+}
+
+int CyPlayer::getLastBirthTurn()
+{
+  return m_pPlayer ? m_pPlayer->getLastBirthTurn() : -1;
+}
+
+void CyPlayer::setLastBirthTurn(int iNewValue)
+{
+  if (m_pPlayer)
+  {
+    m_pPlayer->setLastBirthTurn(iNewValue);
+  }
+}

@@ -19,9 +19,6 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext> &x)
 
   x
       // 3Miro balancing stuff, expose to Python
-      .def("setStartingTurn", &CyGlobalContext::setStartingTurn, "void (int iCiv, int iVal)") // 3Miro
-      .def("getStartingTurn", &CyGlobalContext::getStartingTurn, "int (int iCiv )")           // 3Miro
-
       .def("setGrowthModifiersAI", &CyGlobalContext::setGrowthModifiersAI,
            "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
       .def("setProductionModifiersAI", &CyGlobalContext::setProductionModifiersAI,
@@ -40,7 +37,6 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext> &x)
       .def("setInitialBuilding", &CyGlobalContext::setInitialBuilding,
            "void ( int iCiv, int iBuilding, bool w )") // 3Miro
 
-      .def("setStartingTurn", &CyGlobalContext::setStartingTurn, "void (int iCiv, int iVal)") // 3Miro
       .def("setCityClusterAI", &CyGlobalContext::setCityClusterAI,
            "void (int iCiv, int iTop, int iBottom, int iMinus )")                                       // 3Miro
       .def("setCityWarDistanceAI", &CyGlobalContext::setCityWarDistanceAI, "void (int iCiv, int iVal)") // 3Miro
@@ -146,9 +142,6 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext> &x)
 
       // set AI building prefs
       .def("setBuildingPref", &CyGlobalContext::setBuildingPref, "void ( int iCiv, int iBuilding, int iPref )") // 3Miro
-
-      // 3Miro: set Autorun Hack
-      .def("setAutorunHack", &CyGlobalContext::setAutorunHack, "void ( int iUnit, int iX, int iY )") // 3Miro
 
       // 3Miro: set Building + Civic combo
       .def("setBuildingCivicCommerseCombo1", &CyGlobalContext::setBuildingCivicCommerseCombo1,

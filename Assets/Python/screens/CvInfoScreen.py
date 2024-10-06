@@ -7,7 +7,7 @@ import math
 from CvPythonExtensions import *
 from Civilizations import has_date_revealed
 from CoreTypes import Scenario
-from Core import colortext, get_scenario, get_scenario_start_years, is_independent_civ, text, turn
+from Core import colortext, get_scenario, get_scenario_start_year, is_independent_civ, text, turn
 import CvUtil
 
 import string
@@ -3284,7 +3284,7 @@ class CvInfoScreen:
 
                 # Absinthe: top5 city foundation text
                 if has_date_revealed():
-                    if iTurnYear <= get_scenario_start_years():
+                    if iTurnYear <= get_scenario_start_year():
                         if get_scenario() == Scenario.i500AD:
                             szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_500AD")
                         else:
@@ -3292,7 +3292,7 @@ class CvInfoScreen:
                     else:
                         szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                 else:
-                    if iTurnYear <= get_scenario_start_years():
+                    if iTurnYear <= get_scenario_start_year():
                         szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_ERA")
                     elif iTurnYear >= 1500:
                         szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
@@ -3834,7 +3834,7 @@ class CvInfoScreen:
                 # Absinthe: wonder foundation text
                 iTurnYear = self.aiTurnYearBuilt[self.iActiveWonderCounter]
                 if iTurnYear != -9999:  # -9999 used for wonders in progress
-                    if iTurnYear <= get_scenario_start_years():
+                    if iTurnYear <= get_scenario_start_year():
                         szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_START")
                     else:
                         if has_date_revealed():

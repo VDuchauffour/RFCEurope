@@ -216,6 +216,8 @@ def resurectCiv(iDeadCiv):
     # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
     onRespawn(iDeadCiv)
 
+    pDeadCiv.setLastBirthTurn(iGameTurn)
+
     # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
     # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
     leaders = civilization(iDeadCiv).leaders[LeaderType.LATE]

@@ -1193,26 +1193,6 @@ bool CvTeam::canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal) const
 
 bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 {
-
-  // 3MiroPAPAL: war with the pope
-  if (eTeam == PAPAL_PLAYER || getID() == PAPAL_PLAYER)
-  {
-    return false;
-  };
-
-  // 3Miro: Cannot Declare War for 5 turns after player spawn - variable exported into python
-  int iPlayer = GET_TEAM(eTeam).getLeaderID();
-  // Absinthe: this originally meant that no wars at all in the first 5 turns after 500 AD, but now you can declare on indies and barbs anytime
-  if (eTeam < NUM_MAJOR_PLAYERS)
-  {
-    if (GC.getGameINLINE().getGameTurn() < startingTurn[iPlayer] + iPeaceTurnsAfterSpawn)
-    {
-      return false;
-    }
-  }
-  // Absinthe: end
-  // 3Miro: end
-
   if (eTeam == getID())
   {
     return false;
@@ -1257,6 +1237,22 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
   if (GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_PEACE))
   {
     return false;
+  }
+
+  // Voigt: can't war with the pope
+  if (eTeam == PAPAL_PLAYER || getID() == PAPAL_PLAYER)
+  {
+    return false;
+  };
+
+  // Leoreth: protect recently spawned civs for ten turns to avoid early attack exploits
+  if (!GET_TEAM(eTeam).isMinorCiv() && !GET_TEAM(eTeam).isBarbarian())
+  {
+    if (GC.getGameINLINE().getGameTurn() <
+        GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).getLastBirthTurn() + getTurns(iPeaceTurnsAfterSpawn))
+    {
+      return false;
+    }
   }
 
   if (GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
@@ -4933,10 +4929,7 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 
         for (iI = 0; iI < MAX_PLAYERS; iI++)
         {
-          if ((GET_PLAYER((PlayerTypes)iI).isAlive()) &&
-              (GC.getGameINLINE().getGameTurn() >=
-               startingTurn[GC.getGameINLINE()
-                                .getActivePlayer()])) // Absinthe: no project completed message during autoplay
+          if (GET_PLAYER((PlayerTypes)iI).isAlive())
           {
             //szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_HAS_COMPLETED", getName().GetCString(), GC.getProjectInfo(eIndex).getTextKeyWide()); //Rhye
             szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_HAS_COMPLETED",

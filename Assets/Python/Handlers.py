@@ -1,7 +1,8 @@
 # ruff: noqa: F401
-import ScreenHandler
+import ScreensHandler
 
 import CityNameManager
+import DynamicCivs
 import Civilizations
 import History
 import Messages
@@ -22,6 +23,7 @@ import Provinces
 import Religions
 import Resources
 import Resurrection
+import Rise
 import RiseAndFall
 import Secession
 import Stability
