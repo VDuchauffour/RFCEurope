@@ -1,5 +1,5 @@
 from CvPythonExtensions import CyGlobalContext
-from CityNameManager import renameCities
+from CityNameManager import rename_cities
 from CoreTypes import Civ, Scenario, Area, AreaType
 from Events import handler
 from Core import (
@@ -119,4 +119,4 @@ def rename_cities_1200AD():
     #             thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
     if get_scenario() == Scenario.i1200AD:
         for city in cities.owner(Civ.HUNGARY).entities():
-            renameCities(city, Civ.HUNGARY)
+            rename_cities(city, Civ.HUNGARY)
