@@ -27,8 +27,6 @@ class CvDawnOfMan:
     def __init__(self, iScreenID):
         self.iScreenID = iScreenID
 
-        self.iLastTurn = -1
-
         self.X_SCREEN = 0
         self.Y_SCREEN = 0
         self.W_SCREEN = 1024
@@ -79,6 +77,7 @@ class CvDawnOfMan:
 
     def interfaceScreen(self):
         "Use a popup to display the opening text"
+        self.iLastTurn = -1
         if CyGame().isPitbossHost():
             return
 
@@ -170,7 +169,6 @@ class CvDawnOfMan:
         screen.setStackedBarColors(
             "ProgressBar", InfoBarTypes.INFOBAR_EMPTY, gc.getInfoTypeForString("COLOR_EMPTY")
         )
-        self.iTurnsRemaining = -1
 
         screen.addMultilineText(
             "BodyText",
