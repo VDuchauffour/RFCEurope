@@ -18,8 +18,7 @@ v1.6.6:
 
 - Can't trade city with plague
 - No financial trouble in the first 5 turns after spawn
-- Autoplay standby look has been improved
-- No more flashing when autoplay is actived
+- Autoplay standby behavior and look has been improved (no more flashing when autoplay is actived)
 
 v1.6.5: This release adds BUG and BULL mod
 
