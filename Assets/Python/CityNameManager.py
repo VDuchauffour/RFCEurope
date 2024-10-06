@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from Core import civilizations, get_data_from_upside_down_map
+from Core import civilizations, get_data_from_upside_down_map, cities
 from CityMapData import CITIES_MAP
 from Events import handler
 
@@ -14,6 +14,14 @@ def on_city_built(city):
 @handler("cityAcquired")
 def on_city_acquired(iOwner, iNewOwner, city):
     rename_cities(city, iNewOwner)
+
+
+@handler("GameStart")
+def on_game_start():
+    # the WB file cannot handle special chars and long names properly
+    # some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
+    for city in cities.majors().entities():
+        rename_cities(city, city.getOwner())
 
 
 def assign_name(city):
