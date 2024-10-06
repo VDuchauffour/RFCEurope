@@ -10,7 +10,14 @@ import CvCameraControls
 import CvUtil
 import PyHelpers
 import Popup as PyPopup
-from Core import get_data_from_upside_down_map, human, player, text
+from Core import (
+    civilization,
+    get_data_from_upside_down_map,
+    get_scenario_start_turn,
+    human,
+    player,
+    text,
+)
 from MiscData import MODNET_EVENTS
 from CityMapData import CITIES_MAP
 from Events import events, handler
@@ -159,24 +166,27 @@ def onLoadGame():
 def onGameStart():
     # Rhye - Dawn of Man must appear in late starts too
     # Duplicate with Assets/Python/Contrib/CvAllErasDawnOfManScreenEventManager.py
-    if (
-        gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA")
-        or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)
-    ) and player().isAlive():
-        popupInfo = CyPopupInfo()
-        popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-        popupInfo.setText(u"showDawnOfMan")
-        popupInfo.addPopup(human())
+    if gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(
+        GameOptionTypes.GAMEOPTION_ADVANCED_START
+    ):
+        if civilization().date.birth <= get_scenario_start_turn():
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+            popupInfo.setText(u"showDawnOfMan")
+            popupInfo.addPopup(human())
     else:
-        CyInterface().setSoundSelectionReady(True)
+        CyInterface().setSoundSelectionReady(true)
 
-    if gc.getGame().isPbem() and player().isAlive():
-        popupInfo = CyPopupInfo()
-        popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-        popupInfo.setOption1(True)
-        popupInfo.addPopup(human())
+        if gc.getGame().isPbem():
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if player.isAlive() and player.isHuman():
+                    popupInfo = CyPopupInfo()
+                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
+                    popupInfo.setOption1(true)
+                    popupInfo.addPopup(iPlayer)
 
-    CvAdvisorUtils.resetNoLiberateCities()
+        CvAdvisorUtils.resetNoLiberateCities()
 
 
 @handler("BeginGameTurn")

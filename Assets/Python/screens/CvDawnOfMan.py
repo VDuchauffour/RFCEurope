@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 
 import math
-from Core import civilization, text, turn, get_scenario_start_turn
+from Core import civilization, human, text, get_scenario_start_turn, turns, game
 import CvUtil
 from CvPythonExtensions import *
 
@@ -27,31 +27,31 @@ class CvDawnOfMan:
     def __init__(self, iScreenID):
         self.iScreenID = iScreenID
 
+        self.iLastTurn = -1
+
         self.X_SCREEN = 0
         self.Y_SCREEN = 0
         self.W_SCREEN = 1024
         self.H_SCREEN = 768
 
-        self.X_MAIN_PANEL = 238  # position of the main panel's top-left corner: pixels from left side of the screen
-        self.Y_MAIN_PANEL = 180  # pixels from top of the screen
-        self.W_MAIN_PANEL = 556  # number of pixels wide
-        self.H_MAIN_PANEL = 355  # number of pixels height
+        self.X_MAIN_PANEL = 250
+        self.Y_MAIN_PANEL = 190
+        self.W_MAIN_PANEL = 550
+        self.H_MAIN_PANEL = 350
 
         self.iMarginSpace = 15
 
         self.X_HEADER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
-        self.Y_HEADER_PANEL = self.Y_MAIN_PANEL + 10  # self.iMarginSpace
+        self.Y_HEADER_PANEL = self.Y_MAIN_PANEL + self.iMarginSpace
         self.W_HEADER_PANEL = self.W_MAIN_PANEL - (self.iMarginSpace * 2)
-        self.H_HEADER_PANEL = self.H_MAIN_PANEL - 146  # int(self.H_MAIN_PANEL * (2.0 / 5.0))
+        self.H_HEADER_PANEL = int(self.H_MAIN_PANEL * (2.0 / 5.0))
 
         self.X_LEADER_ICON = self.X_HEADER_PANEL + self.iMarginSpace
         self.Y_LEADER_ICON = self.Y_HEADER_PANEL + self.iMarginSpace
-        self.H_LEADER_ICON = self.H_HEADER_PANEL - (15 * 2)  # 140
-        self.W_LEADER_ICON = int(self.H_LEADER_ICON / 1.272727)  # 110
+        self.H_LEADER_ICON = self.H_HEADER_PANEL - (15 * 2)
+        self.W_LEADER_ICON = int(self.H_LEADER_ICON / 1.272727)
 
-        self.X_LEADER_TITLE_TEXT = (
-            505  # iXHeaderPanelRemainingAfterLeader + (iWHeaderPanelRemainingAfterLeader / 2)
-        )
+        self.X_LEADER_TITLE_TEXT = 505
         self.Y_LEADER_TITLE_TEXT = self.Y_HEADER_PANEL + self.iMarginSpace + 6
         self.W_LEADER_TITLE_TEXT = self.W_HEADER_PANEL / 3 + 10
         self.H_LEADER_TITLE_TEXT = self.H_HEADER_PANEL / 2
@@ -61,25 +61,19 @@ class CvDawnOfMan:
         self.Y_FANCY_ICON = self.Y_LEADER_TITLE_TEXT - 6
         self.WH_FANCY_ICON = 64
 
-        self.X_STATS_TEXT = (
-            self.X_FANCY_ICON1
-        )  # + self.W_LEADER_ICON + (self.iMarginSpace * 2) + 5
+        self.X_STATS_TEXT = self.X_FANCY_ICON1
         self.Y_STATS_TEXT = self.Y_LEADER_TITLE_TEXT + 75
         self.W_STATS_TEXT = int(self.W_HEADER_PANEL * (5.25 / 7.0))
         self.H_STATS_TEXT = int(self.H_HEADER_PANEL * (2.25 / 5.0))
 
         self.X_TEXT_PANEL = self.X_HEADER_PANEL
-        self.Y_TEXT_PANEL = (
-            self.Y_HEADER_PANEL + self.iMarginSpace
-        )  # 10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10        self.W_TEXT_PANEL = self.W_HEADER_PANEL
+        self.Y_TEXT_PANEL = self.Y_HEADER_PANEL + self.iMarginSpace
         self.W_TEXT_PANEL = self.W_HEADER_PANEL
-        self.H_TEXT_PANEL = (
-            self.H_MAIN_PANEL - 32
-        )  # (self.iMarginSpace * 3) + 10 #10 is the fudge factor
-        self.iTEXT_PANEL_MARGIN = 40  # from the top of the header panel
+        self.H_TEXT_PANEL = self.H_MAIN_PANEL - (self.iMarginSpace * 3) + 10
+        self.iTEXT_PANEL_MARGIN = 35
 
-        self.X_EXIT = 456  # self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - self.W_EXIT/2
-        self.Y_EXIT = self.Y_MAIN_PANEL + 307  # const = main panel height - 48
+        self.X_EXIT = 460
+        self.Y_EXIT = self.Y_MAIN_PANEL + 290
         self.W_EXIT = 120
         self.H_EXIT = 30
 
@@ -90,8 +84,6 @@ class CvDawnOfMan:
 
         self.player = gc.getPlayer(gc.getGame().getActivePlayer())
         self.EXIT_TEXT = text("TXT_KEY_SCREEN_CONTINUE")
-
-        # Create screen
 
         screen = CyGInterfaceScreen("CvDawnOfMan", self.iScreenID)
         screen.showScreen(PopupStates.POPUPSTATE_QUEUED, False)
@@ -104,12 +96,7 @@ class CvDawnOfMan:
         )
         screen.enableWorldSounds(False)
 
-        # Create panels
-
-        # Main
         szMainPanel = "DawnOfManMainPanel"
-
-        # Top
         screen.addPanel(
             szMainPanel,
             "",
@@ -122,7 +109,7 @@ class CvDawnOfMan:
             self.H_MAIN_PANEL,
             PanelStyles.PANEL_STYLE_MAIN,
         )
-        # Bottom
+
         szTextPanel = "DawnOfManTextPanel"
         screen.addPanel(
             szTextPanel,
@@ -153,18 +140,15 @@ class CvDawnOfMan:
             -1,
         )
 
-        ##Rhye - begin
-        pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
+        # Leoreth: imported individual texts from Sword of Islam (edead)
+        bodyString = getDawnOfManText(human())
 
-        bodyString = getDawnOfManText(CyGame().getActiveTeam())
-
-        # Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2
         screen.addStackedBarGFC(
             "ProgressBar",
-            271,
-            425,
-            490,
-            35,
+            300,
+            400,
+            435,
+            40,
             InfoBarTypes.NUM_INFOBAR_TYPES,
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -188,14 +172,13 @@ class CvDawnOfMan:
         )
         self.iTurnsRemaining = -1
 
-        ##Rhye - end
         screen.addMultilineText(
             "BodyText",
             bodyString,
             self.X_TEXT_PANEL + self.iMarginSpace,
             self.Y_TEXT_PANEL + self.iMarginSpace + self.iTEXT_PANEL_MARGIN,
             self.W_TEXT_PANEL - (self.iMarginSpace * 2),
-            self.H_TEXT_PANEL - (self.iMarginSpace * 2) - 139,
+            self.H_TEXT_PANEL - (self.iMarginSpace * 2) - 165,
             WidgetTypes.WIDGET_GENERAL,
             -1,
             -1,
@@ -215,7 +198,7 @@ class CvDawnOfMan:
             -1,
             ButtonStyles.BUTTON_STYLE_STANDARD,
         )
-        screen.hide("Exit")  # Rhye
+        screen.hide("Exit")
 
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
         pLeaderHeadInfo = gc.getLeaderHeadInfo(pActivePlayer.getLeaderType())
@@ -227,62 +210,45 @@ class CvDawnOfMan:
         return 0
 
     def update(self, fDelta):
+        iGameTurn = game.getGameTurn()
 
-        ##Rhye - begin
-        if civilization(CyGame().getActiveTeam()).date.birth <= get_scenario_start_turn():
-            screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
-            screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
-            screen.setLabel(
-                "Text",
-                "",
-                text("TXT_KEY_AUTOPLAY_TURNS_REMAINING", 0),
-                CvUtil.FONT_CENTER_JUSTIFY,
-                516,
-                465,
-                0,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
+        if iGameTurn <= self.iLastTurn:
+            return
+
+        self.iLastTurn = iGameTurn
+
+        iTotalAutoplay = civilization().date.birth - get_scenario_start_turn()
+
+        iAutoplayRemaining = game.getAIAutoPlay()
+        iAutoplayElapsed = iTotalAutoplay - iAutoplayRemaining
+
+        if iAutoplayRemaining > 0:
+            exponent = 1 + 1.0 * iTotalAutoplay / turns(190)
+            fBarPercentage = float(math.pow(iAutoplayElapsed, exponent)) / float(
+                math.pow(iTotalAutoplay, exponent)
             )
-            screen.show("Exit")  # Rhye
         else:
-            iGameTurn = turn()
+            fBarPercentage = 1.0
 
-            iNumAutoPlayTurns = civilization(CyGame().getActiveTeam()).date.birth
-            iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
+        screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
+        screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, fBarPercentage)
+        screen.setLabel(
+            "Text",
+            "",
+            text("TXT_KEY_AUTOPLAY_TURNS_REMAINING", iAutoplayRemaining),
+            CvUtil.FONT_CENTER_JUSTIFY,
+            530,
+            445,
+            0,
+            FontTypes.GAME_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
+        )
 
-            screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
-
-            exponent = 1 + iNumAutoPlayTurns / 190
-            # Absinthe: for all scenarios:
-            screen.setBarPercentage(
-                "ProgressBar",
-                InfoBarTypes.INFOBAR_STORED,
-                float(math.pow(iGameTurn - get_scenario_start_turn(), exponent))
-                / float(math.pow(iNumAutoPlayTurns - get_scenario_start_turn(), exponent)),
-            )
-            screen.setLabel(
-                "Text",
-                "",
-                text("TXT_KEY_AUTOPLAY_TURNS_REMAINING", iNumTurnsRemaining),
-                CvUtil.FONT_CENTER_JUSTIFY,
-                514,
-                465,
-                0,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
-            if iNumTurnsRemaining <= 0:  # Rhye
-                screen.show("Exit")  # Rhye
-
-        return
-
-    ##Rhye - end
+        if iAutoplayRemaining <= 0:
+            screen.show("Exit")
 
     def onClose(self):
-        # Absinthe: do not play the initial RFC song on start - might even lead to sound selection issues
         CyInterface().setSoundSelectionReady(True)
         return 0
