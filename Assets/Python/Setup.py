@@ -22,14 +22,14 @@ gc = CyGlobalContext()
 
 @handler("GameStart")
 def setup_gamestart():
-    log("RFCE: GameStart")
+    log("GameStart")
     setup()
     data.setup()
 
 
 @handler("OnLoad")
 def setup_on_load():
-    log("RFCE: OnLoad")
+    log("OnLoad")
     setup()
 
 
@@ -40,7 +40,7 @@ def setup():
     update_province_id()
     update_city_name()
     update_lake_id()
-    log("RFCE: Setup.setup()")
+    log("Setup.setup()")
 
 
 def init_player_maps():

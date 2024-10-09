@@ -11,7 +11,7 @@ def init():
     init_player_variables()
     init_provinces()
     set_province_type_parameters()
-    log("RFCE: Init.init()")
+    log("Init.init()")
 
 
 def init_player_variables():

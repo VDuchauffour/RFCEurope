@@ -1,3 +1,4 @@
+import sys
 from CivilizationsData import (
     CIV_ADDITIONAL_UNITS,
     CIV_AI_MODIFIERS,
@@ -20,7 +21,6 @@ from CivilizationsData import (
 )
 from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH, MessageData
 from CoreTypes import Civ, Scenario
-import CvUtil
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
@@ -2303,7 +2303,8 @@ def message(player_id, text, **settings):
 
 
 def log(message):
-    CvUtil.pyPrint(message)
+    message = "RFCE - " + message + "\n"
+    sys.stdout.write(message)
 
 
 def get_data_from_province_map(plot):

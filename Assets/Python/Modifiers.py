@@ -34,13 +34,13 @@ gc = CyGlobalContext()
 
 @handler("GameStart")
 def setup_gamestart():
-    log("RFCE: GameStart")
+    log("GameStart")
     setup()
 
 
 @handler("OnLoad")
 def setup_on_load():
-    log("RFCE: OnLoad")
+    log("OnLoad")
     setup()
 
 
@@ -57,7 +57,7 @@ def setup():
     set_religion_benefit()
     set_historical_enemies()
     set_other_parameters()
-    log("RFCE: Modifiers.setup()")
+    log("Modifiers.setup()")
 
 
 def set_modifiers():
