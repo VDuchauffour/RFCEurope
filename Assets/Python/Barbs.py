@@ -3342,7 +3342,7 @@ def setupMinorNation():
     for lNation in get_minor_nations():
         iNextRevolt = lNation[3][0]
         while iNextRevolt in data.minor_revolt_dates:
-            iNextRevolt = lNation[3][0] - turns(3) + rand(6)
+            iNextRevolt = lNation[3][0] - turns(3) + turns(rand(6))
         iNationIndex = get_minor_nations().index(lNation)
         data.minor_revolt_dates[iNationIndex] = iNextRevolt
 
@@ -3379,9 +3379,9 @@ def doMinorNations(iGameTurn):
         # setup next revolt
         iRevoltIndex += 1
         if iRevoltIndex < len(lNation[3]):
-            iNextRevolt = lNation[3][iRevoltIndex] - turns(3) + rand(6)
+            iNextRevolt = lNation[3][iRevoltIndex] - turns(3) + turns(rand(6))
             while iNextRevolt in data.minor_revolt_dates:
-                iNextRevolt = lNation[3][iRevoltIndex] - turns(3) + rand(6)
+                iNextRevolt = lNation[3][iRevoltIndex] - turns(3) + turns(rand(6))
             data.minor_revolt_dates[data.minor_revolt_dates.index(iGameTurn)] = iNextRevolt
 
 

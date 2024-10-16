@@ -1026,11 +1026,11 @@ def getSpecialRespawn(iGameTurn):
             return Civ.BULGARIA
     if canSpecialRespawn(Civ.CORDOBA, iGameTurn):
         # special respawn as the Hafsid dynasty in North Africa
-        if year(1229) < iGameTurn < year(1540) and every(5):
+        if year().between(1229, 1540) and every(5):
             return Civ.CORDOBA
     if canSpecialRespawn(Civ.BURGUNDY, iGameTurn, 20):
         # Burgundy in the 100 years war
-        if year(1336) < iGameTurn < year(1453) and every(8):
+        if year().between(1336, 1453) and every(8):
             return Civ.BURGUNDY
     if canSpecialRespawn(Civ.PRUSSIA, iGameTurn):
         # respawn as the unified Prussia
