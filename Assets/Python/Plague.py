@@ -12,6 +12,7 @@ from Core import (
     human,
     player,
     turn,
+    turns,
     year,
     city as _city,
     plot as _plot,
@@ -564,7 +565,7 @@ def onCityAcquired(iOldOwner, iNewOwner, city):
             return
 
         # only if it's not a recently born civ
-        if turn() > civilization(iNewOwner).date.birth + PLAGUE_IMMUNITY:
+        if turn() > year(civilization(iNewOwner).date.birth) + turns(PLAGUE_IMMUNITY):
             # reinfect the human player if conquering plagued cities
             if iNewOwner == human():
                 # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague

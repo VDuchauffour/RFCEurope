@@ -1,5 +1,3 @@
-# Rhye's and Fall of Civilization: Europe - Utilities
-
 from CvPythonExtensions import *
 from Core import (
     event_popup,
@@ -20,10 +18,12 @@ from Core import (
     text,
     text_if_exists,
     turn,
+    turns,
     units,
     cities,
     plots,
     get_data_from_upside_down_map,
+    year,
 )
 from CoreTypes import (
     City,
@@ -184,7 +184,7 @@ def minorWars(iMinorCiv, iGameTurn):
                 and not iActiveCiv == Civ.POPE
             ):
                 if not teamMinor.isAtWar(iActiveCiv):
-                    if iGameTurn > civilization(iActiveCiv).date.birth + 20:
+                    if iGameTurn > year(civilization(iActiveCiv).date.birth) + turns(20):
                         # Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
                         # maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
                         random_value = percentage()
@@ -213,7 +213,7 @@ def minorCoreWars(iMinorCiv, iGameTurn):
                 and not iActiveCiv == Civ.POPE
             ):
                 # Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
-                if iGameTurn > civilization(iActiveCiv).date.birth + 40:
+                if iGameTurn > year(civilization(iActiveCiv).date.birth) + turns(40):
                     if not teamMinor.isAtWar(iActiveCiv):
                         if gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x) == 16:
                             teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())

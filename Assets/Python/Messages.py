@@ -1,6 +1,6 @@
 from CvPythonExtensions import CyArtFileMgr, CyGlobalContext, InterfaceMessageTypes
 from Consts import MessageData
-from Core import human, message, player, show, team, text, year
+from Core import human, message, player, show, team, text, turns, year
 from CoreTypes import Building, Civ, Wonder
 from Events import handler
 import Mercenaries
@@ -172,7 +172,7 @@ def announce_schism(iGameTurn):
 def announce_invaders(iGameTurn, iPlayer):
     if iPlayer == human():
         # Seljuks
-        if iGameTurn == year(1064) - 7:
+        if iGameTurn == year(1064) - turns(7):
             if iPlayer == Civ.BYZANTIUM:
                 show(("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
         elif iGameTurn == year(1094) + 1:
@@ -180,7 +180,7 @@ def announce_invaders(iGameTurn, iPlayer):
                 sText = "Seljuk"
                 show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
         # Mongols
-        elif iGameTurn == year(1236) - 7:
+        elif iGameTurn == year(1236) - turns(7):
             if iPlayer in [
                 Civ.KIEV,
                 Civ.HUNGARY,
@@ -188,7 +188,7 @@ def announce_invaders(iGameTurn, iPlayer):
                 Civ.BULGARIA,
             ]:
                 show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
-        elif iGameTurn == year(1288) + 1:
+        elif iGameTurn == year(1288) + turns(1):
             if iPlayer in [
                 Civ.KIEV,
                 Civ.HUNGARY,
@@ -198,10 +198,10 @@ def announce_invaders(iGameTurn, iPlayer):
                 sText = "Tatar"
                 show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
         # Timurids
-        elif iGameTurn == year(1380) - 7:
+        elif iGameTurn == year(1380) - turns(7):
             if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
                 show(text("TXT_KEY_EVENT_TIMURID_INVASION_START"))
-        elif iGameTurn == year(1431) + 1:
+        elif iGameTurn == year(1431) + turns(1):
             if iPlayer in [Civ.ARABIA, Civ.OTTOMAN, Civ.BYZANTIUM]:
                 sText = "Timurid"
                 show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))

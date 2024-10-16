@@ -1,7 +1,19 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from Core import get_scenario, civilization, civilizations, message, human, cities, text, turn
+from Core import (
+    every,
+    get_scenario,
+    civilization,
+    civilizations,
+    message,
+    human,
+    cities,
+    text,
+    turn,
+    turns,
+    year,
+)
 from Consts import MessageData
 from CoreTypes import (
     Building,
@@ -266,12 +278,12 @@ def updateBaseStability(iGameTurn, iPlayer):
 
             # Absinthe: Collapse dates for AI nations
             if (
-                iGameTurn > civilization(iPlayer).date.collapse
+                iGameTurn > year(civilization(iPlayer).date.collapse)
                 and iPlayer != human()
                 and pPlayer.isAlive()
             ):
                 # Absinthe: -1 stability every 4 turns up to a total of -15 stability
-                if iGameTurn % 4 == 0 and iGameTurn <= civilization(iPlayer).date.collapse + 60:
+                if every(4) and iGameTurn <= year(civilization(iPlayer).date.collapse) + turns(60):
                     pPlayer.changeStabilityBase(StabilityCategory.CITIES, -1)
 
 
@@ -431,7 +443,7 @@ def onCityRazed(city, iPlayer):
 def onTechAcquired(iTech, iTeam, iPlayer):
     if (
         gc.getPlayer(iPlayer).isAlive()
-        and turn() > civilization(iPlayer).date.birth
+        and turn() > year(civilization(iPlayer).date.birth)
         and iPlayer < civilizations().majors().len()
     ):
         if iTech in [
@@ -509,8 +521,8 @@ def checkImplosion(iGameTurn):
             # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
             if (
                 pPlayer.isAlive()
-                and iGameTurn >= civilization(iPlayer).date.birth + 15
-                and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
+                and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(15)
+                and iGameTurn >= data.players[iPlayer].last_respawn_turn + turns(10)
             ):
                 iStability = pPlayer.getStability()
                 # Absinthe: human player with very bad stability should have a much bigger chance for collapse
@@ -538,7 +550,7 @@ def checkImplosion(iGameTurn):
                                 revoltCity(iPlayer, False)
                         elif (
                             iRand3 < 1
-                            and iGameTurn >= civilization(iPlayer).date.birth + 20
+                            and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(20)
                             and not collapseImmune(iPlayer)
                         ):  # 10 chance for collapse start
                             if iRand2 < (
@@ -553,7 +565,7 @@ def checkImplosion(iGameTurn):
                                 revoltCity(iPlayer, False)
                         elif (
                             iRand3 < 4
-                            and iGameTurn >= civilization(iPlayer).date.birth + 20
+                            and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(20)
                             and not collapseImmune(iPlayer)
                         ):  # 40 chance for collapse start
                             if iRand2 < (
@@ -562,7 +574,7 @@ def checkImplosion(iGameTurn):
                                 collapseCivilWar(iPlayer, iStability)
                     elif (
                         iRand1 < 7
-                        and iGameTurn >= civilization(iPlayer).date.birth + 20
+                        and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(20)
                         and not collapseImmune(iPlayer)
                     ):  # 70 chance for collapse start
                         if iRand2 < (

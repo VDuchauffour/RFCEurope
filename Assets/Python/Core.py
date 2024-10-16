@@ -982,8 +982,8 @@ def since(iTurn):
     return turn() - iTurn
 
 
-def every(interval):
-    return turn() % turns(interval) == 0
+def every(interval, shift=0):
+    return turn() % turns(interval) == shift
 
 
 class InfoCollection(EntitiesCollection):

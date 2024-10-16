@@ -17,6 +17,7 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
+    every,
     get_scenario,
     get_scenario_start_turn,
     human,
@@ -29,6 +30,7 @@ from Core import (
     player,
     text,
     turn,
+    turns,
     year,
     cities,
     plots,
@@ -100,7 +102,9 @@ def setup():
 
     if get_scenario() == Scenario.i500AD:
         create_starting_units_500AD()
-        for civ in civilizations().majors().filter(lambda c: c.date.birth == year(500)).ids():
+        for civ in (
+            civilizations().majors().filter(lambda c: year(c.date.birth) == year(500)).ids()
+        ):
             reveal_areas(civ)
             set_initial_contacts(civ)
 
@@ -109,7 +113,7 @@ def setup():
         for civ in (
             civilizations()
             .main()
-            .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
+            .filter(lambda c: year(c.date.birth) < get_scenario_start_turn(Scenario.i1200AD))
             .ids()
         ):
             reveal_areas(civ)
@@ -338,7 +342,6 @@ def onCityBuilt(pCity):
 
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-    # Trigger betrayal mode
     if data.betrayal_turns > 0:
         initBetrayal()
 
@@ -351,25 +354,25 @@ def checkTurn(iGameTurn):
         else:
             data.cheaters_check[0] -= 1
 
-    if iGameTurn % 20 == 0:
+    if every(20):
         for civ in civilizations().independents().alive():
             updateMinorTechs(civ.id, Civ.BARBARIAN)
 
     # Absinthe: checking the spawn dates
     for iLoopCiv in civilizations().majors().ids():
         if (
-            civilization(iLoopCiv).date.birth != 0
-            and iGameTurn >= civilization(iLoopCiv).date.birth - 2
-            and iGameTurn <= civilization(iLoopCiv).date.birth + 4
+            year(civilization(iLoopCiv).date.birth) != 0
+            and iGameTurn >= year(civilization(iLoopCiv).date.birth) - turns(2)
+            and iGameTurn <= year(civilization(iLoopCiv).date.birth) + turns(4)
         ):
-            initBirth(iGameTurn, civilization(iLoopCiv).date.birth, iLoopCiv)
+            initBirth(iGameTurn, year(civilization(iLoopCiv).date.birth), iLoopCiv)
 
     # Fragment minor civs:
     # 3Miro: Shuffle cities between Indies and Barbs to make sure there is no big Independent nation
-    if iGameTurn >= 20:
-        if iGameTurn % 15 == 6:
+    if iGameTurn >= turns(20):
+        if every(15):
             fragmentIndependents()
-        if iGameTurn % 30 == 12:
+        if every(30):
             fragmentBarbarians(iGameTurn)
 
     # Fall of civs:
@@ -377,15 +380,15 @@ def checkTurn(iGameTurn):
     # Generic collapse: if 1/2 of the empire is lost in only a few turns (16 ATM) = collapse
     # Motherland collapse: if no city is in the core area and the number of cities in the normal area is less than the number of foreign cities = collapse
     # Secession: if stability is negative there is a chance (bigger chance with worse stability) for a random city to declare it's independence
-    if iGameTurn >= 64 and iGameTurn % 7 == 0:  # mainly for Seljuks, Mongols, Timurids
+    if iGameTurn >= turns(64) and every(7):  # mainly for Seljuks, Mongols, Timurids
         collapseByBarbs(iGameTurn)
-    if iGameTurn >= 34 and iGameTurn % 16 == 0:
+    if iGameTurn >= turns(34) and every(16):
         collapseGeneric(iGameTurn)
-    if iGameTurn >= 34 and iGameTurn % 9 == 7:
+    if iGameTurn >= turns(34) and every(9):
         collapseMotherland(iGameTurn)
-    if iGameTurn > 20 and iGameTurn % 3 == 1:
+    if iGameTurn > turns(20) and every(3):
         secession(iGameTurn)
-    if iGameTurn > 20 and iGameTurn % 7 == 3:
+    if iGameTurn > turns(20) and every(7):
         secessionCloseCollapse(iGameTurn)
 
     # Resurrection of civs:
@@ -412,15 +415,15 @@ def checkTurn(iGameTurn):
             resurrection(iGameTurn, -1)
 
     # Absinthe: Reduce cities to towns, in order to make room for new civs
-    if iGameTurn == civilization(Civ.SCOTLAND).date.birth - 3:
+    if iGameTurn == year(civilization(Civ.SCOTLAND).date.birth) - turns(3):
         # Reduce Inverness and Scone, so more freedom in where to found cities in Scotland
         reduceCity((37, 65))
         reduceCity((37, 67))
-    elif iGameTurn == civilization(Civ.ENGLAND).date.birth - 3:
+    elif iGameTurn == year(civilization(Civ.ENGLAND).date.birth) - turns(3):
         # Reduce Norwich and Nottingham, so more freedom in where to found cities in England
         reduceCity((43, 55))
         reduceCity((39, 56))
-    elif iGameTurn == civilization(Civ.SWEDEN).date.birth - 2:
+    elif iGameTurn == year(civilization(Civ.SWEDEN).date.birth) - turns(2):
         # Reduce Uppsala
         reduceCity((65, 66))
     # Absinthe: Reduce cities to town, if not owned by the human player
@@ -489,7 +492,7 @@ def checkPlayerTurn(iGameTurn, iPlayer):
 
             # Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
             if (
-                iGameTurn == year(1066) + 3
+                iGameTurn == year(1066) + turns(3)
                 and human() != Civ.ENGLAND
                 and iPlayer == Civ.ENGLAND
                 and player(Civ.ENGLAND).isAlive()
@@ -573,10 +576,9 @@ def fragmentBarbarians(iGameTurn):
     iRndnum = rand(civilizations().majors().len())
     for j in civilizations().majors().ids():
         iDeadCiv = (j + iRndnum) % civilizations().majors().len()
-        if (
-            not gc.getPlayer(iDeadCiv).isAlive()
-            and iGameTurn > civilization(iDeadCiv).date.birth + 50
-        ):
+        if not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > year(
+            civilization(iDeadCiv).date.birth
+        ) + turns(50):
             lCities = [
                 location(city)
                 for city in (
@@ -676,7 +678,7 @@ def initBirth(iCurrentTurn, iBirthYear, iCiv):
         if (
             gc.getPlayer(iCiv).isAlive()
             and not data.already_switched
-            and iCurrentTurn > civilization(iHuman).date.birth + 40
+            and iCurrentTurn > year(civilization(iHuman).date.birth) + turns(40)
             and not gc.getPlayer(iHuman).getIsCrusader()
         ):
             newCivPopup(iCiv)
@@ -949,7 +951,7 @@ def convertSurroundingCities(iCiv, tTopLeft, tBottomRight):
         elif not city.isCapital():  # 3Miro: this keeps crashing in the C++, makes no sense
             if iConvertedCitiesCount < 6:  # there won't be more than 5 flips in the area
                 iCultureChange = 50
-                if turn() <= civilization(iCiv).date.birth + 5:  # if we're during a birth
+                if turn() <= year(civilization(iCiv).date.birth) + turns(5):
                     rndNum = percentage()
                     # 3Miro: I don't know why the iOwner check is needed below, but the module crashes sometimes
                     if is_major_civ(city) and rndNum >= civilization(city).ai.stop_birth_threshold:
@@ -1008,90 +1010,88 @@ def findSeaPlots(tCoords, iRange):
     return None
 
 
-def getSpecialRespawn(
-    iGameTurn,
-):  # Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here
+def getSpecialRespawn(iGameTurn):
+    # Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here
     if canSpecialRespawn(Civ.FRANCE, iGameTurn, 12):
         # France united in it's modern borders, start of the Bourbon royal line
-        if year(1588) < iGameTurn < year(1700) and iGameTurn % 5 == 3:
+        if year().between(1588, 1700) and every(5):
             return Civ.FRANCE
     if canSpecialRespawn(Civ.ARABIA, iGameTurn):
         # Saladin, Ayyubid Dynasty
-        if year(1080) < iGameTurn < year(1291) and iGameTurn % 7 == 3:
+        if year().between(1080, 1291) and every(7):
             return Civ.ARABIA
     if canSpecialRespawn(Civ.BULGARIA, iGameTurn):
         # second Bulgarian Empire
-        if year(1080) < iGameTurn < year(1299) and iGameTurn % 5 == 1:
+        if year().between(1080, 1299) and every(5):
             return Civ.BULGARIA
     if canSpecialRespawn(Civ.CORDOBA, iGameTurn):
         # special respawn as the Hafsid dynasty in North Africa
-        if year(1229) < iGameTurn < year(1540) and iGameTurn % 5 == 3:
+        if year(1229) < iGameTurn < year(1540) and every(5):
             return Civ.CORDOBA
     if canSpecialRespawn(Civ.BURGUNDY, iGameTurn, 20):
         # Burgundy in the 100 years war
-        if year(1336) < iGameTurn < year(1453) and iGameTurn % 8 == 1:
+        if year(1336) < iGameTurn < year(1453) and every(8):
             return Civ.BURGUNDY
     if canSpecialRespawn(Civ.PRUSSIA, iGameTurn):
         # respawn as the unified Prussia
-        if iGameTurn > year(1618) and iGameTurn % 3 == 1:
+        if iGameTurn > year(1618) and every(3):
             return Civ.PRUSSIA
     if canSpecialRespawn(Civ.HUNGARY, iGameTurn):
         # reconquest of Buda from the Ottomans
-        if iGameTurn > year(1680) and iGameTurn % 6 == 2:
+        if iGameTurn > year(1680) and every(6):
             return Civ.HUNGARY
     if canSpecialRespawn(Civ.CASTILE, iGameTurn, 25):
         # respawn as the Castile/Aragon Union
-        if year(1470) < iGameTurn < year(1580) and iGameTurn % 5 == 0:
+        if year().between(1470, 1580) and every(5):
             return Civ.CASTILE
     if canSpecialRespawn(Civ.ENGLAND, iGameTurn, 12):
         # restoration of monarchy
-        if iGameTurn > year(1660) and iGameTurn % 6 == 2:
+        if iGameTurn > year(1660) and every(6):
             return Civ.ENGLAND
     if canSpecialRespawn(Civ.SCOTLAND, iGameTurn, 30):
-        if iGameTurn <= year(1600) and iGameTurn % 6 == 3:
+        if iGameTurn <= year(1600) and every(6):
             return Civ.SCOTLAND
     if canSpecialRespawn(Civ.PORTUGAL, iGameTurn):
         # respawn to be around for colonies
-        if year(1431) < iGameTurn < year(1580) and iGameTurn % 5 == 3:
+        if year().between(1431, 1580) and every(5):
             return Civ.PORTUGAL
     if canSpecialRespawn(Civ.AUSTRIA, iGameTurn):
         # increasing Habsburg influence in Hungary
-        if year(1526) < iGameTurn < year(1690) and iGameTurn % 8 == 3:
+        if year().between(1526, 1690) and every(8):
             return Civ.AUSTRIA
     if canSpecialRespawn(Civ.KIEV, iGameTurn):
         # Cossack Hetmanate
-        if year(1620) < iGameTurn < year(1750) and iGameTurn % 5 == 3:
+        if year().between(1620, 1750) and every(5):
             return Civ.KIEV
     if canSpecialRespawn(Civ.MOROCCO, iGameTurn):
         # Alaouite Dynasty
-        if iGameTurn > year(1631) and iGameTurn % 8 == 7:
+        if iGameTurn > year(1631) and every(8):
             return Civ.MOROCCO
     if canSpecialRespawn(Civ.ARAGON, iGameTurn):
         # Kingdom of Sicily
-        if iGameTurn > year(1700) and iGameTurn % 8 == 7:
+        if iGameTurn > year(1700) and every(8):
             return Civ.ARAGON
     if canSpecialRespawn(Civ.VENECIA, iGameTurn):
-        if year(1401) < iGameTurn < year(1571) and iGameTurn % 8 == 7:
+        if year().between(1401, 1571) and every(8):
             return Civ.VENECIA
     if canSpecialRespawn(Civ.POLAND, iGameTurn):
-        if year(1410) < iGameTurn < year(1570) and iGameTurn % 8 == 7:
+        if year().between(1410, 1570) and every(8):
             return Civ.POLAND
     if canSpecialRespawn(Civ.OTTOMAN, iGameTurn):
         # Mehmed II's conquests
-        if year(1453) < iGameTurn < year(1514) and iGameTurn % 6 == 3:
+        if year().between(1453, 1514) and every(6):
             return Civ.OTTOMAN
     return -1
 
 
 def canSpecialRespawn(iPlayer, iGameTurn, iLastAliveInterval=10):
-    pPlayer = gc.getPlayer(iPlayer)
-    if pPlayer.isAlive():
+    if player(iPlayer).isAlive():
         return False
-    if pPlayer.getEverRespawned():
+    if player(iPlayer).getEverRespawned():
         return False
-    if iGameTurn <= civilization(iPlayer).date.birth + 25:
+    if iGameTurn <= year(civilization(iPlayer).date.birth) + turns(25):
         return False
-    if iGameTurn <= data.players[iPlayer].last_turn_alive + iLastAliveInterval:
+    if iGameTurn <= data.players[iPlayer].last_turn_alive + turns(iLastAliveInterval):
         return False
     return True
 

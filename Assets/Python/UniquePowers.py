@@ -5,6 +5,7 @@ from Core import (
     player,
     human,
     turn,
+    turns,
     year,
     message,
     text,
@@ -145,7 +146,7 @@ def portugal_up_on_city_built(city):
 
 @handler("combatResult")
 def norway_up(winning_unit, losing_unit):
-    if winning_unit.getOwner() == Civ.NORWAY and turn() < year(1066) + 2:
+    if winning_unit.getOwner() == Civ.NORWAY and turn() < year(1066) + turns(2):
         if infos.unit(losing_unit).getDomainType() == DomainTypes.DOMAIN_SEA:
             if losing_unit.getUnitType() != Unit.WORKBOAT:
                 player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)

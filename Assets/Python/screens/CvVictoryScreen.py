@@ -3658,7 +3658,7 @@ class CvVictoryScreen:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
             # unknown: if not yet born, or alive but no contact
-            if iGameTurn <= civilization(iLoopPlayer).date.birth or (
+            if iGameTurn <= year(civilization(iLoopPlayer).date.birth) or (
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
@@ -3679,9 +3679,9 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemy)
             teamEnemy = gc.getTeam(iEnemy)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if (
-                pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
-            ) or iGameTurn <= civilization(iEnemy).date.birth:
+            if (pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())) or iGameTurn <= year(
+                civilization(iEnemy).date.birth
+            ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             else:
                 sStringConq += "  " + u"<color=0,255,0>%s</color>" % (text(sCivShortName))
@@ -3700,7 +3700,7 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemyCiv)
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if iGameTurn <= civilization(iEnemyCiv).date.birth:
+            if iGameTurn <= year(civilization(iEnemyCiv).date.birth):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif (
                 not pEnemy.isAlive()

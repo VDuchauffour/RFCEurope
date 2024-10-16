@@ -6,12 +6,14 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
+    every,
     human,
     location,
     message,
     player,
     text,
     turn,
+    turns,
     units,
     year,
 )
@@ -257,14 +259,14 @@ def onReligionFounded(iReligion, iFounder):
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
     # Absinthe: Spreading religion in a couple preset dates
-    if iGameTurn == year(700) - 2:
+    if iGameTurn == year(700) - turns(2):
         # Spread Judaism to Toledo
         spreadReligion(CITIES[City.TOLEDO], Religion.JUDAISM)
         # Spread Islam to a random city in Africa
         tCity = selectRandomCityRegion(tNorthAfrica, Religion.ISLAM)
         if tCity:
             spreadReligion(tCity, Religion.ISLAM)
-    elif iGameTurn == year(700) + 2:
+    elif iGameTurn == year(700) + turns(2):
         # Spread Judaism and Islam to a random city in Africa
         tCity = selectRandomCityRegion(tWestAfrica, Religion.ISLAM)
         if tCity:
@@ -296,7 +298,7 @@ def checkTurn(iGameTurn):
         tCity = selectRandomCityRegion(tPoland, Religion.JUDAISM)
         if tCity:
             spreadReligion(tCity, Religion.JUDAISM)
-    elif year(1299) < iGameTurn < year(1350) and iGameTurn % 3 == 0:
+    elif year().between(1299, 1350) and every(3):
         # Spread Islam to a couple cities in Anatolia before the Ottoman spawn
         tCity = selectRandomCityRegion(tBalkansAndAnatolia, Religion.ISLAM)
         if tCity:
@@ -309,14 +311,14 @@ def checkTurn(iGameTurn):
 
     # Absinthe: Spreading Judaism in random dates
     # General 6% chance to spread Jews to a random city in every third turn
-    if year(800) < iGameTurn < year(1700) and iGameTurn % 3 == 0:
+    if year().between(800, 1700) and every(3):
         if percentage_chance(6, strict=True):
             tCity = cities.all().random_entry()
             if tCity is not None:
                 spreadReligion(tCity, Religion.JUDAISM)
 
     # Additional 11% chance to spread Jews to a random Central European city in every third turn
-    if year(1000) < iGameTurn < year(1500) and iGameTurn % 3 == 1:
+    if year().between(1000, 1500) and every(3, shift=1):
         if percentage_chance(11, strict=True):
             tCity = selectRandomCityRegion(tCentralEurope, Religion.JUDAISM)
             if tCity:
@@ -324,37 +326,37 @@ def checkTurn(iGameTurn):
 
     # Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
     # Maghreb and Cordoba:
-    if year(700) < iGameTurn < year(800) and iGameTurn % 2 == 1:
+    if year().between(700, 800) and every(2):
         if percentage_chance(32, strict=True):
             tCity = selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM, True)
             if tCity:
                 spreadReligion(tCity, Religion.ISLAM)
-    if year(800) < iGameTurn < year(1200) and iGameTurn % 3 == 2:
+    if year().between(800, 1200) and every(3):
         if percentage_chance(28, strict=True):
             tCity = selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM, True)
             if tCity:
                 spreadReligion(tCity, Religion.ISLAM)
 
     # Bulgaria and Balkans:
-    if year(700) < iGameTurn < year(800) and iGameTurn % 3 == 1:
+    if year().between(700, 800) and every(3):
         if percentage_chance(25, strict=True):
             tCity = selectRandomCityRegion(tBulgariaBalkans, Religion.ORTHODOXY, True)
             if tCity:
                 spreadReligion(tCity, Religion.ORTHODOXY)
-    if year(800) < iGameTurn < year(1000) and iGameTurn % 4 == 1:
+    if year().between(800, 1000) and every(4):
         if percentage_chance(15, strict=True):
             tCity = selectRandomCityRegion(tBulgariaBalkans, Religion.ORTHODOXY, True)
             if tCity:
                 spreadReligion(tCity, Religion.ORTHODOXY)
     # Old Rus territories:
-    if year(852) < iGameTurn < year(1300) and iGameTurn % 4 == 3:
+    if year().between(852, 1300) and every(4):
         if percentage_chance(25, strict=True):
             tCity = selectRandomCityRegion(tOldRus, Religion.ORTHODOXY, True)
             if tCity:
                 spreadReligion(tCity, Religion.ORTHODOXY)
 
     # Extra chance for early Orthodoxy spread in Novgorod:
-    if year(852) < iGameTurn < year(960) and iGameTurn % 5 == 2:
+    if year().between(852, 960) and every(5):
         if percentage_chance(34, strict=True):
             tCity = selectRandomCityRegion(
                 [Province.NOVGOROD, Province.POLOTSK, Province.SMOLENSK],
@@ -364,14 +366,14 @@ def checkTurn(iGameTurn):
             if tCity:
                 spreadReligion(tCity, Religion.ORTHODOXY)
     # Hungary:
-    if year(960) < iGameTurn < year(1200) and iGameTurn % 4 == 2:
+    if year().between(960, 1200) and every(4):
         if percentage_chance(21, strict=True):
             tCity = selectRandomCityRegion(tHungary, Religion.CATHOLICISM, True)
             if tCity:
                 spreadReligion(tCity, Religion.CATHOLICISM)
 
     # Scandinavia:
-    if year(1000) < iGameTurn < year(1300) and iGameTurn % 4 == 0:
+    if year().between(1000, 1300) and every(4):
         if percentage_chance(24, strict=True):
             tCity = selectRandomCityRegion(tSouthScandinavia, Religion.CATHOLICISM, True)
             if tCity:
@@ -465,9 +467,7 @@ def checkTurn(iGameTurn):
                 buildInRandomCity(iChosenPlayer.id, iCatholicBuilding, Religion.CATHOLICISM)
     # Free technology
     if iGameTurn > year(843):  # Treaty of Verdun, the Carolingian Empire divided into 3 parts
-        if (
-            iGameTurn % 13 == 4
-        ):  # checked every 13th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs
+        if every(13):
             weights = []
             for civ in catholic_civs:
                 iCatholicFaith = 0
@@ -500,7 +500,7 @@ def checkTurn(iGameTurn):
                         # don't continue if a tech was already given - this also means that there is bigger chance for getting a tech if the chosen civ is multiple techs behind
                         break
 
-    if iGameTurn % 6 == 3:
+    if every(6):
         update_pope_techs(catholic_civs)
 
     # Absinthe: Reformation
@@ -756,7 +756,7 @@ def ReformationEvent(playerID, netUserData, popupReturn):
 def onTechAcquired(iTech, iTeam, iPlayer):
     if (
         gc.getPlayer(iPlayer).isAlive()
-        and turn() > civilization(iPlayer).date.birth
+        and turn() > year(civilization(iPlayer).date.birth)
         and iPlayer < civilizations().majors().len()
     ):
         if iTech == Technology.PRINTING_PRESS:
