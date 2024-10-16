@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from Consts import MessageData
-from Core import get_scenario, text, message, year
+from Core import get_scenario, text, message, turns, year
 from CoreTypes import Feature, Improvement, Bonus, Scenario
 from Events import handler
 
@@ -95,7 +95,7 @@ def checkTurn(iGameTurn):
     elif iGameTurn == year(1000):
         createResource(36, 24, Bonus.RICE)  # Rice in Iberia
         createResource(86, 2, Bonus.RICE)  # Rice in the Middle East
-    elif iGameTurn == (year(1066) + 1):
+    elif iGameTurn == year(1066) + turns(1):
         removeResource(2, 69)  # Remove the NAA from Iceland
     elif iGameTurn == year(1452):  # Coffee spawns instead of being preplaced
         createResource(93, 0, Bonus.COFFEE)  # near Sinai

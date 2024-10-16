@@ -21,7 +21,7 @@ gc = CyGlobalContext()
 
 def set_starting_turns():
     for civ in civilizations().drop(Civ.BARBARIAN):
-        civ.player.setInitialBirthTurn(civ.date.birth)
+        civ.player.setInitialBirthTurn(year(civ.date.birth))
 
 
 def set_starting_gold():
@@ -51,7 +51,7 @@ def create_starting_units_500AD():
     make_units(Civ.FRANCE, Unit.CATHOLIC_MISSIONARY, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
 
     iHuman = human()
-    if civilization(iHuman).date.birth > year(500):
+    if year(civilization(iHuman).date.birth) > year(500):
         # so everyone apart from Byzantium and France
         tStart = CIV_CAPITAL_LOCATIONS[iHuman]
 
@@ -75,7 +75,7 @@ def create_starting_units_500AD():
 
 def create_starting_units_1200AD():
     iHuman = human()
-    if civilization(iHuman).date.birth > year(1200):
+    if year(civilization(iHuman).date.birth) > year(1200):
         # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
         tStart = civilization(iHuman).location.capital
 

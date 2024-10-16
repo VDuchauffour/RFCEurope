@@ -1,6 +1,3 @@
-# RFC Europe - Companies
-# Implemented by AbsintheRed, based on the wonderful idea of embryodead
-
 from CvPythonExtensions import *
 from Consts import MessageData
 from Core import (
@@ -11,6 +8,7 @@ from Core import (
     player,
     text,
     turn,
+    turns,
     year,
     cities,
     companies,
@@ -599,7 +597,7 @@ def checkTurn(iGameTurn):
         return
 
     # check if it's not too late
-    elif iGameTurn > year(companies[iCompany].deathdate) + rand(companies.len()):
+    elif iGameTurn > year(companies[iCompany].deathdate) + turns(rand(companies.len())):
         iMaxCompanies = 0
         # do not dissolve the Templars while Jerusalem is under Catholic control
         if iCompany == Company.TEMPLARS:

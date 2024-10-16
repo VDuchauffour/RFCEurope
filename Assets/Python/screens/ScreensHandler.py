@@ -17,6 +17,7 @@ from Core import (
     human,
     player,
     text,
+    year,
 )
 from MiscData import MODNET_EVENTS
 from CityMapData import CITIES_MAP
@@ -169,7 +170,7 @@ def onGameStart():
     if gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(
         GameOptionTypes.GAMEOPTION_ADVANCED_START
     ):
-        if civilization().date.birth <= get_scenario_start_turn():
+        if year(civilization().date.birth) <= get_scenario_start_turn():
             popupInfo = CyPopupInfo()
             popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
             popupInfo.setText(u"showDawnOfMan")

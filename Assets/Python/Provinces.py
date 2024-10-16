@@ -15,7 +15,7 @@ def setup():
     # update provinces for the 1200 AD Scenario
     if get_scenario() == Scenario.i1200AD:
         for civ in civilizations().main():
-            if civ.date.birth < year(1200):
+            if year(civ.date.birth) < year(1200):
                 onSpawn(civ.id)
 
 

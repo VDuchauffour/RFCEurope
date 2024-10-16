@@ -3,11 +3,13 @@ from Consts import INDEPENDENT_CIVS
 from Core import (
     civilization,
     civilizations,
+    every,
     get_data_from_upside_down_map,
     get_scenario_start_turn,
     is_independent_civ,
     is_major_civ,
     turn,
+    turns,
     year,
     plots,
 )
@@ -44,7 +46,7 @@ def setup():
 
 @handler("BeginGameTurn")
 def checkTurn(iGameTurn):
-    if iGameTurn > 20:
+    if iGameTurn > turns(20):
         # Absinthe: automatically turn peace on between independent cities and all the major civs
         turn_peace_human_mapper = {
             Civ.INDEPENDENT: 9,
@@ -53,7 +55,7 @@ def checkTurn(iGameTurn):
             Civ.INDEPENDENT_4: 19,
         }
         for civ, value in turn_peace_human_mapper.items():
-            if iGameTurn % 20 == value:
+            if every(20, shift=value):
                 restorePeaceHuman(civ)
 
         turn_peace_ai_mapper = {
@@ -63,7 +65,7 @@ def checkTurn(iGameTurn):
             Civ.INDEPENDENT_4: 27,
         }
         for civ, value in turn_peace_ai_mapper.items():
-            if iGameTurn % 36 == value:
+            if every(36, shift=value):
                 restorePeaceAI(civ, False)
 
         # Absinthe: automatically turn war on between independent cities and some AI major civs
@@ -75,7 +77,7 @@ def checkTurn(iGameTurn):
             Civ.INDEPENDENT_4: 29,
         }
         for civ, value in turn_minor_wars_mapper.items():
-            if iGameTurn % 36 == value:
+            if every(36, shift=value):
                 minorWars(civ, iGameTurn)
 
         # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
@@ -87,11 +89,11 @@ def checkTurn(iGameTurn):
             Civ.INDEPENDENT_4: 1,
         }
         for civ, value in turn_minor_core_wars_mapper.items():
-            if iGameTurn % 12 == value:
+            if every(12, shift=value):
                 minorCoreWars(civ, iGameTurn)
 
     # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
-    if iGameTurn % 9 == 2:
+    if every(9):
         pVenice = gc.getPlayer(Civ.VENECIA)
         if pVenice.isAlive() and not pVenice.isHuman():
             pRagusaPlot = gc.getMap().plot(64, 28)
@@ -104,7 +106,7 @@ def checkTurn(iGameTurn):
                     teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
 
     # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
-    if iGameTurn > year(1000) and iGameTurn % 7 == 3:
+    if iGameTurn > year(1000) and every(7):
         pHungary = gc.getPlayer(Civ.HUNGARY)
         if pHungary.isAlive() and not pHungary.isHuman():
             pZagrebPlot = gc.getMap().plot(62, 34)
@@ -252,7 +254,7 @@ def checkGrid(iCiv):
         if (
             getPlagueCountdown(iLoopCiv) > 0
             or getPlagueCountdown(iLoopCiv) < -10
-            and not turn() <= civilization(iLoopCiv).date.birth + 20
+            and not turn() <= year(civilization(iLoopCiv).date.birth) + turns(20)
         ):
             lTargetCivs[iLoopCiv] *= 3
             lTargetCivs[iLoopCiv] /= 2

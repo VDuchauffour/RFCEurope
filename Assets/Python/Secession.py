@@ -1,7 +1,7 @@
 from CvPythonExtensions import CyGlobalContext, WarPlanTypes
 
 from Consts import MessageData
-from Core import civilization, civilizations, cities, message, text
+from Core import civilization, civilizations, cities, message, text, turns, year
 from CoreTypes import ProvinceType, StabilityCategory, UniquePower
 from PyUtils import chance, rand, choice
 from RFCUtils import (
@@ -28,8 +28,8 @@ def secession(iGameTurn):
         # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
         if (
             pPlayer.isAlive()
-            and iGameTurn >= civilization(iPlayer).date.birth + 15
-            and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
+            and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(15)
+            and iGameTurn >= data.players[iPlayer].last_respawn_turn + turns(10)
         ):
             if chance(10, -2 - pPlayer.getStability(), strict=True):
                 # 10% at -3, increasing by 10% with each point (100% with -12 or less)
@@ -49,8 +49,8 @@ def secessionCloseCollapse(iGameTurn):
         pPlayer = gc.getPlayer(iPlayer)
         if (
             pPlayer.isAlive()
-            and iGameTurn >= civilization(iPlayer).date.birth + 20
-            and iGameTurn >= data.players[iPlayer].last_respawn_turn + 10
+            and iGameTurn >= year(civilization(iPlayer).date.birth) + turns(20)
+            and iGameTurn >= data.players[iPlayer].last_respawn_turn + turns(10)
         ):
             iStability = pPlayer.getStability()
             if (

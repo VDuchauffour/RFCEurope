@@ -5,6 +5,7 @@ from Core import (
     civilization,
     civilizations,
     event_popup,
+    every,
     human,
     location,
     make_crusade_unit,
@@ -16,6 +17,7 @@ from Core import (
     message,
     text,
     turn,
+    turns,
     year,
     cities,
     plots,
@@ -388,27 +390,36 @@ def checkTurn(iGameTurn):
         freeCrusaders(data.crusade_to_return)
         data.crusade_to_return = -1
 
-    # Absinthe: crusade date - 5 means the exact time for the arrival
-    if iGameTurn == year(1096) - 5:  # First Crusade arrives in 1096AD
+    if iGameTurn == year(1096) - turns(5):
         data.crusade_status[0] = -1
     elif (
-        iGameTurn >= year(1147) - 7 and data.crusade_status[0] > 0 and data.crusade_status[1] == -2
+        iGameTurn >= year(1147) - turns(7)
+        and data.crusade_status[0] > 0
+        and data.crusade_status[1] == -2
     ):  # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
         data.crusade_status[1] = -1  # turn 176
     elif (
-        iGameTurn >= year(1187) - 8 and data.crusade_status[1] > 0 and data.crusade_status[2] == -2
+        iGameTurn >= year(1187) - turns(8)
+        and data.crusade_status[1] > 0
+        and data.crusade_status[2] == -2
     ):  # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
         data.crusade_status[2] = -1  # turn 187
     elif (
-        iGameTurn >= year(1202) - 4 and data.crusade_status[2] > 0 and data.crusade_status[3] == -2
+        iGameTurn >= year(1202) - turns(4)
+        and data.crusade_status[2] > 0
+        and data.crusade_status[3] == -2
     ):  # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
         data.crusade_status[3] = -1  # turn 197
     elif (
-        iGameTurn >= year(1229) - 3 and data.crusade_status[3] > 0 and data.crusade_status[4] == -2
+        iGameTurn >= year(1229) - turns(3)
+        and data.crusade_status[3] > 0
+        and data.crusade_status[4] == -2
     ):  # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
         data.crusade_status[4] = -1  # turn 207
     elif (
-        iGameTurn >= year(1271) - 5 and data.crusade_status[4] > 0 and data.crusade_status[5] == -2
+        iGameTurn >= year(1271) - turns(5)
+        and data.crusade_status[4] > 0
+        and data.crusade_status[5] == -2
     ):  # Crusade of 1270AD
         data.crusade_status[5] = -1  # turn 219
 
@@ -573,7 +584,7 @@ def CrusadeInitVoteEvent(playerID, netUserData, popupReturn):
 
 def doParticipation(iGameTurn):
     iHuman = human()
-    if civilization(iHuman).date.birth < iGameTurn:
+    if year(civilization(iHuman).date.birth) < iGameTurn:
         pHuman = player(iHuman)
         if pHuman.getStateReligion() != Religion.CATHOLICISM:
             data.is_participate_to_crusade = False
@@ -624,7 +635,7 @@ def computeVotingPower(iGameTurn):
     for iPlayer in civilizations().majors().ids():
         pPlayer = player(iPlayer)
         if (
-            civilization(iPlayer).date.birth > iGameTurn
+            year(civilization(iPlayer).date.birth) > iGameTurn
             or not pPlayer.isAlive()
             or pPlayer.getStateReligion() != Religion.CATHOLICISM
             or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
@@ -659,12 +670,12 @@ def setCrusaders():
 def sendUnits(iPlayer):
     pPlayer = player(iPlayer)
     iNumUnits = pPlayer.getNumUnits()
-    if civilization(iPlayer).date.birth + 10 > turn():  # in the first 10 turns
+    if year(civilization(iPlayer).date.birth) + turns(10) > turn():  # in the first 10 turns
         if iNumUnits < 10:
             iMaxToSend = 0
         else:
             iMaxToSend = 1
-    elif civilization(iPlayer).date.birth + 25 > turn():  # between turn 11-25
+    elif year(civilization(iPlayer).date.birth) + turns(25) > turn():  # between turn 11-25
         iMaxToSend = min(10, max(1, (5 * iNumUnits) / 50))
     else:
         iMaxToSend = min(10, max(1, (5 * iNumUnits) / 35))  # after turn 25
@@ -1416,7 +1427,7 @@ def freeCrusaders(iPlayer):
 @handler("BeginPlayerTurn")
 def checkPlayerTurn(iGameTurn, iPlayer):
     # Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
-    if iGameTurn % 3 == 1:  # checked every 3rd turn
+    if every(3):
         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
         if pCity.getOwner() == iPlayer:
             pPlayer = player(iPlayer)
@@ -1477,7 +1488,7 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
     teamPlayer = gc.getTeam(pPlayer.getTeam())
     # only born, flipped and living Catholics can defensive crusade
     if (
-        (iGameTurn < civilization(iPlayer).date.birth + 5)
+        iGameTurn < year(civilization(iPlayer).date.birth) + turns(5)
         or not pPlayer.isAlive()
         or pPlayer.getStateReligion() != Religion.CATHOLICISM
     ):
@@ -1493,7 +1504,7 @@ def canDefensiveCrusade(iPlayer, iGameTurn):
         pEnemy = player(iEnemy)
         if (
             teamPlayer.isAtWar(pEnemy.getTeam())
-            and civilization(iEnemy).date.birth + 10 < iGameTurn
+            and year(civilization(iEnemy).date.birth) + turns(10) < iGameTurn
         ):
             if isOrMasterChristian(iEnemy):
                 continue

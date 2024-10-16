@@ -11,6 +11,7 @@ from Core import (
     show,
     show_if_human,
     text,
+    turns,
     year,
 )
 from CoreTypes import Building, Civ, RandomEvent, Religion, StabilityCategory, Unit
@@ -61,12 +62,13 @@ def move_ottoman_capital(owner, iPlayer, city, bConquest, bTrade):
 
 @handler("BeginGameTurn")
 def viking_attack_on_constantinople(iGameTurn):
-    # Absinthe: 868AD Viking attack on Constantinople
-    if iGameTurn == year(860) + data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK] - 2:
+    if iGameTurn == year(860) + turns(
+        data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK]
+    ) - turns(2):
         if human() == Civ.BYZANTIUM:
             show(text("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS"))
 
-    if iGameTurn == year(860) + data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK]:
+    if iGameTurn == year(860) + turns(data.random_events[RandomEvent.BYZANTIUM_VIKING_ATTACK]):
         if human() == Civ.BYZANTIUM:
             for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
                 Barbs.spawnUnits(

@@ -8,6 +8,7 @@ from Core import (
     message,
     player,
     text,
+    turns,
     year,
     cities,
 )
@@ -55,7 +56,9 @@ def krak_des_chevaliers_acquired(owner, player, city, bConquest, bTrade):
 @handler("BeginGameTurn")
 def remove_lighthouse(iGameTurn):
     # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
-    if iGameTurn == year(1323) - 40 + data.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE]:
+    if iGameTurn == year(1323) + turns(
+        data.random_events[RandomEvent.LIGHTHOUSE_EARTHQUAKE]
+    ) - turns(40):
         for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
             bFound = 0
             for city in cities.owner(iPlayer).entities():

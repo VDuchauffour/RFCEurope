@@ -11,6 +11,7 @@ from Core import (
     team,
     text,
     turn,
+    turns,
     year,
     plots,
     cities,
@@ -560,7 +561,7 @@ def onCityAcquired(owner, iNewOwner, city, bConquest, bTrade):
                     lostUHV(Civ.PORTUGAL, 1)
 
     # Norway UHV 1: Going Viking
-    elif iNewOwner == Civ.NORWAY and iGameTurn < year(1066) + 2:
+    elif iNewOwner == Civ.NORWAY and iGameTurn < year(1066) + turns(2):
         # Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
         if bConquest:
             if city.getPopulation() > 1:
@@ -631,7 +632,7 @@ def onCityRazed(city, iPlayer):
 @handler("unitPillage")
 def onPillageImprovement(pUnit, iImprovement, iRoute, iOwner):
     # Norway UHV 1: Going Viking
-    if pUnit.getOwner() == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + 2:
+    if pUnit.getOwner() == Civ.NORWAY and iRoute == -1 and turn() < year(1066) + turns(2):
         if plot(pUnit).getOwner() != Civ.NORWAY:
             player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
@@ -1022,14 +1023,6 @@ def checkCordoba(iGameTurn):
 
 
 def checkNorway(iGameTurn):
-
-    # Old UHV1: explore all water tiles
-    # if ( iGameTurn == year(1009) and pNorway.getUHV( 0 ) == -1 ):
-    # 	if ( gc.canSeeAllTerrain( iNorway, Terrain.OCEAN ) ):
-    # 		wonUHV( iNorway, 0 )
-    # 	else:
-    # 		lostUHV( iNorway, 0 )
-
     # UHV 1: Gain 100 Viking Points and build Vinland by 1066
     # Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
     if isPossibleUHV(Civ.NORWAY, 0, True):
@@ -1115,7 +1108,7 @@ def checkBurgundy(iGameTurn):
 
     # UHV 1: Produce 12,000 culture points in your cities by 1336
     # The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
-    if iGameTurn < year(1336) + 2:
+    if iGameTurn < year(1336) + turns(2):
         iCulture = (
             player(Civ.BURGUNDY).getUHVCounter(0) + player(Civ.BURGUNDY).countCultureProduced()
         )
@@ -1211,7 +1204,7 @@ def checkKiev(iGameTurn):
 
     # UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
     # Controlled in the onBuildingBuilt function
-    if iGameTurn == year(1250) + 1:
+    if iGameTurn == year(1250) + turns(1):
         expireUHV(Civ.KIEV, 0)
 
     # UHV 2: Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288
@@ -1228,7 +1221,7 @@ def checkKiev(iGameTurn):
 
     # UHV 3: Produce 25000 food by 1300
     # The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
-    if iGameTurn < year(1300) + 2:
+    if iGameTurn < year(1300) + turns(2):
         iFood = player(Civ.KIEV).getUHVCounter(2) + player(Civ.KIEV).calculateTotalYield(
             YieldTypes.YIELD_FOOD
         )
@@ -1452,7 +1445,7 @@ def checkPoland(iGameTurn):
                     break
             if bFood:
                 wonUHV(Civ.POLAND, 0)
-    if iGameTurn == year(1520) + 1:
+    if iGameTurn == year(1520) + turns(1):
         expireUHV(Civ.POLAND, 0)
 
     # UHV 2: Own at least 12 cities in the given provinces in 1569
@@ -1565,7 +1558,7 @@ def checkMorocco(iGameTurn):
 
             if bConq:
                 wonUHV(Civ.MOROCCO, 2)
-    if iGameTurn == year(1578) + 1:
+    if iGameTurn == year(1578) + turns(1):
         expireUHV(Civ.MOROCCO, 2)
 
 
@@ -1643,7 +1636,7 @@ def checkPrussia(iGameTurn):
 
     # UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
     # Controlled in the onCityAcquired function
-    if iGameTurn == year(1763) + 1:
+    if iGameTurn == year(1763) + turns(1):
         expireUHV(Civ.PRUSSIA, 1)
 
     # UHV 3: Settle a total of 15 Great People in your capital
@@ -1663,7 +1656,7 @@ def checkLithuania(iGameTurn):
 
     # UHV 1: Accumulate 2500 Culture points without declaring a state religion before 1386
     # The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
-    if iGameTurn < year(1386) + 2:
+    if iGameTurn < year(1386) + turns(2):
         iCulture = (
             player(Civ.LITHUANIA).getUHVCounter(0) + player(Civ.LITHUANIA).countCultureProduced()
         )
@@ -1716,7 +1709,7 @@ def checkLithuania(iGameTurn):
 
             if bConq:
                 wonUHV(Civ.LITHUANIA, 2)
-    if iGameTurn == year(1795) + 1:
+    if iGameTurn == year(1795) + turns(1):
         expireUHV(Civ.LITHUANIA, 2)
 
 

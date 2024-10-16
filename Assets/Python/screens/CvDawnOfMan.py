@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 
 import math
-from Core import civilization, human, text, get_scenario_start_turn, turns, game
+from Core import civilization, human, text, get_scenario_start_turn, turns, game, year
 import CvUtil
 from CvPythonExtensions import *
 
@@ -215,7 +215,7 @@ class CvDawnOfMan:
 
         self.iLastTurn = iGameTurn
 
-        iTotalAutoplay = civilization().date.birth - get_scenario_start_turn()
+        iTotalAutoplay = year(civilization().date.birth) - get_scenario_start_turn()
 
         iAutoplayRemaining = game.getAIAutoPlay()
         iAutoplayElapsed = iTotalAutoplay - iAutoplayRemaining

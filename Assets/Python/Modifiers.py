@@ -25,7 +25,7 @@ from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
+from TimelineData import TIMELINE_TECH_MODIFIER
 from LocationsData import CITIES
 from Events import handler
 
@@ -424,7 +424,7 @@ def set_other_parameters():
     gc.setFastTerrain(Terrain.OCEAN)
 
     # set the religions and year of the great schism
-    gc.setSchism(Religion.CATHOLICISM, Religion.ORTHODOXY, DateTurn.i1053AD)
+    gc.setSchism(Religion.CATHOLICISM, Religion.ORTHODOXY, year(1053))
     gc.setHoliestCity(*CITIES[City.JERUSALEM])
 
     # 3Miro: set the Jews as the minor Religion
