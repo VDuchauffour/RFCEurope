@@ -529,6 +529,15 @@ tHalych = (
     Religion.ORTHODOXY,
     0,
 )
+tVolodymyr = (
+    [((75, 45), "Volodymyr", 100)],
+    Civ.INDEPENDENT_3,
+    2,
+    Unit.CROSSBOWMAN,
+    2,
+    Religion.ORTHODOXY,
+    0,
+)
 # 1200 AD
 tRigaR = (
     [((74, 58), "Riga", 100)],
@@ -538,6 +547,15 @@ tRigaR = (
     2,
     -1,
     1,
+)
+tVologda = (
+    [((91, 64), "Vologda", 100)],
+    Civ.INDEPENDENT,
+    1,
+    Unit.CROSSBOWMAN,
+    2,
+    Religion.ORTHODOXY,
+    0,
 )  # respawn
 # tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], Civ.BARBARIAN, 1, Unit.MONGOL_KESHIK, 2, -1, 0) #out of the map, not that important to represent the Mongol invasions this way
 # 1227 AD
@@ -561,6 +579,24 @@ tPerekop = (
     -1,
     0,
 )
+tTver = (
+    [((88, 60), "Tver", 100)],
+    Civ.INDEPENDENT,
+    1,
+    Unit.CROSSBOWMAN,
+    3,
+    Religion.ORTHODOXY,
+    0,
+)
+tUstyug = (
+    [((98, 68), "Ustyug", 100)],
+    Civ.INDEPENDENT_4,
+    1,
+    Unit.CROSSBOWMAN,
+    1,
+    -1,
+    1,
+)
 # 1320 AD
 tNizhnyNovgorod = (
     [((97, 58), "Nizhny Novgorod", 100)],
@@ -569,6 +605,33 @@ tNizhnyNovgorod = (
     Unit.CROSSBOWMAN,
     1,
     -1,
+    0,
+)
+tRyazan = (
+    [((93, 53), "Ryazan", 100)],
+    Civ.INDEPENDENT_3,
+    1,
+    Unit.CROSSBOWMAN,
+    3,
+    Religion.ORTHODOXY,
+    0,
+)
+tMurom = (
+    [((95, 55), "Murom", 100)],
+    Civ.INDEPENDENT_4,
+    1,
+    Unit.CROSSBOWMAN,
+    1,
+    Religion.ORTHODOXY,
+    0,
+)
+tIasi = (
+    [((79, 38), "Iasi", 100)],
+    Civ.INDEPENDENT,
+    2,
+    Unit.ARBALEST,
+    3,
+    Religion.CATHOLICISM,
     0,
 )
 # 1392 AD
@@ -644,11 +707,11 @@ independent_cities = {
     1010: [tYaroslavl],
     1050: [tGroningen, tKalmar],
     1110: [tGraz],
-    1124: [tHalych],
-    1200: [tRigaR],
+    1124: [tHalych, tVolodymyr],
+    1200: [tRigaR, tVologda],
     1227: [tTripoliR],
-    1250: [tAbo, tPerekop],
-    1320: [tNizhnyNovgorod],
+    1250: [tAbo, tPerekop, tTver, tUstyug],
+    1320: [tNizhnyNovgorod, tRyazan, tMurom, tIasi],
     1393: [tTanais],
     1410: [tReykjavik],
     1530: [tValletta],
@@ -2781,8 +2844,8 @@ def checkTurn(iGameTurn):
         if Civ.KIEV == iHuman:
             spawnUnits(
                 Civ.BARBARIAN,
-                (93, 32),
-                (99, 42),
+                (85, 41),
+                (90, 45),
                 Unit.MONGOL_KESHIK,
                 5 + iHandicap,
                 iGameTurn,
@@ -2794,8 +2857,8 @@ def checkTurn(iGameTurn):
             )
             spawnUnits(
                 Civ.BARBARIAN,
-                (94, 34),
-                (99, 45),
+                (84, 40),
+                (87, 46),
                 Unit.MONGOL_KESHIK,
                 4 + iHandicap,
                 iGameTurn,
@@ -2808,8 +2871,8 @@ def checkTurn(iGameTurn):
         else:
             spawnUnits(
                 Civ.BARBARIAN,
-                (93, 32),
-                (99, 42),
+                (85, 41),
+                (90, 45),
                 Unit.MONGOL_KESHIK,
                 3,
                 iGameTurn,
@@ -2821,8 +2884,8 @@ def checkTurn(iGameTurn):
             )
             spawnUnits(
                 Civ.BARBARIAN,
-                (94, 34),
-                (99, 45),
+                (84, 40),
+                (87, 46),
                 Unit.MONGOL_KESHIK,
                 2,
                 iGameTurn,
