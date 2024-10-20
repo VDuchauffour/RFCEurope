@@ -7,7 +7,52 @@
 <!-- NOTE: If you remove any of these you need to update GameInfo/CultureLevelInfos.xml. Also you will need to update the GlobalDefines.xml if you remove GAMESPEED_STANDARD -->
 <Civ4GameSpeedInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<GameSpeedInfos>
-		<!-- Rhye - start -->
+		<GameSpeedInfo>
+			<Type>GAMESPEED_EPIC</Type>
+			<Description>TXT_KEY_GAMESPEED_EPIC</Description>
+			<Help>TXT_KEY_GAMESPEED_EPIC_HELP</Help>
+			<iGrowthPercent>150</iGrowthPercent>
+			<iTrainPercent>150</iTrainPercent>
+			<iConstructPercent>150</iConstructPercent>
+			<iCreatePercent>150</iCreatePercent>
+			<iResearchPercent>150</iResearchPercent>
+			<iBuildPercent>150</iBuildPercent>
+			<iImprovementPercent>150</iImprovementPercent>
+			<iGreatPeoplePercent>150</iGreatPeoplePercent>
+			<iCulturePercent>165</iCulturePercent>
+			<iAnarchyPercent>165</iAnarchyPercent>
+			<iBarbPercent>150</iBarbPercent>
+			<iFeatureProductionPercent>150</iFeatureProductionPercent>
+			<iUnitDiscoverPercent>150</iUnitDiscoverPercent>
+			<iUnitHurryPercent>150</iUnitHurryPercent>
+			<iUnitTradePercent>150</iUnitTradePercent>
+			<iUnitGreatWorkPercent>150</iUnitGreatWorkPercent>
+			<iGoldenAgePercent>150</iGoldenAgePercent>
+			<iHurryPercent>66</iHurryPercent>
+			<iHurryConscriptAngerPercent>150</iHurryConscriptAngerPercent>
+			<iInflationPercent>30</iInflationPercent>
+			<iInflationOffset>-180</iInflationOffset>
+			<iVictoryDelayPercent>150</iVictoryDelayPercent>
+			<GameTurnInfos>
+				<GameTurnInfo>
+					<iMonthIncrement>36</iMonthIncrement>
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 3 years of increment 200*3=600 years -->
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>24</iMonthIncrement>
+					<iTurnsPerIncrement>250</iTurnsPerIncrement> <!-- 2 years of increment 250*2=500 years -->
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>12</iMonthIncrement>
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 1 years of increment 200*1=200 years -->
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>6</iMonthIncrement>
+					<iTurnsPerIncrement>80</iTurnsPerIncrement> <!-- 6 mounths of increment 80*0.5=40 years -->
+				</GameTurnInfo>
+				<!-- 800 turns = 1340 years (from 500 AD to 1840 AD) -->
+			</GameTurnInfos>
+		</GameSpeedInfo>
 		<GameSpeedInfo>
 			<Type>GAMESPEED_NORMAL</Type>
 			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
@@ -37,22 +82,22 @@
 			<GameTurnInfos>
 				<GameTurnInfo>
 					<iMonthIncrement>48</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement>
+					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 4 years of increment 100*4=400 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>36</iMonthIncrement>
-					<iTurnsPerIncrement>200</iTurnsPerIncrement>
+					<iTurnsPerIncrement>200</iTurnsPerIncrement> <!-- 3 years of increment 200*3=600 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>24</iMonthIncrement>
-					<iTurnsPerIncrement>100</iTurnsPerIncrement>
+					<iTurnsPerIncrement>100</iTurnsPerIncrement> <!-- 2 years of increment 100*2=200 years -->
 				</GameTurnInfo>
 				<GameTurnInfo>
 					<iMonthIncrement>12</iMonthIncrement>
-					<iTurnsPerIncrement>140</iTurnsPerIncrement>
+					<iTurnsPerIncrement>140</iTurnsPerIncrement> <!-- 1 years of increment 140*1=140 years -->
 				</GameTurnInfo>
+				<!-- 540 turns = 1340 years (from 500 AD to 1840 AD) -->
 			</GameTurnInfos>
 		</GameSpeedInfo>
-		<!-- Rhye - end -->
 	</GameSpeedInfos>
 </Civ4GameSpeedInfo>
