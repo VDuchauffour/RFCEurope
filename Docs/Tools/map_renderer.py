@@ -9,10 +9,16 @@ from random import randint
 
 from PIL import Image, ImageOps
 from Consts import MINOR_CIVS
-from Core import civilizations
+from Core import civilizations, plots
 
-from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA, CIV_PROVINCES
-from CoreTypes import Civ, Province, ProvinceType
+from LocationsData import (
+    CIV_AREAS,
+    CIV_CORE_AREA,
+    CIV_BROADER_AREA,
+    CIV_NORMAL_AREA,
+    CIV_PROVINCES,
+)
+from CoreTypes import Area, AreaType, Civ, Province, ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 
 PROVINCES_MAP = np.asarray(PROVINCES_MAP)
@@ -242,7 +248,7 @@ class MapRenderer:
         img = self.upscale_map(img)
         self.save_drawing(img, output_path, "bonuses")
 
-    def _extract_provinces(self, province):
+    def _extract_province(self, province):
         plots = []
         indices = np.where(PROVINCES_MAP == province.value)
         for y, x in zip(indices[0], indices[1]):
@@ -252,14 +258,25 @@ class MapRenderer:
     def extract_provinces(self, provinces):
         plots = []
         for province in provinces:
-            plots.append(self._extract_provinces(province))
+            plots.append(self._extract_province(province))
         plots = chain.from_iterable(plots)
         return plots
+
+    def extract_areas(self, areas):
+        _plots = []
+        __plots = plots.rectangle(areas[Area.TILE_MIN], areas[Area.TILE_MAX])
+        __plots._factory = lambda x: x
+        _plots.append(
+            __plots.without(areas[Area.EXCEPTION_TILES]).add(areas[Area.ADDITIONAL_TILES])
+        )
+        _plots = chain.from_iterable(_plots)
+        _plots = [Plot(x, y, "", "", "", "", "") for (x, y) in _plots]
+        return _plots
 
     def draw_provinces_map(self, output_path: str):
         for province in Province:
             img = self.base_img.copy()
-            img = self.draw(img, self._extract_provinces(province), PROVINCES_COLORS["potential"])
+            img = self.draw(img, self._extract_province(province), PROVINCES_COLORS["potential"])
 
             img = self.apply_water(img)
             img = self.draw_plot_properties(img, "is_peak")
@@ -295,6 +312,25 @@ class MapRenderer:
                 img = self.upscale_map(img)
                 self.save_drawing(img, output_path + "/provinces_stability", f"{civ.key.name}")
 
+    def draw_areas_stability_map(self, output_path: str):
+        for civ in civilizations():
+            if civ.id not in MINOR_CIVS + [Civ.POPE.value]:
+                for area, color in [
+                    (AreaType.CORE, "core"),
+                    (AreaType.NORMAL, "historical"),
+                    (AreaType.BROADER, "potential"),
+                ]:
+                    img = self.base_img.copy()
+                    img = self.draw(
+                        img,
+                        self.extract_areas(CIV_AREAS[civ.key][area]),
+                        PROVINCES_COLORS[color],
+                    )
+                    img = self.apply_water(img)
+                    img = self.draw_plot_properties(img, "is_peak")
+                    img = self.upscale_map(img)
+                    self.save_drawing(img, output_path + "/areas", f"{civ.key.name}_{area.name}")
+
     def normalize_plot(self, plots):
         _plots = []
         for plot in plots:
@@ -310,6 +346,7 @@ class MapRenderer:
         bonuses: bool,
         provinces: bool,
         provinces_stability: bool,
+        areas_stability: bool,
     ) -> None:
         self.draw_base_map(output_path)
         if rivers:
@@ -324,6 +361,8 @@ class MapRenderer:
             self.draw_provinces_map(output_path)
         if provinces_stability:
             self.draw_provinces_stability_map(output_path)
+        if areas_stability:
+            self.draw_areas_stability_map(output_path)
 
 
 def main():
@@ -372,6 +411,12 @@ def main():
         help="Draw provinces stability map. Default to True",
     )
     parser.add_argument(
+        "--areas-stability",
+        action="store_true",
+        default=True,
+        help="Draw areas stability map. Default to True",
+    )
+    parser.add_argument(
         "--all", action="store_true", default=False, help="Draw all maps. Default to False."
     )
 
@@ -383,6 +428,7 @@ def main():
         args.bonuses = True
         args.provinces = True
         args.provinces_stability = True
+        args.areas_stability = True
 
     parser = WBSaveParser()
     map = parser.parse(args.file)
@@ -395,6 +441,7 @@ def main():
         args.bonuses,
         args.provinces,
         args.provinces_stability,
+        args.areas_stability,
     )
 
 
