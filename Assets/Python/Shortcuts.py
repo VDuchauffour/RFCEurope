@@ -1,11 +1,14 @@
 from CvPythonExtensions import *
-from Core import human, make_unit, player
+from Core import human, make_unit, player, game, text, turn, year
 from CoreTypes import Civ, Unit
 import CvMercenaryManager
 import CvScreenEnums
-from Events import events, handler
+from Events import events, handler, popup_handler
 from ProvinceMapData import PROVINCES_MAP
 from RFCUtils import getProvinceStabilityLevel
+import CvUtil
+from Slots import add_player, find_slot, slot
+from StoredData import data
 
 gc = CyGlobalContext()
 lastProvinceID = -1
@@ -30,22 +33,6 @@ def print_plots_debug(eventType, key, mx, my, px, py):
     key = int(key)
     if events.bAlt and eventType == events.EventKeyDown and key == int(InputTypes.KB_N):
         events.printPlotsDebug()
-
-
-@handler("kbdEvent")
-def autoplay_dead_civ(eventType, key, mx, my, px, py):
-    key = int(key)
-    if (
-        events.bAlt
-        and events.bShift
-        and eventType == events.EventKeyDown
-        and key == int(InputTypes.KB_E)
-    ):
-        # picks a dead civ so that autoplay can be started with game.AIplay xx
-        iDebugDeadCiv = Civ.BURGUNDY  # always dead in 500AD
-        make_unit(iDebugDeadCiv, Unit.AXEMAN, (0, 0))
-        gc.getGame().setActivePlayer(iDebugDeadCiv, False)
-        gc.getPlayer(iDebugDeadCiv).setPlayable(True)
 
 
 @handler("kbdEvent")
@@ -125,3 +112,55 @@ def province_highlight(eventType, key, mx, my, px, py):
     if eventType == events.EventKeyUp and events.bCtrl or eventType == events.EventKeyDown:
         CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
         lastProvinceID = -1
+
+
+@handler("kbdEvent")
+def observerModeShortcut(eventType, key):
+    if eventType == events.EventKeyDown and events.bCtrl and key == InputTypes.KB_C:
+        popup = CyPopup(4568, EventContextTypes.EVENTCONTEXT_ALL, True)
+
+        popup.setHeaderString(
+            text("TXT_KEY_INTERFACE_OBSERVER_MODE_HEADER"), CvUtil.FONT_LEFT_JUSTIFY
+        )
+        popup.setBodyString(text("TXT_KEY_INTERFACE_OBSERVER_MODE_BODY"), CvUtil.FONT_LEFT_JUSTIFY)
+        popup.createEditBox(str(game.getGameTurnYear()), 0)
+
+        popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
+
+@popup_handler(4568)
+def handleStartObserverMode(iPlayer, netUserData, popupReturn):
+    iDestinationYear = int(popupReturn.getEditBoxString(0))
+    iAutoplayTurns = year(iDestinationYear) - turn()
+
+    if iAutoplayTurns > 0:
+        startObserverMode(iAutoplayTurns)
+
+
+@handler("autoplayEnded")
+def observerModeEnds():
+    endObserverMode()
+
+
+def startObserverMode(iTurns):
+    data.before_observer_slot = human()
+    iObserverCiv = Civ.BURGUNDY
+    iObserverSlot = slot(iObserverCiv)
+
+    if iObserverSlot < 0:
+        iObserverSlot = find_slot(iObserverCiv)
+        add_player(iObserverSlot, iObserverCiv)
+
+    make_unit(iObserverCiv, Unit.CATAPULT, (0, 0))
+
+    game.setActivePlayer(iObserverCiv, False)
+    game.setAIAutoPlay(iTurns)
+
+
+def endObserverMode():
+    if data.before_observer_slot != -1:
+        if player(data.before_observer_slot).isAlive():
+            game.setActivePlayer(data.before_observer_slot, False)
+            data.before_observer_slot = -1
+        else:
+            make_unit(human(), Unit.CATAPULT, (0, 0))

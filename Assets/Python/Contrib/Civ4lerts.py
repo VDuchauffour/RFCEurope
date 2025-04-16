@@ -75,6 +75,7 @@ import CityUtil
 import DiplomacyUtil
 import PlayerUtil
 import TradeUtil
+from StoredData import data
 
 # BUG - Mac Support - start
 BugUtil.fixSets(globals())
@@ -854,6 +855,8 @@ class RefusesToTalk(AbstractStatefulAlert):
     def check(self):
         if (not Civ4lertsOpt.isShowRefusesToTalkAlert()):
             return
+        if data.before_observer_slot != -1:
+            return
         eActivePlayer, activePlayer = PlayerUtil.getActivePlayerAndID()
         refusals = self.refusals[eActivePlayer]
         newRefusals = set()
@@ -926,6 +929,8 @@ class WorstEnemy(AbstractStatefulAlert):
 
     def check(self):
         if (not Civ4lertsOpt.isShowWorstEnemyAlert()):
+            return
+        if data.before_observer_slot != -1:
             return
         eActivePlayer = PlayerUtil.getActivePlayerID()
         eActiveTeam, activeTeam = PlayerUtil.getActiveTeamAndID()

@@ -1,6 +1,5 @@
 from CoreTypes import Civ
 
-
 WORLD_WIDTH = 100
 WORLD_HEIGHT = 73
 
