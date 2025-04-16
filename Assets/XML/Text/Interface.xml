@@ -9,4 +9,20 @@
 		<Italian>Espionage Experience</Italian>
 		<Spanish>Espionage Experience</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_OBSERVER_MODE_HEADER</Tag>
+		<English>Start Observer Mode</English>
+		<French>Start Observer Mode</French>
+		<German>Start Observer Mode</German>
+		<Italian>Start Observer Mode</Italian>
+		<Spanish>Start Observer Mode</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_OBSERVER_MODE_BODY</Tag>
+		<English>Enter end date:</English>
+		<French>Enter end date:</French>
+		<German>Enter end date:</German>
+		<Italian>Enter end date:</Italian>
+		<Spanish>Enter end date:</Spanish>
+	</TEXT>
 </Civ4GameText>

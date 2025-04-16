@@ -15,6 +15,14 @@ except ImportError:
     gc = None
 
 
+def next(iterator, default=None):
+    iterator = iter(iterator)
+    try:
+        return iterator.next()
+    except StopIteration:
+        return default
+
+
 def all(iterable):
     """Return True if all elements of the iterable are true (or if the iterable is empty)."""  # type: ignore
     for element in iterable:

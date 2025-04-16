@@ -2,6 +2,9 @@ from Core import civilizations
 from CoreTypes import Civ, RandomEvent
 from MiscData import NUM_CRUSADES
 from PyUtils import rand
+from CvPythonExtensions import CyGlobalContext
+
+gc = CyGlobalContext()
 
 
 class BaseData(object):
@@ -191,6 +194,7 @@ class GameData(BaseData):
 
     def setup(self):
         """Initialise the global script data for usage."""
+        self.slots = {}
         self.players = dict((civ.key, PlayerData(civ.id)) for civ in civilizations().majors())
         self.civs = dict((civ.key, CivData(civ.id)) for civ in civilizations())
         self.init_temp_values()
@@ -206,6 +210,7 @@ class GameData(BaseData):
 
         self.ignore_ai_uhv = True
         self.next_turn_ai_war = -1
+        self.before_observer_slot = -1
 
 
 data = GameData()
